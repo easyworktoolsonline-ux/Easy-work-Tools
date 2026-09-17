@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Resize and edit images online for free with EasyWorkTools.online. Use a browser-based image resizer for dimensions, previews and downloads.">
+    <link rel="canonical" href="https://easyworktools.online/tools/easy-image-resizer/">
+    <meta property="og:title" content="Easy Image Resizer Online — Free Image Resize Tool | EasyWorkTools.online">
+    <meta property="og:description" content="Resize and edit images online for free with EasyWorkTools.online. Use a browser-based image resizer for dimensions, previews and downloads.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://easyworktools.online/tools/easy-image-resizer/">
+
+    <title>Easy Image Resizer Online — Free Image Resize Tool | EasyWorkTools.online</title>
+    <!-- Google Fonts for Unique Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- JSZip Library for Bulk Downloading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        :root {
+            --bg-main: #FFFFFF;
+            --bg-section: #F9FAFB;
+            --card-bg: #FFFFFF;
+            --card-hover: #F3F4F6;
+            --border: #E5E7EB;
+            
+            --accent-yellow: #FACC15;
+            --accent-yellow-dark: #EAB308;
+            --accent-yellow-light: rgba(250, 204, 21, 0.15);
+
+            --white: #FFFFFF;
+            --black: #111827;
+            --text-main: #1F2937;
+            --text-gray: #4B5563;
+            
+            --primary: var(--black);
+            --primary-hover: #333333;
+            --yellow-accent: var(--accent-yellow);
+            --yellow-hover: var(--accent-yellow-dark);
+            --reverse-primary: #4b5563;
+            --reverse-hover: #374151;
+            --bg-color: var(--bg-main);
+            --text-muted: var(--text-gray);
+
+            --shadow-small: 0 4px 15px rgba(0,0,0,0.03);
+            --shadow: 0 12px 35px rgba(0,0,0,0.06);
+            --shadow-large: 0 25px 60px rgba(0,0,0,0.08);
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.5;
+        }
+
+        /* FULL SCREEN DRAG & DROP CATCH OVERLAY */
+        #fullScreenDropOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(250, 204, 21, 0.92);
+            z-index: 99999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 8px dashed #111827;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+        #fullScreenDropOverlay h2 {
+            font-size: 42px;
+            font-weight: 900;
+            color: #111827;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.4);
+        }
+        #fullScreenDropOverlay p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #222222;
+            margin-top: 10px;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1280px;
+            padding: 25px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .brand-container {
+            display: flex;
+            align-items: baseline;
+            gap: 3px;
+        }
+        .brand-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--black);
+            letter-spacing: -0.8px;
+            text-decoration: none;
+        }
+        .brand-domain {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--accent-yellow);
+            color: var(--black);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 900;
+            display: inline-block;
+            line-height: 1;
+            position: relative;
+            top: -1px;
+            margin-left: 2px;
+        }
+        .brand-slogan {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+            border-left: 2px solid var(--border);
+            padding-left: 10px;
+            display: none;
+        }
+        @media(min-width: 640px) {
+            .brand-slogan { display: inline-block; }
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .auth-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .auth-btn:hover {
+            border-color: var(--yellow-accent);
+            background: var(--accent-yellow-light);
+            color: var(--yellow-hover);
+        }
+
+        .main-wrapper {
+            width: 100%;
+            max-width: 1280px;
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* DESKTOP SIDEBAR ADS WRAPPER */
+        .workspace-layout {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            position: relative;
+        }
+        .sidebar-ad-left, .sidebar-ad-right {
+            display: none;
+            width: 160px;
+            min-height: 600px;
+            flex-shrink: 0;
+            background: transparent;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        @media(min-width: 1150px) {
+            .sidebar-ad-left, .sidebar-ad-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .sidebar-ad-box {
+            width: 160px;
+            height: 600px;
+            background: transparent;
+            border: none;
+        }
+
+        /* GOOGLE ADSENSE SLOTS */
+        .adsense-slot {
+            width: 100%;
+            margin: 15px 0;
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+        }
+        .adsense-box {
+            width: 100%;
+            max-width: 728px;
+            height: 90px;
+            background: transparent;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #landingSectionWrapper {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        #landingSection {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            padding: 40px 25px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            background: var(--card-bg);
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow);
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        #landingSection::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--yellow-accent);
+        }
+        @media(min-width: 768px) {
+            #landingSection {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 45px;
+            }
+        }
+        .hero-left {
+            flex: 1;
+            text-align: center;
+        }
+        @media(min-width: 768px) {
+            .hero-left { text-align: left; }
+        }
+        .hero-left h1 {
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--black);
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero-left h1 span {
+            color: var(--yellow-accent);
+        }
+        .hero-left p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        .upload-btn-large {
+            background-color: var(--black);
+            color: var(--white);
+            border: none;
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: var(--shadow-small);
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        .upload-btn-large:hover {
+            background-color: var(--yellow-accent);
+            color: var(--black);
+            transform: translateY(-2px);
+        }
+        .upload-subtext {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 14px;
+            font-weight: 500;
+        }
+
+        .hero-right {
+            flex: 1;
+            width: 100%;
+            max-width: 420px;
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: var(--shadow-small);
+            pointer-events: none;
+        }
+        .animation-preview-box {
+            width: 100%;
+            height: 220px;
+            background: var(--card-bg);
+            border: 1px dashed var(--border);
+            border-radius: var(--radius-sm);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .animated-img {
+            max-width: 85%;
+            max-height: 85%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dimension-badge {
+            position: absolute;
+            bottom: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--black);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--border);
+        }
+
+        input[type="file"] { display: none; }
+
+        #toolWorkspace {
+            display: none;
+            max-width: 540px;
+            width: 100%;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .preview-container { margin-bottom: 20px; position: relative; }
+        
+        .preview-wrapper {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--bg-section);
+        }
+        img#imagePreview { max-width: 100%; max-height: 180px; display: block; margin: 0 auto; }
+        
+        /* THUMBNAILS STRIP */
+        .thumbnails-strip {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 8px 2px;
+            margin-top: 12px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .thumb-add-btn {
+            min-width: 48px;
+            height: 48px;
+            background: var(--accent-yellow-light);
+            border: 1px dashed var(--yellow-accent);
+            border-radius: var(--radius-sm);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: var(--black);
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .thumb-add-btn:hover {
+            background: var(--yellow-accent);
+            color: var(--black);
+        }
+        .thumb-item {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            position: relative;
+            flex-shrink: 0;
+            background: var(--card-hover);
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.2s ease;
+        }
+        .thumb-item:hover { opacity: 0.9; }
+        .thumb-item.active-thumb {
+            border-color: var(--yellow-accent);
+            opacity: 1;
+            box-shadow: 0 0 8px var(--accent-yellow-light);
+        }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* SCANNING OVERLAY */
+        .ai-scanning-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(250, 204, 21, 0.2) 100%);
+            box-shadow: inset 0 0 25px rgba(250, 204, 21, 0.1);
+            display: none;
+            z-index: 10;
+            overflow: hidden;
+            backdrop-filter: blur(1px);
+        }
+        .ai-scanning-overlay::before {
+            content: '';
+            position: absolute;
+            top: -100%; left: 0; right: 0; height: 100%;
+            background: linear-gradient(180deg, transparent, rgba(250, 204, 21, 0.3), transparent);
+            animation: modernScan 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+        @keyframes modernScan {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        /* TOAST NOTIFICATION */
+        #toastNotification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: var(--black);
+            color: var(--white);
+            padding: 12px 22px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #374151;
+        }
+        #toastNotification.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .preview-info { font-size: 12px; color: var(--text-muted); margin-top: 6px; font-weight: 600; }
+
+        .section-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .section-group label {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* DROPDOWN STYLES */
+        .custom-dropdown {
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .dropdown-select-box {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            font-size: 14px;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.2s;
+        }
+        .dropdown-select-box:hover { border-color: var(--black); }
+        .dropdown-options-container {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-top: 4px;
+            box-shadow: var(--shadow);
+            display: none;
+            z-index: 99;
+            max-height: 250px;
+            overflow-y: auto;
+            text-align: left;
+        }
+        .dropdown-options-container.open { display: block; }
+        .dropdown-group-title {
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--yellow-hover);
+            padding: 8px 12px 4px 12px;
+            background: var(--accent-yellow-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .dropdown-option {
+            padding: 10px 14px;
+            font-size: 13px;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .dropdown-option:hover {
+            background: var(--accent-yellow-light);
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .separator {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 15px 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            text-align: left;
+        }
+
+        .unit-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .unit-btn {
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .unit-btn.active {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .control-group label { font-size: 11px; font-weight: 800; color: var(--text-muted); display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.8px; }
+        .control-group input {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            box-sizing: border-box;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .control-group input:focus { border-color: var(--black); }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 14px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .btn:hover { background-color: var(--yellow-accent); color: var(--black); }
+
+        .enhancer-card {
+            margin-top: 20px;
+            border-top: 2px dashed var(--border);
+            padding-top: 20px;
+            text-align: left;
+        }
+        .enhancer-card h2 {
+            font-size: 17px;
+            color: var(--black);
+            margin-bottom: 4px;
+            font-weight: 800;
+        }
+        .enhancer-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+        .btn-enhance {
+            background-color: var(--yellow-accent);
+            color: var(--black);
+            border: none;
+            padding: 14px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            box-sizing: border-box;
+            box-shadow: var(--shadow-small);
+        }
+        .btn-enhance:hover { background-color: var(--yellow-hover); }
+        .btn-enhance.reverse-mode {
+            background-color: var(--reverse-primary);
+            color: var(--white);
+            box-shadow: none;
+        }
+        .btn-enhance.reverse-mode:hover {
+            background-color: var(--reverse-hover);
+        }
+
+        .download-section {
+            margin-top: 25px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        #downloadBtn {
+            background-color: var(--primary);
+            color: var(--white);
+            width: 100%;
+        }
+        #downloadBtn:hover { background-color: var(--yellow-accent); color: var(--black); }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+        }
+        .back-link:hover { color: var(--yellow-hover); text-decoration: underline; }
+
+        /* SUCCESS PAGE (THIRD PAGE) WITH ADS LAYOUT */
+        .success-page-layout {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        #successPage {
+            display: none;
+            width: 100%;
+            max-width: 520px;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            text-align: center;
+            box-sizing: border-box;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .success-icon-circle {
+            width: 70px;
+            height: 70px;
+            background: var(--accent-yellow-light);
+            border: 2px solid var(--yellow-accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 16px auto;
+            color: var(--black);
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .success-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        .success-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        /* ORIGINAL FOOTER STYLE RESTORED */
+        footer.site-footer {
+            width: 100%;
+            max-width: 1280px;
+            padding: 25px 20px;
+            margin-top: auto;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-sizing: border-box;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-links a:hover {
+            color: var(--black);
+            text-decoration: underline;
+        }
+    
+/* EasyWorkTools shared brand/footer layer */
+.site-brand-bar{width:100%;max-width:1280px;padding:25px 20px;display:flex;justify-content:space-between;align-items:center;box-sizing:border-box}
+.site-brand-wrap{display:flex;align-items:baseline;gap:3px}
+.site-logo{font-size:22px;font-weight:900;color:var(--black,#0F172A);letter-spacing:-.8px;text-decoration:none;white-space:nowrap}
+.site-logo-domain{font-family:'Space Grotesk',sans-serif;background:#FACC15;color:#0F172A;padding:1px 2px;border-radius:3px;font-size:11px;font-weight:900;display:inline-block;line-height:1;position:relative;top:-1px;margin-left:1px}
+.site-footer{width:100%;border-top:1px solid #E5E7EB;background:#fff;margin-top:56px;padding:34px 0 22px;color:#475569}
+.site-footer-inner{width:min(1160px,calc(100% - 32px));margin:auto}
+.site-footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.site-footer-logo{font-size:22px;font-weight:900;color:#0F172A;display:inline-flex;align-items:baseline;gap:2px;text-decoration:none}
+.site-footer-logo .site-logo-domain{font-size:11px}
+.site-footer-description{max-width:430px;margin:10px 0 0;color:#64748B;font-size:13px;line-height:1.7}
+.site-footer-col h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#0F172A;margin:0 0 10px}
+.site-footer-col a{display:block;color:#64748B;text-decoration:none;font-size:12px;font-weight:700;margin:7px 0}
+.site-footer-col a:hover{color:#8A6700;text-decoration:underline}
+.site-footer-bottom{margin-top:22px;padding-top:16px;border-top:1px solid #E5E7EB;font-size:11px;color:#94A3B8}
+@media(max-width:760px){.site-footer-top{grid-template-columns:1fr 1fr}.site-footer-brand{grid-column:1/-1}.site-brand-bar{padding:18px 14px}}
+@media(max-width:520px){.site-footer-top{grid-template-columns:1fr}.site-brand-bar{padding:18px 12px}.site-logo{font-size:20px}}
+
+.ad-reserved{min-height:76px;width:100%;max-width:1280px;margin:18px auto;display:flex;align-items:center;justify-content:center}.ad-reserved:empty{visibility:hidden}
+.tool-seo-content{width:100%;max-width:1280px;padding:10px 20px 0;box-sizing:border-box}
+.seo-inner{border-top:1px solid #E5E7EB;padding:38px 0 0}
+.seo-inner h2{font-size:28px;line-height:1.25;color:#0F172A;margin:0 0 12px;letter-spacing:-.6px}
+.seo-inner>p{max-width:900px;color:#475569;line-height:1.8;font-size:14px;margin:0 0 22px}
+.seo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.seo-grid>div{border:1px solid #E5E7EB;border-radius:14px;padding:18px;background:#fff}
+.seo-grid h3,.faq h3{font-size:15px;color:#0F172A;margin:0 0 7px}.seo-grid p,.faq p{font-size:13px;color:#64748B;line-height:1.7;margin:0}
+.faq{margin-top:22px}.faq details{border-top:1px solid #E5E7EB;padding:12px 0}.faq summary{cursor:pointer;font-weight:800;color:#0F172A;font-size:13px}
+@media(max-width:760px){.seo-grid{grid-template-columns:1fr}.tool-seo-content{padding-left:14px;padding-right:14px}.seo-inner h2{font-size:24px}}
+
+/* Shared site header navigation */
+.site-brand-bar{position:sticky;top:0;z-index:100;width:100%;background:rgba(255,255,255,.96);border-bottom:1px solid #E5E7EB;backdrop-filter:blur(12px);display:flex;align-items:center;min-height:72px;padding:0 max(16px,calc((100% - 1160px)/2));gap:24px;box-sizing:border-box}
+.site-brand-wrap{display:flex;align-items:center}
+.site-brand-bar .site-logo{font-size:22px;font-weight:900;letter-spacing:-.8px;white-space:nowrap;color:#111827;display:inline-flex;align-items:baseline;gap:2px;text-decoration:none}
+.site-brand-bar .site-logo-domain{font-family:'Space Grotesk',sans-serif;background:#FACC15;color:#111827;padding:1px 2px;border-radius:3px;font-size:11px;font-weight:900;display:inline-block;line-height:1;position:relative;top:-1px;margin-left:1px}
+.site-brand-bar .nav-links{display:flex;gap:20px;font-weight:750;font-size:14px;margin-left:auto}
+.site-brand-bar .nav-links a{color:#111827;text-decoration:none}
+.site-brand-bar .nav-links a:hover{color:#8a6700}
+.site-brand-bar .nav-search{margin-left:0}
+.site-brand-bar .nav-search input{width:250px;border:1px solid #E5E7EB;border-radius:10px;padding:10px 12px;outline:none;font:inherit;background:#fff;color:#111827}
+.site-brand-bar .nav-search input:focus{border-color:#c99e00;box-shadow:0 0 0 3px rgba(250,204,21,.18)}
+.site-brand-bar .menu-btn{display:none;border:1px solid #E5E7EB;background:#fff;border-radius:10px;padding:8px 11px}
+@media(max-width:820px){.site-brand-bar{padding:0 16px}.site-brand-bar .nav-links{display:none}.site-brand-bar .nav-links.mobile-show{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;padding:16px;border-bottom:1px solid #E5E7EB;flex-direction:column;margin-left:0}.site-brand-bar .nav-search{margin-left:auto}.site-brand-bar .nav-search input{width:135px}.site-brand-bar .menu-btn{display:block}}
+</style>
+<style>.site-footer-top{grid-template-columns:1.4fr 1fr 1fr 1fr}.site-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px}.site-footer-legal{display:flex;gap:18px;justify-content:flex-end}.site-footer-legal a{color:#64748B;text-decoration:none;font-weight:700}.site-footer-legal a:hover{color:#8A6700;text-decoration:underline}@media(max-width:900px){.site-footer-top{grid-template-columns:1fr 1fr}.site-footer-brand{grid-column:1/-1}}@media(max-width:560px){.site-footer-top{grid-template-columns:1fr}.site-footer-brand{grid-column:auto}.site-footer-bottom{align-items:flex-start;flex-direction:column}.site-footer-legal{justify-content:flex-start;flex-wrap:wrap;gap:12px}}</style><link rel="stylesheet" href="../../assets/styles.css">
+
+</head>
+<body>
+
+    <!-- FULL SCREEN DROP OVERLAY -->
+    <div id="fullScreenDropOverlay">
+        <h2>Drop Image Anywhere</h2>
+        <p>Release to open in editor</p>
+    </div>
+
+    <div id="toastNotification">Action Completed Successfully!</div>
+
+    <header class="navbar"><div class="container nav-inner"><a class="site-logo" href="../../index.html" aria-label="EasyWorkTools.online home">EasyWorkTools<span class="site-logo-domain">.online</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="../../index.html">Home</a><a href="../../index.html#tools">Tools</a><a href="../../blog/index.html">Blog</a><a href="../../resources/index.html">Resources</a></nav><div class="nav-search"><input id="navSearch" type="search" placeholder="Global Search..." aria-label="Search tools, blogs and pages" autocomplete="off"></div><button class="menu-btn" type="button" onclick="document.querySelector('.nav-links').classList.toggle('mobile-show')" aria-label="Menu">☰</button></div></header>
+<div class="search-panel" id="searchPanel"><div class="container search-inner"><div class="search-meta"><span id="searchStatus">Start typing to search the whole site.</span><button class="search-close" type="button" onclick="closeSearch()">Close ✕</button></div><div class="search-results" id="searchResults"></div></div></div><!-- Paste the exact Google-provided ad unit markup for this placement here after approval. Do not add visible labels. -->
+
+
+    <div class="main-wrapper">
+
+        <!-- LANDING PAGE SECTION -->
+        <div id="landingSectionWrapper">
+            <div id="landingSection">
+                <div class="hero-left">
+                    <h1>Resize Images <br>in <span>Seconds.</span></h1>
+                    <p>Instantly rescale, optimize, and enhance your photos to any dimension or platform ratio with real-time preview.</p>
+                    
+                    <button class="upload-btn-large" onclick="document.getElementById('imageInput').click()">Upload Image</button>
+                    <div class="upload-subtext">or drag and drop any image file anywhere on screen</div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="animation-preview-box">
+                        <img id="animatedImage" class="animated-img" src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=600&auto=format&fit=crop&q=80" alt="Sample Preview">
+                        <div class="dimension-badge" id="dimensionBadge">1920 × 1080 px</div>
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 10px; font-weight: 500;">Live Multi-Scale Resizing Preview</div>
+                </div>
+            </div>
+
+            <!-- FIRST PAGE GOOGLE AD SLOT -->
+            <div class="adsense-slot">
+                <div class="adsense-box">
+                    <div class="ad-reserved" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+
+        <input type="file" id="imageInput" accept="image/*">
+        <input type="file" id="additionalImageInput" accept="image/*" multiple style="display:none;">
+
+        <!-- WORKSPACE LAYOUT WITH DESKTOP SIDEBAR ADS -->
+        <div class="workspace-layout" id="workspaceLayoutContainer" style="display: none;">
+            
+            <!-- LEFT DESKTOP WIDE SKYSCRAPER AD -->
+            <div class="sidebar-ad-left">
+                <div class="sidebar-ad-box">
+                    <div class="ad-reserved" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <!-- TOOL WORKSPACE SECTION -->
+            <div id="toolWorkspace">
+                <a class="back-link" onclick="navigateToView('landing', true)">← Upload a different image</a>
+                
+                <div class="preview-container">
+                    <div class="preview-wrapper">
+                        <img id="imagePreview" alt="Preview">
+                        <div class="ai-scanning-overlay" id="scannerBeam"></div>
+                    </div>
+                    <div class="preview-info" id="previewInfo">Current Size: 0 x 0 px</div>
+
+                    <!-- THUMBNAILS STRIP -->
+                    <div class="thumbnails-strip" id="thumbnailsStrip">
+                        <div class="thumb-add-btn" onclick="document.getElementById('additionalImageInput').click()" title="Add more images">+</div>
+                    </div>
+                </div>
+
+                <!-- SECOND PAGE GOOGLE AD SLOT 1 -->
+                <div class="adsense-slot" style="margin: 5px 0 10px 0;">
+                    <div class="adsense-box" style="height: 50px;">
+                        <div class="ad-reserved" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <!-- PRESET DROPDOWN -->
+                <div class="section-group">
+                    <label>Select Platform Preset</label>
+                    <div class="custom-dropdown" id="customDropdown">
+                        <div class="dropdown-select-box" id="dropdownSelectBox" onclick="toggleDropdown()">
+                            <span id="selectedDropdownText">-- Custom Size / Original --</span>
+                            <span>▼</span>
+                        </div>
+                        <div class="dropdown-options-container" id="dropdownOptionsContainer">
+                            <div class="dropdown-option" data-value="custom" onclick="selectPreset('custom', '-- Custom Size / Original --')">-- Custom Size / Original --</div>
+                            
+                            <div class="dropdown-group-title">E-Commerce Platforms</div>
+                            <div class="dropdown-option" data-value="2000x2000" onclick="selectPreset('2000x2000', 'Etsy Listing Photo (2000 x 2000 px)')" onmouseenter="previewPresetDimension(2000, 2000)" onmouseleave="revertPresetHover()">Etsy Listing Photo (2000 x 2000 px)</div>
+                            <div class="dropdown-option" data-value="1600x1600" onclick="selectPreset('1600x1600', 'Shopify Product Image (1600 x 1600 px)')" onmouseenter="previewPresetDimension(1600, 1600)" onmouseleave="revertPresetHover()">Shopify Product Image (1600 x 1600 px)</div>
+                            <div class="dropdown-option" data-value="1000x1000" onclick="selectPreset('1000x1000', 'eBay Listing Image (1000 x 1000 px)')" onmouseenter="previewPresetDimension(1000, 1000)" onmouseleave="revertPresetHover()">eBay Listing Image (1000 x 1000 px)</div>
+                            <div class="dropdown-option" data-value="1000x1500" onclick="selectPreset('1000x1500', 'Amazon Product Image (1000 x 1500 px)')" onmouseenter="previewPresetDimension(1000, 1500)" onmouseleave="revertPresetHover()">Amazon Product Image (1000 x 1500 px)</div>
+
+                            <div class="dropdown-group-title">Social Media & Thumbnails</div>
+                            <div class="dropdown-option" data-value="1280x720" onclick="selectPreset('1280x720', 'YouTube Thumbnail (1280 x 720 px)')" onmouseenter="previewPresetDimension(1280, 720)" onmouseleave="revertPresetHover()">YouTube Thumbnail (1280 x 720 px)</div>
+                            <div class="dropdown-option" data-value="800x800" onclick="selectPreset('800x800', 'Instagram / Facebook Profile DP (800 x 800 px)')" onmouseenter="previewPresetDimension(800, 800)" onmouseleave="revertPresetHover()">Instagram / Facebook Profile DP (800 x 800 px)</div>
+                            <div class="dropdown-option" data-value="1080x1080" onclick="selectPreset('1080x1080', 'Instagram Post Square (1080 x 1080 px)')" onmouseenter="previewPresetDimension(1080, 1080)" onmouseleave="revertPresetHover()">Instagram Post Square (1080 x 1080 px)</div>
+                            <div class="dropdown-option" data-value="1080x1920" onclick="selectPreset('1080x1920', 'TikTok / Reels / Shorts (1080 x 1920 px)')" onmouseenter="previewPresetDimension(1080, 1920)" onmouseleave="revertPresetHover()">TikTok / Reels / Shorts (1080 x 1920 px)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-group">
+                    <div class="separator">Or Choose in Pixels / Centimeters</div>
+                    
+                    <div class="unit-toggle">
+                        <button type="button" class="unit-btn active" id="pxBtn" onclick="setUnit('px')">Pixels (px)</button>
+                        <button type="button" class="unit-btn" id="cmBtn" onclick="setUnit('cm')">Centimeters (cm)</button>
+                    </div>
+
+                    <div class="controls">
+                        <div class="control-group">
+                            <label id="widthLabel">Width (px)</label>
+                            <input type="number" id="widthInput" oninput="handleManualInput()">
+                        </div>
+                        <div class="control-group">
+                            <label id="heightLabel">Height (px)</label>
+                            <input type="number" id="heightInput" oninput="handleManualInput()">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" id="applyBtn" onclick="applyChanges()">Apply Changes</button>
+
+                <div class="enhancer-card">
+                    <h2>AI Enhancer</h2>
+                    <p>Boost clarity and sharpness of the current image.</p>
+                    <button class="btn-enhance" id="enhanceBtn" onclick="toggleAiEnhance()">AI Enhancer</button>
+                </div>
+
+                <!-- SECOND PAGE GOOGLE AD SLOT 2 -->
+                <div class="adsense-slot" style="margin: 10px 0 5px 0;">
+                    <div class="adsense-box" style="height: 50px;">
+                        <div class="ad-reserved" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <div class="download-section" id="downloadSection">
+                    <button class="btn" id="downloadBtn" onclick="handleDownload()">Download Image</button>
+                </div>
+            </div>
+
+            <!-- RIGHT DESKTOP WIDE SKYSCRAPER AD -->
+            <div class="sidebar-ad-right">
+                <div class="sidebar-ad-box">
+                    <div class="ad-reserved" aria-hidden="true"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SUCCESS PAGE LAYOUT (THIRD PAGE WITH ADS) -->
+        <div class="success-page-layout" id="successPageLayoutContainer" style="display: none;">
+            
+            <!-- LEFT SIDEBAR AD FOR SUCCESS PAGE -->
+            <div class="sidebar-ad-left">
+                <div class="sidebar-ad-box">
+                    <div class="ad-reserved" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <!-- SUCCESS BOX -->
+            <div id="successPage">
+                <div class="success-icon-circle">✓</div>
+                <div class="success-title" id="successTitleText">Image Downloaded Successfully!</div>
+                <div class="success-desc" id="successDescText">Your processed file has been successfully downloaded to your device storage.</div>
+                
+                <!-- MOBILE / IN-BOX AD SLOT -->
+                <div class="adsense-slot" style="margin: 10px 0 15px 0;">
+                    <div class="adsense-box" style="height: 60px;">
+                        <div class="ad-reserved" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="navigateToView('workspace', true)" style="background-color: var(--yellow-accent); color: var(--black);">Resize Another Image</button>
+            </div>
+
+            <!-- RIGHT SIDEBAR AD FOR SUCCESS PAGE -->
+            <div class="sidebar-ad-right">
+                <div class="sidebar-ad-box">
+                    <div class="ad-reserved" aria-hidden="true"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ORIGINAL FOOTER RESTORED -->
+    
+
+    <script>
+        const scales = [
+            { w: '1920px', h: '1080px', label: '1920 × 1080 px (Landscape)' },
+            { w: '1080px', h: '1080px', label: '1080 × 1080 px (Square)' },
+            { w: '1080px', h: '1920px', label: '1080 × 1920 px (Shorts/Reels)' },
+            { w: '1600px', h: '1600px', label: '1600 × 1600 px (Shopify)' }
+        ];
+        let scaleIndex = 0;
+        const animatedImg = document.getElementById('animatedImage');
+        const dimensionBadge = document.getElementById('dimensionBadge');
+
+        setInterval(() => {
+            scaleIndex = (scaleIndex + 1) % scales.length;
+            const current = scales[scaleIndex];
+            animatedImg.style.width = current.w === '1080px' && current.h === '1920px' ? '120px' : (current.w === '1920px' ? '220px' : '160px');
+            animatedImg.style.height = current.h === '1920px' ? '200px' : (current.h === '1080px' ? '120px' : '160px');
+            dimensionBadge.innerText = current.label;
+        }, 2200);
+
+        const imageInput = document.getElementById('imageInput');
+        const additionalImageInput = document.getElementById('additionalImageInput');
+        const landingSectionWrapper = document.getElementById('landingSectionWrapper');
+        const workspaceLayoutContainer = document.getElementById('workspaceLayoutContainer');
+        const toolWorkspace = document.getElementById('toolWorkspace');
+        const successPageLayoutContainer = document.getElementById('successPageLayoutContainer');
+        const successPage = document.getElementById('successPage');
+        const successTitleText = document.getElementById('successTitleText');
+        const successDescText = document.getElementById('successDescText');
+        const fullScreenDropOverlay = document.getElementById('fullScreenDropOverlay');
+
+        const imagePreview = document.getElementById('imagePreview');
+        const previewInfo = document.getElementById('previewInfo');
+        const thumbnailsStrip = document.getElementById('thumbnailsStrip');
+        const widthInput = document.getElementById('widthInput');
+        const heightInput = document.getElementById('heightInput');
+        const widthLabel = document.getElementById('widthLabel');
+        const heightLabel = document.getElementById('heightLabel');
+        const pxBtn = document.getElementById('pxBtn');
+        const cmBtn = document.getElementById('cmBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const scannerBeam = document.getElementById('scannerBeam');
+        const enhanceBtn = document.getElementById('enhanceBtn');
+        const toastNotification = document.getElementById('toastNotification');
+
+        const dropdownSelectBox = document.getElementById('dropdownSelectBox');
+        const dropdownOptionsContainer = document.getElementById('dropdownOptionsContainer');
+        const selectedDropdownText = document.getElementById('selectedDropdownText');
+
+        let originalLoadedImage = new Image();
+        let currentWorkingImage = new Image();
+        let preEnhancedImageSrc = "";
+        let isEnhanced = false;
+        let currentUnit = 'px';
+        let originalWidthPx = 0;
+        let originalHeightPx = 0;
+        const DPI = 96;
+        let selectedPresetVal = "custom";
+        let allUploadedFiles = [];
+        let activeFileIndex = 0;
+
+        // HISTORY NAVIGATION SYSTEM
+        function navigateToView(viewName, pushStateFlag = true) {
+            landingSectionWrapper.style.display = 'none';
+            workspaceLayoutContainer.style.display = 'none';
+            successPageLayoutContainer.style.display = 'none';
+            toolWorkspace.style.display = 'none';
+            successPage.style.display = 'none';
+
+            if (viewName === 'landing') {
+                landingSectionWrapper.style.display = 'block';
+            } else if (viewName === 'workspace') {
+                workspaceLayoutContainer.style.display = 'flex';
+                toolWorkspace.style.display = 'block';
+            } else if (viewName === 'success') {
+                successPageLayoutContainer.style.display = 'flex';
+                successPage.style.display = 'block';
+            }
+
+            if (pushStateFlag) {
+                history.pushState({ view: viewName }, '', `#${viewName}`);
+            }
+        }
+
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.view) {
+                navigateToView(event.state.view, false);
+            } else {
+                navigateToView('landing', false);
+            }
+        });
+
+        // Initialize history state on page load
+        if (!history.state) {
+            history.replaceState({ view: 'landing' }, '', '#landing');
+        }
+
+        function toggleDropdown() {
+            dropdownOptionsContainer.classList.toggle('open');
+        }
+
+        window.addEventListener('click', function(e) {
+            if (!document.getElementById('customDropdown').contains(e.target)) {
+                dropdownOptionsContainer.classList.remove('open');
+            }
+        });
+
+        // FULL SCREEN WINDOW DRAG & DROP CATCH HANDLERS
+        let dragCounter = 0;
+
+        window.addEventListener('dragenter', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter++;
+            if (dragCounter === 1) {
+                fullScreenDropOverlay.style.display = 'flex';
+            }
+        });
+
+        window.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        window.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter--;
+            if (dragCounter <= 0) {
+                dragCounter = 0;
+                fullScreenDropOverlay.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter = 0;
+            fullScreenDropOverlay.style.display = 'none';
+
+            const files = e.dataTransfer.files;
+            if (files && files.length > 0) {
+                imageInput.files = files;
+                handleInitialFiles(Array.from(files));
+            }
+        });
+
+        imageInput.addEventListener('change', function(event) {
+            const files = Array.from(event.target.files);
+            if (files.length > 0) {
+                handleInitialFiles(files);
+            }
+        });
+
+        additionalImageInput.addEventListener('change', function(event) {
+            const files = Array.from(event.target.files);
+            files.forEach(file => allUploadedFiles.push(file));
+            renderThumbnails();
+            showToast(`${files.length} more image(s) added!`);
+        });
+
+        function handleInitialFiles(files) {
+            allUploadedFiles = files;
+            activeFileIndex = 0;
+            loadActiveImage(activeFileIndex, () => {
+                navigateToView('workspace', true);
+                renderThumbnails();
+            });
+        }
+
+        function loadActiveImage(index, callback) {
+            const file = allUploadedFiles[index];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                originalLoadedImage.src = e.target.result;
+                originalLoadedImage.onload = function() {
+                    currentWorkingImage.src = originalLoadedImage.src;
+                    imagePreview.src = originalLoadedImage.src;
+                    
+                    originalWidthPx = originalLoadedImage.width;
+                    originalHeightPx = originalLoadedImage.height;
+
+                    previewInfo.innerText = `Current Size: ${originalWidthPx} x ${originalHeightPx} px`;
+
+                    currentUnit = 'px';
+                    pxBtn.classList.add('active');
+                    cmBtn.classList.remove('active');
+                    widthLabel.innerText = "Width (px)";
+                    heightLabel.innerText = "Height (px)";
+
+                    widthInput.value = originalWidthPx;
+                    heightInput.value = originalHeightPx;
+
+                    selectedPresetVal = "custom";
+                    selectedDropdownText.innerText = "-- Custom Size / Original --";
+                    
+                    isEnhanced = false;
+                    enhanceBtn.innerText = "AI Enhancer";
+                    enhanceBtn.classList.remove('reverse-mode');
+
+                    if (callback) callback();
+                }
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function renderThumbnails() {
+            const addBtnHTML = `<div class="thumb-add-btn" onclick="document.getElementById('additionalImageInput').click()" title="Add more images">+</div>`;
+            thumbnailsStrip.innerHTML = "";
+
+            allUploadedFiles.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const thumbDiv = document.createElement('div');
+                    thumbDiv.className = `thumb-item ${index === activeFileIndex ? 'active-thumb' : ''}`;
+                    thumbDiv.innerHTML = `<img src="${e.target.result}" alt="Thumb">`;
+                    thumbDiv.onclick = function() {
+                        activeFileIndex = index;
+                        loadActiveImage(activeFileIndex, () => {
+                            updateThumbnailsActiveState();
+                        });
+                    };
+                    thumbnailsStrip.appendChild(thumbDiv);
+                }
+                reader.readAsDataURL(file);
+            });
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = addBtnHTML;
+            thumbnailsStrip.appendChild(tempDiv.firstChild);
+        }
+
+        function updateThumbnailsActiveState() {
+            const items = thumbnailsStrip.querySelectorAll('.thumb-item');
+            items.forEach((item, idx) => {
+                if (idx === activeFileIndex) {
+                    item.classList.add('active-thumb');
+                } else {
+                    item.classList.remove('active-thumb');
+                }
+            });
+        }
+
+        function setUnit(unit) {
+            currentUnit = unit;
+            if (unit === 'px') {
+                pxBtn.classList.add('active');
+                cmBtn.classList.remove('active');
+                widthLabel.innerText = "Width (px)";
+                heightLabel.innerText = "Height (px)";
+                widthInput.value = Math.round(parseFloat(widthInput.value || originalWidthPx) * (DPI / 2.54));
+                heightInput.value = Math.round(parseFloat(heightInput.value || originalHeightPx) * (DPI / 2.54));
+            } else {
+                cmBtn.classList.add('active');
+                pxBtn.classList.remove('active');
+                widthLabel.innerText = "Width (cm)";
+                heightLabel.innerText = "Height (cm)";
+                widthInput.value = ((parseFloat(widthInput.value || originalWidthPx) / DPI) * 2.54).toFixed(1);
+                heightInput.value = ((parseFloat(heightInput.value || originalHeightPx) / DPI) * 2.54).toFixed(1);
+            }
+            triggerLiveUpdate();
+        }
+
+        function previewPresetDimension(w, h) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = w;
+            canvas.height = h;
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            ctx.drawImage(currentWorkingImage, 0, 0, w, h);
+            const previewUrl = canvas.toDataURL('image/jpeg', 0.95);
+            imagePreview.src = previewUrl;
+            previewInfo.innerText = `Hover Preview: ${w} x ${h} px`;
+        }
+
+        function revertPresetHover() {
+            triggerLiveUpdate();
+        }
+
+        function selectPreset(val, labelText) {
+            selectedPresetVal = val;
+            selectedDropdownText.innerText = labelText;
+            dropdownOptionsContainer.classList.remove('open');
+
+            if (val !== "custom") {
+                const parts = val.split('x');
+                originalWidthPx = parseInt(parts[0]);
+                originalHeightPx = parseInt(parts[1]);
+                if (currentUnit === 'px') {
+                    widthInput.value = originalWidthPx;
+                    heightInput.value = originalHeightPx;
+                } else {
+                    widthInput.value = ((originalWidthPx / DPI) * 2.54).toFixed(1);
+                    heightInput.value = ((originalHeightPx / DPI) * 2.54).toFixed(1);
+                }
+            } else {
+                originalWidthPx = currentWorkingImage.width;
+                originalHeightPx = currentWorkingImage.height;
+                if (currentUnit === 'px') {
+                    widthInput.value = originalWidthPx;
+                    heightInput.value = originalHeightPx;
+                } else {
+                    widthInput.value = ((originalWidthPx / DPI) * 2.54).toFixed(1);
+                    heightInput.value = ((originalHeightPx / DPI) * 2.54).toFixed(1);
+                }
+            }
+            triggerLiveUpdate();
+        }
+
+        function handleManualInput() {
+            selectedPresetVal = "custom";
+            selectedDropdownText.innerText = "-- Custom Size / Original --";
+            triggerLiveUpdate();
+        }
+
+        function getProcessedDataUrl() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            let targetWidth, targetHeight;
+            const inputW = parseFloat(widthInput.value) || currentWorkingImage.width;
+            const inputH = parseFloat(heightInput.value) || currentWorkingImage.height;
+            if (currentUnit === 'cm') {
+                targetWidth = Math.round((inputW / 2.54) * DPI);
+                targetHeight = Math.round((inputH / 2.54) * DPI);
+            } else {
+                targetWidth = Math.round(inputW);
+                targetHeight = Math.round(inputH);
+            }
+            if (targetWidth <= 0 || targetHeight <= 0) return currentWorkingImage.src;
+            canvas.width = targetWidth;
+            canvas.height = targetHeight;
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            ctx.drawImage(currentWorkingImage, 0, 0, targetWidth, targetHeight);
+            return canvas.toDataURL('image/jpeg', 0.95);
+        }
+
+        function triggerLiveUpdate() {
+            const liveDataUrl = getProcessedDataUrl();
+            imagePreview.src = liveDataUrl;
+            const inputW = parseFloat(widthInput.value) || currentWorkingImage.width;
+            const inputH = parseFloat(heightInput.value) || currentWorkingImage.height;
+            let tw = currentUnit === 'cm' ? Math.round((inputW / 2.54) * DPI) : Math.round(inputW);
+            let th = currentUnit === 'cm' ? Math.round((inputH / 2.54) * DPI) : Math.round(inputH);
+            previewInfo.innerText = `Current Size: ${tw} x ${th} px`;
+        }
+
+        function applyChanges() {
+            triggerLiveUpdate();
+            showToast("Changes applied successfully!");
+        }
+
+        function showToast(message) {
+            toastNotification.innerHTML = message;
+            toastNotification.classList.add('show');
+            setTimeout(() => {
+                toastNotification.classList.remove('show');
+            }, 3000);
+        }
+
+        async function handleDownload() {
+            if (allUploadedFiles.length <= 1) {
+                const dataUrl = getProcessedDataUrl();
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = allUploadedFiles.length === 1 ? `resized-${allUploadedFiles[0].name}` : 'processed-image.jpg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                // Switch to Success Page
+                successTitleText.innerText = "Image Downloaded Successfully!";
+                successDescText.innerText = "Your resized image has been successfully downloaded to your device.";
+                navigateToView('success', true);
+            } else {
+                showToast("Preparing ZIP folder for bulk download...");
+                const zip = new JSZip();
+                
+                const targetWidth = currentUnit === 'cm' ? Math.round((parseFloat(widthInput.value) / 2.54) * DPI) : Math.round(parseFloat(widthInput.value));
+                const targetHeight = currentUnit === 'cm' ? Math.round((parseFloat(heightInput.value) / 2.54) * DPI) : Math.round(parseFloat(heightInput.value));
+
+                let promises = allUploadedFiles.map((file, index) => {
+                    return new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const img = new Image();
+                            img.src = e.target.result;
+                            img.onload = function() {
+                                const canvas = document.createElement('canvas');
+                                const ctx = canvas.getContext('2d');
+                                canvas.width = targetWidth || img.width;
+                                canvas.height = targetHeight || img.height;
+                                ctx.imageSmoothingEnabled = true;
+                                ctx.imageSmoothingQuality = 'high';
+                                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                                
+                                const base64Data = canvas.toDataURL('image/jpeg', 0.95).split(',')[1];
+                                const filename = file.name ? `resized-${file.name}` : `image-${index+1}.jpg`;
+                                zip.file(filename, base64Data, {base64: true});
+                                resolve();
+                            }
+                        }
+                        reader.readAsDataURL(file);
+                    });
+                });
+
+                await Promise.all(promises);
+                const content = await zip.generateAsync({type: "blob"});
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(content);
+                link.download = "resized-images-bundle.zip";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Switch to Success Page for Bulk
+                successTitleText.innerText = "Images Downloaded Successfully!";
+                successDescText.innerText = `All ${allUploadedFiles.length} resized images have been successfully zipped and downloaded.`;
+                navigateToView('success', true);
+            }
+        }
+
+        function toggleAiEnhance() {
+            if (!isEnhanced) {
+                enhanceBtn.disabled = true;
+                enhanceBtn.style.opacity = '0.6';
+                scannerBeam.style.display = 'block';
+
+                setTimeout(() => {
+                    preEnhancedImageSrc = currentWorkingImage.src;
+
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    const w = currentWorkingImage.width;
+                    const h = currentWorkingImage.height;
+                    canvas.width = w;
+                    canvas.height = h;
+                    ctx.imageSmoothingEnabled = true;
+                    ctx.imageSmoothingQuality = 'high';
+                    ctx.drawImage(currentWorkingImage, 0, 0);
+                    
+                    const imgData = ctx.getImageData(0, 0, w, h);
+                    const data = imgData.data;
+                    const weights = [0, -1, 0, -1, 5, -1, 0, -1, 0];
+                    const side = 3;
+                    const halfSide = 1;
+                    const output = ctx.createImageData(w, h);
+                    const dst = output.data;
+                    
+                    for (let y = 0; y < h; y++) {
+                        for (let x = 0; x < w; x++) {
+                            const dstOff = (y * w + x) * 4;
+                            let r = 0, g = 0, b = 0;
+                            for (let cy = 0; cy < side; cy++) {
+                                for (let cx = 0; cx < side; cx++) {
+                                    const scy = y + cy - halfSide;
+                                    const scx = x + cx - halfSide;
+                                    if (scy >= 0 && scy < h && scx >= 0 && scx < w) {
+                                        const srcOff = (scy * w + scx) * 4;
+                                        const wt = weights[cy * side + cx];
+                                        r += data[srcOff] * wt;
+                                        g += data[srcOff + 1] * wt;
+                                        b += data[srcOff + 2] * wt;
+                                    }
+                                }
+                            }
+                            dst[dstOff] = Math.min(255, Math.max(0, r));
+                            dst[dstOff + 1] = Math.min(255, Math.max(0, g));
+                            dst[dstOff + 2] = Math.min(255, Math.max(0, b));
+                            dst[dstOff + 3] = data[dstOff + 3];
+                        }
+                    }
+                    ctx.putImageData(output, 0, 0);
+                    const finalData = ctx.getImageData(0, 0, w, h);
+                    const d = finalData.data;
+                    for (let i = 0; i < d.length; i += 4) {
+                        d[i] = Math.min(255, Math.max(0, 1.25 * (d[i] - 128) + 128));
+                        d[i+1] = Math.min(255, Math.max(0, 1.25 * (d[i+1] - 128) + 128));
+                        d[i+2] = Math.min(255, Math.max(0, 1.25 * (d[i+2] - 128) + 128));
+                    }
+                    ctx.putImageData(finalData, 0, 0);
+                    
+                    const enhancedDataUrl = canvas.toDataURL('image/jpeg', 0.99);
+                    currentWorkingImage.src = enhancedDataUrl;
+                    imagePreview.src = enhancedDataUrl;
+
+                    scannerBeam.style.display = 'none';
+                    enhanceBtn.disabled = false;
+                    enhanceBtn.style.opacity = '1';
+
+                    isEnhanced = true;
+                    enhanceBtn.innerText = "Reverse Enhance";
+                    enhanceBtn.classList.add('reverse-mode');
+
+                    showToast("AI Enhancer Applied Successfully!");
+                }, 2000);
+            } else {
+                currentWorkingImage.src = preEnhancedImageSrc;
+                imagePreview.src = preEnhancedImageSrc;
+
+                isEnhanced = false;
+                enhanceBtn.innerText = "AI Enhancer";
+                enhanceBtn.classList.remove('reverse-mode');
+
+                showToast("Enhancement Reversed Successfully!");
+            }
+        }
+    </script>
+<!-- Paste the exact Google-provided ad unit markup for this placement here after approval. Do not add visible labels. -->
+<section class="tool-seo-content" aria-labelledby="about-image-resizer">
+  <div class="seo-inner">
+    <h2 id="about-image-resizer">Easy Image Resizer — Resize Images Online</h2>
+    <p>Easy Image Resizer is a browser-based image resizing tool for changing image dimensions without installing desktop software. Upload an image, choose the size or adjustment you need, preview the result, and download the processed image when you are ready.</p>
+    <div class="seo-grid">
+      <div><h3>What can you use it for?</h3><p>Resize photos for websites, social posts, product listings, documents, email attachments, thumbnails, and other everyday digital tasks. The tool also includes image editing options provided by the original utility.</p></div>
+      <div><h3>How to resize an image</h3><p>Open the tool, add your image, adjust the available dimensions or settings, review the preview, and use the download controls to save the result. Keeping the preview step helps you check the output before using it elsewhere.</p></div>
+      <div><h3>Why use a browser tool?</h3><p>A browser-based workflow is convenient when you need a quick image resize on a computer or phone. There is no separate desktop installation, and the supplied tool performs its image processing in the browser.</p></div>
+    </div>
+    <div class="faq"><h3>Image Resizer FAQ</h3><details><summary>Is the Easy Image Resizer free?</summary><p>Yes. EasyWorkTools.online provides the tool as a free browser-based utility.</p></details><details><summary>Do I need to install software?</summary><p>No separate image-editing application is required to use the web tool.</p></details></div>
+  </div>
+</section><!-- Paste the exact Google-provided ad unit markup for this placement here after approval. Do not add visible labels. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Easy Image Resizer Online — Free Image Resize Tool | EasyWorkTools.online","url":"https://easyworktools.online/tools/easy-image-resizer/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Resize and edit images online for free with EasyWorkTools.online. Use a browser-based image resizer for dimensions, previews and downloads."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the Easy Image Resizer free?","acceptedAnswer":{"@type":"Answer","text":"Yes. EasyWorkTools.online provides the tool as a free browser-based utility."}},{"@type":"Question","name":"Do I need to install software?","acceptedAnswer":{"@type":"Answer","text":"No separate image-editing application is required to use the web tool."}}]}</script><footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-top">
+      <div class="site-footer-brand">
+        <a class="site-footer-logo" href="../../index.html" aria-label="EasyWorkTools.online home">EasyWorkTools<span class="site-logo-domain">.online</span></a>
+        <p class="site-footer-description">Free, practical online tools, helpful guides and useful resources for everyday digital work.</p>
+      </div>
+      <div class="site-footer-col">
+        <h3>Explore</h3>
+        <a href="../../index.html">Home</a><a href="../../index.html#tools">Tools</a><a href="../../blog/index.html">Blog</a><a href="../../resources/index.html">Resources</a><a href="../../about.html">About Us</a>
+      </div>
+      <div class="site-footer-col">
+        <h3>Help &amp; Legal</h3>
+        <a href="../../index.html#help">Help &amp; Feedback</a><a href="../../contact.html">Contact Us</a><a href="../../privacy.html">Privacy Policy</a><a href="../../cookies.html">Cookie Policy</a><a href="../../disclaimer.html">Disclaimer</a><a href="../../terms.html">Terms &amp; Conditions</a>
+      </div>
+      <div class="site-footer-col site-footer-support">
+        <h3>Support</h3>
+        <a class="support-email" href="mailto:EasyWorkTools.online@gmail.com">EasyWorkTools.online@gmail.com</a>
+      </div>
+    </div>
+    <div class="site-footer-bottom"><span>© 2026 EasyWorkTools.online — All rights reserved.</span><span class="site-footer-legal"><a href="../../privacy.html">Privacy</a><a href="../../terms.html">Terms</a><a href="../../contact.html">Contact</a></span></div>
+  </div>
+</footer>
+<script>window.__SITE_DATA__={"tools":[{"title":"Easy Image Resizer","description":"Resize and edit images online for free in your browser.","url":"tools/easy-image-resizer/","iconKey":"image","tags":["image resizer","resize image online","image dimensions","photo resizer","free image tool"]},{"title":"Online Text Case Converter","description":"Convert text to uppercase, lowercase, title case, slug, snake_case and more online for free.","url":"tools/online-text-case-converter/","iconKey":"text-case","tags":["text case converter","uppercase","lowercase","title case","slug converter","snake case"]}],"posts":[{"title":"How to Clean Text Before Publishing It Online | EasyWorkTools.online","description":"Learn a practical workflow for cleaning copied text, standardizing capitalization, checking formatting and preparing text for websites and documents.","url":"blog/how-to-clean-text-before-publishing.html"},{"title":"How to Convert Text Case Online: Uppercase, Lowercase, Title Case & More | EasyWorkTools.online","description":"Learn how to convert text case online for free using EasyWorkTools.online. Step-by-step guide for uppercase, lowercase, title case, slug case and snake case.","url":"blog/how-to-convert-text-case-online.html"},{"title":"How to Prepare Images for Websites, Documents and Social Media | EasyWorkTools.online","description":"Learn how to choose image dimensions, aspect ratios, file formats and practical resizing settings for common digital workflows.","url":"blog/how-to-prepare-images-for-web.html"},{"title":"How to Resize Images Online for Free: A Simple Step-by-Step Guide | EasyWorkTools.online","description":"Learn how to resize images online for free using EasyWorkTools.online. Follow this step-by-step guide for custom dimensions, platform presets, previewing and downloading resized images.","url":"blog/how-to-resize-images-online.html"},{"title":"Resize vs Compress Images: What Is the Difference? | EasyWorkTools.online","description":"Understand the difference between resizing an image and compressing an image, when each method is useful, and how to choose a practical workflow.","url":"blog/how-to-resize-vs-compress-images.html"},{"title":"Uppercase, Lowercase and Title Case: When to Use Each Text Style | EasyWorkTools.online","description":"A practical guide to common text case styles, including uppercase, lowercase, title case, sentence case and when each is useful.","url":"blog/uppercase-lowercase-title-case-guide.html"}],"pages":[{"title":"Home","description":"EasyWorkTools.online homepage.","url":"index.html","type":"Page"},{"title":"Tools","description":"Browse free online tools.","url":"index.html#tools","type":"Page"},{"title":"Blog","description":"Tutorials and how-to guides.","url":"blog/index.html","type":"Page"},{"title":"Resources","description":"Useful references and future downloads.","url":"resources/index.html","type":"Page"},{"title":"About Us","description":"Learn about EasyWorkTools.online, its tools and content approach.","url":"about.html","type":"Page"},{"title":"Privacy Policy","description":"Privacy information for EasyWorkTools.online.","url":"privacy.html","type":"Page"},{"title":"Cookie Policy","description":"Cookie, local storage and advertising information for EasyWorkTools.online.","url":"cookies.html","type":"Page"},{"title":"Disclaimer","description":"Disclaimer for EasyWorkTools.online tools and content.","url":"disclaimer.html","type":"Page"},{"title":"Terms & Conditions","description":"Terms and conditions for using EasyWorkTools.online.","url":"terms.html","type":"Page"},{"title":"Contact Us","description":"Contact EasyWorkTools.online.","url":"contact.html","type":"Page"}]}</script><script src="../../assets/app.js"></script>
+</body>
+</html>
