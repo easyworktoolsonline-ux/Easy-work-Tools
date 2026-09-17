@@ -56,3 +56,19 @@ npm run build
 ```
 
 The build is designed to be repeatable: generated search data and AdSense markers are removed/rebuilt cleanly on subsequent runs.
+
+## Automatic traffic-based ordering
+
+The site now records page views on Cloudflare Pages and automatically sorts tools and blog posts by total traffic. The homepage keeps **8 tools** and **6 blogs**, while the full Tools/Blog pages use the same traffic order.
+
+One-time Cloudflare setup is required because a static site needs persistent storage for global traffic counts:
+
+1. In Cloudflare, open the Pages project connected to this GitHub repository.
+2. Create a **D1 database** (any name is fine).
+3. In the Pages project settings, add a D1 binding with variable name **`EWT_DB`** pointing to that database.
+4. Run the included `schema.sql` once against that D1 database.
+5. Redeploy the project.
+
+After that, no manual traffic sorting is needed. Each page view is counted server-side, and the site fetches the totals automatically; higher-traffic tools/blogs move to the top.
+
+If the D1 binding is temporarily unavailable, the site still works normally and simply falls back to its normal manifest order.
