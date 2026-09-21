@@ -1,0 +1,5 @@
+Contact: mailto:easyworktools.online@gmail.com
+Canonical: https://easyworktools.online/.well-known/security.txt
+Policy: https://easyworktools.online/contact.html
+Preferred-Languages: en
+Expires: 2027-09-20T23:59:59Z
