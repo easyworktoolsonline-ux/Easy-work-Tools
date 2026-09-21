@@ -1,0 +1,21 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/assets/favicon*
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/assets/og-image.png
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/api/*
+  Cache-Control: no-store
+  Access-Control-Allow-Origin: https://easyworktools.online
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type

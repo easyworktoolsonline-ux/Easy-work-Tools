@@ -96,8 +96,8 @@ try {
 }
 
 const pages = [
-  { title: 'Home', description: 'EasyWorkTools.online homepage.', url: 'index.html', type: 'Page' },
-  { title: 'Tools', description: 'Browse free online tools.', url: 'index.html#tools', type: 'Page' },
+  { title: 'Home', description: 'EasyWorkTools.online homepage.', url: '/', type: 'Page' },
+  { title: 'Tools', description: 'Browse free online tools.', url: '/#tools', type: 'Page' },
   { title: 'Blog', description: 'Tutorials and how-to guides.', url: 'blog/index.html', type: 'Page' },
   { title: 'Resources', description: 'Useful references and future downloads.', url: 'resources/index.html', type: 'Page' },
   { title: 'About Us', description: 'Learn about EasyWorkTools.online, its tools and content approach.', url: 'about.html', type: 'Page' },
