@@ -48,7 +48,7 @@
 
 /* Ad placement placeholder used by blog articles; actual AdSense markup is injected at build time. */
 .article-ad-slot{min-height:76px;margin:18px 0;display:flex;align-items:center;justify-content:center}
-.article-ad-slot:empty{visibility:hidden}
+.article-ad-slot:empty{display:none}
 
 
 /* Landing-only animated hero and live stats inspired by modern productivity-tool homepages. */

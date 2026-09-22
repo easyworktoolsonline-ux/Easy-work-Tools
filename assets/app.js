@@ -1,6 +1,15 @@
 (function(){const DATA=window.__SITE_DATA__||{tools:[],posts:[],pages:[]};
 const TOOLS=Array.isArray(DATA.tools)?DATA.tools:[];
 const POSTS=Array.isArray(DATA.posts)?DATA.posts:[];
+const SITE_ROOT=(function(){
+  try{
+    const cs=document.currentScript;
+    const src=cs?cs.getAttribute('src'):'assets/app.js';
+    const idx=src.indexOf('assets/app.js');
+    const prefix=idx>=0?src.slice(0,idx):'';
+    return new URL(prefix, location.href).href;
+  }catch(e){return location.href}
+})();
 let TRAFFIC={};
 function trafficValue(item){
   const key=String(item?.url||'').replace(/^\//,'').replace(/\/$/,'');
@@ -9,7 +18,7 @@ function trafficValue(item){
 }
 function byTrafficDesc(a,b){return trafficValue(b)-trafficValue(a)}
 function sortByTraffic(list){return [...list].sort(byTrafficDesc)}
-function siteUrl(url){const raw=String(url||'');if(!raw)return '#';if(/^(?:https?:|mailto:|tel:|#|javascript:)/i.test(raw))return raw;if(location.protocol==='file:'){const clean=raw.replace(/^\/+/, '');const base=location.href.split('/').slice(0,-1).join('/')+'/';return new URL(clean,base).href}return raw}
+function siteUrl(url){const raw=String(url||'');if(!raw)return '#';if(/^(?:https?:|mailto:|tel:|#|javascript:)/i.test(raw))return raw;const clean=raw.replace(/^\/+/, '');return new URL(clean, SITE_ROOT).href}
 async function loadTraffic(){
   try{
     const r=await fetch('/api/traffic',{cache:'no-store',headers:{'Accept':'application/json'}});
