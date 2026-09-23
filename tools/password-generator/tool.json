@@ -1,0 +1,12 @@
+{
+  "title": "Password Generator",
+  "description": "Generate strong, random passwords online for free with a live strength meter.",
+  "tags": [
+    "password generator",
+    "strong password generator",
+    "random password generator",
+    "secure password"
+  ],
+  "url": "tools/password-generator/",
+  "iconKey": "password"
+}

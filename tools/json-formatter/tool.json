@@ -1,0 +1,12 @@
+{
+  "title": "JSON Formatter",
+  "description": "Format, validate and minify JSON online for free in your browser.",
+  "tags": [
+    "json formatter",
+    "json validator",
+    "json beautifier",
+    "minify json"
+  ],
+  "url": "tools/json-formatter/",
+  "iconKey": "json"
+}
