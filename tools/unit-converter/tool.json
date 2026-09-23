@@ -1,0 +1,13 @@
+{
+  "title": "Unit Converter",
+  "description": "Convert length, weight, temperature, volume, area and speed online for free.",
+  "tags": [
+    "unit converter",
+    "metric to imperial",
+    "length converter",
+    "weight converter",
+    "temperature converter"
+  ],
+  "url": "tools/unit-converter/",
+  "iconKey": "unit"
+}

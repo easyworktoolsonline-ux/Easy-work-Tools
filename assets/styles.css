@@ -49,6 +49,15 @@
 /* Ad placement placeholder used by blog articles; actual AdSense markup is injected at build time. */
 .article-ad-slot{min-height:76px;margin:18px 0;display:flex;align-items:center;justify-content:center}
 .article-ad-slot:empty{display:none}
+.related-block{width:100%;margin:34px 0 8px}
+.related-block h2{font-size:20px;margin:0 0 14px}
+.related-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:700px){.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.related-grid{grid-template-columns:repeat(3,1fr)}}
+.related-card{display:block;border:1px solid var(--border);border-radius:18px;background:#fff;padding:18px;text-decoration:none;transition:border-color .18s,transform .18s,box-shadow .18s}
+.related-card:hover{border-color:var(--black);transform:translateY(-2px);box-shadow:0 12px 35px rgba(0,0,0,.07)}
+.related-card h3{font-size:14.5px;color:var(--black);margin:0 0 5px;font-weight:900}
+.related-card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.6}
 
 
 /* Landing-only animated hero and live stats inspired by modern productivity-tool homepages. */
@@ -144,6 +153,7 @@
 .site-footer-top>.site-footer-col:nth-child(2) a:hover{color:var(--blue)}
 .site-footer-top>.site-footer-col:nth-child(3) a:hover{color:var(--purple)}
 .site-footer-top>.site-footer-col:nth-child(4) a:hover{color:var(--green)}
+.site-footer-support a:hover,.site-footer-support .support-email:hover{color:var(--black)}
 
 /* Feedback form: request-type select gets a colored focus ring distinct from search,
    so the two interactive systems (search vs. forms) read as related but separate. */

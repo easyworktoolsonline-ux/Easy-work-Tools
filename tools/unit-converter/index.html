@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index,follow">
-<meta name="description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
-<meta name="keywords" content="age calculator, calculate age, date of birth calculator, exact age calculator, how old am i">
-<link rel="canonical" href="https://easyworktools.online/tools/age-calculator/">
+<meta name="description" content="Free online unit converter for length, weight, temperature, volume, area and speed. Convert between metric and imperial units instantly in your browser.">
+<meta name="keywords" content="unit converter, metric to imperial converter, length converter, weight converter, temperature converter, online unit conversion">
+<link rel="canonical" href="https://easyworktools.online/tools/unit-converter/">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png"><link rel="shortcut icon" href="../../assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
-<meta property="og:title" content="Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online">
-<meta property="og:description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
+<meta property="og:title" content="Unit Converter Online — Length, Weight, Temperature & More | EasyWorkTools.online">
+<meta property="og:description" content="Free online unit converter for length, weight, temperature, volume, area and speed. Convert between metric and imperial units instantly in your browser.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://easyworktools.online/tools/age-calculator/">
+<meta property="og:url" content="https://easyworktools.online/tools/unit-converter/">
 <meta property="og:site_name" content="EasyWorkTools.online">
 <meta property="og:image" content="https://easyworktools.online/assets/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online">
-<meta name="twitter:description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
+<meta name="twitter:title" content="Unit Converter Online — Length, Weight, Temperature & More | EasyWorkTools.online">
+<meta name="twitter:description" content="Free online unit converter for length, weight, temperature, volume, area and speed. Convert between metric and imperial units instantly in your browser.">
 <meta name="twitter:image" content="https://easyworktools.online/assets/og-image.png">
 
-<title>Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online</title>
+<title>Unit Converter Online — Length, Weight, Temperature & More | EasyWorkTools.online</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -363,26 +363,33 @@ input[type=file]{display:none}
   <div class="workspace-main">
 
     <section class="tool-hero" aria-labelledby="toolTitle">
-      <h1 id="toolTitle">Age Calculator</h1>
-      <p class="lede">Enter a date of birth to get an exact age — not just years, but months and days too — along with a running countdown to the next birthday.</p>
+      <h1 id="toolTitle">Unit Converter</h1>
+      <p class="lede">Convert length, weight, temperature, volume, area and speed between metric and imperial units — results update instantly as you type.</p>
+
+      <div class="calc-tabs" id="calcTabs" role="tablist" aria-label="Conversion category">
+        <button class="calc-tab is-active" type="button" data-cat="length">Length</button>
+        <button class="calc-tab" type="button" data-cat="weight">Weight</button>
+        <button class="calc-tab" type="button" data-cat="temperature">Temperature</button>
+        <button class="calc-tab" type="button" data-cat="volume">Volume</button>
+        <button class="calc-tab" type="button" data-cat="area">Area</button>
+        <button class="calc-tab" type="button" data-cat="speed">Speed</button>
+      </div>
 
       <div class="calc-row">
-        <div class="calc-field"><label for="dob">Date of birth</label><input type="date" id="dob"></div>
-        <div class="calc-field"><label for="asOf">Calculate age as of</label><input type="date" id="asOf"></div>
-      </div>
-
-      <div class="status-msg" id="statusMsg" role="alert"></div>
-
-      <div class="calc-result" id="resultBox" style="display:none;margin-top:10px">
-        <div class="calc-result-main" id="ageMain">—</div>
-        <div class="calc-result-sub" id="ageSub">—</div>
-        <div class="calc-stat-grid">
-          <div class="calc-stat"><b id="statDays">—</b><span>Total days</span></div>
-          <div class="calc-stat"><b id="statWeeks">—</b><span>Total weeks</span></div>
-          <div class="calc-stat"><b id="statMonths">—</b><span>Total months</span></div>
-          <div class="calc-stat"><b id="statNext">—</b><span>Days to next birthday</span></div>
+        <div class="calc-field">
+          <label for="fromValue">Value</label>
+          <input type="number" id="fromValue" value="1">
+          <select class="json-select" id="fromUnit" style="margin-top:8px;width:100%"></select>
+        </div>
+        <div class="calc-field">
+          <label for="toUnit">Converted to</label>
+          <div class="calc-result-main" id="toValue" style="margin-bottom:8px">—</div>
+          <select class="json-select" id="toUnit" style="width:100%"></select>
         </div>
       </div>
+      <button class="btn-ghost" type="button" id="swapBtn" style="margin-top:4px">⇄ Swap units</button>
+
+      <div class="status-msg" id="statusMsg" role="alert"></div>
     </section>
 
     <!-- AdSense: in-article unit between tool and SEO content. Paste the Google-provided unit inside after approval. -->
@@ -390,28 +397,38 @@ input[type=file]{display:none}
 
     <section class="tool-seo-content" aria-labelledby="seoHeading">
     <div class="seo-inner">
-    <h2 id="seoHeading">A Precise Age Calculator, Down to the Day</h2>
-    <p>Most simple age calculations just subtract birth year from the current year, which is wrong for roughly a third of the year — anyone whose birthday hasn't happened yet is counted a year too old. This calculator checks the full date, so the years, months and days shown are always exact.</p>
+    <h2 id="seoHeading">A Fast, Accurate Unit Converter for Everyday Use</h2>
+    <p>Whether you're following a recipe from another country, checking a shipping weight limit, converting a room measurement, or working through a science assignment, this converter handles the six most commonly needed categories with accurate, standard conversion factors.</p>
 
-    <h3>What you can use it for</h3>
+    <h3>Common conversions people search for</h3>
+    <table class="spec-table">
+      <thead><tr><th>From</th><th>To</th><th>Category</th></tr></thead>
+      <tbody>
+        <tr><td>Kilometres</td><td>Miles</td><td>Length</td></tr>
+        <tr><td>Kilograms</td><td>Pounds</td><td>Weight</td></tr>
+        <tr><td>Celsius</td><td>Fahrenheit</td><td>Temperature</td></tr>
+        <tr><td>Litres</td><td>US Gallons</td><td>Volume</td></tr>
+        <tr><td>Square metres</td><td>Square feet</td><td>Area</td></tr>
+        <tr><td>Kilometres per hour</td><td>Miles per hour</td><td>Speed</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Metric vs imperial: why both still matter</h3>
     <div class="seo-grid">
-      <div><h3>Legal &amp; official forms</h3><p>Confirm an exact age on a specific date, such as an application deadline or eligibility cut-off.</p></div>
-      <div><h3>Milestones</h3><p>Find out exactly when you turn 10,000 or 20,000 days old, or how many days until a big birthday.</p></div>
-      <div><h3>General curiosity</h3><p>See your age broken down into months, weeks and days, not just years.</p></div>
+      <div><h3>Metric (SI)</h3><p>Used in science, most of the world, and international trade. Based on clean multiples of 10.</p></div>
+      <div><h3>Imperial / US customary</h3><p>Still standard in the United States for everyday measurements like weight, distance and cooking volumes.</p></div>
+      <div><h3>This converter</h3><p>Bridges both systems in one place, so you never need to look up a conversion factor manually.</p></div>
     </div>
 
-    <h3>How the calculation works</h3>
-    <p>The tool takes the date of birth and the comparison date (today, unless you change it), then counts complete years, then complete months within the remaining time, then the leftover days — the same way you would count on a calendar by hand, just instant and accurate to the day, including correct handling of leap years and months of different lengths.</p>
-
     <div class="faq">
-      <h3>Age Calculator FAQ</h3>
-      <details><summary>How is my exact age calculated?</summary><p>The calculator counts the full years, months and remaining days between your date of birth and the date you're comparing against (today, by default), accounting correctly for different month lengths and leap years.</p></details>
-      <details><summary>Can I calculate someone's age on a specific past or future date?</summary><p>Yes. Change the 'Calculate age as of' field to any date — useful for legal documents, eligibility checks, or working out how old someone was at a particular event.</p></details>
-      <details><summary>Why do the years, months and days look different from a simple subtraction?</summary><p>A simple year subtraction (2026 − 1995) ignores whether the birthday has happened yet this year. This calculator checks the exact month and day, so the result is always accurate to the day.</p></details>
-      <details><summary>Does this calculator account for leap years?</summary><p>Yes. It uses native JavaScript date arithmetic, which correctly handles leap years and varying month lengths automatically.</p></details>
-      <details><summary>What is 'total days lived' useful for?</summary><p>It's a fun statistic, but also genuinely useful for medical forms, age-in-days requirements for some visas and benefits, or simply celebrating a '10,000 days old' milestone.</p></details>
-      <details><summary>Is my date of birth stored anywhere?</summary><p>No. The calculation happens entirely in your browser. Nothing you enter is sent to a server or saved.</p></details>
-      <details><summary>Can I use this for a pet's age or an object's age, not just a person?</summary><p>Yes — the calculator simply measures time between two dates, so it works for anything with a starting date: pets, company founding dates, or how long you've owned something.</p></details>
+      <h3>Unit Converter FAQ</h3>
+      <details><summary>Is this unit converter accurate?</summary><p>Yes. It uses standard, internationally recognised conversion factors (SI-based) for every unit, so results match what you'd get from a reference table or scientific calculator.</p></details>
+      <details><summary>Which categories does it support?</summary><p>Length, weight/mass, temperature, volume, area and speed, covering the most commonly searched everyday and professional conversions.</p></details>
+      <details><summary>Why does temperature need a different formula?</summary><p>Celsius, Fahrenheit and Kelvin scales don't share a common zero point, so temperature can't be converted with a simple multiplier like length or weight. The tool uses the correct offset formulas for each pair.</p></details>
+      <details><summary>Can I convert between metric and imperial units?</summary><p>Yes — that's the main use case. Switch the 'to' unit to any unit in the list regardless of category, for example metres to feet, kilograms to pounds, or litres to gallons.</p></details>
+      <details><summary>Does the tool round the result?</summary><p>Results are shown to a sensible number of decimal places for readability. For very small or very large numbers, the tool switches to a compact notation automatically.</p></details>
+      <details><summary>Is my data sent anywhere?</summary><p>No. All conversions run locally in your browser using plain JavaScript arithmetic — nothing is uploaded or logged.</p></details>
+      <details><summary>Can I use this on mobile?</summary><p>Yes, the page is fully responsive and works the same way on a phone, tablet or desktop.</p></details>
     </div>
 
     <div class="related-block">
@@ -419,7 +436,7 @@ input[type=file]{display:none}
       <div class="related-grid">
         <a class="related-card" href="../free-image-compressor/"><h3>Free Image Compressor</h3><p>Shrink JPG, PNG and WebP files by up to 90% without losing visible quality.</p></a>
         <a class="related-card" href="../percentage-calculator/"><h3>Percentage Calculator</h3><p>Work out percentages, increases, decreases and ratios instantly.</p></a>
-        <a class="related-card" href="../password-generator/"><h3>Password Generator</h3><p>Create strong, random passwords with full control over length and characters.</p></a>
+        <a class="related-card" href="../age-calculator/"><h3>Age Calculator</h3><p>Find your exact age in years, months and days, plus your next birthday countdown.</p></a>
       </div>
     </div>
     </div>
@@ -437,9 +454,9 @@ input[type=file]{display:none}
 <div class="ad-reserved" aria-hidden="true"></div>
 
 <!-- =================== STRUCTURED DATA =================== -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Age Calculator", "url": "https://easyworktools.online/tools/age-calculator/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.", "featureList": ["Exact age in years, months and days", "Age as of any custom date", "Total days, weeks and months lived", "Next birthday countdown", "No sign-up required"], "publisher": {"@type": "Organization", "name": "EasyWorkTools.online", "url": "https://easyworktools.online/"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is my exact age calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator counts the full years, months and remaining days between your date of birth and the date you're comparing against (today, by default), accounting correctly for different month lengths and leap years."}}, {"@type": "Question", "name": "Can I calculate someone's age on a specific past or future date?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Change the 'Calculate age as of' field to any date — useful for legal documents, eligibility checks, or working out how old someone was at a particular event."}}, {"@type": "Question", "name": "Why do the years, months and days look different from a simple subtraction?", "acceptedAnswer": {"@type": "Answer", "text": "A simple year subtraction (2026 − 1995) ignores whether the birthday has happened yet this year. This calculator checks the exact month and day, so the result is always accurate to the day."}}, {"@type": "Question", "name": "Does this calculator account for leap years?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It uses native JavaScript date arithmetic, which correctly handles leap years and varying month lengths automatically."}}, {"@type": "Question", "name": "What is 'total days lived' useful for?", "acceptedAnswer": {"@type": "Answer", "text": "It's a fun statistic, but also genuinely useful for medical forms, age-in-days requirements for some visas and benefits, or simply celebrating a '10,000 days old' milestone."}}, {"@type": "Question", "name": "Is my date of birth stored anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation happens entirely in your browser. Nothing you enter is sent to a server or saved."}}, {"@type": "Question", "name": "Can I use this for a pet's age or an object's age, not just a person?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the calculator simply measures time between two dates, so it works for anything with a starting date: pets, company founding dates, or how long you've owned something."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easyworktools.online/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://easyworktools.online/tools/"}, {"@type": "ListItem", "position": 3, "name": "Age Calculator", "item": "https://easyworktools.online/tools/age-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Unit Converter", "url": "https://easyworktools.online/tools/unit-converter/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free online unit converter for length, weight, temperature, volume, area and speed. Convert between metric and imperial units instantly in your browser.", "featureList": ["Length, weight, temperature, volume, area and speed", "Metric and imperial units", "Live, instant results", "Accurate SI-based conversion factors", "No sign-up required"], "publisher": {"@type": "Organization", "name": "EasyWorkTools.online", "url": "https://easyworktools.online/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this unit converter accurate?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It uses standard, internationally recognised conversion factors (SI-based) for every unit, so results match what you'd get from a reference table or scientific calculator."}}, {"@type": "Question", "name": "Which categories does it support?", "acceptedAnswer": {"@type": "Answer", "text": "Length, weight/mass, temperature, volume, area and speed, covering the most commonly searched everyday and professional conversions."}}, {"@type": "Question", "name": "Why does temperature need a different formula?", "acceptedAnswer": {"@type": "Answer", "text": "Celsius, Fahrenheit and Kelvin scales don't share a common zero point, so temperature can't be converted with a simple multiplier like length or weight. The tool uses the correct offset formulas for each pair."}}, {"@type": "Question", "name": "Can I convert between metric and imperial units?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — that's the main use case. Switch the 'to' unit to any unit in the list regardless of category, for example metres to feet, kilograms to pounds, or litres to gallons."}}, {"@type": "Question", "name": "Does the tool round the result?", "acceptedAnswer": {"@type": "Answer", "text": "Results are shown to a sensible number of decimal places for readability. For very small or very large numbers, the tool switches to a compact notation automatically."}}, {"@type": "Question", "name": "Is my data sent anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. All conversions run locally in your browser using plain JavaScript arithmetic — nothing is uploaded or logged."}}, {"@type": "Question", "name": "Can I use this on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the page is fully responsive and works the same way on a phone, tablet or desktop."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easyworktools.online/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://easyworktools.online/tools/"}, {"@type": "ListItem", "position": 3, "name": "Unit Converter", "item": "https://easyworktools.online/tools/unit-converter/"}]}</script>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
@@ -478,51 +495,105 @@ input[type=file]{display:none}
 "use strict";
 
 function $(id){return document.getElementById(id)}
-var dob=$("dob"),asOf=$("asOf"),statusMsg=$("statusMsg"),resultBox=$("resultBox");
-var today=new Date();
-asOf.value=today.toISOString().slice(0,10);
-dob.max=asOf.value;
 
-function diffYMD(start,end){
-  var y=end.getFullYear()-start.getFullYear();
-  var m=end.getMonth()-start.getMonth();
-  var d=end.getDate()-start.getDate();
-  if(d<0){m--;var prevMonth=new Date(end.getFullYear(),end.getMonth(),0);d+=prevMonth.getDate();}
-  if(m<0){y--;m+=12;}
-  return {y:y,m:m,d:d};
+var UNITS={
+  length:{base:"m",units:{
+    "Metres (m)":1,"Kilometres (km)":1000,"Centimetres (cm)":0.01,"Millimetres (mm)":0.001,
+    "Miles (mi)":1609.344,"Yards (yd)":0.9144,"Feet (ft)":0.3048,"Inches (in)":0.0254
+  }},
+  weight:{base:"kg",units:{
+    "Kilograms (kg)":1,"Grams (g)":0.001,"Milligrams (mg)":0.000001,"Metric tonnes (t)":1000,
+    "Pounds (lb)":0.45359237,"Ounces (oz)":0.028349523125,"Stone (st)":6.35029318
+  }},
+  volume:{base:"l",units:{
+    "Litres (L)":1,"Millilitres (mL)":0.001,"Cubic metres (m³)":1000,
+    "US gallons (gal)":3.785411784,"US quarts (qt)":0.946352946,"US cups (cup)":0.2365882365,
+    "UK gallons (gal)":4.54609,"Fluid ounces (fl oz, US)":0.0295735295625
+  }},
+  area:{base:"m2",units:{
+    "Square metres (m²)":1,"Square kilometres (km²)":1000000,"Hectares (ha)":10000,
+    "Square feet (ft²)":0.09290304,"Square yards (yd²)":0.83612736,"Acres (ac)":4046.8564224,"Square miles (mi²)":2589988.110336
+  }},
+  speed:{base:"mps",units:{
+    "Metres/second (m/s)":1,"Kilometres/hour (km/h)":0.277778,"Miles/hour (mph)":0.44704,
+    "Knots (kn)":0.514444,"Feet/second (ft/s)":0.3048
+  }}
+};
+
+var TEMP_UNITS=["Celsius (°C)","Fahrenheit (°F)","Kelvin (K)"];
+
+var fromValue=$("fromValue"),fromUnit=$("fromUnit"),toUnit=$("toUnit"),toValue=$("toValue"),statusMsg=$("statusMsg");
+var currentCat="length";
+
+function populateSelects(cat){
+  fromUnit.innerHTML="";toUnit.innerHTML="";
+  var names = cat==="temperature" ? TEMP_UNITS : Object.keys(UNITS[cat].units);
+  names.forEach(function(n,i){
+    var o1=document.createElement("option");o1.value=n;o1.textContent=n;fromUnit.appendChild(o1);
+    var o2=document.createElement("option");o2.value=n;o2.textContent=n;toUnit.appendChild(o2);
+  });
+  fromUnit.selectedIndex=0;
+  toUnit.selectedIndex=names.length>1?1:0;
 }
 
-function calc(){
-  statusMsg.classList.remove("show");
-  if(!dob.value){resultBox.style.display="none";return}
-  var b=new Date(dob.value+"T00:00:00");
-  var ref=asOf.value?new Date(asOf.value+"T00:00:00"):new Date();
-  if(b>ref){
-    statusMsg.textContent="Date of birth must be before the comparison date.";
-    statusMsg.className="status-msg show error";
-    resultBox.style.display="none";
-    return;
+function toCelsius(v,unit){
+  if(unit.indexOf("Celsius")===0)return v;
+  if(unit.indexOf("Fahrenheit")===0)return (v-32)*5/9;
+  if(unit.indexOf("Kelvin")===0)return v-273.15;
+  return v;
+}
+function fromCelsius(c,unit){
+  if(unit.indexOf("Celsius")===0)return c;
+  if(unit.indexOf("Fahrenheit")===0)return c*9/5+32;
+  if(unit.indexOf("Kelvin")===0)return c+273.15;
+  return c;
+}
+
+function fmt(n){
+  if(!isFinite(n))return "—";
+  if(Math.abs(n)>=1e9||(Math.abs(n)<1e-6&&n!==0))return n.toExponential(4);
+  var r=Math.round(n*1e6)/1e6;
+  return String(r);
+}
+
+function convert(){
+  var v=parseFloat(fromValue.value);
+  if(isNaN(v)){toValue.textContent="—";return}
+  var result;
+  if(currentCat==="temperature"){
+    var c=toCelsius(v,fromUnit.value);
+    result=fromCelsius(c,toUnit.value);
+  }else{
+    var table=UNITS[currentCat].units;
+    var base=v*table[fromUnit.value];
+    result=base/table[toUnit.value];
   }
-  var age=diffYMD(b,ref);
-  var msPerDay=86400000;
-  var totalDays=Math.floor((ref-b)/msPerDay);
-  var totalWeeks=Math.floor(totalDays/7);
-  var totalMonths=age.y*12+age.m;
-
-  var nextBday=new Date(ref.getFullYear(),b.getMonth(),b.getDate());
-  if(nextBday<ref)nextBday=new Date(ref.getFullYear()+1,b.getMonth(),b.getDate());
-  var daysToNext=Math.ceil((nextBday-ref)/msPerDay);
-
-  $("ageMain").textContent=age.y+" yr "+age.m+" mo "+age.d+" d";
-  $("ageSub").textContent="Born "+b.toDateString()+" — as of "+ref.toDateString();
-  $("statDays").textContent=totalDays.toLocaleString();
-  $("statWeeks").textContent=totalWeeks.toLocaleString();
-  $("statMonths").textContent=totalMonths.toLocaleString();
-  $("statNext").textContent=daysToNext===0?"Today!":daysToNext.toLocaleString();
-  resultBox.style.display="block";
+  toValue.textContent=fmt(result);
 }
-dob.addEventListener("change",calc);
-asOf.addEventListener("change",calc);
+
+$("calcTabs").addEventListener("click",function(e){
+  var btn=e.target.closest(".calc-tab");if(!btn)return;
+  $("calcTabs").querySelectorAll(".calc-tab").forEach(function(b){b.classList.remove("is-active")});
+  btn.classList.add("is-active");
+  currentCat=btn.getAttribute("data-cat");
+  populateSelects(currentCat);
+  convert();
+});
+
+$("swapBtn").addEventListener("click",function(){
+  var tmp=fromUnit.value;
+  fromUnit.value=toUnit.value;
+  var opt=Array.prototype.find.call(toUnit.options,function(o){return o.value===tmp});
+  if(opt)toUnit.value=tmp;
+  convert();
+});
+
+fromValue.addEventListener("input",convert);
+fromUnit.addEventListener("change",convert);
+toUnit.addEventListener("change",convert);
+
+populateSelects(currentCat);
+convert();
 
 })();
 </script>

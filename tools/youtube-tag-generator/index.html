@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index,follow">
-<meta name="description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
-<meta name="keywords" content="age calculator, calculate age, date of birth calculator, exact age calculator, how old am i">
-<link rel="canonical" href="https://easyworktools.online/tools/age-calculator/">
+<meta name="description" content="Free YouTube tag generator. Enter your video topic to instantly generate a well-structured, properly formatted list of relevant tags, ready to paste into YouTube Studio.">
+<meta name="keywords" content="youtube tag generator, youtube tags, video tags generator, youtube seo tags, tag generator for youtube">
+<link rel="canonical" href="https://easyworktools.online/tools/youtube-tag-generator/">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png"><link rel="shortcut icon" href="../../assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
-<meta property="og:title" content="Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online">
-<meta property="og:description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
+<meta property="og:title" content="YouTube Tag Generator — Free Video Tags Tool | EasyWorkTools.online">
+<meta property="og:description" content="Free YouTube tag generator. Enter your video topic to instantly generate a well-structured, properly formatted list of relevant tags, ready to paste into YouTube Studio.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://easyworktools.online/tools/age-calculator/">
+<meta property="og:url" content="https://easyworktools.online/tools/youtube-tag-generator/">
 <meta property="og:site_name" content="EasyWorkTools.online">
 <meta property="og:image" content="https://easyworktools.online/assets/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online">
-<meta name="twitter:description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
+<meta name="twitter:title" content="YouTube Tag Generator — Free Video Tags Tool | EasyWorkTools.online">
+<meta name="twitter:description" content="Free YouTube tag generator. Enter your video topic to instantly generate a well-structured, properly formatted list of relevant tags, ready to paste into YouTube Studio.">
 <meta name="twitter:image" content="https://easyworktools.online/assets/og-image.png">
 
-<title>Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online</title>
+<title>YouTube Tag Generator — Free Video Tags Tool | EasyWorkTools.online</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -363,24 +363,43 @@ input[type=file]{display:none}
   <div class="workspace-main">
 
     <section class="tool-hero" aria-labelledby="toolTitle">
-      <h1 id="toolTitle">Age Calculator</h1>
-      <p class="lede">Enter a date of birth to get an exact age — not just years, but months and days too — along with a running countdown to the next birthday.</p>
+      <h1 id="toolTitle">YouTube Tag Generator</h1>
+      <p class="lede">Enter your video's main topic and get a structured, ready-to-paste tag list — primary keyword first, followed by relevant long-tail variations. Free, with a live check against YouTube's 500-character tag limit.</p>
 
-      <div class="calc-row">
-        <div class="calc-field"><label for="dob">Date of birth</label><input type="date" id="dob"></div>
-        <div class="calc-field"><label for="asOf">Calculate age as of</label><input type="date" id="asOf"></div>
-      </div>
+      <form class="url-form" id="tagForm" novalidate>
+        <div class="url-field" style="flex:2">
+          <input id="seedInput" type="text" autocomplete="off" placeholder="e.g. sourdough bread recipe" aria-label="Video topic or main keyword">
+        </div>
+        <select class="json-select" id="categorySelect" aria-label="Video category">
+          <option value="general">General</option>
+          <option value="gaming">Gaming</option>
+          <option value="tech">Tech &amp; Reviews</option>
+          <option value="tutorial">Tutorial / How-to</option>
+          <option value="vlog">Vlog / Lifestyle</option>
+          <option value="music">Music</option>
+        </select>
+        <button class="btn-primary" id="generateBtn" type="submit"><span id="generateLabel">Generate tags</span></button>
+      </form>
+
+      <p class="hint-line">Tip: You can enter a few comma-separated seed keywords for a broader mix, e.g. "sourdough bread, no knead bread recipe".</p>
 
       <div class="status-msg" id="statusMsg" role="alert"></div>
+    </section>
 
-      <div class="calc-result" id="resultBox" style="display:none;margin-top:10px">
-        <div class="calc-result-main" id="ageMain">—</div>
-        <div class="calc-result-sub" id="ageSub">—</div>
-        <div class="calc-stat-grid">
-          <div class="calc-stat"><b id="statDays">—</b><span>Total days</span></div>
-          <div class="calc-stat"><b id="statWeeks">—</b><span>Total weeks</span></div>
-          <div class="calc-stat"><b id="statMonths">—</b><span>Total months</span></div>
-          <div class="calc-stat"><b id="statNext">—</b><span>Days to next birthday</span></div>
+    <section class="result-panel" id="resultPanel" aria-live="polite">
+      <div class="result-card" style="grid-template-columns:1fr">
+        <div>
+          <div class="stage-meta" style="margin-bottom:12px">
+            <span>Tags generated: <b id="metaCount">0</b></span>
+            <span>Characters used: <b id="metaChars">0</b> / 500</span>
+          </div>
+          <div class="json-box">
+            <textarea class="json-textarea" id="tagsOutput" readonly style="min-height:160px"></textarea>
+          </div>
+          <div class="action-row" style="margin-top:14px">
+            <button class="btn-download" type="button" id="copyBtn">Copy all tags</button>
+            <button class="btn-ghost" type="button" id="regenBtn">Generate more variations</button>
+          </div>
         </div>
       </div>
     </section>
@@ -390,28 +409,34 @@ input[type=file]{display:none}
 
     <section class="tool-seo-content" aria-labelledby="seoHeading">
     <div class="seo-inner">
-    <h2 id="seoHeading">A Precise Age Calculator, Down to the Day</h2>
-    <p>Most simple age calculations just subtract birth year from the current year, which is wrong for roughly a third of the year — anyone whose birthday hasn't happened yet is counted a year too old. This calculator checks the full date, so the years, months and days shown are always exact.</p>
+    <h2 id="seoHeading">Structure Better YouTube Tags in Seconds</h2>
+    <p>Good tags follow a pattern: your exact primary keyword, close variations of it, then broader category and format terms. Typing that list out by hand is tedious and easy to get wrong. This generator builds that structure automatically from a topic you provide, so you can review, trim and paste it straight into YouTube Studio.</p>
 
-    <h3>What you can use it for</h3>
+    <h3>How to use it well</h3>
+    <ol>
+      <li>Enter your video's main topic in plain words, the way a viewer would search for it.</li>
+      <li>Pick the closest category so the modifier words match your niche.</li>
+      <li>Press Generate tags, then review the list — delete anything that doesn't genuinely describe your video.</li>
+      <li>Copy the list and paste it into the Tags field in YouTube Studio.</li>
+    </ol>
+
+    <h3>What actually helps a video get found</h3>
     <div class="seo-grid">
-      <div><h3>Legal &amp; official forms</h3><p>Confirm an exact age on a specific date, such as an application deadline or eligibility cut-off.</p></div>
-      <div><h3>Milestones</h3><p>Find out exactly when you turn 10,000 or 20,000 days old, or how many days until a big birthday.</p></div>
-      <div><h3>General curiosity</h3><p>See your age broken down into months, weeks and days, not just years.</p></div>
+      <div><h3>Title &amp; thumbnail</h3><p>By far the biggest factors in click-through rate, which YouTube weighs heavily.</p></div>
+      <div><h3>Watch time &amp; retention</h3><p>How long viewers actually watch matters more to ranking than any metadata field.</p></div>
+      <div><h3>Tags</h3><p>A supporting signal — mainly useful for topic clarity and catching common misspellings of your keyword.</p></div>
     </div>
-
-    <h3>How the calculation works</h3>
-    <p>The tool takes the date of birth and the comparison date (today, unless you change it), then counts complete years, then complete months within the remaining time, then the leftover days — the same way you would count on a calendar by hand, just instant and accurate to the day, including correct handling of leap years and months of different lengths.</p>
+    <p>Treat tags as a small, honest supporting piece of your video's metadata, not a ranking shortcut. Padding a video with dozens of unrelated tags does not outperform a focused set that accurately describes the content.</p>
 
     <div class="faq">
-      <h3>Age Calculator FAQ</h3>
-      <details><summary>How is my exact age calculated?</summary><p>The calculator counts the full years, months and remaining days between your date of birth and the date you're comparing against (today, by default), accounting correctly for different month lengths and leap years.</p></details>
-      <details><summary>Can I calculate someone's age on a specific past or future date?</summary><p>Yes. Change the 'Calculate age as of' field to any date — useful for legal documents, eligibility checks, or working out how old someone was at a particular event.</p></details>
-      <details><summary>Why do the years, months and days look different from a simple subtraction?</summary><p>A simple year subtraction (2026 − 1995) ignores whether the birthday has happened yet this year. This calculator checks the exact month and day, so the result is always accurate to the day.</p></details>
-      <details><summary>Does this calculator account for leap years?</summary><p>Yes. It uses native JavaScript date arithmetic, which correctly handles leap years and varying month lengths automatically.</p></details>
-      <details><summary>What is 'total days lived' useful for?</summary><p>It's a fun statistic, but also genuinely useful for medical forms, age-in-days requirements for some visas and benefits, or simply celebrating a '10,000 days old' milestone.</p></details>
-      <details><summary>Is my date of birth stored anywhere?</summary><p>No. The calculation happens entirely in your browser. Nothing you enter is sent to a server or saved.</p></details>
-      <details><summary>Can I use this for a pet's age or an object's age, not just a person?</summary><p>Yes — the calculator simply measures time between two dates, so it works for anything with a starting date: pets, company founding dates, or how long you've owned something.</p></details>
+      <h3>YouTube Tag Generator FAQ</h3>
+      <details><summary>Does this tool use real YouTube search data?</summary><p>No, and we want to be upfront about that: YouTube does not offer a public API for tag search volume or trending tags. This tool instead applies proven tag-structuring patterns — combining your seed keywords with common modifiers, long-tail variations and format words — to generate a broad, well-organised tag list. It's a structuring and brainstorming aid, not a live-data scraper.</p></details>
+      <details><summary>Do tags actually affect YouTube ranking?</summary><p>YouTube's own guidance says tags play a minor role compared to your title, thumbnail, description and — most importantly — audience retention. Tags mainly help YouTube understand your video's topic when the title alone is ambiguous, and they help correct common misspellings of your main keyword.</p></details>
+      <details><summary>How many tags should I use?</summary><p>YouTube allows up to 500 characters total across all tags. There's no bonus for maxing this out artificially — a focused set of 10–15 genuinely relevant tags outperforms a padded list of 40 loosely related ones.</p></details>
+      <details><summary>Should my main keyword be the first tag?</summary><p>Yes. Put your primary target keyword first, since it carries the most weight, then follow with closely related variations and broader category tags.</p></details>
+      <details><summary>Can I generate tags for a specific video category?</summary><p>Yes. Choosing a category (Gaming, Tech, Vlog, Tutorial, Music, etc.) changes the modifier words used, so the suggestions fit your niche's typical phrasing.</p></details>
+      <details><summary>Is this tool free with no limits?</summary><p>Yes. Generate as many tag sets as you like, with no account and no daily cap.</p></details>
+      <details><summary>Does it check the 500-character YouTube limit?</summary><p>Yes. A live counter shows your total tag character count so you can trim the list before it's rejected by YouTube Studio.</p></details>
     </div>
 
     <div class="related-block">
@@ -419,7 +444,7 @@ input[type=file]{display:none}
       <div class="related-grid">
         <a class="related-card" href="../free-image-compressor/"><h3>Free Image Compressor</h3><p>Shrink JPG, PNG and WebP files by up to 90% without losing visible quality.</p></a>
         <a class="related-card" href="../percentage-calculator/"><h3>Percentage Calculator</h3><p>Work out percentages, increases, decreases and ratios instantly.</p></a>
-        <a class="related-card" href="../password-generator/"><h3>Password Generator</h3><p>Create strong, random passwords with full control over length and characters.</p></a>
+        <a class="related-card" href="../age-calculator/"><h3>Age Calculator</h3><p>Find your exact age in years, months and days, plus your next birthday countdown.</p></a>
       </div>
     </div>
     </div>
@@ -437,9 +462,9 @@ input[type=file]{display:none}
 <div class="ad-reserved" aria-hidden="true"></div>
 
 <!-- =================== STRUCTURED DATA =================== -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Age Calculator", "url": "https://easyworktools.online/tools/age-calculator/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.", "featureList": ["Exact age in years, months and days", "Age as of any custom date", "Total days, weeks and months lived", "Next birthday countdown", "No sign-up required"], "publisher": {"@type": "Organization", "name": "EasyWorkTools.online", "url": "https://easyworktools.online/"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is my exact age calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator counts the full years, months and remaining days between your date of birth and the date you're comparing against (today, by default), accounting correctly for different month lengths and leap years."}}, {"@type": "Question", "name": "Can I calculate someone's age on a specific past or future date?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Change the 'Calculate age as of' field to any date — useful for legal documents, eligibility checks, or working out how old someone was at a particular event."}}, {"@type": "Question", "name": "Why do the years, months and days look different from a simple subtraction?", "acceptedAnswer": {"@type": "Answer", "text": "A simple year subtraction (2026 − 1995) ignores whether the birthday has happened yet this year. This calculator checks the exact month and day, so the result is always accurate to the day."}}, {"@type": "Question", "name": "Does this calculator account for leap years?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It uses native JavaScript date arithmetic, which correctly handles leap years and varying month lengths automatically."}}, {"@type": "Question", "name": "What is 'total days lived' useful for?", "acceptedAnswer": {"@type": "Answer", "text": "It's a fun statistic, but also genuinely useful for medical forms, age-in-days requirements for some visas and benefits, or simply celebrating a '10,000 days old' milestone."}}, {"@type": "Question", "name": "Is my date of birth stored anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation happens entirely in your browser. Nothing you enter is sent to a server or saved."}}, {"@type": "Question", "name": "Can I use this for a pet's age or an object's age, not just a person?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the calculator simply measures time between two dates, so it works for anything with a starting date: pets, company founding dates, or how long you've owned something."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easyworktools.online/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://easyworktools.online/tools/"}, {"@type": "ListItem", "position": 3, "name": "Age Calculator", "item": "https://easyworktools.online/tools/age-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "YouTube Tag Generator", "url": "https://easyworktools.online/tools/youtube-tag-generator/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free YouTube tag generator. Enter your video topic to instantly generate a well-structured, properly formatted list of relevant tags, ready to paste into YouTube Studio.", "featureList": ["Seed-keyword based tag generation", "Category-aware modifier sets", "Live 500-character limit counter", "One-click copy, comma-separated", "No account required"], "publisher": {"@type": "Organization", "name": "EasyWorkTools.online", "url": "https://easyworktools.online/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does this tool use real YouTube search data?", "acceptedAnswer": {"@type": "Answer", "text": "No, and we want to be upfront about that: YouTube does not offer a public API for tag search volume or trending tags. This tool instead applies proven tag-structuring patterns — combining your seed keywords with common modifiers, long-tail variations and format words — to generate a broad, well-organised tag list. It's a structuring and brainstorming aid, not a live-data scraper."}}, {"@type": "Question", "name": "Do tags actually affect YouTube ranking?", "acceptedAnswer": {"@type": "Answer", "text": "YouTube's own guidance says tags play a minor role compared to your title, thumbnail, description and — most importantly — audience retention. Tags mainly help YouTube understand your video's topic when the title alone is ambiguous, and they help correct common misspellings of your main keyword."}}, {"@type": "Question", "name": "How many tags should I use?", "acceptedAnswer": {"@type": "Answer", "text": "YouTube allows up to 500 characters total across all tags. There's no bonus for maxing this out artificially — a focused set of 10–15 genuinely relevant tags outperforms a padded list of 40 loosely related ones."}}, {"@type": "Question", "name": "Should my main keyword be the first tag?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Put your primary target keyword first, since it carries the most weight, then follow with closely related variations and broader category tags."}}, {"@type": "Question", "name": "Can I generate tags for a specific video category?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Choosing a category (Gaming, Tech, Vlog, Tutorial, Music, etc.) changes the modifier words used, so the suggestions fit your niche's typical phrasing."}}, {"@type": "Question", "name": "Is this tool free with no limits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Generate as many tag sets as you like, with no account and no daily cap."}}, {"@type": "Question", "name": "Does it check the 500-character YouTube limit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A live counter shows your total tag character count so you can trim the list before it's rejected by YouTube Studio."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easyworktools.online/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://easyworktools.online/tools/"}, {"@type": "ListItem", "position": 3, "name": "YouTube Tag Generator", "item": "https://easyworktools.online/tools/youtube-tag-generator/"}]}</script>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
@@ -478,51 +503,156 @@ input[type=file]{display:none}
 "use strict";
 
 function $(id){return document.getElementById(id)}
-var dob=$("dob"),asOf=$("asOf"),statusMsg=$("statusMsg"),resultBox=$("resultBox");
-var today=new Date();
-asOf.value=today.toISOString().slice(0,10);
-dob.max=asOf.value;
+var tagForm=$("tagForm"),seedInput=$("seedInput"),categorySelect=$("categorySelect");
+var resultPanel=$("resultPanel"),tagsOutput=$("tagsOutput"),metaCount=$("metaCount"),metaChars=$("metaChars");
+var copyBtn=$("copyBtn"),regenBtn=$("regenBtn"),statusMsg=$("statusMsg");
 
-function diffYMD(start,end){
-  var y=end.getFullYear()-start.getFullYear();
-  var m=end.getMonth()-start.getMonth();
-  var d=end.getDate()-start.getDate();
-  if(d<0){m--;var prevMonth=new Date(end.getFullYear(),end.getMonth(),0);d+=prevMonth.getDate();}
-  if(m<0){y--;m+=12;}
-  return {y:y,m:m,d:d};
+var MODIFIERS={
+  general:["guide","tips","for beginners","explained","2026","review","tutorial","how to","best","ideas","free"],
+  gaming:["gameplay","walkthrough","let's play","tips and tricks","best settings","guide","review","highlights","funny moments","speedrun"],
+  tech:["review","unboxing","vs","comparison","setup guide","first impressions","specs","best settings","tips","2026"],
+  tutorial:["step by step","for beginners","how to","tutorial","easy method","full guide","explained","walkthrough","tips"],
+  vlog:["day in the life","vlog","routine","behind the scenes","tips","story time","experience","review"],
+  music:["official","lyrics","cover","remix","live performance","behind the scenes","reaction","review"]
+};
+
+var EXTRA_MODIFIERS={
+  general:["complete guide","step by step","common mistakes","before you buy","worth it","pros and cons","alternatives","comparison","explained simply","quick guide"],
+  gaming:["no commentary","full playthrough","boss fight","easter eggs","patch notes","multiplayer","co-op mode","pro tips","ranked mode","update guide"],
+  tech:["price and release date","pros and cons","alternatives","deep dive","benchmark test","teardown","hands-on review","is it worth it","buying guide","full breakdown"],
+  tutorial:["mistakes to avoid","quick tutorial","advanced guide","common issues fixed","in 10 minutes","simple method","complete guide","for beginners 2026","step by step guide","common questions answered"],
+  vlog:["morning routine","weekly vlog","travel vlog","q and a","behind the scenes footage","life update","real talk","daily life","subscriber shoutout","unfiltered vlog"],
+  music:["acoustic version","piano version","slowed and reverb","one hour loop","lyric video","karaoke version","instrumental version","mashup","live session","cover version"]
+};
+
+function showStatus(msg,type){
+  if(!msg){statusMsg.classList.remove("show");return}
+  statusMsg.textContent=msg;statusMsg.className="status-msg show "+(type||"info");
 }
 
-function calc(){
-  statusMsg.classList.remove("show");
-  if(!dob.value){resultBox.style.display="none";return}
-  var b=new Date(dob.value+"T00:00:00");
-  var ref=asOf.value?new Date(asOf.value+"T00:00:00"):new Date();
-  if(b>ref){
-    statusMsg.textContent="Date of birth must be before the comparison date.";
-    statusMsg.className="status-msg show error";
-    resultBox.style.display="none";
-    return;
+function titleCase(s){
+  return s.replace(/\w\S*/g,function(t){return t.charAt(0).toUpperCase()+t.substr(1).toLowerCase()});
+}
+
+function generateTags(){
+  var raw=seedInput.value.trim();
+  if(!raw){showStatus("Enter a video topic first.","error");return}
+  showStatus("");
+  var seeds=raw.split(",").map(function(s){return s.trim()}).filter(Boolean);
+  var cat=categorySelect.value;
+  var mods=MODIFIERS[cat]||MODIFIERS.general;
+  var tags=[];
+  var seen={};
+  function add(t){
+    t=t.trim().replace(/\s+/g," ");
+    if(!t)return;
+    var key=t.toLowerCase();
+    if(seen[key])return;
+    seen[key]=true;
+    tags.push(t);
   }
-  var age=diffYMD(b,ref);
-  var msPerDay=86400000;
-  var totalDays=Math.floor((ref-b)/msPerDay);
-  var totalWeeks=Math.floor(totalDays/7);
-  var totalMonths=age.y*12+age.m;
 
-  var nextBday=new Date(ref.getFullYear(),b.getMonth(),b.getDate());
-  if(nextBday<ref)nextBday=new Date(ref.getFullYear()+1,b.getMonth(),b.getDate());
-  var daysToNext=Math.ceil((nextBday-ref)/msPerDay);
+  seeds.forEach(function(seed){ add(seed); });
+  seeds.forEach(function(seed){ add(titleCase(seed)); });
+  seeds.forEach(function(seed){
+    mods.forEach(function(m){
+      add(seed+" "+m);
+    });
+  });
+  seeds.forEach(function(seed){
+    mods.slice(0,6).forEach(function(m){
+      add(m+" "+seed);
+    });
+  });
+  if(seeds.length>1){
+    add(seeds.join(" "));
+  }
 
-  $("ageMain").textContent=age.y+" yr "+age.m+" mo "+age.d+" d";
-  $("ageSub").textContent="Born "+b.toDateString()+" — as of "+ref.toDateString();
-  $("statDays").textContent=totalDays.toLocaleString();
-  $("statWeeks").textContent=totalWeeks.toLocaleString();
-  $("statMonths").textContent=totalMonths.toLocaleString();
-  $("statNext").textContent=daysToNext===0?"Today!":daysToNext.toLocaleString();
-  resultBox.style.display="block";
+  var out=[],chars=0;
+  for(var i=0;i<tags.length;i++){
+    var t=tags[i];
+    var add_len=t.length+(out.length>0?2:0);
+    if(chars+add_len>500)break;
+    out.push(t);chars+=add_len;
+  }
+
+  tagsOutput.value=out.join(", ");
+  metaCount.textContent=out.length;
+  metaChars.textContent=chars;
+  resultPanel.classList.add("show");
 }
-dob.addEventListener("change",calc);
-asOf.addEventListener("change",calc);
+
+tagForm.addEventListener("submit",function(e){e.preventDefault();generateTags()});
+
+function currentTagsState(){
+  var existing=tagsOutput.value?tagsOutput.value.split(",").map(function(s){return s.trim()}).filter(Boolean):[];
+  var seen={};
+  existing.forEach(function(t){seen[t.toLowerCase()]=true});
+  var chars=existing.reduce(function(a,t,i){return a+t.length+(i>0?2:0)},0);
+  return {tags:existing,seen:seen,chars:chars};
+}
+
+function generateMoreVariations(){
+  var raw=seedInput.value.trim();
+  if(!raw){showStatus("Enter a video topic first.","error");return}
+  if(!tagsOutput.value){generateTags();return}
+
+  var seeds=raw.split(",").map(function(s){return s.trim()}).filter(Boolean);
+  var cat=categorySelect.value;
+  var extraMods=EXTRA_MODIFIERS[cat]||EXTRA_MODIFIERS.general;
+  var state=currentTagsState();
+  var tags=state.tags,seen=state.seen,chars=state.chars;
+  var addedAny=false;
+
+  function add(t){
+    t=t.trim().replace(/\s+/g," ");
+    if(!t)return;
+    var key=t.toLowerCase();
+    if(seen[key])return;
+    var addLen=t.length+(tags.length>0?2:0);
+    if(chars+addLen>500)return;
+    seen[key]=true;tags.push(t);chars+=addLen;addedAny=true;
+  }
+
+  seeds.forEach(function(seed){
+    extraMods.forEach(function(m){ add(seed+" "+m); });
+  });
+  extraMods.forEach(function(m){
+    seeds.forEach(function(seed){ add(m+" "+seed); });
+  });
+  if(seeds.length>1){
+    for(var i=0;i<seeds.length;i++){
+      for(var j=0;j<seeds.length;j++){
+        if(i===j)continue;
+        add(seeds[i]+" vs "+seeds[j]);
+        add(seeds[i]+" and "+seeds[j]);
+      }
+    }
+  }
+  var year=new Date().getFullYear();
+  var genericExtras=["in "+year,"full guide","quick tips","for youtube shorts"];
+  seeds.forEach(function(seed){
+    genericExtras.forEach(function(m){ add(seed+" "+m); });
+  });
+
+  tagsOutput.value=tags.join(", ");
+  metaCount.textContent=tags.length;
+  metaChars.textContent=chars;
+  resultPanel.classList.add("show");
+
+  if(!addedAny){
+    showStatus("No more new relevant variations for this topic — try adding another seed keyword or changing category.","info");
+  }else{
+    showStatus("Added more tag variations.","ok");
+  }
+}
+
+regenBtn.addEventListener("click",generateMoreVariations);
+copyBtn.addEventListener("click",function(){
+  if(!tagsOutput.value){showStatus("Generate tags first.","error");return}
+  navigator.clipboard.writeText(tagsOutput.value).then(function(){showStatus("Tags copied to clipboard.","ok")})
+    .catch(function(){tagsOutput.select();document.execCommand("copy");showStatus("Tags copied to clipboard.","ok")});
+});
 
 })();
 </script>

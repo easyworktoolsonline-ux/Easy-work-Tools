@@ -53,6 +53,18 @@
     ]
   },
   {
+    "title": "JPEG Compressor",
+    "description": "Compress JPEG images online for free, by quality or exact target file size in KB.",
+    "url": "tools/jpeg-compressor/",
+    "iconKey": "jpeg",
+    "tags": [
+      "jpeg compressor",
+      "compress jpeg",
+      "reduce jpg file size",
+      "jpg to kb"
+    ]
+  },
+  {
     "title": "JSON Formatter",
     "description": "Format, validate and minify JSON online for free in your browser.",
     "url": "tools/json-formatter/",
@@ -100,6 +112,31 @@
       "percent calculator",
       "percentage increase",
       "percentage decrease"
+    ]
+  },
+  {
+    "title": "Unit Converter",
+    "description": "Convert length, weight, temperature, volume, area and speed online for free.",
+    "url": "tools/unit-converter/",
+    "iconKey": "unit",
+    "tags": [
+      "unit converter",
+      "metric to imperial",
+      "length converter",
+      "weight converter",
+      "temperature converter"
+    ]
+  },
+  {
+    "title": "YouTube Tag Generator",
+    "description": "Generate structured, ready-to-paste YouTube video tags online for free.",
+    "url": "tools/youtube-tag-generator/",
+    "iconKey": "ytags",
+    "tags": [
+      "youtube tag generator",
+      "youtube tags",
+      "video tags generator",
+      "youtube seo"
     ]
   }
 ]

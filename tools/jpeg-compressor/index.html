@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index,follow">
-<meta name="description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
-<meta name="keywords" content="age calculator, calculate age, date of birth calculator, exact age calculator, how old am i">
-<link rel="canonical" href="https://easyworktools.online/tools/age-calculator/">
+<meta name="description" content="Free online JPEG compressor. Reduce JPG file size with a live quality slider, or set a target file size in KB and let the tool find the right quality automatically.">
+<meta name="keywords" content="jpeg compressor, compress jpeg, reduce jpg file size, jpg to kb, compress jpg online">
+<link rel="canonical" href="https://easyworktools.online/tools/jpeg-compressor/">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png"><link rel="shortcut icon" href="../../assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
-<meta property="og:title" content="Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online">
-<meta property="og:description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
+<meta property="og:title" content="JPEG Compressor Online — Reduce JPG File Size Free | EasyWorkTools.online">
+<meta property="og:description" content="Free online JPEG compressor. Reduce JPG file size with a live quality slider, or set a target file size in KB and let the tool find the right quality automatically.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://easyworktools.online/tools/age-calculator/">
+<meta property="og:url" content="https://easyworktools.online/tools/jpeg-compressor/">
 <meta property="og:site_name" content="EasyWorkTools.online">
 <meta property="og:image" content="https://easyworktools.online/assets/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online">
-<meta name="twitter:description" content="Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.">
+<meta name="twitter:title" content="JPEG Compressor Online — Reduce JPG File Size Free | EasyWorkTools.online">
+<meta name="twitter:description" content="Free online JPEG compressor. Reduce JPG file size with a live quality slider, or set a target file size in KB and let the tool find the right quality automatically.">
 <meta name="twitter:image" content="https://easyworktools.online/assets/og-image.png">
 
-<title>Age Calculator Online — Find Your Exact Age Free | EasyWorkTools.online</title>
+<title>JPEG Compressor Online — Reduce JPG File Size Free | EasyWorkTools.online</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -363,24 +363,64 @@ input[type=file]{display:none}
   <div class="workspace-main">
 
     <section class="tool-hero" aria-labelledby="toolTitle">
-      <h1 id="toolTitle">Age Calculator</h1>
-      <p class="lede">Enter a date of birth to get an exact age — not just years, but months and days too — along with a running countdown to the next birthday.</p>
+      <h1 id="toolTitle">JPEG Compressor</h1>
+      <p class="lede">Shrink a JPG file by quality or hit an exact target size in KB — useful for upload limits on forms, job portals and email attachments. Runs entirely in your browser.</p>
 
-      <div class="calc-row">
-        <div class="calc-field"><label for="dob">Date of birth</label><input type="date" id="dob"></div>
-        <div class="calc-field"><label for="asOf">Calculate age as of</label><input type="date" id="asOf"></div>
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload a JPEG to compress">
+        <strong>Drop a JPEG here, or click to browse</strong>
+        <span>JPG or PNG accepted · processed on your device</span>
       </div>
+      <input type="file" id="fileInput" accept="image/jpeg,image/png">
 
       <div class="status-msg" id="statusMsg" role="alert"></div>
+    </section>
 
-      <div class="calc-result" id="resultBox" style="display:none;margin-top:10px">
-        <div class="calc-result-main" id="ageMain">—</div>
-        <div class="calc-result-sub" id="ageSub">—</div>
-        <div class="calc-stat-grid">
-          <div class="calc-stat"><b id="statDays">—</b><span>Total days</span></div>
-          <div class="calc-stat"><b id="statWeeks">—</b><span>Total weeks</span></div>
-          <div class="calc-stat"><b id="statMonths">—</b><span>Total months</span></div>
-          <div class="calc-stat"><b id="statNext">—</b><span>Days to next birthday</span></div>
+    <section class="result-panel" id="resultPanel" aria-live="polite">
+      <div class="result-card">
+        <div class="result-stage">
+          <div class="compare" id="compare">
+            <canvas id="beforeCanvas" aria-label="Original image"></canvas>
+            <div class="after-layer" id="afterLayer"><canvas id="afterCanvas" aria-label="Compressed image"></canvas></div>
+            <span class="compare-tag left">Compressed</span>
+            <span class="compare-tag right">Original</span>
+            <div class="compare-handle" id="compareHandle" role="slider" tabindex="0" aria-label="Comparison position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>↔</span></div>
+          </div>
+          <div class="stage-meta">
+            <span>Original: <b id="metaOriginal">—</b></span>
+            <span>Compressed: <b id="metaCompressed">—</b></span>
+            <span>Saved: <b id="metaSaved">—</b></span>
+          </div>
+        </div>
+        <div class="result-side">
+          <h2>Compression mode</h2>
+          <div class="calc-tabs" id="modeTabs">
+            <button class="calc-tab is-active" type="button" data-mode="quality">By quality</button>
+            <button class="calc-tab" type="button" data-mode="target">By target size (KB)</button>
+          </div>
+
+          <div id="qualityPanel">
+            <div class="slider-group">
+              <label for="sQuality">Quality <b id="vQuality">80%</b></label>
+              <input type="range" id="sQuality" min="10" max="100" value="80">
+            </div>
+          </div>
+          <div id="targetPanel" style="display:none">
+            <div class="calc-field" style="margin-bottom:16px">
+              <label for="targetKb">Target size (KB)</label>
+              <input type="number" id="targetKb" placeholder="e.g. 100" min="5">
+            </div>
+            <button class="btn-primary" type="button" id="targetBtn" style="width:100%;justify-content:center">Find best quality for this size</button>
+          </div>
+
+          <div class="calc-field" style="margin:18px 0">
+            <label for="maxWidth">Max width in pixels (optional)</label>
+            <input type="number" id="maxWidth" placeholder="Leave blank to keep original size" min="50">
+          </div>
+
+          <div class="action-row">
+            <button class="btn-download" type="button" id="downloadBtn">Download compressed JPEG</button>
+            <button class="btn-ghost" type="button" id="resetBtn">Compress another image</button>
+          </div>
         </div>
       </div>
     </section>
@@ -390,28 +430,36 @@ input[type=file]{display:none}
 
     <section class="tool-seo-content" aria-labelledby="seoHeading">
     <div class="seo-inner">
-    <h2 id="seoHeading">A Precise Age Calculator, Down to the Day</h2>
-    <p>Most simple age calculations just subtract birth year from the current year, which is wrong for roughly a third of the year — anyone whose birthday hasn't happened yet is counted a year too old. This calculator checks the full date, so the years, months and days shown are always exact.</p>
+    <h2 id="seoHeading">Compress a JPEG to an Exact File Size</h2>
+    <p>Most compressors only offer a quality slider, leaving you to guess and check until a file fits an upload limit. This JPEG compressor adds a target-size mode that does that guessing for you — set a KB limit and it automatically searches for the highest quality that fits.</p>
 
-    <h3>What you can use it for</h3>
+    <h3>How to compress a JPEG to a specific KB size</h3>
+    <ol>
+      <li>Upload your JPG or PNG image.</li>
+      <li>Switch to the "By target size (KB)" tab.</li>
+      <li>Enter the maximum size required, for example 100 for a 100 KB limit.</li>
+      <li>Press "Find best quality for this size" and download the result.</li>
+    </ol>
+
+    <h3>Typical upload limits this is useful for</h3>
     <div class="seo-grid">
-      <div><h3>Legal &amp; official forms</h3><p>Confirm an exact age on a specific date, such as an application deadline or eligibility cut-off.</p></div>
-      <div><h3>Milestones</h3><p>Find out exactly when you turn 10,000 or 20,000 days old, or how many days until a big birthday.</p></div>
-      <div><h3>General curiosity</h3><p>See your age broken down into months, weeks and days, not just years.</p></div>
+      <div><h3>Job application portals</h3><p>Many require a photo or document image under 100–300 KB.</p></div>
+      <div><h3>Government &amp; exam forms</h3><p>ID photo and signature uploads are frequently capped at very small sizes, like 20–50 KB.</p></div>
+      <div><h3>Email attachments</h3><p>Keeping images small avoids bounced emails and slow sends on mobile connections.</p></div>
     </div>
 
-    <h3>How the calculation works</h3>
-    <p>The tool takes the date of birth and the comparison date (today, unless you change it), then counts complete years, then complete months within the remaining time, then the leftover days — the same way you would count on a calendar by hand, just instant and accurate to the day, including correct handling of leap years and months of different lengths.</p>
+    <h3>A note on quality loss</h3>
+    <p>JPEG is a lossy format — every re-compression discards some image data permanently. This tool always compresses from your original upload rather than an already-compressed copy, and shows a live before/after comparison so you can see exactly what a given quality level looks like before downloading.</p>
 
     <div class="faq">
-      <h3>Age Calculator FAQ</h3>
-      <details><summary>How is my exact age calculated?</summary><p>The calculator counts the full years, months and remaining days between your date of birth and the date you're comparing against (today, by default), accounting correctly for different month lengths and leap years.</p></details>
-      <details><summary>Can I calculate someone's age on a specific past or future date?</summary><p>Yes. Change the 'Calculate age as of' field to any date — useful for legal documents, eligibility checks, or working out how old someone was at a particular event.</p></details>
-      <details><summary>Why do the years, months and days look different from a simple subtraction?</summary><p>A simple year subtraction (2026 − 1995) ignores whether the birthday has happened yet this year. This calculator checks the exact month and day, so the result is always accurate to the day.</p></details>
-      <details><summary>Does this calculator account for leap years?</summary><p>Yes. It uses native JavaScript date arithmetic, which correctly handles leap years and varying month lengths automatically.</p></details>
-      <details><summary>What is 'total days lived' useful for?</summary><p>It's a fun statistic, but also genuinely useful for medical forms, age-in-days requirements for some visas and benefits, or simply celebrating a '10,000 days old' milestone.</p></details>
-      <details><summary>Is my date of birth stored anywhere?</summary><p>No. The calculation happens entirely in your browser. Nothing you enter is sent to a server or saved.</p></details>
-      <details><summary>Can I use this for a pet's age or an object's age, not just a person?</summary><p>Yes — the calculator simply measures time between two dates, so it works for anything with a starting date: pets, company founding dates, or how long you've owned something.</p></details>
+      <h3>JPEG Compressor FAQ</h3>
+      <details><summary>How is this different from a general image compressor?</summary><p>This tool is built specifically for JPEG/JPG files and adds a target-file-size mode: tell it the maximum KB you need — for a form upload limit, for example — and it automatically searches for the highest quality that fits under that size.</p></details>
+      <details><summary>What is the target file size feature for?</summary><p>Many websites, application forms and email systems cap uploads at a specific size, like 100 KB or 500 KB. Instead of guessing a quality percentage, enter the KB limit directly and the tool finds it for you.</p></details>
+      <details><summary>Will compressing a JPEG twice keep reducing the size?</summary><p>Only slightly, and each pass adds a little more quality loss. It's best to compress from the original, highest-quality source file rather than re-compressing an already-compressed JPEG.</p></details>
+      <details><summary>Does this tool remove EXIF data like camera model or GPS location?</summary><p>Yes. Re-encoding through the Canvas API strips EXIF metadata automatically, which is a useful side benefit for privacy when sharing photos.</p></details>
+      <details><summary>Can I convert a PNG to a compressed JPEG here?</summary><p>Yes. Upload a PNG and it will be re-encoded as a JPEG, which usually produces a much smaller file for photographic images (PNG is not ideal for photos).</p></details>
+      <details><summary>Is there a limit to how small I can make the file?</summary><p>The tool allows quality down to 10%, which is usually only useful for thumbnails or previews — very low quality settings introduce visible blocky compression artefacts.</p></details>
+      <details><summary>Is my image uploaded to a server?</summary><p>No. Compression happens locally using the Canvas API. The file never leaves your device.</p></details>
     </div>
 
     <div class="related-block">
@@ -419,7 +467,7 @@ input[type=file]{display:none}
       <div class="related-grid">
         <a class="related-card" href="../free-image-compressor/"><h3>Free Image Compressor</h3><p>Shrink JPG, PNG and WebP files by up to 90% without losing visible quality.</p></a>
         <a class="related-card" href="../percentage-calculator/"><h3>Percentage Calculator</h3><p>Work out percentages, increases, decreases and ratios instantly.</p></a>
-        <a class="related-card" href="../password-generator/"><h3>Password Generator</h3><p>Create strong, random passwords with full control over length and characters.</p></a>
+        <a class="related-card" href="../age-calculator/"><h3>Age Calculator</h3><p>Find your exact age in years, months and days, plus your next birthday countdown.</p></a>
       </div>
     </div>
     </div>
@@ -437,9 +485,9 @@ input[type=file]{display:none}
 <div class="ad-reserved" aria-hidden="true"></div>
 
 <!-- =================== STRUCTURED DATA =================== -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Age Calculator", "url": "https://easyworktools.online/tools/age-calculator/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free online age calculator. Enter your date of birth to find your exact age in years, months and days, total days lived, and your next birthday countdown.", "featureList": ["Exact age in years, months and days", "Age as of any custom date", "Total days, weeks and months lived", "Next birthday countdown", "No sign-up required"], "publisher": {"@type": "Organization", "name": "EasyWorkTools.online", "url": "https://easyworktools.online/"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is my exact age calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator counts the full years, months and remaining days between your date of birth and the date you're comparing against (today, by default), accounting correctly for different month lengths and leap years."}}, {"@type": "Question", "name": "Can I calculate someone's age on a specific past or future date?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Change the 'Calculate age as of' field to any date — useful for legal documents, eligibility checks, or working out how old someone was at a particular event."}}, {"@type": "Question", "name": "Why do the years, months and days look different from a simple subtraction?", "acceptedAnswer": {"@type": "Answer", "text": "A simple year subtraction (2026 − 1995) ignores whether the birthday has happened yet this year. This calculator checks the exact month and day, so the result is always accurate to the day."}}, {"@type": "Question", "name": "Does this calculator account for leap years?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It uses native JavaScript date arithmetic, which correctly handles leap years and varying month lengths automatically."}}, {"@type": "Question", "name": "What is 'total days lived' useful for?", "acceptedAnswer": {"@type": "Answer", "text": "It's a fun statistic, but also genuinely useful for medical forms, age-in-days requirements for some visas and benefits, or simply celebrating a '10,000 days old' milestone."}}, {"@type": "Question", "name": "Is my date of birth stored anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation happens entirely in your browser. Nothing you enter is sent to a server or saved."}}, {"@type": "Question", "name": "Can I use this for a pet's age or an object's age, not just a person?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the calculator simply measures time between two dates, so it works for anything with a starting date: pets, company founding dates, or how long you've owned something."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easyworktools.online/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://easyworktools.online/tools/"}, {"@type": "ListItem", "position": 3, "name": "Age Calculator", "item": "https://easyworktools.online/tools/age-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JPEG Compressor", "url": "https://easyworktools.online/tools/jpeg-compressor/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free online JPEG compressor. Reduce JPG file size with a live quality slider, or set a target file size in KB and let the tool find the right quality automatically.", "featureList": ["JPEG-specific compression", "Target file size mode (KB)", "Live before/after preview", "Optional resize before compressing", "Strips EXIF metadata automatically"], "publisher": {"@type": "Organization", "name": "EasyWorkTools.online", "url": "https://easyworktools.online/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is this different from a general image compressor?", "acceptedAnswer": {"@type": "Answer", "text": "This tool is built specifically for JPEG/JPG files and adds a target-file-size mode: tell it the maximum KB you need — for a form upload limit, for example — and it automatically searches for the highest quality that fits under that size."}}, {"@type": "Question", "name": "What is the target file size feature for?", "acceptedAnswer": {"@type": "Answer", "text": "Many websites, application forms and email systems cap uploads at a specific size, like 100 KB or 500 KB. Instead of guessing a quality percentage, enter the KB limit directly and the tool finds it for you."}}, {"@type": "Question", "name": "Will compressing a JPEG twice keep reducing the size?", "acceptedAnswer": {"@type": "Answer", "text": "Only slightly, and each pass adds a little more quality loss. It's best to compress from the original, highest-quality source file rather than re-compressing an already-compressed JPEG."}}, {"@type": "Question", "name": "Does this tool remove EXIF data like camera model or GPS location?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Re-encoding through the Canvas API strips EXIF metadata automatically, which is a useful side benefit for privacy when sharing photos."}}, {"@type": "Question", "name": "Can I convert a PNG to a compressed JPEG here?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Upload a PNG and it will be re-encoded as a JPEG, which usually produces a much smaller file for photographic images (PNG is not ideal for photos)."}}, {"@type": "Question", "name": "Is there a limit to how small I can make the file?", "acceptedAnswer": {"@type": "Answer", "text": "The tool allows quality down to 10%, which is usually only useful for thumbnails or previews — very low quality settings introduce visible blocky compression artefacts."}}, {"@type": "Question", "name": "Is my image uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Compression happens locally using the Canvas API. The file never leaves your device."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easyworktools.online/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://easyworktools.online/tools/"}, {"@type": "ListItem", "position": 3, "name": "JPEG Compressor", "item": "https://easyworktools.online/tools/jpeg-compressor/"}]}</script>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
@@ -478,51 +526,146 @@ input[type=file]{display:none}
 "use strict";
 
 function $(id){return document.getElementById(id)}
-var dob=$("dob"),asOf=$("asOf"),statusMsg=$("statusMsg"),resultBox=$("resultBox");
-var today=new Date();
-asOf.value=today.toISOString().slice(0,10);
-dob.max=asOf.value;
+var dropzone=$("dropzone"),fileInput=$("fileInput"),statusMsg=$("statusMsg");
+var resultPanel=$("resultPanel"),beforeCanvas=$("beforeCanvas"),afterCanvas=$("afterCanvas"),afterLayer=$("afterLayer"),compareHandle=$("compareHandle");
+var metaOriginal=$("metaOriginal"),metaCompressed=$("metaCompressed"),metaSaved=$("metaSaved");
+var sQuality=$("sQuality"),vQuality=$("vQuality"),maxWidth=$("maxWidth");
+var modeTabs=$("modeTabs"),qualityPanel=$("qualityPanel"),targetPanel=$("targetPanel"),targetKb=$("targetKb"),targetBtn=$("targetBtn");
+var downloadBtn=$("downloadBtn"),resetBtn=$("resetBtn");
 
-function diffYMD(start,end){
-  var y=end.getFullYear()-start.getFullYear();
-  var m=end.getMonth()-start.getMonth();
-  var d=end.getDate()-start.getDate();
-  if(d<0){m--;var prevMonth=new Date(end.getFullYear(),end.getMonth(),0);d+=prevMonth.getDate();}
-  if(m<0){y--;m+=12;}
-  return {y:y,m:m,d:d};
+var state={img:null,originalBytes:0,mode:"quality",compressedBlob:null};
+
+function showStatus(msg,type){statusMsg.textContent=msg;statusMsg.className="status-msg show "+(type||"info")}
+function fmtBytes(n){if(!n&&n!==0)return "—";if(n<1024)return n+" B";if(n<1024*1024)return (n/1024).toFixed(1)+" KB";return (n/1024/1024).toFixed(2)+" MB"}
+
+dropzone.addEventListener("click",function(){fileInput.click()});
+dropzone.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();fileInput.click()}});
+["dragenter","dragover"].forEach(function(ev){dropzone.addEventListener(ev,function(e){e.preventDefault();dropzone.classList.add("is-drag")})});
+["dragleave","drop"].forEach(function(ev){dropzone.addEventListener(ev,function(e){e.preventDefault();dropzone.classList.remove("is-drag")})});
+dropzone.addEventListener("drop",function(e){var f=e.dataTransfer.files&&e.dataTransfer.files[0];if(f)loadFile(f)});
+fileInput.addEventListener("change",function(){if(fileInput.files[0])loadFile(fileInput.files[0])});
+
+function loadFile(file){
+  if(!/^image\/(jpeg|png)$/.test(file.type)){showStatus("Please choose a JPG or PNG file.","error");return}
+  state.originalBytes=file.size;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var img=new Image();
+    img.onload=function(){
+      state.img=img;
+      resultPanel.classList.add("show");
+      metaOriginal.textContent=fmtBytes(state.originalBytes);
+      statusMsg.classList.remove("show");
+      recompress();
+    };
+    img.onerror=function(){showStatus("That file could not be read as an image.","error")};
+    img.src=e.target.result;
+  };
+  reader.readAsDataURL(file);
 }
 
-function calc(){
-  statusMsg.classList.remove("show");
-  if(!dob.value){resultBox.style.display="none";return}
-  var b=new Date(dob.value+"T00:00:00");
-  var ref=asOf.value?new Date(asOf.value+"T00:00:00"):new Date();
-  if(b>ref){
-    statusMsg.textContent="Date of birth must be before the comparison date.";
-    statusMsg.className="status-msg show error";
-    resultBox.style.display="none";
-    return;
+function drawScaled(canvas,img,mw){
+  var w=img.naturalWidth,h=img.naturalHeight;
+  var m=parseInt(mw,10);
+  if(m&&m>0&&m<w){h=Math.round(h*(m/w));w=m}
+  canvas.width=w;canvas.height=h;
+  canvas.getContext("2d").drawImage(img,0,0,w,h);
+  return canvas;
+}
+
+function compressAtQuality(q,cb){
+  drawScaled(afterCanvas,state.img,maxWidth.value);
+  afterCanvas.toBlob(function(blob){cb(blob)},"image/jpeg",q);
+}
+
+var debounceTimer=null;
+function recompress(){
+  if(!state.img)return;
+  clearTimeout(debounceTimer);
+  debounceTimer=setTimeout(function(){
+    drawScaled(beforeCanvas,state.img,null);
+    var q=parseInt(sQuality.value,10)/100;
+    compressAtQuality(q,function(blob){
+      if(!blob)return;
+      state.compressedBlob=blob;
+      updateMeta(blob);
+    });
+  },120);
+}
+
+function updateMeta(blob){
+  metaCompressed.textContent=fmtBytes(blob.size);
+  var saved=state.originalBytes>0?Math.max(0,Math.round((1-blob.size/state.originalBytes)*100)):0;
+  metaSaved.textContent=saved+"%";
+}
+
+function findQualityForTarget(targetBytes,done){
+  var lo=0.05,hi=0.98,bestBlob=null,iterations=0;
+  function step(){
+    iterations++;
+    var mid=(lo+hi)/2;
+    compressAtQuality(mid,function(blob){
+      if(!blob){done(null);return}
+      if(blob.size<=targetBytes){bestBlob=blob;lo=mid}else{hi=mid}
+      if(iterations>=9||Math.abs(hi-lo)<0.02){done(bestBlob||blob);return}
+      step();
+    });
   }
-  var age=diffYMD(b,ref);
-  var msPerDay=86400000;
-  var totalDays=Math.floor((ref-b)/msPerDay);
-  var totalWeeks=Math.floor(totalDays/7);
-  var totalMonths=age.y*12+age.m;
-
-  var nextBday=new Date(ref.getFullYear(),b.getMonth(),b.getDate());
-  if(nextBday<ref)nextBday=new Date(ref.getFullYear()+1,b.getMonth(),b.getDate());
-  var daysToNext=Math.ceil((nextBday-ref)/msPerDay);
-
-  $("ageMain").textContent=age.y+" yr "+age.m+" mo "+age.d+" d";
-  $("ageSub").textContent="Born "+b.toDateString()+" — as of "+ref.toDateString();
-  $("statDays").textContent=totalDays.toLocaleString();
-  $("statWeeks").textContent=totalWeeks.toLocaleString();
-  $("statMonths").textContent=totalMonths.toLocaleString();
-  $("statNext").textContent=daysToNext===0?"Today!":daysToNext.toLocaleString();
-  resultBox.style.display="block";
+  step();
 }
-dob.addEventListener("change",calc);
-asOf.addEventListener("change",calc);
+
+sQuality.addEventListener("input",function(){vQuality.textContent=sQuality.value+"%";recompress()});
+maxWidth.addEventListener("input",function(){state.mode==="quality"?recompress():null});
+
+modeTabs.addEventListener("click",function(e){
+  var btn=e.target.closest(".calc-tab");if(!btn)return;
+  modeTabs.querySelectorAll(".calc-tab").forEach(function(b){b.classList.remove("is-active")});
+  btn.classList.add("is-active");
+  state.mode=btn.getAttribute("data-mode");
+  qualityPanel.style.display=state.mode==="quality"?"block":"none";
+  targetPanel.style.display=state.mode==="target"?"block":"none";
+});
+
+targetBtn.addEventListener("click",function(){
+  if(!state.img){showStatus("Upload an image first.","error");return}
+  var kb=parseFloat(targetKb.value);
+  if(!kb||kb<=0){showStatus("Enter a target size in KB.","error");return}
+  drawScaled(beforeCanvas,state.img,null);
+  showStatus("Searching for the best quality...","info");
+  findQualityForTarget(kb*1024,function(blob){
+    if(!blob){showStatus("Could not compress to that size.","error");return}
+    state.compressedBlob=blob;
+    updateMeta(blob);
+    showStatus("Done — this is the closest match under "+kb+" KB.","ok");
+  });
+});
+
+downloadBtn.addEventListener("click",function(){
+  if(!state.compressedBlob)return;
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(state.compressedBlob);
+  a.download="easyworktools-compressed.jpg";
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(a.href)},2000);
+});
+resetBtn.addEventListener("click",function(){
+  state={img:null,originalBytes:0,mode:state.mode,compressedBlob:null};
+  resultPanel.classList.remove("show");fileInput.value="";
+});
+
+(function(){
+  var dragging=false;
+  function setPos(px){
+    var rect=beforeCanvas.getBoundingClientRect();
+    var pct=Math.min(100,Math.max(0,((px-rect.left)/rect.width)*100));
+    afterLayer.style.width=pct+"%";
+    compareHandle.style.left=pct+"%";
+    compareHandle.setAttribute("aria-valuenow",Math.round(pct));
+  }
+  compareHandle.addEventListener("pointerdown",function(e){dragging=true;compareHandle.setPointerCapture(e.pointerId)});
+  compareHandle.addEventListener("pointermove",function(e){if(dragging)setPos(e.clientX)});
+  compareHandle.addEventListener("pointerup",function(){dragging=false});
+})();
 
 })();
 </script>
