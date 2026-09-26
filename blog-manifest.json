@@ -1,8 +1,23 @@
 [
   {
+    "title": "Does Minifying HTML, CSS and JS Actually Speed Up Your Site? | EasyWorkTools.online",
+    "description": "What code minification actually removes, how much it typically saves, and where it fits alongside compression and caching for real page speed gains.",
+    "url": "blog/does-minifying-code-improve-page-speed.html"
+  },
+  {
     "title": "Facebook Video Thumbnail Downloader — Free FB Cover Image Grabber | EasyWorkTools.online",
     "description": "Download the thumbnail or cover image of a public Facebook video for free. Simple steps using EasyWorkTools.online",
     "url": "blog/facebook-video-thumbnail-downloader.html"
+  },
+  {
+    "title": "Why Your iPhone Photos Won&#x27;t Open Everywhere (and How to Fix It) | EasyWorkTools.online",
+    "description": "Why iPhone photos save as HEIC, why that format doesn&#x27;t open everywhere, and how to convert HEIC to JPG for free without installing anything.",
+    "url": "blog/heic-to-jpg-iphone-photos-guide.html"
+  },
+  {
+    "title": "HEX vs RGB vs HSL: Converting Colors for CSS and Design | EasyWorkTools.online",
+    "description": "The difference between HEX, RGB and HSL color formats, when to use each in CSS, and how to convert between them without doing the math by hand.",
+    "url": "blog/hex-rgb-hsl-color-conversion-guide.html"
   },
   {
     "title": "How to Clean Text Before Publishing It Online | EasyWorkTools.online",
@@ -15,6 +30,21 @@
     "url": "blog/how-to-compress-jpeg-to-target-size.html"
   },
   {
+    "title": "How to Shrink a PDF That&#x27;s Too Big to Email | EasyWorkTools.online",
+    "description": "Why scanned and image-heavy PDFs get so large, and how to compress a PDF to fit under email or upload-form size limits, for free and in your browser.",
+    "url": "blog/how-to-compress-pdf-file-size.html"
+  },
+  {
+    "title": "How to Turn Photos Into a Single PDF (and Back Again) | EasyWorkTools.online",
+    "description": "A step-by-step guide to combining JPG or PNG images into one PDF document, and extracting individual pages from a PDF as JPG images, for free.",
+    "url": "blog/how-to-convert-jpg-to-pdf.html"
+  },
+  {
+    "title": "How to Convert JSON to CSV Without Losing Data | EasyWorkTools.online",
+    "description": "A practical guide to converting JSON arrays to CSV spreadsheets (and back), including how nested values, missing fields and quoting are handled correctly.",
+    "url": "blog/how-to-convert-json-to-csv.html"
+  },
+  {
     "title": "How to Convert Text Case Online: Uppercase, Lowercase, Title Case & More | EasyWorkTools.online",
     "description": "Learn how to convert text case online for free using EasyWorkTools.online. Step-by-step guide for uppercase, lowercase, title case, slug case and snake case.",
     "url": "blog/how-to-convert-text-case-online.html"
@@ -25,14 +55,49 @@
     "url": "blog/how-to-convert-units-online.html"
   },
   {
+    "title": "How to Hit an Exact Word or Character Count Every Time | EasyWorkTools.online",
+    "description": "How to accurately count words, characters, sentences and reading time for essays, ad copy, meta descriptions and character-limited fields online for free.",
+    "url": "blog/how-to-count-words-and-characters.html"
+  },
+  {
+    "title": "How to Create SEO-Friendly URL Slugs From Any Title | EasyWorkTools.online",
+    "description": "What makes a good URL slug, why accented characters and stopwords cause problems, and how to turn any page title into a clean, lowercase slug.",
+    "url": "blog/how-to-create-seo-url-slugs.html"
+  },
+  {
+    "title": "How to Display Special Characters Safely in HTML | EasyWorkTools.online",
+    "description": "Why characters like &lt; &gt; and &amp; need to be converted to HTML entities before displaying them on a page, and how encoding helps prevent broken markup and XSS.",
+    "url": "blog/how-to-escape-html-special-characters.html"
+  },
+  {
     "title": "How to Generate YouTube Tags That Actually Help Your Video | EasyWorkTools.online",
     "description": "Learn how to create a well-structured, properly formatted list of YouTube video tags for free using EasyWorkTools.online",
     "url": "blog/how-to-generate-youtube-tags.html"
   },
   {
+    "title": "How to Combine Multiple PDFs Into One File for Free | EasyWorkTools.online",
+    "description": "How to merge several PDF files into one document, and how to split a PDF into individual pages or a specific page range, without installing software.",
+    "url": "blog/how-to-merge-split-pdf-files.html"
+  },
+  {
+    "title": "How to Reduce SVG File Size Without Breaking Your Icons | EasyWorkTools.online",
+    "description": "Learn why SVG files exported from design tools are often bloated, what safe cleanup actually removes, and how to shrink them without changing how they look.",
+    "url": "blog/how-to-optimize-svg-files.html"
+  },
+  {
+    "title": "How to Read a Long URL Full of Tracking Parameters | EasyWorkTools.online",
+    "description": "How to break a long, messy URL down into its protocol, host, path and individual query parameters, without manually counting ampersands and question marks.",
+    "url": "blog/how-to-parse-and-read-a-url.html"
+  },
+  {
     "title": "How to Prepare Images for Websites, Documents and Social Media | EasyWorkTools.online",
     "description": "Learn how to choose image dimensions, aspect ratios, file formats and practical resizing settings for common digital workflows.",
     "url": "blog/how-to-prepare-images-for-web.html"
+  },
+  {
+    "title": "How to Clean Up a Messy Email List or Keyword List Fast | EasyWorkTools.online",
+    "description": "How to strip duplicate lines from a merged email list, keyword list or exported data set online for free, with case-insensitive matching and trimming.",
+    "url": "blog/how-to-remove-duplicate-lines-from-a-list.html"
   },
   {
     "title": "How to Resize Images Online for Free: A Simple Step-by-Step Guide | EasyWorkTools.online",
@@ -43,6 +108,21 @@
     "title": "Resize vs Compress Images: What Is the Difference? | EasyWorkTools.online",
     "description": "Understand the difference between resizing an image and compressing an image, when each method is useful, and how to choose a practical workflow.",
     "url": "blog/how-to-resize-vs-compress-images.html"
+  },
+  {
+    "title": "How to Alphabetize a List Online in Seconds | EasyWorkTools.online",
+    "description": "How to sort a list alphabetically, numerically or by line length online for free, with ascending or descending order and a live line count.",
+    "url": "blog/how-to-sort-a-list-alphabetically-online.html"
+  },
+  {
+    "title": "How to Test a Regular Expression Before Using It in Code | EasyWorkTools.online",
+    "description": "How to test a regex pattern against real sample text, what the global, case-insensitive and multiline flags actually change, and common mistakes to check for.",
+    "url": "blog/how-to-test-regular-expressions.html"
+  },
+  {
+    "title": "How to Write Meta Tags That Don&#x27;t Get Cut Off in Google | EasyWorkTools.online",
+    "description": "Recommended title and meta description lengths, what Open Graph and Twitter Card tags are for, and how to generate a complete, correctly formatted set.",
+    "url": "blog/how-to-write-seo-meta-tags.html"
   },
   {
     "title": "Instagram Reel & Post Cover Downloader — Free HD Grabber | EasyWorkTools.online",
@@ -60,14 +140,34 @@
     "url": "blog/tiktok-thumbnail-downloader.html"
   },
   {
+    "title": "Unix Timestamps Explained: Converting Epoch Time to a Real Date | EasyWorkTools.online",
+    "description": "What a Unix timestamp is, why seconds and milliseconds get confused so often, and how to convert epoch time to a readable date in your local timezone or UTC.",
+    "url": "blog/unix-timestamp-explained.html"
+  },
+  {
     "title": "Uppercase, Lowercase and Title Case: When to Use Each Text Style | EasyWorkTools.online",
     "description": "A practical guide to common text case styles, including uppercase, lowercase, title case, sentence case and when each is useful.",
     "url": "blog/uppercase-lowercase-title-case-guide.html"
   },
   {
+    "title": "URL Encoding Explained: When and Why to Percent-Encode Text | EasyWorkTools.online",
+    "description": "What percent-encoding actually does, the difference between encodeURIComponent and encodeURI, and when you need each one in a real URL or query string.",
+    "url": "blog/url-encoding-explained.html"
+  },
+  {
     "title": "Vimeo Video Thumbnail Downloader — Free HD Cover Grabber | EasyWorkTools.online",
     "description": "Download the thumbnail or cover image of a public Vimeo video for free. Step-by-step guide using EasyWorkTools.online",
     "url": "blog/vimeo-thumbnail-downloader.html"
+  },
+  {
+    "title": "What Is Base64 Encoding and When Do You Actually Need It? | EasyWorkTools.online",
+    "description": "A plain-language explanation of Base64 encoding, why it shows up in data URIs and API tokens, and why it is not a form of encryption or security.",
+    "url": "blog/what-is-base64-encoding.html"
+  },
+  {
+    "title": "What Is Keyword Density and Does It Still Matter for SEO? | EasyWorkTools.online",
+    "description": "What keyword density actually measures, why old-school density targets are outdated advice, and how to use a density checker sensibly before publishing.",
+    "url": "blog/what-is-keyword-density-seo.html"
   },
   {
     "title": "YouTube Thumbnail Downloader — Download HD YouTube Thumbnails Free | EasyWorkTools.online",

@@ -1,0 +1,13 @@
+{
+  "title": "Unix Timestamp Converter",
+  "description": "Convert Unix timestamps to human-readable dates and back online for free. Supports seconds and milliseconds, your local timezone and UTC, plus a live current timestamp.",
+  "tags": [
+    "unix timestamp converter",
+    "epoch converter",
+    "timestamp to date",
+    "date to timestamp",
+    "unix time online"
+  ],
+  "url": "tools/unix-timestamp-converter/",
+  "iconKey": "timestamp"
+}

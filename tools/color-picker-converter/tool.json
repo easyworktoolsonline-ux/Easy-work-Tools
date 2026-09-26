@@ -1,0 +1,13 @@
+{
+  "title": "Color Picker & Converter",
+  "description": "Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.",
+  "tags": [
+    "color picker online",
+    "hex to rgb converter",
+    "rgb to hex",
+    "color converter",
+    "hsl color picker"
+  ],
+  "url": "tools/color-picker-converter/",
+  "iconKey": "color-picker"
+}

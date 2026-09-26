@@ -1,0 +1,13 @@
+{
+  "title": "URL Encoder & Decoder",
+  "description": "Encode or decode URLs and query strings online for free. Percent-encode special characters or decode a URL-encoded string instantly in your browser.",
+  "tags": [
+    "url encoder",
+    "url decoder",
+    "percent encoding tool",
+    "encode url online",
+    "decode url online"
+  ],
+  "url": "tools/url-encoder-decoder/",
+  "iconKey": "url-encode"
+}

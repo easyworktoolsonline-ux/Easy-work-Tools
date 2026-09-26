@@ -219,6 +219,7 @@ for (const f of allHtml) {
 // Clean, valid sitemap URLs.
 const urls = [
   'https://easyworktools.online/',
+  'https://easyworktools.online/tools/',
   'https://easyworktools.online/blog/',
   'https://easyworktools.online/resources/',
   'https://easyworktools.online/about.html',

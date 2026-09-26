@@ -1,0 +1,13 @@
+{
+  "title": "URL Parser",
+  "description": "Parse any URL online for free into its protocol, host, port, path, query parameters and hash. Query string parameters are listed individually for easy inspection.",
+  "tags": [
+    "url parser online",
+    "parse url free",
+    "url breakdown tool",
+    "query string parser",
+    "analyze url"
+  ],
+  "url": "tools/url-parser/",
+  "iconKey": "url-parser"
+}

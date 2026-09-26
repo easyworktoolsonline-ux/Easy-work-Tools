@@ -1,0 +1,13 @@
+{
+  "title": "HTML/CSS/JS Minifier",
+  "description": "Minify HTML, CSS or JavaScript online for free. Strip comments and unnecessary whitespace to reduce file size, with before/after size comparison.",
+  "tags": [
+    "html minifier",
+    "css minifier",
+    "javascript minifier",
+    "minify code online",
+    "code compressor"
+  ],
+  "url": "tools/html-css-js-minifier/",
+  "iconKey": "minifier"
+}

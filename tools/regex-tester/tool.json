@@ -1,0 +1,13 @@
+{
+  "title": "Regex Tester",
+  "description": "Test regular expressions online for free. Highlight matches in your text live, see capture groups, and get flag options for global, case-insensitive and multiline matching.",
+  "tags": [
+    "regex tester",
+    "regular expression tester online",
+    "test regex free",
+    "regex match checker",
+    "javascript regex tester"
+  ],
+  "url": "tools/regex-tester/",
+  "iconKey": "regex"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "SVG Optimizer",
+  "description": "Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.",
+  "tags": [
+    "svg optimizer",
+    "compress svg",
+    "minify svg",
+    "svg file size reducer",
+    "clean svg online"
+  ],
+  "url": "tools/svg-optimizer/",
+  "iconKey": "svg-optim"
+}
