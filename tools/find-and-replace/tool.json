@@ -1,0 +1,14 @@
+{
+    "title":  "Find \u0026 Replace",
+    "description":  "Find and replace text online for free, including whole-word, case-sensitive and regex matching, plus multi-replace for applying a whole list of substitutions at once.",
+    "tags":  [
+                 "find and replace online",
+                 "regex find and replace",
+                 "text replace tool",
+                 "multi find and replace",
+                 "bulk text replace"
+             ],
+    "url":  "tools/find-and-replace/",
+    "iconKey":  "find-replace",
+    "category":  "Text Tools"
+}

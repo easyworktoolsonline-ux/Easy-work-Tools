@@ -1,0 +1,14 @@
+{
+    "title":  "PDF Metadata Editor",
+    "description":  "View and edit a PDF\u0027s title, author, subject, keywords and other document properties, or clear them entirely, free in your browser.",
+    "tags":  [
+                 "pdf metadata editor",
+                 "edit pdf properties",
+                 "remove pdf metadata",
+                 "pdf author title editor",
+                 "pdf document properties"
+             ],
+    "url":  "tools/pdf-metadata-editor/",
+    "iconKey":  "pdf-meta",
+    "category":  "PDF Tools"
+}

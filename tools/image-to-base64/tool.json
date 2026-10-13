@@ -1,0 +1,13 @@
+{
+    "title":  "Image to Base64 Converter",
+    "description":  "Convert an image to a Base64 data URI, or decode Base64 back to an image, online for free.",
+    "tags":  [
+                 "image to base64",
+                 "base64 to image",
+                 "image data uri converter",
+                 "base64 image encoder"
+             ],
+    "url":  "tools/image-to-base64/",
+    "iconKey":  "img-base64",
+    "category":  "Image Tools"
+}

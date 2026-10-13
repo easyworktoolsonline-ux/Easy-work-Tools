@@ -1,0 +1,13 @@
+{
+    "title":  "Image Crop \u0026 Rotate",
+    "description":  "Crop to any aspect ratio, rotate and flip images online for free in your browser.",
+    "tags":  [
+                 "image cropper",
+                 "crop image online",
+                 "rotate image online",
+                 "flip image"
+             ],
+    "url":  "tools/image-crop-rotate/",
+    "iconKey":  "crop-rotate",
+    "category":  "Image Tools"
+}

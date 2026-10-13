@@ -1,0 +1,13 @@
+{
+    "title":  "Image Metadata Viewer \u0026 Remover",
+    "description":  "View EXIF camera and GPS data, or strip all metadata from an image online for free.",
+    "tags":  [
+                 "exif viewer",
+                 "remove exif data",
+                 "image metadata remover",
+                 "strip gps from photo"
+             ],
+    "url":  "tools/image-metadata-viewer/",
+    "iconKey":  "metadata",
+    "category":  "Image Tools"
+}

@@ -1,0 +1,13 @@
+{
+    "title":  "Canonical \u0026 Meta Robots Checker",
+    "description":  "Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.",
+    "tags":  [
+                 "canonical tag generator",
+                 "meta robots generator",
+                 "noindex checker",
+                 "indexability checker"
+             ],
+    "url":  "tools/canonical-robots-checker/",
+    "iconKey":  "canonical-check",
+    "category":  "SEO Tools"
+}

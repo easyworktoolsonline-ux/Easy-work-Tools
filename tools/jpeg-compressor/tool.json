@@ -1,12 +1,13 @@
 {
-  "title": "JPEG Compressor",
-  "description": "Compress JPEG images online for free, by quality or exact target file size in KB.",
-  "tags": [
-    "jpeg compressor",
-    "compress jpeg",
-    "reduce jpg file size",
-    "jpg to kb"
-  ],
-  "url": "tools/jpeg-compressor/",
-  "iconKey": "jpeg"
+    "title":  "JPEG Compressor",
+    "description":  "Compress JPEG images online for free, by quality or exact target file size in KB.",
+    "tags":  [
+                 "jpeg compressor",
+                 "compress jpeg",
+                 "reduce jpg file size",
+                 "jpg to kb"
+             ],
+    "url":  "tools/jpeg-compressor/",
+    "iconKey":  "jpeg",
+    "category":  "Image Tools"
 }

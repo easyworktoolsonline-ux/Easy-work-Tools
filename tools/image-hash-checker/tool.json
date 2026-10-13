@@ -1,0 +1,13 @@
+{
+    "title":  "Image Hash \u0026 File Signature Checker",
+    "description":  "Generate SHA-256, SHA-1 and MD5 hashes and verify a file\u0027s real format from its signature, online for free.",
+    "tags":  [
+                 "image hash generator",
+                 "sha256 file hash",
+                 "file signature checker",
+                 "verify image format"
+             ],
+    "url":  "tools/image-hash-checker/",
+    "iconKey":  "hash-check",
+    "category":  "Image Tools"
+}

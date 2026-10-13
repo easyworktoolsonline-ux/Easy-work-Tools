@@ -1,0 +1,13 @@
+{
+    "title":  "Image Editor",
+    "description":  "Adjust brightness, contrast, saturation and apply filters like grayscale, blur and pixelate online for free.",
+    "tags":  [
+                 "online image editor",
+                 "photo editor free",
+                 "image filter tool",
+                 "pixelate image online"
+             ],
+    "url":  "tools/image-editor/",
+    "iconKey":  "img-editor",
+    "category":  "Image Tools"
+}

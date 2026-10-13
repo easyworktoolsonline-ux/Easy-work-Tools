@@ -1,0 +1,14 @@
+{
+    "title":  "JWT Decoder",
+    "description":  "Decode a JSON Web Token (JWT) online for free. View the header and payload as readable JSON, with expiry and issued-at claims shown as dates.",
+    "tags":  [
+                 "jwt decoder",
+                 "decode jwt online",
+                 "jwt parser",
+                 "json web token decoder",
+                 "jwt inspector"
+             ],
+    "url":  "tools/jwt-decoder/",
+    "iconKey":  "jwt",
+    "category":  "Developer Tools"
+}

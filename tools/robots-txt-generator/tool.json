@@ -1,0 +1,14 @@
+{
+    "title":  "Robots.txt Generator \u0026 Tester",
+    "description":  "Build a valid robots.txt file with a rule builder, or paste an existing robots.txt and test whether a URL path is allowed or blocked for a given crawler, online for free.",
+    "tags":  [
+                 "robots.txt generator",
+                 "robots.txt tester",
+                 "robots.txt validator",
+                 "crawler rules generator",
+                 "disallow allow generator"
+             ],
+    "url":  "tools/robots-txt-generator/",
+    "iconKey":  "robots-txt",
+    "category":  "SEO Tools"
+}

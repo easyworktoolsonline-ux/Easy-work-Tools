@@ -1,13 +1,14 @@
 {
-  "title": "Remove Duplicate Lines",
-  "description": "Remove duplicate lines from a list or block of text online for free. Case-sensitive or case-insensitive matching, with optional sorting and trimming.",
-  "tags": [
-    "remove duplicate lines",
-    "duplicate line remover",
-    "deduplicate text online",
-    "unique lines tool",
-    "remove duplicates from list"
-  ],
-  "url": "tools/remove-duplicate-lines/",
-  "iconKey": "dedupe"
+    "title":  "Remove Duplicate Lines",
+    "description":  "Remove duplicate lines from a list or block of text online for free. Case-sensitive or case-insensitive matching, with optional sorting and trimming.",
+    "tags":  [
+                 "remove duplicate lines",
+                 "duplicate line remover",
+                 "deduplicate text online",
+                 "unique lines tool",
+                 "remove duplicates from list"
+             ],
+    "url":  "tools/remove-duplicate-lines/",
+    "iconKey":  "dedupe",
+    "category":  "Text Tools"
 }

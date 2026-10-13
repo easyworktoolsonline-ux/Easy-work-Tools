@@ -1,0 +1,14 @@
+{
+    "title":  "Image Format Converter",
+    "description":  "Convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP online for free.",
+    "tags":  [
+                 "image format converter",
+                 "jpg to png",
+                 "png to jpg",
+                 "jpg to webp",
+                 "png to webp"
+             ],
+    "url":  "tools/image-format-converter/",
+    "iconKey":  "fmt-convert",
+    "category":  "Image Tools"
+}

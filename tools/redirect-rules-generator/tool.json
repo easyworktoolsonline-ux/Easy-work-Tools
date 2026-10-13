@@ -1,0 +1,13 @@
+{
+    "title":  "Redirect Rules Generator \u0026 Chain Checker",
+    "description":  "Generate 301/302/307/308 redirect rules for Apache, Nginx, Netlify and Vercel, or paste a URL mapping to detect redirect chains, loops and duplicate sources, online for free.",
+    "tags":  [
+                 "redirect generator",
+                 "htaccess redirect generator",
+                 "nginx redirect generator",
+                 "redirect chain checker"
+             ],
+    "url":  "tools/redirect-rules-generator/",
+    "iconKey":  "redirect-rules",
+    "category":  "SEO Tools"
+}

@@ -1,0 +1,16 @@
+{
+    "title":  "PDF ⇄ Images Converter",
+    "description":  "Convert PDF pages to JPG or PNG images, or combine JPG, PNG and WebP images into one PDF, free in your browser.",
+    "tags":  [
+                 "pdf to jpg",
+                 "pdf to png",
+                 "pdf to images",
+                 "images to pdf",
+                 "jpg to pdf",
+                 "png to pdf",
+                 "convert pdf to image"
+             ],
+    "url":  "tools/pdf-images-converter/",
+    "iconKey":  "pdf-images",
+    "category":  "PDF Tools"
+}

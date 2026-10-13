@@ -1,14 +1,21 @@
 {
-  "title": "Online Text Case Converter",
-  "description": "Convert text to uppercase, lowercase, title case, slug, snake_case and more online for free.",
-  "tags": [
-    "text case converter",
-    "uppercase",
-    "lowercase",
-    "title case",
-    "slug converter",
-    "snake case"
-  ],
-  "url": "tools/online-text-case-converter/",
-  "iconKey": "text-case"
+    "title":  "Online Text Case Converter",
+    "description":  "Convert text to uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, dot.case and more online for free.",
+    "tags":  [
+                 "text case converter",
+                 "uppercase",
+                 "lowercase",
+                 "title case",
+                 "sentence case",
+                 "toggle case",
+                 "camelcase converter",
+                 "pascalcase converter",
+                 "slug converter",
+                 "snake case",
+                 "constant case",
+                 "dot case"
+             ],
+    "url":  "tools/online-text-case-converter/",
+    "iconKey":  "text-case-converter",
+    "category":  "Text Tools"
 }

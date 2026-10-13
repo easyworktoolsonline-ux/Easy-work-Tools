@@ -1,0 +1,13 @@
+{
+    "title":  "Image Color Picker \u0026 Palette Extractor",
+    "description":  "Pick an exact pixel color or extract the dominant palette from any image online for free.",
+    "tags":  [
+                 "image color picker",
+                 "color picker from image",
+                 "extract color from photo",
+                 "palette from image"
+             ],
+    "url":  "tools/image-color-picker/",
+    "iconKey":  "img-palette",
+    "category":  "Image Tools"
+}

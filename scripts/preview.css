@@ -1,0 +1,229 @@
+/* ======================================================================
+ * Tool Preview component styles - source of truth.
+ *
+ * scripts/add-previews.mjs injects this block into each tool page's own <style>.
+ *
+ * WHY IT IS INJECTED RATHER THAN ADDED TO assets/styles.css
+ * Only 57 of the 129 tool pages load the shared stylesheet. The other 72 - and
+ * the reference tool, Easy Thumbnail Downloader - are deliberately
+ * self-contained with a large inline <style> (median 25 KB). A rule added to
+ * styles.css would simply not reach those 72 pages, so the previews would be
+ * invisible on most of the site. Injecting per page matches how the reference
+ * tool already does it and keeps every page self-contained.
+ *
+ * Every token is written with a fallback, because the two token sets in the
+ * project differ: styles.css defines --muted/--text/--radius, while the tool
+ * pages define --text-muted/--bg-section/--radius-lg. With a fallback the same
+ * block renders correctly on either.
+ *
+ * The .mock / .mock-grid / .mock-head / .mock-canvas / .mock-foot / .mock-badge
+ * / .mock-avatar / .mock-lines / .mock-play / .mock-rail / .mock-ratio names and
+ * values are copied verbatim from the reference tool, so a preview added here is
+ * visually indistinguishable from one that has always been there.
+ *
+ * Colours are the site's own: --blue #1D4ED8 and --purple #7C3AED. Nothing is
+ * invented. The code-block tints are darker steps of the same families than the
+ * reference's cyan accents, because the reference's cyan sat at 1.9:1 on white
+ * and was changed to the brand blue for exactly that reason.
+ * ====================================================================== */
+
+/* ---------------------------------------------------------------- shell -- */
+.pv-root { margin-top: 34px; width: 100% }
+.pv-h2 {
+  font-size: 22px; font-weight: 900; color: var(--black, #111827);
+  margin: 0 0 10px; letter-spacing: -.02em; line-height: 1.25;
+}
+.pv-sub {
+  font-size: 14px; color: var(--text-muted, #4B5563);
+  margin: 0 0 20px; max-width: 680px; line-height: 1.75;
+}
+.pv-grid { display: grid; grid-template-columns: 1fr; gap: 18px }
+.pv-grid--single { grid-template-columns: 1fr }
+.pv-note {
+  font-size: 13px; color: var(--text-muted, #4B5563);
+  margin: 14px 0 0; line-height: 1.7; max-width: 760px;
+}
+
+/* The reference grid steps 1 -> 2 -> 4 columns at 680px and 1000px. Kept
+   identical so previews line up with the five pages that already ship it, with
+   an added 3-column step for medium widths where two columns waste the row. */
+@media (min-width: 680px) {
+  .pv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .pv-grid--single { grid-template-columns: 1fr }
+}
+@media (min-width: 900px) {
+  .pv-grid:not(.pv-grid--single) { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+}
+@media (min-width: 1100px) {
+  .pv-grid:not(.pv-grid--single) { grid-template-columns: repeat(4, minmax(0, 1fr)) }
+}
+
+/* ---------------------------------------------------------------- card --- */
+.pv-card { min-width: 0; align-self: start; /* a tall card in the row must not stretch its neighbours */ }
+.pv-card--wide { grid-column: 1 / -1 }
+.pv-card__title { font-size: 12.5px; font-weight: 900; color: var(--black, #111827); margin: 0 }
+
+.pv-canvas {
+  width: 100%;
+  min-height: 96px;
+  background: var(--bg-section, #F9FAFB);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.pv-canvas[data-ratio] { aspect-ratio: var(--pv-ratio, 16 / 9) }
+.pv-canvas img { width: 100%; height: 100%; object-fit: contain; display: block }
+.pv-canvas[data-fit="cover"] img { object-fit: cover }
+.pv-canvas.empty {
+  background: repeating-linear-gradient(45deg, #F3F4F6, #F3F4F6 10px, #E9EBEF 10px, #E9EBEF 20px);
+  align-items: center; justify-content: center;
+}
+.pv-canvas--scroll { max-height: 320px; overflow: auto; align-items: flex-start }
+
+.pv-empty {
+  font-size: 11.5px; font-weight: 700; color: var(--text-muted, #4B5563);
+  text-align: center; padding: 14px; max-width: 90%;
+}
+
+.pv-foot {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 8px; min-width: 0;
+}
+.pv-foot__label {
+  font-size: 11.5px; font-weight: 700; color: var(--black, #111827);
+  min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.pv-foot__meta {
+  font-family: 'Space Grotesk', sans-serif; font-size: 10.5px; font-weight: 600;
+  color: var(--text-muted, #4B5563); flex-shrink: 0; white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- text --- */
+.pv-doc { padding: 14px 15px; width: 100%; }
+.pv-doc__p {
+  font-size: 12px; line-height: 1.65; color: var(--text-gray, #4B5563);
+  margin: 0 0 8px; overflow-wrap: anywhere;
+}
+.pv-doc__p:last-child { margin-bottom: 0 }
+.pv-doc__h {
+  font-size: 13.5px; font-weight: 800; color: var(--black, #111827);
+  margin: 0 0 7px; line-height: 1.35;
+}
+/* Social shapes: a short caption reads as a post, not as an essay. */
+.pv-doc--social .pv-doc__p { font-size: 12.5px }
+.pv-doc--list .pv-doc__p { margin-bottom: 5px }
+.pv-doc--headline .pv-doc__h { font-size: 16px; margin-bottom: 4px }
+.pv-doc--headline .pv-doc__p { font-size: 11.5px }
+
+/* ---------------------------------------------------------------- code --- */
+.pv-code {
+  margin: 0; padding: 13px 14px; width: 100%;
+  font-family: 'Space Grotesk', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px; line-height: 1.62; color: #1F2937;
+  white-space: pre; tab-size: 2;
+}
+.pv-code .t-com { color: #6B7280; font-style: italic }
+.pv-code .t-str { color: #0F766E }
+.pv-code .t-key { color: #7C3AED }
+.pv-code .t-num { color: #B45309 }
+.pv-code .t-tag { color: #1D4ED8 }
+.pv-code .t-attr { color: #B45309 }
+
+/* --------------------------------------------------------------- stats --- */
+.pv-stats { padding: 13px 14px; width: 100%; display: grid; gap: 9px; align-content: start }
+.pv-stat {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px;
+  align-items: baseline;
+}
+.pv-stat__k { font-size: 11.5px; font-weight: 600; color: var(--text-gray, #4B5563) }
+.pv-stat__v {
+  font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--black, #111827); text-align: right;
+}
+.pv-bar {
+  grid-column: 1 / -1; height: 5px; border-radius: 3px;
+  background: var(--border, #E5E7EB); overflow: hidden; display: block;
+}
+.pv-bar i { display: block; height: 100%; background: var(--blue, #1D4ED8); border-radius: 3px }
+
+/* -------------------------------------------------------------- result --- */
+.pv-result {
+  padding: 18px 15px; width: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; gap: 4px;
+}
+.pv-result__label {
+  font-size: 10px; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-muted, #4B5563);
+}
+.pv-result__value {
+  font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700;
+  color: var(--black, #111827); line-height: 1.15; overflow-wrap: anywhere;
+}
+.pv-result__detail { font-size: 11.5px; color: var(--text-gray, #4B5563) }
+
+/* ------------------------------------------------------------- snippet --- */
+.pv-snip { padding: 13px 14px; width: 100%; display: flex; flex-direction: column; gap: 3px }
+.pv-snip img { width: 100%; border-radius: 8px; display: block; margin-bottom: 4px; aspect-ratio: 1.91/1; object-fit: cover }
+.pv-snip__url {
+  font-size: 11px; color: #15803D; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+.pv-snip__title {
+  font-size: 15px; font-weight: 500; color: #1A0DAB; line-height: 1.35;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.pv-snip__desc {
+  font-size: 11.5px; color: var(--text-gray, #4B5563); line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.pv-snip--card .pv-snip__title { font-size: 13.5px; font-weight: 700; color: var(--black, #111827) }
+
+/* ---------------------------------------------------------------- tiles --- */
+.pv-tiles { padding: 8px; width: 100%; display: grid; gap: 6px; grid-template-columns: repeat(2, minmax(0, 1fr)) }
+.pv-tiles--row { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.pv-tile { position: relative; border-radius: 6px; overflow: hidden; background: var(--bg-section, #F9FAFB); min-width: 0 }
+.pv-tile img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 1 }
+.pv-tile__glyph {
+  display: grid; place-items: center; aspect-ratio: 1;
+  font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700;
+  color: var(--text-gray, #4B5563); padding: 4px; text-align: center;
+  overflow: hidden; overflow-wrap: anywhere;
+}
+.pv-tile__cap {
+  display: block; font-size: 9.5px; font-weight: 700; color: var(--text-gray, #4B5563);
+  padding: 3px 5px; text-align: center; background: #fff;
+  border-top: 1px solid var(--border, #E5E7EB);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* --------------------------------------------------------------- extras --- */
+.pv-sheet {
+  width: 100%; height: 100%; padding: 16px 14px; background: #fff;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.pv-sheet__title { font-size: 12px; font-weight: 800; color: var(--black, #111827) }
+.pv-sheet__line { display: block; height: 6px; border-radius: 3px; background: var(--border, #E5E7EB) }
+
+.pv-tag {
+  display: inline-block; font-size: 10px; font-weight: 700; color: #1D4ED8;
+  background: #EFF6FF; border: 1px solid #BFDBFE;
+  padding: 2px 6px; border-radius: 5px; align-self: flex-start;
+}
+.pv-progress {
+  position: absolute; left: 7px; bottom: 7px; right: 7px; height: 4px;
+  border-radius: 3px; background: rgba(255, 255, 255, .3); overflow: hidden;
+}
+.pv-progress i { display: block; height: 100%; background: #fff }
+
+/* -------------------------------------------------- reduced motion ------- */
+@media (prefers-reduced-motion: reduce) {
+  .pv-canvas, .pv-doc, .pv-code, .pv-tiles { transition: none !important; animation: none !important }
+}
+
+/* A full-width single card needs a bounded height so a long generated document
+   does not push the rest of the page down. The inner area scrolls instead. */
+.pv-card--wide .pv-canvas--scroll { max-height: 380px }

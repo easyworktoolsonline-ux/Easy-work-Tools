@@ -1,0 +1,14 @@
+{
+    "title":  "XML Sitemap Generator \u0026 Validator",
+    "description":  "Generate a valid XML sitemap from a list of URLs, or paste an existing sitemap to validate its structure, find duplicate URLs and check size limits, online for free.",
+    "tags":  [
+                 "xml sitemap generator",
+                 "sitemap validator",
+                 "sitemap generator online",
+                 "create sitemap.xml",
+                 "sitemap checker"
+             ],
+    "url":  "tools/xml-sitemap-generator/",
+    "iconKey":  "sitemap-xml",
+    "category":  "SEO Tools"
+}

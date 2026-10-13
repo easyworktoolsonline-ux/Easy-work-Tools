@@ -1,0 +1,13 @@
+{
+    "title":  "Image Compare \u0026 Difference Checker",
+    "description":  "Compare two images with a slider or highlight pixel differences between them online for free.",
+    "tags":  [
+                 "compare two images online",
+                 "image difference checker",
+                 "image diff tool",
+                 "before after image slider"
+             ],
+    "url":  "tools/image-compare/",
+    "iconKey":  "img-compare",
+    "category":  "Image Tools"
+}

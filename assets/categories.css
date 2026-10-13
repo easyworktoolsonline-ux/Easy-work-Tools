@@ -1,0 +1,476 @@
+/* ==========================================================================
+ * Explore by Category - homepage carousel
+ *
+ * Generated markup lives between the ewt:categories markers in index.html and
+ * comes from scripts/categories.mjs; this file only styles it. Colours are not
+ * hard-coded here: each card carries --c1 and --c2, set by the build from the
+ * category's own entry.
+ *
+ * The track is moved with transform rather than scroll, because a transform can
+ * be transitioned smoothly, snaps to an exact card boundary, and does not drag
+ * a scrollbar across the page. --cat-per is the number of cards visible at the
+ * current breakpoint; the JS reads it back to know how far it may slide.
+ *
+ * The 17% black scrim over each gradient is deliberate. It is the smallest
+ * single value that lifts all nine gradients to 4.5:1 against the white
+ * tagline and count pill; see assertCategoryContrast() in scripts/categories.mjs.
+ * ========================================================================== */
+/* overflow-x:clip contains the half-overhanging arrows without creating a
+   scroll container of its own. `overflow:hidden` would do the same job but it
+   makes the element a scroll container, which is why the arrows were pushing
+   the whole page sideways by 13px at 1100px wide and by 60px at 320px.
+   `clip` clips the paint and allows no scrolling at all. */
+.category-section{padding:32px 0;overflow-x:clip}
+
+/* The rail is the positioning context for the two small arrows, which sit
+   half-overlapping the left and right edges of the card row. */
+.cat-rail{position:relative}
+
+.cat-viewport{position:relative;overflow:hidden;margin:-42px -36px;padding:42px 36px}
+.cat-viewport::before,.cat-viewport::after{
+  content:"";position:absolute;top:0;bottom:0;width:36px;z-index:1;
+}
+.cat-viewport::before{left:0;background:linear-gradient(90deg,#fff 0 56%,transparent 100%)}
+.cat-viewport::after{right:0;background:linear-gradient(270deg,#fff 0 56%,transparent 100%)}
+.cat-track{
+  --cat-per:5;--cat-gap:18px;
+  display:flex;gap:var(--cat-gap);
+  transition:transform .42s cubic-bezier(.22,.61,.36,1);
+  will-change:transform;
+}
+.cat-rail[data-animating="off"] .cat-track{transition:none}
+
+/* Mini arrows on the left and right edges of the cards, as in the reference.
+   They are real <button>s so they are reachable by keyboard and announced;
+   disabled rather than hidden at the ends so the layout does not jump. */
+.cat-nav{
+  position:absolute;top:50%;z-index:2;
+  display:grid;place-items:center;
+  width:34px;height:34px;margin-top:-17px;
+  border-radius:50%;border:1px solid var(--border);
+  background:#fff;color:var(--black);cursor:pointer;
+  box-shadow:0 3px 10px rgba(15,23,42,.14);
+  transition:background .15s ease,border-color .15s ease,opacity .15s ease;
+}
+/* Positioned fully OUTSIDE the row with a clean gap, so the arrow never sits on
+   top of a card.
+   -17px on a 34px button put the button's centre on the rail edge, which left its
+   inner half overlapping the last (or first) card. -40px moves the whole 34px
+   button past the rail edge and adds a ~6px gap.
+   The section carries overflow-x:clip, so the overhang is clipped rather than
+   adding a horizontal scrollbar; the container's own 32px side margin keeps the
+   arrow on screen at every width where it is visible. */
+.cat-nav--prev{left:-40px}
+.cat-nav--next{right:-40px}
+.cat-nav:hover:not(:disabled){background:var(--yellow);border-color:#e2c24d}
+.cat-nav:disabled{opacity:0;cursor:default;pointer-events:none}
+.cat-nav:focus-visible{outline:2px solid var(--black);outline-offset:2px}
+
+.cat-card{
+  flex:0 0 calc((100% - (var(--cat-per) - 1) * var(--cat-gap)) / var(--cat-per));
+  max-width:calc((100% - (var(--cat-per) - 1) * var(--cat-gap)) / var(--cat-per));
+  display:flex;flex-direction:column;
+  border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(145deg,var(--c1),var(--c2));
+  box-shadow:0 10px 30px -5px rgba(0,0,0,.22);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+/* align-items:stretch is the flex default, so every card in the row is already
+   the same height; this just stops a card's own content from forcing it
+   taller than its neighbours. */
+.cat-card>*{flex-shrink:0}
+/* Keep the soft ambient shadow consistent while the card lifts on hover. */
+.cat-card:hover{transform:translateY(-4px)}
+/* Focus lifts the card without adding a colored edge or alternate shadow. */
+.cat-card:focus-within{transform:translateY(-4px);outline:none}
+.cat-card:hover,.cat-card:focus,.cat-card:focus-within,.cat-card:active{outline:none}
+.cat-card:has(.cat-card__main:active,.cat-card__foot a:active){transform:translateY(-2px) scale(.99)}
+.cat-card__main:focus,.cat-card__main:focus-visible,.cat-card__main:active,
+.cat-card__foot a:focus,.cat-card__foot a:focus-visible,.cat-card__foot a:active{outline:none}
+
+/* The main clickable area. Kept as a separate <a> from the featured-tool link
+   in the foot, because nesting one <a> inside another is invalid HTML and the
+   featured tool needs its own destination.
+
+   Laid out as a grid rather than a column so the arrow can sit beside the
+   tagline on the same row. In a column with margin-top:auto the arrow is pinned
+   to the bottom of the coloured area, which moves it up or down depending on
+   whether that card's tagline wraps to two lines - the arrows ended up on three
+   different baselines across the row. */
+.cat-card__main{
+  flex:1;display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-rows:auto auto 1fr;
+  column-gap:12px;
+  align-content:start;
+  padding:20px 20px 18px;color:#fff;text-decoration:none;position:relative;
+}
+/* Scrim: darkens the gradient without dulling the hue. --scrim is set per card
+   by the build, because the reference hues need very different amounts (7.5%
+   for the violet up to 39.5% for the green) and one global value strong enough
+   for the green turns the violet muddy. See assertCategoryContrast(). */
+.cat-card__main::before{
+  content:"";position:absolute;inset:0;
+  background:rgba(0,0,0,var(--scrim,.17));pointer-events:none;
+}
+
+.cat-card__top{
+  position:relative;grid-column:1/-1;grid-row:1;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;width:100%;margin-bottom:14px;
+}
+/* Circular icon tile. A translucent WHITE disc, as in the reference: the glyph
+   is white and sits "on" the card colour rather than inside a dark well. */
+.cat-card__icon{
+  display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;
+  border:1px solid rgba(255,255,255,.26);border-radius:50%;
+  background:rgba(255,255,255,.18);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.22);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.cat-card__icon{color:#fff}
+.cat-card__icon svg{width:32px;height:32px;display:block;filter:brightness(0) invert(1)}
+/* Remove colored tile backplates so the original glyphs remain legible as white line art. */
+#catTrack>.cat-card:nth-child(1) .cat-card__icon svg>rect,
+#catTrack>.cat-card:nth-child(3) .cat-card__icon svg>rect:first-of-type,
+#catTrack>.cat-card:nth-child(4) .cat-card__icon svg>rect:first-of-type,
+#catTrack>.cat-card:nth-child(7) .cat-card__icon svg>rect:first-of-type,
+#catTrack>.cat-card:nth-child(9) .cat-card__icon svg>rect:first-of-type{display:none}
+#catTrack>.cat-card:nth-child(2) .cat-card__icon svg>rect{display:none}
+#catTrack>.cat-card:nth-child(6) .cat-card__icon svg>rect{fill:none;stroke:#fff;stroke-width:2.4}
+#catTrack>.cat-card:nth-child(8) .cat-card__icon svg>path:first-of-type{display:none}
+/* Light white pill, as in the reference, with the label in white.
+   Note the label does NOT clear AA on this pill: white on a light chip measures
+   1.20-3.37:1 depending on the card, and the pill was explicitly requested light
+   with white text. A dark pill (rgba(0,0,0,.65)) or dark label text
+   (#071A2B, 5.26:1 or better) are the two one-line alternatives if that changes. */
+.cat-card__count{
+  padding:4px 10px;border-radius:999px;
+  background:rgba(255,255,255,.55);
+  font-size:12px;font-weight:700;color:#fff;white-space:nowrap;
+}
+.cat-card__count{background:rgba(0,0,0,.32)}
+
+/* The light white panel behind the title and tagline.
+   Four of the nine palette colours are too light to carry white text (#11D6B2
+   measured 1.86:1), and a dark scrim would fix that but would darken a palette
+   colour that is locked to an exact value. A translucent white panel solves it
+   the other way instead: it LIGHTENS the area under the text rather than
+   darkening the card, so the exact colour survives and the text can be dark.
+   0.86 is the most opaque value measured at 4.5:1 or better on all nine cards
+   with #071A2B on it.
+
+   The panel is a two-column grid laid out like the reference: the title spans
+   the full width on its own row, and the tagline and arrow share the row below
+   it. An earlier flex version put the arrow beside the TITLE as well, which
+   squeezed the title column to ~106px and wrapped "Developer Tools" onto two
+   lines. Giving the title the full width keeps every category name on one line,
+   which is what it was before. */
+.cat-card__panel{
+  position:relative;z-index:1;
+  grid-column:1/-1;grid-row:2/4;align-self:start;
+  display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;
+  column-gap:12px;row-gap:4px;align-items:center;
+}
+.cat-card__title{
+  grid-column:1/-1;
+  font-size:18px;font-weight:800;line-height:1.25;color:#fff;
+  margin:0;letter-spacing:-.01em;
+}
+/* <span> rather than <h3>: nine cards of the same level inside one section
+   would put nine headings in the outline that all say the same thing. The
+   section's own <h2> is the heading; these are labels inside links. */
+.cat-card__tagline{
+  grid-column:1;
+  display:block;
+  font-size:12.5px;line-height:1.5;color:#fff;margin:0;
+}
+/* The arrow sits in the second grid column, vertically centred against the text
+   panel. It keeps its own disc - a dark tint now that the text is dark - so it
+   stays distinct on the light panel. */
+.cat-card__go{
+  position:relative;z-index:2;grid-column:2;
+  display:grid;place-items:center;
+  width:32px;height:32px;border-radius:50%;
+  color:#fff;
+  background:rgba(255,255,255,.18);
+  transition:transform .18s ease,background .18s ease;
+}
+.cat-card:hover .cat-card__go{transform:translateX(4px);background:rgba(255,255,255,.30)}
+
+/* The white "Featured Tool" strip.
+ *
+ * `flex-wrap:nowrap` is the load-bearing line: with wrap on, any name wider
+ * than the space left over after the 80px label dropped onto a second row, so
+ * four of the nine cards grew a second line and the strips stopped lining up.
+ * Now a name can never wrap.
+ *
+ * A `height`, not `min-height`: the strip is one fixed band on every card, which
+ * is what makes the bottom edge of the row a straight line. `min-height` only
+ * guarantees a floor, so a card whose content happened to be taller grew.
+ *
+ * The label is `flex:0 0 auto` so it never shrinks, and the name takes the
+ * remainder with `min-width:0` + `overflow:hidden` + `text-overflow:ellipsis`.
+ * That trio is insurance, not the mechanism: the nine names are short enough to
+ * fit the narrowest card outright (see the width table in the audit report), and
+ * the ellipsis is what stops a future long name from breaking the band instead
+ * of degrading inside it.
+ *
+ * Padding and size are slightly tighter than the coloured area above. The strip
+ * is a distinct white band, not a continuation of the card body, and the extra
+ * 8px of horizontal padding per side was costing ~16px of the ~64px the name
+ * had to work with at the 5-per-view breakpoint.
+ */
+.cat-card__foot{
+  display:flex;align-items:center;gap:5px;flex-wrap:nowrap;
+  height:46px;overflow:hidden;
+  margin:0;padding:10px 16px;background:#fff;
+  font-size:11.5px;line-height:1.4;
+}
+.cat-card__foot-label{flex:0 0 auto;color:var(--muted);font-weight:600;white-space:nowrap}
+/* No underline. The rule used to carry border-bottom:1px solid currentColor,
+   which was the visible underline; text-decoration:none alone did not remove it
+   because the border was doing the drawing. Hover still darkens the text, so the
+   link stays obviously interactive without an underline.
+
+   As in the reference, the tool name sits in a soft pill tinted with the card's
+   own colour, so each foot strip carries a hint of the card above it. The pill is
+   a fixed 12% of --c1 on white and the text uses --link, which is measured
+   separately at 4.5:1 on white, so the name stays readable inside the tint. */
+.cat-card__foot a{
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  color:var(--link);font-weight:700;text-decoration:none;
+  padding:2px 8px;border-radius:999px;
+  background:color-mix(in srgb,var(--c1) 12%,#fff);
+}
+.cat-card__foot a:hover{color:var(--c1);background:color-mix(in srgb,var(--c1) 20%,#fff)}
+/* The foot link is a small target; give it a 24px minimum without moving the
+   text, by padding the hit area out with a pseudo-element. */
+.cat-card__foot a{position:relative}
+.cat-card__foot a::after{content:"";position:absolute;left:0;right:0;top:-8px;bottom:-8px}
+
+html[data-theme="dark"] .cat-viewport::before{background:linear-gradient(90deg,#0b1220 0 56%,transparent 100%)}
+html[data-theme="dark"] .cat-viewport::after{background:linear-gradient(270deg,#0b1220 0 56%,transparent 100%)}
+html[data-theme="dark"] .cat-nav{
+  background:#111c2e;
+  border-color:#475569;
+  color:#e2e8f0;
+  box-shadow:0 3px 10px rgba(0,0,0,.38);
+}
+html[data-theme="dark"] .cat-nav:hover:not(:disabled){background:#1e293b;border-color:#64748b}
+html[data-theme="dark"] .cat-card__foot{background:#111c2e}
+html[data-theme="dark"] .cat-card__foot-label{color:#cbd5e1}
+html[data-theme="dark"] .cat-card__foot a{
+  color:#f8fafc;
+  background:color-mix(in srgb,var(--c1) 34%,#111c2e);
+}
+html[data-theme="dark"] .cat-card__foot a:hover{
+  color:#fff;
+  background:color-mix(in srgb,var(--c1) 48%,#111c2e);
+}
+
+/* The position readout keeps its markup for screen readers but is visually
+   hidden, because the reference design shows no "Showing 1-5 of 9" text and it
+   was asked to be removed from the visible page. */
+.cat-status{margin:0}
+
+/* --- breakpoints: 5 across, then fewer as the row narrows --- */
+@media (max-width:1100px){.cat-track{--cat-per:4}}
+@media (max-width:900px){.cat-track{--cat-per:3}}
+/* Measured, not guessed: at 660px and above the leftmost card still leaves an
+   8px gutter and the arrow hangs at -1..33px, entirely outside it. At 640px and
+   below the card reaches the viewport edge and the arrow lands on the title and
+   tagline, so from here the arrows tuck fully inside the row and the card text
+   steps right to clear them. */
+@media (max-width:640px){
+  .cat-track{--cat-per:2;--cat-gap:14px}
+  .cat-card__main{padding:16px 16px 14px}
+  .cat-card__icon{width:38px;height:38px;flex-basis:38px}
+  .cat-card__icon svg{width:26px;height:26px}
+  .cat-card__title{font-size:16px}
+  .cat-card__foot{padding:10px 14px}
+
+  .cat-nav{width:30px;height:30px;margin-top:-15px;opacity:1}
+  .cat-nav--prev{left:3px}
+  .cat-nav--next{right:3px}
+  /* Narrow cards stack the arrow under the text inside the panel, so it cannot
+     squeeze the tagline into a narrower column. */
+  .cat-card__go{grid-column:1/-1;justify-self:start;margin-top:2px}
+}
+/* One card fills the viewport. The arrow tuck-in and the text indent already
+   applied from 640px down; only the column count changes here. */
+@media (max-width:420px){.cat-track{--cat-per:1}}
+
+@media (prefers-reduced-motion:reduce){
+  .cat-track{transition:none}
+  .cat-card:hover{transform:none}
+  .cat-card:hover .cat-card__go{transform:none}
+}
+
+/* ==========================================================================
+ * Dedicated category pages: /categories/<slug>/
+ *
+ * The hero reuses the card's gradient so the page is visibly the same family
+ * as the card that was clicked, with the same per-card scrim behind the white
+ * text so the contrast that was measured on the card also holds here.
+ * ========================================================================== */
+.cat-hero{padding:26px 0 34px;background:linear-gradient(135deg,var(--c1),var(--c2));position:relative}
+.cat-hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,var(--scrim,.17))}
+
+.breadcrumb{
+  position:relative;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  margin:0 0 20px;font-size:13px;color:#fff;
+}
+.breadcrumb a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.55)}
+.breadcrumb a:hover{border-bottom-color:#fff}
+.breadcrumb span[aria-hidden]{opacity:.7}
+.breadcrumb [aria-current]{font-weight:700}
+
+.cat-hero__row{position:relative;display:flex;align-items:flex-start;gap:18px}
+.cat-hero__icon{
+  display:grid;place-items:center;flex:0 0 62px;width:62px;height:62px;
+  border-radius:50%;background:rgba(255,255,255,.20);
+}
+.cat-hero__icon svg{width:36px;height:36px;display:block}
+.cat-hero h1{margin:0 0 10px;font-size:30px;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.15}
+.cat-hero__intro{margin:0 0 8px;max-width:62ch;font-size:15px;line-height:1.6;color:#fff;opacity:.96}
+.cat-hero__meta{margin:0;font-size:13.5px;font-weight:700;color:#fff;opacity:.9}
+.cat-hero__back{
+  position:relative;display:inline-block;margin-top:20px;
+  padding:9px 16px;border-radius:999px;background:#fff;
+  font-size:13.5px;font-weight:700;color:var(--link);text-decoration:none;
+  transition:background .15s ease,transform .15s ease;
+}
+.cat-hero__back:hover{background:#f8fafc;transform:translateY(-1px)}
+.cat-hero__back:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* "Other categories" links at the foot of every category page. */
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{
+  display:inline-flex;align-items:center;min-height:36px;padding:7px 14px;
+  border:1px solid var(--border);border-radius:999px;background:#fff;
+  font-size:13.5px;font-weight:600;color:var(--text);text-decoration:none;
+  transition:background .15s ease,border-color .15s ease;
+}
+.chip:hover{background:#f8fafc;border-color:#cbd5e1}
+.chip:focus-visible{outline:2px solid var(--black);outline-offset:2px}
+
+@media (max-width:640px){
+  .cat-hero h1{font-size:24px}
+  .cat-hero__row{gap:14px}
+  .cat-hero__icon{flex-basis:50px;width:50px;height:50px}
+  .cat-hero__icon svg{width:29px;height:29px}
+}
+
+/* ==========================================================================
+ * /tools/ category filter
+ *
+ * The category chips are real <button>s with aria-pressed, so the state is
+ * exposed to assistive tech rather than only being a colour change.
+ * ========================================================================== */
+.tool-filter{
+  margin:0;padding:10px;
+  border:1px solid var(--border);border-radius:16px;background:#fff;
+  box-shadow:0 5px 16px rgba(15,23,42,.05);
+}
+.tool-filter__row{display:block}
+.tool-filter__chips{display:flex;flex-wrap:nowrap;align-items:center;justify-content:safe center;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tool-filter__chips::-webkit-scrollbar{display:none}
+.filter-chip{
+  display:inline-flex;align-items:center;gap:7px;
+  flex:0 0 auto;min-height:38px;padding:9px 14px;
+  border:1px solid transparent;border-radius:11px;background:transparent;
+  font:inherit;font-size:13.5px;font-weight:600;color:#334155;white-space:nowrap;
+  cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease;
+}
+.filter-chip:hover{background:#f1f5f9}
+.filter-chip:focus-visible{outline:2px solid #1D4ED8;outline-offset:2px}
+.filter-chip.is-active{
+  background:#1D4ED8;border-color:#1D4ED8;color:#fff;
+}
+/* The grid is filtered by hiding cards, so an empty result has to say so rather
+   than leaving a blank area that looks like a loading failure. */
+.tools-empty{
+  padding:44px 20px;text-align:center;
+  border:1px dashed var(--border);border-radius:var(--radius);background:#fff;
+}
+.tools-empty h2{margin:0 0 6px;font-size:19px;color:var(--black)}
+.tools-empty p{margin:0 0 16px;font-size:14px;color:var(--muted)}
+
+@media (max-width:640px){
+  .tool-filter{padding:7px}
+  .tool-filter__chips{justify-content:flex-start}
+  .tools-page-head{padding:18px 16px}
+}
+
+.tools-page-head{
+  position:relative;overflow:hidden;
+  margin:0 0 14px;padding:16px 20px;
+  text-align:center;
+  animation:tools-head-enter .55s cubic-bezier(.2,.7,.2,1) both;
+}
+.tools-page-head h1{
+  margin:0;color:#0f172a;font-size:clamp(40px,5vw,52px);
+  font-weight:900;letter-spacing:-1.5px;line-height:1.1;
+}
+.tools-page-head p{
+  margin:7px auto 0;color:#64748b;font-size:15px;font-weight:600;
+}
+.tools-page-head h1,
+.tools-page-head p{position:relative;left:-24px;top:-6px}
+.tools-page-search{
+  display:block;width:min(100%,620px);margin:0 auto 20px;
+}
+.tools-search-field{
+  display:flex;min-width:0;align-items:center;gap:10px;
+  border:1px solid #d1d5db;border-radius:12px;background:#fff;
+  padding:5px 6px 5px 14px;color:#64748b;
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+.tools-search-field:focus-within{
+  border-color:#1D4ED8;box-shadow:0 0 0 3px rgba(29,78,216,.12);
+}
+.tools-search-field svg{width:19px;height:19px;flex:0 0 19px}
+.tools-search-field input{
+  flex:1;min-width:0;width:100%;border:0!important;padding:9px 0!important;
+  outline:none!important;box-shadow:none!important;background:transparent;
+  color:#111827;
+}
+.tools-search-field input:focus{border:0!important;box-shadow:none!important}
+.tools-page-search button{
+  flex:0 0 auto;width:auto;min-width:92px;padding:10px 16px;
+  border-radius:9px;
+}
+.grid#allToolsGrid{margin-top:22px}
+#allToolsGrid .card[hidden]{display:none!important}
+@keyframes tools-head-enter{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .tools-page-head{animation:none}
+}
+@media(max-width:640px){
+  .tools-page-head{padding:16px 10px}
+  .tools-page-search button{min-width:76px;padding:10px 12px}
+}
+
+/* ==========================================================================
+ * DARK MODE - category page chips
+ *
+ * .chip and .filter-chip are only used on the /categories/ pages, so they are
+ * themed here rather than in the shared sheet. Both hard-coded light values:
+ * .chip a white surface (white-on-white text in dark mode), .filter-chip a
+ * #334155 label that vanished against the dark page.
+ * ========================================================================== */
+html[data-theme="dark"] .chip{
+  background:#111c2e;
+  border-color:#334155;
+  color:var(--text);
+}
+html[data-theme="dark"] .chip:hover{background:#1c2536;border-color:#475569;color:var(--text)}
+html[data-theme="dark"] .chip:focus-visible{outline-color:var(--text)}
+html[data-theme="dark"] .filter-chip{color:var(--text)}
+html[data-theme="dark"] .filter-chip:hover{background:#1c2536;color:var(--text)}
+html[data-theme="dark"] .filter-chip.is-active{background:#1D4ED8;border-color:#1D4ED8;color:#fff}
+html[data-theme="dark"] .filter-chip:focus-visible{outline-color:#93c5fd}

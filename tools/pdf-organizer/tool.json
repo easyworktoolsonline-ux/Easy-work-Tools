@@ -1,0 +1,16 @@
+{
+    "title":  "PDF Organizer",
+    "description":  "Merge multiple PDFs, reorder, rotate, delete or extract pages, all in your browser for free.",
+    "tags":  [
+                 "merge pdf",
+                 "split pdf",
+                 "organize pdf",
+                 "rotate pdf pages",
+                 "delete pdf pages",
+                 "reorder pdf pages",
+                 "extract pdf pages"
+             ],
+    "url":  "tools/pdf-organizer/",
+    "iconKey":  "pdf-organizer",
+    "category":  "PDF Tools"
+}

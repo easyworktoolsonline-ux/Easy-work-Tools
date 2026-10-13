@@ -1,13 +1,14 @@
 {
-  "title": "Free Image Compressor",
-  "description": "Compress JPG, PNG and WebP images online for free in your browser.",
-  "tags": [
-    "image compressor",
-    "compress jpg",
-    "compress png",
-    "reduce image size",
-    "webp compressor"
-  ],
-  "url": "tools/free-image-compressor/",
-  "iconKey": "compressor"
+    "title":  "Free Image Compressor",
+    "description":  "Compress JPG, PNG and WebP images online for free in your browser.",
+    "tags":  [
+                 "image compressor",
+                 "compress jpg",
+                 "compress png",
+                 "reduce image size",
+                 "webp compressor"
+             ],
+    "url":  "tools/free-image-compressor/",
+    "iconKey":  "compressor",
+    "category":  "Image Tools"
 }

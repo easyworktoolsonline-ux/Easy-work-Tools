@@ -1,19 +1,63 @@
-
-:root{--yellow:#facc15;--yellow2:#eab308;--black:#0f172a;--text:#1f2937;--muted:#64748b;--border:#e5e7eb;--soft:#f8fafc;--shadow:0 12px 35px rgba(0,0,0,.07);--radius:18px}
+﻿
+:root{--yellow:#facc15;--yellow2:#eab308;--black:#0f172a;--text:#1f2937;--muted:#64748b;--muted-strong:#475569;--border:#e5e7eb;--soft:#f8fafc;--shadow:0 12px 35px rgba(0,0,0,.07);--radius:18px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:#fff;line-height:1.55;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input{font:inherit}button{cursor:pointer}.container{width:min(1160px,calc(100% - 32px));margin:auto}
-.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}.nav-inner{min-height:72px;display:flex;align-items:center;gap:24px}
-.site-logo{font-size:22px;font-weight:900;letter-spacing:-.8px;white-space:nowrap;color:var(--black);display:inline-flex;align-items:baseline;gap:2px}.site-logo-domain{font-family:'Space Grotesk',sans-serif;background:var(--yellow);color:var(--black);padding:1px 2px;border-radius:3px;font-size:11px;font-weight:900;display:inline-block;line-height:1;position:relative;top:-1px;margin-left:1px}.nav-links{display:flex;gap:20px;font-weight:750;font-size:14px;margin-left:auto}.nav-links a:hover{color:#111827;font-weight:800;}.nav-search{margin-left:0}.nav-search input{width:250px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;outline:none}.nav-search input:focus{border-color:#c99e00;box-shadow:0 0 0 3px rgba(250,204,21,.18)}.menu-btn{display:none;border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 11px}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}.nav-inner{min-height:72px;display:flex;align-items:center;gap:16px}
+.site-logo{font-size:24px;font-weight:900;letter-spacing:-.8px;white-space:nowrap;color:#0f172a;display:inline-flex;align-items:baseline;gap:2px}.site-logo-domain{font-family:'Space Grotesk',sans-serif;background:#facc15;color:#0f172a;padding:2px 6px;border-radius:4px;font-size:12px;font-weight:900;display:inline-block;line-height:1;position:relative;top:-2px;margin-left:2px}.nav-links{display:flex;gap:20px;font-weight:750;font-size:14px;margin-left:auto}.nav-links a:hover{color:#111827;font-weight:800;}.nav-search{margin-left:0}.nav-search input{width:250px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;outline:none}.nav-search input:focus{border-color:#c99e00;box-shadow:0 0 0 3px rgba(250,204,21,.18)}.menu-btn{display:none;border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 11px}
+.nav-divider{flex:0 0 1px;height:24px;background:var(--border)}
+.theme-toggle,.share-button{display:inline-flex;flex:0 0 38px;width:38px;height:38px;align-items:center;justify-content:center;padding:0;border:1px solid #dbe2ea;border-radius:50%;overflow:hidden;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.theme-toggle{position:relative;background:#fff;color:#475569;box-shadow:0 1px 4px rgba(15,23,42,.08)}
+.theme-toggle:hover,.share-button:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(15,23,42,.14)}
+.theme-toggle:focus-visible,.share-button:focus-visible{outline:2px solid #1D4ED8;outline-offset:3px}
+.theme-toggle__icon{position:absolute;width:19px;height:19px;transition:opacity .22s ease,transform .28s cubic-bezier(.2,.7,.2,1)}
+.theme-toggle__icon--moon{opacity:1;transform:rotate(0) scale(1)}
+.theme-toggle__icon--sun{opacity:0;transform:rotate(-45deg) scale(.65)}
+.theme-toggle.is-dark{background:#111c2e;color:#facc15;border-color:#475569}
+.theme-toggle.is-dark .theme-toggle__icon--moon{opacity:0;transform:rotate(45deg) scale(.65)}
+.theme-toggle.is-dark .theme-toggle__icon--sun{opacity:1;transform:rotate(0) scale(1)}
+@media(prefers-reduced-motion:reduce){.theme-toggle__icon{transition:none}}
+.share-button{border-color:var(--border);background:#fff;color:#475569}
+.share-button svg{width:19px;height:19px}
+.nav-action-status{position:fixed;z-index:120;right:18px;bottom:18px;max-width:min(360px,calc(100vw - 36px));padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;color:#1f2937;box-shadow:var(--shadow);font-size:13px;font-weight:700}
+.nav-action-status[hidden]{display:none}
 .hero{padding:86px 0 70px;background:linear-gradient(180deg,#fff 0%,#fffdf1 100%)}.hero-content{max-width:820px}.kicker{display:inline-block;font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;background:var(--yellow);color:#171717;padding:7px 10px;border-radius:999px;margin-bottom:18px}h1{font-size:clamp(38px,6vw,68px);line-height:1.03;letter-spacing:-2.6px;color:var(--black);margin-bottom:20px}.hero-text{font-size:18px;color:#4b5563;max-width:720px;margin-bottom:28px}.hero-search{display:flex;gap:10px;max-width:690px}.hero-search input{flex:1;min-width:0;border:1px solid #d1d5db;border-radius:12px;padding:13px 14px;outline:none}.hero-search button,.cta-btn{border:0;border-radius:12px;background:var(--yellow);color:#111;font-weight:850;padding:13px 18px}.hero-search button:hover,.cta-btn:hover{background:var(--yellow2)}.hero-stats{display:flex;gap:24px;margin-top:24px;color:#6b7280;font-size:13px;flex-wrap:wrap}.hero-stats strong{color:#111;font-size:15px}
-.ad-reserved{min-height:76px;margin:18px 0;display:flex;align-items:center;justify-content:center}.ad-reserved:empty{visibility:hidden}.section{padding:68px 0}.section.alt{background:var(--soft)}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section-head h2{font-size:32px;letter-spacing:-1px;color:#111827}.section-head p{max-width:570px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:24px;background:#fff;box-shadow:0 4px 15px rgba(0,0,0,.025);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#e2c24d}.card-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}.icon{width:44px;height:44px;border-radius:12px;background:var(--yellow);display:grid;place-items:center;font-weight:950;color:#111}.icon-svg svg{width:27px;height:27px;display:block}.help-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:22px}.help-card{border:1px solid var(--border);border-radius:16px;padding:20px;background:#fff}.help-card h3{font-size:17px;color:#111827;margin-bottom:7px}.help-card p{font-size:13px;color:#64748b;line-height:1.7}.feedback-form{border:1px solid var(--border);border-radius:18px;background:#fff;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.025)}.feedback-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feedback-form label{display:block;font-size:12px;font-weight:800;color:#111827;margin-bottom:14px}.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;margin-top:7px;border:1px solid var(--border);border-radius:10px;padding:12px 13px;font:inherit;font-size:13px;color:#111827;background:#fff;outline:none}.feedback-form textarea{resize:vertical;min-height:120px}.feedback-form input:focus,.feedback-form select:focus,.feedback-form textarea:focus{border-color:#d9b938;box-shadow:0 0 0 3px rgba(250,204,21,.18)}.feedback-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.feedback-actions button{border:0;border-radius:10px;background:var(--yellow);color:#111827;padding:12px 16px;font-weight:900;cursor:pointer}.feedback-actions button:disabled{opacity:.6;cursor:not-allowed}.feedback-fields{grid-template-columns:1fr 1fr 1fr}.feedback-contact{font-size:13px;color:#111827;font-weight:900;}.form-status{margin:12px 0 0;font-size:12px;color:#64748b}.form-status.success{color:#166534}.form-status.error{color:#b91c1c}.card h3{font-size:20px;color:#111827;margin-bottom:8px}.card p{color:#667085;font-size:14px;margin-bottom:18px}.card-link{font-size:14px;color:#111827;font-weight:900;}.search-panel{display:none;position:fixed;top:73px;left:0;right:0;z-index:90;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 25px rgba(0,0,0,.08);max-height:70vh;overflow:auto}.search-panel.show{display:block}.search-inner{padding:20px 0}.search-meta{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:12px;color:#6b7280;font-size:13px}.search-close{border:0;background:none;font-weight:800}.search-results{display:grid;gap:10px}.search-item{display:block;padding:14px;border:1px solid var(--border);border-radius:12px}.search-item strong{display:block;color:#111;margin-bottom:3px}.search-item span{font-size:12px;color:#111827;font-weight:900;}.search-item p{font-size:13px;color:#6b7280;margin-top:3px}
-.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.resource-card{border:1px solid var(--border);border-radius:16px;padding:20px;background:#fff}.resource-card h3{font-size:17px;color:#111827;margin-bottom:7px}.resource-card p{font-size:13px;color:#64748b;line-height:1.7}.resource-card a{display:inline-block;margin-top:12px;font-size:13px;color:#111827;font-weight:900;}.site-footer{border-top:1px solid var(--border);padding:34px 0 22px;background:#fff}.site-footer-inner{width:min(1160px,calc(100% - 32px));margin:auto}.site-footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.site-footer-logo{font-size:22px;font-weight:900;color:#0F172A;display:inline-flex;align-items:baseline;gap:2px}.site-footer-description{max-width:430px;margin:10px 0 0;color:#64748B;font-size:13px;line-height:1.7}.site-footer-col h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#0F172A;margin:0 0 10px}.site-footer-col a{display:block;color:#64748B;font-size:12px;margin:7px 0;font-weight:800;}.site-footer-col a:hover{color:#111827;text-decoration:underline}.site-footer-bottom{margin-top:22px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:#94A3B8}.site-footer-logo .site-logo-domain{font-size:11px}
-@media(max-width:820px){.help-grid{grid-template-columns:1fr}.feedback-fields{grid-template-columns:1fr}.nav-links{display:none}.nav-links.mobile-show{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;padding:16px;border-bottom:1px solid var(--border);flex-direction:column}.nav-search input{width:190px}.menu-btn{display:block}.grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:8px}.site-footer-top{grid-template-columns:1fr 1fr}.site-footer-brand{grid-column:1/-1}}
-@media(max-width:560px){.container{width:min(100% - 22px,1160px)}.nav-inner{gap:10px}.site-logo{font-size:20px}.nav-search input{width:135px;font-size:13px}.hero-search{flex-direction:column}.hero-search button{width:100%}.hero{padding:50px 0 54px}h1{letter-spacing:-1.5px}.hero-text{font-size:16px}.section{padding:52px 0}.section-head h2{font-size:28px}.site-footer-top{grid-template-columns:1fr}.site-footer-brand{grid-column:auto}}
+html[data-theme="dark"] .hero-stats{color:#9ca3af}
+html[data-theme="dark"] .hero-stats strong{color:#f9fafb}
+.ad-reserved{min-height:76px;margin:18px 0;display:flex;align-items:center;justify-content:center}.ad-reserved:empty{visibility:hidden;min-height:0;margin:0}.section{padding:68px 0}.section.alt{background:var(--soft)}/* Heading with its subtitle STACKED underneath, left aligned.
+ *
+ * This used to be a flex row that parked the subtitle in a right-hand column, which
+ * was N.42. It is now stacked, because that arrangement is the opposite of what was
+ * asked for. See the note above for why the previous version of this comment had to
+ * avoid quoting the old declarations.
+ *
+ * It was never a text-align problem either. The paragraphs were already
+ * text-align:start; they were flush to the container's RIGHT edge - measured at 0px
+ * from the right and 590-671px from the left. So the fix is the layout, not the
+ * alignment property.
+ *
+ * The subtitle is --blue (#1D4ED8): 6.70:1 on white, 6.41:1 on the --soft tint that
+ * #blog and #help sit on. Both measured on the rendered page. */
+.section-head{display:block;margin-bottom:28px}.section-head h2{font-size:32px;letter-spacing:-1px;color:#111827}.section-head p{max-width:570px;margin-top:8px;color:var(--blue)}#tools .section-head p{color:#555555}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:24px;background:#fff;box-shadow:0 4px 15px rgba(0,0,0,.025);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#e2c24d}.card-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}.icon{width:44px;height:44px;border-radius:12px;background:var(--yellow);display:grid;place-items:center;font-weight:950;color:#111}.icon-svg svg{width:27px;height:27px;display:block}.help-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:22px}.help-card{border:1px solid var(--border);border-radius:16px;padding:20px;background:#fff}.help-card h3{font-size:17px;color:#111827;margin-bottom:7px}.help-card p{font-size:13px;color:#64748b;line-height:1.7}.feedback-form{border:1px solid var(--border);border-radius:18px;background:#fff;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.025)}.feedback-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feedback-form label{display:block;font-size:12px;font-weight:800;color:#111827;margin-bottom:14px}.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;margin-top:7px;border:1px solid var(--border);border-radius:10px;padding:12px 13px;font:inherit;font-size:13px;color:#111827;background:#fff;outline:none}.feedback-form textarea{resize:vertical;min-height:120px}/* Focus indicator contrast. Was #d9b938, measured 1.92:1 on white against the 3:1 a
+   focus indicator needs - and axe-core does not test this, so it went unnoticed.
+   --purple is 5.70:1 and was already the deliberate choice for this form, per
+   the note on .feedback-form select:focus below. */
+/* Focus wins over the accent border above, and stays --purple whatever card is
+   selected: an indicator has to clear 3:1 on its own background, which the green
+   accent would not. It is also the colour this form already used by design.
+   !important because the accent rule is scoped #help .feedback-form textarea,
+   which outranks this selector on specificity alone. */
+.feedback-form input:focus,.feedback-form select:focus,.feedback-form textarea:focus{border-color:var(--purple)!important;box-shadow:0 0 0 3px rgba(124,58,237,.18)!important}
+/* the textarea's resting ring is its own accent, so the focus ring has to
+   replace it outright rather than merge with it */
+#help .feedback-form textarea:focus{box-shadow:0 0 0 3px rgba(124,58,237,.18)!important}.feedback-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.feedback-actions button{border:0;border-radius:10px;background:var(--yellow);color:#111827;padding:12px 16px;font-weight:900;cursor:pointer}.feedback-actions button:disabled{opacity:.6;cursor:not-allowed}.feedback-fields{grid-template-columns:1fr 1fr 1fr}.feedback-contact{font-size:13px;color:#111827;font-weight:900;}.form-status{margin:12px 0 0;font-size:12px;color:#64748b}.form-status.success{color:#166534}.form-status.error{color:#b91c1c}.card h3{font-size:20px;color:#111827;margin-bottom:8px}.card p{color:#667085;font-size:14px;margin-bottom:18px}.card-link{font-size:14px;color:#111827;font-weight:900;}.search-panel{display:none;position:fixed;top:73px;left:0;right:0;z-index:90;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 25px rgba(0,0,0,.08);max-height:70vh;overflow:auto}.search-panel.show{display:block}.search-inner{padding:20px 0}.search-meta{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:12px;color:#6b7280;font-size:13px}.search-close{border:0;background:none;font-weight:800}.search-results{display:grid;gap:10px}.search-item{display:block;padding:14px;border:1px solid var(--border);border-radius:12px}.search-item strong{display:block;color:#111;margin-bottom:3px}.search-item span{font-size:12px;color:#111827;font-weight:900;}.search-item p{font-size:13px;color:#6b7280;margin-top:3px}
+.site-footer{border-top:1px solid var(--border);padding:34px 0 22px;background:#fff}.site-footer-inner{width:min(1160px,calc(100% - 32px));margin:auto}.site-footer-top{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}.site-footer-brand{grid-column:1/-1}.site-footer-description{max-width:430px;margin:10px 0 0;color:#64748B;font-size:13px;line-height:1.7}.site-footer-col h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#0F172A;margin:0 0 10px}.site-footer-col a{display:flex;align-items:center;min-height:24px;line-height:24px;padding:0;color:#64748B;font-size:12px;margin:1.5px 0;font-weight:800;}/* 24px minimum target, WCAG 2.5.8 */.site-footer-col a:hover{color:#000000;text-decoration:underline;text-decoration-color:#000000}.site-footer-bottom{margin-top:22px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:#64748B}
+@media(max-width:820px){.help-grid{grid-template-columns:1fr}.feedback-fields{grid-template-columns:1fr}.nav-links{display:none}.nav-links.mobile-show{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;padding:16px;border-bottom:1px solid var(--border);flex-direction:column}.nav-search input{width:190px}.menu-btn{display:block}.grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr}.site-footer-top{grid-template-columns:1fr 1fr}.site-footer-brand{grid-column:1/-1}}
+@media(max-width:560px){.container{width:min(100% - 22px,1160px)}.nav-inner{gap:10px}.site-logo{font-size:22px}.nav-search input{width:135px;font-size:13px}.hero-search{flex-direction:column}.hero-search button{width:100%}.hero{padding:50px 0 54px}h1{letter-spacing:-1.5px}.hero-text{font-size:16px}.section{padding:52px 0}.section-head h2{font-size:28px}.site-footer-top{grid-template-columns:1fr}.site-footer-brand{grid-column:auto}}
 
 .icon-svg{background:#fff!important;border:1px solid #E5E7EB;overflow:hidden}.icon-svg svg{width:30px;height:30px}.support-email{display:inline-flex!important;align-items:center;gap:7px}
 
-.site-footer-top{grid-template-columns:1.4fr 1fr 1fr 1fr}.site-footer-support .support-email{white-space:normal}.site-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px}.site-footer-legal{display:flex;gap:18px;justify-content:flex-end}.site-footer-legal a{color:#64748B;text-decoration:none;font-weight:800;}.site-footer-legal a:hover{color:#111827;text-decoration:underline}
-@media(max-width:900px){.site-footer-top{grid-template-columns:1fr 1fr}.site-footer-brand{grid-column:1/-1}}
-@media(max-width:560px){.site-footer-top{grid-template-columns:1fr}.site-footer-brand{grid-column:auto}.site-footer-bottom{align-items:flex-start;flex-direction:column}.site-footer-legal{justify-content:flex-start;flex-wrap:wrap;gap:12px}}
+.site-footer-support .support-email{white-space:normal}.site-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px}.site-footer-legal{display:flex;align-items:center;gap:8px;justify-content:flex-end;white-space:nowrap}.site-footer-legal a{color:#64748B;text-decoration:none;font-weight:800;}.site-footer-legal a:hover{color:#111827;text-decoration:underline}.site-footer-legal span{color:#94a3b8}
+@media(max-width:1100px){.site-footer-top{grid-template-columns:repeat(2,minmax(0,1fr))}.site-footer-brand{grid-column:1/-1}}
+@media(max-width:560px){.nav-inner{gap:8px}.site-logo{font-size:20px}.nav-search input{width:110px;font-size:12px}.nav-divider{height:20px}.site-footer-top{grid-template-columns:1fr}.site-footer-brand{grid-column:auto}.site-footer-bottom{align-items:flex-start;flex-direction:column}.site-footer-legal{justify-content:flex-start;flex-wrap:wrap;gap:8px}}
 
 /* View All buttons: centered, subtle entrance + hover animation */
 .section-action{display:flex;justify-content:center;align-items:center;margin-top:28px;width:100%}
@@ -40,11 +84,24 @@
 /* Final footer row alignment: keep Explore, Legal, Help and Support on one desktop row. */
 .site-footer-top{grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr))}
 .site-footer-top>.site-footer-col{min-width:0}.site-footer-top>.site-footer-col:nth-child(3) a{color:#64748B}
-.site-footer-support .support-email{white-space:nowrap;overflow-wrap:normal}
+/* The email stays on one line where it fits, which is what keeps Explore,
+   Legal, Help and Support on a single desktop row. But the address itself is
+   205px of unbroken text, and inside a 1fr grid column it pushed the page 13px
+   wider than the viewport at 1100px - a horizontal scrollbar on the whole site.
+   min-width:0 lets the grid column shrink below its content, and the address
+   wraps at the @ rather than overflowing. */
+.site-footer-support .support-email{white-space:nowrap;overflow-wrap:normal;min-width:0;max-width:100%}
+@media(max-width:1180px){.site-footer-support .support-email{white-space:normal;overflow-wrap:anywhere}}
 .site-footer{padding-top:30px;padding-bottom:18px}
 /* Blog article positioning only: center the article column without changing its content. */
 .article-shell{width:min(820px,calc(100% - 32px));margin:0 auto;padding:68px 0}
 @media(max-width:560px){.article-shell{width:min(100% - 22px,820px);padding:52px 0}}
+
+/* Prominent link to the primary tool a blog post is about, shown right under the header. */
+.article-tool-cta{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:10px 16px;border:1px solid var(--border);border-radius:12px;background:var(--soft);font-size:14.5px;font-weight:600;color:var(--text);transition:border-color .18s,background .18s}
+.article-tool-cta:hover{border-color:var(--black)}
+.article-tool-cta strong{font-weight:800;color:var(--black)}
+.article-tool-cta .article-tool-cta__go{color:var(--black);font-weight:800}
 
 /* Ad placement placeholder used by blog articles; actual AdSense markup is injected at build time. */
 .article-ad-slot{min-height:76px;margin:18px 0;display:flex;align-items:center;justify-content:center}
@@ -59,9 +116,8 @@
 .related-card h3{font-size:14.5px;color:var(--black);margin:0 0 5px;font-weight:900}
 .related-card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.6}
 
-
 /* Landing-only animated hero and live stats inspired by modern productivity-tool homepages. */
-.hero-enhanced{padding:72px 0 64px;overflow:hidden}
+.hero-enhanced{padding:46px 0 44px;overflow:hidden}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);align-items:center;gap:36px}
 .hero-enhanced .hero-content{max-width:760px}
 .hero-enhanced h1{max-width:760px}
@@ -74,12 +130,16 @@
 .hero-word.hero-word-everything{background:#1D4ED8!important;color:#fff}
 .hero-word.hero-word-everything .hero-word-text{font-size:.72em}
 .hero-word.hero-word-work{background:#7C3AED!important;color:#fff}
+.hero-word.hero-word-business{background:#EA580C!important;color:#fff}
+.hero-word.hero-word-business .hero-word-text{font-size:.9em}
+.hero-word.hero-word-education{background:#DC2626!important;color:#fff}
+.hero-word.hero-word-education .hero-word-text{font-size:.8em}
 .hero-visual{position:relative;min-height:330px;display:grid;place-items:center;isolation:isolate}
 .hero-glow{position:absolute;width:300px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(250,204,21,.24),rgba(250,204,21,0) 70%);filter:blur(4px);animation:heroGlow 4s ease-in-out infinite}
 .hero-device{position:relative;width:250px;height:170px;transform:perspective(700px) rotateX(7deg);animation:heroFloat 4.5s ease-in-out infinite;z-index:2}
-.hero-device-screen{position:absolute;left:25px;top:10px;width:200px;height:125px;border:7px solid #0f172a;border-radius:14px;background:linear-gradient(145deg,#ffffff,#f1f5f9);box-shadow:0 18px 35px rgba(15,23,42,.18);padding:24px 20px}
+.hero-device-screen{position:absolute;left:25px;top:10px;width:200px;height:125px;border:7px solid #0f172a;border-radius:14px;background:linear-gradient(145deg,#ffffff,#f1f5f9);box-shadow:0 18px 35px rgba(15,23,42,.18);padding:18px 20px 24px}
 .hero-screen-dot{display:block;width:10px;height:10px;border-radius:50%;background:#facc15;margin-bottom:16px;box-shadow:20px 0 #38bdf8,40px 0 #a855f7}
-.hero-screen-line{display:block;height:9px;width:100%;border-radius:999px;background:#dbeafe;margin:9px 0}.hero-screen-line.short{width:64%;background:#e5e7eb}.hero-screen-button{display:block;width:68px;height:22px;border-radius:999px;background:#facc15;margin-top:14px}
+.hero-screen-line{display:block;height:9px;width:100%;border-radius:999px;background:#dbeafe;margin:9px 0}.hero-screen-line.short{width:64%;background:#e5e7eb}.hero-screen-button{display:block;width:68px;height:22px;border-radius:999px;background:#facc15;margin-top:8px}
 .hero-device-base{position:absolute;left:0;bottom:8px;width:250px;height:16px;border-radius:50% 50% 9px 9px;background:#0f172a;box-shadow:0 8px 0 -2px #cbd5e1}
 .hero-float{position:absolute;z-index:3;width:54px;height:54px;display:grid;place-items:center;padding:9px;border:1px solid rgba(255,255,255,.9);border-radius:16px;background:rgba(255,255,255,.92);box-shadow:0 12px 30px rgba(15,23,42,.12);backdrop-filter:blur(10px)}.hero-float svg{width:34px;height:34px;display:block}
 .hero-float-a{left:8%;top:18%;animation:heroFloatA 4.2s ease-in-out infinite}.hero-float-b{right:6%;top:10%;animation:heroFloatB 4.8s ease-in-out infinite}.hero-float-c{left:6%;bottom:15%;animation:heroFloatB 5.2s ease-in-out infinite reverse}.hero-float-d{right:7%;bottom:13%;animation:heroFloatA 4.6s ease-in-out infinite reverse}
@@ -88,29 +148,129 @@
 @keyframes heroFloatB{0%,100%{transform:translate3d(0,0,0) rotate(2deg)}50%{transform:translate3d(0,9px,0) rotate(-2deg)}}
 @keyframes heroGlow{0%,100%{transform:scale(.96);opacity:.72}50%{transform:scale(1.08);opacity:1}}
 .tool-stats-section{padding:0 0 8px;background:#fff}
-.tool-stats-band{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:0;padding:18px 24px;border-radius:16px;background:#f0f7ff;box-shadow:inset 0 0 0 1px rgba(59,130,246,.04)}
-.tool-stat{display:flex;align-items:center;justify-content:center;gap:18px;min-height:74px;padding:0 20px;border-right:1px solid #cbd5e1}.tool-stat:last-child{border-right:0}.tool-stat strong{font-size:48px;line-height:1;font-weight:900;letter-spacing:-2px;color:#2583d6;min-width:2.6ch;text-align:right}.tool-stat span{font-size:14px;line-height:1.35;color:#334155}.tool-stat-utilities{gap:12px}.tool-stat-utilities strong{font-size:48px;color:#2583d6}.tool-stat-utilities span{font-size:16px;color:#111827;font-weight:700}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr}.hero-enhanced .hero-content{max-width:820px}.hero-visual{min-height:280px;order:2}.tool-stats-band{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}.tool-stat:nth-child(2){border-right:0}.tool-stat:nth-child(-n+2){border-bottom:1px solid #cbd5e1}.tool-stat{padding:10px 16px}}
-@media(max-width:560px){.hero-enhanced{padding:50px 0 44px}.hero-visual{min-height:235px}.hero-device{transform:scale(.82) perspective(700px) rotateX(7deg)}.hero-float{width:46px;height:46px;padding:7px}.hero-float svg{width:29px;height:29px}.tool-stats-section{padding-bottom:4px}.tool-stats-band{grid-template-columns:1fr;padding:8px 14px}.tool-stat{border-right:0!important;border-bottom:1px solid #cbd5e1!important;justify-content:flex-start;padding:14px 8px}.tool-stat:last-child{border-bottom:0!important}.tool-stat strong{font-size:40px}}
 @media(prefers-reduced-motion:reduce){.hero-device,.hero-glow,.hero-float,.hero-word{animation:none!important;transition:none!important}.hero-word{opacity:1!important;transform:none!important}}
 
 /* Requested final landing/form color corrections. */
 .feedback-form input::placeholder,.feedback-form textarea::placeholder{color:#7B8491;opacity:1}
+  /* #7B8491 measured 3.78:1 on white, under the 4.5:1 placeholder text needs.
+     --muted-strong (#475569) is 7.39:1 and is an existing token, so this adds no
+     new colour. Only the two text inputs are affected: the textarea is
+     overridden to #6B7280 just below, and the select has no placeholder. */
+  .feedback-form input::placeholder{color:var(--muted-strong)}
 .feedback-form textarea::placeholder{color:#6B7280}
 @media(max-width:560px){.tool-stat-utilities strong{font-size:40px}.tool-stat-utilities span{font-size:14px}}
 
+/* ==========================================================================
+ * Statistics cards - three frosted-glass panels joined by one continuous wave.
+ *
+ * The cards are translucent light panels sitting on a soft blue backdrop, with
+ * DARK navy values, and each category's 3D icon on the RIGHT - matching the
+ * reference. They are not saturated colour blocks: --tint only tints the icon and
+ * the hairline edge, because a fill strong enough to identify a category by
+ * colour alone would put white-on-colour text at 2.4-3.9:1 and fail AA.
+ *
+ * Contrast is measured against the composited card surface, not against white:
+ * the panel is 62% white over a #eef4fb section, which composites to #F9FBFD, so
+ * the navy value reads 12.4:1 and the label 6.9:1.
+ *
+ * --tint is written inline by index.html, one per card.
+ * ========================================================================== */
+.tool-stats-section{
+  /* The page background stays plain white. Only the component itself is glass -
+     no gradient, illustration or tinted backdrop is added to the section. */
+  padding:16px 0 22px;background:#fff;
+}
+/* Layout wrapper for the three statistics cards.
+
+   The light-blue framing has been removed: the `1px solid rgba(148,178,220,.30)`
+   border that outlined the whole component, and the light-blue
+   `rgba(226,238,252,.58)` tint that filled it. Together they read as a blue
+   outline surrounding - and sitting behind - the three cards. Neither renders
+   any more, so the container contributes no colour of its own and the cards sit
+   directly on the white landing page.
+
+   The border is kept as `transparent` rather than deleted outright. The band is
+   `*{box-sizing:border-box}` with `height:auto`, so dropping the 1px border
+   gives its 2px back to the grid: the band went 146px -> 144px tall and each card
+   went 366px -> 366.67px wide. A transparent border holds the box model exactly
+   as it was, so size and layout are byte-identical while rendering nothing.
+
+   The three `.tool-stat` cards are untouched: same glass fill, same 1px tinted
+   hairline border, same inset highlight, same size, same hover lift. They keep
+   their own edge against white without needing a backing panel. */
+.tool-stats-band{
+  position:relative;isolation:isolate;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;gap:14px;
+  padding:16px;border-radius:24px;
+  border:1px solid transparent;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95);
+  overflow:hidden;
+}
+.tool-stat{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  /* Sized down ~10% as requested. Only the card's own box and its internal
+     scale changed: the band padding (16px), the gap between cards (14px), the
+     flex gap (12px) and the text gap (4px) are all untouched, and the width is
+     set by the band's 3-column grid, so every card keeps its exact position and
+     the row still spans the container identically. */
+  min-height:100px;padding:18px 16px;
+  border-radius:14px;overflow:visible;
+  /* the frosted card: translucent white over the outer panel, a hairline top
+     highlight, and a tinted edge keyed to the card's category colour.
+     The fill is opaque enough that the outer panel's tint does not read through
+     the card as a coloured box - at .78/.52 the outer panel showed through and
+     each card picked up a tint across its whole face. */
+  background:linear-gradient(150deg,rgba(255,255,255,.92),rgba(255,255,255,.80));
+  border:1px solid color-mix(in srgb,var(--tint) 30%,rgba(255,255,255,.9));
+  /* Outer drop shadows removed - see .tool-stats-band. The inset highlight stays
+     because it is the glass edge, and it casts nothing onto the page. */
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.tool-stat:hover{
+  transform:translateY(-3px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,1);
+}
+/* The icon sits on the right, as in the reference, and above the wave (z-index
+   3) so nothing can clip or cut through it. */
+.tool-stat__icon{
+  position:relative;z-index:3;
+  flex:0 0 auto;width:46px;height:46px;order:2;
+  filter:drop-shadow(0 5px 9px rgba(30,64,175,.24));
+}
+/* The text sits above the wave for the same reason. */
+.tool-stat__body{position:relative;z-index:3;display:flex;flex-direction:column;gap:4px;min-width:0;order:1}
+.tool-stat strong{
+  font-size:29px;line-height:1.05;font-weight:900;letter-spacing:-.6px;
+  color:#0f2f6b;
+}
+.tool-stat span{
+  font-size:11.5px;line-height:1.25;font-weight:600;
+  color:#41587f;
+}
+.stat-sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+@media(max-width:900px){
+  .tool-stats-band{gap:10px;padding:12px;border-radius:20px}
+  .tool-stat{min-height:93px;padding:15px 13px}
+  .tool-stat strong{font-size:22px}
+  .tool-stat span{font-size:11px}
+  .tool-stat__icon{width:38px;height:38px}
+}
+@media(max-width:560px){
+  .tool-stats-band{grid-template-columns:1fr;gap:10px;padding:10px}
+  .tool-stat{min-height:0;padding:13px 15px 16px}
+  .tool-stat strong{font-size:24px}
+  .tool-stat__icon{width:42px;height:42px}
+}
+
 /* Landing page final overrides (moved out of index.html inline <style> to remove duplicate/conflicting rules). */
-.tool-stats-band{padding:26px 30px;min-height:96px}
-.tool-stat{min-height:84px}
-.tool-stat strong{font-size:54px}
 .tool-stats-band .tool-stat strong{animation:statNumberFloat 3.8s ease-in-out infinite}
 @keyframes statNumberFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
 .stat-live-pulse{animation:statLivePulse .45s ease!important}
 @keyframes statLivePulse{0%{transform:translateY(2px);opacity:.72}50%{transform:translateY(-3px);opacity:1}100%{transform:translateY(0);opacity:1}}
-@media(max-width:560px){.tool-stats-band{padding:18px 14px;min-height:0}.tool-stat{min-height:74px}.tool-stat strong{font-size:40px}}
-.tool-stat-utilities{gap:18px}
-.tool-stat-utilities strong{font-size:48px;line-height:1;font-weight:900;letter-spacing:-2px;color:#2583d6;min-width:2.6ch;text-align:right}
-.tool-stat-utilities span{font-size:14px;line-height:1.35;color:#334155;font-weight:400}
 .tool-stat-utilities .utility-free{font-size:inherit;color:inherit;font-weight:inherit}
 .hero-cta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0 10px}
 .hero-cta a{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:800;font-size:14px;transition:transform .2s ease,box-shadow .2s ease}
@@ -119,20 +279,20 @@
 .hero-cta a:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(15,23,42,.12)}
 
 /* =========================================================
-   THEME UPDATE — cohesive black / green / purple / blue /
+   THEME UPDATE ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â cohesive black / green / purple / blue /
    white / yellow system, layered on top of the existing
-   styles. The site logo (.site-logo, .site-logo-domain,
-   .site-footer-logo) is intentionally untouched below.
+   styles. The .online badge uses a dark surface in light mode
+   and a yellow surface in dark mode for readable text contrast.
 ========================================================= */
 
-:root{--green:#16A34A;--purple:#7C3AED;--blue:#1D4ED8;--white:#ffffff}
+:root{--green:#16A34A;--green-ink:#15803D;--purple:#7C3AED;--blue:#1D4ED8;--white:#ffffff}
 
 /* Section identity: each content section gets one accent from
    the palette on its kicker pill, so a visitor can tell sections
    apart at a glance while the hero kicker keeps its original yellow. */
 #tools .kicker{background:var(--blue);color:#fff}
 #blog .kicker{background:var(--purple);color:#fff}
-#resources .kicker{background:var(--green);color:#fff}
+#resources .kicker{background:var(--green-ink);color:#fff}
 #help .kicker{background:var(--black);color:#fff}
 
 /* Hero secondary actions: subtle colored hover state instead of a flat gray hover,
@@ -145,18 +305,2030 @@
 .help-card{border-top:3px solid var(--blue)}
 .help-card:nth-child(2){border-top-color:var(--purple)}
 .help-card:nth-child(3){border-top-color:var(--green)}
-.resource-card{border-top:3px solid var(--green)}
-.resource-card:nth-child(2){border-top-color:var(--blue)}
-.resource-card:nth-child(3){border-top-color:var(--purple)}
 
 /* Footer link columns: each column gets its own hover accent (brand/logo left untouched). */
-.site-footer-top>.site-footer-col:nth-child(2) a:hover{color:var(--blue)}
-.site-footer-top>.site-footer-col:nth-child(3) a:hover{color:var(--purple)}
-.site-footer-top>.site-footer-col:nth-child(4) a:hover{color:var(--green)}
-.site-footer-support a:hover,.site-footer-support .support-email:hover{color:var(--black)}
+.site-footer-top>.site-footer-col:nth-child(2) a:hover{color:#000000}
+.site-footer-top>.site-footer-col:nth-child(3) a:hover{color:#000000}
+.site-footer-top>.site-footer-col:nth-child(4) a:hover{color:#000000}
+.site-footer-support a:hover,.site-footer-support .support-email:hover{color:#000000}
 
 /* Feedback form: request-type select gets a colored focus ring distinct from search,
    so the two interactive systems (search vs. forms) read as related but separate. */
 .feedback-form select:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.16)}
 
 /* Search input: keep yellow as the single, consistent interaction accent site-wide. */
+
+/* Footer responsive grid ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â re-stated last so it actually applies.
+   The desktop .site-footer-top{grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr))}
+   rule above is declared at the same specificity as these, and a media query
+   adds none, so source order decides. Because the desktop rule came last, the
+   5-column layout was applied on every screen: on a 360-412px phone each column
+   was squeezed to ~45px, the non-wrapping footer logo (214px) overflowed the
+   63px brand cell, and it covered the top of the first "Home" link - making it
+   partly unclickable (WCAG 2.5.8 target size). These three re-statements sit
+   after it, so the intended 5 / 3 / 2 / 1 column behaviour now applies. The
+   74 tool pages already carry this ordering in their own inline CSS; this brings
+   assets/styles.css to the same state. */
+@media(max-width:1040px){.site-footer-top{grid-template-columns:repeat(3,minmax(0,1fr))}.site-footer-brand{grid-column:1/-1}.site-footer-description{max-width:560px}}
+@media(max-width:620px){.site-footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.site-footer-support{grid-column:1/-1}}
+@media(max-width:420px){.site-footer-top{grid-template-columns:1fr;gap:24px}.site-footer-brand{grid-column:auto}}
+
+/* On narrow phones the search input and logo need to shrink to keep the
+   controls within the viewport. */
+@media(max-width:460px){
+  .nav-inner{gap:8px}
+  .nav-search{flex:1 1 auto;min-width:0}
+  .nav-search input{width:100%;min-width:0}
+  .site-logo{font-size:20px;letter-spacing:-.5px}
+}
+@media(max-width:960px){
+  .nav-inner{display:grid;grid-template-columns:minmax(0,1fr) 38px 38px 42px;gap:8px 10px;padding:8px 0}
+  .site-logo{grid-column:1;grid-row:1}
+  .nav-links{display:none}
+  .nav-divider{display:none}
+  .nav-links.mobile-show{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;padding:16px;border-bottom:1px solid var(--border);flex-direction:column}
+  .nav-search{grid-column:1/-1;grid-row:2;width:100%;min-width:0}
+  .nav-search input{width:100%;min-width:0}
+  .theme-toggle{grid-column:2;grid-row:1}
+  .share-button{grid-column:3;grid-row:1}
+  .menu-btn{grid-column:4;grid-row:1;justify-self:end}
+  .nav-links.mobile-show{top:100%}
+}
+@media(max-width:360px){
+  /* Keep all four header controls on one row. The previous rule put the
+     theme toggle and share button on grid-row 3, which left them stranded on
+     a row of their own below the search field - visibly detached from the
+     logo and menu button. Restore the same 4-column track the 960px
+     breakpoint uses so the buttons sit inline, aligned and evenly spaced. */
+  .nav-inner{grid-template-columns:minmax(0,1fr) 38px 38px 38px;gap:6px 8px}
+  .site-logo{grid-column:1;grid-row:1}
+  .theme-toggle{grid-column:2;grid-row:1}
+  .share-button{grid-column:3;grid-row:1}
+  .menu-btn{grid-column:4;grid-row:1;justify-self:end}
+  .nav-search{grid-column:1/-1;grid-row:2}
+  .nav-divider{display:none}
+}
+
+/* Visually hidden but available to assistive technology. Used to give a
+   document a correct heading outline (an h1 followed by h3s) without adding
+   any visible text or moving a single pixel. */
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --black:#f8fafc;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --muted-strong:#cbd5e1;
+  --border:#334155;
+  --soft:#111827;
+  --shadow:0 12px 35px rgba(0,0,0,.32);
+}
+html[data-theme="dark"] body{background:#0b1220;color:var(--text)}
+html[data-theme="dark"] .navbar{background:rgba(11,18,32,.96);border-color:var(--border)}
+html[data-theme="dark"] .nav-links a{color:#e2e8f0}
+html[data-theme="dark"] .nav-links a:hover{color:#fff}
+html[data-theme="dark"] .nav-search input,
+html[data-theme="dark"] .search-panel,
+html[data-theme="dark"] .search-item,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .help-card,
+html[data-theme="dark"] .feedback-form,
+html[data-theme="dark"] .tool-filter,
+html[data-theme="dark"] .tools-search-field,
+html[data-theme="dark"] .resource-card,
+html[data-theme="dark"] .resource-chip,
+html[data-theme="dark"] .search-close{
+  background-color:#111c2e;
+  border-color:#334155;
+  color:#e2e8f0;
+}
+html[data-theme="dark"] .search-panel{box-shadow:0 12px 25px rgba(0,0,0,.35)}
+html[data-theme="dark"] .search-item strong,
+html[data-theme="dark"] .card h2,
+html[data-theme="dark"] .card h3,
+html[data-theme="dark"] .help-card h3,
+html[data-theme="dark"] .section-head h2,
+html[data-theme="dark"] .search-close{color:#f8fafc}
+html[data-theme="dark"] .card p,
+html[data-theme="dark"] .help-card p,
+html[data-theme="dark"] .search-item p{color:#cbd5e1}
+html[data-theme="dark"] .grid:has(> .card[data-cat])>.card[data-cat],
+html[data-theme="dark"] .grid:has(> .blog-card)>.blog-card{background:#111c2e}
+html[data-theme="dark"] .grid:has(> .card[data-cat])>.card[data-cat] h3,
+html[data-theme="dark"] .grid:has(> .blog-card)>.blog-card h2,
+html[data-theme="dark"] .grid:has(> .blog-card)>.blog-card h3{color:#f8fafc}
+html[data-theme="dark"] .grid:has(> .card[data-cat])>.card[data-cat] p,
+html[data-theme="dark"] .grid:has(> .blog-card)>.blog-card p{color:#cbd5e1}
+html[data-theme="dark"] .related-card{background-color:#111c2e;border-color:#334155}
+html[data-theme="dark"] .related-card:hover{border-color:#f8fafc;box-shadow:0 12px 35px rgba(0,0,0,.32)}
+html[data-theme="dark"] .related-card strong{color:#f8fafc}
+html[data-theme="dark"] .related-card span{color:#cbd5e1}
+html[data-theme="dark"] .nav-search input,
+html[data-theme="dark"] .tools-search-field input,
+html[data-theme="dark"] .feedback-form input,
+html[data-theme="dark"] .feedback-form select,
+html[data-theme="dark"] .feedback-form textarea{
+  background:#0b1220;
+  border-color:#475569;
+  color:#f8fafc;
+}
+html[data-theme="dark"] .hero{background:linear-gradient(180deg,#0b1220 0%,#111827 100%)}
+html[data-theme="dark"] .section.alt{background:#0f172a}
+html[data-theme="dark"] .section-head p{color:#94a3b8}
+html[data-theme="dark"] .site-footer{background:#0b1220;border-color:#334155}
+html[data-theme="dark"] .site-footer-col h3,
+
+html[data-theme="dark"] .site-footer-description,
+html[data-theme="dark"] .site-footer-col a,
+html[data-theme="dark"] .site-footer-bottom{color:#94a3b8}
+html[data-theme="dark"] .menu-btn,
+html[data-theme="dark"] .share-button{background:#111c2e;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .nav-links.mobile-show{background:#111c2e;border-color:#334155}
+html[data-theme="dark"] .theme-toggle{border-color:#64748b}
+html[data-theme="dark"] .tools-page-head{background:linear-gradient(115deg,#0b1220 0%,#111c2e 100%)}
+html[data-theme="dark"] .tools-page-head h1,
+html[data-theme="dark"] .tools-page-head p{color:#f8fafc}
+html[data-theme="dark"] .nav-action-status{background:#111c2e;border-color:#475569;color:#f8fafc}
+html[data-theme="dark"] .tool-stats-section{background:#0b1220}
+html[data-theme="dark"] .tool-stats-band{
+  background:linear-gradient(145deg,rgba(17,28,46,.72),rgba(15,23,42,.45));
+  border-color:#26364b;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+}
+html[data-theme="dark"] .tool-stat{
+  background:linear-gradient(145deg,#1a2940 0%,#111c2e 76%,#101a2b 100%);
+  border-color:color-mix(in srgb,var(--tint) 42%,#334155);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+html[data-theme="dark"] .tool-stat:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+html[data-theme="dark"] .tool-stat strong{color:#f8fafc}
+html[data-theme="dark"] .tool-stat span{color:#cbd5e1}
+html[data-theme="dark"] .tool-stat__icon{filter:drop-shadow(0 5px 9px rgba(0,0,0,.38))}
+html[data-theme="dark"] .tool-tabs-frame{
+  background:#111c2e;
+  border-color:#334155;
+  box-shadow:0 5px 16px rgba(0,0,0,.22);
+}
+html[data-theme="dark"] .tool-tab{color:#cbd5e1}
+html[data-theme="dark"] .tool-tab:hover{color:#f8fafc}
+html[data-theme="dark"] .tool-tab::before{background:rgba(148,163,184,.16)}
+html[data-theme="dark"] .tool-tab.is-active,
+html[data-theme="dark"] .tool-tabs__glider{background:#1D4ED8}
+html[data-theme="dark"] .tool-tab.is-active{color:#fff}
+html[data-theme="dark"] .tool-tab:focus-visible{outline-color:#93c5fd}
+
+/* ==========================================================================
+/* ==========================================================================
+ * "Our Most Popular Tools" category tabs.
+ *
+ * A thin light-grey rounded-rectangle outline holding one button per category, with
+ * the selected one filled in the brand blue - the arrangement in the reference design.
+ *
+ * WHY THE OUTLINE IS NOW A PLAIN BORDER
+ * -------------------------------------
+ * This used to use 45-degree chamfered corners, which needed a workaround: a CSS
+ * border is painted only along the four edges of the border box, so clip-path cuts
+ * the diagonals away and they end up bare. The outline was therefore drawn as a
+ * BACKGROUND - a filled frame clipped to an octagon, with the white bar inset by
+ * exactly 1px inside it - and lit with drop-shadow rather than box-shadow, because a
+ * box-shadow is painted from the rectangular border box and gets cut away with it.
+ * Three different --tw-cut values kept the diagonal line even, with a media query per
+ * breakpoint to reset them.
+ *
+ * The reference asks for rounded corners, and for a rounded rectangle a border just
+ * works. All of that is gone: clip-path, the cut variables, the inset-by-1px trick and
+ * the drop-shadow reasoning. Verified first that tool-tabs.js depends on none of it -
+ * it positions the marker from getBoundingClientRect deltas and reads no radius, cut
+ * or clip value.
+ *
+ * FRAME IS NOT THE SCROLLER
+ * The frame holds the outline and stays put; .tool-tabs does the scrolling. An
+ * absolutely positioned child of a scroller travels with the scrolled content, so a
+ * border drawn that way would slide off on a phone.
+ *
+ * FITTING TEN TABS IN 1160px
+ * -------------------------
+ * Ten labelled tabs need more than the desktop container at comfortable spacing,
+ * which once left the last two permanently clipped behind an invisible scroll - it
+ * read as a broken control rather than a scrollable one. The metrics below are
+ * tightened to the point where the whole set fits, verified by measurement. The bar
+ * keeps overflow-x:auto, so below that width it degrades to a normal horizontal
+ * scroller instead of wrapping, and the row always reads as one bar.
+ *
+ * COLOURS, MEASURED
+ *   active fill #1D4ED8 with white text ....  6.70:1
+ *   inactive label #1E3A8A on white ....... 10.37:1
+ *   focus ring #1D4ED8 on white ...........  6.70:1
+ * ========================================================================== */
+.tool-tabs-frame{
+  width:100%;
+  margin:0 0 26px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 5px 16px rgba(15,23,42,.06);
+}
+.tool-tabs{
+  position:relative;
+  display:flex;align-items:center;justify-content:safe center;gap:4px;
+  padding:10px 12px;
+  width:100%;
+  background:transparent;
+  overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.tool-tabs::-webkit-scrollbar{display:none}
+
+/* The sliding marker.
+ *
+ * One element rather than a background on each button, because a per-button
+ * background has nothing to animate between two positions. It is positioned with a
+ * transform (compositor-friendly) and only its width/height are also written, since
+ * consecutive tabs are different widths.
+ *
+ * is-placed is added by tool-tabs.js after the first measurement so the initial
+ * placement does not animate in from the left edge on first paint. */
+.tool-tabs__glider{
+  /* Hidden until the script has measured it; see .is-enhanced below. */
+  display:none;
+  position:absolute;
+  left:0;top:0;
+  width:0;height:0;
+  z-index:0;
+  border-radius:10px;
+  background:#1D4ED8;
+  pointer-events:none;
+  transition:transform .34s cubic-bezier(.4,0,.2,1),
+             width .34s cubic-bezier(.4,0,.2,1),
+             height .34s cubic-bezier(.4,0,.2,1);
+}
+
+/* Before the first measurement there is nothing to slide from, so hold it still
+ * rather than flashing a zero-width bar at the left edge. */
+.tool-tabs__glider:not(.is-placed){transition:none}
+
+.tool-tab{
+  position:relative;
+  z-index:1;
+  flex:0 0 auto;display:inline-flex;align-items:center;
+  padding:11px 14px;border:0;background:transparent;
+  font:inherit;font-size:14px;font-weight:600;line-height:1;
+  color:#1E3A8A;white-space:nowrap;cursor:pointer;
+  transition:color .22s ease;
+}
+
+/* The hover fill is painted by a ::before rather than by background-color on the
+   button, so the button itself is never painted and cannot clip its own focus ring. */
+.tool-tab::before{
+  content:"";
+  position:absolute;inset:0;
+  border-radius:10px;
+  background:#EFF6FF;
+  opacity:0;
+  transition:opacity .22s ease;
+}
+
+.tool-tab:hover::before{opacity:1}
+.tool-tab:hover{color:#1D4ED8}
+
+/* The ring sits OUTSIDE the tab (offset 2px), so on the selected tab it lands on the
+   white bar rather than on the blue fill - which is why the selected tab no longer
+   needs the white override this used to carry. A white ring here would be white on
+   white and invisible. */
+.tool-tab:focus-visible{outline:2px solid #1D4ED8;outline-offset:2px}
+
+/* The blue fill is the glider, not the button, so the selected tab only has to
+   change its text colour. */
+/* Selected tab WITHOUT script: the button paints itself, so the active category is
+   still visible even though the glider has never been measured. */
+.tool-tab.is-active{background:#1D4ED8;color:#fff}
+
+.tool-tab.is-active::before{opacity:0}
+.tool-tab.is-active:hover{color:#fff}
+
+/* Once the script opts in, the glider owns the fill and the button goes transparent -
+   that is what lets one element slide between tabs. Hover is suppressed there too, or
+   it would tint the marker blue-on-blue. */
+.tool-tabs.is-enhanced .tool-tab.is-active{background:transparent}
+.tool-tabs.is-enhanced .tool-tabs__glider{display:block}
+
+/* Motion is decoration here: the selection is already conveyed by aria-selected,
+   the text colour and the card grid below. Honour the OS setting. */
+@media(prefers-reduced-motion:reduce){
+  .tool-tabs__glider{transition:none}
+  .tool-tab, .tool-tab::before{transition:none}
+}
+
+/* The panel the tabs control. A visible focus ring is needed because it is now
+   programmatically focusable via tabindex, and the card links inside it are
+   replaced wholesale on every tab change. */
+#toolsGrid:focus-visible{outline:2px solid #1D4ED8;outline-offset:4px;border-radius:6px}
+
+/* #tools .section-head used to be overridden to flex-direction:column so its
+   tagline sat under the heading, while #blog, #resources and #help put theirs
+   in the right-hand column - the only heading/subtitle misalignment on the page.
+   Both reasons for the override are now gone: the tagline is a second child
+   again, so the flex row has something to distribute, and this section should
+   match the other four. Below 820px nothing changes, because
+   @media(max-width:820px){.section-head{display:block}} already stacks every
+   section identically. */
+@media(max-width:900px){
+  .tool-tabs-frame{margin-bottom:22px}
+  .tool-tabs{padding:8px 10px}
+  .tool-tab{padding:9px 12px;font-size:13px}
+}
+@media(max-width:560px){
+  .tool-tabs-frame{margin-bottom:16px}
+  .tool-tabs{padding:6px 8px;gap:2px}
+  .tool-tab{padding:8px 10px;font-size:12px}
+}
+/* ==========================================================================
+ * "Featured Tools" - 3D coverflow on a WHITE section.
+ *
+ * WHAT THIS IS NOT
+ * The brief for this section arrived as an image-generation prompt asking for
+ * "8k resolution", "photorealistic", "cinematic lighting" and a UI "displayed
+ * on a sleek monitor screen". Those describe a picture of a UI rather than a UI:
+ * a web page has no resolution and no lighting rig. This block implements the
+ * part that can actually be built - a perspective coverflow, a larger centre
+ * card with a blue rim glow, arrow navigation and lit icons - and deliberately
+ * claims nothing about photorealism or resolution, because the page cannot
+ * deliver either.
+ *
+ * LIGHT THEME DEFAULT
+ * These base colours keep the showcase aligned with the light theme. The dark
+ * theme has scoped overrides below so the section and its controls follow the
+ * same dark surfaces as the surrounding page.
+ *
+ * COLOURS ARE THE SITE'S OWN
+ * --blue #1D4ED8, --purple #7C3AED, --muted #64748b, --muted-strong #475569,
+ * --border #e5e7eb, --soft #f8fafc. The card surface deliberately matches the
+ * existing .card rule exactly (#fff, 1px --border, 0 4px 15px rgba(0,0,0,.025),
+ * 18px radius) so this section reads as part of the same site rather than as a
+ * separate widget bolted onto it.
+ *
+ * HOW THE 3D WORKS
+ * The viewport carries perspective, and each .cf-item is offset from the active
+ * index by a signed distance d. Cards are absolutely centred then translated on
+ * X, rotated on Y and pushed back on Z, so the stack genuinely recedes toward a
+ * vanishing point instead of merely scaling down. Only transform and opacity
+ * animate, both compositor-friendly.
+ *
+ * WHY NOT display:grid
+ * Grid items are positioned by the layout engine and cannot be rotated in 3D
+ * around a shared vanishing point. Absolute centring plus transform is what makes
+ * the coverflow effect possible, so the track is a positioned list.
+ *
+ * THE DECK IS NINE WIDE. .cf-item is 200px and paint() keeps up to four cards
+ * alive on each side of the active one, so the middle of the run reads 4 + 1 + 4.
+ * They overlap heavily on purpose - it is a deck receding toward the vanishing
+ * point - and the active card stays on top because paint() writes an inline
+ * z-index by depth. The borders and shadows are light enough that the overlap
+ * reads as depth rather than as cards piled on one another.
+ *
+ * The spacing is not set here either. assets/featured-coverflow.js solves the step
+ * from the measured frame width; see solve() and measureAndCorrect() there.
+ *
+ * Everything here is scoped to #featured. No other part of the page changes.
+ * ========================================================================== */
+#featured{
+  background:#fff;
+  color:var(--text);
+  padding:64px 0 70px;
+  overflow:hidden;
+}
+/* The tagline uses a readable neutral in the light theme. */
+#featured .section-tagline{color:#555555}
+
+/* The display line from the brief. A <p>, not the h2: "Featured Tools" stays the
+   real heading for search engines and screen readers. */
+#featured .cf-slogan{
+  display:block;
+  font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  background:linear-gradient(92deg,var(--blue) 0%,#2563eb 48%,var(--purple) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;                /* the gradient shows through */
+  margin:0 0 12px;
+}
+#featured .section-head{margin-bottom:34px}
+
+.coverflow{
+  position:relative;
+  /* SYMMETRIC top/bottom padding, and that is load-bearing rather than cosmetic.
+     .cf-nav is position:absolute;top:50%, so it centres on the PADDING BOX of this
+     wrapper - not on the deck. With padding 22px top and 30px bottom the wrapper's
+     midpoint sat (30-22)/2 = 4px BELOW the deck's, and both arrows measured 4px
+     low against the active card they are meant to be level with. Equal padding makes
+     the wrapper midpoint and the deck midpoint the same line, so top:50% is exact at
+     every width and needs no magic offset. */
+  padding:22px 0;
+}
+.cf-viewport{
+  position:relative;
+  height:276px;
+  perspective:1500px;
+  /* Above centre, so the stack recedes downward-and-out and reads as floating
+     rather than as a flat fan. */
+  perspective-origin:50% 42%;
+}
+.cf-track{position:relative;height:100%;margin:0;padding:0;list-style:none}
+.cf-item{
+  position:absolute;left:50%;top:50%;
+  /* Wider than the side cards need so the title and description fit on their own
+     lines instead of being overrun by the neighbouring card. */
+  width:192px;margin:0;
+  /* transform is written by the script from the measured step; this is the
+     no-JS resting value so the cards are still laid out sensibly. */
+  transform:translate(-50%,-50%);
+  transition:transform .42s cubic-bezier(.22,.61,.36,1),opacity .42s ease;
+  will-change:transform;
+  /* Below the active card. Needed because the cards are siblings in source
+     order, so without this a card that happens to come later in the markup
+     paints on top of whichever card the visitor is actually reading. */
+  z-index:1;
+}
+.cf-item[data-active="true"]{z-index:2}
+.cf-card{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  /* A REAL height, not height:100%.
+   *
+   * .cf-item is position:absolute with no height of its own, so a percentage
+   * height on the card resolves against an auto parent and is treated as auto -
+   * the card was always content-sized. That was invisible while every card
+   * carried its full text, but the non-active cards are now icon-only and
+   * collapsed to 61px beside a 249px active card.
+   *
+   * Nor is the content a fixed size: measured across the run the active card came
+   * out 231 / 249 / 249 / 268 / 249 / 249 / 249 / 249px, tracking the description,
+   * which clamps at three lines but wraps to two on some. 276px clears the
+   * measured maximum of 268px; a short description leaves a gap above the CTA,
+   * which margin-top:auto pins to the bottom, rather than a short card. */
+  height:262px;padding:19px 15px 17px;
+  border-radius:18px;
+  text-decoration:none;color:inherit;
+  /* Identical surface to the site's .card, so the two do not read as different
+     components. Opaque on purpose: a see-through surface let the neighbouring
+     card show through and the two bodies of text read as one smear. */
+  background:#fff;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.025);
+  overflow:hidden;
+  transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease;
+}
+/* the soft blue bloom sitting behind the active card */
+.cf-card__glow{
+  position:absolute;inset:-30% -18%;
+  pointer-events:none;
+  background:
+    radial-gradient(58% 46% at 50% 40%, rgba(29,78,216,.13), transparent 70%),
+    radial-gradient(52% 44% at 62% 74%, rgba(124,58,237,.10), transparent 72%);
+  opacity:0;
+  transition:opacity .42s ease;
+}
+.cf-card__icon{
+  position:relative;
+  display:grid;place-items:center;
+  width:62px;height:62px;margin-bottom:11px;
+  flex-shrink:0;
+  border-radius:17px;
+  background:#1D4ED8;
+  border:1px solid #1D4ED8;
+  color:#fff;
+}
+.cf-card__icon svg{width:50px;height:50px;display:block;filter:brightness(0) invert(1)}
+.cf-item:nth-child(9n + 1) .cf-card__icon{background-color:#1D4ED8;border-color:#1D4ED8}
+.cf-item:nth-child(9n + 2) .cf-card__icon{background-color:#EA580C;border-color:#EA580C}
+.cf-item:nth-child(9n + 3) .cf-card__icon{background-color:#16A34A;border-color:#16A34A}
+.cf-item:nth-child(9n + 4) .cf-card__icon{background-color:#DC2626;border-color:#DC2626}
+.cf-item:nth-child(9n + 5) .cf-card__icon{background-color:#7C3AED;border-color:#7C3AED}
+.cf-item:nth-child(9n + 6) .cf-card__icon{background-color:#000;border-color:#000}
+.cf-item:nth-child(9n + 7) .cf-card__icon{background-color:#1493B3;border-color:#1493B3}
+.cf-item:nth-child(9n + 8) .cf-card__icon{background-color:#11D6B2;border-color:#11D6B2}
+.cf-item:nth-child(9n + 9) .cf-card__icon{background-color:#D61149;border-color:#D61149}
+/* Remove colored tile backplates so the original glyphs remain legible as white line art. */
+#featuredFlow .cf-item[data-cat="AI Write"] .cf-card__icon svg>rect,
+#featuredFlow .cf-item[data-cat="Developer Tools"] .cf-card__icon svg>rect:first-of-type,
+#featuredFlow .cf-item[data-cat="SEO Tools"] .cf-card__icon svg>rect:first-of-type,
+#featuredFlow .cf-item[data-cat="Calculator Tools"] .cf-card__icon svg>rect:first-of-type,
+#featuredFlow .cf-item[data-cat="Converter Tools"] .cf-card__icon svg>rect:first-of-type{display:none}
+#featuredFlow .cf-item[data-cat="Image Tools"] .cf-card__icon svg>rect{display:none}
+#featuredFlow .cf-item[data-cat="PDF Tools"] .cf-card__icon svg>rect{fill:none;stroke:#fff;stroke-width:2.4}
+#featuredFlow .cf-item[data-cat="Utility Tools"] .cf-card__icon svg>path:first-of-type{display:none}
+.cf-card__cat{
+  position:relative;
+  font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:8px;
+}
+.cf-card__title{
+  position:relative;
+  font-size:15px;line-height:1.3;letter-spacing:-.15px;
+  color:#111827;margin:0 0 8px;
+}
+.cf-card__desc{
+  position:relative;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
+  font-size:11.5px;line-height:1.5;color:var(--muted);margin:0 0 12px;
+}
+.cf-card__cta{
+  position:relative;
+  display:inline-flex;align-items:center;gap:6px;margin-top:auto;
+  font-size:12px;font-weight:800;color:var(--blue);
+  transition:color .3s ease;
+}
+.cf-card__cta svg{transition:transform .3s ease}
+.cf-card:hover .cf-card__cta svg{transform:translateX(3px)}
+
+/* THE ACTIVE CARD
+   --cf-glow is written per item by the script (0 inactive, 1 active) so the rim
+   and the bloom strengthen together as a card arrives at centre. calc() inside
+   rgba() keeps it continuous rather than snapping between two states. */
+.cf-item{--cf-glow:0}
+.cf-card{
+  border-color:rgba(29,78,216,calc(.10 + .90 * var(--cf-glow)));
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.025),
+    0 0 0 3px rgba(29,78,216,calc(.16 * var(--cf-glow))),
+    0 14px 34px rgba(29,78,216,calc(.20 * var(--cf-glow)));
+}
+.cf-card__glow{opacity:var(--cf-glow)}
+.cf-item[data-active="true"] .cf-card__cta{color:#1e40af}
+
+/* THE SIDE CARDS
+   They are no longer faded - see the note in featured-coverflow.js - so the
+   difference between selected and unselected is carried by weight instead of
+   by transparency: a shallower shadow, a plain border, and no ring. On a white
+   page there is no colour available that is lighter than white, so depth has to
+   come from the border and the shadow rather than from a paler surface. */
+.cf-item:not([data-active="true"]) .cf-card{
+  border-color:var(--border);
+  box-shadow:0 2px 8px rgba(0,0,0,.03);
+}
+
+/* ICON-ONLY DECK for every non-active card.
+ *
+ * At four cards per side inside 1160px each card is roughly half-covered by its
+ * neighbour, so the visible strip is the outer part of the card - the icon and
+ * the first few letters of the title. Rendered as text that is "Online T" and
+ * "JSON Fo", which reads as broken rather than as depth, and it is what the eye
+ * lands on first.
+ *
+ * So the non-active cards drop their VISIBLE text and keep the icon. The text
+ * is still in the accessibility tree - see the clip note below - because these are
+ * links, and a link with no accessible name is a real failure, not a cosmetic
+ * one. The active card is untouched and keeps its full title, description and CTA.
+ *
+ * padding-top is zeroed and justify-content centred so the icon sits in the
+ * middle of the card rather than hanging under an empty gap where the text was. */
+.cf-item[data-depth]:not([data-active="true"]) .cf-card{
+  justify-content:center;
+  /* Side padding is kept: the card is a fixed 276px tall, so zeroing the vertical
+     padding would not shrink it, only push the icon off centre. */
+  padding-top:0;padding-bottom:0;
+}
+/* Visually hidden, NOT display:none.
+ *
+ * display:none takes the text out of the ACCESSIBILITY tree as well as the
+ * layout, which left every non-active card's link with no accessible name -
+ * the only other child is an aria-hidden SVG. axe-core reported it as a serious
+ * link-name violation, at 412px, where the fan is 1 + 1 + 1.
+ *
+ * Clipping instead keeps the name for screen readers while drawing nothing, which
+ * is the same pattern .cf-status already uses in this section. */
+.cf-item[data-depth]:not([data-active="true"]) .cf-card__cat,
+.cf-item[data-depth]:not([data-active="true"]) .cf-card__title,
+.cf-item[data-depth]:not([data-active="true"]) .cf-card__desc,
+.cf-item[data-depth]:not([data-active="true"]) .cf-card__cta{
+  position:absolute;width:1px;height:1px;
+  overflow:hidden;clip-path:inset(50%);white-space:nowrap;
+  margin:0;padding:0;border:0;
+}
+.cf-item[data-depth]:not([data-active="true"]) .cf-card__icon{margin-bottom:0}
+
+.cf-card:hover{border-color:var(--blue);transform:translateY(-3px)}
+.cf-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* Arrows */
+.cf-nav{
+  position:absolute;top:50%;z-index:6;
+  width:46px;height:46px;
+  display:grid;place-items:center;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--muted-strong);cursor:pointer;
+  transform:translateY(-50%);
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+  transition:background-color .22s ease,color .22s ease,border-color .22s ease;
+}
+.cf-nav--prev{left:-8px}
+.cf-nav--next{right:-8px}
+.cf-nav:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.cf-nav:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+/* Disabled rather than hidden at the ends, so the control does not appear and
+   disappear as the visitor moves - which reads as a glitch. */
+.cf-nav[disabled]{opacity:.4;cursor:default;background:#fff;border-color:var(--border);color:#94a3b8}
+.cf-nav[disabled]:hover{background:#fff;border-color:var(--border);color:#94a3b8}
+
+/* Dark-theme surfaces and content for the complete Featured Tools section. */
+html[data-theme="dark"] #featured{
+  background:#0f172a;
+  color:#e2e8f0;
+}
+html[data-theme="dark"] #featured .section-tagline{color:#cbd5e1}
+html[data-theme="dark"] #featured .cf-slogan{
+  background:linear-gradient(92deg,#93c5fd 0%,#c4b5fd 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+html[data-theme="dark"] #featured .cf-card{
+  background:#111c2e;
+  color:#e2e8f0;
+  border-color:#334155;
+  box-shadow:0 4px 16px rgba(0,0,0,.28),0 0 0 3px rgba(96,165,250,calc(.16 * var(--cf-glow))),0 14px 34px rgba(96,165,250,calc(.20 * var(--cf-glow)));
+}
+html[data-theme="dark"] #featured .cf-item:not([data-active="true"]) .cf-card{
+  border-color:#334155;
+  box-shadow:0 3px 12px rgba(0,0,0,.24);
+}
+html[data-theme="dark"] #featured .cf-card__cat,
+html[data-theme="dark"] #featured .cf-card__cta,
+html[data-theme="dark"] #featured .cf-item[data-active="true"] .cf-card__cta{
+  color:#93c5fd;
+}
+html[data-theme="dark"] #featured .cf-card__title{color:#f8fafc}
+html[data-theme="dark"] #featured .cf-card__desc{color:#cbd5e1}
+html[data-theme="dark"] #featured .cf-nav{
+  background:#1e293b;
+  border-color:#475569;
+  color:#e2e8f0;
+}
+html[data-theme="dark"] #featured .cf-nav:hover{
+  background:#1d4ed8;
+  border-color:#60a5fa;
+  color:#fff;
+}
+html[data-theme="dark"] #featured .cf-nav[disabled],
+html[data-theme="dark"] #featured .cf-nav[disabled]:hover{
+  background:#1e293b;
+  border-color:#334155;
+  color:#94a3b8;
+}
+html[data-theme="dark"] #featured .cf-card:focus-visible,
+html[data-theme="dark"] #featured .cf-nav:focus-visible{
+  outline-color:#93c5fd;
+}
+
+/* Carried for the live region announcing the current card. */
+.cf-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+@media(max-width:1100px){
+  .cf-nav--prev{left:0}
+  .cf-nav--next{right:0}
+}
+@media(max-width:860px){
+  #featured{padding:52px 0 58px}
+  .coverflow{padding:16px 0}
+  .cf-viewport{height:274px;perspective:1150px}
+  .cf-item{width:186px}
+  .cf-card{height:252px}
+  .cf-card{padding:18px 14px 16px}
+  .cf-card__icon{width:58px;height:58px}
+  .cf-card__icon svg{width:30px;height:30px}
+}
+@media(max-width:560px){
+  .cf-viewport{height:262px;perspective:950px}
+  .cf-item{width:168px}
+  .cf-card{height:240px}
+  .cf-nav{width:40px;height:40px}
+}
+
+/* Motion here is decoration: the selection is already conveyed by data-active,
+   the visible styling and the status region. Honour the OS setting. */
+@media(prefers-reduced-motion:reduce){
+  .cf-item,.cf-card,.cf-card__glow,.cf-card__icon{transition:none}
+  .cf-card:hover{transform:none}
+}
+
+/* ==========================================================================
+ * Homepage resource cards, now located inside Help & Feedback.
+ * ========================================================================== */
+.resource-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-auto-rows:minmax(120px,auto);
+  align-items:stretch;
+  gap:18px;
+}
+
+.resource-card{
+  --resource-accent:#1D4ED8;
+  --resource-ink:#1E3A8A;
+  position:relative;
+  display:flex;
+  align-items:stretch;
+  overflow:hidden;
+  border:1px solid #e5e7eb;
+  border-left:6px solid var(--resource-accent);
+  border-radius:24px;
+  background:#fff;
+  color:#111827;
+  text-decoration:none;
+  box-shadow:0 4px 16px rgba(17,24,39,.06);
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.resource-card:nth-child(2){--resource-accent:#EA580C;--resource-ink:#9A3412}
+.resource-card:nth-child(3){--resource-accent:#16A34A;--resource-ink:#14532D}
+.resource-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--resource-accent);
+  box-shadow:0 10px 24px rgba(17,24,39,.1);
+}
+.resource-card:focus-visible{outline:2px solid var(--resource-accent);outline-offset:3px}
+
+.resource-card__top{
+  display:none;
+}
+
+.resource-card__panel{
+  min-width:0;
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-content:stretch;align-items:center;
+  column-gap:12px;row-gap:3px;
+  padding:12px 14px 12px 20px;
+}
+.resource-card__title{
+  grid-column:1;
+  font-size:16px;font-weight:650;line-height:1.25;
+  letter-spacing:-.01em;
+  color:#111827;margin:0;
+}
+.resource-card__body{
+  grid-column:1;
+  display:block;
+  font-size:12px;line-height:1.35;
+  color:#6b7280;
+  margin:0;
+}
+.resource-card__cta{
+  grid-column:2;grid-row:1 / span 3;
+  display:flex;align-items:center;
+  min-height:34px;max-width:100%;padding:0 10px;
+  border:1px solid #e5e7eb;border-radius:10px;
+  background:#fff;
+  font-size:12px;font-weight:700;
+  white-space:nowrap;
+  color:#000;
+  transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease;
+}
+.resource-card:hover .resource-card__cta{border-color:#d1d5db;background:#fafafa}
+.resource-card__subtitle{
+  grid-column:1;
+  color:#6b7280;font-size:12px;font-weight:600;line-height:1.4;
+  white-space:nowrap;
+}
+#resources .resource-card:first-child .resource-card__subtitle{white-space:normal}
+
+/* One chip component, used as a <button> on /resources/. */
+.resource-chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 13px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#fff;
+  font-size:13px;font-weight:700;color:#111827;
+  text-decoration:none;cursor:pointer;
+  font-family:inherit;
+  transition:border-color .18s ease,background-color .18s ease,color .18s ease;
+}
+.resource-chip:hover{border-color:var(--blue);color:var(--blue)}
+.resource-chip:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.resource-chip__dot{
+  width:9px;height:9px;border-radius:50%;flex:0 0 auto;
+}
+.resource-chip__n{
+  font-size:11px;font-weight:800;
+  color:var(--muted-strong);
+  background:var(--soft);
+  border-radius:999px;
+  padding:1px 7px;
+}
+.resource-chip.is-active{
+  background:var(--blue);border-color:var(--blue);color:#fff;
+}
+.resource-chip.is-active .resource-chip__n{
+  background:rgba(255,255,255,.22);color:#fff;
+}
+
+/* ---------- the /resources/ index ---------- */
+.resource-index__h1{
+  font-size:clamp(34px,5vw,52px);
+  letter-spacing:-1.4px;
+  color:#111827;
+  margin:0 0 14px;
+}
+.resource-index__intro{
+  max-width:760px;
+  font-size:16px;line-height:1.7;color:var(--muted);
+  margin:0 0 30px;
+}
+.resource-index__search{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px 20px 14px;
+  margin-bottom:34px;
+}
+.resource-index__label{
+  display:block;
+  font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted-strong);margin-bottom:9px;
+}
+.resource-index__input{
+  width:100%;
+  font:inherit;font-size:15px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--soft);
+  color:#111827;
+}
+.resource-index__input::placeholder{color:#94a3b8}
+.resource-index__input:focus{
+  outline:none;
+  border-color:var(--blue);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(29,78,216,.12);
+}
+.resource-index__status{
+  margin:10px 0 0;
+  font-size:12.5px;color:var(--muted);
+  min-height:1.2em;
+}
+.resource-index__chips{
+  display:flex;flex-wrap:wrap;gap:9px;
+  margin-bottom:22px;
+}
+.resource-block{margin-bottom:44px}
+.resource-block__head{margin-bottom:16px}
+.resource-block__head h2{
+  font-size:24px;letter-spacing:-.6px;color:#111827;margin:0 0 5px;
+}
+.resource-block__head p{font-size:14px;color:var(--muted);margin:0}
+.resource-group{
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:#fff;
+  padding:18px 20px 6px;
+  margin-bottom:14px;
+}
+.resource-group[hidden]{display:none}
+.resource-group__head{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  margin-bottom:12px;
+}
+.resource-group__title{
+  display:flex;align-items:center;gap:9px;
+  font-size:16px;color:#111827;margin:0;
+}
+.resource-group__n{
+  font-size:11px;font-weight:800;
+  color:var(--muted-strong);
+  background:var(--soft);border:1px solid var(--border);
+  border-radius:999px;padding:2px 8px;
+}
+.resource-group__all{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12.5px;font-weight:800;color:var(--blue);text-decoration:none;
+  white-space:nowrap;
+}
+.resource-group__all:hover{text-decoration:underline}
+.resource-group__all:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.resource-items{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:2px 22px;
+}
+.resource-item{
+  display:flex;flex-direction:column;gap:2px;
+  padding:9px 10px;
+  border-radius:10px;
+  min-width:0;
+}
+.resource-item[hidden]{display:none}
+.resource-item:hover{background:var(--soft)}
+.resource-item__link{
+  font-size:14px;font-weight:800;color:#111827;text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.resource-item__link:hover{color:var(--blue);text-decoration:underline}
+.resource-item__link:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+.resource-item__desc{
+  font-size:12.5px;line-height:1.5;color:var(--muted);
+  overflow-wrap:anywhere;
+}
+.resource-items--guides{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* ---------- breakpoints ---------- */
+@media(max-width:1080px){
+  .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .resource-items--guides{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  .resource-grid{grid-template-columns:1fr}
+  .resource-items,.resource-items--guides{grid-template-columns:1fr}
+  .resource-index__intro{font-size:15px}
+  .resource-group{padding:16px 14px 4px}
+  .resource-group__head{flex-wrap:wrap;gap:6px}
+}
+@media(max-width:360px){
+  .resource-card__panel{grid-template-columns:minmax(0,1fr) auto}
+  .resource-card__cta{grid-column:2;grid-row:1 / span 3;min-height:30px}
+}
+/* ==========================================================================
+   Help & Feedback section - rebuilt to the supplied reference design.
+
+   Scope: #help on the homepage only. Every class below is used nowhere else in
+   the site (verified across all 274 HTML files), so nothing outside this section
+   can be affected. id="help" is preserved - it is the target of #help links from
+   ~150 pages.
+
+   Colours: tints are DERIVED from the existing tokens with color-mix() rather
+   than written as new hex values, so no new literal colour enters the project
+   and the tints stay tied to the palette if a token ever changes.
+
+   NO LONGER AN EXCEPTION. This section used to be the one place the subtitle
+   sat under the heading rather than in the shared right-hand column - the single
+   deliberate exception to N.42, kept because the #help reference asked for it. All
+   five sections now stack their subtitle on the left in --blue, so that exception is
+   gone and #help is no longer special. The rule below is kept only because this
+   paragraph is longer and wants a wider measure than the shared 570px.
+   ========================================================================== */
+
+/* --- breadcrumb ----------------------------------------------------------- */
+
+/* --- head: stacked subtitle, per the reference --------------------------- */
+.help-head{display:block;margin-bottom:26px}
+.help-head .section-head{display:block}
+/* Already left-aligned under the heading - it was N.42's one deliberate
+   exception. Now that all five sections stack, it is no longer an exception, so only
+   the colour needed changing. The 640px max-width stays: this paragraph is longer
+   than the other four. */
+#help .help-head p.help-sub{max-width:640px;margin:12px 0 0;font-size:16px;line-height:1.6;color:#555555}
+
+/* --- Help & Feedback kicker -------------------------------------------- */
+#help .help-kicker{
+  background:#000;
+  color:#fff;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.help-kicker__icon{width:15px;height:15px;flex:none;color:#fff}
+
+/* --- cards ---------------------------------------------------------------
+   --accent is the per-card colour, matching the existing border-top accents.
+   The chip is that accent tinted toward white, not a hardcoded pastel. */
+.help-card{
+  --accent:var(--blue);
+  --accent-ink:var(--accent);
+  --accent-tint:color-mix(in srgb, var(--accent) 12%, #fff);
+  position:relative;display:flex;flex-direction:column;
+  border:1px solid var(--border);border-top:3px solid var(--accent);
+  border-radius:16px;background:#fff;
+  /* Trimmed from 20px 22px 22px, then again from 16px 20px 18px. The cards
+     are the first thing the arrows flagged, and 34px of padding around 127px of
+     content was the bulk of the slack. */
+  padding:13px 17px 14px;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
+}
+.help-card:nth-child(2){--accent:var(--purple)}
+/* --green-ink (#15803D) rather than --green for the glyph: #16A34A on its own
+   12% tint measures 2.88:1, under the 3:1 a graphic needs. #15803D is the token
+   N.41 already introduced for exactly this on the green resource card, so no
+   new colour enters the project. Blue and purple clear 3:1 unaided (5.56, 4.77). */
+.help-card:nth-child(3){--accent:var(--green);--accent-ink:var(--green-ink)}
+.help-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.06)}
+
+/* The chip keeps the .icon-svg class for its 30px->26px sizing and its shared
+   geometry, but .icon-svg also carries `background:#fff!important`, which is
+   inherited by every icon on the site and cannot be beaten by specificity - only
+   by an equally-important declaration. Hence !important here, and the tinted
+   background is declared TWICE:
+     - background-color, which .icon-svg's `background` shorthand would reset
+     - background-image: none, for the same reason
+   Writing only `background:var(--accent-tint)` left every chip pure white while
+   the border and glyph took the accent correctly, because the shorthand lost to
+   the !important one. */
+.help-card__icon{
+  /* 52 -> 46 -> 42px. Still well above the 24px touch minimum, and the
+     reference chips are small relative to the card. */
+  width:42px;height:42px;border-radius:12px;margin-bottom:9px;
+  background-color:var(--accent-tint)!important;
+  background-image:none!important;
+  border:1px solid color-mix(in srgb, var(--accent-ink) 26%, #fff);
+  color:var(--accent-ink);
+}
+.help-card__icon svg{width:23px;height:23px}
+
+/* the check circle, top-right of the selected card. Hidden at rest and revealed
+   by aria-pressed, so the state is never shown without being real. */
+.help-card__check{
+  position:absolute;top:12px;right:12px;
+  width:22px;height:22px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--accent);color:#fff;
+  opacity:0;transform:scale(.7);
+  transition:opacity .18s ease,transform .18s ease;
+}
+.help-card__check svg{width:13px;height:13px}
+.help-card:has(.help-card__pick[aria-pressed="true"]) .help-card__check{opacity:1;transform:scale(1)}
+
+.help-card__title{margin-bottom:6px}
+.help-card__pick{
+  font:inherit;font-size:17px;font-weight:700;color:var(--text);
+  background:none;border:0;padding:0;margin:0;cursor:pointer;
+  text-align:left;border-radius:5px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.help-card:hover .help-card__pick{color:var(--accent)}
+.help-card__pick:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:5px}
+/* the chevron sits beside the title and is visible at rest, as in the reference */
+.help-card__pick::after{
+  content:"";width:7px;height:7px;flex:none;
+  border-right:2px solid currentColor;border-top:2px solid currentColor;
+  transform:rotate(45deg);margin-top:-4px;opacity:.5;
+}
+.help-card__pick[aria-pressed="true"]::after{opacity:1}
+
+/* selected: tinted fill + accent border, per the reference */
+.help-card:has(.help-card__pick[aria-pressed="true"]){
+  border-color:var(--accent);
+  background:color-mix(in srgb, var(--accent) 5%, #fff);
+  box-shadow:0 10px 26px rgba(0,0,0,.05);
+}
+.help-card p{margin:0;font-size:12.5px;line-height:1.6;
+  /* --muted-strong, not --muted. The selected card is filled with a 5% accent
+     tint (color-mix), and #64748b measures 4.39:1 on that tint - under the 4.5:1
+     needed at 13px/400. #475569 is an existing token and lands at 6.7:1 on the
+     tint, 7.39:1 on the plain white of an unselected card. axe-core caught this
+     only on the selected card; --muted is shared site-wide so it is not touched. */
+  color:var(--muted-strong)}
+
+/* --- form card ----------------------------------------------------------- */
+.feedback-form{
+  border:1px solid var(--border);border-radius:18px;background:#fff;
+  /* 26px 28px 24px -> 22px 24px 20px -> 18px 20px 16px. */
+  padding:18px 20px 16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.025);
+}
+.feedback-fields{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.feedback-form label{display:block;font-size:12px;font-weight:800;color:var(--text);margin-bottom:10px}
+.feedback-form input,.feedback-form textarea{width:100%;margin-top:6px;border:1px solid var(--border);border-radius:11px;padding:10px 12px;font:inherit;font-size:13px;color:var(--text);background:#fff;outline:none}
+/* rows=5 gave a 101px content box for two lines of placeholder. rows=4 and a
+   smaller min-height keep the field genuinely multi-line without the slack. */
+/* rows=5 gave a 101px content box for two lines of placeholder. rows=4 and a
+   smaller min-height keep the field genuinely multi-line without the slack. */
+.feedback-form textarea{resize:vertical;min-height:76px}
+
+/* The request type controls the message-field and submit-button colors.
+ *
+ * --help-accent is only ever set once one of the three real request types is
+ * chosen; "Choose" clears it. So the fallback is the resting state, and it is
+ * deliberately the neutral --border rather than --blue: with no request type
+ * picked there is nothing to colour-match, and a blue resting border there was
+ * just an unset variable wearing a colour it had not been given. The three
+ * request types keep their own colours unchanged - they set the property, so
+ * they never reach this fallback. */
+#help .feedback-form textarea{
+  border-color:var(--help-accent, var(--border));
+  background-color:color-mix(in srgb, var(--help-accent, var(--border)) 5%, #fff);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--help-accent, var(--border)) 12%, #fff);
+  transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease;
+}
+/* The two optional inputs match the field beside them, same neutral fallback. */
+#help .feedback-form input[name="toolName"],
+#help .feedback-form input[name="email"]{
+  border-color:var(--help-accent, var(--border));
+  background-color:color-mix(in srgb, var(--help-accent, var(--border)) 5%, #fff);
+  transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease;
+}
+/* and the panel edge echoes it, so the form reads as belonging to that choice */
+#help .feedback-form{
+  border-color:var(--help-accent, var(--border));
+  transition:border-color .18s ease;
+}
+
+/* --- select: custom chevron, no extra DOM ------------------------------- */
+.feedback-form .feedback-select{
+  -webkit-appearance:none;appearance:none;padding-right:38px;
+  border-color:var(--help-accent, var(--border));
+  background-color:color-mix(in srgb, var(--help-accent, var(--border)) 5%, #fff);
+  transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease;
+  /* The whole shorthand, not background-image on its own: the shared rule above
+     sets background:#fff, and that shorthand resets background-image to none.
+     A lone background-image was silently dropped, leaving no arrow at all. */
+  background:color-mix(in srgb, var(--help-accent, var(--border)) 5%, #fff) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%2364748B' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 14px center / 11px 7px;
+  cursor:pointer;
+}
+
+/* --- focus ring ----------------------------------------------------------
+   Inputs and the request-type select keep the purple focus ring. The message
+   field keeps the selected request type's accent.
+
+   The focus fallback is --purple, not --blue, for the same reason the resting
+   fallback is --border above: an unset --help-accent must not be able to dye a
+   control blue. Purple is this form's own deliberate focus colour (5.70:1 on
+   white, clear of the 3:1 a focus indicator needs), is neither of the three
+   request-type colours, and stays put whichever request type is selected. */
+.feedback-form input:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.18)}
+#help .feedback-form input[name="toolName"]:focus,
+#help .feedback-form input[name="email"]:focus{border-color:var(--help-accent, var(--purple))!important;box-shadow:0 0 0 3px color-mix(in srgb, var(--help-accent, var(--purple)) 18%, #fff)!important}
+#help .feedback-form .feedback-select:focus{border-color:var(--help-accent, var(--purple))!important;box-shadow:0 0 0 3px color-mix(in srgb, var(--help-accent, var(--purple)) 18%, #fff)!important}
+#help .feedback-form textarea:focus{border-color:var(--help-accent, var(--purple))!important;box-shadow:0 0 0 3px color-mix(in srgb, var(--help-accent, var(--purple)) 18%, #fff)!important}
+/* Request-type select keeps a focus ring distinct from search, so the two
+   interactive systems (search vs. forms) read as related but separate. */
+#help .feedback-form select:focus{border-color:var(--help-accent, var(--purple))!important;box-shadow:0 0 0 3px color-mix(in srgb, var(--help-accent, var(--purple)) 18%, #fff)!important}
+
+/* --- required pill + live counter ---------------------------------------- */
+.feedback-req{display:inline-block;vertical-align:middle;margin-left:7px;padding:2px 8px;border-radius:999px;background:var(--soft);border:1px solid var(--border);font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-strong);line-height:1.5}
+.feedback-count{display:block;margin-top:6px;font-size:12px;font-weight:700;color:var(--muted)}
+.feedback-count.is-pending{color:var(--muted)}
+.feedback-count.is-ok{color:var(--green-ink)}
+
+/* --- actions: arrow in the button, lock by the status -------------------- */
+.feedback-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.feedback-actions button{
+  display:inline-flex;align-items:center;gap:10px;
+  border:0;border-radius:12px;background:var(--yellow);color:#111827;
+  padding:11px 16px;font-weight:900;font-size:13.5px;cursor:pointer;
+  transition:transform .14s ease,box-shadow .14s ease;
+}
+#help .feedback-actions button{
+  background:var(--help-accent, var(--blue));
+  color:var(--help-accent-ink, #fff);
+  transition:transform .14s ease,box-shadow .14s ease,background-color .18s ease;
+}
+.feedback-actions button:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 8px 18px rgba(250,204,21,.42)}
+#help .feedback-actions button:hover:not(:disabled){box-shadow:0 8px 18px color-mix(in srgb, var(--help-accent, var(--blue)) 34%, transparent)}
+.feedback-actions button:active:not(:disabled){transform:translateY(0);box-shadow:none}
+.feedback-actions button:disabled{opacity:.6;cursor:not-allowed}
+.feedback-actions button:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+#help .feedback-actions button:focus-visible{outline-color:var(--help-accent, var(--blue))}
+.feedback-actions__arrow{width:17px;height:17px;flex:none}
+.feedback-actions button:disabled .feedback-actions__arrow{opacity:.5}
+
+.form-status{margin:9px 0 0;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px}
+.form-status.success{color:#166534}
+.form-status.error{color:#b91c1c}
+.form-status__lock{width:14px;height:14px;flex:none}
+
+/* --- narrow ------------------------------------------------------------- */
+@media(max-width:820px){
+  .feedback-fields{grid-template-columns:1fr}
+  .feedback-form{padding:20px 18px 18px}
+}
+@media(max-width:560px){
+  .help-card__icon{width:42px;height:42px;margin-bottom:10px}
+  .help-card__icon svg{width:21px;height:21px}
+  .help-card__check{width:22px;height:22px;top:12px;right:12px}
+  .help-card__check svg{width:13px;height:13px}
+}
+
+/* --------------------------------------------------------------------------
+   #recent - "Recent Tools" chip strip
+
+   A thin band at the very top of the page: navbar, then this, then the hero. It was
+   first built between #featured and #blog and later moved here, at the top, because
+   that is where the reference puts it. Purely additive throughout - no existing
+   section was removed or renamed, and no URL was added, removed or renamed. Every
+   chip points at a tool that already existed.
+
+   NO BADGE, AND NO PANEL
+   The first version carried a yellow "EASY WORK TOOLS" badge above it, because the
+   first reference image showed one. The full-page reference showed neither the badge
+   nor a panel behind the chips - they sit straight on the page, and what had looked
+   like a tinted panel in the earlier crop was the chips' own pale fill. Both are
+   gone; the strip is now a flex row and nothing more, and the section overrides
+   .section's 68px of padding down to 14px so it stays a band.
+   The hero still has its own "EASY WORK TOOLS" kicker. Only #recent's was removed.
+
+   FIVE CHIPS, NOT FIVE LINKS TO NOWHERE
+   The reference image names Remove Objects Photo, Remove Background from Image,
+   TikTok Script Writer, AI Image Generator and Create PDF. Four of those five do
+   not exist on this site. Shipping the reference verbatim would have put four dead
+   links on the homepage, so the picks are the closest real equivalents - and the
+   one name that does exist, TikTok Script Writer, is used as-is. The substitution
+   is recorded in AUDIT-REPORT.md rather than left for someone to wonder about.
+   Note the substitutes are not exact: Image Background Color Tool sets a background
+   colour rather than removing one, and Social Media Image Resizer resizes rather
+   than generating. Each chip is named for what its tool actually does.
+
+   "RECENT" IS EDITORIAL
+   Nothing in this project measures popularity or recency - tools-manifest.json
+   carries no traffic, view or date field, and there is no working analytics - so
+   this is a hand-picked row, exactly like POPULAR_PICKS in popular-tools.mjs. The
+   word "Recent" in the heading is the requested wording; it is not a claim of a
+   measured ranking, and nothing on the page asserts one.
+
+   COLOURS - every figure below was MEASURED on the rendered page, not chosen
+   Every tint is color-mix() off the existing --blue token; no new hex appears.
+   Ratios were computed from the pixels the browser actually painted, not from the
+   mix expressions, so a mistyped percentage or an unresolved colour would show up:
+
+     chip text on chip fill ............  5.83:1   PASS  (AA body text needs 4.5)
+     "Recent Tools:" label on the page .. 17.85:1  PASS
+     chip border on chip fill ..........  3.23:1   PASS  (non-text needs 3)
+     chip border on the page behind ....  3.72:1   PASS
+     focus ring on chip fill ...........  4.96:1   PASS
+     focus ring on the page behind .....  6.32:1   PASS
+     hover: ink on the hovered fill ....  5.22:1   PASS
+
+   The two "page behind" rows are measured against WHITE. Earlier they were quoted
+   against the panel's 5%-blue wash, which painted behind the chips until the panel
+   was removed - so the border figure went from 3.44:1 up to 3.72:1. Taking the
+   panel away made the chips slightly easier to see, not harder; do not "correct"
+   these numbers back to the old ones.
+
+   THE FIRST PASS AT THIS FAILED, AND WHY IT IS RECORDED HERE
+   The border was originally a 34% mix, which measured 1.53:1 against the chip fill
+   and 1.62:1 against the panel - both well under 3:1. That is not a rounding miss:
+   the chip fill and the panel background differed by only 1.06:1, so the border was
+   the ONLY thing identifying the chip as an object at all, and at 1.5:1 it was not
+   doing that job. The mix was then SOLVED rather than nudged upward by eye -
+   color-mix() in srgb interpolates channels linearly, so the smallest percentage
+   clearing 3:1 against both surfaces can be computed. 70% is the first that passes;
+   72% is used, for headroom. The border is 2px rather than 1.5px because
+   Chrome snaps a fractional width to whole device pixels, so 1.5px painted as 1px
+   at dpr 1. The 1.4.11 ratios are about the colour, not the width.
+
+   A NOTE ON THE FIRST COMMENT WRITTEN FOR THIS BLOCK
+   It quoted contrast figures that had not been measured and described the border as
+   "a known sub-3:1 decorative border" - i.e. it excused a failure before finding out
+   whether there was one. Measuring showed both that the figures were wrong and that
+   the border really did fail. The order matters: an excuse written before the
+   measurement freezes a defect into the record as a decision.
+   -------------------------------------------------------------------------- */
+
+#recent{
+}
+/* The section is a band now, not a block of its own, so it does not inherit
+   .section's 68px of vertical padding. It sits between the navbar and the hero and
+   has to take as little room as possible. */
+#recent{padding:8px 0}
+.recent-strip{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  /* Lifted clear of the category rail below. .cat-viewport runs
+     margin:-42px -36px with padding:42px 36px so its cards' hover lift and
+     arrow buttons have room inside overflow:hidden, and that negative margin
+     leaves 42px of the viewport's own box hanging above its cards. The rail is
+     the next sibling in the DOM, so it paints over this strip and that empty
+     stretch of its box swallows clicks on the chips ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â measured with
+     elementFromPoint, which returned .cat-viewport for a chip's centre. Moving
+     the strip up by more than that 42px clears the chips out from under it, and
+     the hero above carries enough empty bottom padding to absorb the shift. */
+  transform:translateY(-44px);
+  /* nowrap, not wrap: the label holds its column and the CHIP LIST is the thing
+     that reflows. With wrap here the whole list drops below the label as one block
+     the moment the row runs out of room, which is what the first render did. */
+  flex-wrap:nowrap;
+  gap:8px;
+  /* No background, no border, no padding. The full-page reference shows the chips
+     sitting straight on the page - there is no panel behind them. What read as a
+     panel in the earlier crop was the chips' own pale fill. This element is now
+     purely the flex row that holds the label and the list together. */
+}
+.recent-strip__label{
+  flex:none;
+  margin:0;
+  font-size:15px;
+  line-height:1.2;
+  letter-spacing:-.2px;
+  color:var(--black);
+}
+.recent-chips{
+  /* flex:1 1 0 + min-width:0 is what lets this column shrink and wrap instead of
+     forcing the strip wider than its container. */
+  flex:1 1 0;
+  min-width:0;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+/* Per-chip colour, carried on the element as inline custom properties:
+     --rc       the exact colour from the matching .cat-card in index.html
+     --rc-tint  a 12% tint of it, used as the chip's fill
+     --rc-ink   the same hue deepened until it clears 5:1 on that fill
+     --rc-line  the mix that clears 3.2:1 on BOTH the fill and the white page
+   All four are solved per chip rather than picked: the outline has to clear 3:1
+   against two different surfaces, and for a light hue like Developer Tools' green no
+   tint can do it at all - tinting moves the outline further from the fill - so that
+   one is solved by darkening instead. The same inline-custom-property shape the
+   resource cards already use (--rc / --rc-ink), so it is a pattern on this site.
+
+   THE CHIPS ARE TINTED, NOT SOLID
+   The reference shows solid category colours with white text. Measured, white clears
+   4.5:1 on only three of the five: AI Write 6.70, SEO 4.83, Text 5.70. Image Tools is
+   3.56 and Developer Tools 3.30 - both short. Solid fills with white text would have
+   put sub-AA text on two of the five, so the exact hue is kept but carried by the
+   tint and the outline, with the chip text in a deepened shade of the same hue. */
+/* A solid box in the exact colour of a category card, with white text.
+     --rc   the exact --c1 of that card, inlined on the element
+   The same inline-custom-property shape the resource cards already use.
+
+   SOLID FILLS, AND TWO CHIPS THAT ARE BELOW AA - A DECISION, NOT AN OVERSIGHT
+   The chip text is 13px at weight 750, below the 18.66px-bold large-text threshold,
+   so the 4.5:1 minimum applies. White text on these fills measures:
+
+     #000000  21.00:1   PASS      #DC2626   4.83:1   PASS
+     #7C3AED   5.70:1   PASS      #EA580C   3.56:1   SHORT
+     #16A34A   3.30:1   SHORT
+
+   Orange and green are shipped short of AA because solid fills with white text were
+   asked for, in two separate references, and mid-tone orange and green have nowhere
+   near the luminance headroom for white text. Darkening them WOULD pass - #CC4D0A and
+   #12873D both clear 4.5:1 - but that stops them being the exact category colours,
+   which was the explicit instruction. So the exception is documented here and in
+   AUDIT-REPORT.md rather than hidden by a quiet adjustment.
+
+   NO BORDER
+   The 2px outline existed because a pale-tinted chip had no other edge. Against an
+   opaque fill it just rings the colour and reads heavier than the reference, so it is
+   gone and the boundary is the fill itself against the white page.
+
+   14px RADIUS, NOT A PILL
+   The reference shows rounded rectangles, not fully rounded pills. */
+.recent-chip{
+  display:inline-flex;
+  align-items:center;
+  min-height:32px;
+  padding:5px 9px;
+  border:0;
+  border-radius:14px;
+  background:var(--rc, #1D4ED8);
+  color:#fff;
+  box-shadow:0 3px 8px rgba(15,23,42,.18);
+  font-size:11px;
+  font-weight:750;
+  line-height:1.25;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+}
+.recent-chip:hover{
+  transform:translateY(-1px);
+  /* darken toward black rather than toward white: on a solid fill, lifting toward
+     white would wash the colour out instead of reading as a state change */
+  background:color-mix(in srgb, var(--rc, #1D4ED8) 88%, #000);
+  box-shadow:0 6px 14px rgba(15,23,42,.24);
+}
+.recent-chip:active{transform:translateY(0)}
+/* Focus indicator. --purple measures 4.96:1 against the chip fill, 5.28:1 against
+   the strip background and 5.70:1 against the white page, so the ring holds above
+   the 3:1 that WCAG 1.4.11 wants of a UI component boundary on every surface the
+   chip can sit on. Purple rather than --blue so the ring cannot be confused with
+   the border, which is itself a blue. */
+.recent-chip:focus-visible{
+  outline:3px solid var(--purple);
+  outline-offset:2px;
+}
+
+/* FITTING THE LABEL AND ALL FIVE CHIPS ON ONE LINE
+   Measured at 1440: strip inner 1108px, label 163px, label-to-list gap 24px, so the
+   list has 921px. Chips at 14px/20px padding came to 968px plus 44px of gaps - 91px
+   too wide. Padding alone cannot absorb that: 768px of the 968px is text, and even
+   0px padding leaves the row 812px + 44px of gaps, which only just fits and looks
+   wrong. Dropping the chip text to 13px - a size this site already uses for card
+   copy and the feedback labels - brings the text to about 713px, and 15px padding
+   brings the chips to about 863px, which fits with room to spare.
+   The arrangement is made safe rather than merely tight: the strip does not wrap, so
+   the label keeps its column, and the list is the flex item that reflows. Below 820px
+   the media query below turns the strip into a column, so nothing is ever forced to
+   overflow - the row gets taller instead. */
+
+/* --- narrow: the label stops being a side-by-side label ------------------- */
+@media(max-width:820px){
+  /* the label still leads on its own line once the row cannot hold it */
+  .recent-strip{flex-direction:column;align-items:flex-start;gap:6px}
+  .recent-strip__label{font-size:14px}
+}
+@media(max-width:560px){
+  .recent-strip__label{font-size:13px}
+  .recent-chips{width:100%;gap:5px}
+  /* Chips stop forcing their own width on a phone: long names wrap inside the pill
+     instead of pushing the row wider than the viewport. */
+  .recent-chip{white-space:normal;text-align:center;padding:4px 7px;font-size:11px}
+}
+
+/* --- HELP SECTION: light theme, matches site --------------------------- */
+#help{
+  padding:36px 0 28px;
+}
+#help .help-head{
+  margin-bottom:18px;
+}
+#help .resource-grid{
+  margin-bottom:16px;
+}
+#help .help-sub{
+  max-width:640px;
+  margin:8px 0 0;
+  font-size:15px;
+  line-height:1.5;
+  color:#555555;
+}
+#help .feedback-actions{
+  justify-content:flex-end;
+}
+@media(max-width:560px){
+  #help{padding:28px 0 20px}
+  #help .help-sub{font-size:14px}
+}
+
+/* Compact, horizontal tool cards with a repeating nine-color icon palette. */
+.grid:has(> .card[data-cat]){
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.grid:has(> .card[data-cat])>.card[data-cat]{
+  display:grid;
+  grid-template-columns:56px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  align-items:center;
+  column-gap:15px;
+  row-gap:4px;
+  min-height:112px;
+  padding:16px;
+  background:#fff;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] .card-top{
+  grid-column:1;
+  grid-row:1 / span 2;
+  align-items:center;
+  justify-content:center;
+  min-height:0;
+  margin:0;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] .icon{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  color:#fff;
+}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 1) .icon{background:#1D4ED8!important;border-color:#1D4ED8}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 2) .icon{background:#EA580C!important;border-color:#EA580C}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 3) .icon{background:#16A34A!important;border-color:#16A34A}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 4) .icon{background:#DC2626!important;border-color:#DC2626}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 5) .icon{background:#7C3AED!important;border-color:#7C3AED}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 6) .icon{background:#000!important;border-color:#000}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 7) .icon{background:#1493B3!important;border-color:#1493B3}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 8) .icon{background:#11D6B2!important;border-color:#11D6B2}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 9) .icon{background:#D61149!important;border-color:#D61149}
+.grid:has(> .card[data-cat])>.card[data-cat] .icon-svg svg{
+  width:30px;
+  height:30px;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] .icon-svg svg *{
+  fill:none!important;
+  stroke:#fff!important;
+  stroke-width:2.4px!important;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] .icon-svg svg>rect[x="6"][y="7"][width="36"][height="34"],
+.grid:has(> .card[data-cat])>.card[data-cat] .icon-svg svg>rect[x="6"][y="9"][width="36"][height="30"],
+.grid:has(> .card[data-cat])>.card[data-cat] .icon-svg svg>rect[x="5"][y="9"][width="38"][height="28"],
+.grid:has(> .card[data-cat])>.card[data-cat] .icon-svg svg>rect[x="6"][y="10"][width="36"][height="34"]{
+  display:none;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] h3{
+  grid-column:2;
+  grid-row:1;
+  align-self:end;
+  margin:0;
+  overflow:hidden;
+  color:#111827;
+  font-size:15px;
+  font-weight:800;
+  line-height:1.3;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] p{
+  grid-column:2;
+  grid-row:2;
+  align-self:start;
+  display:-webkit-box;
+  overflow:hidden;
+  margin:0;
+  color:#475569;
+  font-size:12px;
+  line-height:1.45;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.grid:has(> .card[data-cat])>.card[data-cat] .card-link{display:none}
+.grid:has(> .blog-card){
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.grid:has(> .blog-card)>.blog-card{
+  display:grid;
+  grid-template-columns:56px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  align-items:center;
+  column-gap:15px;
+  row-gap:4px;
+  min-height:112px;
+  padding:16px;
+  background:#fff;
+}
+.grid:has(> .blog-card)>.blog-card .card-top{
+  grid-column:1;
+  grid-row:1 / span 2;
+  align-items:center;
+  justify-content:center;
+  min-height:0;
+  margin:0;
+}
+.grid:has(> .blog-card)>.blog-card .icon{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  color:#fff;
+}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 1) .icon{background:#1D4ED8!important;border-color:#1D4ED8}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 2) .icon{background:#EA580C!important;border-color:#EA580C}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 3) .icon{background:#16A34A!important;border-color:#16A34A}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 4) .icon{background:#DC2626!important;border-color:#DC2626}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 5) .icon{background:#7C3AED!important;border-color:#7C3AED}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 6) .icon{background:#000!important;border-color:#000}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 7) .icon{background:#1493B3!important;border-color:#1493B3}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 8) .icon{background:#11D6B2!important;border-color:#11D6B2}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 9) .icon{background:#D61149!important;border-color:#D61149}
+.grid:has(> .blog-card)>.blog-card .icon-svg svg{width:30px;height:30px}
+.grid:has(> .blog-card)>.blog-card .icon-svg svg *{
+  fill:none!important;
+  stroke:#fff!important;
+  stroke-width:2.4px!important;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.grid:has(> .blog-card)>.blog-card .icon-svg svg>rect[x="6"][y="7"][width="36"][height="34"],
+.grid:has(> .blog-card)>.blog-card .icon-svg svg>rect[x="6"][y="9"][width="36"][height="30"],
+.grid:has(> .blog-card)>.blog-card .icon-svg svg>rect[x="5"][y="9"][width="38"][height="28"],
+.grid:has(> .blog-card)>.blog-card .icon-svg svg>rect[x="6"][y="10"][width="36"][height="34"]{
+  display:none;
+}
+.grid:has(> .blog-card)>.blog-card h2,
+.grid:has(> .blog-card)>.blog-card h3{
+  grid-column:2;
+  grid-row:1;
+  align-self:end;
+  margin:0;
+  overflow:hidden;
+  color:#111827;
+  font-size:15px;
+  font-weight:800;
+  line-height:1.3;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.grid:has(> .blog-card)>.blog-card p{
+  grid-column:2;
+  grid-row:2;
+  align-self:start;
+  display:-webkit-box;
+  overflow:hidden;
+  margin:0;
+  color:#475569;
+  font-size:12px;
+  line-height:1.45;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.grid:has(> .blog-card)>.blog-card .card-link{display:none}
+@media(max-width:900px){
+  .grid:has(> .card[data-cat]){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid:has(> .blog-card){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .grid:has(> .card[data-cat]){grid-template-columns:1fr}
+  .grid:has(> .card[data-cat])>.card[data-cat]{min-height:100px;padding:14px}
+  .grid:has(> .blog-card){grid-template-columns:1fr}
+  .grid:has(> .blog-card)>.blog-card{min-height:100px;padding:14px}
+}
+
+/* Keep logo suffix contrast consistent even on tool pages with local logo rules. */
+.site-logo{
+  color:#0f172a!important;
+}
+html[data-theme="dark"] .site-logo{
+  color:#fff!important;
+}
+.site-logo-domain{
+  background:#facc15!important;
+  color:#0f172a!important;
+  padding:2px 6px!important;
+  border-radius:4px!important;
+  top:-3px;
+}
+/* Keep shared homepage controls and Help & Feedback fully legible in dark mode. */
+html[data-theme="dark"] .theme-toggle{
+  background:#111c2e;
+  color:#facc15;
+}
+html[data-theme="dark"] .hero-search input,
+html[data-theme="dark"] .resource-index__input{
+  background:#0b1220;
+  border-color:#475569;
+  color:#f8fafc;
+}
+html[data-theme="dark"] .hero-search input::placeholder,
+html[data-theme="dark"] .resource-index__input::placeholder{
+  color:#94a3b8;
+  opacity:1;
+}
+html[data-theme="dark"] .hero-cta-secondary{
+  background:#111c2e;
+  border-color:#475569;
+  color:#e2e8f0;
+}
+html[data-theme="dark"] .hero-cta-secondary:hover{
+  background:#1e293b;
+}
+html[data-theme="dark"] .section-action .view-all{
+  background:#111c2e;
+  border-color:#475569;
+  color:#e2e8f0;
+}
+html[data-theme="dark"] .section-action .view-all:hover{
+  background:#1e293b;
+}
+html[data-theme="dark"] .resource-card__cta{
+  background:#0b1220;
+  border-color:#475569;
+  color:#e2e8f0;
+}
+html[data-theme="dark"] .resource-card:hover .resource-card__cta{
+  background:#1e293b;
+  border-color:#64748b;
+}
+html[data-theme="dark"] .resource-card__title{color:#f8fafc}
+html[data-theme="dark"] .resource-card__subtitle,
+html[data-theme="dark"] .resource-card__body{color:#cbd5e1}
+html[data-theme="dark"] #help .resource-card{
+  border-color:#334155;
+  border-left-color:var(--resource-accent);
+  box-shadow:0 4px 16px rgba(0,0,0,.24);
+}
+html[data-theme="dark"] #help .resource-card:first-child{--resource-accent:#60A5FA}
+html[data-theme="dark"] #help .resource-card:nth-child(2){--resource-accent:#FB923C}
+html[data-theme="dark"] #help .resource-card:nth-child(3){--resource-accent:#4ADE80}
+html[data-theme="dark"] #help .resource-card:hover{
+  border-color:#64748b;
+  border-left-color:var(--resource-accent);
+  box-shadow:0 10px 24px rgba(0,0,0,.32);
+}
+html[data-theme="dark"] .hero-device-screen{
+  border-color:#334155;
+  background:linear-gradient(145deg,#1e293b,#111827);
+  box-shadow:0 18px 35px rgba(0,0,0,.42);
+}
+html[data-theme="dark"] .hero-screen-line{background:#475569}
+html[data-theme="dark"] .hero-screen-line.short{background:#334155}
+html[data-theme="dark"] .hero-device-base{
+  background:#1e293b;
+  box-shadow:0 8px 0 -2px #334155;
+}
+html[data-theme="dark"] .hero-float{
+  background:#111c2e;
+  border-color:#475569;
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
+}
+html[data-theme="dark"] .hero-float-a svg rect{fill:#172554}
+html[data-theme="dark"] .hero-float-b svg rect{fill:#2e1065}
+html[data-theme="dark"] .hero-float-c svg rect{fill:#422006}
+html[data-theme="dark"] .hero-float-c svg path[fill="#fff"]{fill:#1e293b}
+html[data-theme="dark"] #help .feedback-form input,
+html[data-theme="dark"] #help .feedback-form select,
+html[data-theme="dark"] #help .feedback-form textarea{
+  background-color:#0b1220;
+  border-color:#475569;
+  color:#f8fafc;
+}
+html[data-theme="dark"] #help .feedback-form textarea{box-shadow:none}
+html[data-theme="dark"] #help .feedback-form .feedback-select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23CBD5E1' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  background-size:11px 7px;
+}
+html[data-theme="dark"] #help .feedback-form input::placeholder,
+html[data-theme="dark"] #help .feedback-form textarea::placeholder{
+  color:#cbd5e1;
+  opacity:1;
+}
+html[data-theme="dark"] #help .feedback-form input:focus,
+html[data-theme="dark"] #help .feedback-form select:focus,
+html[data-theme="dark"] #help .feedback-form textarea:focus{
+  border-color:#93c5fd!important;
+  box-shadow:0 0 0 3px rgba(147,197,253,.18)!important;
+}
+/* ==========================================================================
+ * DARK MODE - TOOL PAGE SURFACES
+ *
+ * The 268 content pages carry their own inline <style> blocks, written before
+ * a dark theme existed: they hard-code #fff surfaces, a white .tool-hero
+ * gradient and #0F172A headings. Those inline rules are single-class
+ * selectors, so every rule below is prefixed html[data-theme="dark"], which
+ * outranks them on specificity no matter where it appears in the cascade.
+ * One block here fixes all of them centrally.
+ *
+ * Variables defined originally in the content pages' inline :root {} are
+ * overridden when html[data-theme="dark"] is set by re-defining them here.
+ * ========================================================= */
+html[data-theme="dark"] {
+  --bg-main: #0b1220;
+  --bg-section: #0f172a;
+  --card-bg: #111c2e;
+  --card-hover: #162339;
+  --border: #334155;
+  --black: #f8fafc;
+  --text-main: #e2e8f0;
+  --text-gray: #94a3b8;
+  --text-muted: #cbd5e1;
+  --muted: #cbd5e1;
+  --primary: var(--black);
+  --primary-hover: #cbd5e1;
+  --reverse-primary: #e2e8f0;
+  --reverse-hover: #f8fafc;
+  --white: #0b1220;
+  --bg-color: var(--bg-main);
+  --accent-yellow: #facc15;
+  --accent-yellow-dark: #eab308;
+  --accent-yellow-light: rgba(250,204,21,.15);
+  --yellow: var(--accent-yellow);
+  --yellow-accent: #facc15;
+  --yellow-hover: #eab308;
+  --btn-dark: #f8fafc;
+  --shadow-small: 0 4px 15px rgba(0,0,0,.25);
+  --shadow: 0 12px 35px rgba(0,0,0,.32);
+  --shadow-large: 0 25px 60px rgba(0,0,0,.40);
+}
+/*
+ *  * Surfaces match the palette the shared sheet already uses:
+ *   page/footer #0b1220   card #111c2e   input #0b1220   border #334155
+ *   text var(--text)  (#e2e8f0)   muted var(--muted)
+ * ========================================================================== */
+
+/* --- hero gradients ------------------------------------------------------ */
+html[data-theme="dark"] .tool-hero{background:linear-gradient(180deg,#111c2e 0%,#0b1220 100%)}
+html[data-theme="dark"] .tool-hero h1,
+html[data-theme="dark"] .tool-hero h2,
+html[data-theme="dark"] .tool-hero p{color:var(--text)}
+html[data-theme="dark"] .honest-note{background:#111c2e;color:var(--text)}
+
+/* --- inputs, textareas, selects ------------------------------------------ */
+html[data-theme="dark"] #videoUrl,
+html[data-theme="dark"] .calc-field input,
+html[data-theme="dark"] .calc-field select,
+html[data-theme="dark"] .calc-field textarea,
+html[data-theme="dark"] .compare-box input,
+html[data-theme="dark"] .field-control,
+html[data-theme="dark"] .hl-row input,
+html[data-theme="dark"] .json-textarea,
+html[data-theme="dark"] .json-select,
+html[data-theme="dark"] .meta-field input,
+html[data-theme="dark"] .meta-field textarea,
+html[data-theme="dark"] .opts-field input[type=text],
+html[data-theme="dark"] .opts-field select,
+html[data-theme="dark"] .opts-field input[type=range],
+html[data-theme="dark"] .pw-display,
+html[data-theme="dark"] .rr-row input,
+html[data-theme="dark"] .rr-row select,
+html[data-theme="dark"] .rule-row input,
+html[data-theme="dark"] .rule-row select,
+html[data-theme="dark"] .rule-row-2 input,
+html[data-theme="dark"] .rule-row-2 select,
+html[data-theme="dark"] .uuid-out,
+html[data-theme="dark"] .site-brand-bar .nav-search input{
+  background:#0b1220;
+  border-color:#334155;
+  color:var(--text);
+}
+html[data-theme="dark"] #videoUrl::placeholder,
+html[data-theme="dark"] .calc-field input::placeholder,
+html[data-theme="dark"] .calc-field textarea::placeholder,
+html[data-theme="dark"] .compare-box input::placeholder,
+html[data-theme="dark"] .field-control::placeholder,
+html[data-theme="dark"] .hl-row input::placeholder,
+html[data-theme="dark"] .json-textarea::placeholder,
+html[data-theme="dark"] .meta-field input::placeholder,
+html[data-theme="dark"] .meta-field textarea::placeholder,
+html[data-theme="dark"] .opts-field input::placeholder,
+html[data-theme="dark"] .rr-row input::placeholder,
+html[data-theme="dark"] .rule-row input::placeholder,
+html[data-theme="dark"] .rule-row-2 input::placeholder,
+html[data-theme="dark"] .uuid-out::placeholder{
+  color:var(--muted);
+  opacity:1;
+}
+
+/* --- card / panel surfaces ----------------------------------------------- */
+html[data-theme="dark"] .btn-ghost,
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] .btn-sm,
+html[data-theme="dark"] .calc-stat,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .file-chip,
+html[data-theme="dark"] .hash-row,
+html[data-theme="dark"] .heic-row,
+html[data-theme="dark"] .json-check,
+html[data-theme="dark"] .mock,
+html[data-theme="dark"] .outline-list,
+html[data-theme="dark"] .page-card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .preset-btn,
+html[data-theme="dark"] .quality-opt,
+html[data-theme="dark"] .pw-check,
+html[data-theme="dark"] .rule-del,
+html[data-theme="dark"] .serp-card,
+html[data-theme="dark"] .social-card{
+  background:#111c2e;
+  border-color:#334155;
+  color:var(--text);
+}
+html[data-theme="dark"] .platform-chip.is-active{background:#111c2e;color:var(--text)}
+html[data-theme="dark"] .social-card.twitter .body{background:#111c2e;border-color:#334155}
+
+/* --- headings and small text --------------------------------------------- */
+html[data-theme="dark"] .drop-box-content h2,
+html[data-theme="dark"] .faq summary,
+html[data-theme="dark"] .field-label,
+html[data-theme="dark"] .search-item strong,
+html[data-theme="dark"] .search-item span,
+html[data-theme="dark"] .seo-grid h3,
+html[data-theme="dark"] .faq h3,
+html[data-theme="dark"] .seo-inner h2,
+html[data-theme="dark"] .seo-inner h3,
+html[data-theme="dark"] .spec-table td b,
+html[data-theme="dark"] .site-footer-logo,
+html[data-theme="dark"] .site-footer-legal a:hover,
+html[data-theme="dark"] .site-brand-bar .nav-links a,
+html[data-theme="dark"] .site-brand-bar .site-logo,
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] #fullScreenDropOverlay h2{
+  color:var(--text);
+}
+
+/* --- borders and dividers ------------------------------------------------ */
+html[data-theme="dark"] .faq details,
+html[data-theme="dark"] .seo-grid>div,
+html[data-theme="dark"] .seo-inner,
+html[data-theme="dark"] .site-footer-bottom,
+html[data-theme="dark"] .spec-table th,
+html[data-theme="dark"] .spec-table td,
+html[data-theme="dark"] .site-brand-bar,
+html[data-theme="dark"] .site-brand-bar .menu-btn,
+html[data-theme="dark"] .site-brand-bar .nav-links.mobile-show,
+html[data-theme="dark"] .drop-box-content{
+  border-color:#334155;
+}
+html[data-theme="dark"] .spec-table th{background:#0b1220;color:var(--text)}
+
+/* --- overlays that sit on top of a light preview -------------------------- */
+html[data-theme="dark"] .dimension-badge{background:rgba(11,18,32,.92);color:var(--text);border-color:#334155}
+html[data-theme="dark"] .test-verdict .badge{background:rgba(11,18,32,.7)}
+html[data-theme="dark"] .drop-box-content{background:rgba(11,18,32,.35)}
+
+/* --- native control accents ---------------------------------------------- */
+html[data-theme="dark"] input[type=range],
+html[data-theme="dark"] .json-check input,
+html[data-theme="dark"] .page-select,
+html[data-theme="dark"] .pw-check input{accent-color:#cbd5e1}
+/* ==========================================================================
+ * DARK MODE - RESOURCES / FOOTER / SECTION HEADINGS
+ *
+ * The /resources/ index and the footer legal row carry light values that the
+ * earlier block did not cover. Each selector is prefixed html[data-theme="dark"]
+ * so it outranks the single-class inline rules on those pages.
+ * ========================================================================== */
+
+/* --- /resources/ index surfaces and headings ------------------------------ */
+html[data-theme="dark"] .resource-index__h1,
+html[data-theme="dark"] .resource-block__head h2,
+html[data-theme="dark"] .resource-group__title,
+html[data-theme="dark"] .resource-item__link,
+html[data-theme="dark"] .resource-card__title{
+  color:var(--text);
+}
+html[data-theme="dark"] .resource-index__search,
+html[data-theme="dark"] .resource-card,
+html[data-theme="dark"] .resource-chip{
+  background:#111c2e;
+  border-color:#334155;
+  color:var(--text);
+}
+html[data-theme="dark"] .resource-card{border-left-color:var(--resource-accent,#1D4ED8)}
+html[data-theme="dark"] .resource-index__search .resource-index__label,
+html[data-theme="dark"] .resource-index__search .resource-index__status,
+html[data-theme="dark"] .resource-index__chips{color:var(--text)}
+html[data-theme="dark"] .resource-index__input{background:#0b1220;border-color:#475569;color:var(--text)}
+html[data-theme="dark"] .resource-index__input:focus{background:#0b1220}
+html[data-theme="dark"] .resource-item:hover{background:#1c2536}
+html[data-theme="dark"] .resource-chip:hover{background:#1c2536;border-color:#475569;color:var(--text)}
+
+/* --- footer legal row ----------------------------------------------------- */
+html[data-theme="dark"] .site-footer-legal a{color:#94a3b8}
+html[data-theme="dark"] .site-footer-legal a:hover{color:#e2e8f0}
+html[data-theme="dark"] .site-footer-legal span{color:#64748b}
+
+/* --- section headings that still hard-code a light ink --------------------- */
+html[data-theme="dark"] .help-card h3,
+html[data-theme="dark"] .card h3,
+html[data-theme="dark"] .site-footer-col h3,
+html[data-theme="dark"] .resource-card__subtitle,
+html[data-theme="dark"] .resource-card__body{
+  color:var(--text);
+}
+/* ==========================================================================
+ * DARK MODE - REMAINING HARD-CODED NEUTRALS
+ *
+ * Everything below is a light-theme-only value: each of these reads fine on
+ * white but is far too dark on the dark page. Specificity is stated per group
+ * because the footer Explore column carries a 3-class inline rule that a plain
+ * html[data-theme="dark"] selector does not beat.
+ * ========================================================================== */
+
+/* /resources/ - the card that wraps every group of tool links */
+html[data-theme="dark"] .resource-group{ background:#111c2e; border-color:#334155; }
+html[data-theme="dark"] .resource-group .resource-group__title,
+html[data-theme="dark"] .resource-group .resource-item__link{ color:var(--text); }
+html[data-theme="dark"] .resource-group .resource-item__desc{ color:var(--muted); }
+html[data-theme="dark"] .resource-block__head p{ color:var(--muted); }
+
+/* section taglines and hero copy */
+html[data-theme="dark"] .hero-text,
+html[data-theme="dark"] #tools .section-head p,
+html[data-theme="dark"] #featured .section-tagline,
+html[data-theme="dark"] #help .help-sub{ color:#94a3b8; }
+
+/* footer. The Explore column needs (0,4,1) to beat the inline
+   .site-footer-top>.site-footer-col:nth-child(3) a rule. */
+html[data-theme="dark"] .site-footer-top>.site-footer-col:nth-child(3) a,
+html[data-theme="dark"] .site-footer-legal a{ color:#94a3b8; }
+html[data-theme="dark"] .site-footer-legal a:hover{ color:#e2e8f0; }
+
+/* status lines, search meta and disabled carousel arrows */
+html[data-theme="dark"] .form-status{ color:#cbd5e1; }
+html[data-theme="dark"] .search-meta{ color:var(--muted-strong); }
+html[data-theme="dark"] .cf-nav[disabled],
+html[data-theme="dark"] .cf-nav[disabled]:hover{ color:#64748b; }
+
+/* paragraphs that carry an inline style="color:#64748b" */
+html[data-theme="dark"] main p[style*="64748b"]{ color:#94a3b8 !important; }
+/* ==========================================================================
+ * DARK MODE - FINAL PASS
+ *
+ * Two leftovers: #1D4ED8 links sitting on a dark card (2.55:1 - a real dark-mode
+ * regression, since the same blue clears 5.6:1 on white), and the footer policy
+ * separator, which was still carrying the light-mode grey.
+ * ========================================================================== */
+html[data-theme="dark"] .resource-group__all,
+html[data-theme="dark"] .resource-group__all:hover,
+html[data-theme="dark"] .resource-item__link:hover,
+html[data-theme="dark"] .resource-card__cta{ color:#60a5fa; }
+html[data-theme="dark"] .resource-group__all:hover,
+html[data-theme="dark"] .resource-item__link:hover{ color:#93c5fd; }
+html[data-theme="dark"] .site-footer-legal span{ color:#94a3b8; }
+/* === dark-mode footer hover: readable text + pure white underline === */
+html[data-theme="dark"] .site-footer-col a:hover,
+html[data-theme="dark"] .site-footer-top>.site-footer-col:nth-child(2) a:hover,
+html[data-theme="dark"] .site-footer-top>.site-footer-col:nth-child(3) a:hover,
+html[data-theme="dark"] .site-footer-top>.site-footer-col:nth-child(4) a:hover,
+html[data-theme="dark"] .site-footer-support a:hover,
+html[data-theme="dark"] .site-footer-support .support-email:hover,
+html[data-theme="dark"] .site-footer-legal a:hover{
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  text-underline-offset: 2px;
+}
+/* === dark-mode card/box overrides (audit 2026) === */
+html[data-theme="dark"] .related-card{ background:var(--card-bg); border-color:var(--border); }
+html[data-theme="dark"] .related-card h3{ color:var(--black); }
+html[data-theme="dark"] .related-card p{ color:var(--text-gray); }
+html[data-theme="dark"] .seo-inner{ border-color:var(--border); }
+html[data-theme="dark"] .seo-inner h2{ color:var(--black); }
+html[data-theme="dark"] .seo-inner>p{ color:var(--text-gray); }
+html[data-theme="dark"] .enhancer-card h2{ color:var(--black); }
+html[data-theme="dark"] .enhancer-card p{ color:var(--text-muted); }
+html[data-theme="dark"] .faq h3,
+html[data-theme="dark"] .faq summary{ color:var(--black); }

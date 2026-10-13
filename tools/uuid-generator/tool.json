@@ -1,0 +1,15 @@
+{
+    "title":  "UUID Generator",
+    "description":  "Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.",
+    "tags":  [
+                 "uuid generator",
+                 "guid generator",
+                 "uuid v4 generator",
+                 "random uuid",
+                 "uuid validator",
+                 "generate uuid online"
+             ],
+    "url":  "tools/uuid-generator/",
+    "iconKey":  "uuid",
+    "category":  "Developer Tools"
+}

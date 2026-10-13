@@ -1,0 +1,15 @@
+{
+    "title":  "Hash Generator",
+    "description":  "Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or a file online for free. Compare two hashes for a match.",
+    "tags":  [
+                 "hash generator",
+                 "md5 generator",
+                 "sha256 online",
+                 "sha1 hash",
+                 "file hash generator",
+                 "checksum tool"
+             ],
+    "url":  "tools/hash-generator/",
+    "iconKey":  "hash",
+    "category":  "Developer Tools"
+}

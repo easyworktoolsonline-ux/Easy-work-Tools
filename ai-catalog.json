@@ -1,0 +1,3846 @@
+{
+  "$schema": "https://schema.org/",
+  "name": "EasyWorkTools.online",
+  "url": "https://easyworktools.online/",
+  "description": "Free, private, browser-based tools for everyday digital work. Text, image, PDF and developer utilities that run entirely in the visitor browser with no upload, no account and no paywall.",
+  "version": "1.0.0",
+  "updated": "2026-10-08",
+  "operator": {
+    "name": "EasyWorkTools.online",
+    "email": "EasyWorkTools.online@gmail.com"
+  },
+  "license": "https://easyworktools.online/terms.html",
+  "privacy": "https://easyworktools.online/privacy.html",
+  "dataHandling": {
+    "uploads": "none",
+    "telemetry": "Aggregate, anonymous page-view counts only, used to order the tool and blog lists.",
+    "cookies": "See https://easyworktools.online/cookies.html"
+  },
+  "counts": {
+    "tools": 127,
+    "articles": 121
+  },
+  "indexes": {
+    "home": "https://easyworktools.online/",
+    "tools": "https://easyworktools.online/tools/",
+    "blog": "https://easyworktools.online/blog/",
+    "resources": "https://easyworktools.online/resources/",
+    "sitemap": "https://easyworktools.online/sitemap.xml",
+    "llms": "https://easyworktools.online/llms.txt"
+  },
+  "tools": [
+    {
+      "name": "Age Calculator",
+      "url": "https://easyworktools.online/tools/age-calculator/",
+      "description": "Calculate exact age in years, months and days online for free.",
+      "category": null,
+      "keywords": [
+        "age calculator",
+        "calculate age",
+        "date of birth calculator",
+        "how old am i"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "AI Detector",
+      "url": "https://easyworktools.online/tools/ai-write/ai-detector/",
+      "description": "AI Content Detector",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "ai detector",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "AI Humanizer",
+      "url": "https://easyworktools.online/tools/ai-write/ai-humanizer/",
+      "description": "Use the AI Humanizer to make AI text sound more human",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "ai humanizer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "AI Rephraser",
+      "url": "https://easyworktools.online/tools/ai-write/ai-rephraser/",
+      "description": "AI Rephraser Content",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "ai rephraser",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Article Generator",
+      "url": "https://easyworktools.online/tools/ai-write/article-generator/",
+      "description": "AI SEO Optimized Article Generator",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "article generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Article Rewriter",
+      "url": "https://easyworktools.online/tools/ai-write/article-rewriter/",
+      "description": "Rewrite an article",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "article rewriter",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Article Writer",
+      "url": "https://easyworktools.online/tools/ai-write/article-writer/",
+      "description": "Create an article from a title",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "article writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Bill of Sale",
+      "url": "https://easyworktools.online/tools/ai-write/bill-of-sale/",
+      "description": "Generate bill of sale for your",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "bill of sale",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Blog Outline Generator",
+      "url": "https://easyworktools.online/tools/ai-write/blog-outline-generator/",
+      "description": "Write Blog Outline",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "blog outline generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Blog Post Generator",
+      "url": "https://easyworktools.online/tools/ai-write/blog-post-generator/",
+      "description": "AI SEO Post Generator",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "blog post generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Blog Post Ideas",
+      "url": "https://easyworktools.online/tools/ai-write/blog-post-ideas/",
+      "description": "Write Blog Post Ideas",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "blog post ideas",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Blog Post Rewriter",
+      "url": "https://easyworktools.online/tools/ai-write/blog-post-rewriter/",
+      "description": "Rephrase a blog post",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "blog post rewriter",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Business Name Generator",
+      "url": "https://easyworktools.online/tools/ai-write/business-name-generator/",
+      "description": "Generate a business name for your idea",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "business name generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Business Plan Generator",
+      "url": "https://easyworktools.online/tools/ai-write/business-plan-generator/",
+      "description": "Generate business plan for you",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "business plan generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Business Slogan Generator",
+      "url": "https://easyworktools.online/tools/ai-write/business-slogan-generator/",
+      "description": "Generate business slogan for you",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "business slogan generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Cold Email Writer",
+      "url": "https://easyworktools.online/tools/ai-write/cold-email-writer/",
+      "description": "Write cold email for you",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "cold email writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Content Brief Generator",
+      "url": "https://easyworktools.online/tools/ai-write/content-brief-generator/",
+      "description": "Generate content brief for your article title",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "content brief generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Content Improver",
+      "url": "https://easyworktools.online/tools/ai-write/content-improver/",
+      "description": "Improve your content",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "content improver",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Content Paraphraser",
+      "url": "https://easyworktools.online/tools/ai-write/content-paraphraser/",
+      "description": "Paraphrasing Content",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "content paraphraser",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Content Planner",
+      "url": "https://easyworktools.online/tools/ai-write/content-planner/",
+      "description": "Generate a simple content plan",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "content planner",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Content Shortener",
+      "url": "https://easyworktools.online/tools/ai-write/content-shortener/",
+      "description": "Resize your content",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "content shortener",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Content Summarizer",
+      "url": "https://easyworktools.online/tools/ai-write/content-summarizer/",
+      "description": "Summarize text",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "content summarizer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Essay Writer",
+      "url": "https://easyworktools.online/tools/ai-write/essay-writer/",
+      "description": "Easily create an essay with AI",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "essay writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Explain It",
+      "url": "https://easyworktools.online/tools/ai-write/explain-it/",
+      "description": "Explain it like I'm five",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "explain it",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "FAQ Generator",
+      "url": "https://easyworktools.online/tools/ai-write/faq-generator/",
+      "description": "Generate FAQ for a blog",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "faq generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "FB Headline Generator",
+      "url": "https://easyworktools.online/tools/ai-write/fb-headline-generator/",
+      "description": "Generate Facebook ad headlines for your company",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "fb headline generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Grammar Fixer",
+      "url": "https://easyworktools.online/tools/ai-write/grammar-fixer/",
+      "description": "Easily fix the grammar in a block of text",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "grammar fixer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Instagram Caption Generator",
+      "url": "https://easyworktools.online/tools/ai-write/instagram-caption-generator/",
+      "description": "Generate Instagram caption for your post",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "instagram caption generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Instagram Story Idea",
+      "url": "https://easyworktools.online/tools/ai-write/instagram-story-idea/",
+      "description": "Generate Instagram story ideas for you",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "instagram story idea",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Landing Page Copy Generator",
+      "url": "https://easyworktools.online/tools/ai-write/landing-page-copy-generator/",
+      "description": "Generate landing page copy",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "landing page copy generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "LinkedIn Post Generator",
+      "url": "https://easyworktools.online/tools/ai-write/linkedin-post-generator/",
+      "description": "Generate LinkedIn post for your profile",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "linkedin post generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Meta Description Generator",
+      "url": "https://easyworktools.online/tools/ai-write/meta-description-generator/",
+      "description": "Generate a meta description for your article",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "meta description generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "NDA Generator",
+      "url": "https://easyworktools.online/tools/ai-write/nda-generator/",
+      "description": "Generate NDA for your",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "nda generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Paragraph Completer",
+      "url": "https://easyworktools.online/tools/ai-write/paragraph-completer/",
+      "description": "Paragraph Completer",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "paragraph completer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Paragraph Rewriter",
+      "url": "https://easyworktools.online/tools/ai-write/paragraph-rewriter/",
+      "description": "Rephrase a paragraph",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "paragraph rewriter",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Paragraph Writer",
+      "url": "https://easyworktools.online/tools/ai-write/paragraph-writer/",
+      "description": "Paragraph Writer",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "paragraph writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Podcast Script Writer",
+      "url": "https://easyworktools.online/tools/ai-write/podcast-script-writer/",
+      "description": "Podcast Script Generator",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "podcast script writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Poll Generator",
+      "url": "https://easyworktools.online/tools/ai-write/poll-generator/",
+      "description": "AI Generated Polls",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "poll generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Post Writer",
+      "url": "https://easyworktools.online/tools/ai-write/post-writer/",
+      "description": "Generate a blog post",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "post writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Press Release Generator",
+      "url": "https://easyworktools.online/tools/ai-write/press-release-generator/",
+      "description": "Generate a press release",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "press release generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Privacy Policy Generator",
+      "url": "https://easyworktools.online/tools/ai-write/privacy-policy-generator/",
+      "description": "Generate privacy policy for your",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "privacy policy generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Purchase Agreement",
+      "url": "https://easyworktools.online/tools/ai-write/purchase-agreement/",
+      "description": "Generate purchase agreement for your",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "purchase agreement",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Real Estate Descriptions",
+      "url": "https://easyworktools.online/tools/ai-write/real-estate-descriptions/",
+      "description": "Generate Real Estate Descriptions for your",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "real estate descriptions",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Search",
+      "url": "https://easyworktools.online/tools/ai-write/search/",
+      "description": "Search",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "search",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Sentence Rewriter",
+      "url": "https://easyworktools.online/tools/ai-write/sentence-rewriter/",
+      "description": "Sentence Rewriter",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "sentence rewriter",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Story Generator",
+      "url": "https://easyworktools.online/tools/ai-write/story-generator/",
+      "description": "Generate a Story",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "story generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Summarize YouTube",
+      "url": "https://easyworktools.online/tools/ai-write/summarize-youtube/",
+      "description": "Summarize YouTube Video",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "summarize youtube",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "TikTok Script Writer",
+      "url": "https://easyworktools.online/tools/ai-write/tiktok-script-writer/",
+      "description": "TikTok Script Writer",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "tiktok script writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Title Rewriter",
+      "url": "https://easyworktools.online/tools/ai-write/title-rewriter/",
+      "description": "Rewrite your article title",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "title rewriter",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Tone of Voice",
+      "url": "https://easyworktools.online/tools/ai-write/tone-of-voice/",
+      "description": "Tone of Voice Tool",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "tone of voice",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Translate",
+      "url": "https://easyworktools.online/tools/ai-write/translate/",
+      "description": "Easily Translate Text",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "translate",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Trivia Generator",
+      "url": "https://easyworktools.online/tools/ai-write/trivia-generator/",
+      "description": "Generate Trivia Questions",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "trivia generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Twitter Generator",
+      "url": "https://easyworktools.online/tools/ai-write/twitter-generator/",
+      "description": "Twitter generator",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "twitter generator",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Word Counter",
+      "url": "https://easyworktools.online/tools/ai-write/word-counter/",
+      "description": "Count words in your text",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "word counter",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "YouTube Script Writer",
+      "url": "https://easyworktools.online/tools/ai-write/youtube-script-writer/",
+      "description": "Generate a YouTube script",
+      "category": null,
+      "keywords": [
+        "ai write",
+        "youtube script writer",
+        "ai writing",
+        "ai tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Base64 Encoder & Decoder",
+      "url": "https://easyworktools.online/tools/base64-encoder-decoder/",
+      "description": "Encode or decode Base64 text and files online for free. Convert text to Base64, decode Base64 back to text, or convert a file to a Base64 data URI.",
+      "category": null,
+      "keywords": [
+        "base64 encoder",
+        "base64 decoder",
+        "base64 to text",
+        "text to base64",
+        "base64 file converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Canonical & Meta Robots Checker",
+      "url": "https://easyworktools.online/tools/canonical-robots-checker/",
+      "description": "Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.",
+      "category": null,
+      "keywords": [
+        "canonical tag generator",
+        "meta robots generator",
+        "noindex checker",
+        "indexability checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Color Picker & Converter",
+      "url": "https://easyworktools.online/tools/color-picker-converter/",
+      "description": "Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.",
+      "category": null,
+      "keywords": [
+        "color picker online",
+        "hex to rgb converter",
+        "rgb to hex",
+        "color converter",
+        "hsl color picker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Easy Image Resizer",
+      "url": "https://easyworktools.online/tools/easy-image-resizer/",
+      "description": "Resize and edit images online for free in your browser.",
+      "category": null,
+      "keywords": [
+        "image resizer",
+        "resize image online",
+        "image dimensions",
+        "photo resizer",
+        "free image tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Easy Thumbnail Downloader",
+      "url": "https://easyworktools.online/tools/easy-thumbnail-downloader/",
+      "description": "Download HD thumbnails from YouTube, Facebook, Instagram, TikTok, Pinterest and Vimeo links.",
+      "category": null,
+      "keywords": [
+        "thumbnail downloader",
+        "youtube thumbnail download",
+        "hd thumbnail grabber",
+        "instagram reel cover",
+        "tiktok video cover",
+        "facebook video thumbnail",
+        "vimeo thumbnail"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Favicon & App Icon Generator",
+      "url": "https://easyworktools.online/tools/favicon-generator/",
+      "description": "Generate a complete favicon.ico and app icon PNG set from one image online for free.",
+      "category": null,
+      "keywords": [
+        "favicon generator",
+        "favicon.ico generator",
+        "app icon generator",
+        "apple touch icon generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Find & Replace",
+      "url": "https://easyworktools.online/tools/find-and-replace/",
+      "description": "Find and replace text online for free, including whole-word, case-sensitive and regex matching, plus multi-replace for applying a whole list of substitutions at once.",
+      "category": null,
+      "keywords": [
+        "find and replace online",
+        "regex find and replace",
+        "text replace tool",
+        "multi find and replace",
+        "bulk text replace"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Free Image Compressor",
+      "url": "https://easyworktools.online/tools/free-image-compressor/",
+      "description": "Compress JPG, PNG and WebP images online for free in your browser.",
+      "category": null,
+      "keywords": [
+        "image compressor",
+        "compress jpg",
+        "compress png",
+        "reduce image size",
+        "webp compressor"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Hash Generator",
+      "url": "https://easyworktools.online/tools/hash-generator/",
+      "description": "Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or a file online for free. Compare two hashes for a match.",
+      "category": null,
+      "keywords": [
+        "hash generator",
+        "md5 generator",
+        "sha256 online",
+        "sha1 hash",
+        "file hash generator",
+        "checksum tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "HEIC to JPG Converter",
+      "url": "https://easyworktools.online/tools/heic-to-jpg-converter/",
+      "description": "Convert HEIC photos from iPhone to JPG online for free. Upload one or more .heic files and download high-quality JPG images, all processed in your browser.",
+      "category": null,
+      "keywords": [
+        "heic to jpg converter",
+        "heic to jpg online",
+        "convert heic to jpg free",
+        "iphone photo converter",
+        "heic converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Hreflang Generator & Validator",
+      "url": "https://easyworktools.online/tools/hreflang-generator/",
+      "description": "Build hreflang link tags for international and multilingual SEO with language-region code validation, or paste HTML to check existing hreflang tags for errors, online for free.",
+      "category": null,
+      "keywords": [
+        "hreflang generator",
+        "hreflang validator",
+        "international seo tool",
+        "x-default generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "HTML/CSS/JS Minifier",
+      "url": "https://easyworktools.online/tools/html-css-js-minifier/",
+      "description": "Minify HTML, CSS or JavaScript online for free. Strip comments and unnecessary whitespace to reduce file size, with before/after size comparison.",
+      "category": null,
+      "keywords": [
+        "html minifier",
+        "css minifier",
+        "javascript minifier",
+        "minify code online",
+        "code compressor"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "HTML Entity Encoder & Decoder",
+      "url": "https://easyworktools.online/tools/html-entity-encoder-decoder/",
+      "description": "Encode text to HTML entities or decode HTML entities back to plain text online for free. Handles special characters, symbols and accented letters instantly.",
+      "category": null,
+      "keywords": [
+        "html entity encoder",
+        "html entity decoder",
+        "html special characters converter",
+        "escape html online",
+        "unescape html entities"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "HTTP Header & Status Code Checker",
+      "url": "https://easyworktools.online/tools/http-header-checker/",
+      "description": "Paste raw HTTP response headers to decode the status code, Cache-Control, security headers and compression, with plain-language explanations, online for free.",
+      "category": null,
+      "keywords": [
+        "http header checker",
+        "http status code checker",
+        "cache-control analyzer",
+        "security header checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Background Color Tool",
+      "url": "https://easyworktools.online/tools/image-background-color/",
+      "description": "Add a solid background color behind a transparent PNG or WebP online for free.",
+      "category": null,
+      "keywords": [
+        "add background color to png",
+        "transparent png background",
+        "fill transparent image"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Border, Frame & Rounded Corners",
+      "url": "https://easyworktools.online/tools/image-border-rounded/",
+      "description": "Add a border, frame and rounded corners to any image online for free.",
+      "category": null,
+      "keywords": [
+        "add border to image",
+        "rounded corners image",
+        "image frame tool",
+        "circle crop image"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Collage Maker",
+      "url": "https://easyworktools.online/tools/image-collage-maker/",
+      "description": "Combine 2 to 9 photos into a grid collage online for free in your browser.",
+      "category": null,
+      "keywords": [
+        "photo collage maker",
+        "image collage online",
+        "photo grid maker",
+        "combine photos online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Color Picker & Palette Extractor",
+      "url": "https://easyworktools.online/tools/image-color-picker/",
+      "description": "Pick an exact pixel color or extract the dominant palette from any image online for free.",
+      "category": null,
+      "keywords": [
+        "image color picker",
+        "color picker from image",
+        "extract color from photo",
+        "palette from image"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Compare & Difference Checker",
+      "url": "https://easyworktools.online/tools/image-compare/",
+      "description": "Compare two images with a slider or highlight pixel differences between them online for free.",
+      "category": null,
+      "keywords": [
+        "compare two images online",
+        "image difference checker",
+        "image diff tool",
+        "before after image slider"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Crop & Rotate",
+      "url": "https://easyworktools.online/tools/image-crop-rotate/",
+      "description": "Crop to any aspect ratio, rotate and flip images online for free in your browser.",
+      "category": null,
+      "keywords": [
+        "image cropper",
+        "crop image online",
+        "rotate image online",
+        "flip image"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Dimensions & Aspect Ratio",
+      "url": "https://easyworktools.online/tools/image-dimensions-checker/",
+      "description": "Check image width, height, megapixels and aspect ratio, or calculate a missing dimension online for free.",
+      "category": null,
+      "keywords": [
+        "image dimensions checker",
+        "aspect ratio calculator",
+        "image size checker",
+        "check image resolution"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Editor",
+      "url": "https://easyworktools.online/tools/image-editor/",
+      "description": "Adjust brightness, contrast, saturation and apply filters like grayscale, blur and pixelate online for free.",
+      "category": null,
+      "keywords": [
+        "online image editor",
+        "photo editor free",
+        "image filter tool",
+        "pixelate image online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Format Converter",
+      "url": "https://easyworktools.online/tools/image-format-converter/",
+      "description": "Convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP online for free.",
+      "category": null,
+      "keywords": [
+        "image format converter",
+        "jpg to png",
+        "png to jpg",
+        "jpg to webp",
+        "png to webp"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Hash & File Signature Checker",
+      "url": "https://easyworktools.online/tools/image-hash-checker/",
+      "description": "Generate SHA-256, SHA-1 and MD5 hashes and verify a file's real format from its signature, online for free.",
+      "category": null,
+      "keywords": [
+        "image hash generator",
+        "sha256 file hash",
+        "file signature checker",
+        "verify image format"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Merge & Stitch",
+      "url": "https://easyworktools.online/tools/image-merge-stitch/",
+      "description": "Merge or stitch multiple images edge to edge, horizontally or vertically, online for free.",
+      "category": null,
+      "keywords": [
+        "merge images online",
+        "stitch images together",
+        "join photos online",
+        "combine images"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Metadata Viewer & Remover",
+      "url": "https://easyworktools.online/tools/image-metadata-viewer/",
+      "description": "View EXIF camera and GPS data, or strip all metadata from an image online for free.",
+      "category": null,
+      "keywords": [
+        "exif viewer",
+        "remove exif data",
+        "image metadata remover",
+        "strip gps from photo"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Splitter",
+      "url": "https://easyworktools.online/tools/image-splitter/",
+      "description": "Split one image into a grid of rows and columns online for free, with individual downloads.",
+      "category": null,
+      "keywords": [
+        "split image online",
+        "image grid splitter",
+        "cut image into pieces",
+        "instagram grid maker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image to Base64 Converter",
+      "url": "https://easyworktools.online/tools/image-to-base64/",
+      "description": "Convert an image to a Base64 data URI, or decode Base64 back to an image, online for free.",
+      "category": null,
+      "keywords": [
+        "image to base64",
+        "base64 to image",
+        "image data uri converter",
+        "base64 image encoder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Image Watermark Tool",
+      "url": "https://easyworktools.online/tools/image-watermark/",
+      "description": "Add a text or logo watermark to images online for free in your browser.",
+      "category": null,
+      "keywords": [
+        "image watermark",
+        "add watermark to photo",
+        "logo watermark",
+        "text watermark"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JPEG Compressor",
+      "url": "https://easyworktools.online/tools/jpeg-compressor/",
+      "description": "Compress JPEG images online for free, by quality or exact target file size in KB.",
+      "category": null,
+      "keywords": [
+        "jpeg compressor",
+        "compress jpeg",
+        "reduce jpg file size",
+        "jpg to kb"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JPG ↔ PDF Converter",
+      "url": "https://easyworktools.online/tools/jpg-pdf-converter/",
+      "description": "Convert JPG images to a single PDF, or extract JPG pages from a PDF, online for free. Reorder photos, choose page size, and download instantly in your browser.",
+      "category": null,
+      "keywords": [
+        "jpg to pdf converter",
+        "pdf to jpg converter",
+        "convert images to pdf free",
+        "pdf to jpg online",
+        "jpg pdf converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JSON ↔ CSV Converter",
+      "url": "https://easyworktools.online/tools/json-csv-converter/",
+      "description": "Convert JSON to CSV or CSV to JSON online for free. Paste an array of objects or a CSV table and get a clean, downloadable result instantly in your browser.",
+      "category": null,
+      "keywords": [
+        "json to csv converter",
+        "csv to json converter",
+        "json csv online",
+        "convert json to csv free",
+        "csv to json online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JSON Formatter",
+      "url": "https://easyworktools.online/tools/json-formatter/",
+      "description": "Format, validate and minify JSON online for free in your browser.",
+      "category": null,
+      "keywords": [
+        "json formatter",
+        "json validator",
+        "json beautifier",
+        "minify json"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JWT Decoder",
+      "url": "https://easyworktools.online/tools/jwt-decoder/",
+      "description": "Decode a JSON Web Token (JWT) online for free. View the header and payload as readable JSON, with expiry and issued-at claims shown as dates.",
+      "category": null,
+      "keywords": [
+        "jwt decoder",
+        "decode jwt online",
+        "jwt parser",
+        "json web token decoder",
+        "jwt inspector"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Keyword Density Checker",
+      "url": "https://easyworktools.online/tools/keyword-density-checker/",
+      "description": "Check keyword density and word frequency in any text online for free. See how often single words and two or three word phrases repeat, with percentages.",
+      "category": null,
+      "keywords": [
+        "keyword density checker",
+        "keyword density tool",
+        "word frequency counter",
+        "seo keyword analyzer",
+        "keyword density calculator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Line & List Tools",
+      "url": "https://easyworktools.online/tools/line-list-tools/",
+      "description": "Reverse, shuffle, number, filter and reformat lines of text online for free. Add a prefix or suffix to every line, extract matching lines, or convert a list to a comma-separated string.",
+      "category": null,
+      "keywords": [
+        "line tools online",
+        "reverse lines",
+        "number lines tool",
+        "add prefix to lines",
+        "list to comma separated"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Lorem Ipsum Generator",
+      "url": "https://easyworktools.online/tools/lorem-ipsum-generator/",
+      "description": "Generate Lorem Ipsum placeholder text online for free — by paragraphs, sentences or words, with an optional classic opening line and HTML output.",
+      "category": null,
+      "keywords": [
+        "lorem ipsum generator",
+        "placeholder text generator",
+        "dummy text generator",
+        "lorem ipsum online",
+        "random paragraph generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Markdown ↔ HTML Converter",
+      "url": "https://easyworktools.online/tools/markdown-html-converter/",
+      "description": "Convert Markdown to HTML, Markdown to plain text, or HTML to plain text online for free, with a live safe preview and one-click copy of the result.",
+      "category": null,
+      "keywords": [
+        "markdown to html converter",
+        "markdown to text",
+        "html to plain text converter",
+        "markdown converter online",
+        "strip html tags online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Meta Tag Generator",
+      "url": "https://easyworktools.online/tools/meta-tag-generator/",
+      "description": "Generate SEO meta title and description tags, plus Open Graph and Twitter Card tags, online for free. Live character counters and ready-to-paste HTML output.",
+      "category": null,
+      "keywords": [
+        "meta tag generator",
+        "seo meta tags online",
+        "open graph generator",
+        "twitter card generator",
+        "meta description generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Online Text Case Converter",
+      "url": "https://easyworktools.online/tools/online-text-case-converter/",
+      "description": "Convert text to uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, dot.case and more online for free.",
+      "category": null,
+      "keywords": [
+        "text case converter",
+        "uppercase",
+        "lowercase",
+        "title case",
+        "sentence case",
+        "toggle case",
+        "camelcase converter",
+        "pascalcase converter",
+        "slug converter",
+        "snake case",
+        "constant case",
+        "dot case"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Password Generator",
+      "url": "https://easyworktools.online/tools/password-generator/",
+      "description": "Generate strong, random passwords online for free with a live strength meter.",
+      "category": null,
+      "keywords": [
+        "password generator",
+        "strong password generator",
+        "random password generator",
+        "secure password"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF Compressor",
+      "url": "https://easyworktools.online/tools/pdf-compressor/",
+      "description": "Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.",
+      "category": null,
+      "keywords": [
+        "pdf compressor",
+        "compress pdf online",
+        "reduce pdf file size",
+        "shrink pdf free",
+        "pdf size reducer"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF ⇄ Images Converter",
+      "url": "https://easyworktools.online/tools/pdf-images-converter/",
+      "description": "Convert PDF pages to JPG or PNG images, or combine JPG, PNG and WebP images into one PDF, free in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf to jpg",
+        "pdf to png",
+        "pdf to images",
+        "images to pdf",
+        "jpg to pdf",
+        "png to pdf",
+        "convert pdf to image"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF Merger & Splitter",
+      "url": "https://easyworktools.online/tools/pdf-merge-split/",
+      "description": "Merge multiple PDF files into one, or split a PDF into separate pages, online for free. Reorder files before merging and download instantly, all in your browser.",
+      "category": null,
+      "keywords": [
+        "merge pdf online",
+        "split pdf online",
+        "combine pdf files free",
+        "pdf merger",
+        "pdf splitter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF Metadata Editor",
+      "url": "https://easyworktools.online/tools/pdf-metadata-editor/",
+      "description": "View and edit a PDF's title, author, subject, keywords and other document properties, or clear them entirely, free in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf metadata editor",
+        "edit pdf properties",
+        "remove pdf metadata",
+        "pdf author title editor",
+        "pdf document properties"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF Organizer",
+      "url": "https://easyworktools.online/tools/pdf-organizer/",
+      "description": "Merge multiple PDFs, reorder, rotate, delete or extract pages, all in your browser for free.",
+      "category": null,
+      "keywords": [
+        "merge pdf",
+        "split pdf",
+        "organize pdf",
+        "rotate pdf pages",
+        "delete pdf pages",
+        "reorder pdf pages",
+        "extract pdf pages"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF Watermark & Branding",
+      "url": "https://easyworktools.online/tools/pdf-watermark/",
+      "description": "Add a text or image watermark to every page of a PDF — control opacity, size, rotation and position, free in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf watermark",
+        "add watermark to pdf",
+        "pdf branding",
+        "stamp pdf",
+        "logo on pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Percentage Calculator",
+      "url": "https://easyworktools.online/tools/percentage-calculator/",
+      "description": "Calculate percentages, percentage increase/decrease and ratios online for free.",
+      "category": null,
+      "keywords": [
+        "percentage calculator",
+        "percent calculator",
+        "percentage increase",
+        "percentage decrease"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Readability Checker",
+      "url": "https://easyworktools.online/tools/readability-checker/",
+      "description": "Check the readability of your writing online for free with the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas, explained in plain language.",
+      "category": null,
+      "keywords": [
+        "readability checker online",
+        "flesch reading ease calculator",
+        "flesch kincaid grade level",
+        "readability score",
+        "reading level checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Readability Score Checker",
+      "url": "https://easyworktools.online/tools/readability-score-checker/",
+      "description": "Paste your text to get a Flesch Reading Ease score, Flesch-Kincaid grade level, and sentence/paragraph length breakdown, online for free.",
+      "category": null,
+      "keywords": [
+        "readability score checker",
+        "flesch reading ease calculator",
+        "flesch-kincaid grade level",
+        "content readability tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Redirect Rules Generator & Chain Checker",
+      "url": "https://easyworktools.online/tools/redirect-rules-generator/",
+      "description": "Generate 301/302/307/308 redirect rules for Apache, Nginx, Netlify and Vercel, or paste a URL mapping to detect redirect chains, loops and duplicate sources, online for free.",
+      "category": null,
+      "keywords": [
+        "redirect generator",
+        "htaccess redirect generator",
+        "nginx redirect generator",
+        "redirect chain checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Regex Tester",
+      "url": "https://easyworktools.online/tools/regex-tester/",
+      "description": "Test regular expressions online for free. Highlight matches in your text live, see capture groups, and get flag options for global, case-insensitive and multiline matching.",
+      "category": null,
+      "keywords": [
+        "regex tester",
+        "regular expression tester online",
+        "test regex free",
+        "regex match checker",
+        "javascript regex tester"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Remove Duplicate Lines",
+      "url": "https://easyworktools.online/tools/remove-duplicate-lines/",
+      "description": "Remove duplicate lines from a list or block of text online for free. Case-sensitive or case-insensitive matching, with optional sorting and trimming.",
+      "category": null,
+      "keywords": [
+        "remove duplicate lines",
+        "duplicate line remover",
+        "deduplicate text online",
+        "unique lines tool",
+        "remove duplicates from list"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Robots.txt Generator & Tester",
+      "url": "https://easyworktools.online/tools/robots-txt-generator/",
+      "description": "Build a valid robots.txt file with a rule builder, or paste an existing robots.txt and test whether a URL path is allowed or blocked for a given crawler, online for free.",
+      "category": null,
+      "keywords": [
+        "robots.txt generator",
+        "robots.txt tester",
+        "robots.txt validator",
+        "crawler rules generator",
+        "disallow allow generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Schema Markup Generator & JSON-LD Validator",
+      "url": "https://easyworktools.online/tools/schema-markup-generator/",
+      "description": "Generate valid JSON-LD structured data for Article, Product, LocalBusiness, FAQ, HowTo, Review and 7 more schema types, or paste existing JSON-LD to validate it, online for free.",
+      "category": null,
+      "keywords": [
+        "schema markup generator",
+        "json-ld generator",
+        "structured data generator",
+        "schema validator",
+        "faq schema generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "SEO Page Analyzer",
+      "url": "https://easyworktools.online/tools/seo-page-analyzer/",
+      "description": "Paste a page's HTML source to get a full on-page SEO checklist: title, meta description, heading structure, word count, image alt text, links, canonical, robots and more, online for free.",
+      "category": null,
+      "keywords": [
+        "seo page analyzer",
+        "on-page seo checker",
+        "seo checklist tool",
+        "seo audit tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Google SERP Snippet Preview",
+      "url": "https://easyworktools.online/tools/serp-snippet-preview/",
+      "description": "See how your title and meta description will look in Google search results on desktop and mobile, with real pixel-width truncation warnings, online for free.",
+      "category": null,
+      "keywords": [
+        "serp preview",
+        "google serp snippet preview",
+        "title pixel width checker",
+        "meta description preview"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Social Share Preview",
+      "url": "https://easyworktools.online/tools/social-share-preview/",
+      "description": "See how your link will look when shared on Facebook, X (Twitter) and LinkedIn using your Open Graph and Twitter Card tags, online for free.",
+      "category": null,
+      "keywords": [
+        "social share preview",
+        "open graph preview",
+        "twitter card preview",
+        "facebook share preview"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "SVG Optimizer",
+      "url": "https://easyworktools.online/tools/svg-optimizer/",
+      "description": "Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.",
+      "category": null,
+      "keywords": [
+        "svg optimizer",
+        "compress svg",
+        "minify svg",
+        "svg file size reducer",
+        "clean svg online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Text Cleaner",
+      "url": "https://easyworktools.online/tools/text-cleaner/",
+      "description": "Clean up messy text online for free: remove extra spaces, empty lines, duplicate lines, tabs, invisible characters, accents and fix smart quotes — all at once or one at a time.",
+      "category": null,
+      "keywords": [
+        "text cleaner online",
+        "remove extra spaces",
+        "remove empty lines",
+        "clean text tool",
+        "remove invisible characters"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Text Compare",
+      "url": "https://easyworktools.online/tools/text-compare/",
+      "description": "Compare two blocks of text online for free and see exactly which lines were added, removed or changed, with a similarity percentage — all processed in your browser.",
+      "category": null,
+      "keywords": [
+        "text compare online",
+        "diff checker free",
+        "compare two texts",
+        "text difference tool",
+        "line diff checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Text Extractor",
+      "url": "https://easyworktools.online/tools/text-extractor/",
+      "description": "Extract emails, URLs, phone numbers, hashtags, mentions, numbers, dates and IP addresses from any block of text online for free, with one click per category.",
+      "category": null,
+      "keywords": [
+        "extract emails from text",
+        "extract urls from text",
+        "text extractor online",
+        "extract phone numbers",
+        "extract hashtags"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Text Sorter & Line Counter",
+      "url": "https://easyworktools.online/tools/text-sorter-line-counter/",
+      "description": "Sort lines of text alphabetically, numerically or by length online for free, with a live line count. Ascending or descending order, case-insensitive option included.",
+      "category": null,
+      "keywords": [
+        "text sorter online",
+        "sort lines alphabetically",
+        "line counter",
+        "alphabetize list online",
+        "sort text tool"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Unit Converter",
+      "url": "https://easyworktools.online/tools/unit-converter/",
+      "description": "Convert length, weight, temperature, volume, area and speed online for free.",
+      "category": null,
+      "keywords": [
+        "unit converter",
+        "metric to imperial",
+        "length converter",
+        "weight converter",
+        "temperature converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Unix Timestamp Converter",
+      "url": "https://easyworktools.online/tools/unix-timestamp-converter/",
+      "description": "Convert Unix timestamps to human-readable dates and back online for free. Supports seconds and milliseconds, your local timezone and UTC, plus a live current timestamp.",
+      "category": null,
+      "keywords": [
+        "unix timestamp converter",
+        "epoch converter",
+        "timestamp to date",
+        "date to timestamp",
+        "unix time online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "URL Encoder & Decoder",
+      "url": "https://easyworktools.online/tools/url-encoder-decoder/",
+      "description": "Encode or decode URLs and query strings online for free. Percent-encode special characters or decode a URL-encoded string instantly in your browser.",
+      "category": null,
+      "keywords": [
+        "url encoder",
+        "url decoder",
+        "percent encoding tool",
+        "encode url online",
+        "decode url online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "URL Parser",
+      "url": "https://easyworktools.online/tools/url-parser/",
+      "description": "Parse any URL online for free into its protocol, host, port, path, query parameters and hash. Query string parameters are listed individually for easy inspection.",
+      "category": null,
+      "keywords": [
+        "url parser online",
+        "parse url free",
+        "url breakdown tool",
+        "query string parser",
+        "analyze url"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "URL Slug Generator",
+      "url": "https://easyworktools.online/tools/url-slug-generator/",
+      "description": "Turn any title or sentence into a clean, SEO-friendly URL slug online for free. Choose hyphen or underscore separators, lowercase output and live preview.",
+      "category": null,
+      "keywords": [
+        "url slug generator",
+        "slug generator online",
+        "seo slug creator",
+        "convert title to slug",
+        "permalink generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "UUID Generator",
+      "url": "https://easyworktools.online/tools/uuid-generator/",
+      "description": "Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.",
+      "category": null,
+      "keywords": [
+        "uuid generator",
+        "guid generator",
+        "uuid v4 generator",
+        "random uuid",
+        "uuid validator",
+        "generate uuid online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Word & Character Counter",
+      "url": "https://easyworktools.online/tools/word-character-counter/",
+      "description": "Count words, characters, sentences, paragraphs, reading time, speaking time and unique words online for free, plus quick checks against common character limits.",
+      "category": null,
+      "keywords": [
+        "word counter",
+        "character counter",
+        "word count online",
+        "character count tool",
+        "reading time calculator",
+        "speaking time calculator",
+        "unique word counter",
+        "social media character counter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "XML Sitemap Generator & Validator",
+      "url": "https://easyworktools.online/tools/xml-sitemap-generator/",
+      "description": "Generate a valid XML sitemap from a list of URLs, or paste an existing sitemap to validate its structure, find duplicate URLs and check size limits, online for free.",
+      "category": null,
+      "keywords": [
+        "xml sitemap generator",
+        "sitemap validator",
+        "sitemap generator online",
+        "create sitemap.xml",
+        "sitemap checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "YouTube Tag Generator",
+      "url": "https://easyworktools.online/tools/youtube-tag-generator/",
+      "description": "Generate structured, ready-to-paste YouTube video tags online for free.",
+      "category": null,
+      "keywords": [
+        "youtube tag generator",
+        "youtube tags",
+        "video tags generator",
+        "youtube seo"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "title": "AI Detector - How to Use AI Detector | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/ai-detector.html",
+      "description": "Learn how to use AI Detector: AI Content Detector. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "AI Humanizer - How to Use AI Humanizer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/ai-humanizer.html",
+      "description": "Learn how to use AI Humanizer: Use the AI Humanizer to make AI text sound more human. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "AI Rephraser - How to Use AI Rephraser | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/ai-rephraser.html",
+      "description": "Learn how to use AI Rephraser: AI Rephraser Content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Article Generator - How to Use Article Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/article-generator.html",
+      "description": "Learn how to use Article Generator: AI SEO Optimized Article Generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Article Rewriter - How to Use Article Rewriter | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/article-rewriter.html",
+      "description": "Learn how to use Article Rewriter: Rewrite an article. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Article Writer - How to Use Article Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/article-writer.html",
+      "description": "Learn how to use Article Writer: Create an article from a title. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Bill of Sale - How to Use Bill of Sale | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/bill-of-sale.html",
+      "description": "Learn how to use Bill of Sale: Generate bill of sale for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Blog Outline Generator - How to Use Blog Outline Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/blog-outline-generator.html",
+      "description": "Learn how to use Blog Outline Generator: Write Blog Outline. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Blog Post Generator - How to Use Blog Post Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/blog-post-generator.html",
+      "description": "Learn how to use Blog Post Generator: AI SEO Post Generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Blog Post Ideas - How to Use Blog Post Ideas | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/blog-post-ideas.html",
+      "description": "Learn how to use Blog Post Ideas: Write Blog Post Ideas. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Blog Post Rewriter - How to Use Blog Post Rewriter | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/blog-post-rewriter.html",
+      "description": "Learn how to use Blog Post Rewriter: Rephrase a blog post. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Business Name Generator - How to Use Business Name Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/business-name-generator.html",
+      "description": "Learn how to use Business Name Generator: Generate a business name for your idea. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Business Plan Generator - How to Use Business Plan Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/business-plan-generator.html",
+      "description": "Learn how to use Business Plan Generator: Generate business plan for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Business Slogan Generator - How to Use Business Slogan Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/business-slogan-generator.html",
+      "description": "Learn how to use Business Slogan Generator: Generate business slogan for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Cold Email Writer - How to Use Cold Email Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/cold-email-writer.html",
+      "description": "Learn how to use Cold Email Writer: Write cold email for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Content Brief Generator - How to Use Content Brief Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/content-brief-generator.html",
+      "description": "Learn how to use Content Brief Generator: Generate content brief for your article title. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Content Improver - How to Use Content Improver | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/content-improver.html",
+      "description": "Learn how to use Content Improver: Improve your content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Content Paraphraser - How to Use Content Paraphraser | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/content-paraphraser.html",
+      "description": "Learn how to use Content Paraphraser: Paraphrasing Content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Content Planner - How to Use Content Planner | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/content-planner.html",
+      "description": "Learn how to use Content Planner: Generate a simple content plan. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Content Shortener - How to Use Content Shortener | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/content-shortener.html",
+      "description": "Learn how to use Content Shortener: Resize your content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Content Summarizer - How to Use Content Summarizer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/content-summarizer.html",
+      "description": "Learn how to use Content Summarizer: Summarize text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Does Minifying HTML, CSS and JS Actually Speed Up Your Site? | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/does-minifying-code-improve-page-speed.html",
+      "description": "What code minification actually removes, how much it typically saves, and where it fits alongside compression and caching for real page speed gains.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Essay Writer - How to Use Essay Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/essay-writer.html",
+      "description": "Learn how to use Essay Writer: Easily create an essay with AI. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Explain It - How to Use Explain It | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/explain-it.html",
+      "description": "Learn how to use Explain It: Explain it like I",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Facebook Video Thumbnail Downloader — Free FB Cover Image Grabber | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/facebook-video-thumbnail-downloader.html",
+      "description": "Download the thumbnail or cover image of a public Facebook video for free. Simple steps using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "FAQ Generator - How to Use FAQ Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/faq-generator.html",
+      "description": "Learn how to use FAQ Generator: Generate FAQ for a blog. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "FB Headline Generator - How to Use FB Headline Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/fb-headline-generator.html",
+      "description": "Learn how to use FB Headline Generator: Generate Facebook ad headlines for your company. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Grammar Fixer - How to Use Grammar Fixer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/grammar-fixer.html",
+      "description": "Learn how to use Grammar Fixer: Easily fix the grammar in a block of text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Why Your iPhone Photos Won&#x27;t Open Everywhere (and How to Fix It) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/heic-to-jpg-iphone-photos-guide.html",
+      "description": "Why iPhone photos save as HEIC, why that format doesn&#x27;t open everywhere, and how to convert HEIC to JPG for free without installing anything.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "HEX vs RGB vs HSL: Converting Colors for CSS and Design | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/hex-rgb-hsl-color-conversion-guide.html",
+      "description": "The difference between HEX, RGB and HSL color formats, when to use each in CSS, and how to convert between them without doing the math by hand.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Add a Watermark to Your Photos Online | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-add-a-watermark-to-your-photos.html",
+      "description": "Learn how to add a text or logo watermark to your images for free using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Add a Background Color to a Transparent PNG | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-add-background-color-to-transparent-png.html",
+      "description": "Learn how to fill a transparent PNG or WebP with a solid background color using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Add a Border and Rounded Corners to an Image | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-add-border-and-rounded-corners-to-image.html",
+      "description": "Learn how to add a colored border and round the corners of any image, or make it fully circular, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Add a Watermark or Logo to a PDF | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-add-watermark-to-pdf.html",
+      "description": "Learn how to add a text watermark like DRAFT or CONFIDENTIAL, or your own logo, to every page of a PDF for free, with control over position, opacity and size.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Check an Image's Dimensions and Aspect Ratio | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-check-image-dimensions-and-aspect-ratio.html",
+      "description": "Learn how to check an image",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Clean Text Before Publishing It Online | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-clean-text-before-publishing.html",
+      "description": "Learn a practical workflow for cleaning copied text, standardizing capitalization, checking formatting and preparing text for websites and documents.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Clean Up Text Copied From a PDF or Old Document | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-clean-up-copied-text.html",
+      "description": "Why text copied from a PDF or scanned document brings along extra spaces, invisible characters and odd quotes, and how to strip all of it out at once.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Compare Two Images Online (Slider & Pixel Diff) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-compare-two-images-online.html",
+      "description": "Learn how to compare two images side by side with a slider, or highlight exact pixel differences, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Spot Every Change Between Two Versions of a Document | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-compare-two-texts.html",
+      "description": "How to compare two versions of a text online for free and see exactly which lines were added, removed or unchanged, with a similarity percentage.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Compress a JPEG to an Exact File Size (KB) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-compress-jpeg-to-target-size.html",
+      "description": "Learn how to compress a JPEG image to a specific file size in KB for upload limits, using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Shrink a PDF That&#x27;s Too Big to Email | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-compress-pdf-file-size.html",
+      "description": "Why scanned and image-heavy PDFs get so large, and how to compress a PDF to fit under email or upload-form size limits, for free and in your browser.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert Between JPG, PNG and WebP Online | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-image-formats-online.html",
+      "description": "Learn how to convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP for free using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert an Image to Base64 (and Back) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-image-to-base64.html",
+      "description": "Learn how to convert an image to a Base64 data URI for HTML/CSS, or decode Base64 back into an image, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Turn Photos Into a Single PDF (and Back Again) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-jpg-to-pdf.html",
+      "description": "A step-by-step guide to combining JPG or PNG images into one PDF document, and extracting individual pages from a PDF as JPG images, for free.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert JSON to CSV Without Losing Data | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-json-to-csv.html",
+      "description": "A practical guide to converting JSON arrays to CSV spreadsheets (and back), including how nested values, missing fields and quoting are handled correctly.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert Markdown to HTML (or Strip It to Plain Text) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-markdown-to-html.html",
+      "description": "How to convert Markdown to HTML with a live preview, strip Markdown formatting to plain text, or convert HTML to plain text, all for free in your browser.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert PDF to JPG/PNG and Images Back to PDF | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-pdf-to-images-and-back.html",
+      "description": "Learn how to turn PDF pages into JPG or PNG images, and how to combine JPG, PNG and WebP images into a single PDF, for free using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert Text Case Online: Uppercase, Lowercase, Title Case & More | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-text-case-online.html",
+      "description": "Learn how to convert text case online for free using EasyWorkTools.online. Step-by-step guide for uppercase, lowercase, title case, slug case and snake case.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Convert Units Online: Metric to Imperial Made Simple | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-convert-units-online.html",
+      "description": "Learn how to convert length, weight, temperature, volume, area and speed between metric and imperial units for free using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Hit an Exact Word or Character Count Every Time | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-count-words-and-characters.html",
+      "description": "How to accurately count words, characters, sentences and reading time for essays, ad copy, meta descriptions and character-limited fields online for free.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Create a Favicon for Your Website (Free) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-create-a-favicon-for-your-website.html",
+      "description": "Learn how to generate a complete favicon.ico and app icon set from one image, and add it to your site, using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Create SEO-Friendly URL Slugs From Any Title | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-create-seo-url-slugs.html",
+      "description": "What makes a good URL slug, why accented characters and stopwords cause problems, and how to turn any page title into a clean, lowercase slug.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Crop and Rotate a Photo Online for Free | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-crop-and-rotate-a-photo-online.html",
+      "description": "Learn how to crop an image to a custom or fixed aspect ratio, and rotate or flip it, using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to View, Edit or Remove PDF Metadata | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-edit-pdf-metadata.html",
+      "description": "Learn how to check what",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Edit Photos Online for Free (Filters & Adjustments) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-edit-photos-online-free.html",
+      "description": "Learn how to adjust brightness, contrast and saturation, and apply filters like grayscale and blur, using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Display Special Characters Safely in HTML | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-escape-html-special-characters.html",
+      "description": "Why characters like &lt; &gt; and &amp; need to be converted to HTML entities before displaying them on a page, and how encoding helps prevent broken markup and XSS.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Pull Every Email and Link Out of a Block of Text | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-extract-emails-and-urls-from-text.html",
+      "description": "How to extract every email address, URL, phone number, hashtag or date from a block of text online for free, without scanning it line by line.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Find the Exact Color From a Photo or Logo | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-find-a-color-from-an-image.html",
+      "description": "Learn how to pick an exact HEX, RGB or HSL color from any image, or extract a dominant palette, using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Find and Replace Text Across a Whole Document | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-find-and-replace-text.html",
+      "description": "How to find and replace text online, including whole-word matching, regex patterns with capture groups, and applying a whole list of substitutions at once.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Generate YouTube Tags That Actually Help Your Video | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-generate-youtube-tags.html",
+      "description": "Learn how to create a well-structured, properly formatted list of YouTube video tags for free using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Make a Photo Collage Online for Free | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-make-a-photo-collage-online.html",
+      "description": "Learn how to combine multiple photos into one grid collage for free using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Merge, Reorder and Organize PDF Pages Online | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-merge-and-organize-pdf-pages.html",
+      "description": "Learn how to combine multiple PDFs into one, fix page order, rotate sideways scans and pull out just the pages you need, for free using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Merge or Stitch Images Together Online | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-merge-or-stitch-images-together.html",
+      "description": "Learn how to join two or more images edge to edge, horizontally or vertically, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Combine Multiple PDFs Into One File for Free | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-merge-split-pdf-files.html",
+      "description": "How to merge several PDF files into one document, and how to split a PDF into individual pages or a specific page range, without installing software.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Reduce SVG File Size Without Breaking Your Icons | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-optimize-svg-files.html",
+      "description": "Learn why SVG files exported from design tools are often bloated, what safe cleanup actually removes, and how to shrink them without changing how they look.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Read a Long URL Full of Tracking Parameters | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-parse-and-read-a-url.html",
+      "description": "How to break a long, messy URL down into its protocol, host, path and individual query parameters, without manually counting ampersands and question marks.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Prepare Images for Websites, Documents and Social Media | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-prepare-images-for-web.html",
+      "description": "Learn how to choose image dimensions, aspect ratios, file formats and practical resizing settings for common digital workflows.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Reduce PDF File Size Without Losing Selectable Text | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-reduce-pdf-file-size.html",
+      "description": "Learn the difference between optimizing a PDF",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Add Line Numbers, Prefixes and More to a List | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-reformat-a-list-of-lines.html",
+      "description": "How to number lines, add a prefix or suffix to every line, filter a list by pattern, or convert between a newline list and a comma-separated string, for free.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Clean Up a Messy Email List or Keyword List Fast | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-remove-duplicate-lines-from-a-list.html",
+      "description": "How to strip duplicate lines from a merged email list, keyword list or exported data set online for free, with case-insensitive matching and trimming.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Remove EXIF Metadata From Your Photos | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-remove-exif-metadata-from-photos.html",
+      "description": "Learn how to view hidden EXIF data and strip GPS, camera and date metadata from your photos for privacy, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Resize Images for Every Social Platform | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-resize-images-for-every-social-platform.html",
+      "description": "Learn how to crop and resize a photo to the exact size for Instagram, YouTube, Facebook, LinkedIn and profile pictures, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Resize Images Online for Free: A Simple Step-by-Step Guide | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-resize-images-online.html",
+      "description": "Learn how to resize images online for free using EasyWorkTools.online. Follow this step-by-step guide for custom dimensions, platform presets, previewing and downloading resized images.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Resize vs Compress Images: What Is the Difference? | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-resize-vs-compress-images.html",
+      "description": "Understand the difference between resizing an image and compressing an image, when each method is useful, and how to choose a practical workflow.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Alphabetize a List Online in Seconds | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-sort-a-list-alphabetically-online.html",
+      "description": "How to sort a list alphabetically, numerically or by line length online for free, with ascending or descending order and a live line count.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Split an Image Into a Grid Online | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-split-an-image-into-a-grid.html",
+      "description": "Learn how to slice one image into a grid of rows and columns for an Instagram grid or other layout, using EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Test a Regular Expression Before Using It in Code | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-test-regular-expressions.html",
+      "description": "How to test a regex pattern against real sample text, what the global, case-insensitive and multiline flags actually change, and common mistakes to check for.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Verify an Image File's Real Format and Integrity | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-verify-an-image-file-is-genuine.html",
+      "description": "Learn how to check a file",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "How to Write Meta Tags That Don&#x27;t Get Cut Off in Google | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/how-to-write-seo-meta-tags.html",
+      "description": "Recommended title and meta description lengths, what Open Graph and Twitter Card tags are for, and how to generate a complete, correctly formatted set.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Instagram Caption Generator - How to Use Instagram Caption Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/instagram-caption-generator.html",
+      "description": "Learn how to use Instagram Caption Generator: Generate Instagram caption for your post. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Instagram Reel & Post Cover Downloader — Free HD Grabber | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/instagram-reel-post-cover-downloader.html",
+      "description": "Download the cover image of a public Instagram Reel or post in HD for free. Step-by-step guide using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Instagram Story Idea - How to Use Instagram Story Idea | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/instagram-story-idea.html",
+      "description": "Learn how to use Instagram Story Idea: Generate Instagram story ideas for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Landing Page Copy Generator - How to Use Landing Page Copy Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/landing-page-copy-generator.html",
+      "description": "Learn how to use Landing Page Copy Generator: Generate landing page copy. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "LinkedIn Post Generator - How to Use LinkedIn Post Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/linkedin-post-generator.html",
+      "description": "Learn how to use LinkedIn Post Generator: Generate LinkedIn post for your profile. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "MD5 vs SHA-256: Hashing Explained (and Why It Isn't Encryption) | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/md5-vs-sha256-hashing-explained.html",
+      "description": "What a hash function actually does, why MD5 and SHA-1 are considered broken, when SHA-256 is the right choice, and why hashing is not the same as encryption.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Meta Description Generator - How to Use Meta Description Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/meta-description-generator.html",
+      "description": "Learn how to use Meta Description Generator: Generate a meta description for your article. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "NDA Generator - How to Use NDA Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/nda-generator.html",
+      "description": "Learn how to use NDA Generator: Generate NDA for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Paragraph Completer - How to Use Paragraph Completer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/paragraph-completer.html",
+      "description": "Learn how to use Paragraph Completer: Paragraph Completer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Paragraph Rewriter - How to Use Paragraph Rewriter | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/paragraph-rewriter.html",
+      "description": "Learn how to use Paragraph Rewriter: Rephrase a paragraph. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Paragraph Writer - How to Use Paragraph Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/paragraph-writer.html",
+      "description": "Learn how to use Paragraph Writer: Paragraph Writer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Pinterest Pin & Video Thumbnail Downloader — Free HD Grabber | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/pinterest-pin-thumbnail-downloader.html",
+      "description": "Download the cover image of a public Pinterest Pin or video Pin for free. Simple step-by-step guide using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Podcast Script Writer - How to Use Podcast Script Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/podcast-script-writer.html",
+      "description": "Learn how to use Podcast Script Writer: Podcast Script Generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Poll Generator - How to Use Poll Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/poll-generator.html",
+      "description": "Learn how to use Poll Generator: AI Generated Polls. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Post Writer - How to Use Post Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/post-writer.html",
+      "description": "Learn how to use Post Writer: Generate a blog post. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Press Release Generator - How to Use Press Release Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/press-release-generator.html",
+      "description": "Learn how to use Press Release Generator: Generate a press release. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Privacy Policy Generator - How to Use Privacy Policy Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/privacy-policy-generator.html",
+      "description": "Learn how to use Privacy Policy Generator: Generate privacy policy for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Purchase Agreement - How to Use Purchase Agreement | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/purchase-agreement.html",
+      "description": "Learn how to use Purchase Agreement: Generate purchase agreement for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Real Estate Descriptions - How to Use Real Estate Descriptions | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/real-estate-descriptions.html",
+      "description": "Learn how to use Real Estate Descriptions: Generate Real Estate Descriptions for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Search - How to Use Search | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/search.html",
+      "description": "Learn how to use Search: Search. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Sentence Rewriter - How to Use Sentence Rewriter | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/sentence-rewriter.html",
+      "description": "Learn how to use Sentence Rewriter: Sentence Rewriter. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Story Generator - How to Use Story Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/story-generator.html",
+      "description": "Learn how to use Story Generator: Generate a Story. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Summarize YouTube - How to Use Summarize YouTube | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/summarize-youtube.html",
+      "description": "Learn how to use Summarize YouTube: Summarize YouTube Video. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "TikTok Script Writer - How to Use TikTok Script Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/tiktok-script-writer.html",
+      "description": "Learn how to use TikTok Script Writer: TikTok Script Writer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "TikTok Thumbnail Downloader — Download TikTok Video Covers Free | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/tiktok-thumbnail-downloader.html",
+      "description": "Download the cover image (thumbnail) of any public TikTok video for free. Step-by-step guide using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Title Rewriter - How to Use Title Rewriter | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/title-rewriter.html",
+      "description": "Learn how to use Title Rewriter: Rewrite your article title. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Tone of Voice - How to Use Tone of Voice | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/tone-of-voice.html",
+      "description": "Learn how to use Tone of Voice: Tone of Voice Tool. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Translate - How to Use Translate | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/translate.html",
+      "description": "Learn how to use Translate: Easily Translate Text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Trivia Generator - How to Use Trivia Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/trivia-generator.html",
+      "description": "Learn how to use Trivia Generator: Generate Trivia Questions. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Twitter Generator - How to Use Twitter Generator | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/twitter-generator.html",
+      "description": "Learn how to use Twitter Generator: Twitter generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Unix Timestamps Explained: Converting Epoch Time to a Real Date | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/unix-timestamp-explained.html",
+      "description": "What a Unix timestamp is, why seconds and milliseconds get confused so often, and how to convert epoch time to a readable date in your local timezone or UTC.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Uppercase, Lowercase and Title Case: When to Use Each Text Style | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/uppercase-lowercase-title-case-guide.html",
+      "description": "A practical guide to common text case styles, including uppercase, lowercase, title case, sentence case and when each is useful.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "URL Encoding Explained: When and Why to Percent-Encode Text | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/url-encoding-explained.html",
+      "description": "What percent-encoding actually does, the difference between encodeURIComponent and encodeURI, and when you need each one in a real URL or query string.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "UUID Versions Explained: v1 vs v4, and What They Actually Encode | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/uuid-versions-explained.html",
+      "description": "What a UUID actually is, the difference between version 1 (time-based) and version 4 (random), and how to generate or inspect one for free.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Vimeo Video Thumbnail Downloader — Free HD Cover Grabber | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/vimeo-thumbnail-downloader.html",
+      "description": "Download the thumbnail or cover image of a public Vimeo video for free. Step-by-step guide using EasyWorkTools.online",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "What Is Base64 Encoding and When Do You Actually Need It? | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/what-is-base64-encoding.html",
+      "description": "A plain-language explanation of Base64 encoding, why it shows up in data URIs and API tokens, and why it is not a form of encryption or security.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "What Is a Flesch Reading Ease Score, and Does It Matter? | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/what-is-flesch-reading-ease-score.html",
+      "description": "What the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas actually measure, what a good score looks like, and where these formulas fall short.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "What Is Keyword Density and Does It Still Matter for SEO? | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/what-is-keyword-density-seo.html",
+      "description": "What keyword density actually measures, why old-school density targets are outdated advice, and how to use a density checker sensibly before publishing.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "What Is Lorem Ipsum and Why Do Designers Still Use It? | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/what-is-lorem-ipsum.html",
+      "description": "What Lorem Ipsum placeholder text actually is, where it came from, and how to generate exactly as much as you need for a mockup or template.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "Word Counter - How to Use Word Counter | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/word-counter.html",
+      "description": "Learn how to use Word Counter: Count words in your text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "YouTube Script Writer - How to Use YouTube Script Writer | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/youtube-script-writer.html",
+      "description": "Learn how to use YouTube Script Writer: Generate a YouTube script. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    },
+    {
+      "title": "YouTube Thumbnail Downloader — Download HD YouTube Thumbnails Free | EasyWorkTools.online",
+      "url": "https://easyworktools.online/blog/youtube-thumbnail-downloader.html",
+      "description": "Download any YouTube video",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage"
+      ]
+    }
+  ]
+}

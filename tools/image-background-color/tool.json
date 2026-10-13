@@ -1,0 +1,12 @@
+{
+    "title":  "Image Background Color Tool",
+    "description":  "Add a solid background color behind a transparent PNG or WebP online for free.",
+    "tags":  [
+                 "add background color to png",
+                 "transparent png background",
+                 "fill transparent image"
+             ],
+    "url":  "tools/image-background-color/",
+    "iconKey":  "bg-color",
+    "category":  "Image Tools"
+}

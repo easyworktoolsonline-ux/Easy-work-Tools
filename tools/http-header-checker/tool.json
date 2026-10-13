@@ -1,0 +1,13 @@
+{
+    "title":  "HTTP Header \u0026 Status Code Checker",
+    "description":  "Paste raw HTTP response headers to decode the status code, Cache-Control, security headers and compression, with plain-language explanations, online for free.",
+    "tags":  [
+                 "http header checker",
+                 "http status code checker",
+                 "cache-control analyzer",
+                 "security header checker"
+             ],
+    "url":  "tools/http-header-checker/",
+    "iconKey":  "http-header",
+    "category":  "SEO Tools"
+}

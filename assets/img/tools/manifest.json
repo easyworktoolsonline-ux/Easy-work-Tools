@@ -1,0 +1,47 @@
+{
+  "ai-write/essay-writer": {
+    "file": "assets/img/tools/ai-write-essay-writer.webp",
+    "w": 560,
+    "h": 300
+  },
+  "easy-image-resizer": {
+    "file": "assets/img/tools/easy-image-resizer.webp",
+    "w": 560,
+    "h": 300
+  },
+  "pdf-merge-split": {
+    "file": "assets/img/tools/pdf-merge-split.webp",
+    "w": 560,
+    "h": 300
+  },
+  "json-formatter": {
+    "file": "assets/img/tools/json-formatter.webp",
+    "w": 560,
+    "h": 300
+  },
+  "seo-page-analyzer": {
+    "file": "assets/img/tools/seo-page-analyzer.webp",
+    "w": 560,
+    "h": 300
+  },
+  "online-text-case-converter": {
+    "file": "assets/img/tools/online-text-case-converter.webp",
+    "w": 560,
+    "h": 300
+  },
+  "unit-converter": {
+    "file": "assets/img/tools/unit-converter.webp",
+    "w": 560,
+    "h": 300
+  },
+  "age-calculator": {
+    "file": "assets/img/tools/age-calculator.webp",
+    "w": 560,
+    "h": 300
+  },
+  "password-generator": {
+    "file": "assets/img/tools/password-generator.webp",
+    "w": 560,
+    "h": 300
+  }
+}

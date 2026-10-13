@@ -1,0 +1,14 @@
+{
+    "title":  "Schema Markup Generator \u0026 JSON-LD Validator",
+    "description":  "Generate valid JSON-LD structured data for Article, Product, LocalBusiness, FAQ, HowTo, Review and 7 more schema types, or paste existing JSON-LD to validate it, online for free.",
+    "tags":  [
+                 "schema markup generator",
+                 "json-ld generator",
+                 "structured data generator",
+                 "schema validator",
+                 "faq schema generator"
+             ],
+    "url":  "tools/schema-markup-generator/",
+    "iconKey":  "schema-ld",
+    "category":  "SEO Tools"
+}

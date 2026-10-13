@@ -1,0 +1,257 @@
+# EasyWorkTools.online
+
+> Free, private, browser-based tools for everyday digital work. Text, image, PDF
+> and developer utilities that run entirely in the visitor's browser - nothing is
+> uploaded to a server.
+
+EasyWorkTools.online is a static site of 127 free online tools and 121
+how-to guides. Every tool runs client-side: text never leaves the browser, and
+there is no account, paywall or email capture.
+
+**Canonical origin:** https://easyworktools.online
+
+## Index
+
+- [Tools](#tools) - 127 utilities, listed by category
+- [Blog](#blog) - 121 how-to guides
+- [Legal and informational pages](#legal-and-informational-pages)
+- [How the tools work](#how-the-tools-work)
+- [Machine-readable data](#machine-readable-data)
+- [Contact](#contact)
+
+## Categories
+
+Every tool is also reachable from a per-category page that lists the whole set:
+
+- [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarise and generate content with free AI writing tools that run in your browser. (54 tools)
+- [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (23 tools)
+- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress and watermark PDF files for free, with no account and nothing to install. (7 tools)
+- [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (13 tools)
+- [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (13 tools)
+- [Text Tools](https://easyworktools.online/categories/text/) - Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics. (12 tools)
+- [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between units and everyday measurements using a single free online converter. (1 tool)
+- [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate calculators for everyday arithmetic, percentages and dates. (2 tools)
+- [Utility Tools](https://easyworktools.online/categories/utility/) - Small everyday utilities for generating secure passwords and converting colours. (2 tools)
+
+## Tools
+
+Browse all tools: https://easyworktools.online/tools/
+
+### AI Write (54)
+
+- [AI Detector](https://easyworktools.online/tools/ai-write/ai-detector/) - AI Content Detector
+- [AI Humanizer](https://easyworktools.online/tools/ai-write/ai-humanizer/) - Use the AI Humanizer to make AI text sound more human
+- [AI Rephraser](https://easyworktools.online/tools/ai-write/ai-rephraser/) - AI Rephraser Content
+- [Article Generator](https://easyworktools.online/tools/ai-write/article-generator/) - AI SEO Optimized Article Generator
+- [Article Rewriter](https://easyworktools.online/tools/ai-write/article-rewriter/) - Rewrite an article
+- [Article Writer](https://easyworktools.online/tools/ai-write/article-writer/) - Create an article from a title
+- [Bill of Sale](https://easyworktools.online/tools/ai-write/bill-of-sale/) - Generate bill of sale for your
+- [Blog Outline Generator](https://easyworktools.online/tools/ai-write/blog-outline-generator/) - Write Blog Outline
+- [Blog Post Generator](https://easyworktools.online/tools/ai-write/blog-post-generator/) - AI SEO Post Generator
+- [Blog Post Ideas](https://easyworktools.online/tools/ai-write/blog-post-ideas/) - Write Blog Post Ideas
+- [Blog Post Rewriter](https://easyworktools.online/tools/ai-write/blog-post-rewriter/) - Rephrase a blog post
+- [Business Name Generator](https://easyworktools.online/tools/ai-write/business-name-generator/) - Generate a business name for your idea
+- [Business Plan Generator](https://easyworktools.online/tools/ai-write/business-plan-generator/) - Generate business plan for you
+- [Business Slogan Generator](https://easyworktools.online/tools/ai-write/business-slogan-generator/) - Generate business slogan for you
+- [Cold Email Writer](https://easyworktools.online/tools/ai-write/cold-email-writer/) - Write cold email for you
+- [Content Brief Generator](https://easyworktools.online/tools/ai-write/content-brief-generator/) - Generate content brief for your article title
+- [Content Improver](https://easyworktools.online/tools/ai-write/content-improver/) - Improve your content
+- [Content Paraphraser](https://easyworktools.online/tools/ai-write/content-paraphraser/) - Paraphrasing Content
+- [Content Planner](https://easyworktools.online/tools/ai-write/content-planner/) - Generate a simple content plan
+- [Content Shortener](https://easyworktools.online/tools/ai-write/content-shortener/) - Resize your content
+- [Content Summarizer](https://easyworktools.online/tools/ai-write/content-summarizer/) - Summarize text
+- [Essay Writer](https://easyworktools.online/tools/ai-write/essay-writer/) - Easily create an essay with AI
+- [Explain It](https://easyworktools.online/tools/ai-write/explain-it/) - Explain it like I'm five
+- [FAQ Generator](https://easyworktools.online/tools/ai-write/faq-generator/) - Generate FAQ for a blog
+- [FB Headline Generator](https://easyworktools.online/tools/ai-write/fb-headline-generator/) - Generate Facebook ad headlines for your company
+- [Grammar Fixer](https://easyworktools.online/tools/ai-write/grammar-fixer/) - Easily fix the grammar in a block of text
+- [Instagram Caption Generator](https://easyworktools.online/tools/ai-write/instagram-caption-generator/) - Generate Instagram caption for your post
+- [Instagram Story Idea](https://easyworktools.online/tools/ai-write/instagram-story-idea/) - Generate Instagram story ideas for you
+- [Landing Page Copy Generator](https://easyworktools.online/tools/ai-write/landing-page-copy-generator/) - Generate landing page copy
+- [LinkedIn Post Generator](https://easyworktools.online/tools/ai-write/linkedin-post-generator/) - Generate LinkedIn post for your profile
+- [Meta Description Generator](https://easyworktools.online/tools/ai-write/meta-description-generator/) - Generate a meta description for your article
+- [NDA Generator](https://easyworktools.online/tools/ai-write/nda-generator/) - Generate NDA for your
+- [Paragraph Completer](https://easyworktools.online/tools/ai-write/paragraph-completer/) - Paragraph Completer
+- [Paragraph Rewriter](https://easyworktools.online/tools/ai-write/paragraph-rewriter/) - Rephrase a paragraph
+- [Paragraph Writer](https://easyworktools.online/tools/ai-write/paragraph-writer/) - Paragraph Writer
+- [Podcast Script Writer](https://easyworktools.online/tools/ai-write/podcast-script-writer/) - Podcast Script Generator
+- [Poll Generator](https://easyworktools.online/tools/ai-write/poll-generator/) - AI Generated Polls
+- [Post Writer](https://easyworktools.online/tools/ai-write/post-writer/) - Generate a blog post
+- [Press Release Generator](https://easyworktools.online/tools/ai-write/press-release-generator/) - Generate a press release
+- [Privacy Policy Generator](https://easyworktools.online/tools/ai-write/privacy-policy-generator/) - Generate privacy policy for your
+- [Purchase Agreement](https://easyworktools.online/tools/ai-write/purchase-agreement/) - Generate purchase agreement for your
+- [Real Estate Descriptions](https://easyworktools.online/tools/ai-write/real-estate-descriptions/) - Generate Real Estate Descriptions for your
+- [Search](https://easyworktools.online/tools/ai-write/search/) - Search
+- [Sentence Rewriter](https://easyworktools.online/tools/ai-write/sentence-rewriter/) - Sentence Rewriter
+- [Story Generator](https://easyworktools.online/tools/ai-write/story-generator/) - Generate a Story
+- [Summarize YouTube](https://easyworktools.online/tools/ai-write/summarize-youtube/) - Summarize YouTube Video
+- [TikTok Script Writer](https://easyworktools.online/tools/ai-write/tiktok-script-writer/) - TikTok Script Writer
+- [Title Rewriter](https://easyworktools.online/tools/ai-write/title-rewriter/) - Rewrite your article title
+- [Tone of Voice](https://easyworktools.online/tools/ai-write/tone-of-voice/) - Tone of Voice Tool
+- [Translate](https://easyworktools.online/tools/ai-write/translate/) - Easily Translate Text
+- [Trivia Generator](https://easyworktools.online/tools/ai-write/trivia-generator/) - Generate Trivia Questions
+- [Twitter Generator](https://easyworktools.online/tools/ai-write/twitter-generator/) - Twitter generator
+- [Word Counter](https://easyworktools.online/tools/ai-write/word-counter/) - Count words in your text
+- [YouTube Script Writer](https://easyworktools.online/tools/ai-write/youtube-script-writer/) - Generate a YouTube script
+
+### Text (12)
+
+- [Find & Replace](https://easyworktools.online/tools/find-and-replace/) - Find and replace text online for free, including whole-word, case-sensitive and regex matching, plus multi-replace for applying a whole list of substitutions at once.
+- [Line & List Tools](https://easyworktools.online/tools/line-list-tools/) - Reverse, shuffle, number, filter and reformat lines of text online for free. Add a prefix or suffix to every line, extract matching lines, or convert a list to a comma-separated string.
+- [Lorem Ipsum Generator](https://easyworktools.online/tools/lorem-ipsum-generator/) - Generate Lorem Ipsum placeholder text online for free — by paragraphs, sentences or words, with an optional classic opening line and HTML output.
+- [Online Text Case Converter](https://easyworktools.online/tools/online-text-case-converter/) - Convert text to uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, dot.case and more online for free.
+- [Readability Checker](https://easyworktools.online/tools/readability-checker/) - Check the readability of your writing online for free with the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas, explained in plain language.
+- [Readability Score Checker](https://easyworktools.online/tools/readability-score-checker/) - Paste your text to get a Flesch Reading Ease score, Flesch-Kincaid grade level, and sentence/paragraph length breakdown, online for free.
+- [Remove Duplicate Lines](https://easyworktools.online/tools/remove-duplicate-lines/) - Remove duplicate lines from a list or block of text online for free. Case-sensitive or case-insensitive matching, with optional sorting and trimming.
+- [Text Cleaner](https://easyworktools.online/tools/text-cleaner/) - Clean up messy text online for free: remove extra spaces, empty lines, duplicate lines, tabs, invisible characters, accents and fix smart quotes — all at once or one at a time.
+- [Text Compare](https://easyworktools.online/tools/text-compare/) - Compare two blocks of text online for free and see exactly which lines were added, removed or changed, with a similarity percentage — all processed in your browser.
+- [Text Extractor](https://easyworktools.online/tools/text-extractor/) - Extract emails, URLs, phone numbers, hashtags, mentions, numbers, dates and IP addresses from any block of text online for free, with one click per category.
+- [Text Sorter & Line Counter](https://easyworktools.online/tools/text-sorter-line-counter/) - Sort lines of text alphabetically, numerically or by length online for free, with a live line count. Ascending or descending order, case-insensitive option included.
+- [Word & Character Counter](https://easyworktools.online/tools/word-character-counter/) - Count words, characters, sentences, paragraphs, reading time, speaking time and unique words online for free, plus quick checks against common character limits.
+
+### Image (23)
+
+- [Easy Image Resizer](https://easyworktools.online/tools/easy-image-resizer/) - Resize and edit images online for free in your browser.
+- [Easy Thumbnail Downloader](https://easyworktools.online/tools/easy-thumbnail-downloader/) - Download HD thumbnails from YouTube, Facebook, Instagram, TikTok, Pinterest and Vimeo links.
+- [Favicon & App Icon Generator](https://easyworktools.online/tools/favicon-generator/) - Generate a complete favicon.ico and app icon PNG set from one image online for free.
+- [Free Image Compressor](https://easyworktools.online/tools/free-image-compressor/) - Compress JPG, PNG and WebP images online for free in your browser.
+- [HEIC to JPG Converter](https://easyworktools.online/tools/heic-to-jpg-converter/) - Convert HEIC photos from iPhone to JPG online for free. Upload one or more .heic files and download high-quality JPG images, all processed in your browser.
+- [Image Background Color Tool](https://easyworktools.online/tools/image-background-color/) - Add a solid background color behind a transparent PNG or WebP online for free.
+- [Image Border, Frame & Rounded Corners](https://easyworktools.online/tools/image-border-rounded/) - Add a border, frame and rounded corners to any image online for free.
+- [Image Collage Maker](https://easyworktools.online/tools/image-collage-maker/) - Combine 2 to 9 photos into a grid collage online for free in your browser.
+- [Image Color Picker & Palette Extractor](https://easyworktools.online/tools/image-color-picker/) - Pick an exact pixel color or extract the dominant palette from any image online for free.
+- [Image Compare & Difference Checker](https://easyworktools.online/tools/image-compare/) - Compare two images with a slider or highlight pixel differences between them online for free.
+- [Image Crop & Rotate](https://easyworktools.online/tools/image-crop-rotate/) - Crop to any aspect ratio, rotate and flip images online for free in your browser.
+- [Image Dimensions & Aspect Ratio](https://easyworktools.online/tools/image-dimensions-checker/) - Check image width, height, megapixels and aspect ratio, or calculate a missing dimension online for free.
+- [Image Editor](https://easyworktools.online/tools/image-editor/) - Adjust brightness, contrast, saturation and apply filters like grayscale, blur and pixelate online for free.
+- [Image Format Converter](https://easyworktools.online/tools/image-format-converter/) - Convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP online for free.
+- [Image Hash & File Signature Checker](https://easyworktools.online/tools/image-hash-checker/) - Generate SHA-256, SHA-1 and MD5 hashes and verify a file's real format from its signature, online for free.
+- [Image Merge & Stitch](https://easyworktools.online/tools/image-merge-stitch/) - Merge or stitch multiple images edge to edge, horizontally or vertically, online for free.
+- [Image Metadata Viewer & Remover](https://easyworktools.online/tools/image-metadata-viewer/) - View EXIF camera and GPS data, or strip all metadata from an image online for free.
+- [Image Splitter](https://easyworktools.online/tools/image-splitter/) - Split one image into a grid of rows and columns online for free, with individual downloads.
+- [Image to Base64 Converter](https://easyworktools.online/tools/image-to-base64/) - Convert an image to a Base64 data URI, or decode Base64 back to an image, online for free.
+- [Image Watermark Tool](https://easyworktools.online/tools/image-watermark/) - Add a text or logo watermark to images online for free in your browser.
+- [JPEG Compressor](https://easyworktools.online/tools/jpeg-compressor/) - Compress JPEG images online for free, by quality or exact target file size in KB.
+- [Social Share Preview](https://easyworktools.online/tools/social-share-preview/) - See how your link will look when shared on Facebook, X (Twitter) and LinkedIn using your Open Graph and Twitter Card tags, online for free.
+- [SVG Optimizer](https://easyworktools.online/tools/svg-optimizer/) - Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.
+
+### PDF (7)
+
+- [JPG ↔ PDF Converter](https://easyworktools.online/tools/jpg-pdf-converter/) - Convert JPG images to a single PDF, or extract JPG pages from a PDF, online for free. Reorder photos, choose page size, and download instantly in your browser.
+- [PDF ⇄ Images Converter](https://easyworktools.online/tools/pdf-images-converter/) - Convert PDF pages to JPG or PNG images, or combine JPG, PNG and WebP images into one PDF, free in your browser.
+- [PDF Compressor](https://easyworktools.online/tools/pdf-compressor/) - Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.
+- [PDF Merger & Splitter](https://easyworktools.online/tools/pdf-merge-split/) - Merge multiple PDF files into one, or split a PDF into separate pages, online for free. Reorder files before merging and download instantly, all in your browser.
+- [PDF Metadata Editor](https://easyworktools.online/tools/pdf-metadata-editor/) - View and edit a PDF's title, author, subject, keywords and other document properties, or clear them entirely, free in your browser.
+- [PDF Organizer](https://easyworktools.online/tools/pdf-organizer/) - Merge multiple PDFs, reorder, rotate, delete or extract pages, all in your browser for free.
+- [PDF Watermark & Branding](https://easyworktools.online/tools/pdf-watermark/) - Add a text or image watermark to every page of a PDF — control opacity, size, rotation and position, free in your browser.
+
+### Developer (13)
+
+- [Base64 Encoder & Decoder](https://easyworktools.online/tools/base64-encoder-decoder/) - Encode or decode Base64 text and files online for free. Convert text to Base64, decode Base64 back to text, or convert a file to a Base64 data URI.
+- [Hash Generator](https://easyworktools.online/tools/hash-generator/) - Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or a file online for free. Compare two hashes for a match.
+- [HTML Entity Encoder & Decoder](https://easyworktools.online/tools/html-entity-encoder-decoder/) - Encode text to HTML entities or decode HTML entities back to plain text online for free. Handles special characters, symbols and accented letters instantly.
+- [HTML/CSS/JS Minifier](https://easyworktools.online/tools/html-css-js-minifier/) - Minify HTML, CSS or JavaScript online for free. Strip comments and unnecessary whitespace to reduce file size, with before/after size comparison.
+- [JSON ↔ CSV Converter](https://easyworktools.online/tools/json-csv-converter/) - Convert JSON to CSV or CSV to JSON online for free. Paste an array of objects or a CSV table and get a clean, downloadable result instantly in your browser.
+- [JSON Formatter](https://easyworktools.online/tools/json-formatter/) - Format, validate and minify JSON online for free in your browser.
+- [JWT Decoder](https://easyworktools.online/tools/jwt-decoder/) - Decode a JSON Web Token (JWT) online for free. View the header and payload as readable JSON, with expiry and issued-at claims shown as dates.
+- [Markdown ↔ HTML Converter](https://easyworktools.online/tools/markdown-html-converter/) - Convert Markdown to HTML, Markdown to plain text, or HTML to plain text online for free, with a live safe preview and one-click copy of the result.
+- [Regex Tester](https://easyworktools.online/tools/regex-tester/) - Test regular expressions online for free. Highlight matches in your text live, see capture groups, and get flag options for global, case-insensitive and multiline matching.
+- [Unix Timestamp Converter](https://easyworktools.online/tools/unix-timestamp-converter/) - Convert Unix timestamps to human-readable dates and back online for free. Supports seconds and milliseconds, your local timezone and UTC, plus a live current timestamp.
+- [URL Encoder & Decoder](https://easyworktools.online/tools/url-encoder-decoder/) - Encode or decode URLs and query strings online for free. Percent-encode special characters or decode a URL-encoded string instantly in your browser.
+- [URL Parser](https://easyworktools.online/tools/url-parser/) - Parse any URL online for free into its protocol, host, port, path, query parameters and hash. Query string parameters are listed individually for easy inspection.
+- [UUID Generator](https://easyworktools.online/tools/uuid-generator/) - Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.
+
+### SEO (13)
+
+- [Canonical & Meta Robots Checker](https://easyworktools.online/tools/canonical-robots-checker/) - Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.
+- [Google SERP Snippet Preview](https://easyworktools.online/tools/serp-snippet-preview/) - See how your title and meta description will look in Google search results on desktop and mobile, with real pixel-width truncation warnings, online for free.
+- [Hreflang Generator & Validator](https://easyworktools.online/tools/hreflang-generator/) - Build hreflang link tags for international and multilingual SEO with language-region code validation, or paste HTML to check existing hreflang tags for errors, online for free.
+- [HTTP Header & Status Code Checker](https://easyworktools.online/tools/http-header-checker/) - Paste raw HTTP response headers to decode the status code, Cache-Control, security headers and compression, with plain-language explanations, online for free.
+- [Keyword Density Checker](https://easyworktools.online/tools/keyword-density-checker/) - Check keyword density and word frequency in any text online for free. See how often single words and two or three word phrases repeat, with percentages.
+- [Meta Tag Generator](https://easyworktools.online/tools/meta-tag-generator/) - Generate SEO meta title and description tags, plus Open Graph and Twitter Card tags, online for free. Live character counters and ready-to-paste HTML output.
+- [Redirect Rules Generator & Chain Checker](https://easyworktools.online/tools/redirect-rules-generator/) - Generate 301/302/307/308 redirect rules for Apache, Nginx, Netlify and Vercel, or paste a URL mapping to detect redirect chains, loops and duplicate sources, online for free.
+- [Robots.txt Generator & Tester](https://easyworktools.online/tools/robots-txt-generator/) - Build a valid robots.txt file with a rule builder, or paste an existing robots.txt and test whether a URL path is allowed or blocked for a given crawler, online for free.
+- [Schema Markup Generator & JSON-LD Validator](https://easyworktools.online/tools/schema-markup-generator/) - Generate valid JSON-LD structured data for Article, Product, LocalBusiness, FAQ, HowTo, Review and 7 more schema types, or paste existing JSON-LD to validate it, online for free.
+- [SEO Page Analyzer](https://easyworktools.online/tools/seo-page-analyzer/) - Paste a page's HTML source to get a full on-page SEO checklist: title, meta description, heading structure, word count, image alt text, links, canonical, robots and more, online for free.
+- [URL Slug Generator](https://easyworktools.online/tools/url-slug-generator/) - Turn any title or sentence into a clean, SEO-friendly URL slug online for free. Choose hyphen or underscore separators, lowercase output and live preview.
+- [XML Sitemap Generator & Validator](https://easyworktools.online/tools/xml-sitemap-generator/) - Generate a valid XML sitemap from a list of URLs, or paste an existing sitemap to validate its structure, find duplicate URLs and check size limits, online for free.
+- [YouTube Tag Generator](https://easyworktools.online/tools/youtube-tag-generator/) - Generate structured, ready-to-paste YouTube video tags online for free.
+
+### Converter (1)
+
+- [Unit Converter](https://easyworktools.online/tools/unit-converter/) - Convert length, weight, temperature, volume, area and speed online for free.
+
+### Calculator (2)
+
+- [Age Calculator](https://easyworktools.online/tools/age-calculator/) - Calculate exact age in years, months and days online for free.
+- [Percentage Calculator](https://easyworktools.online/tools/percentage-calculator/) - Calculate percentages, percentage increase/decrease and ratios online for free.
+
+### Utility (2)
+
+- [Color Picker & Converter](https://easyworktools.online/tools/color-picker-converter/) - Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.
+- [Password Generator](https://easyworktools.online/tools/password-generator/) - Generate strong, random passwords online for free with a live strength meter.
+
+## Blog
+
+Browse all guides: https://easyworktools.online/blog/
+
+Every guide is an original, practical walkthrough of one tool or one task, with
+worked examples, the mistakes people actually make, and answers to the questions
+readers ask in the comments.
+
+## Legal and informational pages
+
+- [About](https://easyworktools.online/about.html) - what the site is and is not
+- [Contact](https://easyworktools.online/contact.html) - EasyWorkTools.online@gmail.com
+- [Privacy Policy](https://easyworktools.online/privacy.html)
+- [Cookie Policy](https://easyworktools.online/cookies.html)
+- [Terms and Conditions](https://easyworktools.online/terms.html)
+- [Disclaimer](https://easyworktools.online/disclaimer.html)
+- [Resources](https://easyworktools.online/resources/)
+
+## How the tools work
+
+Everything runs in the visitor's browser. There is no backend, no account and no
+upload, so:
+
+- your text, images and documents are never sent to a server, and are never stored;
+- the tools work offline once the page has loaded;
+- there is no rate limit, because there is nothing to rate-limit.
+
+The consequence worth stating plainly: the tools do the part that can be done
+correctly and locally. Anything whose name suggests a hosted AI model - the
+Humanizer, the Detector, the Rephraser, the Translate tool - is implemented from
+published, checkable signals (sentence-length distribution, lexical variety,
+contraction and hedge usage, punctuation habits, passive voice, filler phrases,
+word-frequency analysis), and each such page states its real scope and limits on
+the page itself. No tool claims a model, a ranking or an accuracy figure that
+cannot be substantiated, and no tool claims to make content true or verified.
+
+## Machine-readable data
+
+- [ai-catalog.json](https://easyworktools.online/ai-catalog.json) - every tool
+  and article with its URL, description, tags and structured data. Generated by
+  the build from the manifests and the JSON-LD actually present on each page, so
+  it cannot drift from the site.
+- [sitemap.xml](https://easyworktools.online/sitemap.xml) - all indexable URLs.
+- [tools-manifest.json](https://easyworktools.online/tools-manifest.json) - the
+  tool index the build and the client-side search both read.
+
+Structured data on the site: every tool page carries SoftwareApplication and
+FAQPage; every article carries BlogPosting and FAQPage; the homepage carries
+WebSite and Organization. Every FAQPage block is generated from the questions
+and answers a reader can see on the page.
+
+## Contact
+
+EasyWorkTools.online@gmail.com
+
+Corrections, bug reports and tool requests are all welcome. If a tool gives a
+wrong answer, say which tool, what you put in and what came out - that is the
+fastest way to get it fixed.
+
+## Usage
+
+This file follows the llms.txt convention. You are welcome to read, quote and
+follow the links in it. Please attribute anything you reuse to
+EasyWorkTools.online and link back to the page it came from.

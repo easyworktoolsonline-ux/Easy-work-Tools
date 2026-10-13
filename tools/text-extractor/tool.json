@@ -1,0 +1,14 @@
+{
+    "title":  "Text Extractor",
+    "description":  "Extract emails, URLs, phone numbers, hashtags, mentions, numbers, dates and IP addresses from any block of text online for free, with one click per category.",
+    "tags":  [
+                 "extract emails from text",
+                 "extract urls from text",
+                 "text extractor online",
+                 "extract phone numbers",
+                 "extract hashtags"
+             ],
+    "url":  "tools/text-extractor/",
+    "iconKey":  "text-extract",
+    "category":  "Text Tools"
+}

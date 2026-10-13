@@ -1,0 +1,13 @@
+{
+    "title":  "Readability Score Checker",
+    "description":  "Paste your text to get a Flesch Reading Ease score, Flesch-Kincaid grade level, and sentence/paragraph length breakdown, online for free.",
+    "tags":  [
+                 "readability score checker",
+                 "flesch reading ease calculator",
+                 "flesch-kincaid grade level",
+                 "content readability tool"
+             ],
+    "url":  "tools/readability-score-checker/",
+    "iconKey":  "readability-score",
+    "category":  "Text Tools"
+}

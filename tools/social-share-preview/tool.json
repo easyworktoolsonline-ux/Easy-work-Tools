@@ -1,0 +1,13 @@
+{
+    "title":  "Social Share Preview",
+    "description":  "See how your link will look when shared on Facebook, X (Twitter) and LinkedIn using your Open Graph and Twitter Card tags, online for free.",
+    "tags":  [
+                 "social share preview",
+                 "open graph preview",
+                 "twitter card preview",
+                 "facebook share preview"
+             ],
+    "url":  "tools/social-share-preview/",
+    "iconKey":  "social-preview",
+    "category":  "Image Tools"
+}

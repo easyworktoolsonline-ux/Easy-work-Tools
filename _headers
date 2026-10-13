@@ -1,19 +1,71 @@
+# Cloudflare Pages response headers.
+#
+# Section 1 - baseline security headers for every page.
+# Section 2 - cache lifetimes for static assets (versioned-ish, never for HTML
+#              or the /api/* endpoints).
+# Section 3 - a Content-Security-Policy in REPORT-ONLY mode.
+#
+# The CSP is report-only on purpose. The site ships a large amount of inline
+# <script> and inline <style>, plus several hundred inline event handlers
+# (onclick=...) across 265 pages, so an enforced policy would need either
+# 'unsafe-inline' anyway or a nonce/hash refactor of every page. Running it in
+# report-only mode means the policy is live and observable through the
+# Cloudflare CSP reports dashboard (Security > CSP) without any risk of
+# breaking a tool, a form or an ad slot.
+# See the "Security" section of README.md for the full inventory and the exact
+# steps required to flip it to enforcing mode.
+#
+# The cdnjs / jsdelivr entries in script-src are now dead weight: no page loads
+# third-party code any more (see assets/vendor/README.md). They are left in place
+# while the policy is report-only so that flipping to enforcing mode does not
+# break anything on the day it happens; they can be removed once the dashboard
+# has been clean for a while.
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), midi=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com; connect-src 'self' https://script.google.com https://cloudflareinsights.com; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
   Cache-Control: public, max-age=0, must-revalidate
 
-/assets/*
-  Cache-Control: public, max-age=86400, must-revalidate
+# Webfonts: same-origin, never change without a redeploy, and the whole point of
+# self-hosting them was to get them under this policy instead of Google's.
+# 30 days + stale-while-revalidate (not `immutable`: the filenames are not
+# content-hashed, so a font update must be able to reach returning visitors).
+/assets/fonts/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
 
+# Icons and the social preview card change only when the branding does.
 /assets/favicon*
-  Cache-Control: public, max-age=604800, must-revalidate
-
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+/assets/apple-touch-icon.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
 /assets/og-image.png
-  Cache-Control: public, max-age=604800, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
 
+/assets/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Vendored third-party libraries and the lazy loader that fetches them. They
+# change only when a pinned upstream version is replaced, so they get the same
+# 30-day lifetime as the fonts rather than the 7-day shared-asset default.
+/assets/vendor/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+# Shared stylesheet and script.
+/assets/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Generated indexes: short cache so a new tool or post shows up quickly.
+/tools-manifest.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/blog-manifest.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Per-user traffic counts and page-view writes must never be cached.
 /api/*
   Cache-Control: no-store
   Access-Control-Allow-Origin: https://easyworktools.online

@@ -1,13 +1,14 @@
 {
-  "title": "Easy Image Resizer",
-  "description": "Resize and edit images online for free in your browser.",
-  "tags": [
-    "image resizer",
-    "resize image online",
-    "image dimensions",
-    "photo resizer",
-    "free image tool"
-  ],
-  "url": "tools/easy-image-resizer/",
-  "iconKey": "image"
+    "title":  "Easy Image Resizer",
+    "description":  "Resize and edit images online for free in your browser.",
+    "tags":  [
+                 "image resizer",
+                 "resize image online",
+                 "image dimensions",
+                 "photo resizer",
+                 "free image tool"
+             ],
+    "url":  "tools/easy-image-resizer/",
+    "iconKey":  "image",
+    "category":  "Image Tools"
 }
