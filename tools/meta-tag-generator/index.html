@@ -8,7 +8,7 @@
 <meta name="keywords" content="meta tag generator, seo meta tags online, open graph generator, twitter card generator, meta description generator">
 <link rel="canonical" href="https://easyworktools.online/tools/meta-tag-generator/">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png"><link rel="shortcut icon" href="../../assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
-<meta property="og:title" content="Meta Tag Generator — Free SEO, Open Graph &amp; Twitter Tags | EasyWorkTools.online">
+<meta property="og:title" content="Meta Tag Generator - SEO &amp; Open Graph Tags | EasyWorkTools.online">
 <meta property="og:description" content="Generate SEO meta title and description tags, plus Open Graph and Twitter Card tags, online for free. Live character counters and ready-to-paste HTML output.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://easyworktools.online/tools/meta-tag-generator/">
@@ -16,11 +16,11 @@
 <meta property="og:image" content="https://easyworktools.online/assets/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Meta Tag Generator — Free SEO, Open Graph &amp; Twitter Tags | EasyWorkTools.online">
+<meta name="twitter:title" content="Meta Tag Generator - SEO &amp; Open Graph Tags | EasyWorkTools.online">
 <meta name="twitter:description" content="Generate SEO meta title and description tags, plus Open Graph and Twitter Card tags, online for free. Live character counters and ready-to-paste HTML output.">
 <meta name="twitter:image" content="https://easyworktools.online/assets/og-image.png">
 
-<title>Meta Tag Generator — Free SEO, Open Graph &amp; Twitter Tags | EasyWorkTools.online</title>
+<title>Meta Tag Generator - SEO &amp; Open Graph Tags | EasyWorkTools.online</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -484,18 +484,18 @@ generateBtn.addEventListener("click",function(){
   var title=pageTitle.value.trim(),desc=pageDesc.value.trim(),url=pageUrl.value.trim(),site=siteName.value.trim(),img=imageUrl.value.trim(),handle=twitterHandle.value.trim(),robots=robotsSelect.value;
   if(!title||!desc){showStatus("Please fill in at least the page title and description.","error");return}
   var lines=[];
-  lines.push("<title>"+esc(title)+"</title>");
+  lines.push("<title>Meta Tag Generator - SEO &amp; Open Graph Tags | EasyWorkTools.online</title>");
   lines.push('<meta name="description" content="'+esc(desc)+'">');
   lines.push('<meta name="robots" content="'+esc(robots)+'">');
   if(url)lines.push('<link rel="canonical" href="'+esc(url)+'">');
-  lines.push('<meta property="og:title" content="'+esc(title)+'">');
+  lines.push('<meta property="og:title" content="Meta Tag Generator - SEO &amp; Open Graph Tags | EasyWorkTools.online">');
   lines.push('<meta property="og:description" content="'+esc(desc)+'">');
   lines.push('<meta property="og:type" content="website">');
   if(url)lines.push('<meta property="og:url" content="'+esc(url)+'">');
   if(site)lines.push('<meta property="og:site_name" content="'+esc(site)+'">');
   if(img)lines.push('<meta property="og:image" content="'+esc(img)+'">');
   lines.push('<meta name="twitter:card" content="summary_large_image">');
-  lines.push('<meta name="twitter:title" content="'+esc(title)+'">');
+  lines.push('<meta name="twitter:title" content="Meta Tag Generator - SEO &amp; Open Graph Tags | EasyWorkTools.online">');
   lines.push('<meta name="twitter:description" content="'+esc(desc)+'">');
   if(img)lines.push('<meta name="twitter:image" content="'+esc(img)+'">');
   if(handle)lines.push('<meta name="twitter:site" content="'+esc(handle.charAt(0)==="@"?handle:"@"+handle)+'">');

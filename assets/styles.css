@@ -2703,4 +2703,109 @@ html[data-theme="dark"] .faq-item, html[data-theme="dark"] .faq-item details, ht
     padding: 12px !important;
     border-radius: 14px !important;
   }
+}/* === Targeted mobile fixes (verified against observed defects) === */
+@media (max-width:900px) {
+  /* Core textual layout: mobile words must follow normal wrapping, not letter splitting */
+  #help .resource-card,
+  #help .resource-card * {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    -webkit-hyphens: auto !important;
+    hyphens: auto !important;
+  }
+
+  /* Top navigation hero CTAs: exactly three equal sections in one row */
+  .hero-cta {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    align-items: stretch !important;
+    margin: 16px 0 8px !important;
+  }
+  .hero-cta a {
+    width: 100% !important;
+    min-height: 30px !important;
+    padding: 6px 4px !important;
+    font-size: 10.5px !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+    word-break: normal !important;
+  }
+
+  /* Help & Feedback resource cards: cards get a real width; text wraps by words */
+  .resource-card,
+  #help .resource-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+  .resource-card__panel,
+  #help .resource-card__panel {
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 6px !important;
+    column-gap: 8px !important;
+    padding: 12px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .resource-card__title,
+  #help .resource-card__title,
+  .resource-card__subtitle,
+  #help .resource-card__subtitle,
+  .resource-card__body,
+  #help .resource-card__body {
+    grid-column: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    hyphens: auto !important;
+  }
+  .resource-card__cta,
+  #help .resource-card__cta {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: auto !important;
+    justify-self: start !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+  }
 }
+@media (max-width:860px) {
+  /* Featured coverflow arrows stay fully outside card area */
+  .coverflow {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .cf-nav {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .cf-nav--prev {
+    left: 0 !important;
+  }
+  .cf-nav--next {
+    right: 0 !important;
+  }
+}
+@media (max-width:420px) {
+  .coverflow {
+    padding-left: 34px !important;
+    padding-right: 34px !important;
+  }
+  .cf-nav {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+
+/* === Recent Tools: small downward spacing adjustment, keeps rail clear of card hover/clicks === */
+#recent { padding-top: 14px !important; padding-bottom: 16px !important; }

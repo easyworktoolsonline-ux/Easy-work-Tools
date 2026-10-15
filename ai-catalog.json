@@ -4,7 +4,7 @@
   "url": "https://easyworktools.online/",
   "description": "Free, private, browser-based tools for everyday digital work. Text, image, PDF and developer utilities that run entirely in the visitor browser with no upload, no account and no paywall.",
   "version": "1.0.0",
-  "updated": "2026-10-08",
+  "updated": "2026-10-15",
   "operator": {
     "name": "EasyWorkTools.online",
     "email": "EasyWorkTools.online@gmail.com"
@@ -1208,7 +1208,7 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
-        "WebApplication",
+        "SoftwareApplication",
         "FAQPage"
       ]
     },
@@ -1954,7 +1954,7 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
-        "WebApplication",
+        "SoftwareApplication",
         "FAQPage"
       ]
     },
