@@ -2548,3 +2548,159 @@ html[data-theme="dark"] .related-card p{color:#cbd5e1!important}
   .field-control,.result-panel,.panel,.result-box,textarea{max-width:100%!important}
 }
 
+
+
+/* === FAQ dark-mode: seamless page background === */
+html[data-theme="dark"] .faq-item, html[data-theme="dark"] .faq-item details, html[data-theme="dark"] .faq details { background:#0b1220 !important; border-color:#334155 !important; color:#e2e8f0 !important; }
+/* === Mobile layout optimization (append; desktop untouched) === */
+@media (min-width:900px) {
+  .hero-cta,
+  .grid,
+  .help-grid,
+  .resource-grid,
+  .resource-items,
+  .resource-items--guides,
+  .tool-stats-band {
+    /* keep desktop rules exactly as authored */
+  }
+}
+@media (max-width:900px) {
+  /* Top-navigation / hero CTA buttons: compact and fit one row when possible */
+  .hero-cta {
+    gap: 6px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+  .hero-cta a {
+    width: auto !important;
+    max-width: 100% !important;
+    min-height: 34px !important;
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    flex: 0 1 auto !important;
+  }
+
+  /* Statistics: keep one row */
+  .tool-stats-band {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    padding: 10px !important;
+    border-radius: 18px;
+  }
+  .tool-stat {
+    min-height: 76px !important;
+    padding: 8px 4px !important;
+    border-radius: 12px !important;
+  }
+  .tool-stat strong {
+    font-size: 13px !important;
+  }
+  .tool-stat span {
+    font-size: 9.5px !important;
+    line-height: 1.2 !important;
+  }
+  .tool-stat__icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* Cards: make rows more compact */
+  #help .resource-grid,
+  .resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .help-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .feedback-fields {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .resource-items,
+  .resource-items--guides {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  /* Most Popular / Explore and category cards: 2-3 per row at useful sizes */
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .grid:has(> .card[data-cat]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .grid:has(> .card[data-cat]) > .card[data-cat] {
+    min-height: 86px !important;
+    padding: 12px !important;
+    gap: 8px !important;
+  }
+  .card,
+  .help-card {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+@media (min-width:520px) and (max-width:900px) {
+  .grid,
+  .grid:has(> .card[data-cat]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+}
+@media (min-width:720px) and (max-width:900px) {
+  .grid:has(> .card[data-cat]) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+}
+@media (max-width:420px) {
+  .tool-stats-band {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    padding: 8px !important;
+  }
+  .grid,
+  .grid:has(> .card[data-cat]) {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+  .help-grid,
+  .resource-grid,
+  .resource-items,
+  .resource-items--guides {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+  .feedback-fields { grid-template-columns: 1fr !important; }
+}
+@media (max-width:600px) {
+  /* Footer group columns avoid one long vertical stack. */
+  .site-footer-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px 12px !important;
+  }
+  .site-footer-brand {
+    grid-column: 1 / -1 !important;
+  }
+  .site-footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .site-footer-legal {
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    white-space: normal !important;
+  }
+  .help-card,
+  .resource-card {
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+}
