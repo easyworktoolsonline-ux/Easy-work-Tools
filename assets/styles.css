@@ -2308,6 +2308,47 @@ html[data-theme="dark"] .resource-card__cta{ color:#60a5fa; }
 html[data-theme="dark"] .resource-group__all:hover,
 html[data-theme="dark"] .resource-item__link:hover{ color:#93c5fd; }
 html[data-theme="dark"] .site-footer-legal span{ color:#94a3b8; }
+
+/* === accessibility-consistent FAQ accordion (right-facing arrow) === */
+.faq details > summary::-webkit-details-marker{ display:none; }
+.faq details summary{ display:flex; align-items:center; gap:8px; list-style:none; cursor:pointer; user-select:none; }
+.faq details summary::before{
+  content:"\25B6";
+  display:inline-block;
+  width:12px;
+  text-align:center;
+  font-size:11px;
+  flex-shrink:0;
+  transition: transform .18s ease;
+  transform-origin:center;
+}
+.faq details[open] > summary::before{ transform: rotate(90deg); }
+.faq details[open] > :not(summary){ padding-top:8px; animation: faqFadeIn .18s ease-out; }
+.faq summary, .faq summary *{ text-underline-offset:2px; }
+@keyframes faqFadeIn{ from{ opacity:0; transform: translateY(-2px);} to{ opacity:1; transform:none;} }
+
+/* === related-tool cards: consistent dimensions (description truncation) === */
+.related-grid{ align-items: stretch; }
+.related-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+.related-card h3{
+  min-height: 1.6em;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+.related-card p{
+  min-height: 3.2em;
+  flex: 1 1 auto;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+html[data-theme="dark"] .related-card p{ color: var(--text-muted, #94a3b8); }
 /* === dark-mode footer hover: readable text + pure white underline === */
 html[data-theme="dark"] .site-footer-col a:hover,
 html[data-theme="dark"] .site-footer-top>.site-footer-col:nth-child(2) a:hover,
@@ -2332,3 +2373,140 @@ html[data-theme="dark"] .enhancer-card h2{ color:var(--black); }
 html[data-theme="dark"] .enhancer-card p{ color:var(--text-muted); }
 html[data-theme="dark"] .faq h3,
 html[data-theme="dark"] .faq summary{ color:var(--black); }
+html[data-theme="dark"] .related-card h3{ color:#f8fafc; }
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .faq-item details,
+html[data-theme="dark"] .faq details{ background:#111c2e; border-color:#334155; color:#e2e8f0; }
+html[data-theme="dark"] .faq-item h3,
+html[data-theme="dark"] .faq-item summary h3,
+html[data-theme="dark"] .faq summary{ color:#f8fafc; }
+html[data-theme="dark"] .faq-item p,
+html[data-theme="dark"] .faq details > :not(summary){ color:#cbd5e1; }
+
+/* === comprehensive dark-mode surfaces for all 127-tools misc components === */
+html[data-theme="dark"] .related-card,
+html[data-theme="dark"] .search-panel,
+html[data-theme="dark"] .btn-ghost,
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .seo-grid>div,
+html[data-theme="dark"] #toast,
+html[data-theme="dark"] .calc-tab,
+html[data-theme="dark"] .calc-tab.is-active,
+html[data-theme="dark"] .status-msg.info,
+html[data-theme="dark"] .btn-download,
+html[data-theme="dark"] .preset-btn,
+html[data-theme="dark"] .preset-btn.is-active,
+html[data-theme="dark"] .json-select,
+html[data-theme="dark"] .calc-field input,
+html[data-theme="dark"] .calc-field select,
+html[data-theme="dark"] .pw-check,
+html[data-theme="dark"] .calc-stat,
+html[data-theme="dark"] .quality-opt,
+html[data-theme="dark"] .platform-chip,
+html[data-theme="dark"] .platform-chip.is-active,
+html[data-theme="dark"] #videoUrl,
+html[data-theme="dark"] .mock-play span,
+html[data-theme="dark"] .mock,
+html[data-theme="dark"] .mock-story-ui::after,
+html[data-theme="dark"] .mock-badge,
+html[data-theme="dark"] .tool-hero,
+html[data-theme="dark"] .field-control,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] .honest-note,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .rule-row input,
+html[data-theme="dark"] .rule-row select,
+html[data-theme="dark"] .issue.warn,
+html[data-theme="dark"] .btn-sm,
+html[data-theme="dark"] .rule-del,
+html[data-theme="dark"] .rule-row-2 input,
+html[data-theme="dark"] .outline-list,
+html[data-theme="dark"] .rule-row-2 select,
+html[data-theme="dark"] .serp-card,
+html[data-theme="dark"] .score-ring::after,
+html[data-theme="dark"] .social-card.twitter .body,
+html[data-theme="dark"] .social-card,
+html[data-theme="dark"] .calc-field textarea,
+html[data-theme="dark"] .heic-row,
+html[data-theme="dark"] .search-close,
+html[data-theme="dark"] .file-chip,
+html[data-theme="dark"] .opts-field select,
+html[data-theme="dark"] .page-card,
+html[data-theme="dark"] .opts-field input[type=text],
+html[data-theme="dark"] .upload-btn-large,
+html[data-theme="dark"] .jwt-panel pre,
+html[data-theme="dark"] .unit-btn.active,
+html[data-theme="dark"] .hl-row input,
+html[data-theme="dark"] .hash-row,
+html[data-theme="dark"] #downloadBtn,
+html[data-theme="dark"] .rr-row select,
+html[data-theme="dark"] .rr-row input,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .help-card,
+html[data-theme="dark"] .resource-card { background-color:#111c2e; border-color:#334155; color:#f8fafc; }
+html[data-theme="dark"] input, html[data-theme="dark"] select, html[data-theme="dark"] textarea, html[data-theme="dark"] #videoUrl { background-color:#0b1220; border-color:#475569; color:#f8fafc; }
+html[data-theme="dark"] summary, html[data-theme="dark"] details { color:#f8fafc; }
+
+
+/* === additional dark-mode surface fixes (phase 2) === */
+html[data-theme="dark"] #toastNotification ,
+html[data-theme="dark"] .auth-btn-primary ,
+html[data-theme="dark"] .auth-btn-primary:hover ,
+html[data-theme="dark"] .btn-dark-action ,
+html[data-theme="dark"] .btn-dark-action:hover ,
+html[data-theme="dark"] .btn-enhance.reverse-mode ,
+html[data-theme="dark"] .btn-start ,
+html[data-theme="dark"] .compare-box input ,
+html[data-theme="dark"] .meta-field input ,
+html[data-theme="dark"] .meta-field textarea ,
+html[data-theme="dark"] .opts-field input[type=range] ,
+html[data-theme="dark"] .jwt-warn ,
+html[data-theme="dark"] .json-check  { background-color:#111c2e; border-color:#334155; color:#f8fafc; }
+html[data-theme="dark"] .jwt-warn { border-color:#F87171; color:#FCA5A5; }
+
+
+/* === result/output/panel surfaces in dark theme === */
+html[data-theme="dark"] .drop-box-content,
+html[data-theme="dark"] .adsense-box,
+html[data-theme="dark"] .calc-result,
+html[data-theme="dark"] .result-title,
+html[data-theme="dark"] .compare-box,
+html[data-theme="dark"] .result-side,
+html[data-theme="dark"] .search-results,
+html[data-theme="dark"] .compare-result,
+html[data-theme="dark"] .sidebar-ad-box,
+html[data-theme="dark"] .result-card,
+html[data-theme="dark"] .result-stage,
+html[data-theme="dark"] .dropdown-select-box,
+html[data-theme="dark"] .calc-result-main,
+html[data-theme="dark"] .json-box,
+html[data-theme="dark"] .result-panel,
+html[data-theme="dark"] .animation-preview-box,
+html[data-theme="dark"] .calc-result-sub { background-color:#111c2e; border-color:#334155; color:#f8fafc; }
+
+
+/* force visibility for action buttons in dark theme */
+html[data-theme="dark"] .btn, html[data-theme="dark"] .btn-primary, html[data-theme="dark"] .btn-secondary, html[data-theme="dark"] .btn-ghost, html[data-theme="dark"] .btn-dark-action, html[data-theme="dark"] .btn-start, html[data-theme="dark"] .btn-enhance { background-color:#111c2e !important; color:#f8fafc !important; border-color:#334155 !important; }
+
+
+/* force dark background for result/output textareas and panels */
+html[data-theme="dark"] textarea, html[data-theme="dark"] .field-control, html[data-theme="dark"] .panel, html[data-theme="dark"] .result-card, html[data-theme="dark"] .result-panel, html[data-theme="dark"] .result-box { background-color:#0b1220 !important; color:#f8fafc !important; border-color:#475569 !important; }
+
+
+/* generic dark override for any result/output surface */
+html[data-theme="dark"] [class*="result"], html[data-theme="dark"] [class*="output"], html[data-theme="dark"] [class*="preview-box"] { background-color:#111c2e !important; color:#f8fafc !important; border-color:#334155 !important; }
+
+
+/* === Easy Image Resizer canonical related-tools baseline === */
+.related-block{width:100%!important; margin-top:34px!important}
+.related-grid{display:grid!important; grid-template-columns:1fr!important; gap:14px!important}
+@media(min-width:700px){.related-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(min-width:1000px){.related-grid{grid-template-columns:repeat(3,1fr)!important}}
+.related-card{display:block!important; border:1px solid var(--border)!important; border-radius:18px!important; background:#fff!important; padding:18px!important; text-decoration:none!important; transition:border-color .18s,transform .18s,box-shadow .18s!important}
+.related-card:hover{border-color:var(--black)!important; transform:translateY(-2px)!important; box-shadow:0 12px 35px rgba(0,0,0,.06)!important}
+.related-card h3{font-size:14.5px!important; color:var(--black)!important; margin:0 0 5px!important; font-weight:900!important; line-height:1.35!important}
+.related-card p{font-size:12.5px!important; color:#64748B!important; margin:0!important; line-height:1.6!important; min-height:3.2em!important; display:-webkit-box!important; -webkit-line-clamp:3!important; -webkit-box-orient:vertical!important; overflow:hidden}
+html[data-theme="dark"] .related-card{background-color:#111c2e!important; border-color:#334155!important}
+html[data-theme="dark"] .related-card h3{color:#f8fafc!important}
+html[data-theme="dark"] .related-card p{color:#cbd5e1!important}
