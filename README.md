@@ -1,6 +1,6 @@
 # EasyWorkTools.online
 
-Static GitHub Pages utility website with automated tool/blog indexing and deployment.
+Static website (Cloudflare Pages) with automated tool/blog indexing and deployment.
 
 ## Add a new tool
 
@@ -34,7 +34,7 @@ genuinely needs a new glyph, add a matching `if(key==='your-key')return …` bra
 to `iconSvg()` using the same 48×48 viewBox and rounded-tile base, and give it a
 colour no neighbouring tool already uses.
 
-Then commit and push to `main`. The GitHub Actions workflow runs the build, regenerates the tool/blog manifests and sitemap, and deploys the site to GitHub Pages.
+Then commit and push to `main`. The build regenerates the tool/blog manifests and sitemap, and Cloudflare Pages deploys the site from this repository.
 
 ## Add an AI Write tool
 
@@ -185,7 +185,7 @@ requires downloading them from Google once — that has not been done.
 ### 2. The footer is white on most pages, near-black on four
 
 `.site-footer` is `background:#fff` with `#64748B` link text (4.76:1) on most
-pages. Four tools — `pdf-images-converter`, `pdf-metadata-editor`, `pdf-organizer`
+pages. Three tools - `pdf-metadata-editor`, `pdf-organizer`
 and `pdf-watermark` — deliberately use a near-black `#0F172A` footer, where the
 same link colour is only 3.75:1, so those four pages use `#CBD5E1` for links and
 `#94A3B8` for muted text instead.
@@ -311,10 +311,11 @@ on the Google Fonts CDN, so a CDN timeout changed the typography on most of the
 site. Self-hosting the 750/850/900/950 instances from Google is the remaining
 step — see Design system §1 for why the CDN link cannot simply be dropped.
 
-`font-display: optional` is deliberate: the LCP text is the hero `<h1>`, and a
-late font swap repaints (and re-times) the largest contentful paint. The file is
-preloaded from the same origin, so it is in cache inside the 100 ms block period
-on a normal connection.
+`font-display: swap` is deliberate: the brand face must be used on every load, so
+the text paints immediately in the fallback and swaps to the brand face as soon
+as the preloaded file is ready. An earlier `optional` policy left the fallback in
+place for the whole page load whenever the file missed the ~100 ms block period,
+which made the logo and headings flip between the brand face and the fallback.
 
 ### Scripts
 
@@ -358,7 +359,7 @@ Four rules when converting a tool to this pattern:
    not happened.
 4. **Mark the handler `async`** if it uses `await`.
 
-The two light tools (`easy-image-resizer`, `jpg-pdf-converter` for the image
+The two light tools (`easy-image-resizer`, `jpg-to-pdf` for the image
 side) do not need the library for their primary action, so they only preload and
 let the existing promise chain run — no restructuring, no re-bracing.
 
@@ -406,6 +407,25 @@ HSTS is `max-age=31536000` **without** `includeSubDomains` and **without**
 `preload`. Both should be confirmed against every subdomain before being turned
 on: `preload` in particular is effectively irreversible and requires the domain
 to be submitted to the browser preload list.
+
+### Public data-handling pages
+
+`security.html` (Security & Data Handling) is the plain-language companion to
+`privacy.html`: it lists exactly what leaves the browser, which third parties are
+involved, and how to report a security issue. Keep it truthful when data handling
+changes - `llms.txt`, `ai-catalog.json` (`dataHandling`) and the homepage trust
+section (`#trust` on `index.html`) describe the same behaviour and must not drift
+from it.
+
+### Internal files are deliberately not public
+
+Cloudflare Pages publishes the whole repository, so `functions/_middleware.js`
+answers **410 Gone** for `/README.md`, `/package.json`, `/package-lock.json`,
+`/schema.sql`, `/assets/vendor/README.md` and every path under `/scripts/` and
+`/apps-script/`. `_redirects` cannot do this - it only supports 3xx status codes -
+so a Pages Function is the correct tool. `tools-manifest.json`,
+`blog-manifest.json`, `llms.txt` and `ai-catalog.json` are public on purpose and
+are deliberately not blocked. Add new development-only files to that block list.
 
 ## Automatic traffic-based ordering
 

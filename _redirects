@@ -1,2 +1,10 @@
 /index.html / 301
 /security.txt /.well-known/security.txt 200
+
+# Superseded combined PDF tools (split into dedicated pages)
+/tools/jpg-pdf-converter /tools/jpg-to-pdf/ 301
+/tools/jpg-pdf-converter/* /tools/jpg-to-pdf/ 301
+/tools/pdf-images-converter /tools/pdf-to-jpg/ 301
+/tools/pdf-images-converter/* /tools/pdf-to-jpg/ 301
+/tools/pdf-merge-split /tools/pdf-merge/ 301
+/tools/pdf-merge-split/* /tools/pdf-merge/ 301

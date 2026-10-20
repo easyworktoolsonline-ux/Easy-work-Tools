@@ -2,9 +2,9 @@
   "$schema": "https://schema.org/",
   "name": "EasyWorkTools.online",
   "url": "https://easyworktools.online/",
-  "description": "Free, private, browser-based tools for everyday digital work. Text, image, PDF and developer utilities that run entirely in the visitor browser with no upload, no account and no paywall.",
+  "description": "Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security.html",
   "version": "1.0.0",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "operator": {
     "name": "EasyWorkTools.online",
     "email": "EasyWorkTools.online@gmail.com"
@@ -13,11 +13,12 @@
   "privacy": "https://easyworktools.online/privacy.html",
   "dataHandling": {
     "uploads": "none",
-    "telemetry": "Aggregate, anonymous page-view counts only, used to order the tool and blog lists.",
+    "telemetry": "Aggregate page-view paths only, with no account or personal details attached, used to order the tool and blog lists.",
+    "feedback": "The homepage feedback form sends the details you type, including an optional email address, to a Google Apps Script endpoint that emails them to the operator.",
     "cookies": "See https://easyworktools.online/cookies.html"
   },
   "counts": {
-    "tools": 127,
+    "tools": 152,
     "articles": 121
   },
   "indexes": {
@@ -26,7 +27,8 @@
     "blog": "https://easyworktools.online/blog/",
     "resources": "https://easyworktools.online/resources/",
     "sitemap": "https://easyworktools.online/sitemap.xml",
-    "llms": "https://easyworktools.online/llms.txt"
+    "llms": "https://easyworktools.online/llms.txt",
+    "security": "https://easyworktools.online/security.html"
   },
   "tools": [
     {
@@ -1227,7 +1229,7 @@
         "vimeo thumbnail"
       ],
       "pricing": "free",
-      "browserOnly": true,
+      "browserOnly": false,
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
@@ -1298,6 +1300,25 @@
       ]
     },
     {
+      "name": "GIF to PDF",
+      "url": "https://easyworktools.online/tools/gif-to-pdf/",
+      "description": "Convert GIF images into a single PDF, one picture per page, using the first frame of each file. Free, private and fully in your browser",
+      "category": null,
+      "keywords": [
+        "gif to pdf",
+        "convert gif to pdf online",
+        "gif to pdf converter free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Hash Generator",
       "url": "https://easyworktools.online/tools/hash-generator/",
       "description": "Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or a file online for free. Compare two hashes for a match.",
@@ -1330,6 +1351,25 @@
         "convert heic to jpg free",
         "iphone photo converter",
         "heic converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "HEIC to PDF",
+      "url": "https://easyworktools.online/tools/heic-to-pdf/",
+      "description": "Convert iPhone HEIC and HEIF photos into one PDF, one photo per page, decoded in your browser. Free, private and no upload required",
+      "category": null,
+      "keywords": [
+        "heic to pdf",
+        "convert heic to pdf online free",
+        "iphone photo to pdf"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1743,16 +1783,15 @@
       ]
     },
     {
-      "name": "JPG ↔ PDF Converter",
-      "url": "https://easyworktools.online/tools/jpg-pdf-converter/",
-      "description": "Convert JPG images to a single PDF, or extract JPG pages from a PDF, online for free. Reorder photos, choose page size, and download instantly in your browser.",
+      "name": "JPG to PDF",
+      "url": "https://easyworktools.online/tools/jpg-to-pdf/",
+      "description": "Convert JPG and JPEG images into one PDF, one photo per page, with A4 or fit-to-image sizing. Free, private and fully in your browser",
       "category": null,
       "keywords": [
-        "jpg to pdf converter",
-        "pdf to jpg converter",
-        "convert images to pdf free",
-        "pdf to jpg online",
-        "jpg pdf converter"
+        "jpg to pdf",
+        "jpeg to pdf converter",
+        "convert jpg to pdf online free",
+        "images to pdf"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1979,6 +2018,70 @@
       ]
     },
     {
+      "name": "Add Images to PDF",
+      "url": "https://easyworktools.online/tools/pdf-add-images/",
+      "description": "Add JPG, PNG or WebP images to an existing PDF as extra pages - at the end or after any page number, sized to match the document or to each image.",
+      "category": null,
+      "keywords": [
+        "add images to pdf",
+        "insert image into pdf",
+        "add photo to pdf",
+        "append images to pdf",
+        "add picture to pdf online free",
+        "images to pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Add Text to PDF",
+      "url": "https://easyworktools.online/tools/pdf-add-text/",
+      "description": "Add text to a PDF online for free. Type your wording, choose a position, colour and size, then write it onto one page or every page in your browser.",
+      "category": null,
+      "keywords": [
+        "add text to pdf",
+        "write on pdf online",
+        "insert text in pdf free",
+        "type on a pdf",
+        "pdf text adder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Annotate PDF",
+      "url": "https://easyworktools.online/tools/pdf-annotate/",
+      "description": "Annotate a PDF online free. Draw, highlight and mark up any page with a pen, highlighter or box, then download the annotated PDF in your browser.",
+      "category": null,
+      "keywords": [
+        "annotate pdf online",
+        "pdf annotation tool free",
+        "highlight pdf online",
+        "draw on pdf",
+        "markup pdf free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "PDF Compressor",
       "url": "https://easyworktools.online/tools/pdf-compressor/",
       "description": "Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.",
@@ -2000,18 +2103,17 @@
       ]
     },
     {
-      "name": "PDF ⇄ Images Converter",
-      "url": "https://easyworktools.online/tools/pdf-images-converter/",
-      "description": "Convert PDF pages to JPG or PNG images, or combine JPG, PNG and WebP images into one PDF, free in your browser.",
+      "name": "Create PDF",
+      "url": "https://easyworktools.online/tools/pdf-create/",
+      "description": "Create a new PDF from your own text with control over page size, margins, font and line spacing - built right in your browser.",
       "category": null,
       "keywords": [
-        "pdf to jpg",
-        "pdf to png",
-        "pdf to images",
-        "images to pdf",
-        "jpg to pdf",
-        "png to pdf",
-        "convert pdf to image"
+        "create pdf",
+        "create a pdf online free",
+        "make a pdf from text",
+        "blank pdf creator",
+        "text to pdf converter",
+        "write a pdf online"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2023,16 +2125,118 @@
       ]
     },
     {
-      "name": "PDF Merger & Splitter",
-      "url": "https://easyworktools.online/tools/pdf-merge-split/",
-      "description": "Merge multiple PDF files into one, or split a PDF into separate pages, online for free. Reorder files before merging and download instantly, all in your browser.",
+      "name": "Crop PDF",
+      "url": "https://easyworktools.online/tools/pdf-crop/",
+      "description": "Crop PDF pages online for free. Trim the top, right, bottom and left margins, preview the crop area, and download the trimmed PDF in your browser.",
       "category": null,
       "keywords": [
-        "merge pdf online",
-        "split pdf online",
-        "combine pdf files free",
-        "pdf merger",
-        "pdf splitter"
+        "crop pdf online",
+        "crop pdf pages free",
+        "trim pdf margins",
+        "remove white margins from pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Delete Pages from PDF",
+      "url": "https://easyworktools.online/tools/pdf-delete-pages/",
+      "description": "Delete pages from a PDF online for free. Tick the pages to remove and download a new PDF without them, right in your browser",
+      "category": null,
+      "keywords": [
+        "delete pages from pdf",
+        "remove pages from pdf online",
+        "delete pdf pages free",
+        "how to delete a page from a pdf",
+        "delete page from pdf online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Edit PDF",
+      "url": "https://easyworktools.online/tools/pdf-edit/",
+      "description": "Edit a PDF online free. Add text, images, shapes and highlights, white out content, draw or sign, then rotate, reorder or delete pages and download - all in your browser, nothing uploaded.",
+      "category": null,
+      "keywords": [
+        "edit pdf online",
+        "pdf editor free",
+        "add text to pdf and edit",
+        "white out pdf text",
+        "pdf page editor",
+        "change pdf pages"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Extract Images from PDF",
+      "url": "https://easyworktools.online/tools/pdf-extract-images/",
+      "description": "Extract images from PDF online for free. Download the original embedded photos and graphics from every page as PNG files, right in your browser",
+      "category": null,
+      "keywords": [
+        "extract images from pdf",
+        "pdf image downloader",
+        "download images from pdf online",
+        "free image extractor from pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Extract Text from PDF",
+      "url": "https://easyworktools.online/tools/pdf-extract-text/",
+      "description": "Extract text from PDF online for free. Pull the words out of every page into a plain text file you can copy or download, all inside your browser",
+      "category": null,
+      "keywords": [
+        "extract text from pdf",
+        "pdf text extractor online",
+        "pull words from pdf",
+        "get text out of pdf free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Merge PDF",
+      "url": "https://easyworktools.online/tools/pdf-merge/",
+      "description": "Combine multiple PDF files into one document online for free. Add PDFs, arrange the order, then merge and download, all in your browser.",
+      "category": null,
+      "keywords": [
+        "merge pdf",
+        "combine pdf files online free",
+        "join pdf documents",
+        "merge multiple pdfs into one"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2088,6 +2292,278 @@
       ]
     },
     {
+      "name": "Add Page Numbers to PDF",
+      "url": "https://easyworktools.online/tools/pdf-page-numbers/",
+      "description": "Add page numbers to a PDF online for free. Choose the position, starting number, font size and format, preview page 1, then download",
+      "category": null,
+      "keywords": [
+        "add page numbers to pdf",
+        "number pdf pages online",
+        "insert page numbers in pdf free",
+        "paginate pdf",
+        "add page numbers to pdf free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Rearrange PDF Pages",
+      "url": "https://easyworktools.online/tools/pdf-rearrange/",
+      "description": "Rearrange PDF pages online for free. Drag thumbnails or use Move left and Move right to reorder pages, then download the reordered PDF",
+      "category": null,
+      "keywords": [
+        "rearrange pdf pages",
+        "reorder pdf pages online",
+        "organize pdf pages free",
+        "change page order in pdf",
+        "reorder pdf pages free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Rotate PDF",
+      "url": "https://easyworktools.online/tools/pdf-rotate/",
+      "description": "Rotate PDF pages online for free. Turn a single page or the whole document 90, 180 or 270 degrees and download the corrected PDF instantly in your browser.",
+      "category": null,
+      "keywords": [
+        "rotate pdf online",
+        "rotate pdf pages free",
+        "rotate pdf and save",
+        "turn pdf sideways",
+        "fix pdf orientation",
+        "pdf rotator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Sign PDF",
+      "url": "https://easyworktools.online/tools/pdf-sign/",
+      "description": "Sign a PDF online free. Draw your signature or type your name, place it on the page, and download the signed PDF in your browser.",
+      "category": null,
+      "keywords": [
+        "sign pdf online free",
+        "esign pdf",
+        "add signature to pdf",
+        "electronic signature pdf",
+        "pdf signature maker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Split PDF",
+      "url": "https://easyworktools.online/tools/pdf-split/",
+      "description": "Split PDF files online for free. Extract pages into one PDF or separate every page into its own file, downloaded as a PDF or ZIP.",
+      "category": null,
+      "keywords": [
+        "split pdf",
+        "split pdf online free",
+        "extract pages from pdf",
+        "separate pdf pages"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Summarize PDF",
+      "url": "https://easyworktools.online/tools/pdf-summarize/",
+      "description": "Summarize a PDF in your browser - the tool scores every sentence, keeps the most important ones and gives you a short summary to copy or download.",
+      "category": null,
+      "keywords": [
+        "summarize pdf",
+        "pdf summarizer",
+        "summarize pdf online free",
+        "pdf summary generator",
+        "summarize a pdf document",
+        "extract key points from pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to EPUB",
+      "url": "https://easyworktools.online/tools/pdf-to-epub/",
+      "description": "Convert a PDF to EPUB online free. Rebuild a PDF as a reflowable EPUB 3 e-book with chapters, ready for Kindle, Kobo, Apple Books and Calibre - all in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf to epub",
+        "convert pdf to ebook",
+        "pdf to epub free",
+        "pdf to kindle epub",
+        "make epub from pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to JPG",
+      "url": "https://easyworktools.online/tools/pdf-to-jpg/",
+      "description": "Convert PDF to JPG online for free. Turn every page or a chosen page range into a high quality JPG image and download one file or a ZIP in your browser",
+      "category": null,
+      "keywords": [
+        "pdf to jpg",
+        "convert pdf to jpg online free",
+        "pdf to jpeg converter",
+        "pdf pages to images"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to PNG",
+      "url": "https://easyworktools.online/tools/pdf-to-png/",
+      "description": "Convert PDF to PNG online for free. Export every page or a chosen page range as a lossless PNG image and download one file or a ZIP in your browser",
+      "category": null,
+      "keywords": [
+        "pdf to png",
+        "convert pdf to png online free",
+        "pdf to png converter",
+        "export pdf pages as png"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to PowerPoint",
+      "url": "https://easyworktools.online/tools/pdf-to-ppt/",
+      "description": "Convert a PDF to PowerPoint online free. Turn each PDF page into a slide - as faithful images or editable text - and download a standard .pptx for PowerPoint, Google Slides and Keynote, entirely in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf to powerpoint",
+        "pdf to pptx",
+        "convert pdf to powerpoint",
+        "pdf to slides",
+        "pdf to ppt"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to Text",
+      "url": "https://easyworktools.online/tools/pdf-to-text/",
+      "description": "Convert a PDF to text online for free - turn one or many PDFs into plain .txt files, with page markers and a choice of one file per PDF or a single combined file.",
+      "category": null,
+      "keywords": [
+        "convert pdf to txt",
+        "turn pdf into text",
+        "pdf to .txt",
+        "free online pdf to text file converter",
+        "convert pdf to text free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to TIFF",
+      "url": "https://easyworktools.online/tools/pdf-to-tiff/",
+      "description": "Convert a PDF to TIFF online free. Render every page as a lossless baseline TIFF - one multi-page file or a ZIP of single-page TIFFs - at 72, 150 or 300 DPI, entirely in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf to tiff",
+        "convert pdf to tiff",
+        "pdf to tiff free",
+        "multipage tiff from pdf",
+        "pdf to tiff 300 dpi"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF to Word",
+      "url": "https://easyworktools.online/tools/pdf-to-word/",
+      "description": "Convert a PDF to Word online free. Rebuild a PDF as an editable .docx with headings and bold preserved, ready for Microsoft Word, Google Docs, LibreOffice and Apple Pages - all in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf to word",
+        "pdf to docx",
+        "convert pdf to word free",
+        "pdf to editable word",
+        "pdf to doc"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "PDF Watermark & Branding",
       "url": "https://easyworktools.online/tools/pdf-watermark/",
       "description": "Add a text or image watermark to every page of a PDF — control opacity, size, rotation and position, free in your browser.",
@@ -2118,6 +2594,26 @@
         "percent calculator",
         "percentage increase",
         "percentage decrease"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PNG to PDF",
+      "url": "https://easyworktools.online/tools/png-to-pdf/",
+      "description": "Convert PNG images into one PDF, one picture per page, keeping transparency on a white background. Free, private and fully in your browser",
+      "category": null,
+      "keywords": [
+        "png to pdf",
+        "png to pdf converter online",
+        "convert png to pdf free",
+        "turn images into pdf"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2555,6 +3051,25 @@
         "random uuid",
         "uuid validator",
         "generate uuid online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "WebP to PDF",
+      "url": "https://easyworktools.online/tools/webp-to-pdf/",
+      "description": "Convert WebP images into one PDF, one picture per page. Each WebP is decoded in your browser and placed on its own page, free and private",
+      "category": null,
+      "keywords": [
+        "webp to pdf",
+        "convert webp to pdf online",
+        "webp to pdf converter free"
       ],
       "pricing": "free",
       "browserOnly": true,

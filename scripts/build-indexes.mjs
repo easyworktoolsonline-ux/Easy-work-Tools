@@ -308,7 +308,8 @@ const pages = [
   { title: 'Cookie Policy', description: 'Cookie, local storage and advertising information for EasyWorkTools.online.', url: 'cookies.html', type: 'Page' },
   { title: 'Disclaimer', description: 'Disclaimer for EasyWorkTools.online tools and content.', url: 'disclaimer.html', type: 'Page' },
   { title: 'Terms & Conditions', description: 'Terms and conditions for using EasyWorkTools.online.', url: 'terms.html', type: 'Page' },
-  { title: 'Contact Us', description: 'Contact EasyWorkTools.online.', url: 'contact.html', type: 'Page' }
+  { title: 'Contact Us', description: 'Contact EasyWorkTools.online.', url: 'contact.html', type: 'Page' },
+  { title: 'Security & Data Handling', description: 'How EasyWorkTools.online is secured and what data each tool sends.', url: 'security.html', type: 'Page' }
 ];
 
 await fs.writeFile(path.join(root, 'tools-manifest.json'), JSON.stringify(tools, null, 2) + '\n');
@@ -602,6 +603,14 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
   const gridHeading = (html, gridId) => {
     const gridMatch = new RegExp('<div class="grid" id="' + gridId + '"[^>]*>').exec(html);
     if (!gridMatch) return 'h2';
+
+    /* A grid that already declares its heading level keeps it. The attribute
+       is the source of truth that app.js reads back, so a rebuild must not
+       silently re-level a grid whose page structure did not change. The /tools/
+       grid is h3 by design even though its section has only an <h1>, so the
+       structural scan below would wrongly demote it to h2 on every rebuild. */
+    const declared = /data-card-heading="(h[1-6])"/.exec(gridMatch[0]);
+    if (declared) return declared[1];
 
     // Only headings that appear BEFORE the grid count. Scanning the whole
     // <section> would make a grid "see" the headings of its own cards and flip
@@ -1134,6 +1143,7 @@ const urls = [
   'https://easyworktools.online/disclaimer.html',
   'https://easyworktools.online/terms.html',
   'https://easyworktools.online/contact.html',
+  'https://easyworktools.online/security.html',
   // Machine-readable indexes for crawlers and agents.
   'https://easyworktools.online/llms.txt',
   'https://easyworktools.online/ai-catalog.json',
@@ -1195,7 +1205,7 @@ const catalog = {
   name: 'EasyWorkTools.online',
   url: 'https://easyworktools.online/',
   description:
-    'Free, private, browser-based tools for everyday digital work. Text, image, PDF and developer utilities that run entirely in the visitor browser with no upload, no account and no paywall.',
+    'Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security.html',
   version: '1.0.0',
   updated: new Date().toISOString().slice(0, 10),
   operator: { name: 'EasyWorkTools.online', email: 'EasyWorkTools.online@gmail.com' },
@@ -1203,7 +1213,8 @@ const catalog = {
   privacy: 'https://easyworktools.online/privacy.html',
   dataHandling: {
     uploads: 'none',
-    telemetry: 'Aggregate, anonymous page-view counts only, used to order the tool and blog lists.',
+    telemetry: 'Aggregate page-view paths only, with no account or personal details attached, used to order the tool and blog lists.',
+    feedback: 'The homepage feedback form sends the details you type, including an optional email address, to a Google Apps Script endpoint that emails them to the operator.',
     cookies: 'See https://easyworktools.online/cookies.html',
   },
   counts: { tools: tools.length, articles: posts.length },
@@ -1214,6 +1225,7 @@ const catalog = {
     resources: 'https://easyworktools.online/resources/',
     sitemap: 'https://easyworktools.online/sitemap.xml',
     llms: 'https://easyworktools.online/llms.txt',
+    security: 'https://easyworktools.online/security.html',
   },
   tools: tools.map(t => ({
     name: t.title,
@@ -1222,7 +1234,7 @@ const catalog = {
     category: null,
     keywords: t.tags || [],
     pricing: 'free',
-    browserOnly: true,
+    browserOnly: t.url !== 'tools/easy-thumbnail-downloader/',
     requiresAccount: false,
     requiresUpload: false,
     structuredData: jsonLdTypes(path.join(root, t.url, 'index.html')),
@@ -1262,13 +1274,17 @@ const LLMS_CATEGORY_ORDER = [
    written to be read, so it lives here rather than being assembled. */
 const LLMS_PROSE = `# EasyWorkTools.online
 
-> Free, private, browser-based tools for everyday digital work. Text, image, PDF
-> and developer utilities that run entirely in the visitor's browser - nothing is
-> uploaded to a server.
+> Free browser-based tools for everyday digital work. Text, image, PDF and
+> developer utilities that mostly run in the visitor's browser, with a short and
+> specific list of what does leave it.
 
 EasyWorkTools.online is a static site of __TOOLS__ free online tools and __POSTS__
-how-to guides. Every tool runs client-side: text never leaves the browser, and
-there is no account, paywall or email capture.
+how-to guides. Most tools run client-side: the text, images and files you use are
+not uploaded, and there is no account or paywall. A small number of features do
+contact a server - the Thumbnail Downloader sends the link you paste to this site
+to fetch a public preview image, the homepage feedback form emails what you type
+to us via Google Apps Script, and page-view paths are counted to order the lists.
+See https://easyworktools.online/security.html for the exact details.
 
 **Canonical origin:** https://easyworktools.online
 
@@ -1309,16 +1325,25 @@ readers ask in the comments.
 - [Cookie Policy](https://easyworktools.online/cookies.html)
 - [Terms and Conditions](https://easyworktools.online/terms.html)
 - [Disclaimer](https://easyworktools.online/disclaimer.html)
+- [Security & Data Handling](https://easyworktools.online/security.html) - how the site is secured and what data each tool sends
 - [Resources](https://easyworktools.online/resources/)
 
 ## How the tools work
 
-Everything runs in the visitor's browser. There is no backend, no account and no
-upload, so:
+Most tools run in the visitor's browser. There is no account and no file upload,
+so for those tools:
 
-- your text, images and documents are never sent to a server, and are never stored;
-- the tools work offline once the page has loaded;
+- your text, images and documents are not sent to a server, and are not stored;
+- the tools keep working offline once the page has loaded;
 - there is no rate limit, because there is nothing to rate-limit.
+
+The exceptions, stated plainly: the Thumbnail Downloader sends the link you paste
+to this site's own server to fetch a public preview image from the platform; the
+homepage feedback form sends the details you type, including an optional email
+address, to a Google Apps Script endpoint that emails them to us; and the site
+records page-view paths, with no account or personal details attached, to order
+the tool and guide lists by popularity. The full, current list is at
+https://easyworktools.online/security.html
 
 The consequence worth stating plainly: the tools do the part that can be done
 correctly and locally. Anything whose name suggests a hosted AI model - the

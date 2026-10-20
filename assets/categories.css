@@ -72,7 +72,11 @@
   display:flex;flex-direction:column;
   border-radius:var(--radius);overflow:hidden;
   background:linear-gradient(145deg,var(--c1),var(--c2));
-  box-shadow:0 10px 30px -5px rgba(0,0,0,.22);
+  /* Bottom drop shadow plus a soft ambient layer so the top/side edges read
+     with the same softness as the bottom instead of looking bare. The card
+     fills the viewport edge-to-edge in both layouts, so the shadow is trimmed
+     by the carousel gutter (see .cat-viewport mask on mobile). */
+  box-shadow:0 12px 32px rgba(0,0,0,.10),0 0 20px rgba(0,0,0,.06);
   transition:transform .18s ease,box-shadow .18s ease;
 }
 /* align-items:stretch is the flex default, so every card in the row is already

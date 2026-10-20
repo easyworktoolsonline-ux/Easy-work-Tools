@@ -33,6 +33,21 @@
   var buttons = Array.prototype.slice.call(bar.querySelectorAll('[role="tab"]'));
   if (!buttons.length) return;
 
+  /* The single "View All Tools" link under the grid. It must open the category
+     the visitor is looking at, not always the full All Tools list: a link that
+     hard-codes tools/index.html drops the category on the floor and the /tools/
+     page falls back to All. */
+  var viewAll = document.querySelector('.view-all');
+
+  function viewAllHref(tabId) {
+    if (!viewAll) return;
+    if (!tabId || tabId === 'all') {
+      viewAll.setAttribute('href', 'tools/index.html');
+    } else {
+      viewAll.setAttribute('href', 'tools/index.html?cat=' + encodeURIComponent(tabId));
+    }
+  }
+
 
   /* ---------------------------------------------------------------- glider --
    * One blue marker that slides to the selected tab, rather than a background
@@ -131,11 +146,16 @@
       + '</a>';
   }
 
+  /* Paints one tab's cards into the grid. The grid declares data-limit (16), so a
+     category with more tools than that shows exactly 16 and a category with
+     fewer shows all of them - the same cap the server-rendered All set uses. */
   function paint(tabId) {
     var keys = data.picks[tabId];
     if (!keys || !keys.length) return;
+    var limit = parseInt(grid.getAttribute('data-limit'), 10);
+    var max = (limit > 0) ? Math.min(limit, keys.length) : keys.length;
     var html = '';
-    for (var i = 0; i < keys.length; i++) html += cardFor(keys[i]);
+    for (var i = 0; i < max; i++) html += cardFor(keys[i]);
     grid.innerHTML = html;
   }
 
@@ -148,6 +168,7 @@
       if (on && focus) b.focus();
     });
     paint(tabId);
+    viewAllHref(tabId);
     moveGlider();
   }
 
@@ -178,5 +199,17 @@
   /* Opt in to the glider: only now is the blue fill handed over from the button
      to the marker, so a no-JS page keeps the self-painting button. */
   bar.classList.add('is-enhanced');
+
+  /* Open on the category named in ?cat= (e.g. a category card or a View All
+     Tools link). The server already painted the All set, so a plain homepage
+     load needs no re-render - only a category request changes the selection. */
+  var initial = 'all';
+  try {
+    var requested = new URL(window.location.href).searchParams.get('cat') || '';
+    var known = buttons.some(function (b) { return b.getAttribute('data-cat') === requested; });
+    if (known && requested !== 'all') initial = requested;
+  } catch (e) { /* no URL API - leave the default */ }
+  if (initial !== 'all') select(initial, false);
+
   moveGlider();
 })();

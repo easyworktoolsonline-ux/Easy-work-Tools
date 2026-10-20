@@ -1,18 +1,22 @@
 # EasyWorkTools.online
 
-> Free, private, browser-based tools for everyday digital work. Text, image, PDF
-> and developer utilities that run entirely in the visitor's browser - nothing is
-> uploaded to a server.
+> Free browser-based tools for everyday digital work. Text, image, PDF and
+> developer utilities that mostly run in the visitor's browser, with a short and
+> specific list of what does leave it.
 
-EasyWorkTools.online is a static site of 127 free online tools and 121
-how-to guides. Every tool runs client-side: text never leaves the browser, and
-there is no account, paywall or email capture.
+EasyWorkTools.online is a static site of 152 free online tools and 121
+how-to guides. Most tools run client-side: the text, images and files you use are
+not uploaded, and there is no account or paywall. A small number of features do
+contact a server - the Thumbnail Downloader sends the link you paste to this site
+to fetch a public preview image, the homepage feedback form emails what you type
+to us via Google Apps Script, and page-view paths are counted to order the lists.
+See https://easyworktools.online/security.html for the exact details.
 
 **Canonical origin:** https://easyworktools.online
 
 ## Index
 
-- [Tools](#tools) - 127 utilities, listed by category
+- [Tools](#tools) - 152 utilities, listed by category
 - [Blog](#blog) - 121 how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
@@ -25,7 +29,7 @@ Every tool is also reachable from a per-category page that lists the whole set:
 
 - [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarise and generate content with free AI writing tools that run in your browser. (54 tools)
 - [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (23 tools)
-- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress and watermark PDF files for free, with no account and nothing to install. (7 tools)
+- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress and watermark PDF files for free, with no account and nothing to install. (32 tools)
 - [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (13 tools)
 - [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (13 tools)
 - [Text Tools](https://easyworktools.online/categories/text/) - Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics. (12 tools)
@@ -135,15 +139,40 @@ Browse all tools: https://easyworktools.online/tools/
 - [Social Share Preview](https://easyworktools.online/tools/social-share-preview/) - See how your link will look when shared on Facebook, X (Twitter) and LinkedIn using your Open Graph and Twitter Card tags, online for free.
 - [SVG Optimizer](https://easyworktools.online/tools/svg-optimizer/) - Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.
 
-### PDF (7)
+### PDF (32)
 
-- [JPG ↔ PDF Converter](https://easyworktools.online/tools/jpg-pdf-converter/) - Convert JPG images to a single PDF, or extract JPG pages from a PDF, online for free. Reorder photos, choose page size, and download instantly in your browser.
-- [PDF ⇄ Images Converter](https://easyworktools.online/tools/pdf-images-converter/) - Convert PDF pages to JPG or PNG images, or combine JPG, PNG and WebP images into one PDF, free in your browser.
+- [Add Images to PDF](https://easyworktools.online/tools/pdf-add-images/) - Add JPG, PNG or WebP images to an existing PDF as extra pages - at the end or after any page number, sized to match the document or to each image.
+- [Add Page Numbers to PDF](https://easyworktools.online/tools/pdf-page-numbers/) - Add page numbers to a PDF online for free. Choose the position, starting number, font size and format, preview page 1, then download
+- [Add Text to PDF](https://easyworktools.online/tools/pdf-add-text/) - Add text to a PDF online for free. Type your wording, choose a position, colour and size, then write it onto one page or every page in your browser.
+- [Annotate PDF](https://easyworktools.online/tools/pdf-annotate/) - Annotate a PDF online free. Draw, highlight and mark up any page with a pen, highlighter or box, then download the annotated PDF in your browser.
+- [Create PDF](https://easyworktools.online/tools/pdf-create/) - Create a new PDF from your own text with control over page size, margins, font and line spacing - built right in your browser.
+- [Crop PDF](https://easyworktools.online/tools/pdf-crop/) - Crop PDF pages online for free. Trim the top, right, bottom and left margins, preview the crop area, and download the trimmed PDF in your browser.
+- [Delete Pages from PDF](https://easyworktools.online/tools/pdf-delete-pages/) - Delete pages from a PDF online for free. Tick the pages to remove and download a new PDF without them, right in your browser
+- [Edit PDF](https://easyworktools.online/tools/pdf-edit/) - Edit a PDF online free. Add text, images, shapes and highlights, white out content, draw or sign, then rotate, reorder or delete pages and download - all in your browser, nothing uploaded.
+- [Extract Images from PDF](https://easyworktools.online/tools/pdf-extract-images/) - Extract images from PDF online for free. Download the original embedded photos and graphics from every page as PNG files, right in your browser
+- [Extract Text from PDF](https://easyworktools.online/tools/pdf-extract-text/) - Extract text from PDF online for free. Pull the words out of every page into a plain text file you can copy or download, all inside your browser
+- [GIF to PDF](https://easyworktools.online/tools/gif-to-pdf/) - Convert GIF images into a single PDF, one picture per page, using the first frame of each file. Free, private and fully in your browser
+- [HEIC to PDF](https://easyworktools.online/tools/heic-to-pdf/) - Convert iPhone HEIC and HEIF photos into one PDF, one photo per page, decoded in your browser. Free, private and no upload required
+- [JPG to PDF](https://easyworktools.online/tools/jpg-to-pdf/) - Convert JPG and JPEG images into one PDF, one photo per page, with A4 or fit-to-image sizing. Free, private and fully in your browser
+- [Merge PDF](https://easyworktools.online/tools/pdf-merge/) - Combine multiple PDF files into one document online for free. Add PDFs, arrange the order, then merge and download, all in your browser.
 - [PDF Compressor](https://easyworktools.online/tools/pdf-compressor/) - Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.
-- [PDF Merger & Splitter](https://easyworktools.online/tools/pdf-merge-split/) - Merge multiple PDF files into one, or split a PDF into separate pages, online for free. Reorder files before merging and download instantly, all in your browser.
 - [PDF Metadata Editor](https://easyworktools.online/tools/pdf-metadata-editor/) - View and edit a PDF's title, author, subject, keywords and other document properties, or clear them entirely, free in your browser.
 - [PDF Organizer](https://easyworktools.online/tools/pdf-organizer/) - Merge multiple PDFs, reorder, rotate, delete or extract pages, all in your browser for free.
+- [PDF to EPUB](https://easyworktools.online/tools/pdf-to-epub/) - Convert a PDF to EPUB online free. Rebuild a PDF as a reflowable EPUB 3 e-book with chapters, ready for Kindle, Kobo, Apple Books and Calibre - all in your browser.
+- [PDF to JPG](https://easyworktools.online/tools/pdf-to-jpg/) - Convert PDF to JPG online for free. Turn every page or a chosen page range into a high quality JPG image and download one file or a ZIP in your browser
+- [PDF to PNG](https://easyworktools.online/tools/pdf-to-png/) - Convert PDF to PNG online for free. Export every page or a chosen page range as a lossless PNG image and download one file or a ZIP in your browser
+- [PDF to PowerPoint](https://easyworktools.online/tools/pdf-to-ppt/) - Convert a PDF to PowerPoint online free. Turn each PDF page into a slide - as faithful images or editable text - and download a standard .pptx for PowerPoint, Google Slides and Keynote, entirely in your browser.
+- [PDF to Text](https://easyworktools.online/tools/pdf-to-text/) - Convert a PDF to text online for free - turn one or many PDFs into plain .txt files, with page markers and a choice of one file per PDF or a single combined file.
+- [PDF to TIFF](https://easyworktools.online/tools/pdf-to-tiff/) - Convert a PDF to TIFF online free. Render every page as a lossless baseline TIFF - one multi-page file or a ZIP of single-page TIFFs - at 72, 150 or 300 DPI, entirely in your browser.
+- [PDF to Word](https://easyworktools.online/tools/pdf-to-word/) - Convert a PDF to Word online free. Rebuild a PDF as an editable .docx with headings and bold preserved, ready for Microsoft Word, Google Docs, LibreOffice and Apple Pages - all in your browser.
 - [PDF Watermark & Branding](https://easyworktools.online/tools/pdf-watermark/) - Add a text or image watermark to every page of a PDF — control opacity, size, rotation and position, free in your browser.
+- [PNG to PDF](https://easyworktools.online/tools/png-to-pdf/) - Convert PNG images into one PDF, one picture per page, keeping transparency on a white background. Free, private and fully in your browser
+- [Rearrange PDF Pages](https://easyworktools.online/tools/pdf-rearrange/) - Rearrange PDF pages online for free. Drag thumbnails or use Move left and Move right to reorder pages, then download the reordered PDF
+- [Rotate PDF](https://easyworktools.online/tools/pdf-rotate/) - Rotate PDF pages online for free. Turn a single page or the whole document 90, 180 or 270 degrees and download the corrected PDF instantly in your browser.
+- [Sign PDF](https://easyworktools.online/tools/pdf-sign/) - Sign a PDF online free. Draw your signature or type your name, place it on the page, and download the signed PDF in your browser.
+- [Split PDF](https://easyworktools.online/tools/pdf-split/) - Split PDF files online for free. Extract pages into one PDF or separate every page into its own file, downloaded as a PDF or ZIP.
+- [Summarize PDF](https://easyworktools.online/tools/pdf-summarize/) - Summarize a PDF in your browser - the tool scores every sentence, keeps the most important ones and gives you a short summary to copy or download.
+- [WebP to PDF](https://easyworktools.online/tools/webp-to-pdf/) - Convert WebP images into one PDF, one picture per page. Each WebP is decoded in your browser and placed on its own page, free and private
 
 ### Developer (13)
 
@@ -207,16 +236,25 @@ readers ask in the comments.
 - [Cookie Policy](https://easyworktools.online/cookies.html)
 - [Terms and Conditions](https://easyworktools.online/terms.html)
 - [Disclaimer](https://easyworktools.online/disclaimer.html)
+- [Security & Data Handling](https://easyworktools.online/security.html) - how the site is secured and what data each tool sends
 - [Resources](https://easyworktools.online/resources/)
 
 ## How the tools work
 
-Everything runs in the visitor's browser. There is no backend, no account and no
-upload, so:
+Most tools run in the visitor's browser. There is no account and no file upload,
+so for those tools:
 
-- your text, images and documents are never sent to a server, and are never stored;
-- the tools work offline once the page has loaded;
+- your text, images and documents are not sent to a server, and are not stored;
+- the tools keep working offline once the page has loaded;
 - there is no rate limit, because there is nothing to rate-limit.
+
+The exceptions, stated plainly: the Thumbnail Downloader sends the link you paste
+to this site's own server to fetch a public preview image from the platform; the
+homepage feedback form sends the details you type, including an optional email
+address, to a Google Apps Script endpoint that emails them to us; and the site
+records page-view paths, with no account or personal details attached, to order
+the tool and guide lists by popularity. The full, current list is at
+https://easyworktools.online/security.html
 
 The consequence worth stating plainly: the tools do the part that can be done
 correctly and locally. Anything whose name suggests a hosted AI model - the

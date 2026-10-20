@@ -91,7 +91,7 @@ export const CATEGORIES = [
   {
     slug: 'image', match: 'Image Tools', title: 'Image Tools',
     tagline: 'Solve your image problems',
-    c1: '#EA580C', c2: '#EA580C', scrim: 0, link: '#BA4609', text: '#FFFFFF', iconKey: 'image',
+    c1: '#C2410C', c2: '#C2410C', scrim: 0, link: '#A83A0C', text: '#FFFFFF', iconKey: 'image',
     featured: { title: 'Image Resizer', url: '/tools/easy-image-resizer/' },
     subs: [
       {
@@ -139,22 +139,34 @@ export const CATEGORIES = [
     slug: 'pdf', match: 'PDF Tools', title: 'PDF Tools',
     tagline: 'Solve your PDF problems',
     c1: '#000000', c2: '#000000', scrim: 0, link: '#000000', text: '#FFFFFF', iconKey: 'pdf-organizer',
-    featured: { title: 'PDF Merger', url: '/tools/pdf-merge-split/' },
+    featured: { title: 'Merge PDF', url: '/tools/pdf-merge/' },
     subs: [
       {
         slug: 'pdf-convert', label: 'Convert', tools: [
-          '/tools/jpg-pdf-converter/', '/tools/pdf-images-converter/'
+          '/tools/pdf-extract-images/', '/tools/pdf-extract-text/',
+          '/tools/pdf-to-text/', '/tools/pdf-summarize/',
+          '/tools/gif-to-pdf/', '/tools/heic-to-pdf/', '/tools/jpg-to-pdf/',
+          '/tools/pdf-add-images/',
+          '/tools/pdf-to-jpg/', '/tools/pdf-to-png/', '/tools/png-to-pdf/',
+          '/tools/webp-to-pdf/', '/tools/pdf-create/',
+          '/tools/pdf-to-epub/', '/tools/pdf-to-tiff/',
+          '/tools/pdf-to-word/', '/tools/pdf-to-ppt/'
         ]
       },
       {
         slug: 'pdf-organise', label: 'Merge & Organise', tools: [
-          '/tools/pdf-merge-split/', '/tools/pdf-organizer/'
+          '/tools/pdf-organizer/',
+          '/tools/pdf-page-numbers/', '/tools/pdf-delete-pages/',
+          '/tools/pdf-merge/', '/tools/pdf-rearrange/', '/tools/pdf-rotate/',
+          '/tools/pdf-split/'
         ]
       },
       {
         slug: 'pdf-edit', label: 'Compress & Edit', tools: [
           '/tools/pdf-compressor/', '/tools/pdf-metadata-editor/',
-          '/tools/pdf-watermark/'
+          '/tools/pdf-watermark/',
+          '/tools/pdf-add-text/', '/tools/pdf-annotate/', '/tools/pdf-crop/',
+          '/tools/pdf-sign/', '/tools/pdf-edit/'
         ]
       }
     ]
@@ -162,7 +174,7 @@ export const CATEGORIES = [
   {
     slug: 'developer', match: 'Developer Tools', title: 'Developer Tools',
     tagline: 'Solve your development problems',
-    c1: '#16A34A', c2: '#16A34A', scrim: 0, link: '#117E39', text: '#FFFFFF', iconKey: 'json',
+    c1: '#15803D', c2: '#15803D', scrim: 0, link: '#0D602D', text: '#FFFFFF', iconKey: 'json',
     featured: { title: 'JSON Tool', url: '/tools/json-formatter/' },
     subs: [
       {
@@ -332,7 +344,7 @@ export function scrimmed(hex, alpha) {
  * section's rotating word chip animates through, plus the three supplied by
  * hand. Asserted at build time so a future edit cannot quietly invent a shade. */
 export const CATEGORY_PALETTE = [
-  '#000000', '#16A34A', '#1D4ED8', '#7C3AED', '#EA580C', '#DC2626',   // from the hero
+  '#000000', '#15803D', '#1D4ED8', '#7C3AED', '#C2410C', '#DC2626',   // from the hero
   '#11D6B2', '#D61149', '#1493B3'                                       // supplied
 ];
 

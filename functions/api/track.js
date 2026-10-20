@@ -1,4 +1,14 @@
-export async function onRequestPost({ request, env }) {
+export async function onRequest({ request, env }) {
+  // Only POST writes are meaningful. Answering every other method here means a
+  // GET /api/track returns a small 405 instead of falling through to the site's
+  // 404 page (which served 86 KB of HTML for an API path).
+  if (request.method !== 'POST') {
+    return new Response('Method Not Allowed', {
+      status: 405,
+      headers: { Allow: 'POST', 'Cache-Control': 'no-store' }
+    });
+  }
+
   // Page-view counting is best-effort analytics. It must never surface on the page
   // as a failed network request (Chrome logs every 4xx/5xx to the console, which
   // costs a Best-Practices point in Lighthouse), so every "the write could not

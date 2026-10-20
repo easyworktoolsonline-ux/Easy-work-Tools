@@ -36,7 +36,7 @@ import { CATEGORIES } from './categories.mjs';
 export const POPULAR_PICKS = {
   'ai-write': 'ai-write/essay-writer',
   'image': 'easy-image-resizer',
-  'pdf': 'pdf-merge-split',
+  'pdf': 'pdf-merge',
   'developer': 'json-formatter',
   'seo': 'seo-page-analyzer',
   'text': 'online-text-case-converter',

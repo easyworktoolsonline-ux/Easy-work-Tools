@@ -1,8 +1,8 @@
 # Vendored third-party libraries
 
 These files are byte-for-byte copies of the exact pinned builds that
-`tools/easy-image-resizer`, `tools/heic-to-jpg-converter`, `tools/jpg-pdf-converter`,
-`tools/pdf-compressor`, `tools/pdf-images-converter`, `tools/pdf-merge-split`,
+`tools/easy-image-resizer`, `tools/heic-to-jpg-converter`, `tools/jpg-to-pdf`,
+`tools/pdf-compressor`,
 `tools/pdf-metadata-editor`, `tools/pdf-organizer` and `tools/pdf-watermark`
 previously loaded from jsDelivr and cdnjs.
 

@@ -1,7 +1,14 @@
 ﻿
 :root{--yellow:#facc15;--yellow2:#eab308;--black:#0f172a;--text:#1f2937;--muted:#64748b;--muted-strong:#475569;--border:#e5e7eb;--soft:#f8fafc;--shadow:0 12px 35px rgba(0,0,0,.07);--radius:18px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:#fff;line-height:1.55;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input{font:inherit}button{cursor:pointer}.container{width:min(1160px,calc(100% - 32px));margin:auto}
-.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}.nav-inner{min-height:72px;display:flex;align-items:center;gap:16px}
+/* The header must always span the full viewport width. Several page types set
+   body{display:flex;flex-direction:column;align-items:center} in their own inline
+   stylesheet, and with the default align-items the header - a flex item - was
+   shrink-wrapped to its content and centred, which produced a narrow, centred
+   nav instead of the full-width landing-page header. align-self:stretch pins the
+   header to the body's full width; on pages whose body is a normal block it has
+   no effect, so the landing page is untouched. */
+.navbar{position:sticky;top:0;z-index:100;align-self:stretch;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}.nav-inner{min-height:72px;display:flex;align-items:center;gap:16px}
 .site-logo{font-size:24px;font-weight:900;letter-spacing:-.8px;white-space:nowrap;color:#0f172a;display:inline-flex;align-items:baseline;gap:2px}.site-logo-domain{font-family:'Space Grotesk',sans-serif;background:#facc15;color:#0f172a;padding:2px 6px;border-radius:4px;font-size:12px;font-weight:900;display:inline-block;line-height:1;position:relative;top:-2px;margin-left:2px}.nav-links{display:flex;gap:20px;font-weight:750;font-size:14px;margin-left:auto}.nav-links a:hover{color:#111827;font-weight:800;}.nav-search{margin-left:0}.nav-search input{width:250px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;outline:none}.nav-search input:focus{border-color:#c99e00;box-shadow:0 0 0 3px rgba(250,204,21,.18)}.menu-btn{display:none;border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 11px}
 .nav-divider{flex:0 0 1px;height:24px;background:var(--border)}
 .theme-toggle,.share-button{display:inline-flex;flex:0 0 38px;width:38px;height:38px;align-items:center;justify-content:center;padding:0;border:1px solid #dbe2ea;border-radius:50%;overflow:hidden;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
@@ -126,11 +133,11 @@ html[data-theme="dark"] .hero-stats strong{color:#f9fafb}
 .hero-word.is-changing{opacity:0;transform:none}
 .hero-word .hero-word-text{display:block;font-size:1em;line-height:1;white-space:nowrap;color:#fff}
 .hero-word.hero-word-task{background:#000!important;color:#fff}
-.hero-word.hero-word-life{background:#16A34A!important;color:#fff}
+.hero-word.hero-word-life{background:#15803D!important;color:#fff}
 .hero-word.hero-word-everything{background:#1D4ED8!important;color:#fff}
 .hero-word.hero-word-everything .hero-word-text{font-size:.72em}
 .hero-word.hero-word-work{background:#7C3AED!important;color:#fff}
-.hero-word.hero-word-business{background:#EA580C!important;color:#fff}
+.hero-word.hero-word-business{background:#C2410C!important;color:#fff}
 .hero-word.hero-word-business .hero-word-text{font-size:.9em}
 .hero-word.hero-word-education{background:#DC2626!important;color:#fff}
 .hero-word.hero-word-education .hero-word-text{font-size:.8em}
@@ -285,7 +292,7 @@ html[data-theme="dark"] .hero-stats strong{color:#f9fafb}
    and a yellow surface in dark mode for readable text contrast.
 ========================================================= */
 
-:root{--green:#16A34A;--green-ink:#15803D;--purple:#7C3AED;--blue:#1D4ED8;--white:#ffffff}
+:root{--green:#15803D;--green-ink:#15803D;--purple:#7C3AED;--blue:#1D4ED8;--white:#ffffff}
 
 /* Section identity: each content section gets one accent from
    the palette on its kicker pill, so a visitor can tell sections
@@ -798,8 +805,8 @@ html[data-theme="dark"] .tool-tab:focus-visible{outline-color:#93c5fd}
 }
 .cf-card__icon svg{width:50px;height:50px;display:block;filter:brightness(0) invert(1)}
 .cf-item:nth-child(9n + 1) .cf-card__icon{background-color:#1D4ED8;border-color:#1D4ED8}
-.cf-item:nth-child(9n + 2) .cf-card__icon{background-color:#EA580C;border-color:#EA580C}
-.cf-item:nth-child(9n + 3) .cf-card__icon{background-color:#16A34A;border-color:#16A34A}
+.cf-item:nth-child(9n + 2) .cf-card__icon{background-color:#C2410C;border-color:#C2410C}
+.cf-item:nth-child(9n + 3) .cf-card__icon{background-color:#15803D;border-color:#15803D}
 .cf-item:nth-child(9n + 4) .cf-card__icon{background-color:#DC2626;border-color:#DC2626}
 .cf-item:nth-child(9n + 5) .cf-card__icon{background-color:#7C3AED;border-color:#7C3AED}
 .cf-item:nth-child(9n + 6) .cf-card__icon{background-color:#000;border-color:#000}
@@ -1037,8 +1044,8 @@ html[data-theme="dark"] #featured .cf-nav:focus-visible{
   box-shadow:0 4px 16px rgba(17,24,39,.06);
   transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
 }
-.resource-card:nth-child(2){--resource-accent:#EA580C;--resource-ink:#9A3412}
-.resource-card:nth-child(3){--resource-accent:#16A34A;--resource-ink:#14532D}
+.resource-card:nth-child(2){--resource-accent:#C2410C;--resource-ink:#9A3412}
+.resource-card:nth-child(3){--resource-accent:#15803D;--resource-ink:#14532D}
 .resource-card:hover{
   transform:translateY(-2px);
   border-color:var(--resource-accent);
@@ -1638,24 +1645,32 @@ html[data-theme="dark"] #featured .cf-nav:focus-visible{
    3.56 and Developer Tools 3.30 - both short. Solid fills with white text would have
    put sub-AA text on two of the five, so the exact hue is kept but carried by the
    tint and the outline, with the chip text in a deepened shade of the same hue. */
-/* A solid box in the exact colour of a category card, with white text.
-     --rc   the exact --c1 of that card, inlined on the element
+/* A solid box in the colour of a category card, with white text.
+     --rc   the fill colour, inlined on the element (the card's --c1, except for the
+            two chips darkened below)
    The same inline-custom-property shape the resource cards already use.
 
-   SOLID FILLS, AND TWO CHIPS THAT ARE BELOW AA - A DECISION, NOT AN OVERSIGHT
-   The chip text is 13px at weight 750, below the 18.66px-bold large-text threshold,
+   SOLID FILLS, WHITE TEXT, AND ALL FIVE CHIPS CLEARING AA
+   The chip text is 11px at weight 750, below the 18.66px-bold large-text threshold,
    so the 4.5:1 minimum applies. White text on these fills measures:
 
      #000000  21.00:1   PASS      #DC2626   4.83:1   PASS
-     #7C3AED   5.70:1   PASS      #EA580C   3.56:1   SHORT
-     #16A34A   3.30:1   SHORT
+     #7C3AED   5.70:1   PASS      #C2410C   5.18:1   PASS
+     #15803D   5.02:1   PASS
 
-   Orange and green are shipped short of AA because solid fills with white text were
-   asked for, in two separate references, and mid-tone orange and green have nowhere
-   near the luminance headroom for white text. Darkening them WOULD pass - #CC4D0A and
-   #12873D both clear 4.5:1 - but that stops them being the exact category colours,
-   which was the explicit instruction. So the exception is documented here and in
-   AUDIT-REPORT.md rather than hidden by a quiet adjustment.
+   Two chips used to carry the category colours verbatim and failed AA against white
+   text: #EA580C on Image Tools measured 3.56:1 and #16A34A on Developer Tools 3.30:1.
+   Each is now darkened one step within the same hue - #EA580C -> #C2410C (the
+   orange-700 of the #EA580C orange-600 already in the palette) and #16A34A -> #15803D
+   (the site's existing --green-ink). The pills stay solid, stay 14px-radius and keep
+   white bold text; both new fills land in the same 4.8-5.7:1 band as the three chips
+   that already passed. Solid fills with white text were an explicit instruction and
+   are kept - only the step within the hue moved.
+
+   The two .cat-card fills these chips sit beside are unchanged. Those cards paint a
+   17% black scrim over the fill before any white text lands on it, which lifts
+   #EA580C to about 4.9:1 and #16A34A to about 4.6:1, so they already clear AA as
+   rendered.
 
    NO BORDER
    The 2px outline existed because a pale-tinted chip had no other edge. Against an
@@ -1782,8 +1797,8 @@ html[data-theme="dark"] #featured .cf-nav:focus-visible{
   color:#fff;
 }
 .grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 1) .icon{background:#1D4ED8!important;border-color:#1D4ED8}
-.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 2) .icon{background:#EA580C!important;border-color:#EA580C}
-.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 3) .icon{background:#16A34A!important;border-color:#16A34A}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 2) .icon{background:#C2410C!important;border-color:#C2410C}
+.grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 3) .icon{background:#15803D!important;border-color:#15803D}
 .grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 4) .icon{background:#DC2626!important;border-color:#DC2626}
 .grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 5) .icon{background:#7C3AED!important;border-color:#7C3AED}
 .grid:has(> .card[data-cat])>.card[data-cat]:nth-child(9n + 6) .icon{background:#000!important;border-color:#000}
@@ -1864,8 +1879,8 @@ html[data-theme="dark"] #featured .cf-nav:focus-visible{
   color:#fff;
 }
 .grid:has(> .blog-card)>.blog-card:nth-child(9n + 1) .icon{background:#1D4ED8!important;border-color:#1D4ED8}
-.grid:has(> .blog-card)>.blog-card:nth-child(9n + 2) .icon{background:#EA580C!important;border-color:#EA580C}
-.grid:has(> .blog-card)>.blog-card:nth-child(9n + 3) .icon{background:#16A34A!important;border-color:#16A34A}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 2) .icon{background:#C2410C!important;border-color:#C2410C}
+.grid:has(> .blog-card)>.blog-card:nth-child(9n + 3) .icon{background:#15803D!important;border-color:#15803D}
 .grid:has(> .blog-card)>.blog-card:nth-child(9n + 4) .icon{background:#DC2626!important;border-color:#DC2626}
 .grid:has(> .blog-card)>.blog-card:nth-child(9n + 5) .icon{background:#7C3AED!important;border-color:#7C3AED}
 .grid:has(> .blog-card)>.blog-card:nth-child(9n + 6) .icon{background:#000!important;border-color:#000}
@@ -2166,7 +2181,11 @@ html[data-theme="dark"] .social-card{
   color:var(--text);
 }
 html[data-theme="dark"] .platform-chip.is-active{background:#111c2e;color:var(--text)}
-html[data-theme="dark"] .social-card.twitter .body{background:#111c2e;border-color:#334155}
+/* Same light "platform preview" surface as the X card body, restored for dark
+   mode. Without this the .tool-hero p rule paints the Facebook/LinkedIn card's
+   title, description and domain --text (#e2e8f0) onto this card's hard-coded
+   #F0F2F5 body: light on light, effectively invisible. */
+html[data-theme="dark"] .social-card .body{background:#111c2e;border-color:#334155}
 
 /* --- headings and small text --------------------------------------------- */
 html[data-theme="dark"] .drop-box-content h2,
@@ -2188,6 +2207,28 @@ html[data-theme="dark"] #fullScreenDropOverlay h2{
   color:var(--text);
 }
 
+/* Body copy in the content pages' SEO / FAQ / SERP sections is written with
+   literal light-mode greys (#475569, #64748B, #4D5156, #202124, #1A0DAB) that
+   are not tokens, so the heading overrides above never reached them; on the
+   dark theme they rendered at 1.4:1 - 3.6:1. These are their missing dark
+   counterparts. Dark-mode only - the light theme is untouched. */
+html[data-theme="dark"] .seo-inner>p,
+html[data-theme="dark"] .seo-inner ol li,
+html[data-theme="dark"] .seo-inner ul li,
+html[data-theme="dark"] .seo-inner code,
+html[data-theme="dark"] .seo-grid p,
+html[data-theme="dark"] .faq p{
+  color:var(--text-muted);
+}
+html[data-theme="dark"] .faq details[open] summary{color:var(--yellow)}
+html[data-theme="dark"] .serp-meta,
+html[data-theme="dark"] .serp-url,
+html[data-theme="dark"] .serp-desc{color:var(--text-muted)}
+html[data-theme="dark"] .serp-title{color:#8ab4f8}
+/* .serp-favicon keeps its light #E5E7EB chip in the dark theme, so its
+   initial must stay dark - do not let the .serp-meta colour cascade in. */
+html[data-theme="dark"] .serp-favicon{color:#202124}
+
 /* --- borders and dividers ------------------------------------------------ */
 html[data-theme="dark"] .faq details,
 html[data-theme="dark"] .seo-grid>div,
@@ -2202,6 +2243,22 @@ html[data-theme="dark"] .drop-box-content{
   border-color:#334155;
 }
 html[data-theme="dark"] .spec-table th{background:#0b1220;color:var(--text)}
+/* The spec tables paint only their th cell; td text kept the light literal
+   #475569 (2.47:1 on the dark card). The empty-state placeholder and the
+   amber "ink" controls (#8A6700 links/tags) had the same problem - both are
+   given their dark counterparts here. Dark-mode only. */
+html[data-theme="dark"] .spec-table td,
+html[data-theme="dark"] .enh-empty{
+  color:var(--text-muted);
+}
+html[data-theme="dark"] .btn-ghost:hover,
+html[data-theme="dark"] .quality-tag,
+html[data-theme="dark"] .upload-inline button,
+html[data-theme="dark"] .outline-item .tag,
+html[data-theme="dark"] .hash-row-head button,
+html[data-theme="dark"] .heic-row .state{
+  color:var(--yellow);
+}
 
 /* --- overlays that sit on top of a light preview -------------------------- */
 html[data-theme="dark"] .dimension-badge{background:rgba(11,18,32,.92);color:var(--text);border-color:#334155}
@@ -2537,7 +2594,11 @@ html[data-theme="dark"] .related-card p{color:#cbd5e1!important}
   .hero{padding:44px 0 48px!important}
   .hero-text{font-size:14px!important;line-height:1.5!important}
   h1{letter-spacing:-1px!important}
-  .nav-search input{width:100px;font-size:11px}
+  /* 100px left the placeholder "Global Search..." clipped to "Global Sear": the
+     text needs ~83px and the 24px padding + 2px border left only 74px of the box.
+     The field is widened just enough to show the whole label (it still sits on
+     its own full-width row - see the 960px grid above). */
+  .nav-search input{width:130px;font-size:11px}
   .menu-btn{padding:6px 9px;min-width:36px}
   .site-logo{font-size:20px;white-space:nowrap}
 }
@@ -2809,3 +2870,148 @@ html[data-theme="dark"] .faq-item, html[data-theme="dark"] .faq-item details, ht
 
 /* === Recent Tools: small downward spacing adjustment, keeps rail clear of card hover/clicks === */
 #recent { padding-top: 14px !important; padding-bottom: 16px !important; }
+
+/* ==========================================================================
+ * Mobile-only layout fixes: Recent Tools, Help & Feedback cards and Major
+ * Categories. Nothing here affects the desktop layout (>900px), the light/dark
+ * themes or any tool's functionality.
+ * ========================================================================== */
+
+/* --- Recent Tools: chips flow beside the label, wrap to the far left -------
+   On narrow screens the strip used to stack the label ABOVE the chips. Then it
+   became a row with the label in a left column and the chips wrapping inside
+   the remaining column, which indented every row after the first under the
+   first chip. Here the strip is a single wrapping flex row: the chips sit
+   beside the label wherever they fit and, when they wrap, the next row starts
+   at the container's left edge - level with "Recent Tools:" - instead of under
+   the first chip. Chip links, text, colours and click behaviour are unchanged. */
+@media (max-width:820px) {
+  #recent { padding-top: 6px !important; padding-bottom: 6px !important; }
+  .recent-strip {
+    flex-direction: row !important;
+    /* The chips flow beside the label and wrap naturally, so a wrapped row
+       starts again at the container's left edge (level with the label) instead
+       of indenting under the first chip. */
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+  .recent-strip__label {
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    margin-top: 8px !important;
+  }
+  /* display:contents drops the <ul>'s own box, so its <li> pills become flex
+     items of .recent-strip: they sit beside the label and, when they wrap,
+     restart at the container's left edge. The links, their text, their colours
+     and their click behaviour are unchanged. */
+  .recent-chips { display: contents !important; }
+  /* Undo the <=560px rules that widen and centre the chips: they keep their own
+     content width so they read as the same pills as on desktop. */
+  .recent-chip {
+    white-space: nowrap !important;
+    text-align: left !important;
+    padding: 5px 9px !important;
+  }
+}
+
+@media (max-width:640px) {
+  /* --- Recent Tools: tighten the band (row layout set above). --- */
+  .recent-strip { transform: translateY(-30px) !important; }
+
+  /* --- Help & Feedback ----------------------------------------------------
+     Tool Guides and Tool Reference keep their exact size. The Updates &
+     Requests card is made to span the full row, and grid-auto-rows:1fr makes
+     every row the same height, so it matches the two cards above it. */
+  #help .resource-grid { grid-auto-rows: 1fr !important; }
+  #help .resource-grid > .resource-card:nth-child(3) { grid-column: 1 / -1 !important; }
+
+  /* --- Major Categories --------------------------------------------------
+     Reserve a gutter on each side of the carousel so two cards fit between
+     the arrows. The arrows sit in that gutter, fully outside the cards.
+
+     A previous fix hid a card sliding under an arrow with
+     clip-path:inset(0 74px), but that boundary sits exactly on the card edge
+     and chopped the card's box-shadow off on the left and right. Here the
+     same gutter is faded out with a horizontal mask instead: transparent up
+     to 61px, ramp to opaque at 74px (the card edge). The neighbour card that
+     peeks in sits at ~60px, so it (and any card sliding out) fades to nothing
+     while the card's own shadow is revealed and falls off naturally, with no
+     hard or cut-off edge. Card size, spacing, colours and behaviour are
+     unchanged; only the way the gutter is hidden differs. */
+  .cat-viewport {
+    padding-left: 74px !important;
+    padding-right: 74px !important;
+    padding-top: 18px !important;
+    margin-top: -18px !important;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0 61px, #000 74px, #000 calc(100% - 74px), transparent calc(100% - 61px));
+    mask-image: linear-gradient(90deg, transparent 0 61px, #000 74px, #000 calc(100% - 74px), transparent calc(100% - 61px));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  .cat-nav--prev { left: 2px !important; }
+  .cat-nav--next { right: 2px !important; }
+}
+
+/* ==========================================================================
+ * Homepage-only mobile vertical rhythm.
+ *
+ * On mobile the homepage sections each carried ~52px of padding top and bottom,
+ * so two neighbouring sections left ~104px of blank scroll between them; the
+ * statistics band sat 74px above the "Our Most Popular Tools" heading and the
+ * "View All Tools" button sat 104px above the "Featured Tools" heading. The
+ * values below tighten those gaps into a consistent rhythm while keeping each
+ * heading, card and control clear of its neighbours.
+ *
+ * Scoped to the homepage's own sections (#tools, #featured, #help,
+ * .category-section, .tool-stats-section) so no other page's .section spacing
+ * changes, and gated at <=900px so the desktop layout (>=900px - see the
+ * "desktop untouched" marker above) is untouched.
+ * ========================================================================== */
+@media (max-width:900px){
+  /* Hero bottom + the category band's top held the "Recent Tools" strip a long
+     way below the hero artwork. */
+  .hero{ padding-bottom: 30px !important; }
+
+  /* Section frames: halve the vertical padding that used to stack up between
+     neighbouring sections. */
+  #tools.section,
+  #featured.section { padding-top: 30px !important; padding-bottom: 30px !important; }
+  #help.section { padding-top: 20px !important; padding-bottom: 16px !important; }
+  /* The Recent Tools strip is pulled up 30px (see the <=640px block), so the
+     section's top padding has to stay >= 24px or the strip rides up over the
+     hero's gradient edge. The bottom is tightened freely. */
+  .category-section { padding: 30px 0 18px !important; }
+  .tool-stats-section { padding: 10px 0 6px !important; }
+
+  /* Heading -> content gaps inside those sections. */
+  #tools .section-head,
+  #featured .section-head { margin-bottom: 18px !important; }
+  #help .help-head { margin-bottom: 14px !important; }
+  #tools .section-action { margin-top: 18px !important; }
+  #help .resource-grid { margin-bottom: 12px !important; }
+}
+
+/* ---------------------------------------------------------------------------
+   Universal top toast notification.
+
+   Modelled on the Easy Image Resizer tool's #toastNotification: a fixed bar
+   centred on the top edge of the viewport that slides down into view, holds
+   for a moment, then slides back out. The element itself is created on demand
+   by assets/app.js, so every page gets the behaviour without repeating markup.
+
+   A page that ships its own #toastNotification (the image resizer) still wins,
+   because that page's own <style> block comes after this stylesheet.
+   ------------------------------------------------------------------------ */
+#toastNotification{
+  position:fixed;top:20px;left:50%;
+  transform:translateX(-50%) translateY(-100px);
+  background:var(--black,#0f172a);color:var(--white,#fff);
+  padding:12px 22px;border-radius:var(--radius-md,var(--radius,14px));
+  font-size:14px;font-weight:600;
+  box-shadow:var(--shadow,0 12px 35px rgba(0,0,0,.14));
+  transition:transform .3s cubic-bezier(.4,0,.2,1);
+  z-index:1000;display:flex;align-items:center;gap:10px;
+  border:1px solid #374151;max-width:calc(100% - 32px);
+}
+#toastNotification.show{transform:translateX(-50%) translateY(0)}

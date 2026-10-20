@@ -35,10 +35,10 @@
     var accent = '#1D4ED8';
     var ink = '#ffffff';
     if (select.value === 'Suggest a New Tool') {
-      accent = '#EA580C';
+      accent = '#C2410C';
       ink = '#111827';
     } else if (select.value === 'Help') {
-      accent = '#16A34A';
+      accent = '#15803D';
       ink = '#111827';
     } else if (select.value !== 'Report a Tool Issue') {
       accent = null;
