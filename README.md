@@ -99,7 +99,7 @@ For users in the EEA, UK and Switzerland, configure Google's Privacy & Messaging
 - Site is live on the custom domain and HTTPS works.
 - Navigation and search work on desktop and mobile.
 - Privacy Policy, Cookie Policy, Disclaimer, Terms and Contact pages are reachable.
-- Contact email is correct: EasyWorkTools.online@gmail.com
+- Contact email is correct: info@easyworktools.online
 - Tools contain original, useful functionality and explanatory content. The 54 AI
   Write tools must keep working end to end — they are deterministic browser
   utilities, so a stub that returns its input unchanged is a regression even

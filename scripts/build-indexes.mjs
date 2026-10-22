@@ -1208,7 +1208,7 @@ const catalog = {
     'Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security.html',
   version: '1.0.0',
   updated: new Date().toISOString().slice(0, 10),
-  operator: { name: 'EasyWorkTools.online', email: 'EasyWorkTools.online@gmail.com' },
+  operator: { name: 'EasyWorkTools.online', email: 'info@easyworktools.online' },
   license: 'https://easyworktools.online/terms.html',
   privacy: 'https://easyworktools.online/privacy.html',
   dataHandling: {
@@ -1320,7 +1320,7 @@ readers ask in the comments.
 ## Legal and informational pages
 
 - [About](https://easyworktools.online/about.html) - what the site is and is not
-- [Contact](https://easyworktools.online/contact.html) - EasyWorkTools.online@gmail.com
+- [Contact](https://easyworktools.online/contact.html) - info@easyworktools.online
 - [Privacy Policy](https://easyworktools.online/privacy.html)
 - [Cookie Policy](https://easyworktools.online/cookies.html)
 - [Terms and Conditions](https://easyworktools.online/terms.html)
@@ -1371,7 +1371,7 @@ and answers a reader can see on the page.
 
 ## Contact
 
-EasyWorkTools.online@gmail.com
+info@easyworktools.online
 
 Corrections, bug reports and tool requests are all welcome. If a tool gives a
 wrong answer, say which tool, what you put in and what came out - that is the

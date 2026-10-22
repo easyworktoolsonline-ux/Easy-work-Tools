@@ -8,4 +8,4 @@ EasyWorkTools.online feedback backend
 6. Copy the resulting /exec URL.
 7. Put that URL in assets/feedback-config.js as EWT_APPS_SCRIPT_URL.
 
-The web app receives POST data and sends the request to EasyWorkTools.online@gmail.com using the Google account that owns the script.
+The web app receives POST data and sends the request to info@easyworktools.online using the Google account that owns the script.

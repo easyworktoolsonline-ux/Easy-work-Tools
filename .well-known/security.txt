@@ -1,4 +1,4 @@
-Contact: mailto:easyworktools.online@gmail.com
+Contact: mailto:info@easyworktools.online
 Canonical: https://easyworktools.online/.well-known/security.txt
 Policy: https://easyworktools.online/contact.html
 Preferred-Languages: en

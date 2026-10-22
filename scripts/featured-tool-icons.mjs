@@ -93,8 +93,8 @@ const CATEGORY_ICONS = {
     + '<circle cx="16.5" cy="35.5" r="1.9" fill="#FFFFFF"/><circle cx="24" cy="35.5" r="1.9" fill="#FFFFFF"/><circle cx="31.5" cy="35.5" r="1.9" fill="#FFFFFF"/>'
     + '</svg>',
   utility:
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">'
-    + '<path d="M29.5 10.5a8 8 0 0 0-10.9 9.3L8 30.4V40h9.6l10.6-10.6a8 8 0 0 0 9.3-10.9l-6 6-4-4z" stroke="#FFFFFF" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>'
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'
+    + '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77z"/>'
     + '</svg>'
 };
 

@@ -5,7 +5,7 @@
  *   Who has access: Anyone
  */
 
-const RECIPIENT_EMAIL = 'easyworktools.online@gmail.com';
+const RECIPIENT_EMAIL = 'info@easyworktools.online';
 const MAX_FIELD_LENGTH = 5000;
 
 function doPost(e) {
