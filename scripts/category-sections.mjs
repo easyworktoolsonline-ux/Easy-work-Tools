@@ -17,7 +17,7 @@
 
 import { CATEGORIES, catSlug, CARD_SCRIM, assertCategoryContrast, resolveSubs } from './categories.mjs';
 import { POPULAR_PICKS } from './popular-tools.mjs';
-import { featuredToolIcon } from './featured-tool-icons.mjs';
+import { categoryIcon } from './featured-tool-icons.mjs';
 
 /* Accepted contrast deviations, filled by validateCategories() and printed by the
  * build. Kept as a module-level array so validateCategories can keep returning only
@@ -115,7 +115,7 @@ function categoryCard(c, list, iconSvg) {
   const featuredTool = list.find((tool) =>
     String(tool.url || '').replace(/^\/?tools\//, '').replace(/\/+$/, '') === featuredKey
   );
-  const icon = featuredToolIcon(featuredKey, iconSvg(featuredTool ? featuredTool.iconKey : c.iconKey));
+  const icon = categoryIcon(c.slug, iconSvg(c.iconKey));
   return ''
     + '<article class="cat-card" style="--c1:' + esc(c.c1) + ';--c2:' + esc(c.c2) + ';--scrim:' + scrim + ';--link:' + esc(c.link) + ';--text:' + esc(c.text || '#FFFFFF') + '">'
     +   '<a class="cat-card__main" href="' + esc(href) + '">'

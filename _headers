@@ -21,6 +21,16 @@
 # break anything on the day it happens; they can be removed once the dashboard
 # has been clean for a while.
 #
+# HSTS: max-age raised from 1 year to 2 years (63072000). includeSubDomains and
+# preload are intentionally NOT set: they commit every present and future
+# subdomain to HTTPS-only (preload is very hard to reverse) and that has not
+# been verified here. To opt in, confirm all subdomains serve valid HTTPS, add
+# `; includeSubDomains; preload` and submit at hstspreload.org.
+#
+# Trusted Types is NOT enabled: the site has hundreds of inline onclick handlers
+# and innerHTML writes, so `require-trusted-types-for 'script'` would break
+# tools. It would need a refactor first.
+#
 # `upgrade-insecure-requests` was deliberately removed from the policy below.
 # Browsers refuse to honour it inside a report-only policy and log a console
 # error to say so ("The Content Security Policy directive
@@ -36,7 +46,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), midi=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
-  Strict-Transport-Security: max-age=31536000
+  Strict-Transport-Security: max-age=63072000
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com; connect-src 'self' https://script.google.com https://cloudflareinsights.com; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
   Cache-Control: public, max-age=0, must-revalidate
 

@@ -31,7 +31,7 @@ export const CATEGORIES = [
   {
     slug: 'ai-write', match: 'AI Write', title: 'AI Write',
     tagline: 'Solve your writing problems',
-    c1: '#1D4ED8', c2: '#1D4ED8', scrim: 0, link: '#1D4ED8', text: '#FFFFFF', iconKey: 'word-count',
+    c1: '#1D4ED8', c2: '#1D4ED8', scrim: 0, link: '#1D4ED8', text: '#FFFFFF', iconKey: 'markdown',
     featured: { title: 'Essay Writer', url: '/tools/ai-write/essay-writer/' },
     subs: [
       {
@@ -138,7 +138,7 @@ export const CATEGORIES = [
   {
     slug: 'pdf', match: 'PDF Tools', title: 'PDF Tools',
     tagline: 'Solve your PDF problems',
-    c1: '#000000', c2: '#000000', scrim: 0, link: '#000000', text: '#FFFFFF', iconKey: 'pdf-organizer',
+    c1: '#000000', c2: '#000000', scrim: 0, link: '#000000', text: '#FFFFFF', iconKey: 'pdf-merge',
     featured: { title: 'Merge PDF', url: '/tools/pdf-merge/' },
     subs: [
       {
@@ -232,7 +232,7 @@ export const CATEGORIES = [
   {
     slug: 'text', match: 'Text Tools', title: 'Text Tools',
     tagline: 'Solve your text problems',
-    c1: '#7C3AED', c2: '#7C3AED', scrim: 0, link: '#7C3AED', text: '#FFFFFF', iconKey: 'text-case-converter',
+    c1: '#7C3AED', c2: '#7C3AED', scrim: 0, link: '#7C3AED', text: '#FFFFFF', iconKey: 'word-count',
     featured: { title: 'Word Counter', url: '/tools/word-character-counter/' },
     subs: [
       {
@@ -263,7 +263,7 @@ export const CATEGORIES = [
   {
     slug: 'converter', match: 'Converter Tools', title: 'Converter Tools',
     tagline: 'Solve your conversion problems',
-    c1: '#1493B3', c2: '#1493B3', scrim: 0, link: '#107690', text: '#FFFFFF', iconKey: 'fmt-convert',
+    c1: '#1493B3', c2: '#1493B3', scrim: 0, link: '#107690', text: '#FFFFFF', iconKey: 'unit',
     featured: { title: 'Unit Conv', url: '/tools/unit-converter/' },
     // The internal catalogue group list is intentionally empty for this
     // single-tool category.
@@ -279,7 +279,7 @@ export const CATEGORIES = [
   {
     slug: 'utility', match: 'Utility Tools', title: 'Utility Tools',
     tagline: 'Solve your everyday jobs',
-    c1: '#D61149', c2: '#D61149', scrim: 0, link: '#CD1046', text: '#FFFFFF', iconKey: 'uuid',
+    c1: '#D61149', c2: '#D61149', scrim: 0, link: '#CD1046', text: '#FFFFFF', iconKey: 'password',
     featured: { title: 'Password Gen', url: '/tools/password-generator/' },
     subs: []
   }
