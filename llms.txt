@@ -4,19 +4,19 @@
 > developer utilities that mostly run in the visitor's browser, with a short and
 > specific list of what does leave it.
 
-EasyWorkTools.online is a static site of 152 free online tools and 121
+EasyWorkTools.online is a static site of 173 free online tools and 121
 how-to guides. Most tools run client-side: the text, images and files you use are
 not uploaded, and there is no account or paywall. A small number of features do
 contact a server - the Thumbnail Downloader sends the link you paste to this site
 to fetch a public preview image, the homepage feedback form emails what you type
 to us via Google Apps Script, and page-view paths are counted to order the lists.
-See https://easyworktools.online/security.html for the exact details.
+See https://easyworktools.online/security for the exact details.
 
 **Canonical origin:** https://easyworktools.online
 
 ## Index
 
-- [Tools](#tools) - 152 utilities, listed by category
+- [Tools](#tools) - 173 utilities, listed by category
 - [Blog](#blog) - 121 how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
@@ -28,7 +28,7 @@ See https://easyworktools.online/security.html for the exact details.
 Every tool is also reachable from a per-category page that lists the whole set:
 
 - [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarise and generate content with free AI writing tools that run in your browser. (54 tools)
-- [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (23 tools)
+- [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (44 tools)
 - [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress and watermark PDF files for free, with no account and nothing to install. (32 tools)
 - [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (13 tools)
 - [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (13 tools)
@@ -113,13 +113,18 @@ Browse all tools: https://easyworktools.online/tools/
 - [Text Sorter & Line Counter](https://easyworktools.online/tools/text-sorter-line-counter/) - Sort lines of text alphabetically, numerically or by length online for free, with a live line count. Ascending or descending order, case-insensitive option included.
 - [Word & Character Counter](https://easyworktools.online/tools/word-character-counter/) - Count words, characters, sentences, paragraphs, reading time, speaking time and unique words online for free, plus quick checks against common character limits.
 
-### Image (23)
+### Image (44)
 
+- [Chart Maker](https://easyworktools.online/tools/chart-maker/) - Make bar, line, area, pie and doughnut charts from pasted or CSV data and download them as PNG, free in your browser.
 - [Easy Image Resizer](https://easyworktools.online/tools/easy-image-resizer/) - Resize and edit images online for free in your browser.
 - [Easy Thumbnail Downloader](https://easyworktools.online/tools/easy-thumbnail-downloader/) - Download HD thumbnails from YouTube, Facebook, Instagram, TikTok, Pinterest and Vimeo links.
 - [Favicon & App Icon Generator](https://easyworktools.online/tools/favicon-generator/) - Generate a complete favicon.ico and app icon PNG set from one image online for free.
+- [Font Awesome to PNG](https://easyworktools.online/tools/font-awesome-to-png/) - Turn any free Font Awesome icon into a PNG at any size and colour, with a transparent or solid background.
 - [Free Image Compressor](https://easyworktools.online/tools/free-image-compressor/) - Compress JPG, PNG and WebP images online for free in your browser.
+- [GIF to APNG Converter](https://easyworktools.online/tools/gif-to-apng/) - Convert animated GIFs to full-colour APNG with smooth transparency, free in your browser.
+- [HEIC to AVIF Converter](https://easyworktools.online/tools/heic-to-avif/) - Convert iPhone HEIC photos to AVIF. Free, private, in your browser.
 - [HEIC to JPG Converter](https://easyworktools.online/tools/heic-to-jpg-converter/) - Convert HEIC photos from iPhone to JPG online for free. Upload one or more .heic files and download high-quality JPG images, all processed in your browser.
+- [HEIC to PNG Converter](https://easyworktools.online/tools/heic-to-png/) - Convert iPhone HEIC and HEIF photos to lossless PNG online for free, in batches.
 - [Image Background Color Tool](https://easyworktools.online/tools/image-background-color/) - Add a solid background color behind a transparent PNG or WebP online for free.
 - [Image Border, Frame & Rounded Corners](https://easyworktools.online/tools/image-border-rounded/) - Add a border, frame and rounded corners to any image online for free.
 - [Image Collage Maker](https://easyworktools.online/tools/image-collage-maker/) - Combine 2 to 9 photos into a grid collage online for free in your browser.
@@ -136,8 +141,24 @@ Browse all tools: https://easyworktools.online/tools/
 - [Image to Base64 Converter](https://easyworktools.online/tools/image-to-base64/) - Convert an image to a Base64 data URI, or decode Base64 back to an image, online for free.
 - [Image Watermark Tool](https://easyworktools.online/tools/image-watermark/) - Add a text or logo watermark to images online for free in your browser.
 - [JPEG Compressor](https://easyworktools.online/tools/jpeg-compressor/) - Compress JPEG images online for free, by quality or exact target file size in KB.
+- [JPG to AVIF Converter](https://easyworktools.online/tools/jpg-to-avif/) - Convert JPG photos to AVIF for much smaller web images. Free, private, in your browser.
+- [JPG to GIF Converter](https://easyworktools.online/tools/jpg-to-gif/) - Convert JPG images to GIF online for free, or combine several into an animated GIF.
+- [JPG to SVG Converter](https://easyworktools.online/tools/jpg-to-svg/) - Trace JPG images into real SVG vector shapes online, free and in your browser.
+- [JPG to TIFF Converter](https://easyworktools.online/tools/jpg-to-tiff/) - Convert JPG images to TIFF online for free, uncompressed or LZW.
+- [Make Background Transparent](https://easyworktools.online/tools/make-background-transparent/) - Click a colour to make it transparent and save a PNG, free in your browser.
+- [PNG to AVIF Converter](https://easyworktools.online/tools/png-to-avif/) - Convert PNG images to AVIF and keep transparency. Free, private, in your browser.
+- [PNG to EPS Converter](https://easyworktools.online/tools/png-to-eps/) - Convert PNG images to EPS (Encapsulated PostScript) online for free.
+- [PNG to GIF Converter](https://easyworktools.online/tools/png-to-gif/) - Convert PNG images to GIF online for free, keeping transparency, or build an animated GIF.
+- [PNG to SVG Converter](https://easyworktools.online/tools/png-to-svg/) - Trace PNG images into real SVG vector shapes online, free and in your browser.
+- [PNG to TIFF Converter](https://easyworktools.online/tools/png-to-tiff/) - Convert PNG images to TIFF online for free, with alpha transparency kept.
+- [Profile Photo Maker](https://easyworktools.online/tools/profile-photo-maker/) - Crop a photo into a circle or rounded-square profile picture with border and background, free in your browser.
+- [Remove Background from Image](https://easyworktools.online/tools/remove-background-from-image/) - Remove a plain background by colour and save a transparent PNG, free in your browser. Not AI.
 - [Social Share Preview](https://easyworktools.online/tools/social-share-preview/) - See how your link will look when shared on Facebook, X (Twitter) and LinkedIn using your Open Graph and Twitter Card tags, online for free.
 - [SVG Optimizer](https://easyworktools.online/tools/svg-optimizer/) - Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.
+- [TIFF to JPG Converter](https://easyworktools.online/tools/tiff-to-jpg/) - Convert TIFF files to JPG online for free, with a chosen background for transparent areas.
+- [TIFF to PNG Converter](https://easyworktools.online/tools/tiff-to-png/) - Convert TIFF files to lossless PNG online for free, keeping transparency.
+- [TIFF to SVG Converter](https://easyworktools.online/tools/tiff-to-svg/) - Trace TIFF scans and artwork into real SVG vector shapes online, free and in your browser.
+- [WEBP to AVIF Converter](https://easyworktools.online/tools/webp-to-avif/) - Convert WebP images to the even smaller AVIF format. Free, private, in your browser.
 
 ### PDF (32)
 
@@ -230,13 +251,13 @@ readers ask in the comments.
 
 ## Legal and informational pages
 
-- [About](https://easyworktools.online/about.html) - what the site is and is not
-- [Contact](https://easyworktools.online/contact.html) - info@easyworktools.online
-- [Privacy Policy](https://easyworktools.online/privacy.html)
-- [Cookie Policy](https://easyworktools.online/cookies.html)
-- [Terms and Conditions](https://easyworktools.online/terms.html)
-- [Disclaimer](https://easyworktools.online/disclaimer.html)
-- [Security & Data Handling](https://easyworktools.online/security.html) - how the site is secured and what data each tool sends
+- [About](https://easyworktools.online/about) - what the site is and is not
+- [Contact](https://easyworktools.online/contact) - info@easyworktools.online
+- [Privacy Policy](https://easyworktools.online/privacy)
+- [Cookie Policy](https://easyworktools.online/cookies)
+- [Terms and Conditions](https://easyworktools.online/terms)
+- [Disclaimer](https://easyworktools.online/disclaimer)
+- [Security & Data Handling](https://easyworktools.online/security) - how the site is secured and what data each tool sends
 - [Resources](https://easyworktools.online/resources/)
 
 ## How the tools work
@@ -254,7 +275,7 @@ homepage feedback form sends the details you type, including an optional email
 address, to a Google Apps Script endpoint that emails them to us; and the site
 records page-view paths, with no account or personal details attached, to order
 the tool and guide lists by popularity. The full, current list is at
-https://easyworktools.online/security.html
+https://easyworktools.online/security
 
 The consequence worth stating plainly: the tools do the part that can be done
 correctly and locally. Anything whose name suggests a hosted AI model - the

@@ -1,0 +1,13 @@
+{
+  "title": "JPG to SVG Converter",
+  "description": "Trace JPG images into real SVG vector shapes online, free and in your browser.",
+  "tags": [
+    "jpg to svg",
+    "jpg vectorizer",
+    "image tracer",
+    "bitmap to vector"
+  ],
+  "url": "tools/jpg-to-svg/",
+  "iconKey": "fmt-convert",
+  "category": "Image Tools"
+}

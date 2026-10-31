@@ -1,0 +1,13 @@
+{
+  "title": "Remove Background from Image",
+  "description": "Remove a plain background by colour and save a transparent PNG, free in your browser. Not AI.",
+  "tags": [
+    "remove background",
+    "background remover",
+    "transparent png",
+    "cutout"
+  ],
+  "url": "tools/remove-background-from-image/",
+  "iconKey": "img-editor",
+  "category": "Image Tools"
+}

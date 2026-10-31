@@ -2,23 +2,23 @@
   "$schema": "https://schema.org/",
   "name": "EasyWorkTools.online",
   "url": "https://easyworktools.online/",
-  "description": "Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security.html",
+  "description": "Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security",
   "version": "1.0.0",
-  "updated": "2026-10-22",
+  "updated": "2026-10-31",
   "operator": {
     "name": "EasyWorkTools.online",
     "email": "info@easyworktools.online"
   },
-  "license": "https://easyworktools.online/terms.html",
-  "privacy": "https://easyworktools.online/privacy.html",
+  "license": "https://easyworktools.online/terms",
+  "privacy": "https://easyworktools.online/privacy",
   "dataHandling": {
     "uploads": "none",
     "telemetry": "Aggregate page-view paths only, with no account or personal details attached, used to order the tool and blog lists.",
     "feedback": "The homepage feedback form sends the details you type, including an optional email address, to a Google Apps Script endpoint that emails them to the operator.",
-    "cookies": "See https://easyworktools.online/cookies.html"
+    "cookies": "See https://easyworktools.online/cookies"
   },
   "counts": {
-    "tools": 152,
+    "tools": 173,
     "articles": 121
   },
   "indexes": {
@@ -28,7 +28,7 @@
     "resources": "https://easyworktools.online/resources/",
     "sitemap": "https://easyworktools.online/sitemap.xml",
     "llms": "https://easyworktools.online/llms.txt",
-    "security": "https://easyworktools.online/security.html"
+    "security": "https://easyworktools.online/security"
   },
   "tools": [
     {
@@ -1173,6 +1173,27 @@
       ]
     },
     {
+      "name": "Chart Maker",
+      "url": "https://easyworktools.online/tools/chart-maker/",
+      "description": "Make bar, line, area, pie and doughnut charts from pasted or CSV data and download them as PNG, free in your browser.",
+      "category": null,
+      "keywords": [
+        "chart maker",
+        "bar chart",
+        "pie chart",
+        "line graph",
+        "graph maker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Color Picker & Converter",
       "url": "https://easyworktools.online/tools/color-picker-converter/",
       "description": "Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.",
@@ -1279,6 +1300,26 @@
       ]
     },
     {
+      "name": "Font Awesome to PNG",
+      "url": "https://easyworktools.online/tools/font-awesome-to-png/",
+      "description": "Turn any free Font Awesome icon into a PNG at any size and colour, with a transparent or solid background.",
+      "category": null,
+      "keywords": [
+        "font awesome to png",
+        "icon to png",
+        "fontawesome png",
+        "icon converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Free Image Compressor",
       "url": "https://easyworktools.online/tools/free-image-compressor/",
       "description": "Compress JPG, PNG and WebP images online for free in your browser.",
@@ -1289,6 +1330,26 @@
         "compress png",
         "reduce image size",
         "webp compressor"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "GIF to APNG Converter",
+      "url": "https://easyworktools.online/tools/gif-to-apng/",
+      "description": "Convert animated GIFs to full-colour APNG with smooth transparency, free in your browser.",
+      "category": null,
+      "keywords": [
+        "gif to apng",
+        "animated png",
+        "convert gif",
+        "apng maker"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1341,6 +1402,26 @@
       ]
     },
     {
+      "name": "HEIC to AVIF Converter",
+      "url": "https://easyworktools.online/tools/heic-to-avif/",
+      "description": "Convert iPhone HEIC photos to AVIF. Free, private, in your browser.",
+      "category": null,
+      "keywords": [
+        "heic to avif",
+        "convert heic to avif",
+        "avif converter",
+        "avif encoder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "HEIC to JPG Converter",
       "url": "https://easyworktools.online/tools/heic-to-jpg-converter/",
       "description": "Convert HEIC photos from iPhone to JPG online for free. Upload one or more .heic files and download high-quality JPG images, all processed in your browser.",
@@ -1370,6 +1451,26 @@
         "heic to pdf",
         "convert heic to pdf online free",
         "iphone photo to pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "HEIC to PNG Converter",
+      "url": "https://easyworktools.online/tools/heic-to-png/",
+      "description": "Convert iPhone HEIC and HEIF photos to lossless PNG online for free, in batches.",
+      "category": null,
+      "keywords": [
+        "heic to png",
+        "heif to png",
+        "iphone photo converter",
+        "convert heic"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1783,6 +1884,46 @@
       ]
     },
     {
+      "name": "JPG to AVIF Converter",
+      "url": "https://easyworktools.online/tools/jpg-to-avif/",
+      "description": "Convert JPG photos to AVIF for much smaller web images. Free, private, in your browser.",
+      "category": null,
+      "keywords": [
+        "jpg to avif",
+        "convert jpg to avif",
+        "avif converter",
+        "avif encoder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JPG to GIF Converter",
+      "url": "https://easyworktools.online/tools/jpg-to-gif/",
+      "description": "Convert JPG images to GIF online for free, or combine several into an animated GIF.",
+      "category": null,
+      "keywords": [
+        "jpg to gif",
+        "jpeg to gif",
+        "animated gif maker",
+        "images to gif"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "JPG to PDF",
       "url": "https://easyworktools.online/tools/jpg-to-pdf/",
       "description": "Convert JPG and JPEG images into one PDF, one photo per page, with A4 or fit-to-image sizing. Free, private and fully in your browser",
@@ -1792,6 +1933,46 @@
         "jpeg to pdf converter",
         "convert jpg to pdf online free",
         "images to pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JPG to SVG Converter",
+      "url": "https://easyworktools.online/tools/jpg-to-svg/",
+      "description": "Trace JPG images into real SVG vector shapes online, free and in your browser.",
+      "category": null,
+      "keywords": [
+        "jpg to svg",
+        "jpg vectorizer",
+        "image tracer",
+        "bitmap to vector"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "JPG to TIFF Converter",
+      "url": "https://easyworktools.online/tools/jpg-to-tiff/",
+      "description": "Convert JPG images to TIFF online for free, uncompressed or LZW.",
+      "category": null,
+      "keywords": [
+        "jpg to tiff",
+        "jpeg to tif",
+        "convert jpg tiff",
+        "tiff maker"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1917,6 +2098,26 @@
         "dummy text generator",
         "lorem ipsum online",
         "random paragraph generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Make Background Transparent",
+      "url": "https://easyworktools.online/tools/make-background-transparent/",
+      "description": "Click a colour to make it transparent and save a PNG, free in your browser.",
+      "category": null,
+      "keywords": [
+        "transparent background",
+        "make transparent",
+        "remove white background",
+        "png"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2605,6 +2806,66 @@
       ]
     },
     {
+      "name": "PNG to AVIF Converter",
+      "url": "https://easyworktools.online/tools/png-to-avif/",
+      "description": "Convert PNG images to AVIF and keep transparency. Free, private, in your browser.",
+      "category": null,
+      "keywords": [
+        "png to avif",
+        "convert png to avif",
+        "avif converter",
+        "avif encoder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PNG to EPS Converter",
+      "url": "https://easyworktools.online/tools/png-to-eps/",
+      "description": "Convert PNG images to EPS (Encapsulated PostScript) online for free.",
+      "category": null,
+      "keywords": [
+        "png to eps",
+        "image to eps",
+        "eps converter",
+        "encapsulated postscript"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PNG to GIF Converter",
+      "url": "https://easyworktools.online/tools/png-to-gif/",
+      "description": "Convert PNG images to GIF online for free, keeping transparency, or build an animated GIF.",
+      "category": null,
+      "keywords": [
+        "png to gif",
+        "png to animated gif",
+        "transparent gif",
+        "images to gif"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "PNG to PDF",
       "url": "https://easyworktools.online/tools/png-to-pdf/",
       "description": "Convert PNG images into one PDF, one picture per page, keeping transparency on a white background. Free, private and fully in your browser",
@@ -2614,6 +2875,66 @@
         "png to pdf converter online",
         "convert png to pdf free",
         "turn images into pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PNG to SVG Converter",
+      "url": "https://easyworktools.online/tools/png-to-svg/",
+      "description": "Trace PNG images into real SVG vector shapes online, free and in your browser.",
+      "category": null,
+      "keywords": [
+        "png to svg",
+        "png vectorizer",
+        "image tracer",
+        "bitmap to vector"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PNG to TIFF Converter",
+      "url": "https://easyworktools.online/tools/png-to-tiff/",
+      "description": "Convert PNG images to TIFF online for free, with alpha transparency kept.",
+      "category": null,
+      "keywords": [
+        "png to tiff",
+        "png to tif",
+        "convert png tiff",
+        "tiff with alpha"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Profile Photo Maker",
+      "url": "https://easyworktools.online/tools/profile-photo-maker/",
+      "description": "Crop a photo into a circle or rounded-square profile picture with border and background, free in your browser.",
+      "category": null,
+      "keywords": [
+        "profile photo maker",
+        "circle crop",
+        "avatar maker",
+        "profile picture"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2696,6 +3017,26 @@
         "test regex free",
         "regex match checker",
         "javascript regex tester"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Remove Background from Image",
+      "url": "https://easyworktools.online/tools/remove-background-from-image/",
+      "description": "Remove a plain background by colour and save a transparent PNG, free in your browser. Not AI.",
+      "category": null,
+      "keywords": [
+        "remove background",
+        "background remover",
+        "transparent png",
+        "cutout"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2935,6 +3276,66 @@
       ]
     },
     {
+      "name": "TIFF to JPG Converter",
+      "url": "https://easyworktools.online/tools/tiff-to-jpg/",
+      "description": "Convert TIFF files to JPG online for free, with a chosen background for transparent areas.",
+      "category": null,
+      "keywords": [
+        "tiff to jpg",
+        "tif to jpg",
+        "convert tiff",
+        "tiff converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "TIFF to PNG Converter",
+      "url": "https://easyworktools.online/tools/tiff-to-png/",
+      "description": "Convert TIFF files to lossless PNG online for free, keeping transparency.",
+      "category": null,
+      "keywords": [
+        "tiff to png",
+        "tif to png",
+        "lossless convert tiff",
+        "tiff alpha png"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "TIFF to SVG Converter",
+      "url": "https://easyworktools.online/tools/tiff-to-svg/",
+      "description": "Trace TIFF scans and artwork into real SVG vector shapes online, free and in your browser.",
+      "category": null,
+      "keywords": [
+        "tiff to svg",
+        "tif to svg",
+        "trace tiff",
+        "vectorize tiff"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Unit Converter",
       "url": "https://easyworktools.online/tools/unit-converter/",
       "description": "Convert length, weight, temperature, volume, area and speed online for free.",
@@ -3062,6 +3463,26 @@
       ]
     },
     {
+      "name": "WEBP to AVIF Converter",
+      "url": "https://easyworktools.online/tools/webp-to-avif/",
+      "description": "Convert WebP images to the even smaller AVIF format. Free, private, in your browser.",
+      "category": null,
+      "keywords": [
+        "webp to avif",
+        "convert webp to avif",
+        "avif converter",
+        "avif encoder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "WebP to PDF",
       "url": "https://easyworktools.online/tools/webp-to-pdf/",
       "description": "Convert WebP images into one PDF, one picture per page. Each WebP is decoded in your browser and placed on its own page, free and private",
@@ -3149,7 +3570,7 @@
   "articles": [
     {
       "title": "AI Detector - How to Use AI Detector | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/ai-detector.html",
+      "url": "https://easyworktools.online/blog/ai-detector",
       "description": "Learn how to use AI Detector: AI Content Detector. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3159,7 +3580,7 @@
     },
     {
       "title": "AI Humanizer - How to Use AI Humanizer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/ai-humanizer.html",
+      "url": "https://easyworktools.online/blog/ai-humanizer",
       "description": "Learn how to use AI Humanizer: Use the AI Humanizer to make AI text sound more human. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3169,7 +3590,7 @@
     },
     {
       "title": "AI Rephraser - How to Use AI Rephraser | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/ai-rephraser.html",
+      "url": "https://easyworktools.online/blog/ai-rephraser",
       "description": "Learn how to use AI Rephraser: AI Rephraser Content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3179,7 +3600,7 @@
     },
     {
       "title": "Article Generator - How to Use Article Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/article-generator.html",
+      "url": "https://easyworktools.online/blog/article-generator",
       "description": "Learn how to use Article Generator: AI SEO Optimized Article Generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3189,7 +3610,7 @@
     },
     {
       "title": "Article Rewriter - How to Use Article Rewriter | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/article-rewriter.html",
+      "url": "https://easyworktools.online/blog/article-rewriter",
       "description": "Learn how to use Article Rewriter: Rewrite an article. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3199,7 +3620,7 @@
     },
     {
       "title": "Article Writer - How to Use Article Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/article-writer.html",
+      "url": "https://easyworktools.online/blog/article-writer",
       "description": "Learn how to use Article Writer: Create an article from a title. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3209,7 +3630,7 @@
     },
     {
       "title": "Bill of Sale - How to Use Bill of Sale | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/bill-of-sale.html",
+      "url": "https://easyworktools.online/blog/bill-of-sale",
       "description": "Learn how to use Bill of Sale: Generate bill of sale for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3219,7 +3640,7 @@
     },
     {
       "title": "Blog Outline Generator - How to Use Blog Outline Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/blog-outline-generator.html",
+      "url": "https://easyworktools.online/blog/blog-outline-generator",
       "description": "Learn how to use Blog Outline Generator: Write Blog Outline. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3229,7 +3650,7 @@
     },
     {
       "title": "Blog Post Generator - How to Use Blog Post Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/blog-post-generator.html",
+      "url": "https://easyworktools.online/blog/blog-post-generator",
       "description": "Learn how to use Blog Post Generator: AI SEO Post Generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3239,7 +3660,7 @@
     },
     {
       "title": "Blog Post Ideas - How to Use Blog Post Ideas | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/blog-post-ideas.html",
+      "url": "https://easyworktools.online/blog/blog-post-ideas",
       "description": "Learn how to use Blog Post Ideas: Write Blog Post Ideas. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3249,7 +3670,7 @@
     },
     {
       "title": "Blog Post Rewriter - How to Use Blog Post Rewriter | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/blog-post-rewriter.html",
+      "url": "https://easyworktools.online/blog/blog-post-rewriter",
       "description": "Learn how to use Blog Post Rewriter: Rephrase a blog post. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3259,7 +3680,7 @@
     },
     {
       "title": "Business Name Generator - How to Use Business Name Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/business-name-generator.html",
+      "url": "https://easyworktools.online/blog/business-name-generator",
       "description": "Learn how to use Business Name Generator: Generate a business name for your idea. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3269,7 +3690,7 @@
     },
     {
       "title": "Business Plan Generator - How to Use Business Plan Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/business-plan-generator.html",
+      "url": "https://easyworktools.online/blog/business-plan-generator",
       "description": "Learn how to use Business Plan Generator: Generate business plan for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3279,7 +3700,7 @@
     },
     {
       "title": "Business Slogan Generator - How to Use Business Slogan Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/business-slogan-generator.html",
+      "url": "https://easyworktools.online/blog/business-slogan-generator",
       "description": "Learn how to use Business Slogan Generator: Generate business slogan for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3289,7 +3710,7 @@
     },
     {
       "title": "Cold Email Writer - How to Use Cold Email Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/cold-email-writer.html",
+      "url": "https://easyworktools.online/blog/cold-email-writer",
       "description": "Learn how to use Cold Email Writer: Write cold email for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3299,7 +3720,7 @@
     },
     {
       "title": "Content Brief Generator - How to Use Content Brief Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/content-brief-generator.html",
+      "url": "https://easyworktools.online/blog/content-brief-generator",
       "description": "Learn how to use Content Brief Generator: Generate content brief for your article title. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3309,7 +3730,7 @@
     },
     {
       "title": "Content Improver - How to Use Content Improver | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/content-improver.html",
+      "url": "https://easyworktools.online/blog/content-improver",
       "description": "Learn how to use Content Improver: Improve your content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3319,7 +3740,7 @@
     },
     {
       "title": "Content Paraphraser - How to Use Content Paraphraser | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/content-paraphraser.html",
+      "url": "https://easyworktools.online/blog/content-paraphraser",
       "description": "Learn how to use Content Paraphraser: Paraphrasing Content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3329,7 +3750,7 @@
     },
     {
       "title": "Content Planner - How to Use Content Planner | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/content-planner.html",
+      "url": "https://easyworktools.online/blog/content-planner",
       "description": "Learn how to use Content Planner: Generate a simple content plan. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3339,7 +3760,7 @@
     },
     {
       "title": "Content Shortener - How to Use Content Shortener | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/content-shortener.html",
+      "url": "https://easyworktools.online/blog/content-shortener",
       "description": "Learn how to use Content Shortener: Resize your content. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3349,7 +3770,7 @@
     },
     {
       "title": "Content Summarizer - How to Use Content Summarizer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/content-summarizer.html",
+      "url": "https://easyworktools.online/blog/content-summarizer",
       "description": "Learn how to use Content Summarizer: Summarize text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3359,7 +3780,7 @@
     },
     {
       "title": "Does Minifying HTML, CSS and JS Actually Speed Up Your Site? | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/does-minifying-code-improve-page-speed.html",
+      "url": "https://easyworktools.online/blog/does-minifying-code-improve-page-speed",
       "description": "What code minification actually removes, how much it typically saves, and where it fits alongside compression and caching for real page speed gains.",
       "type": "Article",
       "structuredData": [
@@ -3369,7 +3790,7 @@
     },
     {
       "title": "Essay Writer - How to Use Essay Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/essay-writer.html",
+      "url": "https://easyworktools.online/blog/essay-writer",
       "description": "Learn how to use Essay Writer: Easily create an essay with AI. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3379,7 +3800,7 @@
     },
     {
       "title": "Explain It - How to Use Explain It | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/explain-it.html",
+      "url": "https://easyworktools.online/blog/explain-it",
       "description": "Learn how to use Explain It: Explain it like I",
       "type": "Article",
       "structuredData": [
@@ -3389,7 +3810,7 @@
     },
     {
       "title": "Facebook Video Thumbnail Downloader — Free FB Cover Image Grabber | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/facebook-video-thumbnail-downloader.html",
+      "url": "https://easyworktools.online/blog/facebook-video-thumbnail-downloader",
       "description": "Download the thumbnail or cover image of a public Facebook video for free. Simple steps using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3399,7 +3820,7 @@
     },
     {
       "title": "FAQ Generator - How to Use FAQ Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/faq-generator.html",
+      "url": "https://easyworktools.online/blog/faq-generator",
       "description": "Learn how to use FAQ Generator: Generate FAQ for a blog. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3409,7 +3830,7 @@
     },
     {
       "title": "FB Headline Generator - How to Use FB Headline Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/fb-headline-generator.html",
+      "url": "https://easyworktools.online/blog/fb-headline-generator",
       "description": "Learn how to use FB Headline Generator: Generate Facebook ad headlines for your company. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3419,7 +3840,7 @@
     },
     {
       "title": "Grammar Fixer - How to Use Grammar Fixer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/grammar-fixer.html",
+      "url": "https://easyworktools.online/blog/grammar-fixer",
       "description": "Learn how to use Grammar Fixer: Easily fix the grammar in a block of text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3429,7 +3850,7 @@
     },
     {
       "title": "Why Your iPhone Photos Won&#x27;t Open Everywhere (and How to Fix It) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/heic-to-jpg-iphone-photos-guide.html",
+      "url": "https://easyworktools.online/blog/heic-to-jpg-iphone-photos-guide",
       "description": "Why iPhone photos save as HEIC, why that format doesn&#x27;t open everywhere, and how to convert HEIC to JPG for free without installing anything.",
       "type": "Article",
       "structuredData": [
@@ -3439,7 +3860,7 @@
     },
     {
       "title": "HEX vs RGB vs HSL: Converting Colors for CSS and Design | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/hex-rgb-hsl-color-conversion-guide.html",
+      "url": "https://easyworktools.online/blog/hex-rgb-hsl-color-conversion-guide",
       "description": "The difference between HEX, RGB and HSL color formats, when to use each in CSS, and how to convert between them without doing the math by hand.",
       "type": "Article",
       "structuredData": [
@@ -3449,7 +3870,7 @@
     },
     {
       "title": "How to Add a Watermark to Your Photos Online | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-add-a-watermark-to-your-photos.html",
+      "url": "https://easyworktools.online/blog/how-to-add-a-watermark-to-your-photos",
       "description": "Learn how to add a text or logo watermark to your images for free using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3459,7 +3880,7 @@
     },
     {
       "title": "How to Add a Background Color to a Transparent PNG | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-add-background-color-to-transparent-png.html",
+      "url": "https://easyworktools.online/blog/how-to-add-background-color-to-transparent-png",
       "description": "Learn how to fill a transparent PNG or WebP with a solid background color using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3469,7 +3890,7 @@
     },
     {
       "title": "How to Add a Border and Rounded Corners to an Image | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-add-border-and-rounded-corners-to-image.html",
+      "url": "https://easyworktools.online/blog/how-to-add-border-and-rounded-corners-to-image",
       "description": "Learn how to add a colored border and round the corners of any image, or make it fully circular, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3479,7 +3900,7 @@
     },
     {
       "title": "How to Add a Watermark or Logo to a PDF | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-add-watermark-to-pdf.html",
+      "url": "https://easyworktools.online/blog/how-to-add-watermark-to-pdf",
       "description": "Learn how to add a text watermark like DRAFT or CONFIDENTIAL, or your own logo, to every page of a PDF for free, with control over position, opacity and size.",
       "type": "Article",
       "structuredData": [
@@ -3489,7 +3910,7 @@
     },
     {
       "title": "How to Check an Image's Dimensions and Aspect Ratio | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-check-image-dimensions-and-aspect-ratio.html",
+      "url": "https://easyworktools.online/blog/how-to-check-image-dimensions-and-aspect-ratio",
       "description": "Learn how to check an image",
       "type": "Article",
       "structuredData": [
@@ -3499,7 +3920,7 @@
     },
     {
       "title": "How to Clean Text Before Publishing It Online | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-clean-text-before-publishing.html",
+      "url": "https://easyworktools.online/blog/how-to-clean-text-before-publishing",
       "description": "Learn a practical workflow for cleaning copied text, standardizing capitalization, checking formatting and preparing text for websites and documents.",
       "type": "Article",
       "structuredData": [
@@ -3509,7 +3930,7 @@
     },
     {
       "title": "How to Clean Up Text Copied From a PDF or Old Document | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-clean-up-copied-text.html",
+      "url": "https://easyworktools.online/blog/how-to-clean-up-copied-text",
       "description": "Why text copied from a PDF or scanned document brings along extra spaces, invisible characters and odd quotes, and how to strip all of it out at once.",
       "type": "Article",
       "structuredData": [
@@ -3519,7 +3940,7 @@
     },
     {
       "title": "How to Compare Two Images Online (Slider & Pixel Diff) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-compare-two-images-online.html",
+      "url": "https://easyworktools.online/blog/how-to-compare-two-images-online",
       "description": "Learn how to compare two images side by side with a slider, or highlight exact pixel differences, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3529,7 +3950,7 @@
     },
     {
       "title": "How to Spot Every Change Between Two Versions of a Document | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-compare-two-texts.html",
+      "url": "https://easyworktools.online/blog/how-to-compare-two-texts",
       "description": "How to compare two versions of a text online for free and see exactly which lines were added, removed or unchanged, with a similarity percentage.",
       "type": "Article",
       "structuredData": [
@@ -3539,7 +3960,7 @@
     },
     {
       "title": "How to Compress a JPEG to an Exact File Size (KB) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-compress-jpeg-to-target-size.html",
+      "url": "https://easyworktools.online/blog/how-to-compress-jpeg-to-target-size",
       "description": "Learn how to compress a JPEG image to a specific file size in KB for upload limits, using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3549,7 +3970,7 @@
     },
     {
       "title": "How to Shrink a PDF That&#x27;s Too Big to Email | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-compress-pdf-file-size.html",
+      "url": "https://easyworktools.online/blog/how-to-compress-pdf-file-size",
       "description": "Why scanned and image-heavy PDFs get so large, and how to compress a PDF to fit under email or upload-form size limits, for free and in your browser.",
       "type": "Article",
       "structuredData": [
@@ -3559,7 +3980,7 @@
     },
     {
       "title": "How to Convert Between JPG, PNG and WebP Online | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-image-formats-online.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-image-formats-online",
       "description": "Learn how to convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP for free using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3569,7 +3990,7 @@
     },
     {
       "title": "How to Convert an Image to Base64 (and Back) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-image-to-base64.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-image-to-base64",
       "description": "Learn how to convert an image to a Base64 data URI for HTML/CSS, or decode Base64 back into an image, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3579,7 +4000,7 @@
     },
     {
       "title": "How to Turn Photos Into a Single PDF (and Back Again) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-jpg-to-pdf.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-jpg-to-pdf",
       "description": "A step-by-step guide to combining JPG or PNG images into one PDF document, and extracting individual pages from a PDF as JPG images, for free.",
       "type": "Article",
       "structuredData": [
@@ -3589,7 +4010,7 @@
     },
     {
       "title": "How to Convert JSON to CSV Without Losing Data | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-json-to-csv.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-json-to-csv",
       "description": "A practical guide to converting JSON arrays to CSV spreadsheets (and back), including how nested values, missing fields and quoting are handled correctly.",
       "type": "Article",
       "structuredData": [
@@ -3599,7 +4020,7 @@
     },
     {
       "title": "How to Convert Markdown to HTML (or Strip It to Plain Text) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-markdown-to-html.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-markdown-to-html",
       "description": "How to convert Markdown to HTML with a live preview, strip Markdown formatting to plain text, or convert HTML to plain text, all for free in your browser.",
       "type": "Article",
       "structuredData": [
@@ -3609,7 +4030,7 @@
     },
     {
       "title": "How to Convert PDF to JPG/PNG and Images Back to PDF | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-pdf-to-images-and-back.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-pdf-to-images-and-back",
       "description": "Learn how to turn PDF pages into JPG or PNG images, and how to combine JPG, PNG and WebP images into a single PDF, for free using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3619,7 +4040,7 @@
     },
     {
       "title": "How to Convert Text Case Online: Uppercase, Lowercase, Title Case & More | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-text-case-online.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-text-case-online",
       "description": "Learn how to convert text case online for free using EasyWorkTools.online. Step-by-step guide for uppercase, lowercase, title case, slug case and snake case.",
       "type": "Article",
       "structuredData": [
@@ -3629,7 +4050,7 @@
     },
     {
       "title": "How to Convert Units Online: Metric to Imperial Made Simple | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-convert-units-online.html",
+      "url": "https://easyworktools.online/blog/how-to-convert-units-online",
       "description": "Learn how to convert length, weight, temperature, volume, area and speed between metric and imperial units for free using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3639,7 +4060,7 @@
     },
     {
       "title": "How to Hit an Exact Word or Character Count Every Time | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-count-words-and-characters.html",
+      "url": "https://easyworktools.online/blog/how-to-count-words-and-characters",
       "description": "How to accurately count words, characters, sentences and reading time for essays, ad copy, meta descriptions and character-limited fields online for free.",
       "type": "Article",
       "structuredData": [
@@ -3649,7 +4070,7 @@
     },
     {
       "title": "How to Create a Favicon for Your Website (Free) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-create-a-favicon-for-your-website.html",
+      "url": "https://easyworktools.online/blog/how-to-create-a-favicon-for-your-website",
       "description": "Learn how to generate a complete favicon.ico and app icon set from one image, and add it to your site, using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3659,7 +4080,7 @@
     },
     {
       "title": "How to Create SEO-Friendly URL Slugs From Any Title | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-create-seo-url-slugs.html",
+      "url": "https://easyworktools.online/blog/how-to-create-seo-url-slugs",
       "description": "What makes a good URL slug, why accented characters and stopwords cause problems, and how to turn any page title into a clean, lowercase slug.",
       "type": "Article",
       "structuredData": [
@@ -3669,7 +4090,7 @@
     },
     {
       "title": "How to Crop and Rotate a Photo Online for Free | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-crop-and-rotate-a-photo-online.html",
+      "url": "https://easyworktools.online/blog/how-to-crop-and-rotate-a-photo-online",
       "description": "Learn how to crop an image to a custom or fixed aspect ratio, and rotate or flip it, using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3679,7 +4100,7 @@
     },
     {
       "title": "How to View, Edit or Remove PDF Metadata | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-edit-pdf-metadata.html",
+      "url": "https://easyworktools.online/blog/how-to-edit-pdf-metadata",
       "description": "Learn how to check what",
       "type": "Article",
       "structuredData": [
@@ -3689,7 +4110,7 @@
     },
     {
       "title": "How to Edit Photos Online for Free (Filters & Adjustments) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-edit-photos-online-free.html",
+      "url": "https://easyworktools.online/blog/how-to-edit-photos-online-free",
       "description": "Learn how to adjust brightness, contrast and saturation, and apply filters like grayscale and blur, using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3699,7 +4120,7 @@
     },
     {
       "title": "How to Display Special Characters Safely in HTML | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-escape-html-special-characters.html",
+      "url": "https://easyworktools.online/blog/how-to-escape-html-special-characters",
       "description": "Why characters like &lt; &gt; and &amp; need to be converted to HTML entities before displaying them on a page, and how encoding helps prevent broken markup and XSS.",
       "type": "Article",
       "structuredData": [
@@ -3709,7 +4130,7 @@
     },
     {
       "title": "How to Pull Every Email and Link Out of a Block of Text | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-extract-emails-and-urls-from-text.html",
+      "url": "https://easyworktools.online/blog/how-to-extract-emails-and-urls-from-text",
       "description": "How to extract every email address, URL, phone number, hashtag or date from a block of text online for free, without scanning it line by line.",
       "type": "Article",
       "structuredData": [
@@ -3719,7 +4140,7 @@
     },
     {
       "title": "How to Find the Exact Color From a Photo or Logo | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-find-a-color-from-an-image.html",
+      "url": "https://easyworktools.online/blog/how-to-find-a-color-from-an-image",
       "description": "Learn how to pick an exact HEX, RGB or HSL color from any image, or extract a dominant palette, using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3729,7 +4150,7 @@
     },
     {
       "title": "How to Find and Replace Text Across a Whole Document | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-find-and-replace-text.html",
+      "url": "https://easyworktools.online/blog/how-to-find-and-replace-text",
       "description": "How to find and replace text online, including whole-word matching, regex patterns with capture groups, and applying a whole list of substitutions at once.",
       "type": "Article",
       "structuredData": [
@@ -3739,7 +4160,7 @@
     },
     {
       "title": "How to Generate YouTube Tags That Actually Help Your Video | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-generate-youtube-tags.html",
+      "url": "https://easyworktools.online/blog/how-to-generate-youtube-tags",
       "description": "Learn how to create a well-structured, properly formatted list of YouTube video tags for free using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3749,7 +4170,7 @@
     },
     {
       "title": "How to Make a Photo Collage Online for Free | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-make-a-photo-collage-online.html",
+      "url": "https://easyworktools.online/blog/how-to-make-a-photo-collage-online",
       "description": "Learn how to combine multiple photos into one grid collage for free using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3759,7 +4180,7 @@
     },
     {
       "title": "How to Merge, Reorder and Organize PDF Pages Online | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-merge-and-organize-pdf-pages.html",
+      "url": "https://easyworktools.online/blog/how-to-merge-and-organize-pdf-pages",
       "description": "Learn how to combine multiple PDFs into one, fix page order, rotate sideways scans and pull out just the pages you need, for free using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3769,7 +4190,7 @@
     },
     {
       "title": "How to Merge or Stitch Images Together Online | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-merge-or-stitch-images-together.html",
+      "url": "https://easyworktools.online/blog/how-to-merge-or-stitch-images-together",
       "description": "Learn how to join two or more images edge to edge, horizontally or vertically, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3779,7 +4200,7 @@
     },
     {
       "title": "How to Combine Multiple PDFs Into One File for Free | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-merge-split-pdf-files.html",
+      "url": "https://easyworktools.online/blog/how-to-merge-split-pdf-files",
       "description": "How to merge several PDF files into one document, and how to split a PDF into individual pages or a specific page range, without installing software.",
       "type": "Article",
       "structuredData": [
@@ -3789,7 +4210,7 @@
     },
     {
       "title": "How to Reduce SVG File Size Without Breaking Your Icons | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-optimize-svg-files.html",
+      "url": "https://easyworktools.online/blog/how-to-optimize-svg-files",
       "description": "Learn why SVG files exported from design tools are often bloated, what safe cleanup actually removes, and how to shrink them without changing how they look.",
       "type": "Article",
       "structuredData": [
@@ -3799,7 +4220,7 @@
     },
     {
       "title": "How to Read a Long URL Full of Tracking Parameters | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-parse-and-read-a-url.html",
+      "url": "https://easyworktools.online/blog/how-to-parse-and-read-a-url",
       "description": "How to break a long, messy URL down into its protocol, host, path and individual query parameters, without manually counting ampersands and question marks.",
       "type": "Article",
       "structuredData": [
@@ -3809,7 +4230,7 @@
     },
     {
       "title": "How to Prepare Images for Websites, Documents and Social Media | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-prepare-images-for-web.html",
+      "url": "https://easyworktools.online/blog/how-to-prepare-images-for-web",
       "description": "Learn how to choose image dimensions, aspect ratios, file formats and practical resizing settings for common digital workflows.",
       "type": "Article",
       "structuredData": [
@@ -3819,7 +4240,7 @@
     },
     {
       "title": "How to Reduce PDF File Size Without Losing Selectable Text | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-reduce-pdf-file-size.html",
+      "url": "https://easyworktools.online/blog/how-to-reduce-pdf-file-size",
       "description": "Learn the difference between optimizing a PDF",
       "type": "Article",
       "structuredData": [
@@ -3829,7 +4250,7 @@
     },
     {
       "title": "How to Add Line Numbers, Prefixes and More to a List | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-reformat-a-list-of-lines.html",
+      "url": "https://easyworktools.online/blog/how-to-reformat-a-list-of-lines",
       "description": "How to number lines, add a prefix or suffix to every line, filter a list by pattern, or convert between a newline list and a comma-separated string, for free.",
       "type": "Article",
       "structuredData": [
@@ -3839,7 +4260,7 @@
     },
     {
       "title": "How to Clean Up a Messy Email List or Keyword List Fast | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-remove-duplicate-lines-from-a-list.html",
+      "url": "https://easyworktools.online/blog/how-to-remove-duplicate-lines-from-a-list",
       "description": "How to strip duplicate lines from a merged email list, keyword list or exported data set online for free, with case-insensitive matching and trimming.",
       "type": "Article",
       "structuredData": [
@@ -3849,7 +4270,7 @@
     },
     {
       "title": "How to Remove EXIF Metadata From Your Photos | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-remove-exif-metadata-from-photos.html",
+      "url": "https://easyworktools.online/blog/how-to-remove-exif-metadata-from-photos",
       "description": "Learn how to view hidden EXIF data and strip GPS, camera and date metadata from your photos for privacy, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3859,7 +4280,7 @@
     },
     {
       "title": "How to Resize Images for Every Social Platform | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-resize-images-for-every-social-platform.html",
+      "url": "https://easyworktools.online/blog/how-to-resize-images-for-every-social-platform",
       "description": "Learn how to crop and resize a photo to the exact size for Instagram, YouTube, Facebook, LinkedIn and profile pictures, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3869,7 +4290,7 @@
     },
     {
       "title": "How to Resize Images Online for Free: A Simple Step-by-Step Guide | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-resize-images-online.html",
+      "url": "https://easyworktools.online/blog/how-to-resize-images-online",
       "description": "Learn how to resize images online for free using EasyWorkTools.online. Follow this step-by-step guide for custom dimensions, platform presets, previewing and downloading resized images.",
       "type": "Article",
       "structuredData": [
@@ -3879,7 +4300,7 @@
     },
     {
       "title": "Resize vs Compress Images: What Is the Difference? | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-resize-vs-compress-images.html",
+      "url": "https://easyworktools.online/blog/how-to-resize-vs-compress-images",
       "description": "Understand the difference between resizing an image and compressing an image, when each method is useful, and how to choose a practical workflow.",
       "type": "Article",
       "structuredData": [
@@ -3889,7 +4310,7 @@
     },
     {
       "title": "How to Alphabetize a List Online in Seconds | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-sort-a-list-alphabetically-online.html",
+      "url": "https://easyworktools.online/blog/how-to-sort-a-list-alphabetically-online",
       "description": "How to sort a list alphabetically, numerically or by line length online for free, with ascending or descending order and a live line count.",
       "type": "Article",
       "structuredData": [
@@ -3899,7 +4320,7 @@
     },
     {
       "title": "How to Split an Image Into a Grid Online | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-split-an-image-into-a-grid.html",
+      "url": "https://easyworktools.online/blog/how-to-split-an-image-into-a-grid",
       "description": "Learn how to slice one image into a grid of rows and columns for an Instagram grid or other layout, using EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3909,7 +4330,7 @@
     },
     {
       "title": "How to Test a Regular Expression Before Using It in Code | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-test-regular-expressions.html",
+      "url": "https://easyworktools.online/blog/how-to-test-regular-expressions",
       "description": "How to test a regex pattern against real sample text, what the global, case-insensitive and multiline flags actually change, and common mistakes to check for.",
       "type": "Article",
       "structuredData": [
@@ -3919,7 +4340,7 @@
     },
     {
       "title": "How to Verify an Image File's Real Format and Integrity | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-verify-an-image-file-is-genuine.html",
+      "url": "https://easyworktools.online/blog/how-to-verify-an-image-file-is-genuine",
       "description": "Learn how to check a file",
       "type": "Article",
       "structuredData": [
@@ -3929,7 +4350,7 @@
     },
     {
       "title": "How to Write Meta Tags That Don&#x27;t Get Cut Off in Google | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/how-to-write-seo-meta-tags.html",
+      "url": "https://easyworktools.online/blog/how-to-write-seo-meta-tags",
       "description": "Recommended title and meta description lengths, what Open Graph and Twitter Card tags are for, and how to generate a complete, correctly formatted set.",
       "type": "Article",
       "structuredData": [
@@ -3939,7 +4360,7 @@
     },
     {
       "title": "Instagram Caption Generator - How to Use Instagram Caption Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/instagram-caption-generator.html",
+      "url": "https://easyworktools.online/blog/instagram-caption-generator",
       "description": "Learn how to use Instagram Caption Generator: Generate Instagram caption for your post. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3949,7 +4370,7 @@
     },
     {
       "title": "Instagram Reel & Post Cover Downloader — Free HD Grabber | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/instagram-reel-post-cover-downloader.html",
+      "url": "https://easyworktools.online/blog/instagram-reel-post-cover-downloader",
       "description": "Download the cover image of a public Instagram Reel or post in HD for free. Step-by-step guide using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -3959,7 +4380,7 @@
     },
     {
       "title": "Instagram Story Idea - How to Use Instagram Story Idea | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/instagram-story-idea.html",
+      "url": "https://easyworktools.online/blog/instagram-story-idea",
       "description": "Learn how to use Instagram Story Idea: Generate Instagram story ideas for you. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3969,7 +4390,7 @@
     },
     {
       "title": "Landing Page Copy Generator - How to Use Landing Page Copy Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/landing-page-copy-generator.html",
+      "url": "https://easyworktools.online/blog/landing-page-copy-generator",
       "description": "Learn how to use Landing Page Copy Generator: Generate landing page copy. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3979,7 +4400,7 @@
     },
     {
       "title": "LinkedIn Post Generator - How to Use LinkedIn Post Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/linkedin-post-generator.html",
+      "url": "https://easyworktools.online/blog/linkedin-post-generator",
       "description": "Learn how to use LinkedIn Post Generator: Generate LinkedIn post for your profile. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -3989,7 +4410,7 @@
     },
     {
       "title": "MD5 vs SHA-256: Hashing Explained (and Why It Isn't Encryption) | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/md5-vs-sha256-hashing-explained.html",
+      "url": "https://easyworktools.online/blog/md5-vs-sha256-hashing-explained",
       "description": "What a hash function actually does, why MD5 and SHA-1 are considered broken, when SHA-256 is the right choice, and why hashing is not the same as encryption.",
       "type": "Article",
       "structuredData": [
@@ -3999,7 +4420,7 @@
     },
     {
       "title": "Meta Description Generator - How to Use Meta Description Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/meta-description-generator.html",
+      "url": "https://easyworktools.online/blog/meta-description-generator",
       "description": "Learn how to use Meta Description Generator: Generate a meta description for your article. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4009,7 +4430,7 @@
     },
     {
       "title": "NDA Generator - How to Use NDA Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/nda-generator.html",
+      "url": "https://easyworktools.online/blog/nda-generator",
       "description": "Learn how to use NDA Generator: Generate NDA for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4019,7 +4440,7 @@
     },
     {
       "title": "Paragraph Completer - How to Use Paragraph Completer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/paragraph-completer.html",
+      "url": "https://easyworktools.online/blog/paragraph-completer",
       "description": "Learn how to use Paragraph Completer: Paragraph Completer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4029,7 +4450,7 @@
     },
     {
       "title": "Paragraph Rewriter - How to Use Paragraph Rewriter | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/paragraph-rewriter.html",
+      "url": "https://easyworktools.online/blog/paragraph-rewriter",
       "description": "Learn how to use Paragraph Rewriter: Rephrase a paragraph. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4039,7 +4460,7 @@
     },
     {
       "title": "Paragraph Writer - How to Use Paragraph Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/paragraph-writer.html",
+      "url": "https://easyworktools.online/blog/paragraph-writer",
       "description": "Learn how to use Paragraph Writer: Paragraph Writer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4049,7 +4470,7 @@
     },
     {
       "title": "Pinterest Pin & Video Thumbnail Downloader — Free HD Grabber | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/pinterest-pin-thumbnail-downloader.html",
+      "url": "https://easyworktools.online/blog/pinterest-pin-thumbnail-downloader",
       "description": "Download the cover image of a public Pinterest Pin or video Pin for free. Simple step-by-step guide using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -4059,7 +4480,7 @@
     },
     {
       "title": "Podcast Script Writer - How to Use Podcast Script Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/podcast-script-writer.html",
+      "url": "https://easyworktools.online/blog/podcast-script-writer",
       "description": "Learn how to use Podcast Script Writer: Podcast Script Generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4069,7 +4490,7 @@
     },
     {
       "title": "Poll Generator - How to Use Poll Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/poll-generator.html",
+      "url": "https://easyworktools.online/blog/poll-generator",
       "description": "Learn how to use Poll Generator: AI Generated Polls. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4079,7 +4500,7 @@
     },
     {
       "title": "Post Writer - How to Use Post Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/post-writer.html",
+      "url": "https://easyworktools.online/blog/post-writer",
       "description": "Learn how to use Post Writer: Generate a blog post. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4089,7 +4510,7 @@
     },
     {
       "title": "Press Release Generator - How to Use Press Release Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/press-release-generator.html",
+      "url": "https://easyworktools.online/blog/press-release-generator",
       "description": "Learn how to use Press Release Generator: Generate a press release. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4099,7 +4520,7 @@
     },
     {
       "title": "Privacy Policy Generator - How to Use Privacy Policy Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/privacy-policy-generator.html",
+      "url": "https://easyworktools.online/blog/privacy-policy-generator",
       "description": "Learn how to use Privacy Policy Generator: Generate privacy policy for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4109,7 +4530,7 @@
     },
     {
       "title": "Purchase Agreement - How to Use Purchase Agreement | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/purchase-agreement.html",
+      "url": "https://easyworktools.online/blog/purchase-agreement",
       "description": "Learn how to use Purchase Agreement: Generate purchase agreement for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4119,7 +4540,7 @@
     },
     {
       "title": "Real Estate Descriptions - How to Use Real Estate Descriptions | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/real-estate-descriptions.html",
+      "url": "https://easyworktools.online/blog/real-estate-descriptions",
       "description": "Learn how to use Real Estate Descriptions: Generate Real Estate Descriptions for your. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4129,7 +4550,7 @@
     },
     {
       "title": "Search - How to Use Search | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/search.html",
+      "url": "https://easyworktools.online/blog/search",
       "description": "Learn how to use Search: Search. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4139,7 +4560,7 @@
     },
     {
       "title": "Sentence Rewriter - How to Use Sentence Rewriter | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/sentence-rewriter.html",
+      "url": "https://easyworktools.online/blog/sentence-rewriter",
       "description": "Learn how to use Sentence Rewriter: Sentence Rewriter. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4149,7 +4570,7 @@
     },
     {
       "title": "Story Generator - How to Use Story Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/story-generator.html",
+      "url": "https://easyworktools.online/blog/story-generator",
       "description": "Learn how to use Story Generator: Generate a Story. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4159,7 +4580,7 @@
     },
     {
       "title": "Summarize YouTube - How to Use Summarize YouTube | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/summarize-youtube.html",
+      "url": "https://easyworktools.online/blog/summarize-youtube",
       "description": "Learn how to use Summarize YouTube: Summarize YouTube Video. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4169,7 +4590,7 @@
     },
     {
       "title": "TikTok Script Writer - How to Use TikTok Script Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/tiktok-script-writer.html",
+      "url": "https://easyworktools.online/blog/tiktok-script-writer",
       "description": "Learn how to use TikTok Script Writer: TikTok Script Writer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4179,7 +4600,7 @@
     },
     {
       "title": "TikTok Thumbnail Downloader — Download TikTok Video Covers Free | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/tiktok-thumbnail-downloader.html",
+      "url": "https://easyworktools.online/blog/tiktok-thumbnail-downloader",
       "description": "Download the cover image (thumbnail) of any public TikTok video for free. Step-by-step guide using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -4189,7 +4610,7 @@
     },
     {
       "title": "Title Rewriter - How to Use Title Rewriter | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/title-rewriter.html",
+      "url": "https://easyworktools.online/blog/title-rewriter",
       "description": "Learn how to use Title Rewriter: Rewrite your article title. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4199,7 +4620,7 @@
     },
     {
       "title": "Tone of Voice - How to Use Tone of Voice | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/tone-of-voice.html",
+      "url": "https://easyworktools.online/blog/tone-of-voice",
       "description": "Learn how to use Tone of Voice: Tone of Voice Tool. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4209,7 +4630,7 @@
     },
     {
       "title": "Translate - How to Use Translate | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/translate.html",
+      "url": "https://easyworktools.online/blog/translate",
       "description": "Learn how to use Translate: Easily Translate Text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4219,7 +4640,7 @@
     },
     {
       "title": "Trivia Generator - How to Use Trivia Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/trivia-generator.html",
+      "url": "https://easyworktools.online/blog/trivia-generator",
       "description": "Learn how to use Trivia Generator: Generate Trivia Questions. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4229,7 +4650,7 @@
     },
     {
       "title": "Twitter Generator - How to Use Twitter Generator | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/twitter-generator.html",
+      "url": "https://easyworktools.online/blog/twitter-generator",
       "description": "Learn how to use Twitter Generator: Twitter generator. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4239,7 +4660,7 @@
     },
     {
       "title": "Unix Timestamps Explained: Converting Epoch Time to a Real Date | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/unix-timestamp-explained.html",
+      "url": "https://easyworktools.online/blog/unix-timestamp-explained",
       "description": "What a Unix timestamp is, why seconds and milliseconds get confused so often, and how to convert epoch time to a readable date in your local timezone or UTC.",
       "type": "Article",
       "structuredData": [
@@ -4249,7 +4670,7 @@
     },
     {
       "title": "Uppercase, Lowercase and Title Case: When to Use Each Text Style | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/uppercase-lowercase-title-case-guide.html",
+      "url": "https://easyworktools.online/blog/uppercase-lowercase-title-case-guide",
       "description": "A practical guide to common text case styles, including uppercase, lowercase, title case, sentence case and when each is useful.",
       "type": "Article",
       "structuredData": [
@@ -4259,7 +4680,7 @@
     },
     {
       "title": "URL Encoding Explained: When and Why to Percent-Encode Text | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/url-encoding-explained.html",
+      "url": "https://easyworktools.online/blog/url-encoding-explained",
       "description": "What percent-encoding actually does, the difference between encodeURIComponent and encodeURI, and when you need each one in a real URL or query string.",
       "type": "Article",
       "structuredData": [
@@ -4269,7 +4690,7 @@
     },
     {
       "title": "UUID Versions Explained: v1 vs v4, and What They Actually Encode | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/uuid-versions-explained.html",
+      "url": "https://easyworktools.online/blog/uuid-versions-explained",
       "description": "What a UUID actually is, the difference between version 1 (time-based) and version 4 (random), and how to generate or inspect one for free.",
       "type": "Article",
       "structuredData": [
@@ -4279,7 +4700,7 @@
     },
     {
       "title": "Vimeo Video Thumbnail Downloader — Free HD Cover Grabber | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/vimeo-thumbnail-downloader.html",
+      "url": "https://easyworktools.online/blog/vimeo-thumbnail-downloader",
       "description": "Download the thumbnail or cover image of a public Vimeo video for free. Step-by-step guide using EasyWorkTools.online",
       "type": "Article",
       "structuredData": [
@@ -4289,7 +4710,7 @@
     },
     {
       "title": "What Is Base64 Encoding and When Do You Actually Need It? | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/what-is-base64-encoding.html",
+      "url": "https://easyworktools.online/blog/what-is-base64-encoding",
       "description": "A plain-language explanation of Base64 encoding, why it shows up in data URIs and API tokens, and why it is not a form of encryption or security.",
       "type": "Article",
       "structuredData": [
@@ -4299,7 +4720,7 @@
     },
     {
       "title": "What Is a Flesch Reading Ease Score, and Does It Matter? | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/what-is-flesch-reading-ease-score.html",
+      "url": "https://easyworktools.online/blog/what-is-flesch-reading-ease-score",
       "description": "What the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas actually measure, what a good score looks like, and where these formulas fall short.",
       "type": "Article",
       "structuredData": [
@@ -4309,7 +4730,7 @@
     },
     {
       "title": "What Is Keyword Density and Does It Still Matter for SEO? | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/what-is-keyword-density-seo.html",
+      "url": "https://easyworktools.online/blog/what-is-keyword-density-seo",
       "description": "What keyword density actually measures, why old-school density targets are outdated advice, and how to use a density checker sensibly before publishing.",
       "type": "Article",
       "structuredData": [
@@ -4319,7 +4740,7 @@
     },
     {
       "title": "What Is Lorem Ipsum and Why Do Designers Still Use It? | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/what-is-lorem-ipsum.html",
+      "url": "https://easyworktools.online/blog/what-is-lorem-ipsum",
       "description": "What Lorem Ipsum placeholder text actually is, where it came from, and how to generate exactly as much as you need for a mockup or template.",
       "type": "Article",
       "structuredData": [
@@ -4329,7 +4750,7 @@
     },
     {
       "title": "Word Counter - How to Use Word Counter | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/word-counter.html",
+      "url": "https://easyworktools.online/blog/word-counter",
       "description": "Learn how to use Word Counter: Count words in your text. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4339,7 +4760,7 @@
     },
     {
       "title": "YouTube Script Writer - How to Use YouTube Script Writer | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/youtube-script-writer.html",
+      "url": "https://easyworktools.online/blog/youtube-script-writer",
       "description": "Learn how to use YouTube Script Writer: Generate a YouTube script. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
       "type": "Article",
       "structuredData": [
@@ -4349,7 +4770,7 @@
     },
     {
       "title": "YouTube Thumbnail Downloader — Download HD YouTube Thumbnails Free | EasyWorkTools.online",
-      "url": "https://easyworktools.online/blog/youtube-thumbnail-downloader.html",
+      "url": "https://easyworktools.online/blog/youtube-thumbnail-downloader",
       "description": "Download any YouTube video",
       "type": "Article",
       "structuredData": [

@@ -1,0 +1,14 @@
+{
+  "title": "Chart Maker",
+  "description": "Make bar, line, area, pie and doughnut charts from pasted or CSV data and download them as PNG, free in your browser.",
+  "tags": [
+    "chart maker",
+    "bar chart",
+    "pie chart",
+    "line graph",
+    "graph maker"
+  ],
+  "url": "tools/chart-maker/",
+  "iconKey": "image",
+  "category": "Image Tools"
+}

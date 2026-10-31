@@ -1,0 +1,13 @@
+{
+  "title": "Make Background Transparent",
+  "description": "Click a colour to make it transparent and save a PNG, free in your browser.",
+  "tags": [
+    "transparent background",
+    "make transparent",
+    "remove white background",
+    "png"
+  ],
+  "url": "tools/make-background-transparent/",
+  "iconKey": "img-editor",
+  "category": "Image Tools"
+}

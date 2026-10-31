@@ -742,6 +742,20 @@
     "category": "SEO Tools"
   },
   {
+    "title": "Chart Maker",
+    "description": "Make bar, line, area, pie and doughnut charts from pasted or CSV data and download them as PNG, free in your browser.",
+    "url": "tools/chart-maker/",
+    "iconKey": "image",
+    "tags": [
+      "chart maker",
+      "bar chart",
+      "pie chart",
+      "line graph",
+      "graph maker"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "Color Picker & Converter",
     "description": "Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.",
     "url": "tools/color-picker-converter/",
@@ -813,6 +827,19 @@
     "category": "Text Tools"
   },
   {
+    "title": "Font Awesome to PNG",
+    "description": "Turn any free Font Awesome icon into a PNG at any size and colour, with a transparent or solid background.",
+    "url": "tools/font-awesome-to-png/",
+    "iconKey": "image",
+    "tags": [
+      "font awesome to png",
+      "icon to png",
+      "fontawesome png",
+      "icon converter"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "Free Image Compressor",
     "description": "Compress JPG, PNG and WebP images online for free in your browser.",
     "url": "tools/free-image-compressor/",
@@ -823,6 +850,19 @@
       "compress png",
       "reduce image size",
       "webp compressor"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "GIF to APNG Converter",
+    "description": "Convert animated GIFs to full-colour APNG with smooth transparency, free in your browser.",
+    "url": "tools/gif-to-apng/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "gif to apng",
+      "animated png",
+      "convert gif",
+      "apng maker"
     ],
     "category": "Image Tools"
   },
@@ -854,6 +894,19 @@
     "category": "Developer Tools"
   },
   {
+    "title": "HEIC to AVIF Converter",
+    "description": "Convert iPhone HEIC photos to AVIF. Free, private, in your browser.",
+    "url": "tools/heic-to-avif/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "heic to avif",
+      "convert heic to avif",
+      "avif converter",
+      "avif encoder"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "HEIC to JPG Converter",
     "description": "Convert HEIC photos from iPhone to JPG online for free. Upload one or more .heic files and download high-quality JPG images, all processed in your browser.",
     "url": "tools/heic-to-jpg-converter/",
@@ -878,6 +931,19 @@
       "iphone photo to pdf"
     ],
     "category": "PDF Tools"
+  },
+  {
+    "title": "HEIC to PNG Converter",
+    "description": "Convert iPhone HEIC and HEIF photos to lossless PNG online for free, in batches.",
+    "url": "tools/heic-to-png/",
+    "iconKey": "heic-jpg",
+    "tags": [
+      "heic to png",
+      "heif to png",
+      "iphone photo converter",
+      "convert heic"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "Hreflang Generator & Validator",
@@ -1142,6 +1208,32 @@
     "category": "Image Tools"
   },
   {
+    "title": "JPG to AVIF Converter",
+    "description": "Convert JPG photos to AVIF for much smaller web images. Free, private, in your browser.",
+    "url": "tools/jpg-to-avif/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "jpg to avif",
+      "convert jpg to avif",
+      "avif converter",
+      "avif encoder"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "JPG to GIF Converter",
+    "description": "Convert JPG images to GIF online for free, or combine several into an animated GIF.",
+    "url": "tools/jpg-to-gif/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "jpg to gif",
+      "jpeg to gif",
+      "animated gif maker",
+      "images to gif"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "JPG to PDF",
     "description": "Convert JPG and JPEG images into one PDF, one photo per page, with A4 or fit-to-image sizing. Free, private and fully in your browser",
     "url": "tools/jpg-to-pdf/",
@@ -1153,6 +1245,32 @@
       "images to pdf"
     ],
     "category": "PDF Tools"
+  },
+  {
+    "title": "JPG to SVG Converter",
+    "description": "Trace JPG images into real SVG vector shapes online, free and in your browser.",
+    "url": "tools/jpg-to-svg/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "jpg to svg",
+      "jpg vectorizer",
+      "image tracer",
+      "bitmap to vector"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "JPG to TIFF Converter",
+    "description": "Convert JPG images to TIFF online for free, uncompressed or LZW.",
+    "url": "tools/jpg-to-tiff/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "jpg to tiff",
+      "jpeg to tif",
+      "convert jpg tiff",
+      "tiff maker"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "JSON ↔ CSV Converter",
@@ -1236,6 +1354,19 @@
       "random paragraph generator"
     ],
     "category": "Text Tools"
+  },
+  {
+    "title": "Make Background Transparent",
+    "description": "Click a colour to make it transparent and save a PNG, free in your browser.",
+    "url": "tools/make-background-transparent/",
+    "iconKey": "img-editor",
+    "tags": [
+      "transparent background",
+      "make transparent",
+      "remove white background",
+      "png"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "Markdown ↔ HTML Converter",
@@ -1691,6 +1822,45 @@
     "category": "Calculator Tools"
   },
   {
+    "title": "PNG to AVIF Converter",
+    "description": "Convert PNG images to AVIF and keep transparency. Free, private, in your browser.",
+    "url": "tools/png-to-avif/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "png to avif",
+      "convert png to avif",
+      "avif converter",
+      "avif encoder"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "PNG to EPS Converter",
+    "description": "Convert PNG images to EPS (Encapsulated PostScript) online for free.",
+    "url": "tools/png-to-eps/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "png to eps",
+      "image to eps",
+      "eps converter",
+      "encapsulated postscript"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "PNG to GIF Converter",
+    "description": "Convert PNG images to GIF online for free, keeping transparency, or build an animated GIF.",
+    "url": "tools/png-to-gif/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "png to gif",
+      "png to animated gif",
+      "transparent gif",
+      "images to gif"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "PNG to PDF",
     "description": "Convert PNG images into one PDF, one picture per page, keeping transparency on a white background. Free, private and fully in your browser",
     "url": "tools/png-to-pdf/",
@@ -1702,6 +1872,45 @@
       "turn images into pdf"
     ],
     "category": "PDF Tools"
+  },
+  {
+    "title": "PNG to SVG Converter",
+    "description": "Trace PNG images into real SVG vector shapes online, free and in your browser.",
+    "url": "tools/png-to-svg/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "png to svg",
+      "png vectorizer",
+      "image tracer",
+      "bitmap to vector"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "PNG to TIFF Converter",
+    "description": "Convert PNG images to TIFF online for free, with alpha transparency kept.",
+    "url": "tools/png-to-tiff/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "png to tiff",
+      "png to tif",
+      "convert png tiff",
+      "tiff with alpha"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "Profile Photo Maker",
+    "description": "Crop a photo into a circle or rounded-square profile picture with border and background, free in your browser.",
+    "url": "tools/profile-photo-maker/",
+    "iconKey": "crop-rotate",
+    "tags": [
+      "profile photo maker",
+      "circle crop",
+      "avatar maker",
+      "profile picture"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "Readability Checker",
@@ -1756,6 +1965,19 @@
       "javascript regex tester"
     ],
     "category": "Developer Tools"
+  },
+  {
+    "title": "Remove Background from Image",
+    "description": "Remove a plain background by colour and save a transparent PNG, free in your browser. Not AI.",
+    "url": "tools/remove-background-from-image/",
+    "iconKey": "img-editor",
+    "tags": [
+      "remove background",
+      "background remover",
+      "transparent png",
+      "cutout"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "Remove Duplicate Lines",
@@ -1909,6 +2131,45 @@
     "category": "Text Tools"
   },
   {
+    "title": "TIFF to JPG Converter",
+    "description": "Convert TIFF files to JPG online for free, with a chosen background for transparent areas.",
+    "url": "tools/tiff-to-jpg/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "tiff to jpg",
+      "tif to jpg",
+      "convert tiff",
+      "tiff converter"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "TIFF to PNG Converter",
+    "description": "Convert TIFF files to lossless PNG online for free, keeping transparency.",
+    "url": "tools/tiff-to-png/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "tiff to png",
+      "tif to png",
+      "lossless convert tiff",
+      "tiff alpha png"
+    ],
+    "category": "Image Tools"
+  },
+  {
+    "title": "TIFF to SVG Converter",
+    "description": "Trace TIFF scans and artwork into real SVG vector shapes online, free and in your browser.",
+    "url": "tools/tiff-to-svg/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "tiff to svg",
+      "tif to svg",
+      "trace tiff",
+      "vectorize tiff"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "Unit Converter",
     "description": "Convert length, weight, temperature, volume, area and speed online for free.",
     "url": "tools/unit-converter/",
@@ -1992,6 +2253,19 @@
       "generate uuid online"
     ],
     "category": "Developer Tools"
+  },
+  {
+    "title": "WEBP to AVIF Converter",
+    "description": "Convert WebP images to the even smaller AVIF format. Free, private, in your browser.",
+    "url": "tools/webp-to-avif/",
+    "iconKey": "fmt-convert",
+    "tags": [
+      "webp to avif",
+      "convert webp to avif",
+      "avif converter",
+      "avif encoder"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "WebP to PDF",

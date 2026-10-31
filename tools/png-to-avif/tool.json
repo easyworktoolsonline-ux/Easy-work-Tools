@@ -1,0 +1,13 @@
+{
+  "title": "PNG to AVIF Converter",
+  "description": "Convert PNG images to AVIF and keep transparency. Free, private, in your browser.",
+  "tags": [
+    "png to avif",
+    "convert png to avif",
+    "avif converter",
+    "avif encoder"
+  ],
+  "url": "tools/png-to-avif/",
+  "iconKey": "fmt-convert",
+  "category": "Image Tools"
+}

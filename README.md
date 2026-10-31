@@ -485,3 +485,40 @@ positives, because the HTML tokenizer ends a script block only on a *literal*
 `</script` — a page that legitimately builds the string `'<script type="…">'` in
 its own JavaScript will be miscounted. The site's own schema-markup generator is
 exactly such a page.
+
+## Image tools added in this release
+
+21 tools were added under `tools/` (tiff-to-jpg, tiff-to-png, tiff-to-svg, jpg-to-tiff, png-to-tiff, png-to-eps,
+png-to-svg, jpg-to-svg, jpg-to-gif, png-to-gif, gif-to-apng, jpg-to-avif, png-to-avif, webp-to-avif, heic-to-avif,
+heic-to-png, font-awesome-to-png, profile-photo-maker, chart-maker, remove-background-from-image,
+make-background-transparent). All run in the browser; nothing is uploaded.
+
+- Shared code is in `assets/image-tools/` and is original code written for this site (TIFF reader/writer, GIF, APNG,
+  AVIF container writer, vector tracer, EPS writer, chart renderer, colour-key background removal), except
+  `fa-icons.js`, which is generated from the Font Awesome Free icon set (icons CC BY 4.0, see `LICENSE-fontawesome.txt`;
+  attribution is shown on the Font Awesome to PNG page).
+- Pages are generated, not hand-edited. To change one, edit `scripts/image-tools/defs-*.mjs` (or `core.mjs` for shared
+  layout), then run from the project root:
+  `node scripts/image-tools/build.mjs && node scripts/build-indexes.mjs`
+  The second command regenerates the manifests, sitemap, llms.txt, ai-catalog.json and category pages.
+- New tools must also be listed in `scripts/categories.mjs`, or the index build fails.
+- Limits to know: AVIF encoding needs a Chromium-based browser (WebCodecs AV1). Background removal is colour based, not
+  AI. EPS output is a raster image inside an EPS wrapper. TIFF input does not support JPEG-in-TIFF, CCITT, BigTIFF,
+  floating point or YCbCr/Lab files; they are refused with a message.
+
+## URL form: advertise what is served
+
+Cloudflare Pages serves `about.html` at `/about` and `blog/post.html` at `/blog/post`, and answers the `.html` form
+with a 308 redirect. Canonical tags, the sitemap and internal links therefore use the served form (`/about`,
+`/blog/post`, `/blog/`). `scripts/clean-urls.mjs` enforces this and runs as the last step of
+`node scripts/build-indexes.mjs`, so a rebuild cannot bring the `.html` forms back. Old `.html` addresses keep
+working through Cloudflare's redirect. Note: the clean links assume a web server with clean-URL routing (Cloudflare
+Pages, `wrangler pages dev`); opening the folder straight from disk will not follow them.
+
+`build-indexes.mjs` injects the catalogue before the LAST `</body>`; tool pages may contain the text `</body>` inside
+their own scripts.
+
+## Turnstile (optional) on the Help & Feedback form
+
+Set `window.EWT_TURNSTILE_SITE_KEY` in `assets/feedback-config.js` and add the script property `TURNSTILE_SECRET` in
+the Apps Script project (see `apps-script/README.txt`). With the key empty the form is unchanged.

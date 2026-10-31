@@ -1,0 +1,13 @@
+{
+  "title": "GIF to APNG Converter",
+  "description": "Convert animated GIFs to full-colour APNG with smooth transparency, free in your browser.",
+  "tags": [
+    "gif to apng",
+    "animated png",
+    "convert gif",
+    "apng maker"
+  ],
+  "url": "tools/gif-to-apng/",
+  "iconKey": "fmt-convert",
+  "category": "Image Tools"
+}

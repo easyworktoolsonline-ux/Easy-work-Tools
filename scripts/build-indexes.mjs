@@ -1,5 +1,6 @@
 import { promises as fs, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { cleanAll, dirtyShell } from './clean-urls.mjs';
 import {
   validateCategories, toolCardAttrs, renderCarousel, renderFilter,
   renderCategoryPageBody, renderCategorySchema,
@@ -396,7 +397,10 @@ function updateFooter(html, prefix) {
  * the chrome matches the rest of the site by construction rather than by being
  * copied and then kept in sync by hand.
  * ------------------------------------------------------------------ */
-const shellSource = await fs.readFile(path.join(root, 'tools', 'index.html'), 'utf8');
+/* tools/index.html is stored with clean URLs (see clean-urls.mjs), while deepen() below was written
+   for the .html forms of the shell's own links. dirtyShell() restores exactly those forms for this
+   in-memory copy; the clean pass at the end of the build puts the clean forms back. */
+const shellSource = dirtyShell(await fs.readFile(path.join(root, 'tools', 'index.html'), 'utf8'));
 const shellHeadEnd = shellSource.indexOf('</head>') + 7;
 const shellMainStart = shellSource.indexOf('<main>');
 const shellMainEnd = shellSource.indexOf('</main>') + 7;
@@ -539,7 +543,13 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
      app.js. It needs no globals from app.js, but order is kept for readability. */
   const flowSrc = `${prefix}assets/featured-coverflow.js`;
   const loader = `<script>window.__SITE_DATA__=${searchableSiteData}</script><script src="${appSrc}" defer></script><script src="${tabsSrc}" defer></script><script src="${flowSrc}" defer></script>`;
-    text = text.replace(/<\/body>/i, `${loader}\n</body>`);
+    /* Insert before the LAST </body>. A tool page can contain the text "</body>" inside its own
+       script (pdf-to-epub builds XHTML strings), and splicing the loader into the first one put
+       <script> tags inside a JavaScript string and stopped the whole tool script from parsing. */
+    {
+      const at = text.toLowerCase().lastIndexOf('</body>');
+      text = at < 0 ? text : text.slice(0, at) + `${loader}\n` + text.slice(at);
+    }
   }
 
   // AdSense insertion is marker-based and idempotent.
@@ -1582,6 +1592,12 @@ function normaliseInternalLinks() {
 }
 
 normaliseInternalLinks();
+
+/* Last step: advertise the URLs the host really serves (/about, not /about.html). */
+{
+  const r = cleanAll();
+  console.log(`clean-urls: ${r.changed} of ${r.files} files rewritten to the served URL form.`);
+}
 
 console.log(`Indexed ${tools.length} tools and ${posts.length} blog posts.`);
 console.log(`Wrote ai-catalog.json (${tools.length} tools, ${posts.length} articles).`);

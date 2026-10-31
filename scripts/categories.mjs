@@ -103,7 +103,13 @@ export const CATEGORIES = [
       {
         slug: 'convert-format', label: 'Convert Format', tools: [
           '/tools/image-format-converter/', '/tools/heic-to-jpg-converter/',
-          '/tools/image-to-base64/'
+          '/tools/image-to-base64/',
+          '/tools/heic-to-png/', '/tools/heic-to-avif/',
+          '/tools/tiff-to-jpg/', '/tools/tiff-to-png/', '/tools/tiff-to-svg/',
+          '/tools/jpg-to-tiff/', '/tools/png-to-tiff/',
+          '/tools/jpg-to-gif/', '/tools/png-to-gif/', '/tools/gif-to-apng/',
+          '/tools/jpg-to-avif/', '/tools/png-to-avif/', '/tools/webp-to-avif/',
+          '/tools/png-to-svg/', '/tools/jpg-to-svg/', '/tools/png-to-eps/'
         ]
       },
       {
@@ -116,7 +122,9 @@ export const CATEGORIES = [
         slug: 'edit-enhance', label: 'Edit & Enhance', tools: [
           '/tools/image-editor/', '/tools/image-background-color/',
           '/tools/image-watermark/', '/tools/image-collage-maker/',
-          '/tools/image-merge-stitch/'
+          '/tools/image-merge-stitch/',
+          '/tools/remove-background-from-image/', '/tools/make-background-transparent/',
+          '/tools/chart-maker/'
         ]
       },
       {
@@ -130,7 +138,8 @@ export const CATEGORIES = [
       },
       {
         slug: 'icons-thumbnails', label: 'Icons & Thumbnails', tools: [
-          '/tools/favicon-generator/', '/tools/easy-thumbnail-downloader/'
+          '/tools/favicon-generator/', '/tools/easy-thumbnail-downloader/',
+          '/tools/profile-photo-maker/', '/tools/font-awesome-to-png/'
         ]
       }
     ]

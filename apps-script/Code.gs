@@ -12,6 +12,16 @@ function doPost(e) {
   try {
     const data = extractData_(e);
 
+    // Cloudflare Turnstile: checked only when the TURNSTILE_SECRET script property exists
+    // (Project Settings > Script properties). Without it, submissions are accepted as before.
+    const turnstileSecret = PropertiesService.getScriptProperties().getProperty('TURNSTILE_SECRET');
+    if (turnstileSecret && !verifyTurnstile_(turnstileSecret, data.turnstileToken)) {
+      return jsonResponse_({
+        result: 'error',
+        message: 'The security check failed. Please reload the page and try again.'
+      });
+    }
+
     const requestType = clean_(data.requestType || data.type, 'Help', 200);
     const toolName = clean_(data.toolName || data.tool, 'Not specified', 200);
     const visitorEmail = clean_(data.email || data.replyTo, '', 200);
@@ -113,4 +123,21 @@ function jsonResponse_(payload) {
   return ContentService
     .createTextOutput(JSON.stringify(payload))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+/** Server-side Turnstile check. A missing or invalid token fails closed. */
+function verifyTurnstile_(secret, token) {
+  if (!token) return false;
+  try {
+    const res = UrlFetchApp.fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'post',
+      payload: { secret: secret, response: String(token) },
+      muteHttpExceptions: true
+    });
+    const out = JSON.parse(res.getContentText());
+    return out && out.success === true;
+  } catch (err) {
+    console.error('Turnstile verification failed: ' + err);
+    return false;
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "title": "Profile Photo Maker",
+  "description": "Crop a photo into a circle or rounded-square profile picture with border and background, free in your browser.",
+  "tags": [
+    "profile photo maker",
+    "circle crop",
+    "avatar maker",
+    "profile picture"
+  ],
+  "url": "tools/profile-photo-maker/",
+  "iconKey": "crop-rotate",
+  "category": "Image Tools"
+}

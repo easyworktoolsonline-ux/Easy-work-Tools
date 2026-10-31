@@ -1,0 +1,13 @@
+{
+  "title": "TIFF to SVG Converter",
+  "description": "Trace TIFF scans and artwork into real SVG vector shapes online, free and in your browser.",
+  "tags": [
+    "tiff to svg",
+    "tif to svg",
+    "trace tiff",
+    "vectorize tiff"
+  ],
+  "url": "tools/tiff-to-svg/",
+  "iconKey": "fmt-convert",
+  "category": "Image Tools"
+}

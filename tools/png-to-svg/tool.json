@@ -1,0 +1,13 @@
+{
+  "title": "PNG to SVG Converter",
+  "description": "Trace PNG images into real SVG vector shapes online, free and in your browser.",
+  "tags": [
+    "png to svg",
+    "png vectorizer",
+    "image tracer",
+    "bitmap to vector"
+  ],
+  "url": "tools/png-to-svg/",
+  "iconKey": "fmt-convert",
+  "category": "Image Tools"
+}

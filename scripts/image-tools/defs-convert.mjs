@@ -1,0 +1,258 @@
+import { converter, p, h3, ol, table } from './converters.mjs';
+
+const RASTER_ACCEPT = 'image/jpeg,image/png,image/webp,image/gif,image/bmp,image/avif,.jpg,.jpeg,.png,.webp,.gif,.bmp,.avif';
+const TIFF_ACCEPT = 'image/tiff,.tif,.tiff';
+const HEIC_ACCEPT = '.heic,.heif,image/heic,image/heif';
+const NOUPLOAD = 'Nothing is uploaded: the file is processed inside this browser tab.';
+const BAD_RASTER = 'Please choose an image file (JPG, PNG, WebP, GIF or BMP).';
+const BAD_TIFF = 'Please choose a TIFF file (.tif or .tiff).';
+const BAD_HEIC = 'Please choose a HEIC or HEIF photo (.heic or .heif).';
+
+const tiffDecodeFaq = [
+  { q: 'Which kinds of TIFF can it open?', a: 'Uncompressed, LZW, PackBits and Deflate (ZIP) TIFFs in grayscale, RGB, palette and CMYK, with 1, 2, 4, 8 or 16 bits per channel, stored in strips or tiles, with or without an alpha channel. TIFFs saved with JPEG, CCITT fax or other compression are refused with a clear message instead of producing a wrong picture.' },
+  { q: 'What happens to a multi-page TIFF?', a: 'Only the first page is converted. The page count is shown so you know when pages were skipped.' },
+  { q: 'Is my file uploaded?', a: NOUPLOAD + ' It never leaves your device.' },
+];
+
+export const CONVERTERS = [
+  /* ------------------------------ TIFF input ------------------------------ */
+  converter({
+    slug: 'tiff-to-jpg', name: 'TIFF to JPG Converter', in: 'tiff', out: 'jpg', ext: 'jpg',
+    metaTitle: 'TIFF to JPG Converter - Free Online | EasyWorkTools.online',
+    metaDescription: 'Convert TIFF to JPG online for free. Opens .tif and .tiff files (LZW, ZIP, PackBits, 16-bit, CMYK) and saves a JPG with a white background. Runs in your browser.',
+    keywords: ['tiff to jpg', 'tif to jpg converter', 'convert tiff to jpeg online', 'tiff to jpg free'],
+    lede: 'Open a TIFF file and save it as a JPG. Browsers cannot display TIFF, so this tool reads the file itself and re-encodes it in this tab. Nothing is uploaded.',
+    dropSub: 'TIFF (.tif, .tiff) accepted', accept: TIFF_ACCEPT, dropAria: 'Upload a TIFF file to convert to JPG', badFile: BAD_TIFF,
+    libs: ['tiff'], sideTitle: 'JPG output', iconKey: 'fmt-convert',
+    cardDescription: 'Convert TIFF files to JPG online for free, with a chosen background for transparent areas.',
+    tags: ['tiff to jpg', 'tif to jpg', 'convert tiff', 'tiff converter'],
+    features: ['Reads LZW, ZIP, PackBits and uncompressed TIFF', 'Grayscale, RGB, palette, CMYK, 8 and 16 bit', 'Quality slider and background colour', 'Runs entirely in your browser'],
+    seoHeading: 'Convert TIFF Images to JPG Without Installing Anything',
+    seoHtml: [
+      p('TIFF is the format scanners, cameras and print workflows use because it is lossless, but almost nothing on the web can show it and the files are huge. JPG is the opposite: small and understood everywhere. This tool reads a TIFF, flattens it onto a background colour you choose (JPG has no transparency), and saves a JPG at the quality you set.'),
+      h3('What the TIFF reader supports'),
+      table(['Feature', 'Supported'], [['Compression', 'None, LZW, PackBits, Deflate / ZIP'], ['Colour', 'Grayscale, RGB, palette, CMYK, bilevel'], ['Bit depth', '1, 2, 4, 8 and 16 bits per channel'], ['Layout', 'Strips and tiles, little and big endian'], ['Alpha', 'Straight and premultiplied'], ['Not supported', 'JPEG-in-TIFF, CCITT fax, floating point, BigTIFF, YCbCr, Lab']]),
+      h3('How to convert TIFF to JPG'),
+      ol(['Drop your .tif or .tiff file into the box above.', 'Adjust the quality and, if the image has transparency, the background colour.', 'Download the JPG.']),
+      p('CMYK files are converted with a simple formula, not a colour profile, so print colours can look slightly different from Photoshop. 16-bit images are reduced to 8 bits per channel, which is what JPG stores.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Why does the converted JPG look different from my CMYK TIFF?', a: 'CMYK to RGB needs a colour profile to be exact. This tool uses the standard simple formula, so saturated print colours can shift. For colour-critical work, convert in software that applies your ICC profile.' },
+      { q: 'Will transparency be kept?', a: 'No. JPG cannot store transparency, so transparent areas are filled with the background colour you pick (white by default). Use TIFF to PNG to keep transparency.' },
+      { q: 'Is quality lost?', a: 'JPG is lossy, so some detail is discarded. At the default 92% the difference is hard to see. Lower the slider for smaller files.' },
+      ...tiffDecodeFaq,
+    ],
+    related: ['tiff-to-png', 'jpg-to-tiff', 'image-format-converter'],
+  }),
+  converter({
+    slug: 'tiff-to-png', name: 'TIFF to PNG Converter', in: 'tiff', out: 'png', ext: 'png',
+    metaTitle: 'TIFF to PNG Converter - Free Online | EasyWorkTools.online',
+    metaDescription: 'Convert TIFF to PNG online for free and keep transparency. Opens .tif and .tiff files (LZW, ZIP, PackBits, 16-bit, CMYK). Runs in your browser, nothing uploaded.',
+    keywords: ['tiff to png', 'tif to png converter', 'convert tiff to png online', 'tiff to png transparent'],
+    lede: 'Open a TIFF file and save it as a lossless PNG, with its transparency intact. The TIFF is decoded in this tab. Nothing is uploaded.',
+    dropSub: 'TIFF (.tif, .tiff) accepted', accept: TIFF_ACCEPT, dropAria: 'Upload a TIFF file to convert to PNG', badFile: BAD_TIFF,
+    libs: ['tiff', 'apng'], sideTitle: 'PNG output', iconKey: 'fmt-convert',
+    cardDescription: 'Convert TIFF files to lossless PNG online for free, keeping transparency.',
+    tags: ['tiff to png', 'tif to png', 'lossless convert tiff', 'tiff alpha png'],
+    features: ['Lossless PNG output with alpha', 'Reads LZW, ZIP, PackBits and uncompressed TIFF', 'Grayscale, RGB, palette, CMYK, 8 and 16 bit', 'Runs entirely in your browser'],
+    seoHeading: 'Convert TIFF to PNG and Keep Every Pixel',
+    seoHtml: [
+      p('PNG is lossless like TIFF, but every browser, chat app and document editor can open it. Converting a TIFF scan or export to PNG keeps the pixels exactly (at 8 bits per channel) and keeps any alpha channel, which makes it the right target when you need to share or publish the image.'),
+      h3('TIFF vs PNG'),
+      table(['', 'TIFF', 'PNG'], [['Browser support', 'None', 'Universal'], ['Compression', 'Optional, many kinds', 'Lossless, always'], ['Transparency', 'Yes', 'Yes'], ['Bit depth', 'Up to 32', '8 here (16 is reduced)'], ['Typical use', 'Scans, print, archives', 'Web, documents, screenshots']]),
+      h3('How to convert TIFF to PNG'),
+      ol(['Drop your .tif or .tiff file into the box above.', 'Check the preview and the output size.', 'Download the PNG.']),
+      p('16-bit TIFFs are reduced to 8 bits per channel because the browser canvas stores 8 bits. Only the first page of a multi-page TIFF is converted.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Does the PNG keep transparency?', a: 'Yes, if the TIFF has an alpha channel (straight or premultiplied). TIFFs without alpha produce a fully opaque PNG.' },
+      { q: 'Is the conversion lossless?', a: 'Yes for 8-bit images. 16-bit images are reduced to 8 bits per channel, and CMYK is converted to RGB with a simple formula.' },
+      ...tiffDecodeFaq,
+    ],
+    related: ['tiff-to-jpg', 'png-to-tiff', 'image-format-converter'],
+  }),
+  converter({
+    slug: 'tiff-to-svg', name: 'TIFF to SVG Converter', in: 'tiff', out: 'svg', ext: 'svg', extra: { colors: 8 },
+    metaTitle: 'TIFF to SVG Converter - Trace to Vector | EasyWorkTools.online',
+    metaDescription: 'Convert TIFF to SVG by tracing it into real vector shapes. Best for logos, line art and flat scans. Opens .tif and .tiff, runs in your browser, nothing uploaded.',
+    keywords: ['tiff to svg', 'tif to svg converter', 'convert tiff to vector', 'trace tiff to svg'],
+    lede: 'Trace a TIFF into scalable vector shapes. The result is real SVG paths, not a picture wrapped in SVG. Works best on logos, icons and flat artwork. Nothing is uploaded.',
+    dropSub: 'TIFF (.tif, .tiff) accepted', accept: TIFF_ACCEPT, dropAria: 'Upload a TIFF file to trace into SVG', badFile: BAD_TIFF,
+    libs: ['tiff', 'trace'], sideTitle: 'SVG output', iconKey: 'fmt-convert',
+    cardDescription: 'Trace TIFF scans and artwork into real SVG vector shapes online, free and in your browser.',
+    tags: ['tiff to svg', 'tif to svg', 'trace tiff', 'vectorize tiff'],
+    features: ['Real vector tracing, not an embedded bitmap', 'Colour count, speck removal and smoothing controls', 'Reads LZW, ZIP, PackBits and uncompressed TIFF', 'Copy or download the SVG'],
+    seoHeading: 'Trace a TIFF into Editable SVG Shapes',
+    seoHtml: [
+      p('A TIFF is a grid of pixels. An SVG is a list of shapes. Converting one to the other means tracing: the tool reduces the image to a handful of colours, finds the outline of every colour region and writes each region as a filled path. The result scales to any size without blurring and opens in Illustrator, Inkscape and Figma.'),
+      h3('What traces well'),
+      table(['Source', 'Result'], [['Logos, icons, line art', 'Clean, compact SVG'], ['Scanned drawings and signatures', 'Good, with the colour count at 2 to 4'], ['Flat illustrations', 'Good with 8 to 16 colours'], ['Photographs', 'Very large, posterised SVG - not recommended']]),
+      h3('How to trace a TIFF to SVG'),
+      ol(['Drop the TIFF into the box above.', 'Set the number of colours (2 for black and white art).', 'Raise the speck filter to remove scanner noise, and tune smoothing.', 'Download the SVG or copy its code.']),
+      p('Large images are traced at up to the resolution you choose and the SVG is scaled back to the original size. Transparent pixels stay transparent.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Is this a real vector conversion?', a: 'Yes. The output contains filled paths computed from the pixels. It does not embed the bitmap. Edges are approximated, so fine detail and gradients are simplified.' },
+      { q: 'Why is my SVG huge?', a: 'Photographs and noisy scans contain thousands of tiny regions. Lower the colour count, raise the speck filter, or lower the tracing resolution.' },
+      { q: 'Can it keep the exact colours?', a: 'It uses a palette of up to 32 colours chosen from your image, so colours are close but not identical, especially for gradients.' },
+      ...tiffDecodeFaq,
+    ],
+    related: ['png-to-svg', 'jpg-to-svg', 'tiff-to-png'],
+  }),
+
+  /* ------------------------------ TIFF output ------------------------------ */
+  converter({
+    slug: 'jpg-to-tiff', name: 'JPG to TIFF Converter', in: 'raster', out: 'tiff', ext: 'tiff', primary: 'jpe?g', primaryLabel: 'JPG',
+    metaTitle: 'JPG to TIFF Converter - Free Online | EasyWorkTools.online',
+    metaDescription: 'Convert JPG to TIFF online for free. Writes a standard 8-bit TIFF, uncompressed or LZW, that opens in Photoshop, GIMP, Preview and print software. Nothing is uploaded.',
+    keywords: ['jpg to tiff', 'jpeg to tiff converter', 'convert jpg to tif online', 'jpg to tiff free'],
+    lede: 'Convert a JPG to a TIFF file for print, archiving or software that requires TIFF. The TIFF is written in this tab. Nothing is uploaded.',
+    dropSub: 'JPG, PNG, WebP, GIF, BMP accepted', accept: RASTER_ACCEPT, dropAria: 'Upload a JPG image to convert to TIFF', badFile: BAD_RASTER,
+    libs: ['tiff'], sideTitle: 'TIFF output', iconKey: 'fmt-convert',
+    cardDescription: 'Convert JPG images to TIFF online for free, uncompressed or LZW.',
+    tags: ['jpg to tiff', 'jpeg to tif', 'convert jpg tiff', 'tiff maker'],
+    features: ['Standard 8-bit RGB TIFF', 'Uncompressed or LZW compression', 'Opens in Photoshop, GIMP, Preview and print software', 'Runs entirely in your browser'],
+    seoHeading: 'Convert JPG to TIFF for Print and Archiving',
+    seoHtml: [
+      p('Print shops, publishers and some scanners and archives ask for TIFF. This tool writes a standard baseline TIFF from your JPG: 8 bits per channel, RGB, one image. Choose uncompressed for the widest compatibility or LZW to shrink the file without losing anything.'),
+      h3('Important: converting does not add quality'),
+      p('A JPG has already lost some detail. Saving it as TIFF stores those pixels losslessly from now on, but it cannot bring the lost detail back. The TIFF will be much bigger than the JPG.'),
+      table(['Option', 'Compatibility', 'File size'], [['None', 'Opens in everything that reads TIFF', 'Largest (width x height x 3 bytes)'], ['LZW', 'Opens in Photoshop, GIMP, Preview, most print software', 'Often 30-70% smaller for graphics, little saving for photos']]),
+      h3('How to convert JPG to TIFF'),
+      ol(['Drop your JPG into the box above.', 'Choose uncompressed or LZW.', 'Download the .tiff file.']),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Why is the TIFF so much bigger than the JPG?', a: 'JPG throws detail away to be small. TIFF stores every pixel, so an uncompressed TIFF takes width x height x 3 bytes (4 with transparency). LZW helps for flat graphics but not much for photographs.' },
+      { q: 'Does the TIFF keep the JPG’s EXIF data?', a: 'No. Only the pixels are written, plus a software tag. Camera metadata is not copied.' },
+      { q: 'Which TIFF variant is written?', a: 'Baseline little-endian TIFF, 8-bit RGB (or RGBA if the source has transparency), single page, strips of about 64 KB, with either no compression or LZW with the horizontal predictor.' },
+      { q: 'Is my image uploaded?', a: NOUPLOAD },
+    ],
+    related: ['png-to-tiff', 'tiff-to-jpg', 'image-format-converter'],
+  }),
+  converter({
+    slug: 'png-to-tiff', name: 'PNG to TIFF Converter', in: 'raster', out: 'tiff', ext: 'tiff', primary: 'png', primaryLabel: 'PNG',
+    metaTitle: 'PNG to TIFF Converter - Free Online | EasyWorkTools.online',
+    metaDescription: 'Convert PNG to TIFF online for free and keep transparency. Writes an 8-bit RGB or RGBA TIFF, uncompressed or LZW. Runs in your browser, nothing uploaded.',
+    keywords: ['png to tiff', 'png to tif converter', 'convert png to tiff online', 'png to tiff transparent'],
+    lede: 'Convert a PNG to TIFF, keeping its transparency as a real alpha channel. The TIFF is written in this tab. Nothing is uploaded.',
+    dropSub: 'PNG, JPG, WebP, GIF, BMP accepted', accept: RASTER_ACCEPT, dropAria: 'Upload a PNG image to convert to TIFF', badFile: BAD_RASTER,
+    libs: ['tiff'], sideTitle: 'TIFF output', iconKey: 'fmt-convert',
+    cardDescription: 'Convert PNG images to TIFF online for free, with alpha transparency kept.',
+    tags: ['png to tiff', 'png to tif', 'convert png tiff', 'tiff with alpha'],
+    features: ['Alpha channel kept as unassociated alpha', 'Uncompressed or LZW', 'Standard 8-bit TIFF', 'Runs entirely in your browser'],
+    seoHeading: 'Convert PNG to TIFF with Transparency',
+    seoHtml: [
+      p('If a print or layout program wants TIFF but your artwork is a PNG, this converts it without touching the pixels. When the PNG has transparent areas the TIFF gets a proper alpha channel (RGBA), so layouts can still see through it. Fully opaque PNGs become plain RGB TIFFs.'),
+      table(['Source', 'TIFF written'], [['Opaque PNG', '8-bit RGB'], ['PNG with transparency', '8-bit RGBA, unassociated alpha'], ['16-bit PNG', 'Reduced to 8 bits per channel by the browser']]),
+      h3('How to convert PNG to TIFF'),
+      ol(['Drop your PNG into the box above.', 'Choose uncompressed or LZW (LZW is lossless and smaller).', 'Download the .tiff file.']),
+      p('Some older programs ignore the alpha channel of a TIFF and show the transparent area as black or white. If that happens, flatten the PNG onto a colour first.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Is the conversion lossless?', a: 'Yes. Pixel values are written unchanged at 8 bits per channel, with or without LZW.' },
+      { q: 'Will Photoshop open it?', a: 'Yes. The output is a standard baseline TIFF. It was checked against libtiff (the reference TIFF library) for both compression options.' },
+      { q: 'Why is the file large?', a: 'TIFF has no PNG-style deflate here. Uncompressed files are width x height x 4 bytes with alpha. LZW reduces flat artwork a lot, photographs only a little.' },
+      { q: 'Is my image uploaded?', a: NOUPLOAD },
+    ],
+    related: ['jpg-to-tiff', 'tiff-to-png', 'png-to-eps'],
+  }),
+
+  /* ------------------------------ AVIF output ------------------------------ */
+  ...[
+    ['jpg-to-avif', 'JPG to AVIF Converter', 'raster', 'jpe?g', 'JPG', 'JPG, PNG, WebP, GIF, BMP accepted', RASTER_ACCEPT, 'jpg to avif', 'Convert JPG photos to AVIF for much smaller web images.'],
+    ['png-to-avif', 'PNG to AVIF Converter', 'raster', 'png', 'PNG', 'PNG, JPG, WebP, GIF, BMP accepted', RASTER_ACCEPT, 'png to avif', 'Convert PNG images to AVIF and keep transparency.'],
+    ['webp-to-avif', 'WEBP to AVIF Converter', 'raster', 'webp', 'WebP', 'WebP, PNG, JPG, GIF, BMP accepted', RASTER_ACCEPT, 'webp to avif', 'Convert WebP images to the even smaller AVIF format.'],
+    ['heic-to-avif', 'HEIC to AVIF Converter', 'heic', '', '', 'HEIC, HEIF accepted', HEIC_ACCEPT, 'heic to avif', 'Convert iPhone HEIC photos to AVIF.'],
+  ].map(([slug, name, inp, prim, primL, dropSub, accept, kw, cardDesc]) => converter({
+    slug, name, in: inp, out: 'avif', ext: 'avif', primary: prim, primaryLabel: primL,
+    metaTitle: `${name} - Free Online | EasyWorkTools.online`,
+    metaDescription: `${cardDesc} Free ${kw.toUpperCase()} converter that runs in your browser with a quality slider. Nothing is uploaded. Works in Chrome, Edge, Opera and Brave.`,
+    keywords: [kw, kw.replace(' to ', ' to ') + ' converter', `convert ${kw} online`, 'avif converter'],
+    lede: `${cardDesc} The AVIF is created by your browser's own AV1 encoder in this tab. Nothing is uploaded.`,
+    dropSub, accept, dropAria: `Upload an image to convert to AVIF`, badFile: inp === 'heic' ? BAD_HEIC : BAD_RASTER,
+    libs: ['avif'], sideTitle: 'AVIF output', iconKey: 'fmt-convert',
+    cardDescription: `${cardDesc} Free, private, in your browser.`,
+    tags: [kw, `convert ${kw}`, 'avif converter', 'avif encoder'],
+    features: ['Real AV1 / AVIF encoding', 'Quality slider and size limit', 'Transparency kept in an alpha plane', 'Runs entirely in your browser'],
+    seoHeading: `Convert ${name.replace(' Converter', '').replace(' to ', ' to ')} for Smaller Web Images`,
+    seoHtml: [
+      p(`AVIF is a modern image format that usually produces files far smaller than JPG or WebP at the same visible quality, and it supports transparency. Browsers cannot create AVIF through the canvas (they silently fall back to PNG), so this tool uses the browser's AV1 video encoder through the WebCodecs API and wraps the result in a standards-compliant AVIF file.`),
+      h3('Browser support for creating AVIF'),
+      table(['Browser', 'Can create AVIF here?'], [['Chrome, Edge, Opera, Brave (desktop)', 'Yes, tested'], ['Firefox, Safari', 'Only if the browser exposes an AV1 encoder. The tool checks and tells you if it does not.'], ['Opening AVIF files', 'Current versions of every major browser']]),
+      h3('How to convert'),
+      ol(['Drop your image into the box above.', 'Pick a quality. Around 50 to 65 is a good balance for photos.', 'Optionally limit the longest side to reduce memory use and time.', 'Download the AVIF and check the preview.']),
+      p('Very large photos take longer and need more memory. If encoding fails, use the longest-side option to resize first.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Why does it only work in some browsers?', a: 'Creating AVIF needs an AV1 encoder. Chromium-based desktop browsers provide one to web pages. If yours does not, the tool says so instead of producing a fake AVIF.' },
+      { q: 'Is the file really AVIF?', a: 'Yes. It is an ISO/HEIF container holding an AV1 image item (and a second item for transparency when needed). It was checked with an independent AVIF decoder, and the preview is decoded by your browser from the finished file.' },
+      { q: 'What quality should I choose?', a: 'AVIF reaches good quality at lower numbers than JPG. Start around 60 and lower it until you notice artefacts.' },
+      { q: 'Is my image uploaded?', a: NOUPLOAD },
+    ],
+    related: ['image-format-converter', 'free-image-compressor', 'png-to-avif', 'jpg-to-avif'].filter(s => s !== slug).slice(0, 3),
+  })),
+
+  /* ------------------------------ tracing ------------------------------ */
+  ...[
+    ['png-to-svg', 'PNG to SVG Converter', 'png', 'PNG', 'PNG, JPG, WebP, GIF, BMP accepted', 'png to svg', 8],
+    ['jpg-to-svg', 'JPG to SVG Converter', 'jpe?g', 'JPG', 'JPG, PNG, WebP, GIF, BMP accepted', 'jpg to svg', 10],
+  ].map(([slug, name, prim, primL, dropSub, kw, cols]) => converter({
+    slug, name, in: 'raster', out: 'svg', ext: 'svg', primary: prim, primaryLabel: primL, extra: { colors: cols },
+    metaTitle: `${name} - Trace to Vector | EasyWorkTools.online`,
+    metaDescription: `Convert ${primL} to SVG by tracing it into real vector shapes with adjustable colours and smoothing. Best for logos and flat art. Free, in your browser, nothing uploaded.`,
+    keywords: [kw, `${kw} converter`, `convert ${kw} vector`, `${primL.toLowerCase()} vectorizer`],
+    lede: `Trace a ${primL} into scalable SVG shapes. The result is real vector paths, not a picture wrapped in SVG. Works best on logos, icons and flat artwork. Nothing is uploaded.`,
+    dropSub, accept: RASTER_ACCEPT, dropAria: `Upload a ${primL} image to trace into SVG`, badFile: BAD_RASTER,
+    libs: ['trace'], sideTitle: 'SVG output', iconKey: 'fmt-convert',
+    cardDescription: `Trace ${primL} images into real SVG vector shapes online, free and in your browser.`,
+    tags: [kw, `${primL.toLowerCase()} vectorizer`, 'image tracer', 'bitmap to vector'],
+    features: ['Real vector tracing, not an embedded bitmap', 'Colour count, speck removal and smoothing controls', 'Transparent areas stay transparent', 'Copy or download the SVG'],
+    seoHeading: `Turn a ${primL} into Scalable Vector Shapes`,
+    seoHtml: [
+      p(`An SVG describes shapes, so it stays sharp at any size. Converting a ${primL} to SVG means tracing: the image is reduced to a limited palette, the outline of each colour region is found, and every region is written as a filled path. Drop the result into Illustrator, Inkscape, Figma or a web page.`),
+      h3('What traces well'),
+      table(['Source', 'Result'], [['Logos, icons, line art', 'Clean, compact SVG'], ['Signatures and scanned drawings', 'Good with 2 to 4 colours'], ['Flat illustrations', 'Good with 8 to 16 colours'], ['Photographs', 'Large, posterised result - not recommended']]),
+      h3(`How to convert ${primL} to SVG`),
+      ol(['Drop your image into the box above.', 'Set the number of colours: 2 for black and white, 6 to 12 for a logo.', 'Raise the speck filter to remove noise and tune the simplification and smoothing.', 'Download the SVG or copy its code.']),
+      p('Images are traced at up to the resolution you choose (default 1600 px on the long side) and the SVG scales back to the original size. JPG artefacts and anti-aliasing create extra tiny shapes, which the speck filter removes.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Is it a real vector conversion?', a: 'Yes. The SVG contains filled paths computed from the pixels and no embedded bitmap. Edges are approximations, and gradients become flat colour bands.' },
+      { q: 'Why does a photo give a huge file?', a: 'A photograph has thousands of colour regions. Lower the number of colours, increase the speck filter, or use a smaller tracing resolution. Tracing is meant for flat artwork.' },
+      { q: 'Can I edit the result?', a: 'Yes. Each colour is one path (with holes), so you can recolour or delete layers in any vector editor. Layers are stacked, so lower layers sit underneath without gaps.' },
+      { q: 'Is my image uploaded?', a: NOUPLOAD },
+    ],
+    related: ['png-to-svg', 'jpg-to-svg', 'tiff-to-svg', 'svg-optimizer'].filter(s => s !== slug).slice(0, 3),
+  })),
+
+  /* ------------------------------ EPS ------------------------------ */
+  converter({
+    slug: 'png-to-eps', name: 'PNG to EPS Converter', in: 'raster', out: 'eps', ext: 'eps', primary: 'png', primaryLabel: 'PNG',
+    metaTitle: 'PNG to EPS Converter - Free Online | EasyWorkTools.online',
+    metaDescription: 'Convert PNG to EPS online for free. Writes an Encapsulated PostScript file with the image embedded for print and layout software. Not vector. Runs in your browser.',
+    keywords: ['png to eps', 'png to eps converter', 'convert png to eps online', 'image to eps'],
+    lede: 'Wrap a PNG in an Encapsulated PostScript file for print and layout programs that ask for EPS. This embeds your bitmap; it does not create editable vectors. Nothing is uploaded.',
+    dropSub: 'PNG, JPG, WebP, GIF, BMP accepted', accept: RASTER_ACCEPT, dropAria: 'Upload a PNG image to convert to EPS', badFile: BAD_RASTER,
+    libs: ['eps'], sideTitle: 'EPS output', iconKey: 'fmt-convert',
+    cardDescription: 'Convert PNG images to EPS (Encapsulated PostScript) online for free.',
+    tags: ['png to eps', 'image to eps', 'eps converter', 'encapsulated postscript'],
+    features: ['DSC 3.0 EPSF-3.0 file with bounding box', 'PostScript level 2 or 3', 'Print resolution setting', 'Runs entirely in your browser'],
+    seoHeading: 'Convert PNG to EPS for Print and Layout Software',
+    seoHtml: [
+      p('EPS is a PostScript-based format that older print and design workflows still request. This tool writes a valid EPSF-3.0 file with a correct bounding box and your image embedded as RGB image data. It is a raster picture inside an EPS wrapper: you cannot edit it as vector shapes. For real vectors from flat artwork, use PNG to SVG.'),
+      h3('Choosing the options'),
+      table(['Option', 'What it does'], [['Print resolution', 'Sets the physical size: pixels divided by dpi. 300 dpi makes a 3000 px image 10 inches wide.'], ['Level 2', 'Raw ASCII85 data. Opens in the widest range of software and printers. Large files.'], ['Level 3', 'Adds Flate compression. Much smaller. Needs a PostScript 3 interpreter (all modern software).'], ['Background', 'EPS cannot store transparency, so transparent areas are filled with this colour.']]),
+      h3('How to convert PNG to EPS'),
+      ol(['Drop your PNG into the box above.', 'Choose the print resolution and PostScript level.', 'Set a background colour if the PNG has transparency.', 'Download the .eps file.']),
+      p('The file structure and the embedded image data were verified. Browsers cannot display EPS, so the preview shows the pixels that were written. Open the file in your layout software to confirm it places correctly.'),
+    ].join('\n    '),
+    faqs: [
+      { q: 'Is the EPS a vector file?', a: 'No. The picture is embedded as pixels. It scales like a bitmap. Use PNG to SVG when the artwork is flat and you need shapes.' },
+      { q: 'Does EPS keep transparency?', a: 'No. EPS has no alpha channel, so transparent areas are flattened onto the background colour you choose.' },
+      { q: 'Why is the file so big?', a: 'Level 2 stores uncompressed pixel data as ASCII85 text, about 1.25 bytes of text per byte of pixels. Choose Level 3 for compression.' },
+      { q: 'Will it open in Illustrator, InDesign or Inkscape?', a: 'It is a standard EPSF-3.0 file with a bounding box, so it should place in them. Inkscape and Ghostscript-based tools need Ghostscript installed to display EPS. This was not rendered by a PostScript interpreter in testing, only structurally verified, so check it in your own software.' },
+      { q: 'Is my image uploaded?', a: NOUPLOAD },
+    ],
+    related: ['png-to-svg', 'png-to-tiff', 'image-format-converter'],
+  }),
+];
