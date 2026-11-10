@@ -195,6 +195,7 @@ input[type=file]{display:none}
 
 
 
+
 <!-- EASYWORKTOOLS_AD_HEAD_START -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3298442828407277"
      crossorigin="anonymous"></script>
@@ -237,6 +238,17 @@ input[type=file]{display:none}
 
       <div id="mergeOptions" style="display:none">
         <div class="merge-list" id="mergeList"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:10px 0 6px">
+          <label style="font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px">Mode:
+            <select id="mergeMode" style="padding:7px 10px;border:1px solid var(--border);border-radius:9px;background:#fff;font-size:13px">
+              <option value="seq" selected>Sequential (File 1, File 2…)</option>
+              <option value="mix">Alternate &amp; Mix (Interleave Pages)</option>
+            </select>
+          </label>
+          <label id="reverseEvenWrap" style="display:none;align-items:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer">
+            <input type="checkbox" id="reverseEvenCheck"> Reverse even files (duplex scan)
+          </label>
+        </div>
         <div class="tool-actions">
           <button class="btn-primary" type="button" id="mergeBtn">Merge &amp; download</button>
           <button class="btn-ghost" type="button" id="reverseBtn">Reverse order</button>
@@ -322,7 +334,8 @@ document.addEventListener("DOMContentLoaded", function(){
   function $(id){return document.getElementById(id)}
   var dropzone=$("dropzone"),fileInput=$("fileInput"),chipList=$("fileChips");
   var statusMsg=$("statusMsg"),options=$("mergeOptions"),list=$("mergeList");
-  var mergeBtn=$("mergeBtn"),reverseBtn=$("reverseBtn"),resetBtn=$("resetBtn");
+  var mergeBtn=$("mergeBtn"),reverseBtn=$("reverseBtn"),resetBtn=$("resetBtn"),mergeMode=$("mergeMode"),reverseEvenWrap=$("reverseEvenWrap"),reverseEvenCheck=$("reverseEvenCheck");
+  mergeMode.addEventListener("change",function(){reverseEvenWrap.style.display=mergeMode.value==="mix"?"inline-flex":"none"});
 
   var items=[];   // { file, name, size, pages, doc }
   var busy=false;
@@ -444,13 +457,33 @@ document.addEventListener("DOMContentLoaded", function(){
     showStatus("Merging "+items.length+" PDFs…","info");
     PDFLib.PDFDocument.create().then(function(out){
       var chain=Promise.resolve();
-      items.forEach(function(it){
-        chain=chain.then(function(){
-          return out.copyPages(it.doc,it.doc.getPageIndices()).then(function(copied){
-            copied.forEach(function(p){out.addPage(p)});
+      if(mergeMode&&mergeMode.value==="mix"){
+        var lists=items.map(function(it,idx){
+          var arr=it.doc.getPageIndices().slice();
+          if(reverseEvenCheck&&reverseEvenCheck.checked&&idx%2===1)arr.reverse();
+          return {doc:it.doc,indices:arr};
+        });
+        var maxLen=Math.max.apply(null,lists.map(function(l){return l.indices.length}));
+        for(var round=0;round<maxLen;round++){
+          (function(r){
+            lists.forEach(function(l){
+              if(r<l.indices.length){
+                chain=chain.then(function(){
+                  return out.copyPages(l.doc,[l.indices[r]]).then(function(copied){out.addPage(copied[0])});
+                });
+              }
+            });
+          })(round);
+        }
+      }else{
+        items.forEach(function(it){
+          chain=chain.then(function(){
+            return out.copyPages(it.doc,it.doc.getPageIndices()).then(function(copied){
+              copied.forEach(function(p){out.addPage(p)});
+            });
           });
         });
-      });
+      }
       return chain.then(function(){return out.save()});
     }).then(function(bytes){
       downloadBytes(bytes,"merged.pdf");

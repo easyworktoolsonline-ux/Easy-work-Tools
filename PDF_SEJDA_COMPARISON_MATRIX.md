@@ -52,3 +52,23 @@ These Sejda features require server-side engines, cryptographic/licensed SDKs, o
 3. **OCR PDF (Searchable Scanned PDF):** Requires `tesseract.js` + 15–40MB per-language `traineddata` downloads or server-side Tesseract/Cloud Vision.
 4. **Word to PDF / Excel to PDF / Webpage URL to PDF:** Requires LibreOffice or headless Chromium on a server (blocked by browser CORS & layout engine limits).
 5. **True Content-Stream Redaction & Existing Embedded-Font Text Editing:** Modifying arbitrary existing PDF glyph streams without reflow corruption requires server-side PDFBox/MuPDF engines.
+
+## 3. Official Sejda Open-Source SDK (`torakiki/sejda`) Task & License Mapping
+- **Repository:** `https://github.com/torakiki/sejda` (Modules inspected: `sejda-model`, `sejda-core`, `sejda-sambox`, `sejda-image-writers`, `sejda-conversion`, `sejda-tests`, `sejda-distribution`).
+- **License Compliance:** `torakiki/sejda` v2+ is licensed under **AGPL-3.0**; commercial PRO features are separately licensed. Zero Sejda Java code was copied into EasyWorkTools. All EasyWorkTools implementations are clean, browser-native JavaScript written against MIT-compatible libraries (`pdf-lib`, `pdf.js`, `jszip`, `heic2any`).
+
+| Sejda SDK Task / Parameter (`sejda-sambox` / `sejda-model`) | License / Tier | EasyWorkTools Tool & Browser Implementation | Status |
+| --- | --- | --- | --- |
+| `MergeTask` (`MergeParameters`) | AGPL-3.0 Ref | `/tools/pdf-merge/` (`pdf-lib` `copyPages`) | Completed |
+| `AlternateMixTask` (`AlternateMixMultipleInputParameters`) | AGPL-3.0 Ref | `/tools/pdf-merge/` (Alternate & Mix + Reverse Even Files) | Completed |
+| `SplitByPageNumbersTask` / `SimpleSplitParameters` / `ExtractPagesTask` | AGPL-3.0 Ref | `/tools/pdf-split/` (`pdf-lib` + `pdf.js` + `jszip`) | Completed |
+| `SplitByEveryXPagesParameters` / `SplitBySizeTask` | AGPL-3.0 Ref | `/tools/pdf-split/` (Every N pages + Max Size MB ZIP) | Completed |
+| `RotateTask` (`RotateParameters`) | AGPL-3.0 Ref | `/tools/pdf-rotate/` (`pdf-lib` `setRotation`) | Completed |
+| `SetMetadataTask` (`SetMetadataParameters`) | AGPL-3.0 Ref | `/tools/pdf-metadata-editor/` (`pdf-lib` metadata API) | Completed |
+| `PdfToSingleTiffParameters` / `PdfToMultipleTiffParameters` (`sejda-image-writers`) | AGPL-3.0 Ref | `/tools/pdf-to-tiff/` (`pdf.js` + TIFF 6.0 LZW/PackBits + `jszip`) | Completed |
+| `PdfToJpegParameters` / `PdfToPngParameters` | AGPL-3.0 Ref | `/tools/pdf-to-jpg/`, `/tools/pdf-to-png/` (`pdf.js` + `jszip`) | Completed |
+| `SplitByOutlineLevelTask` / `ExtractByOutlineTask` | AGPL-3.0 Ref | Partial via `/tools/pdf-split/` range/selection (bookmark-tree split requires Java/SAMBox outline parser) | Documented |
+| `UnpackTask` (Embedded Attachments) | AGPL-3.0 Ref | Embedded image extraction in `/tools/pdf-extract-images/`; arbitrary file-attachment unpacking not in `pdf-lib` public API | Documented |
+| `SetPagesLabelTask` / `ViewerPreferencesTask` | AGPL-3.0 Ref | Low-level catalog manipulation; page-number stamping in `/tools/pdf-page-numbers/` | Documented |
+| `Compress`, `Grayscale`, `Crop`, `Watermark`, `Bates`, `Flatten`, `Booklet/N-Up`, `Overlay`, `Repair` | Sejda Commercial PRO (Not in OSS `torakiki/sejda`) | Independently implemented in browser JS in `pdf-compressor`, `pdf-crop`, `pdf-watermark`, `pdf-page-numbers`, `pdf-flatten`, `pdf-booklet`, `pdf-overlay`, `pdf-repair` | Completed |
+| `Encrypt/Decrypt`, `OCR`, `Word/Excel/URL to PDF`, `True Redaction` | Sejda Commercial PRO / Server Engine | Requires server-side Java/LibreOffice/Tesseract/qpdf; not faked on static Cloudflare Pages | Blocked (Technical) |
