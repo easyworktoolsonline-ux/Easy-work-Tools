@@ -1,0 +1,13 @@
+{
+  "title": "BMI & Daily Calorie (BMR/TDEE) Calculator",
+  "description": "Free BMI & BMR Calculator. Calculate Body Mass Index, healthy weight range, and daily calorie needs (Mifflin-St Jeor) in Metric or Imperial.",
+  "tags": [
+    "bmi calculator",
+    "bmr calculator",
+    "calorie calculator",
+    "tdee"
+  ],
+  "url": "tools/bmi-calculator/",
+  "iconKey": "percentage",
+  "category": "Calculator Tools"
+}

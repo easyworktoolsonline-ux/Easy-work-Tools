@@ -18,7 +18,7 @@
     "cookies": "See https://easyworktools.online/cookies"
   },
   "counts": {
-    "tools": 190,
+    "tools": 198,
     "articles": 121
   },
   "indexes": {
@@ -1251,6 +1251,27 @@
       ]
     },
     {
+      "name": "BMI & Daily Calorie (BMR/TDEE) Calculator",
+      "url": "https://easyworktools.online/tools/bmi-calculator/",
+      "description": "Free BMI & BMR Calculator. Calculate Body Mass Index, healthy weight range, and daily calorie needs (Mifflin-St Jeor) in Metric or Imperial.",
+      "category": null,
+      "keywords": [
+        "bmi calculator",
+        "bmr calculator",
+        "calorie calculator",
+        "tdee"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Canonical & Meta Robots Checker",
       "url": "https://easyworktools.online/tools/canonical-robots-checker/",
       "description": "Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.",
@@ -1337,6 +1358,26 @@
       ]
     },
     {
+      "name": "Compound Interest Calculator",
+      "url": "https://easyworktools.online/tools/compound-interest-calculator/",
+      "description": "Free Compound Interest Calculator with monthly contributions, daily/monthly/quarterly/annual compounding, and annual growth breakdown.",
+      "category": null,
+      "keywords": [
+        "compound interest",
+        "investment calculator",
+        "savings growth"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Cron Expression Parser",
       "url": "https://easyworktools.online/tools/cron-expression-parser/",
       "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
@@ -1346,6 +1387,27 @@
         "cron schedule",
         "crontab explainer",
         "next run times"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Date & Business Days Calculator",
+      "url": "https://easyworktools.online/tools/date-duration-calculator/",
+      "description": "Free Date Duration Calculator. Count exact calendar days, weeks, months, and business days between two dates in your browser.",
+      "category": null,
+      "keywords": [
+        "date duration",
+        "days between dates",
+        "business days",
+        "date calculator"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1891,6 +1953,27 @@
       ]
     },
     {
+      "name": "Image Filters & Adjustments",
+      "url": "https://easyworktools.online/tools/image-filters/",
+      "description": "Free online Image Filters tool. Apply brightness, contrast, saturation, grayscale, sepia, and blur to photos in your browser.",
+      "category": null,
+      "keywords": [
+        "image filters",
+        "photo adjustments",
+        "grayscale",
+        "sepia"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Image Format Converter",
       "url": "https://easyworktools.online/tools/image-format-converter/",
       "description": "Convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP online for free.",
@@ -2295,6 +2378,27 @@
       ]
     },
     {
+      "name": "Loan & EMI Calculator",
+      "url": "https://easyworktools.online/tools/loan-emi-calculator/",
+      "description": "Free online Loan & EMI Calculator. Compute monthly payments, total interest, and principal breakdown with an exportable amortization table.",
+      "category": null,
+      "keywords": [
+        "loan calculator",
+        "emi calculator",
+        "amortization schedule",
+        "mortgage calculator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Lorem Ipsum Generator",
       "url": "https://easyworktools.online/tools/lorem-ipsum-generator/",
       "description": "Generate Lorem Ipsum placeholder text online for free — by paragraphs, sentences or words, with an optional classic opening line and HTML output.",
@@ -2356,6 +2460,47 @@
       "structuredData": [
         "BreadcrumbList",
         "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Markdown Live Preview & HTML Exporter",
+      "url": "https://easyworktools.online/tools/markdown-previewer/",
+      "description": "Free online Markdown Live Previewer. Write Markdown and inspect live rendered HTML with headings, lists, tables, code blocks, and export.",
+      "category": null,
+      "keywords": [
+        "markdown preview",
+        "markdown editor",
+        "readme preview",
+        "markdown to html"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Meme Generator",
+      "url": "https://easyworktools.online/tools/meme-generator/",
+      "description": "Free online Meme Generator. Add top and bottom outlined meme text to any JPG, PNG, or WebP image and download watermark-free PNG.",
+      "category": null,
+      "keywords": [
+        "meme generator",
+        "meme maker",
+        "add text to image"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
         "FAQPage"
       ]
     },
@@ -4072,6 +4217,27 @@
       "structuredData": [
         "BreadcrumbList",
         "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "YAML to JSON & JSON to YAML Converter",
+      "url": "https://easyworktools.online/tools/yaml-json-converter/",
+      "description": "Free online YAML to JSON and JSON to YAML converter. Validate syntax, convert indentation-based YAML to JSON, and download cleanly.",
+      "category": null,
+      "keywords": [
+        "yaml to json",
+        "json to yaml",
+        "yaml validator",
+        "devops"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "WebApplication",
         "FAQPage"
       ]
     },

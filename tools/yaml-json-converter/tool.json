@@ -1,0 +1,13 @@
+{
+  "title": "YAML to JSON & JSON to YAML Converter",
+  "description": "Free online YAML to JSON and JSON to YAML converter. Validate syntax, convert indentation-based YAML to JSON, and download cleanly.",
+  "tags": [
+    "yaml to json",
+    "json to yaml",
+    "yaml validator",
+    "devops"
+  ],
+  "url": "tools/yaml-json-converter/",
+  "iconKey": "json",
+  "category": "Developer Tools"
+}

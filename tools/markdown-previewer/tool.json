@@ -1,0 +1,13 @@
+{
+  "title": "Markdown Live Preview & HTML Exporter",
+  "description": "Free online Markdown Live Previewer. Write Markdown and inspect live rendered HTML with headings, lists, tables, code blocks, and export.",
+  "tags": [
+    "markdown preview",
+    "markdown editor",
+    "readme preview",
+    "markdown to html"
+  ],
+  "url": "tools/markdown-previewer/",
+  "iconKey": "markdown",
+  "category": "Developer Tools"
+}

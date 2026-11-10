@@ -755,6 +755,19 @@
     "category": "Developer Tools"
   },
   {
+    "title": "BMI & Daily Calorie (BMR/TDEE) Calculator",
+    "description": "Free BMI & BMR Calculator. Calculate Body Mass Index, healthy weight range, and daily calorie needs (Mifflin-St Jeor) in Metric or Imperial.",
+    "url": "tools/bmi-calculator/",
+    "iconKey": "percentage",
+    "tags": [
+      "bmi calculator",
+      "bmr calculator",
+      "calorie calculator",
+      "tdee"
+    ],
+    "category": "Calculator Tools"
+  },
+  {
     "title": "Canonical & Meta Robots Checker",
     "description": "Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.",
     "url": "tools/canonical-robots-checker/",
@@ -809,6 +822,18 @@
     "category": "Utility Tools"
   },
   {
+    "title": "Compound Interest Calculator",
+    "description": "Free Compound Interest Calculator with monthly contributions, daily/monthly/quarterly/annual compounding, and annual growth breakdown.",
+    "url": "tools/compound-interest-calculator/",
+    "iconKey": "percentage",
+    "tags": [
+      "compound interest",
+      "investment calculator",
+      "savings growth"
+    ],
+    "category": "Calculator Tools"
+  },
+  {
     "title": "Cron Expression Parser",
     "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
     "url": "tools/cron-expression-parser/",
@@ -820,6 +845,19 @@
       "next run times"
     ],
     "category": "Developer Tools"
+  },
+  {
+    "title": "Date & Business Days Calculator",
+    "description": "Free Date Duration Calculator. Count exact calendar days, weeks, months, and business days between two dates in your browser.",
+    "url": "tools/date-duration-calculator/",
+    "iconKey": "timestamp",
+    "tags": [
+      "date duration",
+      "days between dates",
+      "business days",
+      "date calculator"
+    ],
+    "category": "Calculator Tools"
   },
   {
     "title": "Easy Image Resizer",
@@ -1155,6 +1193,19 @@
     "category": "Image Tools"
   },
   {
+    "title": "Image Filters & Adjustments",
+    "description": "Free online Image Filters tool. Apply brightness, contrast, saturation, grayscale, sepia, and blur to photos in your browser.",
+    "url": "tools/image-filters/",
+    "iconKey": "img-editor",
+    "tags": [
+      "image filters",
+      "photo adjustments",
+      "grayscale",
+      "sepia"
+    ],
+    "category": "Image Tools"
+  },
+  {
     "title": "Image Format Converter",
     "description": "Convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP online for free.",
     "url": "tools/image-format-converter/",
@@ -1407,6 +1458,19 @@
     "category": "Text Tools"
   },
   {
+    "title": "Loan & EMI Calculator",
+    "description": "Free online Loan & EMI Calculator. Compute monthly payments, total interest, and principal breakdown with an exportable amortization table.",
+    "url": "tools/loan-emi-calculator/",
+    "iconKey": "percentage",
+    "tags": [
+      "loan calculator",
+      "emi calculator",
+      "amortization schedule",
+      "mortgage calculator"
+    ],
+    "category": "Calculator Tools"
+  },
+  {
     "title": "Lorem Ipsum Generator",
     "description": "Generate Lorem Ipsum placeholder text online for free — by paragraphs, sentences or words, with an optional classic opening line and HTML output.",
     "url": "tools/lorem-ipsum-generator/",
@@ -1446,6 +1510,31 @@
       "strip html tags online"
     ],
     "category": "Developer Tools"
+  },
+  {
+    "title": "Markdown Live Preview & HTML Exporter",
+    "description": "Free online Markdown Live Previewer. Write Markdown and inspect live rendered HTML with headings, lists, tables, code blocks, and export.",
+    "url": "tools/markdown-previewer/",
+    "iconKey": "markdown",
+    "tags": [
+      "markdown preview",
+      "markdown editor",
+      "readme preview",
+      "markdown to html"
+    ],
+    "category": "Developer Tools"
+  },
+  {
+    "title": "Meme Generator",
+    "description": "Free online Meme Generator. Add top and bottom outlined meme text to any JPG, PNG, or WebP image and download watermark-free PNG.",
+    "url": "tools/meme-generator/",
+    "iconKey": "img-editor",
+    "tags": [
+      "meme generator",
+      "meme maker",
+      "add text to image"
+    ],
+    "category": "Image Tools"
   },
   {
     "title": "Meta Tag Generator",
@@ -2530,6 +2619,19 @@
       "sitemap checker"
     ],
     "category": "SEO Tools"
+  },
+  {
+    "title": "YAML to JSON & JSON to YAML Converter",
+    "description": "Free online YAML to JSON and JSON to YAML converter. Validate syntax, convert indentation-based YAML to JSON, and download cleanly.",
+    "url": "tools/yaml-json-converter/",
+    "iconKey": "json",
+    "tags": [
+      "yaml to json",
+      "json to yaml",
+      "yaml validator",
+      "devops"
+    ],
+    "category": "Developer Tools"
   },
   {
     "title": "YouTube Tag Generator",

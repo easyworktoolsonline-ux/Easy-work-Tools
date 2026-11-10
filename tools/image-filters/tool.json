@@ -1,0 +1,13 @@
+{
+  "title": "Image Filters & Adjustments",
+  "description": "Free online Image Filters tool. Apply brightness, contrast, saturation, grayscale, sepia, and blur to photos in your browser.",
+  "tags": [
+    "image filters",
+    "photo adjustments",
+    "grayscale",
+    "sepia"
+  ],
+  "url": "tools/image-filters/",
+  "iconKey": "img-editor",
+  "category": "Image Tools"
+}

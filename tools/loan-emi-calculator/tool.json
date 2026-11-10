@@ -1,0 +1,13 @@
+{
+  "title": "Loan & EMI Calculator",
+  "description": "Free online Loan & EMI Calculator. Compute monthly payments, total interest, and principal breakdown with an exportable amortization table.",
+  "tags": [
+    "loan calculator",
+    "emi calculator",
+    "amortization schedule",
+    "mortgage calculator"
+  ],
+  "url": "tools/loan-emi-calculator/",
+  "iconKey": "percentage",
+  "category": "Calculator Tools"
+}

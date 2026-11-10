@@ -1,0 +1,12 @@
+{
+  "title": "Compound Interest Calculator",
+  "description": "Free Compound Interest Calculator with monthly contributions, daily/monthly/quarterly/annual compounding, and annual growth breakdown.",
+  "tags": [
+    "compound interest",
+    "investment calculator",
+    "savings growth"
+  ],
+  "url": "tools/compound-interest-calculator/",
+  "iconKey": "percentage",
+  "category": "Calculator Tools"
+}

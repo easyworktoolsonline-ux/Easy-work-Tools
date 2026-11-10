@@ -1,0 +1,12 @@
+{
+  "title": "Meme Generator",
+  "description": "Free online Meme Generator. Add top and bottom outlined meme text to any JPG, PNG, or WebP image and download watermark-free PNG.",
+  "tags": [
+    "meme generator",
+    "meme maker",
+    "add text to image"
+  ],
+  "url": "tools/meme-generator/",
+  "iconKey": "img-editor",
+  "category": "Image Tools"
+}

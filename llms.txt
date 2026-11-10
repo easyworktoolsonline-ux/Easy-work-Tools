@@ -4,7 +4,7 @@
 > developer utilities that mostly run in the visitor's browser, with a short and
 > specific list of what does leave it.
 
-EasyWorkTools.online is a static site of 190 free online tools and 121
+EasyWorkTools.online is a static site of 198 free online tools and 121
 how-to guides. Most tools run client-side: the text, images and files you use are
 not uploaded, and there is no account or paywall. A small number of features do
 contact a server - the Thumbnail Downloader sends the link you paste to this site
@@ -16,7 +16,7 @@ See https://easyworktools.online/security for the exact details.
 
 ## Index
 
-- [Tools](#tools) - 190 utilities, listed by category
+- [Tools](#tools) - 198 utilities, listed by category
 - [Blog](#blog) - 121 how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
@@ -28,13 +28,13 @@ See https://easyworktools.online/security for the exact details.
 Every tool is also reachable from a per-category page that lists the whole set:
 
 - [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarize, and generate articles, emails, and social copy with free AI writing tools that run right in your browser. (54 tools)
-- [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (44 tools)
+- [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (46 tools)
 - [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress, reorder, and watermark PDF files free in your browser—no account, no uploads, and nothing to install. (37 tools)
-- [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (17 tools)
+- [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (19 tools)
 - [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (14 tools)
 - [Text Tools](https://easyworktools.online/categories/text/) - Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics. (12 tools)
 - [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter. (1 tool)
-- [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser. (2 tools)
+- [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser. (6 tools)
 - [Video & Audio Tools](https://easyworktools.online/categories/video-audio/) - Compress, trim, and extract frames from videos or convert and edit audio files privately in your browser—no uploads required. (5 tools)
 - [Utility Tools](https://easyworktools.online/categories/utility/) - Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design. (4 tools)
 
@@ -114,7 +114,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [Text Sorter & Line Counter](https://easyworktools.online/tools/text-sorter-line-counter/) - Sort lines of text alphabetically, numerically or by length online for free, with a live line count. Ascending or descending order, case-insensitive option included.
 - [Word & Character Counter](https://easyworktools.online/tools/word-character-counter/) - Count words, characters, sentences, paragraphs, reading time, speaking time and unique words online for free, plus quick checks against common character limits.
 
-### Image (44)
+### Image (46)
 
 - [Chart Maker](https://easyworktools.online/tools/chart-maker/) - Make bar, line, area, pie and doughnut charts from pasted or CSV data and download them as PNG, free in your browser.
 - [Easy Image Resizer](https://easyworktools.online/tools/easy-image-resizer/) - Resize and edit images online for free in your browser.
@@ -134,6 +134,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [Image Crop & Rotate](https://easyworktools.online/tools/image-crop-rotate/) - Crop to any aspect ratio, rotate and flip images online for free in your browser.
 - [Image Dimensions & Aspect Ratio](https://easyworktools.online/tools/image-dimensions-checker/) - Check image width, height, megapixels and aspect ratio, or calculate a missing dimension online for free.
 - [Image Editor](https://easyworktools.online/tools/image-editor/) - Adjust brightness, contrast, saturation and apply filters like grayscale, blur and pixelate online for free.
+- [Image Filters & Adjustments](https://easyworktools.online/tools/image-filters/) - Free online Image Filters tool. Apply brightness, contrast, saturation, grayscale, sepia, and blur to photos in your browser.
 - [Image Format Converter](https://easyworktools.online/tools/image-format-converter/) - Convert JPG, PNG, WebP, GIF, BMP and SVG images to JPG, PNG or WebP online for free.
 - [Image Hash & File Signature Checker](https://easyworktools.online/tools/image-hash-checker/) - Generate SHA-256, SHA-1 and MD5 hashes and verify a file's real format from its signature, online for free.
 - [Image Merge & Stitch](https://easyworktools.online/tools/image-merge-stitch/) - Merge or stitch multiple images edge to edge, horizontally or vertically, online for free.
@@ -147,6 +148,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [JPG to SVG Converter](https://easyworktools.online/tools/jpg-to-svg/) - Trace JPG images into real SVG vector shapes online, free and in your browser.
 - [JPG to TIFF Converter](https://easyworktools.online/tools/jpg-to-tiff/) - Convert JPG images to TIFF online for free, uncompressed or LZW.
 - [Make Background Transparent](https://easyworktools.online/tools/make-background-transparent/) - Click a colour to make it transparent and save a PNG, free in your browser.
+- [Meme Generator](https://easyworktools.online/tools/meme-generator/) - Free online Meme Generator. Add top and bottom outlined meme text to any JPG, PNG, or WebP image and download watermark-free PNG.
 - [PNG to AVIF Converter](https://easyworktools.online/tools/png-to-avif/) - Convert PNG images to AVIF and keep transparency. Free, private, in your browser.
 - [PNG to EPS Converter](https://easyworktools.online/tools/png-to-eps/) - Convert PNG images to EPS (Encapsulated PostScript) online for free.
 - [PNG to GIF Converter](https://easyworktools.online/tools/png-to-gif/) - Convert PNG images to GIF online for free, keeping transparency, or build an animated GIF.
@@ -201,7 +203,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [Summarize PDF](https://easyworktools.online/tools/pdf-summarize/) - Summarize a PDF in your browser - the tool scores every sentence, keeps the most important ones and gives you a short summary to copy or download.
 - [WebP to PDF](https://easyworktools.online/tools/webp-to-pdf/) - Convert WebP images into one PDF, one picture per page. Each WebP is decoded in your browser and placed on its own page, free and private
 
-### Developer (17)
+### Developer (19)
 
 - [Base64 Encoder & Decoder](https://easyworktools.online/tools/base64-encoder-decoder/) - Encode or decode Base64 text and files online for free. Convert text to Base64, decode Base64 back to text, or convert a file to a Base64 data URI.
 - [Cron Expression Parser](https://easyworktools.online/tools/cron-expression-parser/) - Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.
@@ -213,6 +215,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [JSON Formatter](https://easyworktools.online/tools/json-formatter/) - Format, validate and minify JSON online for free in your browser.
 - [JWT Decoder](https://easyworktools.online/tools/jwt-decoder/) - Decode a JSON Web Token (JWT) online for free. View the header and payload as readable JSON, with expiry and issued-at claims shown as dates.
 - [Markdown ↔ HTML Converter](https://easyworktools.online/tools/markdown-html-converter/) - Convert Markdown to HTML, Markdown to plain text, or HTML to plain text online for free, with a live safe preview and one-click copy of the result.
+- [Markdown Live Preview & HTML Exporter](https://easyworktools.online/tools/markdown-previewer/) - Free online Markdown Live Previewer. Write Markdown and inspect live rendered HTML with headings, lists, tables, code blocks, and export.
 - [Regex Tester](https://easyworktools.online/tools/regex-tester/) - Test regular expressions online for free. Highlight matches in your text live, see capture groups, and get flag options for global, case-insensitive and multiline matching.
 - [SQL Formatter & Beautifier](https://easyworktools.online/tools/sql-formatter/) - Format and beautify SQL queries online free. Supports SELECT, JOIN, WHERE, GROUP BY, subqueries, keyword uppercasing, and SQL minification.
 - [Unix Timestamp Converter](https://easyworktools.online/tools/unix-timestamp-converter/) - Convert Unix timestamps to human-readable dates and back online for free. Supports seconds and milliseconds, your local timezone and UTC, plus a live current timestamp.
@@ -220,6 +223,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [URL Parser](https://easyworktools.online/tools/url-parser/) - Parse any URL online for free into its protocol, host, port, path, query parameters and hash. Query string parameters are listed individually for easy inspection.
 - [UUID Generator](https://easyworktools.online/tools/uuid-generator/) - Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.
 - [XML Formatter & Validator](https://easyworktools.online/tools/xml-formatter/) - Format, beautify, minify, and validate XML online free. Convert XML to JSON cleanly in your browser with customizable indentation.
+- [YAML to JSON & JSON to YAML Converter](https://easyworktools.online/tools/yaml-json-converter/) - Free online YAML to JSON and JSON to YAML converter. Validate syntax, convert indentation-based YAML to JSON, and download cleanly.
 
 ### SEO (14)
 
@@ -242,9 +246,13 @@ Browse all tools: https://easyworktools.online/tools/
 
 - [Unit Converter](https://easyworktools.online/tools/unit-converter/) - Convert length, weight, temperature, volume, area and speed online for free.
 
-### Calculator (2)
+### Calculator (6)
 
 - [Age Calculator](https://easyworktools.online/tools/age-calculator/) - Calculate exact age in years, months and days online for free.
+- [BMI & Daily Calorie (BMR/TDEE) Calculator](https://easyworktools.online/tools/bmi-calculator/) - Free BMI & BMR Calculator. Calculate Body Mass Index, healthy weight range, and daily calorie needs (Mifflin-St Jeor) in Metric or Imperial.
+- [Compound Interest Calculator](https://easyworktools.online/tools/compound-interest-calculator/) - Free Compound Interest Calculator with monthly contributions, daily/monthly/quarterly/annual compounding, and annual growth breakdown.
+- [Date & Business Days Calculator](https://easyworktools.online/tools/date-duration-calculator/) - Free Date Duration Calculator. Count exact calendar days, weeks, months, and business days between two dates in your browser.
+- [Loan & EMI Calculator](https://easyworktools.online/tools/loan-emi-calculator/) - Free online Loan & EMI Calculator. Compute monthly payments, total interest, and principal breakdown with an exportable amortization table.
 - [Percentage Calculator](https://easyworktools.online/tools/percentage-calculator/) - Calculate percentages, percentage increase/decrease and ratios online for free.
 
 ### Utility (4)

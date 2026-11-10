@@ -124,7 +124,7 @@ export const CATEGORIES = [
           '/tools/image-watermark/', '/tools/image-collage-maker/',
           '/tools/image-merge-stitch/',
           '/tools/remove-background-from-image/', '/tools/make-background-transparent/',
-          '/tools/chart-maker/'
+          '/tools/chart-maker/', '/tools/image-filters/'
         ]
       },
       {
@@ -139,7 +139,7 @@ export const CATEGORIES = [
       {
         slug: 'icons-thumbnails', label: 'Icons & Thumbnails', tools: [
           '/tools/favicon-generator/', '/tools/easy-thumbnail-downloader/',
-          '/tools/profile-photo-maker/', '/tools/font-awesome-to-png/'
+          '/tools/profile-photo-maker/', '/tools/font-awesome-to-png/', '/tools/meme-generator/'
         ]
       }
     ]
@@ -195,7 +195,7 @@ export const CATEGORIES = [
       {
         slug: 'format-code', label: 'Format & Minify', tools: [
           '/tools/json-formatter/', '/tools/html-css-js-minifier/',
-          '/tools/json-csv-converter/', '/tools/markdown-html-converter/', '/tools/xml-formatter/', '/tools/sql-formatter/'
+          '/tools/json-csv-converter/', '/tools/markdown-html-converter/', '/tools/xml-formatter/', '/tools/sql-formatter/', '/tools/yaml-json-converter/', '/tools/markdown-previewer/'
         ]
       },
       {
