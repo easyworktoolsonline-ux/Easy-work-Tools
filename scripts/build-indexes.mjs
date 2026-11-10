@@ -16,15 +16,15 @@ import { featuredToolIcon } from './featured-tool-icons.mjs';
    shell so each of the nine pages gets unique, keyword-accurate text instead of
    nine copies of one sentence. */
 const CATEGORY_INTRO = {
-  'ai-write': 'Write, rewrite, summarise and generate content with free AI writing tools that run in your browser.',
+  'ai-write': 'Write, rewrite, summarize, and generate articles, emails, and social copy with free AI writing tools that run right in your browser.',
   'image': 'Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device.',
-  'pdf': 'Convert, merge, split, compress and watermark PDF files for free, with no account and nothing to install.',
+  'pdf': 'Convert, merge, split, compress, reorder, and watermark PDF files free in your browser—no account, no uploads, and nothing to install.',
   'developer': 'Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs.',
   'seo': 'Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis.',
   'text': 'Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics.',
-  'converter': 'Convert between units and everyday measurements using a single free online converter.',
-  'calculator': 'Quick, accurate calculators for everyday arithmetic, percentages and dates.',
-  'utility': 'Small everyday utilities for generating secure passwords and converting colours.'
+  'converter': 'Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter.',
+  'calculator': 'Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser.',
+  'utility': 'Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design.'
 };
 
 const root = process.cwd();
@@ -348,6 +348,46 @@ function addHeaderActions(html) {
   return html;
 }
 
+
+function injectBreadcrumbSchema(html, relFile) {
+  const norm = relFile.replace(/\\/g, '/');
+  if (norm === 'index.html' || norm === '404.html' || norm.startsWith('categories/')) return html;
+  if (/"@type"\s*:\s*"BreadcrumbList"/i.test(html)) return html;
+
+  const h1Match = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
+  const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
+  const rawName = (h1Match ? h1Match[1] : (titleMatch ? titleMatch[1].split('|')[0] : norm))
+    .replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+  const pageUrl = SITE_ORIGIN + (norm.endsWith('index.html') ? norm.slice(0, -'index.html'.length) : norm);
+
+  const items = [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_ORIGIN }];
+  if (norm === 'tools/index.html') {
+    items.push({ '@type': 'ListItem', position: 2, name: 'Tools', item: pageUrl });
+  } else if (norm.startsWith('tools/ai-write/')) {
+    items.push({ '@type': 'ListItem', position: 2, name: 'Tools', item: SITE_ORIGIN + 'tools/' });
+    items.push({ '@type': 'ListItem', position: 3, name: 'AI Write', item: SITE_ORIGIN + 'categories/ai-write/' });
+    items.push({ '@type': 'ListItem', position: 4, name: rawName, item: pageUrl });
+  } else if (norm.startsWith('tools/')) {
+    items.push({ '@type': 'ListItem', position: 2, name: 'Tools', item: SITE_ORIGIN + 'tools/' });
+    items.push({ '@type': 'ListItem', position: 3, name: rawName, item: pageUrl });
+  } else if (norm === 'blog/index.html') {
+    items.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: pageUrl });
+  } else if (norm.startsWith('blog/')) {
+    items.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: SITE_ORIGIN + 'blog/' });
+    items.push({ '@type': 'ListItem', position: 3, name: rawName, item: pageUrl });
+  } else {
+    items.push({ '@type': 'ListItem', position: 2, name: rawName, item: pageUrl });
+  }
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items
+  };
+  const tag = '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>';
+  return html.replace('</head>', tag + '</head>');
+}
+
 function updateFooter(html, prefix) {
   const categories = [
     ['AI Write', 'ai-write'],
@@ -365,7 +405,7 @@ function updateFooter(html, prefix) {
     + '</div>';
   const exploreColumn = `<div class="site-footer-col"><h3>Explore</h3>`
     + `<a href="${prefix || './'}">Home</a><a href="${prefix}#tools">Tools</a>`
-    + `<a href="${prefix}blog/index.html">Blogs</a><a href="${prefix}resources/index.html">Resources</a>`
+    + `<a href="${prefix}blog/index.html">Blogs</a><a href="${prefix}resources/index.html">Resources</a><a href="${prefix}about.html">About Us</a>`
     + '</div>';
 
   html = html.replace(
@@ -490,6 +530,7 @@ for (const f of allHtml) {
 
   text = addHeaderActions(text);
   text = updateFooter(text, prefix);
+  text = injectBreadcrumbSchema(text, relFile);
 
   // Remove previously generated data/app blocks so repeated builds stay clean.
   text = text.replace(/\s*<script[^>]*>\s*window\.__SITE_DATA__=[\s\S]*?<\/script>\s*/gi, '\n');
@@ -1141,7 +1182,19 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
   await fs.writeFile(f, text);
 }
 
-// Clean, valid sitemap URLs.
+// Clean, valid sitemap URLs (HTML pages only; llms.txt & ai-catalog.json are in robots.txt).
+const todayIso = new Date().toISOString().slice(0, 10);
+async function lastmodFor(u) {
+  try {
+    let rel = u.replace('https://easyworktools.online/', '');
+    if (!rel || rel.endsWith('/')) rel += 'index.html';
+    const st = await fs.stat(path.join(root, rel));
+    return st.mtime.toISOString().slice(0, 10);
+  } catch {
+    return todayIso;
+  }
+}
+
 const urls = [
   'https://easyworktools.online/',
   'https://easyworktools.online/tools/',
@@ -1154,26 +1207,25 @@ const urls = [
   'https://easyworktools.online/terms.html',
   'https://easyworktools.online/contact.html',
   'https://easyworktools.online/security.html',
-  // Machine-readable indexes for crawlers and agents.
-  'https://easyworktools.online/llms.txt',
-  'https://easyworktools.online/ai-catalog.json',
-  // Dedicated category landing pages. Without these they would be reachable by
-  // clicking but invisible to a crawler, which is the one thing a page like this
-  // exists for.
+  // Dedicated category landing pages.
   ...CATEGORIES
     .filter(c => tools.some(t => catSlug(t.category) === c.slug))
     .map(c => 'https://easyworktools.online/categories/' + c.slug + '/'),
   ...tools.map(x => 'https://easyworktools.online/' + x.url),
   ...posts.map(x => 'https://easyworktools.online/' + x.url)
 ];
+
+const sitemapEntries = await Promise.all(
+  urls.map(async u => `<url><loc>${u}</loc><lastmod>${await lastmodFor(u)}</lastmod></url>`)
+);
+
 await fs.writeFile(
   path.join(root, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>' +
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
-  urls.map(u => `<url><loc>${u}</loc></url>`).join('') +
+  sitemapEntries.join('') +
   '</urlset>\n'
 );
-
 // ---------------------------------------------------------------------------
 // ai-catalog.json
 //
