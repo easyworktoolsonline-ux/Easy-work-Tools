@@ -1,0 +1,13 @@
+{
+  "title": "XML Formatter & Validator",
+  "description": "Format, beautify, minify, and validate XML online free. Convert XML to JSON cleanly in your browser with customizable indentation.",
+  "tags": [
+    "xml formatter",
+    "xml validator",
+    "xml to json",
+    "minify xml"
+  ],
+  "url": "tools/xml-formatter/",
+  "iconKey": "xml",
+  "category": "Developer Tools"
+}

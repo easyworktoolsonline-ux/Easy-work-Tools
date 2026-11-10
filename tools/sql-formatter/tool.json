@@ -1,0 +1,13 @@
+{
+  "title": "SQL Formatter & Beautifier",
+  "description": "Format and beautify SQL queries online free. Supports SELECT, JOIN, WHERE, GROUP BY, subqueries, keyword uppercasing, and SQL minification.",
+  "tags": [
+    "sql formatter",
+    "sql beautifier",
+    "pretty print sql",
+    "minify sql"
+  ],
+  "url": "tools/sql-formatter/",
+  "iconKey": "json",
+  "category": "Developer Tools"
+}

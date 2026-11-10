@@ -24,6 +24,7 @@ const CATEGORY_INTRO = {
   'text': 'Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics.',
   'converter': 'Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter.',
   'calculator': 'Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser.',
+  'video-audio': 'Compress, trim, and extract frames from videos or convert and edit audio files privately in your browser—no uploads required.',
   'utility': 'Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design.'
 };
 
@@ -314,6 +315,15 @@ const pages = [
 ];
 
 await fs.writeFile(path.join(root, 'tools-manifest.json'), JSON.stringify(tools, null, 2) + '\n');
+
+const indexHtmlPath = path.join(root, 'index.html');
+try {
+  let idxHtml = await fs.readFile(indexHtmlPath, 'utf8');
+  idxHtml = idxHtml
+    .replace(/<strong id="toolCount">[^<]*<\/strong>/, `<strong id="toolCount">${tools.length}+</strong>`)
+    .replace(/<strong id="blogCount">[^<]*<\/strong>/, `<strong id="blogCount">${posts.length}+</strong>`);
+  await fs.writeFile(indexHtmlPath, idxHtml, 'utf8');
+} catch (_) {}
 await fs.writeFile(path.join(root, 'blog-manifest.json'), JSON.stringify(posts, null, 2) + '\n');
 
 const siteData = `<script>window.__SITE_DATA__=${jsonEscape({ tools, posts, pages, resourceCount })}</script>`;
@@ -398,7 +408,8 @@ function updateFooter(html, prefix) {
     ['PDF Tools', 'pdf'],
     ['Calculator Tools', 'calculator'],
     ['Utility Tools', 'utility'],
-    ['Converter Tools', 'converter']
+    ['Converter Tools', 'converter'],
+    ['Video & Audio', 'video-audio']
   ];
   const categoryColumn = `<div class="site-footer-col site-footer-categories"><h3>Major Categories</h3>`
     + categories.map(([label, slug]) => `<a href="${prefix}categories/${slug}/">${label}</a>`).join('')

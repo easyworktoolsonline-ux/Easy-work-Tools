@@ -4,7 +4,7 @@
 > developer utilities that mostly run in the visitor's browser, with a short and
 > specific list of what does leave it.
 
-EasyWorkTools.online is a static site of 173 free online tools and 121
+EasyWorkTools.online is a static site of 190 free online tools and 121
 how-to guides. Most tools run client-side: the text, images and files you use are
 not uploaded, and there is no account or paywall. A small number of features do
 contact a server - the Thumbnail Downloader sends the link you paste to this site
@@ -16,7 +16,7 @@ See https://easyworktools.online/security for the exact details.
 
 ## Index
 
-- [Tools](#tools) - 173 utilities, listed by category
+- [Tools](#tools) - 190 utilities, listed by category
 - [Blog](#blog) - 121 how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
@@ -29,13 +29,14 @@ Every tool is also reachable from a per-category page that lists the whole set:
 
 - [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarize, and generate articles, emails, and social copy with free AI writing tools that run right in your browser. (54 tools)
 - [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (44 tools)
-- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress, reorder, and watermark PDF files free in your browser—no account, no uploads, and nothing to install. (32 tools)
-- [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (13 tools)
-- [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (13 tools)
+- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress, reorder, and watermark PDF files free in your browser—no account, no uploads, and nothing to install. (37 tools)
+- [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (17 tools)
+- [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (14 tools)
 - [Text Tools](https://easyworktools.online/categories/text/) - Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics. (12 tools)
 - [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter. (1 tool)
 - [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser. (2 tools)
-- [Utility Tools](https://easyworktools.online/categories/utility/) - Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design. (2 tools)
+- [Video & Audio Tools](https://easyworktools.online/categories/video-audio/) - Compress, trim, and extract frames from videos or convert and edit audio files privately in your browser—no uploads required. (5 tools)
+- [Utility Tools](https://easyworktools.online/categories/utility/) - Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design. (4 tools)
 
 ## Tools
 
@@ -160,7 +161,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [TIFF to SVG Converter](https://easyworktools.online/tools/tiff-to-svg/) - Trace TIFF scans and artwork into real SVG vector shapes online, free and in your browser.
 - [WEBP to AVIF Converter](https://easyworktools.online/tools/webp-to-avif/) - Convert WebP images to the even smaller AVIF format. Free, private, in your browser.
 
-### PDF (32)
+### PDF (37)
 
 - [Add Images to PDF](https://easyworktools.online/tools/pdf-add-images/) - Add JPG, PNG or WebP images to an existing PDF as extra pages - at the end or after any page number, sized to match the document or to each image.
 - [Add Page Numbers to PDF](https://easyworktools.online/tools/pdf-page-numbers/) - Add page numbers to a PDF online for free. Choose the position, starting number, font size and format, preview page 1, then download
@@ -176,9 +177,14 @@ Browse all tools: https://easyworktools.online/tools/
 - [HEIC to PDF](https://easyworktools.online/tools/heic-to-pdf/) - Convert iPhone HEIC and HEIF photos into one PDF, one photo per page, decoded in your browser. Free, private and no upload required
 - [JPG to PDF](https://easyworktools.online/tools/jpg-to-pdf/) - Convert JPG and JPEG images into one PDF, one photo per page, with A4 or fit-to-image sizing. Free, private and fully in your browser
 - [Merge PDF](https://easyworktools.online/tools/pdf-merge/) - Combine multiple PDF files into one document online for free. Add PDFs, arrange the order, then merge and download, all in your browser.
+- [PDF Booklet Maker](https://easyworktools.online/tools/pdf-booklet/) - Create printable PDF booklets online free. Automatic saddle-stitch 2-up page imposition with blank-page padding, sheet size, and fold margin.
 - [PDF Compressor](https://easyworktools.online/tools/pdf-compressor/) - Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.
+- [PDF Flatten](https://easyworktools.online/tools/pdf-flatten/) - Flatten PDF online free. Convert interactive form fields, annotations, and transparent layers into static non-editable PDF pages in your browser.
 - [PDF Metadata Editor](https://easyworktools.online/tools/pdf-metadata-editor/) - View and edit a PDF's title, author, subject, keywords and other document properties, or clear them entirely, free in your browser.
 - [PDF Organizer](https://easyworktools.online/tools/pdf-organizer/) - Merge multiple PDFs, reorder, rotate, delete or extract pages, all in your browser for free.
+- [PDF Overlay](https://easyworktools.online/tools/pdf-overlay/) - Overlay one PDF onto another online free. Apply vector letterheads, templates, or watermarks in foreground or background with adjustable opacity.
+- [PDF Page Size Checker](https://easyworktools.online/tools/pdf-page-size-checker/) - Check PDF page size online free. Inspect every page width, height, standard paper format (A4, Letter, Legal), rotation, and PDF metadata in your browser.
+- [PDF Repair](https://easyworktools.online/tools/pdf-repair/) - Repair corrupted PDF files online free. Rebuild broken xref tables and recover readable pages from damaged PDFs directly in your browser.
 - [PDF to EPUB](https://easyworktools.online/tools/pdf-to-epub/) - Convert a PDF to EPUB online free. Rebuild a PDF as a reflowable EPUB 3 e-book with chapters, ready for Kindle, Kobo, Apple Books and Calibre - all in your browser.
 - [PDF to JPG](https://easyworktools.online/tools/pdf-to-jpg/) - Convert PDF to JPG online for free. Turn every page or a chosen page range into a high quality JPG image and download one file or a ZIP in your browser
 - [PDF to PNG](https://easyworktools.online/tools/pdf-to-png/) - Convert PDF to PNG online for free. Export every page or a chosen page range as a lossless PNG image and download one file or a ZIP in your browser
@@ -195,23 +201,27 @@ Browse all tools: https://easyworktools.online/tools/
 - [Summarize PDF](https://easyworktools.online/tools/pdf-summarize/) - Summarize a PDF in your browser - the tool scores every sentence, keeps the most important ones and gives you a short summary to copy or download.
 - [WebP to PDF](https://easyworktools.online/tools/webp-to-pdf/) - Convert WebP images into one PDF, one picture per page. Each WebP is decoded in your browser and placed on its own page, free and private
 
-### Developer (13)
+### Developer (17)
 
 - [Base64 Encoder & Decoder](https://easyworktools.online/tools/base64-encoder-decoder/) - Encode or decode Base64 text and files online for free. Convert text to Base64, decode Base64 back to text, or convert a file to a Base64 data URI.
+- [Cron Expression Parser](https://easyworktools.online/tools/cron-expression-parser/) - Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.
 - [Hash Generator](https://easyworktools.online/tools/hash-generator/) - Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or a file online for free. Compare two hashes for a match.
 - [HTML Entity Encoder & Decoder](https://easyworktools.online/tools/html-entity-encoder-decoder/) - Encode text to HTML entities or decode HTML entities back to plain text online for free. Handles special characters, symbols and accented letters instantly.
 - [HTML/CSS/JS Minifier](https://easyworktools.online/tools/html-css-js-minifier/) - Minify HTML, CSS or JavaScript online for free. Strip comments and unnecessary whitespace to reduce file size, with before/after size comparison.
 - [JSON ↔ CSV Converter](https://easyworktools.online/tools/json-csv-converter/) - Convert JSON to CSV or CSV to JSON online for free. Paste an array of objects or a CSV table and get a clean, downloadable result instantly in your browser.
+- [JSON Diff Checker](https://easyworktools.online/tools/json-diff-checker/) - Compare two JSON objects online free. Deep structural JSON diff showing exact JSONPaths for added, removed, and modified values.
 - [JSON Formatter](https://easyworktools.online/tools/json-formatter/) - Format, validate and minify JSON online for free in your browser.
 - [JWT Decoder](https://easyworktools.online/tools/jwt-decoder/) - Decode a JSON Web Token (JWT) online for free. View the header and payload as readable JSON, with expiry and issued-at claims shown as dates.
 - [Markdown ↔ HTML Converter](https://easyworktools.online/tools/markdown-html-converter/) - Convert Markdown to HTML, Markdown to plain text, or HTML to plain text online for free, with a live safe preview and one-click copy of the result.
 - [Regex Tester](https://easyworktools.online/tools/regex-tester/) - Test regular expressions online for free. Highlight matches in your text live, see capture groups, and get flag options for global, case-insensitive and multiline matching.
+- [SQL Formatter & Beautifier](https://easyworktools.online/tools/sql-formatter/) - Format and beautify SQL queries online free. Supports SELECT, JOIN, WHERE, GROUP BY, subqueries, keyword uppercasing, and SQL minification.
 - [Unix Timestamp Converter](https://easyworktools.online/tools/unix-timestamp-converter/) - Convert Unix timestamps to human-readable dates and back online for free. Supports seconds and milliseconds, your local timezone and UTC, plus a live current timestamp.
 - [URL Encoder & Decoder](https://easyworktools.online/tools/url-encoder-decoder/) - Encode or decode URLs and query strings online for free. Percent-encode special characters or decode a URL-encoded string instantly in your browser.
 - [URL Parser](https://easyworktools.online/tools/url-parser/) - Parse any URL online for free into its protocol, host, port, path, query parameters and hash. Query string parameters are listed individually for easy inspection.
 - [UUID Generator](https://easyworktools.online/tools/uuid-generator/) - Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.
+- [XML Formatter & Validator](https://easyworktools.online/tools/xml-formatter/) - Format, beautify, minify, and validate XML online free. Convert XML to JSON cleanly in your browser with customizable indentation.
 
-### SEO (13)
+### SEO (14)
 
 - [Canonical & Meta Robots Checker](https://easyworktools.online/tools/canonical-robots-checker/) - Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.
 - [Google SERP Snippet Preview](https://easyworktools.online/tools/serp-snippet-preview/) - See how your title and meta description will look in Google search results on desktop and mobile, with real pixel-width truncation warnings, online for free.
@@ -224,6 +234,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [Schema Markup Generator & JSON-LD Validator](https://easyworktools.online/tools/schema-markup-generator/) - Generate valid JSON-LD structured data for Article, Product, LocalBusiness, FAQ, HowTo, Review and 7 more schema types, or paste existing JSON-LD to validate it, online for free.
 - [SEO Page Analyzer](https://easyworktools.online/tools/seo-page-analyzer/) - Paste a page's HTML source to get a full on-page SEO checklist: title, meta description, heading structure, word count, image alt text, links, canonical, robots and more, online for free.
 - [URL Slug Generator](https://easyworktools.online/tools/url-slug-generator/) - Turn any title or sentence into a clean, SEO-friendly URL slug online for free. Choose hyphen or underscore separators, lowercase output and live preview.
+- [UTM Campaign URL Builder](https://easyworktools.online/tools/utm-builder/) - Free UTM link builder for Google Analytics 4. Generate campaign tracking URLs with utm_source, utm_medium, utm_campaign, and export to CSV.
 - [XML Sitemap Generator & Validator](https://easyworktools.online/tools/xml-sitemap-generator/) - Generate a valid XML sitemap from a list of URLs, or paste an existing sitemap to validate its structure, find duplicate URLs and check size limits, online for free.
 - [YouTube Tag Generator](https://easyworktools.online/tools/youtube-tag-generator/) - Generate structured, ready-to-paste YouTube video tags online for free.
 
@@ -236,10 +247,20 @@ Browse all tools: https://easyworktools.online/tools/
 - [Age Calculator](https://easyworktools.online/tools/age-calculator/) - Calculate exact age in years, months and days online for free.
 - [Percentage Calculator](https://easyworktools.online/tools/percentage-calculator/) - Calculate percentages, percentage increase/decrease and ratios online for free.
 
-### Utility (2)
+### Utility (4)
 
 - [Color Picker & Converter](https://easyworktools.online/tools/color-picker-converter/) - Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.
 - [Password Generator](https://easyworktools.online/tools/password-generator/) - Generate strong, random passwords online for free with a live strength meter.
+- [QR Code Generator](https://easyworktools.online/tools/qr-code-generator/) - Free online QR code generator with PNG and vector SVG export. Customize colors, size, and error correction level—100% locally in your browser.
+- [WCAG Color Contrast Checker](https://easyworktools.online/tools/color-contrast-checker/) - Free WCAG 2.1 color contrast checker. Calculate exact contrast ratios, test AA and AAA compliance for text and UI, and auto-fix failing colors.
+
+### Video & Audio (5)
+
+- [Audio Converter](https://easyworktools.online/tools/audio-converter/) - Convert MP3, M4A, OGG, FLAC, AAC, or WAV audio into lossless 16-bit PCM WAV directly in your browser. Choose sample rate and mono/stereo with zero uploads.
+- [Audio Trimmer & Editor](https://easyworktools.online/tools/audio-trimmer/) - Trim audio start/end, boost or lower volume, and change playback speed (0.5x–2.0x) locally in your browser. Export lossless WAV with zero uploads.
+- [Video Compressor](https://easyworktools.online/tools/video-compressor/) - Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.
+- [Video Thumbnail Extractor](https://easyworktools.online/tools/video-thumbnail-extractor/) - Extract high-resolution thumbnails and video frames from MP4, WebM, or MOV files in your browser. Download PNG, JPG, or a batch ZIP with zero uploads.
+- [Video Trimmer & Muter](https://easyworktools.online/tools/video-trimmer/) - Trim start and end times or mute audio on MP4 and WebM videos directly in your browser. Preview and download trimmed clips with zero server uploads.
 
 ## Blog
 

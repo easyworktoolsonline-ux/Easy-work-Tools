@@ -18,7 +18,7 @@
     "cookies": "See https://easyworktools.online/cookies"
   },
   "counts": {
-    "tools": 173,
+    "tools": 190,
     "articles": 121
   },
   "indexes": {
@@ -1187,6 +1187,48 @@
       ]
     },
     {
+      "name": "Audio Converter",
+      "url": "https://easyworktools.online/tools/audio-converter/",
+      "description": "Convert MP3, M4A, OGG, FLAC, AAC, or WAV audio into lossless 16-bit PCM WAV directly in your browser. Choose sample rate and mono/stereo with zero uploads.",
+      "category": null,
+      "keywords": [
+        "audio converter",
+        "mp3 to wav",
+        "m4a to wav",
+        "wav encoder"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "name": "Audio Trimmer & Editor",
+      "url": "https://easyworktools.online/tools/audio-trimmer/",
+      "description": "Trim audio start/end, boost or lower volume, and change playback speed (0.5x–2.0x) locally in your browser. Export lossless WAV with zero uploads.",
+      "category": null,
+      "keywords": [
+        "audio trimmer",
+        "audio volume changer",
+        "audio speed changer",
+        "cut audio"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "name": "Base64 Encoder & Decoder",
       "url": "https://easyworktools.online/tools/base64-encoder-decoder/",
       "description": "Encode or decode Base64 text and files online for free. Convert text to Base64, decode Base64 back to text, or convert a file to a Base64 data URI.",
@@ -1252,6 +1294,26 @@
       ]
     },
     {
+      "name": "WCAG Color Contrast Checker",
+      "url": "https://easyworktools.online/tools/color-contrast-checker/",
+      "description": "Free WCAG 2.1 color contrast checker. Calculate exact contrast ratios, test AA and AAA compliance for text and UI, and auto-fix failing colors.",
+      "category": null,
+      "keywords": [
+        "color contrast",
+        "wcag 2.1",
+        "accessibility checker",
+        "contrast ratio"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Color Picker & Converter",
       "url": "https://easyworktools.online/tools/color-picker-converter/",
       "description": "Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.",
@@ -1270,6 +1332,26 @@
       "structuredData": [
         "BreadcrumbList",
         "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Cron Expression Parser",
+      "url": "https://easyworktools.online/tools/cron-expression-parser/",
+      "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
+      "category": null,
+      "keywords": [
+        "cron parser",
+        "cron schedule",
+        "crontab explainer",
+        "next run times"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
         "FAQPage"
       ]
     },
@@ -2103,6 +2185,26 @@
       ]
     },
     {
+      "name": "JSON Diff Checker",
+      "url": "https://easyworktools.online/tools/json-diff-checker/",
+      "description": "Compare two JSON objects online free. Deep structural JSON diff showing exact JSONPaths for added, removed, and modified values.",
+      "category": null,
+      "keywords": [
+        "json diff",
+        "compare json",
+        "json difference",
+        "jsonpath diff"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "JSON Formatter",
       "url": "https://easyworktools.online/tools/json-formatter/",
       "description": "Format, validate and minify JSON online for free in your browser.",
@@ -2394,6 +2496,26 @@
       ]
     },
     {
+      "name": "PDF Booklet Maker",
+      "url": "https://easyworktools.online/tools/pdf-booklet/",
+      "description": "Create printable PDF booklets online free. Automatic saddle-stitch 2-up page imposition with blank-page padding, sheet size, and fold margin.",
+      "category": null,
+      "keywords": [
+        "pdf booklet",
+        "saddle stitch",
+        "2-up imposition",
+        "print booklet"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "PDF Compressor",
       "url": "https://easyworktools.online/tools/pdf-compressor/",
       "description": "Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.",
@@ -2547,6 +2669,26 @@
       ]
     },
     {
+      "name": "PDF Flatten",
+      "url": "https://easyworktools.online/tools/pdf-flatten/",
+      "description": "Flatten PDF online free. Convert interactive form fields, annotations, and transparent layers into static non-editable PDF pages in your browser.",
+      "category": null,
+      "keywords": [
+        "flatten pdf",
+        "lock pdf forms",
+        "flatten annotations",
+        "rasterize pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Merge PDF",
       "url": "https://easyworktools.online/tools/pdf-merge/",
       "description": "Combine multiple PDF files into one document online for free. Add PDFs, arrange the order, then merge and download, all in your browser.",
@@ -2614,6 +2756,26 @@
       ]
     },
     {
+      "name": "PDF Overlay",
+      "url": "https://easyworktools.online/tools/pdf-overlay/",
+      "description": "Overlay one PDF onto another online free. Apply vector letterheads, templates, or watermarks in foreground or background with adjustable opacity.",
+      "category": null,
+      "keywords": [
+        "pdf overlay",
+        "stamp pdf",
+        "letterhead pdf",
+        "pdf background"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Add Page Numbers to PDF",
       "url": "https://easyworktools.online/tools/pdf-page-numbers/",
       "description": "Add page numbers to a PDF online for free. Choose the position, starting number, font size and format, preview page 1, then download",
@@ -2636,6 +2798,26 @@
       ]
     },
     {
+      "name": "PDF Page Size Checker",
+      "url": "https://easyworktools.online/tools/pdf-page-size-checker/",
+      "description": "Check PDF page size online free. Inspect every page width, height, standard paper format (A4, Letter, Legal), rotation, and PDF metadata in your browser.",
+      "category": null,
+      "keywords": [
+        "pdf page size",
+        "pdf dimensions",
+        "a4 vs letter",
+        "pdf inspector"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Rearrange PDF Pages",
       "url": "https://easyworktools.online/tools/pdf-rearrange/",
       "description": "Rearrange PDF pages online for free. Drag thumbnails or use Move left and Move right to reorder pages, then download the reordered PDF",
@@ -2654,6 +2836,26 @@
       "structuredData": [
         "BreadcrumbList",
         "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PDF Repair",
+      "url": "https://easyworktools.online/tools/pdf-repair/",
+      "description": "Repair corrupted PDF files online free. Rebuild broken xref tables and recover readable pages from damaged PDFs directly in your browser.",
+      "category": null,
+      "keywords": [
+        "repair pdf",
+        "fix corrupted pdf",
+        "recover pdf",
+        "rebuild pdf"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
         "FAQPage"
       ]
     },
@@ -3089,6 +3291,26 @@
       ]
     },
     {
+      "name": "QR Code Generator",
+      "url": "https://easyworktools.online/tools/qr-code-generator/",
+      "description": "Free online QR code generator with PNG and vector SVG export. Customize colors, size, and error correction level—100% locally in your browser.",
+      "category": null,
+      "keywords": [
+        "qr code generator",
+        "qr svg",
+        "qr png",
+        "wifi qr code"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Readability Checker",
       "url": "https://easyworktools.online/tools/readability-checker/",
       "description": "Check the readability of your writing online for free with the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas, explained in plain language.",
@@ -3321,6 +3543,26 @@
       "structuredData": [
         "BreadcrumbList",
         "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "SQL Formatter & Beautifier",
+      "url": "https://easyworktools.online/tools/sql-formatter/",
+      "description": "Format and beautify SQL queries online free. Supports SELECT, JOIN, WHERE, GROUP BY, subqueries, keyword uppercasing, and SQL minification.",
+      "category": null,
+      "keywords": [
+        "sql formatter",
+        "sql beautifier",
+        "pretty print sql",
+        "minify sql"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
         "FAQPage"
       ]
     },
@@ -3608,6 +3850,26 @@
       ]
     },
     {
+      "name": "UTM Campaign URL Builder",
+      "url": "https://easyworktools.online/tools/utm-builder/",
+      "description": "Free UTM link builder for Google Analytics 4. Generate campaign tracking URLs with utm_source, utm_medium, utm_campaign, and export to CSV.",
+      "category": null,
+      "keywords": [
+        "utm builder",
+        "campaign url",
+        "ga4 tracking",
+        "utm generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "UUID Generator",
       "url": "https://easyworktools.online/tools/uuid-generator/",
       "description": "Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.",
@@ -3628,6 +3890,69 @@
         "BreadcrumbList",
         "SoftwareApplication",
         "FAQPage"
+      ]
+    },
+    {
+      "name": "Video Compressor",
+      "url": "https://easyworktools.online/tools/video-compressor/",
+      "description": "Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.",
+      "category": null,
+      "keywords": [
+        "video compressor",
+        "video resizer",
+        "mp4 to webm",
+        "reduce video size"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "name": "Video Thumbnail Extractor",
+      "url": "https://easyworktools.online/tools/video-thumbnail-extractor/",
+      "description": "Extract high-resolution thumbnails and video frames from MP4, WebM, or MOV files in your browser. Download PNG, JPG, or a batch ZIP with zero uploads.",
+      "category": null,
+      "keywords": [
+        "video thumbnail extractor",
+        "video frame extractor",
+        "extract frames",
+        "video to png"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "name": "Video Trimmer & Muter",
+      "url": "https://easyworktools.online/tools/video-trimmer/",
+      "description": "Trim start and end times or mute audio on MP4 and WebM videos directly in your browser. Preview and download trimmed clips with zero server uploads.",
+      "category": null,
+      "keywords": [
+        "video trimmer",
+        "video cutter",
+        "mute video",
+        "cut video"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
       ]
     },
     {
@@ -3693,6 +4018,26 @@
       "structuredData": [
         "BreadcrumbList",
         "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "XML Formatter & Validator",
+      "url": "https://easyworktools.online/tools/xml-formatter/",
+      "description": "Format, beautify, minify, and validate XML online free. Convert XML to JSON cleanly in your browser with customizable indentation.",
+      "category": null,
+      "keywords": [
+        "xml formatter",
+        "xml validator",
+        "xml to json",
+        "minify xml"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "WebApplication",
         "FAQPage"
       ]
     },

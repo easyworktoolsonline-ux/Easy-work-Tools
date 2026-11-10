@@ -1,0 +1,13 @@
+{
+  "title": "QR Code Generator",
+  "description": "Free online QR code generator with PNG and vector SVG export. Customize colors, size, and error correction level—100% locally in your browser.",
+  "tags": [
+    "qr code generator",
+    "qr svg",
+    "qr png",
+    "wifi qr code"
+  ],
+  "url": "tools/qr-code-generator/",
+  "iconKey": "qr-code",
+  "category": "Utility Tools"
+}

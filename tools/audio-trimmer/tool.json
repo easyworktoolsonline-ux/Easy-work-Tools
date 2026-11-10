@@ -1,0 +1,12 @@
+{
+  "title": "Audio Trimmer & Editor",
+  "description": "Trim audio start/end, boost or lower volume, and change playback speed (0.5x–2.0x) locally in your browser. Export lossless WAV with zero uploads.",
+  "category": "Video & Audio Tools",
+  "tags": [
+    "audio trimmer",
+    "audio volume changer",
+    "audio speed changer",
+    "cut audio"
+  ],
+  "iconKey": "video-audio"
+}

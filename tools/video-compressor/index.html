@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.">
+<meta name="keywords" content="video compressor, compress video online, video resizer, reduce video size, mp4 to webm">
+<link rel="canonical" href="https://easyworktools.online/tools/video-compressor/">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png"><link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png"><link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg"><link rel="shortcut icon" href="../../assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+<meta property="og:title" content="Video Compressor & Resizer Online Free | EasyWorkTools">
+<meta property="og:description" content="Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://easyworktools.online/tools/video-compressor/">
+<meta property="og:site_name" content="EasyWorkTools.online">
+<meta property="og:image" content="https://easyworktools.online/assets/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Video Compressor & Resizer Online Free | EasyWorkTools">
+<meta name="twitter:description" content="Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.">
+<meta name="twitter:image" content="https://easyworktools.online/assets/og-image.png">
+
+<title>Video Compressor & Resizer Online Free | EasyWorkTools</title>
+
+<link rel="stylesheet" href="../../assets/styles.css">
+<style>
+:root{
+  --bg-main:#FFFFFF;--bg-section:#F9FAFB;--card-bg:#FFFFFF;--card-hover:#F3F4F6;--border:#E5E7EB;
+  --accent-yellow:#FACC15;--accent-yellow-dark:#EAB308;--accent-yellow-light:rgba(250,204,21,.15);
+  --white:#FFFFFF;--black:#111827;--text-main:#1F2937;--text-gray:#4B5563;
+  --primary:var(--black);--primary-hover:#333333;--yellow-accent:var(--accent-yellow);--yellow-hover:var(--accent-yellow-dark);
+  --bg-color:var(--bg-main);--text-muted:var(--text-gray);
+  --shadow-small:0 4px 15px rgba(0,0,0,.03);--shadow:0 12px 35px rgba(0,0,0,.06);--shadow-large:0 25px 60px rgba(0,0,0,.08);
+  --radius-sm:8px;--radius-md:14px;--radius-lg:20px;--radius-xl:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,,-apple-system,'Segoe UI',sans-serif;background:var(--bg-color);color:var(--text-main);margin:0;padding:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(1160px,calc(100% - 32px));margin:auto}
+.search-panel{display:none;position:fixed;top:73px;left:0;right:0;z-index:90;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 25px rgba(0,0,0,.08);max-height:70vh;overflow:auto}
+.search-panel.show{display:block}
+.search-inner{padding:18px 0}
+.search-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text-muted);margin-bottom:10px}
+.search-close{border:1px solid var(--border);background:#fff;border-radius:8px;padding:6px 10px;font-size:12px}
+.search-results a{display:block;padding:10px 8px;border-radius:10px;text-decoration:none;color:var(--black)}
+.search-results a:hover{background:var(--bg-section)}
+
+.ad-reserved{min-height:90px;margin:14px auto;display:flex;align-items:center;justify-content:center}
+.ad-reserved:empty{min-height:0;margin:0}
+.main-wrapper{width:100%;display:flex;justify-content:center}
+.workspace-layout{width:min(1160px,calc(100% - 32px));display:block}
+.workspace-main{width:100%}
+.tool-hero{padding:28px 0 8px}
+.tool-hero h1{font-size:clamp(26px,4vw,36px);font-weight:900;letter-spacing:-1px;margin:0 0 10px}
+.tool-hero .lede{font-size:15px;color:var(--text-muted);max-width:700px;margin:0 0 26px;line-height:1.8}
+
+.calc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.calc-tab{border:1px solid var(--border);background:var(--bg-section);border-radius:999px;padding:9px 16px;font-size:12.5px;font-weight:800;color:var(--text-muted)}
+.calc-tab.is-active{background:var(--black);border-color:var(--black);color:#fff}
+.calc-panel{display:none}
+.calc-panel.is-active{display:block}
+
+.dropzone{border:2px dashed var(--border);border-radius:var(--radius-lg);background:var(--bg-section);padding:34px 20px;text-align:center;cursor:pointer;transition:border-color .18s,background .18s}
+.dropzone:hover,.dropzone.is-drag{border-color:var(--yellow-accent);background:var(--accent-yellow-light)}
+.dropzone strong{display:block;font-size:15px;color:var(--black);margin-bottom:4px}
+.dropzone span{font-size:12.5px;color:var(--text-muted)}
+input[type=file]{display:none}
+
+.status-msg{margin-top:14px;padding:12px 14px;border-radius:12px;font-size:13px;font-weight:700;display:none}
+.status-msg.show{display:block}
+.status-msg.error{background:#FEF2F2;color:#991B1B;border:1px solid #FECACA}
+.status-msg.ok{background:#F0FDF4;color:#166534;border:1px solid #BBF7D0}
+.status-msg.info{background:var(--bg-section);color:var(--text-main);border:1px solid var(--border)}
+
+.opts-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:16px 0}
+@media(min-width:640px){.opts-grid{grid-template-columns:1fr 1fr}}
+.opts-field label{display:block;font-size:11.5px;font-weight:900;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.opts-field input[type=text],.opts-field select,.opts-field input[type=range]{width:100%;border:1px solid #D1D5DB;border-radius:10px;padding:10px 12px;font-size:13.5px;background:#fff;color:var(--black)}
+.opts-field input[type=range]{padding:0;height:6px}
+.opts-field .range-val{font-size:11.5px;color:var(--text-muted);margin-left:6px}
+.file-mini-drop{border:1px dashed var(--border);border-radius:10px;padding:10px 12px;font-size:12.5px;color:var(--text-muted);cursor:pointer;text-align:center}
+.file-mini-drop:hover{border-color:var(--yellow-accent);background:var(--accent-yellow-light)}
+
+.btn-primary{border:0;border-radius:12px;background:var(--black);color:#fff;padding:12px 18px;font-weight:800;font-size:13.5px}
+.btn-primary:hover{background:var(--primary-hover)}
+.btn-primary:disabled{opacity:.45;cursor:not-allowed}
+.btn-ghost{border:1px solid var(--border);border-radius:12px;background:#fff;color:var(--black);padding:12px 16px;font-weight:800;font-size:13.5px}
+.btn-ghost:hover{background:var(--bg-section)}
+.btn-ghost:disabled{opacity:.45;cursor:not-allowed}
+.tool-actions{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+
+.preview-wrap{margin-top:16px;border:1px solid var(--border);border-radius:14px;background:var(--bg-section);padding:14px;display:flex;justify-content:center}
+.preview-wrap canvas{max-width:100%;height:auto;box-shadow:0 6px 20px rgba(0,0,0,.1);background:#fff}
+
+.file-chip-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.file-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;color:var(--black)}
+
+.tool-seo-content{padding:36px 0 10px}
+.seo-inner h2{font-size:24px;font-weight:900;margin:0 0 12px}
+.seo-inner h3{font-size:16px;font-weight:900;margin:22px 0 8px}
+.seo-inner p,.seo-inner li{font-size:14.5px;color:var(--text-main);line-height:1.85}
+.seo-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:14px 0}
+@media(min-width:760px){.seo-grid{grid-template-columns:repeat(3,1fr)}}
+.seo-grid>div{border:1px solid var(--border);border-radius:14px;padding:16px;background:var(--bg-section)}
+.seo-grid h3{margin:0 0 6px;font-size:14.5px}
+.seo-grid p{margin:0;font-size:13px;color:var(--text-muted)}
+
+.faq{margin-top:26px}
+.faq h3{font-size:15px;color:#0F172A;margin:0 0 7px}
+.faq details{border-top:1px solid #E5E7EB;padding:12px 0}
+.faq summary{cursor:pointer;font-weight:800;color:#0F172A;font-size:13px;list-style:none;display:flex;gap:8px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq details[open] summary{color:#8A6700}
+.faq p{font-size:13px;color:#64748B;line-height:1.7;margin:0}
+.faq details p{margin-top:9px}
+
+.related-block{width:100%;margin-top:34px}
+.related-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:700px){.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.related-grid{grid-template-columns:repeat(3,1fr)}}
+.related-card{display:block;border:1px solid var(--border);border-radius:var(--radius-lg);background:#fff;padding:18px;text-decoration:none;transition:border-color .18s,transform .18s,box-shadow .18s}
+.related-card:hover{border-color:var(--black);transform:translateY(-2px);box-shadow:var(--shadow-small)}
+.related-card h3{font-size:14.5px;color:var(--black);margin:0 0 5px;font-weight:900}
+.related-card p{font-size:12.5px;color:var(--text-muted);margin:0;line-height:1.6}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:focus-visible{outline:3px solid #c99e00;outline-offset:2px;border-radius:6px}
+</style>
+<link rel="preload" href="../../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style id="ewt-fonts">
+  /* Self-hosted webfonts.
+
+     These two families used to be requested from fonts.googleapis.com, which put a
+     third-party DNS + TLS + stylesheet hop in front of the font files: the browser
+     had to download the Google CSS before it even knew the woff2 URLs, and the
+     text that makes up the LCP element could not paint until that chain finished.
+
+     The exact same woff2 files Chrome already downloaded are now served from this
+     origin, declared here, and preloaded from the <head> of the pages that use
+     them. Same typeface, same weights, same rendering - one less network hop, and
+     the font files follow this site's own Cache-Control policy instead of Google's.
+
+     This file is linked ONLY by the pages that already loaded the Google Fonts
+     stylesheet (the homepage and the 74 tool pages). The blog posts, the legal
+     pages, /tools/, /resources/ and 404.html never loaded the webfonts, so they
+     keep rendering in the system fallback stack exactly as they did before.
+
+     Weight declarations are intentionally discrete (400/500/600/700/800 and
+     500/700) to match exactly what fonts.googleapis.com served, so any
+     non-standard weight used in the CSS (750/850/900/950) resolves to the same
+     face it always did.
+
+     `font-display: swap` is deliberate: the LCP text paints immediately in the
+     fallback, then swaps to the brand face as soon as the preloaded 27 KB file
+     is ready. An earlier `optional` policy dropped the brand face for the whole
+     page load whenever the file missed the ~100 ms block period, which made the
+     logo and headings flip between the brand face and the system fallback.
+
+     Only the "latin" subset is shipped: a full scan of every page found no
+     character outside Google's latin unicode-range, so latin-ext/cyrillic/
+     vietnamese were never downloaded anyway and are not needed.
+
+     Fonts are licensed under the SIL Open Font License 1.1 - see fonts/LICENSE.md */
+
+  /* latin */
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(../../assets/fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(../../assets/fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script src="../../assets/vendor/lazy-libs.js" defer></script>
+<script src="../../assets/tool-preview.js" defer></script>
+<style>html[data-theme="dark"] .tool-hero{background:transparent}
+.opts-row{display:flex;flex-wrap:wrap;gap:14px;margin:6px 0 4px}
+.opts-field{display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:800;color:var(--text-muted)}
+.opts-field select{border:1px solid #D1D5DB;border-radius:10px;padding:9px 11px;font-size:13.5px;background:#fff;color:var(--black);min-width:220px}
+.out-box{margin-top:18px;border:1px solid var(--border);border-radius:14px;background:var(--bg-section);padding:14px}
+.out-stats{font-size:12.5px;font-weight:800;color:var(--text-muted);margin-bottom:10px;line-height:1.6}
+.tiff-preview-wrap{background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px;display:flex;justify-content:center}
+.tiff-preview-wrap canvas{max-width:100%;height:auto;box-shadow:0 4px 16px rgba(0,0,0,.16)}
+html[data-theme="dark"] .opts-field select{background:#0b1220;border-color:#334155;color:var(--text)}
+html[data-theme="dark"] .out-box{background:#111c2e;border-color:#334155}
+html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#334155}</style>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Video Compressor","url":"https://easyworktools.online/tools/video-compressor/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.","publisher":{"@type":"Organization","name":"EasyWorkTools.online","url":"https://easyworktools.online/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does browser video compression work?","acceptedAnswer":{"@type":"Answer","text":"Your browser decodes the video locally, scales it onto a canvas at your chosen resolution, and re-encodes it via MediaRecorder at the selected bitrate."}},{"@type":"Question","name":"Why does compression run in real time?","acceptedAnswer":{"@type":"Answer","text":"Browser MediaRecorder encodes frames at 1x playback speed to preserve audio/video synchronization."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://easyworktools.online/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://easyworktools.online/tools/"},{"@type":"ListItem","position":3,"name":"Video Compressor & Resizer","item":"https://easyworktools.online/tools/video-compressor/"}]}</script><!-- EASYWORKTOOLS_AD_HEAD_START -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3298442828407277"
+     crossorigin="anonymous"></script>
+
+<!-- EASYWORKTOOLS_AD_HEAD_END -->
+</head>
+  <section class="tool-shell">
+    <div class="tool-card">
+      <h1 id="toolTitle">Video Compressor &amp; Resizer</h1>
+      <p class="lede">Reduce video file size by adjusting resolution, target bitrate, and audio directly in your browser using Canvas and MediaRecorder.</p>
+      
+    <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload a video to compress">
+      <strong>Click to choose a video, or drag and drop</strong>
+      <span>Supports MP4, WebM, and MOV playable in your browser. Processed locally—no server upload.</span>
+      <input type="file" id="fileInput" accept="video/*">
+    </div>
+    <div id="optsWrap" style="display:none;margin-top:16px">
+      <div class="opts-row" style="display:flex;flex-wrap:wrap;gap:12px">
+        <label class="opts-field"><span>Max Width</span><select id="widthSel"><option value="0">Original</option><option value="1280">1280px (720p)</option><option value="854" selected>854px (480p)</option><option value="640">640px (360p)</option></select></label>
+        <label class="opts-field"><span>Video Bitrate</span><select id="bitrateSel"><option value="2500000">2.5 Mbps (High)</option><option value="1200000" selected>1.2 Mbps (Balanced)</option><option value="600000">600 kbps (Small)</option><option value="300000">300 kbps (Smallest)</option></select></label>
+        <label class="opts-field"><span>Audio</span><select id="muteSel"><option value="keep" selected>Keep Audio</option><option value="mute">Mute Audio</option></select></label>
+      </div>
+      <div class="tool-actions" style="display:flex;gap:10px;margin-top:12px">
+        <button class="btn-primary" type="button" id="compBtn">Compress Video</button>
+        <button class="btn-ghost" type="button" id="cancelBtn" style="display:none">Cancel</button>
+        <button class="btn-ghost" type="button" id="resetBtn">Start over</button>
+      </div>
+      <div id="progWrap" style="display:none;margin-top:10px"><div style="height:8px;background:var(--border);border-radius:999px;overflow:hidden"><div id="progBar" style="height:100%;width:0%;background:var(--yellow,#FACC15)"></div></div></div>
+    </div>
+    <div class="out-box" id="outBox" style="display:none;margin-top:16px">
+      <div class="out-stats" id="outStats"></div>
+      <video id="outVid" controls style="width:100%;max-height:320px;border-radius:10px;background:#000"></video>
+      <div style="margin-top:10px"><button class="btn-primary" type="button" id="dlBtn">Download Compressed Video</button></div>
+    </div>
+      <div class="status-msg" id="statusMsg" role="alert"></div>
+    </div>
+    <div class="ad-reserved" aria-hidden="true"></div>
+    <section class="tool-seo-content" aria-labelledby="seoHeading">
+      <div class="seo-inner">
+        <h2 id="seoHeading">Compress &amp; Resize Videos Privately in Your Browser</h2><p>Shrink large video clips for email, messaging, or web embedding without uploading private footage to external servers. Choose a target resolution and bitrate, optionally mute audio, and compare original vs. compressed file sizes immediately.</p>
+        <div class="faq"><h3>Frequently Asked Questions</h3><details><summary>How does browser video compression work?</summary><p>Your browser decodes the video locally, scales it onto a canvas at your chosen resolution, and re-encodes it via MediaRecorder at the selected bitrate.</p></details><details><summary>Why does compression run in real time?</summary><p>Browser MediaRecorder encodes frames at 1x playback speed to preserve audio/video synchronization.</p></details></div>
+      </div>
+    </section>
+  </section>
+  </main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-top">
+      <div class="site-footer-brand">
+        <a class="site-logo" href="../../" aria-label="EasyWorkTools.online home">EasyWorkTools<span class="site-logo-domain">.online</span></a>
+        <p class="site-footer-description">Free, practical online tools, helpful guides and useful resources for everyday digital work.</p>
+      </div>
+      
+      <div class="site-footer-col site-footer-categories"><h3>Major Categories</h3><a href="../../categories/ai-write/">AI Write</a><a href="../../categories/image/">Image Tools</a><a href="../../categories/developer/">Developer Tool</a><a href="../../categories/seo/">SEO Tool</a><a href="../../categories/text/">Text Tools</a><a href="../../categories/pdf/">PDF Tools</a><a href="../../categories/calculator/">Calculator Tools</a><a href="../../categories/utility/">Utility Tools</a><a href="../../categories/converter/">Converter Tools</a><a href="../../categories/video-audio/">Video & Audio</a></div><div class="site-footer-col"><h3>Explore</h3><a href="../../">Home</a><a href="../../#tools">Tools</a><a href="../../blog/">Blogs</a><a href="../../resources/">Resources</a><a href="../../about">About Us</a></div><div class="site-footer-col"><h3>Legal</h3><a href="../../security">Security &amp; Data Handling</a><a href="../../terms">Terms &amp; Conditions</a><a href="../../privacy">Privacy Policy</a><a href="../../disclaimer">Disclaimer</a></div><div class="site-footer-col"><h3>Help</h3><a href="./#help">Help &amp; Feedback</a><a href="../../contact">Contact Us</a></div>
+      <div class="site-footer-col site-footer-support">
+        <h3>Support</h3>
+        <a class="support-email" href="mailto:info@easyworktools.online">info@easyworktools.online</a>
+      </div>
+    </div>
+    <div class="site-footer-bottom"><span>© 2026 EasyWorkTools.online — All rights reserved.</span><nav class="site-footer-legal" aria-label="Footer policies"><a href="../../cookies">Cookies</a><span aria-hidden="true">|</span><a href="../../privacy">Privacy</a><span aria-hidden="true">|</span><a href="../../terms">Terms</a><span aria-hidden="true">|</span><a href="../../contact">Contact</a></nav></div>
+  </div>
+</footer>
+
+<script>document.addEventListener("DOMContentLoaded", function(){
+
+    var dropzone=document.getElementById("dropzone"),fileInput=document.getElementById("fileInput"),optsWrap=document.getElementById("optsWrap");
+    var widthSel=document.getElementById("widthSel"),bitrateSel=document.getElementById("bitrateSel"),muteSel=document.getElementById("muteSel");
+    var compBtn=document.getElementById("compBtn"),cancelBtn=document.getElementById("cancelBtn"),resetBtn=document.getElementById("resetBtn");
+    var progWrap=document.getElementById("progWrap"),progBar=document.getElementById("progBar"),outBox=document.getElementById("outBox"),outStats=document.getElementById("outStats"),outVid=document.getElementById("outVid"),dlBtn=document.getElementById("dlBtn"),statusMsg=document.getElementById("statusMsg");
+    var srcFile=null,outBlob=null,outExt="webm",cancelled=false;
+    function showStatus(m,t){if(!m){statusMsg.classList.remove("show");return}statusMsg.textContent=m;statusMsg.className="status-msg show "+(t||"info");}
+    function fmt(n){return n<1048576?(n/1024).toFixed(1)+" KB":(n/1048576).toFixed(2)+" MB";}
+    dropzone.addEventListener("click",function(){fileInput.click()});
+    dropzone.addEventListener("dragover",function(e){e.preventDefault();dropzone.classList.add("is-drag")});
+    dropzone.addEventListener("dragleave",function(){dropzone.classList.remove("is-drag")});
+    dropzone.addEventListener("drop",function(e){e.preventDefault();dropzone.classList.remove("is-drag");load(e.dataTransfer.files[0])});
+    fileInput.addEventListener("change",function(){load(fileInput.files[0])});
+    function load(f){
+      if(!f||!f.type.startsWith("video/")){showStatus("Please select a valid video file.","error");return}
+      srcFile=f;optsWrap.style.display="block";outBox.style.display="none";
+      showStatus("Ready: "+f.name+" ("+fmt(f.size)+"). Choose settings and click Compress Video.","ok");
+    }
+    compBtn.addEventListener("click",function(){
+      if(!srcFile)return;
+      if(typeof MediaRecorder==="undefined"){showStatus("MediaRecorder is not supported in this browser.","error");return}
+      cancelled=false;compBtn.disabled=true;cancelBtn.style.display="inline-flex";progWrap.style.display="block";progBar.style.width="0%";
+      var v=document.createElement("video");v.playsInline=true;v.muted=(muteSel.value==="mute");
+      var u=URL.createObjectURL(srcFile);v.src=u;
+      v.onloadedmetadata=function(){
+        var maxW=parseInt(widthSel.value,10)||v.videoWidth;
+        var w=Math.min(v.videoWidth,maxW),h=Math.round(v.videoHeight*(w/v.videoWidth));
+        if(w%2)w--;if(h%2)h--;
+        var c=document.createElement("canvas");c.width=w;c.height=h;
+        var ctx=c.getContext("2d");
+        var stream=c.captureStream(30);
+        if(muteSel.value==="keep" && v.captureStream){
+          try{v.captureStream().getAudioTracks().forEach(function(tr){stream.addTrack(tr);});}catch(e){}
+        }
+        var mime=["video/webm;codecs=vp9,opus","video/webm;codecs=vp8,opus","video/webm"].find(function(m){return MediaRecorder.isTypeSupported(m);})||"video/webm";
+        var rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:parseInt(bitrateSel.value,10)});
+        var chunks=[];
+        rec.ondataavailable=function(e){if(e.data&&e.data.size)chunks.push(e.data);};
+        rec.onstop=function(){
+          URL.revokeObjectURL(u);compBtn.disabled=false;cancelBtn.style.display="none";
+          if(cancelled){showStatus("Compression cancelled.","info");return;}
+          outBlob=new Blob(chunks,{type:mime.split(";")[0]});outExt="webm";
+          outVid.src=URL.createObjectURL(outBlob);outBox.style.display="block";
+          var pct=Math.round((1-outBlob.size/srcFile.size)*100);
+          outStats.innerHTML="<span>Original: <b>"+fmt(srcFile.size)+"</b></span><span>Compressed: <b>"+fmt(outBlob.size)+"</b> ("+(pct>=0?"-"+pct+"%":"+"+Math.abs(pct)+"%")+")</span><span>Resolution: <b>"+w+"x"+h+"</b></span>";
+          showStatus("Compression complete!","ok");
+        };
+        function draw(){if(cancelled||v.ended||v.paused){if(rec.state==="recording")rec.stop();return;}ctx.drawImage(v,0,0,w,h);progBar.style.width=Math.min(100,Math.round((v.currentTime/v.duration)*100))+"%";requestAnimationFrame(draw);}
+        v.onended=function(){if(rec.state==="recording")rec.stop();};
+        rec.start(250);v.play().then(draw).catch(function(err){rec.stop();showStatus("Playback error: "+err.message,"error");});
+        showStatus("Compressing in real time ("+v.duration.toFixed(1)+"s)...","info");
+      };
+    });
+    cancelBtn.addEventListener("click",function(){cancelled=true;});
+    dlBtn.addEventListener("click",function(){if(!outBlob)return;var a=document.createElement("a");a.href=URL.createObjectURL(outBlob);a.download=srcFile.name.replace(/\.[^.]+$/,"")+"-compressed."+outExt;a.click();});
+    resetBtn.addEventListener("click",function(){srcFile=null;outBlob=null;optsWrap.style.display="none";outBox.style.display="none";fileInput.value="";showStatus("");});
+  
+});</script>
+</body></html>

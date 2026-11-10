@@ -1,0 +1,13 @@
+{
+  "title": "PDF Booklet Maker",
+  "description": "Create printable PDF booklets online free. Automatic saddle-stitch 2-up page imposition with blank-page padding, sheet size, and fold margin.",
+  "tags": [
+    "pdf booklet",
+    "saddle stitch",
+    "2-up imposition",
+    "print booklet"
+  ],
+  "url": "tools/pdf-booklet/",
+  "iconKey": "pdf-merge",
+  "category": "PDF Tools"
+}

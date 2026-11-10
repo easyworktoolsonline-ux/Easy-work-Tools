@@ -288,6 +288,13 @@ const CATEGORY_GUIDES = {
       "Each calculator runs directly in your browser with instant results as you enter values, making it easy to verify figures on desktop or mobile without installing a separate app."
     ]
   },
+  "video-audio": {
+    heading: "Browser-Based Video & Audio Processing",
+    paragraphs: [
+      "Edit, trim, compress, and convert video and audio files directly in your browser using native Web Audio, Canvas, and MediaRecorder engines. Your media files never leave your device, avoiding slow uploads and privacy risks.",
+      "Extract crisp video thumbnails and frame sequences, reduce MP4 or WebM file sizes for sharing, trim video or audio clips to exact timestamps, and export clean PCM WAV audio with custom sample rates and volume adjustments."
+    ]
+  },
   "utility": {
     heading: "Practical Browser Utilities for Security & Design",
     paragraphs: [

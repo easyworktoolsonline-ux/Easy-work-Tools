@@ -1,0 +1,13 @@
+{
+  "title": "WCAG Color Contrast Checker",
+  "description": "Free WCAG 2.1 color contrast checker. Calculate exact contrast ratios, test AA and AAA compliance for text and UI, and auto-fix failing colors.",
+  "tags": [
+    "color contrast",
+    "wcag 2.1",
+    "accessibility checker",
+    "contrast ratio"
+  ],
+  "url": "tools/color-contrast-checker/",
+  "iconKey": "color-picker",
+  "category": "Utility Tools"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Video Trimmer & Muter",
+  "description": "Trim start and end times or mute audio on MP4 and WebM videos directly in your browser. Preview and download trimmed clips with zero server uploads.",
+  "category": "Video & Audio Tools",
+  "tags": [
+    "video trimmer",
+    "video cutter",
+    "mute video",
+    "cut video"
+  ],
+  "iconKey": "video-audio"
+}

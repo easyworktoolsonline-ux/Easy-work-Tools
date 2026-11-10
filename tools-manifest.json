@@ -715,6 +715,32 @@
     "category": "AI Write"
   },
   {
+    "title": "Audio Converter",
+    "description": "Convert MP3, M4A, OGG, FLAC, AAC, or WAV audio into lossless 16-bit PCM WAV directly in your browser. Choose sample rate and mono/stereo with zero uploads.",
+    "url": "tools/audio-converter/",
+    "iconKey": "video-audio",
+    "tags": [
+      "audio converter",
+      "mp3 to wav",
+      "m4a to wav",
+      "wav encoder"
+    ],
+    "category": "Video & Audio Tools"
+  },
+  {
+    "title": "Audio Trimmer & Editor",
+    "description": "Trim audio start/end, boost or lower volume, and change playback speed (0.5x–2.0x) locally in your browser. Export lossless WAV with zero uploads.",
+    "url": "tools/audio-trimmer/",
+    "iconKey": "video-audio",
+    "tags": [
+      "audio trimmer",
+      "audio volume changer",
+      "audio speed changer",
+      "cut audio"
+    ],
+    "category": "Video & Audio Tools"
+  },
+  {
     "title": "Base64 Encoder & Decoder",
     "description": "Encode or decode Base64 text and files online for free. Convert text to Base64, decode Base64 back to text, or convert a file to a Base64 data URI.",
     "url": "tools/base64-encoder-decoder/",
@@ -756,6 +782,19 @@
     "category": "Image Tools"
   },
   {
+    "title": "WCAG Color Contrast Checker",
+    "description": "Free WCAG 2.1 color contrast checker. Calculate exact contrast ratios, test AA and AAA compliance for text and UI, and auto-fix failing colors.",
+    "url": "tools/color-contrast-checker/",
+    "iconKey": "color-picker",
+    "tags": [
+      "color contrast",
+      "wcag 2.1",
+      "accessibility checker",
+      "contrast ratio"
+    ],
+    "category": "Utility Tools"
+  },
+  {
     "title": "Color Picker & Converter",
     "description": "Pick a color and instantly convert it between HEX, RGB, HSL and CSS formats online for free. Live color swatch, contrast preview and one-click copy for each format.",
     "url": "tools/color-picker-converter/",
@@ -768,6 +807,19 @@
       "hsl color picker"
     ],
     "category": "Utility Tools"
+  },
+  {
+    "title": "Cron Expression Parser",
+    "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
+    "url": "tools/cron-expression-parser/",
+    "iconKey": "timestamp",
+    "tags": [
+      "cron parser",
+      "cron schedule",
+      "crontab explainer",
+      "next run times"
+    ],
+    "category": "Developer Tools"
   },
   {
     "title": "Easy Image Resizer",
@@ -1287,6 +1339,19 @@
     "category": "Developer Tools"
   },
   {
+    "title": "JSON Diff Checker",
+    "description": "Compare two JSON objects online free. Deep structural JSON diff showing exact JSONPaths for added, removed, and modified values.",
+    "url": "tools/json-diff-checker/",
+    "iconKey": "diff",
+    "tags": [
+      "json diff",
+      "compare json",
+      "json difference",
+      "jsonpath diff"
+    ],
+    "category": "Developer Tools"
+  },
+  {
     "title": "JSON Formatter",
     "description": "Format, validate and minify JSON online for free in your browser.",
     "url": "tools/json-formatter/",
@@ -1474,6 +1539,19 @@
     "category": "PDF Tools"
   },
   {
+    "title": "PDF Booklet Maker",
+    "description": "Create printable PDF booklets online free. Automatic saddle-stitch 2-up page imposition with blank-page padding, sheet size, and fold margin.",
+    "url": "tools/pdf-booklet/",
+    "iconKey": "pdf-merge",
+    "tags": [
+      "pdf booklet",
+      "saddle stitch",
+      "2-up imposition",
+      "print booklet"
+    ],
+    "category": "PDF Tools"
+  },
+  {
     "title": "PDF Compressor",
     "description": "Compress PDF files online for free to reduce file size for email, uploads and storage limits. Adjust the compression level and download the smaller PDF instantly.",
     "url": "tools/pdf-compressor/",
@@ -1571,6 +1649,19 @@
     "category": "PDF Tools"
   },
   {
+    "title": "PDF Flatten",
+    "description": "Flatten PDF online free. Convert interactive form fields, annotations, and transparent layers into static non-editable PDF pages in your browser.",
+    "url": "tools/pdf-flatten/",
+    "iconKey": "pdf-compress",
+    "tags": [
+      "flatten pdf",
+      "lock pdf forms",
+      "flatten annotations",
+      "rasterize pdf"
+    ],
+    "category": "PDF Tools"
+  },
+  {
     "title": "Merge PDF",
     "description": "Combine multiple PDF files into one document online for free. Add PDFs, arrange the order, then merge and download, all in your browser.",
     "url": "tools/pdf-merge/",
@@ -1614,6 +1705,19 @@
     "category": "PDF Tools"
   },
   {
+    "title": "PDF Overlay",
+    "description": "Overlay one PDF onto another online free. Apply vector letterheads, templates, or watermarks in foreground or background with adjustable opacity.",
+    "url": "tools/pdf-overlay/",
+    "iconKey": "pdf-watermark",
+    "tags": [
+      "pdf overlay",
+      "stamp pdf",
+      "letterhead pdf",
+      "pdf background"
+    ],
+    "category": "PDF Tools"
+  },
+  {
     "title": "Add Page Numbers to PDF",
     "description": "Add page numbers to a PDF online for free. Choose the position, starting number, font size and format, preview page 1, then download",
     "url": "tools/pdf-page-numbers/",
@@ -1628,6 +1732,19 @@
     "category": "PDF Tools"
   },
   {
+    "title": "PDF Page Size Checker",
+    "description": "Check PDF page size online free. Inspect every page width, height, standard paper format (A4, Letter, Legal), rotation, and PDF metadata in your browser.",
+    "url": "tools/pdf-page-size-checker/",
+    "iconKey": "pdf-meta",
+    "tags": [
+      "pdf page size",
+      "pdf dimensions",
+      "a4 vs letter",
+      "pdf inspector"
+    ],
+    "category": "PDF Tools"
+  },
+  {
     "title": "Rearrange PDF Pages",
     "description": "Rearrange PDF pages online for free. Drag thumbnails or use Move left and Move right to reorder pages, then download the reordered PDF",
     "url": "tools/pdf-rearrange/",
@@ -1638,6 +1755,19 @@
       "organize pdf pages free",
       "change page order in pdf",
       "reorder pdf pages free"
+    ],
+    "category": "PDF Tools"
+  },
+  {
+    "title": "PDF Repair",
+    "description": "Repair corrupted PDF files online free. Rebuild broken xref tables and recover readable pages from damaged PDFs directly in your browser.",
+    "url": "tools/pdf-repair/",
+    "iconKey": "pdf-organizer",
+    "tags": [
+      "repair pdf",
+      "fix corrupted pdf",
+      "recover pdf",
+      "rebuild pdf"
     ],
     "category": "PDF Tools"
   },
@@ -1913,6 +2043,19 @@
     "category": "Image Tools"
   },
   {
+    "title": "QR Code Generator",
+    "description": "Free online QR code generator with PNG and vector SVG export. Customize colors, size, and error correction level—100% locally in your browser.",
+    "url": "tools/qr-code-generator/",
+    "iconKey": "qr-code",
+    "tags": [
+      "qr code generator",
+      "qr svg",
+      "qr png",
+      "wifi qr code"
+    ],
+    "category": "Utility Tools"
+  },
+  {
     "title": "Readability Checker",
     "description": "Check the readability of your writing online for free with the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas, explained in plain language.",
     "url": "tools/readability-checker/",
@@ -2059,6 +2202,19 @@
       "facebook share preview"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "SQL Formatter & Beautifier",
+    "description": "Format and beautify SQL queries online free. Supports SELECT, JOIN, WHERE, GROUP BY, subqueries, keyword uppercasing, and SQL minification.",
+    "url": "tools/sql-formatter/",
+    "iconKey": "json",
+    "tags": [
+      "sql formatter",
+      "sql beautifier",
+      "pretty print sql",
+      "minify sql"
+    ],
+    "category": "Developer Tools"
   },
   {
     "title": "SVG Optimizer",
@@ -2240,6 +2396,19 @@
     "category": "SEO Tools"
   },
   {
+    "title": "UTM Campaign URL Builder",
+    "description": "Free UTM link builder for Google Analytics 4. Generate campaign tracking URLs with utm_source, utm_medium, utm_campaign, and export to CSV.",
+    "url": "tools/utm-builder/",
+    "iconKey": "url-slug",
+    "tags": [
+      "utm builder",
+      "campaign url",
+      "ga4 tracking",
+      "utm generator"
+    ],
+    "category": "SEO Tools"
+  },
+  {
     "title": "UUID Generator",
     "description": "Generate UUID/GUID v4 and v1 identifiers online for free, in bulk. Validate an existing UUID and inspect its version and variant.",
     "url": "tools/uuid-generator/",
@@ -2253,6 +2422,45 @@
       "generate uuid online"
     ],
     "category": "Developer Tools"
+  },
+  {
+    "title": "Video Compressor",
+    "description": "Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.",
+    "url": "tools/video-compressor/",
+    "iconKey": "video-audio",
+    "tags": [
+      "video compressor",
+      "video resizer",
+      "mp4 to webm",
+      "reduce video size"
+    ],
+    "category": "Video & Audio Tools"
+  },
+  {
+    "title": "Video Thumbnail Extractor",
+    "description": "Extract high-resolution thumbnails and video frames from MP4, WebM, or MOV files in your browser. Download PNG, JPG, or a batch ZIP with zero uploads.",
+    "url": "tools/video-thumbnail-extractor/",
+    "iconKey": "video-audio",
+    "tags": [
+      "video thumbnail extractor",
+      "video frame extractor",
+      "extract frames",
+      "video to png"
+    ],
+    "category": "Video & Audio Tools"
+  },
+  {
+    "title": "Video Trimmer & Muter",
+    "description": "Trim start and end times or mute audio on MP4 and WebM videos directly in your browser. Preview and download trimmed clips with zero server uploads.",
+    "url": "tools/video-trimmer/",
+    "iconKey": "video-audio",
+    "tags": [
+      "video trimmer",
+      "video cutter",
+      "mute video",
+      "cut video"
+    ],
+    "category": "Video & Audio Tools"
   },
   {
     "title": "WEBP to AVIF Converter",
@@ -2295,6 +2503,19 @@
       "social media character counter"
     ],
     "category": "Text Tools"
+  },
+  {
+    "title": "XML Formatter & Validator",
+    "description": "Format, beautify, minify, and validate XML online free. Convert XML to JSON cleanly in your browser with customizable indentation.",
+    "url": "tools/xml-formatter/",
+    "iconKey": "xml",
+    "tags": [
+      "xml formatter",
+      "xml validator",
+      "xml to json",
+      "minify xml"
+    ],
+    "category": "Developer Tools"
   },
   {
     "title": "XML Sitemap Generator & Validator",

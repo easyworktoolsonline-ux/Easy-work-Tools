@@ -1,0 +1,12 @@
+{
+  "title": "Audio Converter",
+  "description": "Convert MP3, M4A, OGG, FLAC, AAC, or WAV audio into lossless 16-bit PCM WAV directly in your browser. Choose sample rate and mono/stereo with zero uploads.",
+  "category": "Video & Audio Tools",
+  "tags": [
+    "audio converter",
+    "mp3 to wav",
+    "m4a to wav",
+    "wav encoder"
+  ],
+  "iconKey": "video-audio"
+}

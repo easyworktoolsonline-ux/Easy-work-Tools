@@ -1,0 +1,13 @@
+{
+  "title": "Cron Expression Parser",
+  "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
+  "tags": [
+    "cron parser",
+    "cron schedule",
+    "crontab explainer",
+    "next run times"
+  ],
+  "url": "tools/cron-expression-parser/",
+  "iconKey": "timestamp",
+  "category": "Developer Tools"
+}

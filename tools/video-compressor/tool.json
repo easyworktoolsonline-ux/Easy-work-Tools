@@ -1,0 +1,12 @@
+{
+  "title": "Video Compressor",
+  "description": "Compress and resize MP4 or WebM videos directly in your browser. Adjust resolution, bitrate, and mute audio with before/after size stats—zero uploads.",
+  "category": "Video & Audio Tools",
+  "tags": [
+    "video compressor",
+    "video resizer",
+    "mp4 to webm",
+    "reduce video size"
+  ],
+  "iconKey": "video-audio"
+}

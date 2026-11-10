@@ -1,0 +1,13 @@
+{
+  "title": "UTM Campaign URL Builder",
+  "description": "Free UTM link builder for Google Analytics 4. Generate campaign tracking URLs with utm_source, utm_medium, utm_campaign, and export to CSV.",
+  "tags": [
+    "utm builder",
+    "campaign url",
+    "ga4 tracking",
+    "utm generator"
+  ],
+  "url": "tools/utm-builder/",
+  "iconKey": "url-slug",
+  "category": "SEO Tools"
+}

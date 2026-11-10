@@ -1,0 +1,13 @@
+{
+  "title": "JSON Diff Checker",
+  "description": "Compare two JSON objects online free. Deep structural JSON diff showing exact JSONPaths for added, removed, and modified values.",
+  "tags": [
+    "json diff",
+    "compare json",
+    "json difference",
+    "jsonpath diff"
+  ],
+  "url": "tools/json-diff-checker/",
+  "iconKey": "diff",
+  "category": "Developer Tools"
+}

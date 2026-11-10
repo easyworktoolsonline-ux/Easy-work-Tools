@@ -42,6 +42,7 @@ export const POPULAR_PICKS = {
   'text': 'online-text-case-converter',
   'converter': 'unit-converter',
   'calculator': 'age-calculator',
+  'video-audio': 'video-compressor',
   'utility': 'password-generator'
 };
 

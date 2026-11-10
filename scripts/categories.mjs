@@ -166,7 +166,7 @@ export const CATEGORIES = [
         slug: 'pdf-organise', label: 'Merge & Organise', tools: [
           '/tools/pdf-organizer/',
           '/tools/pdf-page-numbers/', '/tools/pdf-delete-pages/',
-          '/tools/pdf-merge/', '/tools/pdf-rearrange/', '/tools/pdf-rotate/',
+          '/tools/pdf-merge/', '/tools/pdf-rearrange/', '/tools/pdf-rotate/', '/tools/pdf-booklet/', '/tools/pdf-repair/',
           '/tools/pdf-split/'
         ]
       },
@@ -175,7 +175,7 @@ export const CATEGORIES = [
           '/tools/pdf-compressor/', '/tools/pdf-metadata-editor/',
           '/tools/pdf-watermark/',
           '/tools/pdf-add-text/', '/tools/pdf-annotate/', '/tools/pdf-crop/',
-          '/tools/pdf-sign/', '/tools/pdf-edit/'
+          '/tools/pdf-sign/', '/tools/pdf-edit/', '/tools/pdf-flatten/', '/tools/pdf-overlay/', '/tools/pdf-page-size-checker/'
         ]
       }
     ]
@@ -195,13 +195,13 @@ export const CATEGORIES = [
       {
         slug: 'format-code', label: 'Format & Minify', tools: [
           '/tools/json-formatter/', '/tools/html-css-js-minifier/',
-          '/tools/json-csv-converter/', '/tools/markdown-html-converter/'
+          '/tools/json-csv-converter/', '/tools/markdown-html-converter/', '/tools/xml-formatter/', '/tools/sql-formatter/'
         ]
       },
       {
         slug: 'inspect-verify', label: 'Inspect & Verify', tools: [
           '/tools/jwt-decoder/', '/tools/regex-tester/', '/tools/hash-generator/',
-          '/tools/unix-timestamp-converter/'
+          '/tools/unix-timestamp-converter/', '/tools/cron-expression-parser/', '/tools/json-diff-checker/'
         ]
       },
       {
@@ -227,7 +227,7 @@ export const CATEGORIES = [
         slug: 'seo-generate', label: 'Generate Markup', tools: [
           '/tools/meta-tag-generator/', '/tools/schema-markup-generator/',
           '/tools/robots-txt-generator/', '/tools/xml-sitemap-generator/',
-          '/tools/hreflang-generator/', '/tools/redirect-rules-generator/'
+          '/tools/hreflang-generator/', '/tools/redirect-rules-generator/', '/tools/utm-builder/'
         ]
       },
       {
@@ -283,6 +283,13 @@ export const CATEGORIES = [
     tagline: 'Solve your everyday maths',
     c1: '#11D6B2', c2: '#11D6B2', scrim: 0, link: '#0A7E69', text: '#FFFFFF', iconKey: 'percentage',
     featured: { title: 'Percent Calc', url: '/tools/percentage-calculator/' },
+    subs: []
+  },
+  {
+    slug: 'video-audio', match: 'Video & Audio Tools', title: 'Video & Audio Tools',
+    tagline: 'Edit video & audio in browser',
+    c1: '#0F766E', c2: '#0F766E', scrim: 0, link: '#0F766E', text: '#FFFFFF', iconKey: 'video-audio',
+    featured: { title: 'Video Compressor', url: '/tools/video-compressor/' },
     subs: []
   },
   {
@@ -354,7 +361,7 @@ export function scrimmed(hex, alpha) {
  * hand. Asserted at build time so a future edit cannot quietly invent a shade. */
 export const CATEGORY_PALETTE = [
   '#000000', '#15803D', '#1D4ED8', '#7C3AED', '#C2410C', '#DC2626',   // from the hero
-  '#11D6B2', '#D61149', '#1493B3'                                       // supplied
+  '#11D6B2', '#D61149', '#1493B3', '#0F766E'                           // supplied
 ];
 
 export function assertCategoryContrast() {
