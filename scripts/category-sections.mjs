@@ -230,6 +230,73 @@ export function renderFilter() {
    too, so they have to stand alone. */
 
 /* Each category page presents the complete category in one uninterrupted grid. */
+
+const CATEGORY_GUIDES = {
+  "ai-write": {
+    heading: "About EasyWorkTools AI Writing Utilities",
+    paragraphs: [
+      "Our AI writing collection brings together practical generators, rewriters, summarizers, and content-planning helpers for everyday publishing, marketing, and business tasks. Whether you are drafting a blog outline, refining a cold email, polishing grammar, or preparing product descriptions, each tool focuses on a single clear workflow with zero sign-up barriers.",
+      "Every utility is designed for speed and clarity: enter your topic, draft, or notes, adjust the tone or format options, and copy clean output ready for your document, CMS, or social post. Related guides in our blog explain step-by-step workflows and best practices for each writing tool."
+    ]
+  },
+  "image": {
+    heading: "Private, Browser-Based Image Processing",
+    paragraphs: [
+      "Every image converter, resizer, compressor, and editor in this category runs directly inside your web browser using local Canvas and WebAssembly processing. Your photos, screenshots, and graphics never leave your device, making these tools safe for personal documents, client assets, and confidential work.",
+      "From converting modern HEIC, AVIF, and WebP files into universal JPG or PNG formats to stripping EXIF metadata, creating favicons, or checking exact pixel dimensions, each tool opens immediately with no software installation or account required."
+    ]
+  },
+  "pdf": {
+    heading: "Fast, Private PDF Tools Without Uploads",
+    paragraphs: [
+      "Working with PDF documents often involves sensitive contracts, invoices, or reports. Our PDF utilities process pages locally in your browser whenever possible so you can merge, split, compress, reorder, rotate, watermark, and convert files without uploading them to third-party servers.",
+      "Choose a dedicated tool for your exact task—such as converting JPG or PNG images into a multi-page PDF, extracting PDF pages as images, adding page numbers, or editing document metadata—and download the finished file in seconds."
+    ]
+  },
+  "developer": {
+    heading: "Everyday Developer & Data Utilities",
+    paragraphs: [
+      "This collection covers the small, frequent formatting, encoding, and validation tasks developers run into daily. Format and validate JSON, convert JSON to CSV, test regular expressions, encode or decode Base64 and URL strings, generate SHA-256 or MD5 hashes, and inspect JWT tokens or UUIDs in one place.",
+      "All processing happens client-side in your browser so API payloads, configuration snippets, and test strings stay on your machine."
+    ]
+  },
+  "seo": {
+    heading: "Technical SEO & Metadata Helpers",
+    paragraphs: [
+      "Strong search visibility starts with clean technical fundamentals: accurate title and meta description lengths, valid canonical tags, structured JSON-LD markup, XML sitemaps, and clear robots.txt directives. These free SEO utilities help site owners, marketers, and developers verify and generate those elements quickly.",
+      "Use the generators to build OpenGraph tags, Schema.org JSON-LD, hreflang attributes, and SEO-friendly URL slugs, or run quick checks on keyword density, readability scores, and HTTP status headers."
+    ]
+  },
+  "text": {
+    heading: "Clean, Format, and Analyze Text Instantly",
+    paragraphs: [
+      "Text cleanup is essential before publishing articles, importing CSV lists, or pasting copied content into code or spreadsheets. These text tools let you count words and characters, convert letter case, sort or deduplicate lines, find and replace patterns, compare two text blocks side by side, and extract emails or URLs.",
+      "Every utility runs locally in your browser with instant updates as you type or paste."
+    ]
+  },
+  "converter": {
+    heading: "Accurate Online Unit & Measurement Conversion",
+    paragraphs: [
+      "Converting between metric and imperial measurements—such as kilometers to miles, kilograms to pounds, Celsius to Fahrenheit, or liters to gallons—is essential for travel, cooking, engineering, shipping, and schoolwork. Our free online Unit Converter handles length, weight, temperature, area, volume, speed, and digital storage in one clean interface.",
+      "Results update live as you type with no page reloads, pop-ups, or account sign-ups. Bookmark this category for quick reference whenever you need reliable, instant unit conversions across desktop or mobile devices."
+    ]
+  },
+  "calculator": {
+    heading: "Quick Everyday Calculators for Numbers & Dates",
+    paragraphs: [
+      "Whether you are calculating exact age in years, months, and days, figuring out percentage increases and discounts, or checking date differences for project planning, having fast, distraction-free calculators saves time.",
+      "Each calculator runs directly in your browser with instant results as you enter values, making it easy to verify figures on desktop or mobile without installing a separate app."
+    ]
+  },
+  "utility": {
+    heading: "Practical Browser Utilities for Security & Design",
+    paragraphs: [
+      "Small everyday utilities solve recurring tasks quickly without bloated software. Generate cryptographically strong random passwords with customizable length and character sets using your browser's built-in Web Crypto API, or convert and inspect HEX, RGB, and HSL color values for web design and CSS.",
+      "Everything executes locally on your device—generated passwords are never transmitted over the network, and color conversions update instantaneously."
+    ]
+  }
+};
+
 export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, intro: introFor }) {
   const c = category;
   const intro = (introFor || {})[c.slug] || (c.tagline + '.');
@@ -270,6 +337,19 @@ export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, int
     + '</section>';
 
   body += section('All ' + c.title, tools, 'catAllHeading');
+
+  const guide = CATEGORY_GUIDES[c.slug];
+  if (guide) {
+    body += ''
+      + '<section class="section" aria-labelledby="catGuideHeading">'
+      +   '<div class="container">'
+      +     '<div class="section-head"><div><h2 id="catGuideHeading">' + esc(guide.heading) + '</h2></div></div>'
+      +     '<div class="prose" style="max-width:74ch">'
+      +       guide.paragraphs.map((p) => '<p>' + esc(p) + '</p>').join('')
+      +     '</div>'
+      +   '</div>'
+      + '</section>';
+  }
 
   // Other categories, so the page is not a dead end and the whole taxonomy is
   // reachable from any of them.
@@ -315,6 +395,14 @@ export function renderCategorySchema({ category, tools, origin, intro: introFor 
             url: origin + '/' + stripSlash(t.url)
           }))
         }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' },
+          { '@type': 'ListItem', position: 2, name: 'Tools', item: origin + '/tools/' },
+          { '@type': 'ListItem', position: 3, name: c.title, item: url }
+        ]
       }
     ]
   };

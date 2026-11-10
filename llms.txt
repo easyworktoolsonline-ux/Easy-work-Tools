@@ -27,15 +27,15 @@ See https://easyworktools.online/security for the exact details.
 
 Every tool is also reachable from a per-category page that lists the whole set:
 
-- [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarise and generate content with free AI writing tools that run in your browser. (54 tools)
+- [AI Write](https://easyworktools.online/categories/ai-write/) - Write, rewrite, summarize, and generate articles, emails, and social copy with free AI writing tools that run right in your browser. (54 tools)
 - [Image Tools](https://easyworktools.online/categories/image/) - Resize, convert, compress, edit and inspect images online. Everything runs in your browser, so your photos never leave your device. (44 tools)
-- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress and watermark PDF files for free, with no account and nothing to install. (32 tools)
+- [PDF Tools](https://easyworktools.online/categories/pdf/) - Convert, merge, split, compress, reorder, and watermark PDF files free in your browser—no account, no uploads, and nothing to install. (32 tools)
 - [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (13 tools)
 - [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (13 tools)
 - [Text Tools](https://easyworktools.online/categories/text/) - Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics. (12 tools)
-- [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between units and everyday measurements using a single free online converter. (1 tool)
-- [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate calculators for everyday arithmetic, percentages and dates. (2 tools)
-- [Utility Tools](https://easyworktools.online/categories/utility/) - Small everyday utilities for generating secure passwords and converting colours. (2 tools)
+- [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter. (1 tool)
+- [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser. (2 tools)
+- [Utility Tools](https://easyworktools.online/categories/utility/) - Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design. (2 tools)
 
 ## Tools
 
