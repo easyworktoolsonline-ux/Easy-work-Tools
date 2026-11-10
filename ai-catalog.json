@@ -1202,9 +1202,9 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
+        "BreadcrumbList",
         "WebApplication",
-        "FAQPage",
-        "BreadcrumbList"
+        "FAQPage"
       ]
     },
     {
@@ -1223,9 +1223,9 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
+        "BreadcrumbList",
         "WebApplication",
-        "FAQPage",
-        "BreadcrumbList"
+        "FAQPage"
       ]
     },
     {
@@ -3919,9 +3919,9 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
+        "BreadcrumbList",
         "WebApplication",
-        "FAQPage",
-        "BreadcrumbList"
+        "FAQPage"
       ]
     },
     {
@@ -3940,9 +3940,9 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
+        "BreadcrumbList",
         "WebApplication",
-        "FAQPage",
-        "BreadcrumbList"
+        "FAQPage"
       ]
     },
     {
@@ -3961,9 +3961,9 @@
       "requiresAccount": false,
       "requiresUpload": false,
       "structuredData": [
+        "BreadcrumbList",
         "WebApplication",
-        "FAQPage",
-        "BreadcrumbList"
+        "FAQPage"
       ]
     },
     {
