@@ -5,3 +5,7 @@ Sitemap: https://easyworktools.online/sitemap.xml
 # Machine-readable indexes for crawlers and agents
 Allow: /llms.txt
 Allow: /ai-catalog.json
+
+# Google AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
