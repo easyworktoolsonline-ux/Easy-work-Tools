@@ -1,12 +1,12 @@
 {
-  "title": "Privacy Policy Generator",
-  "description": "Generate privacy policy for your",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "privacy policy generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Privacy Policy Generator",
+    "description":  "Create a privacy policy draft online with this free AI generator. Outline common sections and details to help you prepare a starting document for review.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "privacy policy generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

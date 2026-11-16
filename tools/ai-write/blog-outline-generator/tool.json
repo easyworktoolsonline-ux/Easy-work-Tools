@@ -1,12 +1,12 @@
 {
-  "title": "Blog Outline Generator",
-  "description": "Write Blog Outline",
-  "iconKey": "line-tools",
-  "tags": [
-    "ai write",
-    "blog outline generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Blog Outline Generator",
+    "description":  "Generate a structured blog post outline online for free. Organize headings, sections, and key points so you can plan and write content faster with AI assistance.",
+    "iconKey":  "line-tools",
+    "tags":  [
+                 "ai write",
+                 "blog outline generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

@@ -1,12 +1,12 @@
 {
-  "title": "Content Shortener",
-  "description": "Resize your content",
-  "iconKey": "dedupe",
-  "tags": [
-    "ai write",
-    "content shortener",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Content Shortener",
+    "description":  "Shorten content online for free with this AI text shortener. Condense long drafts into clearer, concise versions while keeping the key points intact.",
+    "iconKey":  "dedupe",
+    "tags":  [
+                 "ai write",
+                 "content shortener",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

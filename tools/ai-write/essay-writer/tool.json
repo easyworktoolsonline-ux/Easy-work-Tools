@@ -1,12 +1,12 @@
 {
-  "title": "Essay Writer",
-  "description": "Easily create an essay with AI",
-  "iconKey": "markdown",
-  "tags": [
-    "ai write",
-    "essay writer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Essay Writer",
+    "description":  "Draft essays online with this free AI essay writer. Organize ideas into a clear structure and generate readable content you can review and refine in your browser.",
+    "iconKey":  "markdown",
+    "tags":  [
+                 "ai write",
+                 "essay writer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

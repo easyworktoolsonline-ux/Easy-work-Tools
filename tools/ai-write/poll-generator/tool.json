@@ -1,12 +1,12 @@
 {
-  "title": "Poll Generator",
-  "description": "AI Generated Polls",
-  "iconKey": "line-tools",
-  "tags": [
-    "ai write",
-    "poll generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Poll Generator",
+    "description":  "Generate poll questions and answer options online for free. Create engaging polls for social media, communities, or feedback with this AI poll generator.",
+    "iconKey":  "line-tools",
+    "tags":  [
+                 "ai write",
+                 "poll generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

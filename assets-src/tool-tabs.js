@@ -1,11 +1,11 @@
 /* --------------------------------------------------------------------------
  * Category tabs for the "Our Most Popular Tools" grid.
  *
- * Progressive enhancement. The server already rendered the All Tools set of sixteen
+ * Progressive enhancement. The server already rendered the All Tools set of 28
  * cards into #toolsGrid, so with JavaScript off the section is complete. This script only
  * takes over when a tab is actually used.
  *
- * The All Tools selection (sixteen cards) and complete category lists are
+ * The All Tools selection (28 cards) and complete category lists are
  * computed at build time by scripts/popular-tools.mjs and shipped in the
  * #ewtToolsData island. All this file does is read those selections and paint
  * them.
@@ -146,8 +146,8 @@
       + '</a>';
   }
 
-  /* Paints one tab's cards into the grid. The grid declares data-limit (16), so a
-     category with more tools than that shows exactly 16 and a category with
+  /* Paints one tab's cards into the grid. The grid declares data-limit (28), so a
+     category with more tools than that shows 28 and a category with
      fewer shows all of them - the same cap the server-rendered All set uses. */
   function paint(tabId) {
     var keys = data.picks[tabId];

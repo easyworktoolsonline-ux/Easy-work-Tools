@@ -48,7 +48,35 @@
   Cross-Origin-Opener-Policy: same-origin
   Strict-Transport-Security: max-age=63072000
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com; connect-src 'self' https://script.google.com https://cloudflareinsights.com; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=0, s-maxage=600, stale-while-revalidate=86400, must-revalidate
+
+/favicon.ico
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+/ads.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: text/plain; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/llms.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/ai-catalog.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/json; charset=utf-8
+
+/security.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
 
 # Webfonts: same-origin, never change without a redeploy, and the whole point of
 # self-hosting them was to get them under this policy instead of Google's.

@@ -1,12 +1,12 @@
 {
-  "title": "Translate",
-  "description": "Easily Translate Text",
-  "iconKey": "url-parser",
-  "tags": [
-    "ai write",
-    "translate",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Translate",
+    "description":  "Translate and rewrite text online for free with this AI writing tool. Convert content into clear language for different audiences quickly in your browser.",
+    "iconKey":  "url-parser",
+    "tags":  [
+                 "ai write",
+                 "translate",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

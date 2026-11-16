@@ -1,12 +1,12 @@
 {
-  "title": "AI Detector",
-  "description": "AI Content Detector",
-  "iconKey": "seo-analyzer",
-  "tags": [
-    "ai write",
-    "ai detector",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "AI Detector",
+    "description":  "Detect AI-generated patterns in your text with this free AI content detector. Review writing authenticity, get quick insights, and improve content quality online in your browser.",
+    "iconKey":  "seo-analyzer",
+    "tags":  [
+                 "ai write",
+                 "ai detector",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

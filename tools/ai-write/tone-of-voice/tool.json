@@ -1,12 +1,12 @@
 {
-  "title": "Tone of Voice",
-  "description": "Tone of Voice Tool",
-  "iconKey": "text-case",
-  "tags": [
-    "ai write",
-    "tone of voice",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Tone of Voice",
+    "description":  "Adjust the tone of voice in your text online for free. Rewrite content to sound more formal, friendly, persuasive, or clear with this AI tool.",
+    "iconKey":  "text-case",
+    "tags":  [
+                 "ai write",
+                 "tone of voice",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

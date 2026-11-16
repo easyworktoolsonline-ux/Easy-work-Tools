@@ -1,12 +1,12 @@
 {
-  "title": "Meta Description Generator",
-  "description": "Generate a meta description for your article",
-  "iconKey": "meta-tag",
-  "tags": [
-    "ai write",
-    "meta description generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Meta Description Generator",
+    "description":  "Generate SEO meta descriptions online for free. Create concise, compelling snippets for pages and articles with this AI meta description generator.",
+    "iconKey":  "meta-tag",
+    "tags":  [
+                 "ai write",
+                 "meta description generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

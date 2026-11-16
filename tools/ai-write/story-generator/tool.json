@@ -1,12 +1,12 @@
 {
-  "title": "Story Generator",
-  "description": "Generate a Story",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "story generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Story Generator",
+    "description":  "Generate story ideas and drafts online for free. Create creative narratives from prompts with this AI story generator in your browser.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "story generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

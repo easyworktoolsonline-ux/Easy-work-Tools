@@ -1,12 +1,12 @@
 {
-  "title": "Real Estate Descriptions",
-  "description": "Generate Real Estate Descriptions for your",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "real estate descriptions",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Real Estate Descriptions",
+    "description":  "Generate real estate property descriptions online for free. Create clear, appealing listing copy from property details with this AI writing tool.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "real estate descriptions",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

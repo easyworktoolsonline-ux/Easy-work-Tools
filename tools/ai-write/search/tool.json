@@ -1,12 +1,12 @@
 {
-  "title": "Search",
-  "description": "Search",
-  "iconKey": "find-replace",
-  "tags": [
-    "ai write",
-    "search",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Search",
+    "description":  "Use AI-powered writing search to explore topics and generate helpful content ideas online for free. Find inspiration and draft text quickly in your browser.",
+    "iconKey":  "find-replace",
+    "tags":  [
+                 "ai write",
+                 "search",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

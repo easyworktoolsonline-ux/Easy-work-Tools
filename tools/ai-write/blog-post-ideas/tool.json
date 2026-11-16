@@ -1,12 +1,12 @@
 {
-  "title": "Blog Post Ideas",
-  "description": "Write Blog Post Ideas",
-  "iconKey": "lorem-ipsum",
-  "tags": [
-    "ai write",
-    "blog post ideas",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Blog Post Ideas",
+    "description":  "Generate blog post ideas online for free. Discover relevant topics, angles, and titles to plan your content calendar and overcome writer\u0027s block quickly.",
+    "iconKey":  "lorem-ipsum",
+    "tags":  [
+                 "ai write",
+                 "blog post ideas",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

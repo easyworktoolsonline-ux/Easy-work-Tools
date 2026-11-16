@@ -1,12 +1,12 @@
 {
-  "title": "Instagram Story Idea",
-  "description": "Generate Instagram story ideas for you",
-  "iconKey": "social-preview",
-  "tags": [
-    "ai write",
-    "instagram story idea",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Instagram Story Idea",
+    "description":  "Generate Instagram Story ideas online for free. Get creative prompts and content concepts to keep your audience engaged with this AI tool.",
+    "iconKey":  "social-preview",
+    "tags":  [
+                 "ai write",
+                 "instagram story idea",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

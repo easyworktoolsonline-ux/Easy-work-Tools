@@ -1,12 +1,12 @@
 {
-  "title": "Paragraph Rewriter",
-  "description": "Rephrase a paragraph",
-  "iconKey": "text-sort",
-  "tags": [
-    "ai write",
-    "paragraph rewriter",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Paragraph Rewriter",
+    "description":  "Rewrite paragraphs online for free with this AI paragraph rewriter. Improve clarity, tone, and flow while keeping the original meaning of your text.",
+    "iconKey":  "text-sort",
+    "tags":  [
+                 "ai write",
+                 "paragraph rewriter",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

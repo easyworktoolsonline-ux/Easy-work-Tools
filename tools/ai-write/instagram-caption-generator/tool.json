@@ -1,12 +1,12 @@
 {
-  "title": "Instagram Caption Generator",
-  "description": "Generate Instagram caption for your post",
-  "iconKey": "social-preview",
-  "tags": [
-    "ai write",
-    "instagram caption generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Instagram Caption Generator",
+    "description":  "Generate Instagram captions online for free. Create engaging, on-brand caption ideas for posts and reels with this AI caption generator.",
+    "iconKey":  "social-preview",
+    "tags":  [
+                 "ai write",
+                 "instagram caption generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

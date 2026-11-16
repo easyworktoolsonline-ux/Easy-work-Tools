@@ -1,12 +1,12 @@
 {
-  "title": "Article Writer",
-  "description": "Create an article from a title",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "article writer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Article Writer",
+    "description":  "Write article drafts quickly with this free AI article writer. Create structured, informative content from your topic or brief directly in your browser.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "article writer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

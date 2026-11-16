@@ -1,12 +1,12 @@
 {
-  "title": "Blog Post Generator",
-  "description": "AI SEO Post Generator",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "blog post generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Blog Post Generator",
+    "description":  "Create blog post drafts with this free AI blog post generator. Turn ideas into readable articles with helpful structure, headings, and content in your browser.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "blog post generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

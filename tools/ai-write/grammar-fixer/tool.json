@@ -1,12 +1,12 @@
 {
-  "title": "Grammar Fixer",
-  "description": "Easily fix the grammar in a block of text",
-  "iconKey": "text-clean",
-  "tags": [
-    "ai write",
-    "grammar fixer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Grammar Fixer",
+    "description":  "Fix grammar, spelling, and punctuation online for free. Improve sentence clarity and correctness quickly with this AI grammar fixer in your browser.",
+    "iconKey":  "text-clean",
+    "tags":  [
+                 "ai write",
+                 "grammar fixer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

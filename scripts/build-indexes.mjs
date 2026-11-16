@@ -179,7 +179,7 @@ function fillGrid(html, gridId, markup) {
 async function walk(dir) {
   const out = [];
   for (const e of await fs.readdir(dir, { withFileTypes: true })) {
-    if (e.name.startsWith('.')) continue;
+    if (e.name.startsWith('.') || e.name === 'node_modules') continue;
     const p = path.join(dir, e.name);
     if (e.isDirectory()) out.push(...await walk(p));
     else if (e.isFile() && e.name.toLowerCase().endsWith('.html')) out.push(p);
@@ -190,7 +190,7 @@ async function walk(dir) {
 async function walkAllFiles(dir) {
   const out = [];
   for (const e of await fs.readdir(dir, { withFileTypes: true })) {
-    if (e.name.startsWith('.')) continue;
+    if (e.name.startsWith('.') || e.name === 'node_modules') continue;
     const p = path.join(dir, e.name);
     if (e.isDirectory()) out.push(...await walkAllFiles(p));
     else if (e.isFile()) out.push(p);
@@ -303,7 +303,7 @@ try {
 const pages = [
   { title: 'Home', description: 'EasyWorkTools.online homepage.', url: '/', type: 'Page' },
   { title: 'Tools', description: 'Browse free online tools.', url: '/#tools', type: 'Page' },
-  { title: 'Blog', description: 'Tutorials and how-to guides.', url: 'blog/index.html', type: 'Page' },
+  { title: 'Guides', description: 'Tutorials and how-to guides.', url: 'blog/index.html', type: 'Page' },
   { title: 'Resources', description: 'Useful references and future downloads.', url: 'resources/index.html', type: 'Page' },
   { title: 'About Us', description: 'Learn about EasyWorkTools.online, its tools and content approach.', url: 'about.html', type: 'Page' },
   { title: 'Privacy Policy', description: 'Privacy information for EasyWorkTools.online.', url: 'privacy.html', type: 'Page' },
@@ -350,11 +350,13 @@ function addHeaderActions(html) {
 
   const navWithToolLabel = navMatch[0]
     .replace(/>(?:Tool|Tools)<\/a>/i, '>Tools</a>')
-    .replace(/>(?:Blog|Blogs)<\/a>/i, '>Blogs</a>')
+    .replace(/>(?:Blog|Blogs|Guide|Guides)<\/a>/i, '>Guides</a>')
     .replace(/<a\b[^>]*>About<\/a>/gi, '');
+  const updatedSearch = searchMatch[0]
+    .replace(/aria-label="Search tools, blogs and pages"/gi, 'aria-label="Search tools, guides and pages"');
   html = html.replace(searchMatch[0], '');
   html = html.replace(navMatch[0], navWithToolLabel + themeToggle + shareButton
-    + '<span class="nav-divider" aria-hidden="true"></span>' + searchMatch[0]);
+    + '<span class="nav-divider" aria-hidden="true"></span>' + updatedSearch);
   return html;
 }
 
@@ -381,9 +383,9 @@ function injectBreadcrumbSchema(html, relFile) {
     items.push({ '@type': 'ListItem', position: 2, name: 'Tools', item: SITE_ORIGIN + 'tools/' });
     items.push({ '@type': 'ListItem', position: 3, name: rawName, item: pageUrl });
   } else if (norm === 'blog/index.html') {
-    items.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: pageUrl });
+    items.push({ '@type': 'ListItem', position: 2, name: 'Guides', item: pageUrl });
   } else if (norm.startsWith('blog/')) {
-    items.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: SITE_ORIGIN + 'blog/' });
+    items.push({ '@type': 'ListItem', position: 2, name: 'Guides', item: SITE_ORIGIN + 'blog/' });
     items.push({ '@type': 'ListItem', position: 3, name: rawName, item: pageUrl });
   } else {
     items.push({ '@type': 'ListItem', position: 2, name: rawName, item: pageUrl });
@@ -398,7 +400,7 @@ function injectBreadcrumbSchema(html, relFile) {
   return html.replace('</head>', tag + '</head>');
 }
 
-function updateFooter(html, prefix) {
+function updateFooter(html, prefix, relFile) {
   const categories = [
     ['AI Write', 'ai-write'],
     ['Image Tools', 'image'],
@@ -411,21 +413,29 @@ function updateFooter(html, prefix) {
     ['Converter Tools', 'converter'],
     ['Video & Audio', 'video-audio']
   ];
+  const isHome = relFile === 'index.html';
+  const anchorBase = isHome ? '' : (prefix || './');
+  const toolsHref = `${anchorBase}#tools`;
+  const helpHref = `${anchorBase}#help`;
+
   const categoryColumn = `<div class="site-footer-col site-footer-categories"><h3>Major Categories</h3>`
     + categories.map(([label, slug]) => `<a href="${prefix}categories/${slug}/">${label}</a>`).join('')
     + '</div>';
   const exploreColumn = `<div class="site-footer-col"><h3>Explore</h3>`
-    + `<a href="${prefix || './'}">Home</a><a href="${prefix}#tools">Tools</a>`
-    + `<a href="${prefix}blog/index.html">Blogs</a><a href="${prefix}resources/index.html">Resources</a><a href="${prefix}about.html">About Us</a>`
+    + `<a href="${prefix || './'}">Home</a><a href="${toolsHref}">Tools</a>`
+    + `<a href="${prefix}blog/index.html">Guides</a><a href="${prefix}resources/index.html">Resources</a><a href="${prefix}about.html">About Us</a>`
+    + '</div>';
+  const helpColumn = `<div class="site-footer-col"><h3>Help</h3>`
+    + `<a href="${helpHref}">Help &amp; Feedback</a><a href="${prefix}contact.html">Contact Us</a>`
     + '</div>';
 
   html = html.replace(
-    /<div class="site-footer-col(?: site-footer-categories)?">\s*<h3>(?:Major Categories|Explore)<\/h3>[\s\S]*?<\/div>/gi,
+    /<div class="site-footer-col(?: site-footer-categories)?">\s*<h3>(?:Major Categories|Explore|Help)<\/h3>[\s\S]*?<\/div>/gi,
     ''
   );
   html = html.replace(
-    /(<div class="site-footer-col"><h3>Legal<\/h3>)/i,
-    categoryColumn + exploreColumn + '$1'
+    /(<div class="site-footer-col"><h3>Legal<\/h3>[\s\S]*?<\/div>)/i,
+    `${categoryColumn}${exploreColumn}$1${helpColumn}`
   );
   html = html.replace(/<a href=["'][^"']*cookies\.html["']>Cookie Policy<\/a>/i, '');
   html = html.replace(
@@ -540,8 +550,9 @@ for (const f of allHtml) {
   const blogManifest = `${prefix}blog-manifest.json`;
 
   text = addHeaderActions(text);
-  text = updateFooter(text, prefix);
+  text = updateFooter(text, prefix, relFile);
   text = injectBreadcrumbSchema(text, relFile);
+  text = text.replace(/<button class="search-close" type="button" onclick="closeSearch\(\)">Close(?:\s*\?)?<\/button>/gi, '<button class="search-close" type="button" onclick="closeSearch()">Close ✕</button>');
 
   // Remove previously generated data/app blocks so repeated builds stay clean.
   text = text.replace(/\s*<script[^>]*>\s*window\.__SITE_DATA__=[\s\S]*?<\/script>\s*/gi, '\n');
@@ -948,9 +959,9 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
       {
         icon: 'blog',
         title: 'Tool Guides',
-        body: '',
-        cta: 'Browse all guides',
-        subtitle: 'Master Every Tool with Easy Step-by-Step Guides',
+        body: 'Step-by-step tutorials and practical examples to master every tool.',
+        cta: 'Browse guides',
+        subtitle: '',
         href: 'blog/',
         c: '#1D4ED8',
         ink: '#1E3A8A'
@@ -958,8 +969,8 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
       {
         icon: 'sitemap-xml',
         title: 'Tool Reference',
-        body: 'Every tool with a plain description of what it does, searchable in one place.',
-        cta: 'Open the reference',
+        body: 'Every tool with a plain description, grouped and searchable in one place.',
+        cta: 'Open reference',
         subtitle: '',
         href: 'resources/',
         c: '#C2410C',
@@ -968,9 +979,9 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
       {
         icon: 'http-header',
         title: 'Updates & Requests',
-        body: 'Report a problem with a tool, or ask for one that is not here yet.',
-        cta: 'Send a request',
-        subtitle: 'Report Issues. Suggest Tools.',
+        body: 'Report a problem with a tool, or suggest a new one you need.',
+        cta: 'Send request',
+        subtitle: '',
         href: '#help',
         c: '#15803D',
         ink: '#14532D'
@@ -1065,16 +1076,18 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
     return '<div class="resource-index" id="resourceIndex">' +
       '<div class="resource-index__search">' +
         '<label class="resource-index__label" for="resourceSearch">Search guides and tools</label>' +
-        '<input class="resource-index__input" id="resourceSearch" type="search" ' +
-          'placeholder="e.g. json, pdf, resize" autocomplete="off" ' +
-          'aria-describedby="resourceSearchStatus">' +
+        '<div class="resource-index__field">' +
+          '<svg class="resource-index__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>' +
+          '<input class="resource-index__input" id="resourceSearch" type="search" ' +
+            'placeholder="e.g. json, pdf, resize" autocomplete="off" ' +
+            'aria-describedby="resourceSearchStatus">' +
+        '</div>' +
         '<p class="resource-index__status" id="resourceSearchStatus" role="status" aria-live="polite"></p>' +
       '</div>' +
 
       '<section class="resource-block" aria-labelledby="resourceToolsHead">' +
         '<div class="resource-block__head">' +
           '<h2 id="resourceToolsHead">Tools by category</h2>' +
-          '<p>All ' + nTools + ' tools, grouped into ' + groups.length + ' categories.</p>' +
         '</div>' +
         '<div class="resource-index__chips" role="group" aria-label="Filter tools by category">' + chips + '</div>' +
         '<div class="resource-groups" id="resourceGroups">' + groupBlocks + '</div>' +
@@ -1083,7 +1096,7 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
       '<section class="resource-block" aria-labelledby="resourceGuidesHead">' +
         '<div class="resource-block__head">' +
           '<h2 id="resourceGuidesHead">Guides</h2>' +
-          '<p>All ' + nPosts + ' written guides, newest reading order aside, listed alphabetically.</p>' +
+          '<p>Explore practical guides, expert tips, and step-by-step tutorials to get more done.</p>' +
         '</div>' +
         '<ul class="resource-items resource-items--guides" id="resourceGuides">' + guideItems + '</ul>' +
       '</section>' +
@@ -1286,7 +1299,7 @@ const catalog = {
   privacy: 'https://easyworktools.online/privacy.html',
   dataHandling: {
     uploads: 'none',
-    telemetry: 'Aggregate page-view paths only, with no account or personal details attached, used to order the tool and blog lists.',
+    telemetry: 'Aggregate page-view paths only, with no account or personal details attached, used to order the tool and guides lists.',
     feedback: 'The homepage feedback form sends the details you type, including an optional email address, to a Google Apps Script endpoint that emails them to the operator.',
     cookies: 'See https://easyworktools.online/cookies.html',
   },
@@ -1364,7 +1377,7 @@ See https://easyworktools.online/security.html for the exact details.
 ## Index
 
 - [Tools](#tools) - __TOOLS__ utilities, listed by category
-- [Blog](#blog) - __POSTS__ how-to guides
+- [Guides](#guides) - __POSTS__ how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
 - [Machine-readable data](#machine-readable-data)
@@ -1382,7 +1395,7 @@ Browse all tools: https://easyworktools.online/tools/
 
 __TOOL_BLOCK__
 
-## Blog
+## Guides
 
 Browse all guides: https://easyworktools.online/blog/
 

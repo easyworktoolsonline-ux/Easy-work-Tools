@@ -1,12 +1,12 @@
 {
-  "title": "Content Planner",
-  "description": "Generate a simple content plan",
-  "iconKey": "timestamp",
-  "tags": [
-    "ai write",
-    "content planner",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Content Planner",
+    "description":  "Plan content online with this free AI content planner. Organize topics, formats, and publishing ideas to build a clear and consistent content strategy.",
+    "iconKey":  "timestamp",
+    "tags":  [
+                 "ai write",
+                 "content planner",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

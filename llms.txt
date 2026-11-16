@@ -17,7 +17,7 @@ See https://easyworktools.online/security for the exact details.
 ## Index
 
 - [Tools](#tools) - 198 utilities, listed by category
-- [Blog](#blog) - 121 how-to guides
+- [Guides](#guides) - 121 how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
 - [Machine-readable data](#machine-readable-data)
@@ -270,7 +270,7 @@ Browse all tools: https://easyworktools.online/tools/
 - [Video Thumbnail Extractor](https://easyworktools.online/tools/video-thumbnail-extractor/) - Extract high-resolution thumbnails and video frames from MP4, WebM, or MOV files in your browser. Download PNG, JPG, or a batch ZIP with zero uploads.
 - [Video Trimmer & Muter](https://easyworktools.online/tools/video-trimmer/) - Trim start and end times or mute audio on MP4 and WebM videos directly in your browser. Preview and download trimmed clips with zero server uploads.
 
-## Blog
+## Guides
 
 Browse all guides: https://easyworktools.online/blog/
 

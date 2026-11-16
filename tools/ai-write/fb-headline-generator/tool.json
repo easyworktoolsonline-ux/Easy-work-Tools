@@ -1,12 +1,12 @@
 {
-  "title": "FB Headline Generator",
-  "description": "Generate Facebook ad headlines for your company",
-  "iconKey": "social-preview",
-  "tags": [
-    "ai write",
-    "fb headline generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "FB Headline Generator",
+    "description":  "Generate Facebook headline ideas online for free. Create attention-grabbing headlines for posts and ads with this AI headline generator.",
+    "iconKey":  "social-preview",
+    "tags":  [
+                 "ai write",
+                 "fb headline generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

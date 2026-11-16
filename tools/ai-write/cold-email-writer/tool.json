@@ -1,12 +1,12 @@
 {
-  "title": "Cold Email Writer",
-  "description": "Write cold email for you",
-  "iconKey": "base64",
-  "tags": [
-    "ai write",
-    "cold email writer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Cold Email Writer",
+    "description":  "Write effective cold emails with this free AI cold email writer. Create clear, professional outreach messages tailored to your goal directly in your browser.",
+    "iconKey":  "base64",
+    "tags":  [
+                 "ai write",
+                 "cold email writer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

@@ -1,12 +1,12 @@
 {
-  "title": "Content Improver",
-  "description": "Improve your content",
-  "iconKey": "find-replace",
-  "tags": [
-    "ai write",
-    "content improver",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Content Improver",
+    "description":  "Improve your content with this free AI content improver. Enhance clarity, flow, and readability online while keeping your original intent and message.",
+    "iconKey":  "find-replace",
+    "tags":  [
+                 "ai write",
+                 "content improver",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

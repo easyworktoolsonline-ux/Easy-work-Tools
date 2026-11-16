@@ -1,12 +1,12 @@
 {
-  "title": "Post Writer",
-  "description": "Generate a blog post",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "post writer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Post Writer",
+    "description":  "Write social or blog posts online with this free AI post writer. Turn ideas into clear, ready-to-edit drafts quickly in your browser.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "post writer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

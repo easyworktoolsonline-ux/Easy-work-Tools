@@ -1,12 +1,12 @@
 {
-  "title": "Twitter Generator",
-  "description": "Twitter generator",
-  "iconKey": "social-preview",
-  "tags": [
-    "ai write",
-    "twitter generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Twitter Generator",
+    "description":  "Generate tweets and post ideas online for free. Create concise, engaging Twitter/X content from your topic with this AI writing tool.",
+    "iconKey":  "social-preview",
+    "tags":  [
+                 "ai write",
+                 "twitter generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

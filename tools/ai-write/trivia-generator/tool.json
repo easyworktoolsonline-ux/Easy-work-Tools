@@ -1,12 +1,12 @@
 {
-  "title": "Trivia Generator",
-  "description": "Generate Trivia Questions",
-  "iconKey": "lorem-ipsum",
-  "tags": [
-    "ai write",
-    "trivia generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Trivia Generator",
+    "description":  "Generate trivia questions and answers online for free. Create fun quizzes for games, classes, or events with this AI trivia generator.",
+    "iconKey":  "lorem-ipsum",
+    "tags":  [
+                 "ai write",
+                 "trivia generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

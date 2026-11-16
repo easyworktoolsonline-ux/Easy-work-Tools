@@ -288,7 +288,7 @@ export const CATEGORIES = [
   {
     slug: 'video-audio', match: 'Video & Audio Tools', title: 'Video & Audio Tools',
     tagline: 'Edit video & audio in browser',
-    c1: '#0F766E', c2: '#0F766E', scrim: 0, link: '#0F766E', text: '#FFFFFF', iconKey: 'video-audio',
+    c1: '#6D28D9', c2: '#6D28D9', scrim: 0, link: '#6D28D9', text: '#FFFFFF', iconKey: 'video-audio',
     featured: { title: 'Video Compressor', url: '/tools/video-compressor/' },
     subs: []
   },
@@ -361,7 +361,7 @@ export function scrimmed(hex, alpha) {
  * hand. Asserted at build time so a future edit cannot quietly invent a shade. */
 export const CATEGORY_PALETTE = [
   '#000000', '#15803D', '#1D4ED8', '#7C3AED', '#C2410C', '#DC2626',   // from the hero
-  '#11D6B2', '#D61149', '#1493B3', '#0F766E'                           // supplied
+  '#11D6B2', '#D61149', '#1493B3', '#6D28D9'                           // supplied
 ];
 
 export function assertCategoryContrast() {

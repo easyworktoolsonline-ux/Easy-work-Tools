@@ -121,7 +121,6 @@ function categoryCard(c, list, iconSvg) {
     +   '<a class="cat-card__main" href="' + esc(href) + '">'
     +     '<span class="cat-card__top">'
     +       '<span class="cat-card__icon" aria-hidden="true">' + icon + '</span>'
-  +       '<span class="cat-card__count">' + count + '+ tools</span>'
     +     '</span>'
     +     '<span class="cat-card__panel">'
     +       '<span class="cat-card__title">' + esc(c.title) + '</span>'
@@ -236,7 +235,7 @@ const CATEGORY_GUIDES = {
     heading: "About EasyWorkTools AI Writing Utilities",
     paragraphs: [
       "Our AI writing collection brings together practical generators, rewriters, summarizers, and content-planning helpers for everyday publishing, marketing, and business tasks. Whether you are drafting a blog outline, refining a cold email, polishing grammar, or preparing product descriptions, each tool focuses on a single clear workflow with zero sign-up barriers.",
-      "Every utility is designed for speed and clarity: enter your topic, draft, or notes, adjust the tone or format options, and copy clean output ready for your document, CMS, or social post. Related guides in our blog explain step-by-step workflows and best practices for each writing tool."
+      "Every utility is designed for speed and clarity: enter your topic, draft, or notes, adjust the tone or format options, and copy clean output ready for your document, CMS, or social post. Related guides in our Guides section explain step-by-step workflows and best practices for each writing tool."
     ]
   },
   "image": {
@@ -375,13 +374,13 @@ export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, int
   return body;
 }
 
-/* JSON-LD for a category page: a single CollectionPage. Built from the same
+/* JSON-LD for a category page: a CollectionPage plus breadcrumb trail. Built from the same
    manifest the visible list came from, so the structured data cannot claim
-   tools the page does not show. A BreadcrumbList used to sit beside it, but the
-   breadcrumb links are gone and a pointer to a removed node was worse than none. */
+   tools the page does not show. */
 export function renderCategorySchema({ category, tools, origin, intro: introFor }) {
   const c = category;
-  const url = origin + '/categories/' + c.slug + '/';
+  const base = String(origin || '').replace(/\/+$/, '');
+  const url = base + '/categories/' + c.slug + '/';
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -391,7 +390,7 @@ export function renderCategorySchema({ category, tools, origin, intro: introFor 
         url,
         name: c.title + ' | EasyWorkTools.online',
         description: (introFor || {})[c.slug] || c.tagline,
-        isPartOf: { '@id': origin + '/#website' },
+        isPartOf: { '@id': base + '/#website' },
         mainEntity: {
           '@type': 'ItemList',
           numberOfItems: tools.length,
@@ -399,15 +398,15 @@ export function renderCategorySchema({ category, tools, origin, intro: introFor 
             '@type': 'ListItem',
             position: i + 1,
             name: t.title,
-            url: origin + '/' + stripSlash(t.url)
+            url: base + '/' + stripSlash(t.url)
           }))
         }
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' },
-          { '@type': 'ListItem', position: 2, name: 'Tools', item: origin + '/tools/' },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: base + '/' },
+          { '@type': 'ListItem', position: 2, name: 'Tools', item: base + '/tools/' },
           { '@type': 'ListItem', position: 3, name: c.title, item: url }
         ]
       }

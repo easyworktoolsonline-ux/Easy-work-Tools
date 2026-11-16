@@ -19,11 +19,10 @@
  * judgement rather than inventing a second, conflicting one. Only Calculator
  * and Converter had no declared featured tool, so a pick was added for each.
  *
- * THE SIXTEEN ALL-TOOLS SLOTS ARE ALWAYS FULL
+ * THE TWENTY-EIGHT ALL-TOOLS SLOTS ARE ALWAYS FULL
  * ------------------------------
- * The All Tools grid must always show exactly 16 cards. A category with fewer than 16 of
- * its own (PDF has 7, Calculator and Utility 2 each, Converter 1) is topped up
- * from outside that category, so the row never ends ragged:
+ * The All Tools grid must always show exactly 28 cards. A category with fewer than 28 of
+ * its own is topped up from outside that category, so the row never ends ragged:
  *   1. the category's own tools, curated pick first, then manifest order
  *   2. then the other categories' curated picks, largest category first
  *   3. then anything still missing, largest category first
@@ -47,7 +46,7 @@ export const POPULAR_PICKS = {
 };
 
 export const ALL_TAB = 'all';
-export const CARD_SLOTS = 16;
+export const CARD_SLOTS = 28;
 
 /* The tab bar: All Tools first, then every category in declaration order. */
 export function buildTabs() {
@@ -87,7 +86,7 @@ export function slugByTitle() {
   return m;
 }
 
-/* The tools shown for one tab. All Tools is a curated sixteen-card sample;
+/* The tools shown for one tab. All Tools is a curated twenty-eight-card sample;
  * category tabs show the complete, exact category.
  *
  * `slug` is ALL_TAB for the mixed view, otherwise a category slug. Returns an

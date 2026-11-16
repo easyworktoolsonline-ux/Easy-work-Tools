@@ -1,12 +1,12 @@
 {
-  "title": "Paragraph Writer",
-  "description": "Paragraph Writer",
-  "iconKey": "markdown",
-  "tags": [
-    "ai write",
-    "paragraph writer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Paragraph Writer",
+    "description":  "Write paragraphs online with this free AI paragraph writer. Generate clear, well-structured text from a prompt or topic directly in your browser.",
+    "iconKey":  "markdown",
+    "tags":  [
+                 "ai write",
+                 "paragraph writer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

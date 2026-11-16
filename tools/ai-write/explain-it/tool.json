@@ -1,12 +1,12 @@
 {
-  "title": "Explain It",
-  "description": "Explain it like I'm five",
-  "iconKey": "lorem-ipsum",
-  "tags": [
-    "ai write",
-    "explain it",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Explain It",
+    "description":  "Explain complex topics in simple terms with this free AI tool. Paste text or a concept to get clearer, easier-to-understand explanations online instantly.",
+    "iconKey":  "lorem-ipsum",
+    "tags":  [
+                 "ai write",
+                 "explain it",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

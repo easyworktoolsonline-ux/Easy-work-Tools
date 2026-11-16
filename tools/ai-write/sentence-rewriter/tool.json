@@ -1,12 +1,12 @@
 {
-  "title": "Sentence Rewriter",
-  "description": "Sentence Rewriter",
-  "iconKey": "text-sort",
-  "tags": [
-    "ai write",
-    "sentence rewriter",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Sentence Rewriter",
+    "description":  "Rewrite sentences online for free with this AI sentence rewriter. Improve clarity, tone, and readability while preserving your original meaning.",
+    "iconKey":  "text-sort",
+    "tags":  [
+                 "ai write",
+                 "sentence rewriter",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

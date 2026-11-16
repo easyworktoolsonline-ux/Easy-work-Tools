@@ -1,4 +1,13 @@
 /index.html / 301
+/index / 301
+/home / 301
+/home/ / 301
+/categories /categories/ 301
+/tools /tools/ 301
+/blog /blog/ 301
+/resources /resources/ 301
+/favicon.ico /assets/favicon.ico 200
+/apple-touch-icon.png /assets/apple-touch-icon.png 200
 /security.txt /.well-known/security.txt 200
 
 # Superseded combined PDF tools (split into dedicated pages)
@@ -8,3 +17,9 @@
 /tools/pdf-images-converter/* /tools/pdf-to-jpg/ 301
 /tools/pdf-merge-split /tools/pdf-merge/ 301
 /tools/pdf-merge-split/* /tools/pdf-merge/ 301
+/tools/color-picker /tools/color-picker-converter/ 301
+/tools/text-diff-checker /tools/text-compare/ 301
+/tools/text-diff /tools/text-compare/ 301
+/tools/diff-checker /tools/text-compare/ 301
+/tools/thumbnail-downloader /tools/easy-thumbnail-downloader/ 301
+/tools/youtube-thumbnail-downloader /tools/easy-thumbnail-downloader/ 301

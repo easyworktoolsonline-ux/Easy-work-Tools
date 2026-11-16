@@ -1,12 +1,12 @@
 {
-  "title": "Word Counter",
-  "description": "Count words in your text",
-  "iconKey": "word-count",
-  "tags": [
-    "ai write",
-    "word counter",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Word Counter",
+    "description":  "Count words, characters, sentences, and reading time online for free. Analyze your text instantly with this simple browser-based word counter tool.",
+    "iconKey":  "word-count",
+    "tags":  [
+                 "ai write",
+                 "word counter",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

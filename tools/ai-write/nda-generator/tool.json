@@ -1,12 +1,12 @@
 {
-  "title": "NDA Generator",
-  "description": "Generate NDA for your",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "nda generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "NDA Generator",
+    "description":  "Create an NDA draft online with this free AI generator. Outline key confidentiality terms and parties to produce a starting document you can review.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "nda generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

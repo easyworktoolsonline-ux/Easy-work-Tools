@@ -1,12 +1,12 @@
 {
-  "title": "Article Generator",
-  "description": "AI SEO Optimized Article Generator",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "article generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Article Generator",
+    "description":  "Generate SEO-friendly article drafts online with this free AI article generator. Turn a topic into structured, readable content you can edit and publish faster.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "article generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

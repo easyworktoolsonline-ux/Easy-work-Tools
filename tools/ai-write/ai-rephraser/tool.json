@@ -1,12 +1,12 @@
 {
-  "title": "AI Rephraser",
-  "description": "AI Rephraser Content",
-  "iconKey": "text-sort",
-  "tags": [
-    "ai write",
-    "ai rephraser",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "AI Rephraser",
+    "description":  "Rephrase sentences and paragraphs with this free AI rephraser. Improve clarity, vary wording, and keep your original meaning while rewriting text online in seconds.",
+    "iconKey":  "text-sort",
+    "tags":  [
+                 "ai write",
+                 "ai rephraser",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

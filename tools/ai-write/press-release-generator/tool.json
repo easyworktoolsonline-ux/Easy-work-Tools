@@ -1,12 +1,12 @@
 {
-  "title": "Press Release Generator",
-  "description": "Generate a press release",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "press release generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Press Release Generator",
+    "description":  "Generate press release drafts online for free. Create structured announcements with key details and professional wording using this AI writing tool.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "press release generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

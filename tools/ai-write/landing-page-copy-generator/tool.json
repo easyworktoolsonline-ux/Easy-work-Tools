@@ -1,12 +1,12 @@
 {
-  "title": "Landing Page Copy Generator",
-  "description": "Generate landing page copy",
-  "iconKey": "blog",
-  "tags": [
-    "ai write",
-    "landing page copy generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Landing Page Copy Generator",
+    "description":  "Generate landing page copy online for free. Create clear headlines, benefits, and calls to action for marketing pages with this AI copy generator.",
+    "iconKey":  "blog",
+    "tags":  [
+                 "ai write",
+                 "landing page copy generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

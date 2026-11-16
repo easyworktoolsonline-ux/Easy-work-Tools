@@ -1,12 +1,12 @@
 {
-  "title": "Content Summarizer",
-  "description": "Summarize text",
-  "iconKey": "word-count",
-  "tags": [
-    "ai write",
-    "content summarizer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Content Summarizer",
+    "description":  "Summarize content online for free with this AI summarizer. Turn long text into concise, easy-to-read summaries that highlight the main points quickly.",
+    "iconKey":  "word-count",
+    "tags":  [
+                 "ai write",
+                 "content summarizer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

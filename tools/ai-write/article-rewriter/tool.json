@@ -1,12 +1,12 @@
 {
-  "title": "Article Rewriter",
-  "description": "Rewrite an article",
-  "iconKey": "text-sort",
-  "tags": [
-    "ai write",
-    "article rewriter",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "Article Rewriter",
+    "description":  "Rewrite articles online for free with this AI article rewriter. Refresh wording, improve readability, and create a clearer version of your content in your browser.",
+    "iconKey":  "text-sort",
+    "tags":  [
+                 "ai write",
+                 "article rewriter",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

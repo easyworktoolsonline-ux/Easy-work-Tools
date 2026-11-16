@@ -4,7 +4,7 @@
   "url": "https://easyworktools.online/",
   "description": "Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security",
   "version": "1.0.0",
-  "updated": "2026-11-10",
+  "updated": "2026-11-14",
   "operator": {
     "name": "EasyWorkTools.online",
     "email": "info@easyworktools.online"
@@ -13,7 +13,7 @@
   "privacy": "https://easyworktools.online/privacy",
   "dataHandling": {
     "uploads": "none",
-    "telemetry": "Aggregate page-view paths only, with no account or personal details attached, used to order the tool and blog lists.",
+    "telemetry": "Aggregate page-view paths only, with no account or personal details attached, used to order the tool and guides lists.",
     "feedback": "The homepage feedback form sends the details you type, including an optional email address, to a Google Apps Script endpoint that emails them to the operator.",
     "cookies": "See https://easyworktools.online/cookies"
   },

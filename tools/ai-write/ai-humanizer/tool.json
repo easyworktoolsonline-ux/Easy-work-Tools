@@ -1,12 +1,12 @@
 {
-  "title": "AI Humanizer",
-  "description": "Use the AI Humanizer to make AI text sound more human",
-  "iconKey": "text-clean",
-  "tags": [
-    "ai write",
-    "ai humanizer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "AI Humanizer",
+    "description":  "Humanize AI-generated text to sound more natural and clear with this free AI humanizer. Refine tone, improve flow, and make content read like it was written by a person.",
+    "iconKey":  "text-clean",
+    "tags":  [
+                 "ai write",
+                 "ai humanizer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

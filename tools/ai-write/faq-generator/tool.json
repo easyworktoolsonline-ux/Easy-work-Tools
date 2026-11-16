@@ -1,12 +1,12 @@
 {
-  "title": "FAQ Generator",
-  "description": "Generate FAQ for a blog",
-  "iconKey": "line-tools",
-  "tags": [
-    "ai write",
-    "faq generator",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "FAQ Generator",
+    "description":  "Generate FAQs online for free with this AI FAQ generator. Create relevant questions and clear answers for websites, products, services, or support pages.",
+    "iconKey":  "line-tools",
+    "tags":  [
+                 "ai write",
+                 "faq generator",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

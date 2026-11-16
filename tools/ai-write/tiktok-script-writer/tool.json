@@ -1,12 +1,12 @@
 {
-  "title": "TikTok Script Writer",
-  "description": "TikTok Script Writer",
-  "iconKey": "ytags",
-  "tags": [
-    "ai write",
-    "tiktok script writer",
-    "ai writing",
-    "ai tool"
-  ],
-  "category": "AI Write"
+    "title":  "TikTok Script Writer",
+    "description":  "Generate TikTok script ideas and drafts online for free. Plan hooks, scenes, and calls to action for short-form videos with this AI writing tool.",
+    "iconKey":  "ytags",
+    "tags":  [
+                 "ai write",
+                 "tiktok script writer",
+                 "ai writing",
+                 "ai tool"
+             ],
+    "category":  "AI Write"
 }

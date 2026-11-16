@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Local AI Studio exports and SEO report artifacts (not part of the published site)
+public/assets/aistudio/
