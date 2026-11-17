@@ -4,7 +4,7 @@
   "url": "https://easyworktools.online/",
   "description": "Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security",
   "version": "1.0.0",
-  "updated": "2026-11-14",
+  "updated": "2026-11-17",
   "operator": {
     "name": "EasyWorkTools.online",
     "email": "info@easyworktools.online"
@@ -55,7 +55,7 @@
     {
       "name": "AI Detector",
       "url": "https://easyworktools.online/tools/ai-write/ai-detector/",
-      "description": "AI Content Detector",
+      "description": "Detect AI-generated patterns in your text with this free AI content detector. Review writing authenticity, get quick insights, and improve content quality online in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -76,7 +76,7 @@
     {
       "name": "AI Humanizer",
       "url": "https://easyworktools.online/tools/ai-write/ai-humanizer/",
-      "description": "Use the AI Humanizer to make AI text sound more human",
+      "description": "Humanize AI-generated text to sound more natural and clear with this free AI humanizer. Refine tone, improve flow, and make content read like it was written by a person.",
       "category": null,
       "keywords": [
         "ai write",
@@ -97,7 +97,7 @@
     {
       "name": "AI Rephraser",
       "url": "https://easyworktools.online/tools/ai-write/ai-rephraser/",
-      "description": "AI Rephraser Content",
+      "description": "Rephrase sentences and paragraphs with this free AI rephraser. Improve clarity, vary wording, and keep your original meaning while rewriting text online in seconds.",
       "category": null,
       "keywords": [
         "ai write",
@@ -118,7 +118,7 @@
     {
       "name": "Article Generator",
       "url": "https://easyworktools.online/tools/ai-write/article-generator/",
-      "description": "AI SEO Optimized Article Generator",
+      "description": "Generate SEO-friendly article drafts online with this free AI article generator. Turn a topic into structured, readable content you can edit and publish faster.",
       "category": null,
       "keywords": [
         "ai write",
@@ -139,7 +139,7 @@
     {
       "name": "Article Rewriter",
       "url": "https://easyworktools.online/tools/ai-write/article-rewriter/",
-      "description": "Rewrite an article",
+      "description": "Rewrite articles online for free with this AI article rewriter. Refresh wording, improve readability, and create a clearer version of your content in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -160,7 +160,7 @@
     {
       "name": "Article Writer",
       "url": "https://easyworktools.online/tools/ai-write/article-writer/",
-      "description": "Create an article from a title",
+      "description": "Write article drafts quickly with this free AI article writer. Create structured, informative content from your topic or brief directly in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -181,7 +181,7 @@
     {
       "name": "Bill of Sale",
       "url": "https://easyworktools.online/tools/ai-write/bill-of-sale/",
-      "description": "Generate bill of sale for your",
+      "description": "Create a clear bill of sale draft with this free AI generator. Add buyer, seller, and item details to produce a simple document you can review before use.",
       "category": null,
       "keywords": [
         "ai write",
@@ -202,7 +202,7 @@
     {
       "name": "Blog Outline Generator",
       "url": "https://easyworktools.online/tools/ai-write/blog-outline-generator/",
-      "description": "Write Blog Outline",
+      "description": "Generate a structured blog post outline online for free. Organize headings, sections, and key points so you can plan and write content faster with AI assistance.",
       "category": null,
       "keywords": [
         "ai write",
@@ -223,7 +223,7 @@
     {
       "name": "Blog Post Generator",
       "url": "https://easyworktools.online/tools/ai-write/blog-post-generator/",
-      "description": "AI SEO Post Generator",
+      "description": "Create blog post drafts with this free AI blog post generator. Turn ideas into readable articles with helpful structure, headings, and content in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -244,7 +244,7 @@
     {
       "name": "Blog Post Ideas",
       "url": "https://easyworktools.online/tools/ai-write/blog-post-ideas/",
-      "description": "Write Blog Post Ideas",
+      "description": "Generate blog post ideas online for free. Discover relevant topics, angles, and titles to plan your content calendar and overcome writer's block quickly.",
       "category": null,
       "keywords": [
         "ai write",
@@ -265,7 +265,7 @@
     {
       "name": "Blog Post Rewriter",
       "url": "https://easyworktools.online/tools/ai-write/blog-post-rewriter/",
-      "description": "Rephrase a blog post",
+      "description": "Rewrite blog posts online with this free AI tool. Improve clarity, update phrasing, and make existing articles more engaging while preserving your message.",
       "category": null,
       "keywords": [
         "ai write",
@@ -286,7 +286,7 @@
     {
       "name": "Business Name Generator",
       "url": "https://easyworktools.online/tools/ai-write/business-name-generator/",
-      "description": "Generate a business name for your idea",
+      "description": "Generate creative business name ideas online for free. Explore brandable options for startups, products, and projects with this AI business name generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -307,7 +307,7 @@
     {
       "name": "Business Plan Generator",
       "url": "https://easyworktools.online/tools/ai-write/business-plan-generator/",
-      "description": "Generate business plan for you",
+      "description": "Create a business plan draft online with this free AI generator. Outline goals, strategy, and key sections to organize your business idea more clearly.",
       "category": null,
       "keywords": [
         "ai write",
@@ -328,7 +328,7 @@
     {
       "name": "Business Slogan Generator",
       "url": "https://easyworktools.online/tools/ai-write/business-slogan-generator/",
-      "description": "Generate business slogan for you",
+      "description": "Generate catchy business slogan ideas online for free. Create memorable taglines for brands, products, and campaigns with this AI slogan generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -349,7 +349,7 @@
     {
       "name": "Cold Email Writer",
       "url": "https://easyworktools.online/tools/ai-write/cold-email-writer/",
-      "description": "Write cold email for you",
+      "description": "Write effective cold emails with this free AI cold email writer. Create clear, professional outreach messages tailored to your goal directly in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -370,7 +370,7 @@
     {
       "name": "Content Brief Generator",
       "url": "https://easyworktools.online/tools/ai-write/content-brief-generator/",
-      "description": "Generate content brief for your article title",
+      "description": "Generate content briefs online for free. Define goals, audience, keywords, and structure so writers can produce focused, high-quality content faster.",
       "category": null,
       "keywords": [
         "ai write",
@@ -391,7 +391,7 @@
     {
       "name": "Content Improver",
       "url": "https://easyworktools.online/tools/ai-write/content-improver/",
-      "description": "Improve your content",
+      "description": "Improve your content with this free AI content improver. Enhance clarity, flow, and readability online while keeping your original intent and message.",
       "category": null,
       "keywords": [
         "ai write",
@@ -412,7 +412,7 @@
     {
       "name": "Content Paraphraser",
       "url": "https://easyworktools.online/tools/ai-write/content-paraphraser/",
-      "description": "Paraphrasing Content",
+      "description": "Paraphrase content online for free with this AI paraphraser. Reword text clearly and naturally to avoid repetition while preserving meaning.",
       "category": null,
       "keywords": [
         "ai write",
@@ -433,7 +433,7 @@
     {
       "name": "Content Planner",
       "url": "https://easyworktools.online/tools/ai-write/content-planner/",
-      "description": "Generate a simple content plan",
+      "description": "Plan content online with this free AI content planner. Organize topics, formats, and publishing ideas to build a clear and consistent content strategy.",
       "category": null,
       "keywords": [
         "ai write",
@@ -454,7 +454,7 @@
     {
       "name": "Content Shortener",
       "url": "https://easyworktools.online/tools/ai-write/content-shortener/",
-      "description": "Resize your content",
+      "description": "Shorten content online for free with this AI text shortener. Condense long drafts into clearer, concise versions while keeping the key points intact.",
       "category": null,
       "keywords": [
         "ai write",
@@ -475,7 +475,7 @@
     {
       "name": "Content Summarizer",
       "url": "https://easyworktools.online/tools/ai-write/content-summarizer/",
-      "description": "Summarize text",
+      "description": "Summarize content online for free with this AI summarizer. Turn long text into concise, easy-to-read summaries that highlight the main points quickly.",
       "category": null,
       "keywords": [
         "ai write",
@@ -496,7 +496,7 @@
     {
       "name": "Essay Writer",
       "url": "https://easyworktools.online/tools/ai-write/essay-writer/",
-      "description": "Easily create an essay with AI",
+      "description": "Draft essays online with this free AI essay writer. Organize ideas into a clear structure and generate readable content you can review and refine in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -517,7 +517,7 @@
     {
       "name": "Explain It",
       "url": "https://easyworktools.online/tools/ai-write/explain-it/",
-      "description": "Explain it like I'm five",
+      "description": "Explain complex topics in simple terms with this free AI tool. Paste text or a concept to get clearer, easier-to-understand explanations online instantly.",
       "category": null,
       "keywords": [
         "ai write",
@@ -538,7 +538,7 @@
     {
       "name": "FAQ Generator",
       "url": "https://easyworktools.online/tools/ai-write/faq-generator/",
-      "description": "Generate FAQ for a blog",
+      "description": "Generate FAQs online for free with this AI FAQ generator. Create relevant questions and clear answers for websites, products, services, or support pages.",
       "category": null,
       "keywords": [
         "ai write",
@@ -559,7 +559,7 @@
     {
       "name": "FB Headline Generator",
       "url": "https://easyworktools.online/tools/ai-write/fb-headline-generator/",
-      "description": "Generate Facebook ad headlines for your company",
+      "description": "Generate Facebook headline ideas online for free. Create attention-grabbing headlines for posts and ads with this AI headline generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -580,7 +580,7 @@
     {
       "name": "Grammar Fixer",
       "url": "https://easyworktools.online/tools/ai-write/grammar-fixer/",
-      "description": "Easily fix the grammar in a block of text",
+      "description": "Fix grammar, spelling, and punctuation online for free. Improve sentence clarity and correctness quickly with this AI grammar fixer in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -601,7 +601,7 @@
     {
       "name": "Instagram Caption Generator",
       "url": "https://easyworktools.online/tools/ai-write/instagram-caption-generator/",
-      "description": "Generate Instagram caption for your post",
+      "description": "Generate Instagram captions online for free. Create engaging, on-brand caption ideas for posts and reels with this AI caption generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -622,7 +622,7 @@
     {
       "name": "Instagram Story Idea",
       "url": "https://easyworktools.online/tools/ai-write/instagram-story-idea/",
-      "description": "Generate Instagram story ideas for you",
+      "description": "Generate Instagram Story ideas online for free. Get creative prompts and content concepts to keep your audience engaged with this AI tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -643,7 +643,7 @@
     {
       "name": "Landing Page Copy Generator",
       "url": "https://easyworktools.online/tools/ai-write/landing-page-copy-generator/",
-      "description": "Generate landing page copy",
+      "description": "Generate landing page copy online for free. Create clear headlines, benefits, and calls to action for marketing pages with this AI copy generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -664,7 +664,7 @@
     {
       "name": "LinkedIn Post Generator",
       "url": "https://easyworktools.online/tools/ai-write/linkedin-post-generator/",
-      "description": "Generate LinkedIn post for your profile",
+      "description": "Generate LinkedIn post ideas and drafts online for free. Create professional, engaging content for your profile or company page with this AI writing tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -685,7 +685,7 @@
     {
       "name": "Meta Description Generator",
       "url": "https://easyworktools.online/tools/ai-write/meta-description-generator/",
-      "description": "Generate a meta description for your article",
+      "description": "Generate SEO meta descriptions online for free. Create concise, compelling snippets for pages and articles with this AI meta description generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -706,7 +706,7 @@
     {
       "name": "NDA Generator",
       "url": "https://easyworktools.online/tools/ai-write/nda-generator/",
-      "description": "Generate NDA for your",
+      "description": "Create an NDA draft online with this free AI generator. Outline key confidentiality terms and parties to produce a starting document you can review.",
       "category": null,
       "keywords": [
         "ai write",
@@ -727,7 +727,7 @@
     {
       "name": "Paragraph Completer",
       "url": "https://easyworktools.online/tools/ai-write/paragraph-completer/",
-      "description": "Paragraph Completer",
+      "description": "Complete paragraphs online for free with this AI writing tool. Continue your draft naturally and finish ideas with clear, relevant text in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -748,7 +748,7 @@
     {
       "name": "Paragraph Rewriter",
       "url": "https://easyworktools.online/tools/ai-write/paragraph-rewriter/",
-      "description": "Rephrase a paragraph",
+      "description": "Rewrite paragraphs online for free with this AI paragraph rewriter. Improve clarity, tone, and flow while keeping the original meaning of your text.",
       "category": null,
       "keywords": [
         "ai write",
@@ -769,7 +769,7 @@
     {
       "name": "Paragraph Writer",
       "url": "https://easyworktools.online/tools/ai-write/paragraph-writer/",
-      "description": "Paragraph Writer",
+      "description": "Write paragraphs online with this free AI paragraph writer. Generate clear, well-structured text from a prompt or topic directly in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -790,7 +790,7 @@
     {
       "name": "Podcast Script Writer",
       "url": "https://easyworktools.online/tools/ai-write/podcast-script-writer/",
-      "description": "Podcast Script Generator",
+      "description": "Generate podcast script drafts online for free. Create intros, segments, and talking points for episodes with this AI podcast script writer.",
       "category": null,
       "keywords": [
         "ai write",
@@ -811,7 +811,7 @@
     {
       "name": "Poll Generator",
       "url": "https://easyworktools.online/tools/ai-write/poll-generator/",
-      "description": "AI Generated Polls",
+      "description": "Generate poll questions and answer options online for free. Create engaging polls for social media, communities, or feedback with this AI poll generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -832,7 +832,7 @@
     {
       "name": "Post Writer",
       "url": "https://easyworktools.online/tools/ai-write/post-writer/",
-      "description": "Generate a blog post",
+      "description": "Write social or blog posts online with this free AI post writer. Turn ideas into clear, ready-to-edit drafts quickly in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -853,7 +853,7 @@
     {
       "name": "Press Release Generator",
       "url": "https://easyworktools.online/tools/ai-write/press-release-generator/",
-      "description": "Generate a press release",
+      "description": "Generate press release drafts online for free. Create structured announcements with key details and professional wording using this AI writing tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -874,7 +874,7 @@
     {
       "name": "Privacy Policy Generator",
       "url": "https://easyworktools.online/tools/ai-write/privacy-policy-generator/",
-      "description": "Generate privacy policy for your",
+      "description": "Create a privacy policy draft online with this free AI generator. Outline common sections and details to help you prepare a starting document for review.",
       "category": null,
       "keywords": [
         "ai write",
@@ -895,7 +895,7 @@
     {
       "name": "Purchase Agreement",
       "url": "https://easyworktools.online/tools/ai-write/purchase-agreement/",
-      "description": "Generate purchase agreement for your",
+      "description": "Create a purchase agreement draft online with this free AI generator. Organize buyer, seller, and item terms into a clear starting document.",
       "category": null,
       "keywords": [
         "ai write",
@@ -916,7 +916,7 @@
     {
       "name": "Real Estate Descriptions",
       "url": "https://easyworktools.online/tools/ai-write/real-estate-descriptions/",
-      "description": "Generate Real Estate Descriptions for your",
+      "description": "Generate real estate property descriptions online for free. Create clear, appealing listing copy from property details with this AI writing tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -937,7 +937,7 @@
     {
       "name": "Search",
       "url": "https://easyworktools.online/tools/ai-write/search/",
-      "description": "Search",
+      "description": "Use AI-powered writing search to explore topics and generate helpful content ideas online for free. Find inspiration and draft text quickly in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -958,7 +958,7 @@
     {
       "name": "Sentence Rewriter",
       "url": "https://easyworktools.online/tools/ai-write/sentence-rewriter/",
-      "description": "Sentence Rewriter",
+      "description": "Rewrite sentences online for free with this AI sentence rewriter. Improve clarity, tone, and readability while preserving your original meaning.",
       "category": null,
       "keywords": [
         "ai write",
@@ -979,7 +979,7 @@
     {
       "name": "Story Generator",
       "url": "https://easyworktools.online/tools/ai-write/story-generator/",
-      "description": "Generate a Story",
+      "description": "Generate story ideas and drafts online for free. Create creative narratives from prompts with this AI story generator in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1000,7 +1000,7 @@
     {
       "name": "Summarize YouTube",
       "url": "https://easyworktools.online/tools/ai-write/summarize-youtube/",
-      "description": "Summarize YouTube Video",
+      "description": "Summarize YouTube video content online with this free AI tool. Get key points and takeaways quickly to understand videos without watching everything.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1021,7 +1021,7 @@
     {
       "name": "TikTok Script Writer",
       "url": "https://easyworktools.online/tools/ai-write/tiktok-script-writer/",
-      "description": "TikTok Script Writer",
+      "description": "Generate TikTok script ideas and drafts online for free. Plan hooks, scenes, and calls to action for short-form videos with this AI writing tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1042,7 +1042,7 @@
     {
       "name": "Title Rewriter",
       "url": "https://easyworktools.online/tools/ai-write/title-rewriter/",
-      "description": "Rewrite your article title",
+      "description": "Rewrite titles online for free with this AI title rewriter. Create clearer, more engaging headlines and titles while keeping the core topic intact.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1063,7 +1063,7 @@
     {
       "name": "Tone of Voice",
       "url": "https://easyworktools.online/tools/ai-write/tone-of-voice/",
-      "description": "Tone of Voice Tool",
+      "description": "Adjust the tone of voice in your text online for free. Rewrite content to sound more formal, friendly, persuasive, or clear with this AI tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1084,7 +1084,7 @@
     {
       "name": "Translate",
       "url": "https://easyworktools.online/tools/ai-write/translate/",
-      "description": "Easily Translate Text",
+      "description": "Translate and rewrite text online for free with this AI writing tool. Convert content into clear language for different audiences quickly in your browser.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1105,7 +1105,7 @@
     {
       "name": "Trivia Generator",
       "url": "https://easyworktools.online/tools/ai-write/trivia-generator/",
-      "description": "Generate Trivia Questions",
+      "description": "Generate trivia questions and answers online for free. Create fun quizzes for games, classes, or events with this AI trivia generator.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1126,7 +1126,7 @@
     {
       "name": "Twitter Generator",
       "url": "https://easyworktools.online/tools/ai-write/twitter-generator/",
-      "description": "Twitter generator",
+      "description": "Generate tweets and post ideas online for free. Create concise, engaging Twitter/X content from your topic with this AI writing tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1147,7 +1147,7 @@
     {
       "name": "Word Counter",
       "url": "https://easyworktools.online/tools/ai-write/word-counter/",
-      "description": "Count words in your text",
+      "description": "Count words, characters, sentences, and reading time online for free. Analyze your text instantly with this simple browser-based word counter tool.",
       "category": null,
       "keywords": [
         "ai write",
@@ -1168,7 +1168,7 @@
     {
       "name": "YouTube Script Writer",
       "url": "https://easyworktools.online/tools/ai-write/youtube-script-writer/",
-      "description": "Generate a YouTube script",
+      "description": "Generate YouTube video script drafts online for free. Plan intros, segments, and outros to create structured video content with this AI script writer.",
       "category": null,
       "keywords": [
         "ai write",
