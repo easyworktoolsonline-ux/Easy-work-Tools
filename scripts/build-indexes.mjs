@@ -48,39 +48,52 @@ const root = process.cwd();
  * ------------------------------------------------------------------ */
 function loadIconSvg(appFile) {
   const source = readFileSync(appFile, 'utf8');
-  const start = source.indexOf('function iconSvg(key){');
-  if (start === -1) throw new Error('iconSvg() not found in assets/app.js');
+  const start = source.indexOf('function iconSvgRaw(key){');
+  if (start === -1) throw new Error('iconSvgRaw() not found in assets/app.js');
 
   // Brace-match from the opening brace to find the exact end of the function.
   // A text search for "\n}" is not reliable here: app.js is hand-minified, so
   // several unrelated statements end that way later in the file.
-  const open = source.indexOf('{', start);
-  let depth = 0;
-  let end = -1;
-  for (let i = open; i < source.length; i++) {
-    const ch = source[i];
-    // Skip over string literals so braces inside them are not counted.
-    if (ch === "'" || ch === '"' || ch === '`') {
-      const quote = ch;
-      i++;
-      while (i < source.length && source[i] !== quote) {
-        if (source[i] === '\\') i++;
+  const matchBrace = (from) => {
+    const open = source.indexOf('{', from);
+    let depth = 0;
+    for (let i = open; i < source.length; i++) {
+      const ch = source[i];
+      // Skip over string literals so braces inside them are not counted.
+      if (ch === "'" || ch === '"' || ch === '`') {
+        const quote = ch;
         i++;
+        while (i < source.length && source[i] !== quote) {
+          if (source[i] === '\\') i++;
+          i++;
+        }
+        continue;
       }
-      continue;
+      if (ch === '{') depth++;
+      else if (ch === '}') {
+        depth--;
+        if (depth === 0) return i + 1;
+      }
     }
-    if (ch === '{') depth++;
-    else if (ch === '}') {
-      depth--;
-      if (depth === 0) { end = i + 1; break; }
-    }
-  }
-  if (end === -1) throw new Error('could not find the end of iconSvg() in assets/app.js');
+    return -1;
+  };
 
-  const fnSource = source.slice(start, end);
+  const end = matchBrace(start);
+  if (end === -1) throw new Error('could not find the end of iconSvgRaw() in assets/app.js');
+
+  // iconSvg() is a thin wrapper around iconSvgRaw() that suffixes every gradient
+  // id with a per-instance counter, so repeated cards on one page no longer emit
+  // duplicate DOM ids (gImg, gTextCute, gThumb) with colliding url(#...) refs.
+  const wrapStart = source.indexOf('function iconSvg(key){', end);
+  if (wrapStart === -1) throw new Error('iconSvg() wrapper not found in assets/app.js');
+  const wrapEnd = matchBrace(wrapStart);
+  if (wrapEnd === -1) throw new Error('could not find the end of the iconSvg() wrapper');
+
+  const fnSource = source.slice(start, end) + source.slice(wrapStart, wrapEnd);
   const iconSvg = new Function(fnSource + '\nreturn iconSvg;')();
   if (typeof iconSvg !== 'function') throw new Error('iconSvg() did not evaluate to a function');
   if (!iconSvg('age').startsWith('<svg')) throw new Error('iconSvg() produced invalid output');
+  if (!/id="gImg\d+"/.test(iconSvg('image'))) throw new Error('iconSvg() gradient ids are not uniquified');
   // Every key that has a real branch, so a typo'd iconKey can be caught here
   // instead of silently rendering the generic fallback tile on the page.
   const iconKeys = new Set([...fnSource.matchAll(/if\(key==='([^']+)'/g)].map((m) => m[1]));
@@ -1207,18 +1220,14 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
 }
 
 // Clean, valid sitemap URLs (HTML pages only; llms.txt & ai-catalog.json are in robots.txt).
-const todayIso = new Date().toISOString().slice(0, 10);
-async function lastmodFor(u) {
-  try {
-    let rel = u.replace('https://easyworktools.online/', '');
-    if (!rel || rel.endsWith('/')) rel += 'index.html';
-    const st = await fs.stat(path.join(root, rel));
-    return st.mtime.toISOString().slice(0, 10);
-  } catch {
-    return todayIso;
-  }
-}
-
+//
+// <lastmod> is deliberately NOT emitted. It used to be the file's mtime, which
+// in a fresh checkout/deploy artifact is the checkout time rather than the date
+// the content actually changed, so every URL advertised the same build date.
+// There is no reliable per-page modification date available at build time
+// (the deployed tree has no meaningful source-control history), and publishing
+// a guessed date is worse than publishing none. Search engines fall back to
+// their own crawl signals when lastmod is absent.
 const urls = [
   'https://easyworktools.online/',
   'https://easyworktools.online/tools/',
@@ -1239,9 +1248,7 @@ const urls = [
   ...posts.map(x => 'https://easyworktools.online/' + x.url)
 ];
 
-const sitemapEntries = await Promise.all(
-  urls.map(async u => `<url><loc>${u}</loc><lastmod>${await lastmodFor(u)}</lastmod></url>`)
-);
+const sitemapEntries = urls.map(u => `<url><loc>${u}</loc></url>`);
 
 await fs.writeFile(
   path.join(root, 'sitemap.xml'),

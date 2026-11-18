@@ -105,7 +105,7 @@
     "url": "blog/content-summarizer"
   },
   {
-    "title": "Does Minifying HTML, CSS and JS Actually Speed Up Your Site? | EasyWorkTools.online",
+    "title": "Does Minifying Code Improve Page Speed? | EasyWorkTools",
     "description": "What code minification actually removes, how much it typically saves, and where it fits alongside compression and caching for real page speed gains.",
     "url": "blog/does-minifying-code-improve-page-speed"
   },
@@ -140,12 +140,12 @@
     "url": "blog/grammar-fixer"
   },
   {
-    "title": "Why Your iPhone Photos Won&#x27;t Open Everywhere (and How to Fix It) | EasyWorkTools.online",
+    "title": "HEIC to JPG: Why iPhone Photos Won't Open | EasyWorkTools",
     "description": "Why iPhone photos save as HEIC, why that format doesn&#x27;t open everywhere, and how to convert HEIC to JPG for free without installing anything.",
     "url": "blog/heic-to-jpg-iphone-photos-guide"
   },
   {
-    "title": "HEX vs RGB vs HSL: Converting Colors for CSS and Design | EasyWorkTools.online",
+    "title": "HEX vs RGB vs HSL: Convert Colors for CSS | EasyWorkTools",
     "description": "The difference between HEX, RGB and HSL color formats, when to use each in CSS, and how to convert between them without doing the math by hand.",
     "url": "blog/hex-rgb-hsl-color-conversion-guide"
   },
@@ -155,12 +155,12 @@
     "url": "blog/how-to-add-a-watermark-to-your-photos"
   },
   {
-    "title": "How to Add a Background Color to a Transparent PNG | EasyWorkTools.online",
+    "title": "Add a Background to a Transparent PNG | EasyWorkTools",
     "description": "Learn how to fill a transparent PNG or WebP with a solid background color free online with EasyWorkTools.online—no account required.",
     "url": "blog/how-to-add-background-color-to-transparent-png"
   },
   {
-    "title": "How to Add a Border and Rounded Corners to an Image | EasyWorkTools.online",
+    "title": "Add a Border and Rounded Corners to an Image | EasyWorkTools",
     "description": "Learn how to add a colored border and round the corners of any image, or make it fully circular, using EasyWorkTools.online.",
     "url": "blog/how-to-add-border-and-rounded-corners-to-image"
   },
@@ -170,7 +170,7 @@
     "url": "blog/how-to-add-watermark-to-pdf"
   },
   {
-    "title": "How to Check an Image's Dimensions and Aspect Ratio | EasyWorkTools.online",
+    "title": "Check an Image's Dimensions and Aspect Ratio | EasyWorkTools",
     "description": "Learn how to check an image",
     "url": "blog/how-to-check-image-dimensions-and-aspect-ratio"
   },
@@ -180,17 +180,17 @@
     "url": "blog/how-to-clean-text-before-publishing"
   },
   {
-    "title": "How to Clean Up Text Copied From a PDF or Old Document | EasyWorkTools.online",
+    "title": "Clean Up Text Copied From a PDF | EasyWorkTools",
     "description": "Why text copied from a PDF or scanned document brings along extra spaces, invisible characters and odd quotes, and how to strip all of it out at once.",
     "url": "blog/how-to-clean-up-copied-text"
   },
   {
-    "title": "How to Compare Two Images Online (Slider & Pixel Diff) | EasyWorkTools.online",
+    "title": "Compare Two Images Online: Slider and Diff | EasyWorkTools",
     "description": "Learn how to compare two images side by side with a slider, or highlight exact pixel differences, using EasyWorkTools.online.",
     "url": "blog/how-to-compare-two-images-online"
   },
   {
-    "title": "How to Spot Every Change Between Two Versions of a Document | EasyWorkTools.online",
+    "title": "Compare Two Texts: Find Every Difference | EasyWorkTools",
     "description": "How to compare two versions of a text online for free and see exactly which lines were added, removed or unchanged, with a similarity percentage.",
     "url": "blog/how-to-compare-two-texts"
   },
@@ -215,7 +215,7 @@
     "url": "blog/how-to-convert-image-to-base64"
   },
   {
-    "title": "How to Turn Photos Into a Single PDF (and Back Again) | EasyWorkTools.online",
+    "title": "Turn Photos Into a Single PDF | EasyWorkTools",
     "description": "A step-by-step guide to combining JPG or PNG images into one PDF document, and extracting individual pages from a PDF as JPG images, for free.",
     "url": "blog/how-to-convert-jpg-to-pdf"
   },
@@ -225,27 +225,27 @@
     "url": "blog/how-to-convert-json-to-csv"
   },
   {
-    "title": "How to Convert Markdown to HTML (or Strip It to Plain Text) | EasyWorkTools.online",
+    "title": "Convert Markdown to HTML or Plain Text | EasyWorkTools",
     "description": "How to convert Markdown to HTML with a live preview, strip Markdown formatting to plain text, or convert HTML to plain text, all for free in your browser.",
     "url": "blog/how-to-convert-markdown-to-html"
   },
   {
-    "title": "How to Convert PDF to JPG/PNG and Images Back to PDF | EasyWorkTools.online",
+    "title": "Convert PDF to JPG/PNG and Back | EasyWorkTools",
     "description": "Learn how to turn PDF pages into JPG or PNG images, and how to combine JPG, PNG and WebP images into a single PDF, for free using EasyWorkTools.online.",
     "url": "blog/how-to-convert-pdf-to-images-and-back"
   },
   {
-    "title": "How to Convert Text Case Online: Uppercase, Lowercase, Title Case & More | EasyWorkTools.online",
+    "title": "Text Case Converter: Upper, Lower, Title Case | EasyWorkTools",
     "description": "Learn how to convert text case online for free using EasyWorkTools.online. Step-by-step guide for uppercase, lowercase, title case, slug case and snake case.",
     "url": "blog/how-to-convert-text-case-online"
   },
   {
-    "title": "How to Convert Units Online: Metric to Imperial Made Simple | EasyWorkTools.online",
+    "title": "Convert Units Online: Metric to Imperial | EasyWorkTools",
     "description": "Learn how to convert length, weight, temperature, volume, area and speed between metric and imperial units for free using EasyWorkTools.online.",
     "url": "blog/how-to-convert-units-online"
   },
   {
-    "title": "How to Hit an Exact Word or Character Count Every Time | EasyWorkTools.online",
+    "title": "Word and Character Counter: Exact Count | EasyWorkTools",
     "description": "How to accurately count words, characters, sentences and reading time for essays, ad copy, meta descriptions and character-limited fields online for free.",
     "url": "blog/how-to-count-words-and-characters"
   },
@@ -255,7 +255,7 @@
     "url": "blog/how-to-create-a-favicon-for-your-website"
   },
   {
-    "title": "How to Create SEO-Friendly URL Slugs From Any Title | EasyWorkTools.online",
+    "title": "Create SEO-Friendly URL Slugs From Any Title | EasyWorkTools",
     "description": "What makes a good URL slug, why accented characters and stopwords cause problems, and how to turn any page title into a clean, lowercase slug.",
     "url": "blog/how-to-create-seo-url-slugs"
   },
@@ -270,7 +270,7 @@
     "url": "blog/how-to-edit-pdf-metadata"
   },
   {
-    "title": "How to Edit Photos Online for Free (Filters & Adjustments) | EasyWorkTools.online",
+    "title": "Edit Photos Online Free: Filters and Fixes | EasyWorkTools",
     "description": "Learn how to adjust brightness, contrast and saturation, and apply filters like grayscale and blur, using EasyWorkTools.online",
     "url": "blog/how-to-edit-photos-online-free"
   },
@@ -280,7 +280,7 @@
     "url": "blog/how-to-escape-html-special-characters"
   },
   {
-    "title": "How to Pull Every Email and Link Out of a Block of Text | EasyWorkTools.online",
+    "title": "Extract Emails and URLs From Text | EasyWorkTools",
     "description": "How to extract every email address, URL, phone number, hashtag or date from a block of text online for free, without scanning it line by line.",
     "url": "blog/how-to-extract-emails-and-urls-from-text"
   },
@@ -290,12 +290,12 @@
     "url": "blog/how-to-find-a-color-from-an-image"
   },
   {
-    "title": "How to Find and Replace Text Across a Whole Document | EasyWorkTools.online",
+    "title": "Find and Replace Text in a Document | EasyWorkTools",
     "description": "How to find and replace text online, including whole-word matching, regex patterns with capture groups, and applying a whole list of substitutions at once.",
     "url": "blog/how-to-find-and-replace-text"
   },
   {
-    "title": "How to Generate YouTube Tags That Actually Help Your Video | EasyWorkTools.online",
+    "title": "Generate YouTube Tags That Help Your Video | EasyWorkTools",
     "description": "Learn how to create a well-structured, properly formatted list of YouTube video tags for free using EasyWorkTools.online",
     "url": "blog/how-to-generate-youtube-tags"
   },
@@ -305,7 +305,7 @@
     "url": "blog/how-to-make-a-photo-collage-online"
   },
   {
-    "title": "How to Merge, Reorder and Organize PDF Pages Online | EasyWorkTools.online",
+    "title": "Merge, Reorder and Organize PDF Pages | EasyWorkTools",
     "description": "Learn how to combine multiple PDFs into one, fix page order, rotate sideways scans and pull out just the pages you need, for free using EasyWorkTools.",
     "url": "blog/how-to-merge-and-organize-pdf-pages"
   },
@@ -315,37 +315,37 @@
     "url": "blog/how-to-merge-or-stitch-images-together"
   },
   {
-    "title": "How to Combine Multiple PDFs Into One File for Free | EasyWorkTools.online",
+    "title": "Combine Multiple PDFs Into One File | EasyWorkTools",
     "description": "How to merge several PDF files into one document, and how to split a PDF into individual pages or a specific page range, without installing software.",
     "url": "blog/how-to-merge-split-pdf-files"
   },
   {
-    "title": "How to Reduce SVG File Size Without Breaking Your Icons | EasyWorkTools.online",
+    "title": "Reduce SVG File Size Without Breaking Icons | EasyWorkTools",
     "description": "Learn why SVG files exported from design tools are often bloated, what safe cleanup actually removes, and how to shrink them without changing how they look.",
     "url": "blog/how-to-optimize-svg-files"
   },
   {
-    "title": "How to Read a Long URL Full of Tracking Parameters | EasyWorkTools.online",
+    "title": "Read a Long URL Full of Tracking Parameters | EasyWorkTools",
     "description": "How to break a long, messy URL down into its protocol, host, path and individual query parameters, without manually counting ampersands and question marks.",
     "url": "blog/how-to-parse-and-read-a-url"
   },
   {
-    "title": "How to Prepare Images for Websites, Documents and Social Media | EasyWorkTools.online",
+    "title": "Prepare Images for Web, Documents and Social | EasyWorkTools",
     "description": "Learn how to choose image dimensions, aspect ratios, file formats and practical resizing settings for common digital workflows.",
     "url": "blog/how-to-prepare-images-for-web"
   },
   {
-    "title": "How to Reduce PDF File Size Without Losing Selectable Text | EasyWorkTools.online",
+    "title": "Reduce PDF File Size Without Losing Text | EasyWorkTools",
     "description": "Learn the difference between optimizing a PDF",
     "url": "blog/how-to-reduce-pdf-file-size"
   },
   {
-    "title": "How to Add Line Numbers, Prefixes and More to a List | EasyWorkTools.online",
+    "title": "Add Line Numbers and Prefixes to a List | EasyWorkTools",
     "description": "How to number lines, add a prefix or suffix to every line, filter a list by pattern, or convert between a newline list and a comma-separated string, for free.",
     "url": "blog/how-to-reformat-a-list-of-lines"
   },
   {
-    "title": "How to Clean Up a Messy Email List or Keyword List Fast | EasyWorkTools.online",
+    "title": "Remove Duplicate Lines From a List | EasyWorkTools",
     "description": "How to strip duplicate lines from a merged email list, keyword list or exported data set online for free, with case-insensitive matching and trimming.",
     "url": "blog/how-to-remove-duplicate-lines-from-a-list"
   },
@@ -360,12 +360,12 @@
     "url": "blog/how-to-resize-images-for-every-social-platform"
   },
   {
-    "title": "How to Resize Images Online for Free: A Simple Step-by-Step Guide | EasyWorkTools.online",
+    "title": "Resize Images Online Free: Step-by-Step | EasyWorkTools",
     "description": "Learn how to resize images online for free using EasyWorkTools.online. Follow this step-by-step guide for custom dimensions, platform presets, previewing.",
     "url": "blog/how-to-resize-images-online"
   },
   {
-    "title": "Resize vs Compress Images: What Is the Difference? | EasyWorkTools.online",
+    "title": "Resize vs Compress Images: What's the Difference? | EasyWorkTools",
     "description": "Understand the difference between resizing an image and compressing an image, when each method is useful, and how to choose a practical workflow.",
     "url": "blog/how-to-resize-vs-compress-images"
   },
@@ -380,17 +380,17 @@
     "url": "blog/how-to-split-an-image-into-a-grid"
   },
   {
-    "title": "How to Test a Regular Expression Before Using It in Code | EasyWorkTools.online",
+    "title": "How to Test a Regular Expression Before Use | EasyWorkTools",
     "description": "How to test a regex pattern against real sample text, what the global, case-insensitive and multiline flags actually change, and common mistakes to check for.",
     "url": "blog/how-to-test-regular-expressions"
   },
   {
-    "title": "How to Verify an Image File's Real Format and Integrity | EasyWorkTools.online",
+    "title": "Verify an Image File's Real Format | EasyWorkTools",
     "description": "Learn how to check a file",
     "url": "blog/how-to-verify-an-image-file-is-genuine"
   },
   {
-    "title": "How to Write Meta Tags That Don&#x27;t Get Cut Off in Google | EasyWorkTools.online",
+    "title": "Write Meta Tags That Don't Get Cut Off | EasyWorkTools",
     "description": "Recommended title and meta description lengths, what Open Graph and Twitter Card tags are for, and how to generate a complete, correctly formatted set.",
     "url": "blog/how-to-write-seo-meta-tags"
   },
@@ -420,7 +420,7 @@
     "url": "blog/linkedin-post-generator"
   },
   {
-    "title": "MD5 vs SHA-256: Hashing Explained (and Why It Isn't Encryption) | EasyWorkTools.online",
+    "title": "MD5 vs SHA-256: Hashing vs Encryption | EasyWorkTools",
     "description": "What a hash function actually does, why MD5 and SHA-1 are considered broken, when SHA-256 is the right choice, and why hashing is not the same as encryption.",
     "url": "blog/md5-vs-sha256-hashing-explained"
   },
@@ -545,22 +545,22 @@
     "url": "blog/twitter-generator"
   },
   {
-    "title": "Unix Timestamps Explained: Converting Epoch Time to a Real Date | EasyWorkTools.online",
+    "title": "Unix Timestamp Converter: Epoch to Date | EasyWorkTools",
     "description": "What a Unix timestamp is, why seconds and milliseconds get confused so often, and how to convert epoch time to a readable date in your local timezone or UTC.",
     "url": "blog/unix-timestamp-explained"
   },
   {
-    "title": "Uppercase, Lowercase and Title Case: When to Use Each Text Style | EasyWorkTools.online",
+    "title": "Uppercase, Lowercase and Title Case Explained | EasyWorkTools",
     "description": "A practical guide to common text case styles, including uppercase, lowercase, title case, sentence case and when each is useful.",
     "url": "blog/uppercase-lowercase-title-case-guide"
   },
   {
-    "title": "URL Encoding Explained: When and Why to Percent-Encode Text | EasyWorkTools.online",
+    "title": "URL Encoding Explained: When to Encode Text | EasyWorkTools",
     "description": "What percent-encoding actually does, the difference between encodeURIComponent and encodeURI, and when you need each one in a real URL or query string.",
     "url": "blog/url-encoding-explained"
   },
   {
-    "title": "UUID Versions Explained: v1 vs v4, and What They Actually Encode | EasyWorkTools.online",
+    "title": "UUID Versions Explained: v1 vs v4 Differences | EasyWorkTools",
     "description": "What a UUID actually is, the difference between version 1 (time-based) and version 4 (random), and how to generate or inspect one for free.",
     "url": "blog/uuid-versions-explained"
   },
@@ -570,22 +570,22 @@
     "url": "blog/vimeo-thumbnail-downloader"
   },
   {
-    "title": "What Is Base64 Encoding and When Do You Actually Need It? | EasyWorkTools.online",
+    "title": "What Is Base64 Encoding? When to Use It | EasyWorkTools",
     "description": "A plain-language explanation of Base64 encoding, why it shows up in data URIs and API tokens, and why it is not a form of encryption or security.",
     "url": "blog/what-is-base64-encoding"
   },
   {
-    "title": "What Is a Flesch Reading Ease Score, and Does It Matter? | EasyWorkTools.online",
+    "title": "Flesch Reading Ease Score: What It Means | EasyWorkTools",
     "description": "What the Flesch Reading Ease and Flesch-Kincaid Grade Level formulas actually measure, what a good score looks like, and where these formulas fall short.",
     "url": "blog/what-is-flesch-reading-ease-score"
   },
   {
-    "title": "What Is Keyword Density and Does It Still Matter for SEO? | EasyWorkTools.online",
+    "title": "Keyword Density: Does It Still Matter for SEO? | EasyWorkTools",
     "description": "What keyword density actually measures, why old-school density targets are outdated advice, and how to use a density checker sensibly before publishing.",
     "url": "blog/what-is-keyword-density-seo"
   },
   {
-    "title": "What Is Lorem Ipsum and Why Do Designers Still Use It? | EasyWorkTools.online",
+    "title": "What Is Lorem Ipsum? Why Designers Use It | EasyWorkTools",
     "description": "What Lorem Ipsum placeholder text actually is, where it came from, and how to generate exactly as much as you need for a mockup or template.",
     "url": "blog/what-is-lorem-ipsum"
   },

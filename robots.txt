@@ -1,10 +1,16 @@
+# robots.txt - EasyWorkTools.online
+#
+# This file is the repository source of truth. Cloudflare's managed robots.txt
+# feature prepends its own block at the edge, so the rules below are appended and
+# remain in effect.
+
 User-agent: *
 Allow: /
-Sitemap: https://easyworktools.online/sitemap.xml
+# API endpoints are per-request traffic counters and page-view writes, never
+# indexable content.
+Disallow: /api/
 
-# Machine-readable indexes for crawlers and agents
-Allow: /llms.txt
-Allow: /ai-catalog.json
+Sitemap: https://easyworktools.online/sitemap.xml
 
 # Google AdSense crawler
 User-agent: Mediapartners-Google

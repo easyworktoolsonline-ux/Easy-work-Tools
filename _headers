@@ -21,11 +21,31 @@
 # break anything on the day it happens; they can be removed once the dashboard
 # has been clean for a while.
 #
-# HSTS: max-age raised from 1 year to 2 years (63072000). includeSubDomains and
-# preload are intentionally NOT set: they commit every present and future
-# subdomain to HTTPS-only (preload is very hard to reverse) and that has not
-# been verified here. To opt in, confirm all subdomains serve valid HTTPS, add
-# `; includeSubDomains; preload` and submit at hstspreload.org.
+# AdSense origins: the site serves AdSense (ca-pub-3298442828407277) on every
+# page, so its runtime requests were measured in a real browser and the exact
+# origins that produced report-only violations were added below:
+#   script-src  pagead2.googlesyndication.com (adsbygoogle.js + show_ads_impl)
+#               ep2.adtrafficquality.google (sodar2.js)
+#   frame-src   googleads.g.doubleclick.net (ad frame)
+#               ep2.adtrafficquality.google (sodar frames)
+#               www.google.com - scoped to /recaptcha/ (the AdSense aframe is
+#               https://www.google.com/recaptcha/api2/aframe), not the whole host
+#   connect-src ep1.adtrafficquality.google (sodar getconfig)
+#   img-src     ep1.adtrafficquality.google (sodar pixel)
+# No wildcard sources were added and nothing was removed.
+#
+# HSTS: the header below is aligned with the policy the zone actually serves
+# (max-age=15552000, 180 days). The Cloudflare zone-level HSTS setting is the
+# source of truth for this header and can override the repository value, so the
+# repo was previously declaring 2 years (63072000) while production sent 180
+# days - a real, observable drift. 180 days is the conservative, already-live
+# value; raising it is a deliberate zone-level decision, not a repo edit.
+#
+# includeSubDomains and preload are intentionally NOT set: they commit every
+# present and future subdomain to HTTPS-only (preload is very hard to reverse)
+# and that has not been verified here. To opt in, confirm all subdomains serve
+# valid HTTPS, add `; includeSubDomains; preload` here and in the zone setting,
+# then submit at hstspreload.org.
 #
 # Trusted Types is NOT enabled: the site has hundreds of inline onclick handlers
 # and innerHTML writes, so `require-trusted-types-for 'script'` would break
@@ -46,8 +66,8 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), midi=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
-  Strict-Transport-Security: max-age=63072000
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com; connect-src 'self' https://script.google.com https://cloudflareinsights.com; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Strict-Transport-Security: max-age=15552000
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://ep1.adtrafficquality.google; connect-src 'self' https://script.google.com https://cloudflareinsights.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 /favicon.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
