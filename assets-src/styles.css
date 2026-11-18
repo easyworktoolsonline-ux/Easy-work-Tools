@@ -4654,3 +4654,137 @@ html[data-theme="dark"] .article-shell article li::marker{
     padding-left:1.25rem;
   }
 }
+
+/* ==========================================================================
+ * CONSISTENT CENTERED TOOL PAGE UI (ALL 198 TOOLS)
+ *
+ * Center the informational and interface chrome on tool pages without
+ * changing the reading direction of code, tables, structured data or form
+ * values. Scoped to body[data-tool-cat] so home, category, blog and guide
+ * pages keep their existing layouts.
+ * ========================================================================== */
+body[data-tool-cat] .tool-hero,
+body[data-tool-cat] #landingSection,
+body[data-tool-cat] #heroPage{
+  text-align:center!important;
+  width:100%!important;
+  max-width:1000px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  box-sizing:border-box!important;
+}
+body[data-tool-cat] .tool-hero h1,
+body[data-tool-cat] #landingSection h1,
+body[data-tool-cat] #heroPage h1{
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-tool-cat] .tool-hero h1:after,
+body[data-tool-cat] #landingSection h1:after,
+body[data-tool-cat] #heroPage h1:after{
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-tool-cat] .tool-hero .lede,
+body[data-tool-cat] .tool-hero > p,
+body[data-tool-cat] #landingSection .hero-left p:not(.upload-subtext),
+body[data-tool-cat] #heroPage .hero-subtitle{
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-tool-cat] .tool-hero-inner{
+  width:100%!important;
+  max-width:760px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+}
+body[data-tool-cat] #landingSection{
+  justify-content:center!important;
+}
+body[data-tool-cat] #landingSection .hero-left{
+  text-align:center!important;
+}
+body[data-tool-cat] #landingSection .hero-left h1,
+body[data-tool-cat] #landingSection .hero-left p{
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-tool-cat] #landingSection .hero-right{
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-tool-cat] .tool-page .panel > h2,
+body[data-tool-cat] .tool-page .panel > h3,
+body[data-tool-cat] .tool-page .panel > p,
+body[data-tool-cat] .tool-page .honest-note,
+body[data-tool-cat] .field-label,
+body[data-tool-cat] .count-note,
+body[data-tool-cat] .status-line,
+body[data-tool-cat] .hint-line{
+  text-align:center!important;
+}
+body[data-tool-cat] .tool-hero .actions,
+body[data-tool-cat] .tool-hero .action-row,
+body[data-tool-cat] .tool-hero .btn-row,
+body[data-tool-cat] .tool-hero .tool-actions,
+body[data-tool-cat] .tool-page .actions,
+body[data-tool-cat] .tool-page .action-row,
+body[data-tool-cat] .tool-page .btn-row,
+body[data-tool-cat] .tool-page .tool-actions,
+body[data-tool-cat] .tool-page .button-row,
+body[data-tool-cat] .json-toolbar,
+body[data-tool-cat] .calc-tabs,
+body[data-tool-cat] .opts-row,
+body[data-tool-cat] .platform-row{
+  justify-content:center!important;
+  text-align:center!important;
+}
+body[data-tool-cat] .dropzone,
+body[data-tool-cat] .file-dropzone,
+body[data-tool-cat] .file-mini-drop{
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+}
+body[data-tool-cat] .seo-inner > ol,
+body[data-tool-cat] .seo-inner > ul,
+body[data-tool-cat] .prose > ol,
+body[data-tool-cat] .prose > ul{
+  text-align:center!important;
+  list-style-position:inside!important;
+  padding-left:26px!important;
+  padding-right:26px!important;
+}
+body[data-tool-cat] .seo-inner > ol li,
+body[data-tool-cat] .seo-inner > ul li,
+body[data-tool-cat] .prose > ol li,
+body[data-tool-cat] .prose > ul li{
+  text-align:center!important;
+}
+body[data-tool-cat] .seo-inner > div[style*="display:flex"],
+body[data-tool-cat] .prose > div[style*="display:flex"]{
+  justify-content:center!important;
+  text-align:center!important;
+}
+body[data-tool-cat] .faq details > :not(summary){
+  text-align:center!important;
+}
+body[data-tool-cat] .related-card h3,
+body[data-tool-cat] .related-card p{
+  text-align:center!important;
+}
+/* Keep structured output and form values in their natural reading direction. */
+body[data-tool-cat] pre,
+body[data-tool-cat] table th,
+body[data-tool-cat] table td,
+body[data-tool-cat] textarea,
+body[data-tool-cat] [class*="json-output"],
+body[data-tool-cat] [class*="code-output"],
+body[data-tool-cat] [class*="result-output"],
+body[data-tool-cat] input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="color"]):not([type="image"]),
+body[data-tool-cat] select{
+  text-align:left!important;
+}
