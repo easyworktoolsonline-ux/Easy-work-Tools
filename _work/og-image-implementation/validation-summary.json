@@ -1,0 +1,50 @@
+{
+  "htmlFilesScanned": 393,
+  "indexablePages": 392,
+  "passed": 392,
+  "failed": 0,
+  "byGroup": {
+    "landing": 7,
+    "article": 129,
+    "guides-index": 1,
+    "category": 10,
+    "homepage": 1,
+    "resources": 1,
+    "tool": 242,
+    "tools-index": 1
+  },
+  "staleImageHeads": 0,
+  "duplicateTagPages": 0,
+  "canonicalOgUrlMismatches": 0,
+  "sitemapCanonicalMismatches": 0,
+  "missingByTag": {
+    "og:type": 0,
+    "og:site_name": 0,
+    "og:title": 0,
+    "og:description": 0,
+    "og:url": 0,
+    "og:image": 0,
+    "og:image:secure_url": 0,
+    "og:image:type": 0,
+    "og:image:width": 0,
+    "og:image:height": 0,
+    "og:image:alt": 0,
+    "twitter:card": 0,
+    "twitter:title": 0,
+    "twitter:description": 0,
+    "twitter:image": 0
+  },
+  "image": {
+    "path": "assets/easyworktools-og.png",
+    "format": "png",
+    "bytes": 372529,
+    "width": 2400,
+    "height": 1260,
+    "signatureValid": true,
+    "exact2400x1260": true,
+    "expectedUrl": "https://easyworktools.online/assets/easyworktools-og.png",
+    "expectedType": "image/png",
+    "sha256": "f502f0b36abaa3cb592aa2303395fea64d9a04f6abc2a34ab1fc3c5f50880185"
+  },
+  "sitemapUrls": 392
+}

@@ -1,0 +1,49 @@
+{
+  "verifiedAt": "2026-11-21T15:12:26.215Z",
+  "server": {
+    "command": "C:\\Users\\ahmad\\.lmstudio\\.internal\\utils\\node.exe node_modules/tsx/dist/cli.mjs server.ts",
+    "baseUrl": "http://127.0.0.1:56286",
+    "port": 56286,
+    "log": "EasyWorkTools preview server running on http://0.0.0.0:56286"
+  },
+  "asset": {
+    "path": "/assets/easyworktools-og.png",
+    "status": 200,
+    "contentType": "image/png",
+    "cacheControl": "no-cache",
+    "bytes": 372529,
+    "sha256": "f502f0b36abaa3cb592aa2303395fea64d9a04f6abc2a34ab1fc3c5f50880185",
+    "expectedSha256": "f502f0b36abaa3cb592aa2303395fea64d9a04f6abc2a34ab1fc3c5f50880185"
+  },
+  "checks": {
+    "assetStatus200": true,
+    "assetContentTypePng": true,
+    "assetBytesMatchFile": true,
+    "assetBodyIdentical": true,
+    "homepage": {
+      "status": 200,
+      "ogImage": true,
+      "ogSecureUrl": true,
+      "twitterImage": true,
+      "staleImage": false,
+      "note": "Only head meta tags are checked; preserved JSON-LD is intentionally outside this check."
+    },
+    "toolPage": {
+      "status": 200,
+      "ogImage": true,
+      "ogSecureUrl": true,
+      "twitterImage": true,
+      "staleImage": false,
+      "note": "Only head meta tags are checked; preserved JSON-LD is intentionally outside this check."
+    },
+    "articlePage": {
+      "status": 200,
+      "ogImage": true,
+      "ogSecureUrl": true,
+      "twitterImage": true,
+      "staleImage": false,
+      "note": "Only head meta tags are checked; preserved JSON-LD is intentionally outside this check."
+    },
+    "allChecksPassed": true
+  }
+}

@@ -1,6 +1,7 @@
 import { promises as fs, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { cleanAll, dirtyShell } from './clean-urls.mjs';
+import { ensureOgMetadata } from './og-metadata.mjs';
 import {
   validateCategories, toolCardAttrs, renderCarousel, renderFilter,
   renderCategoryPageBody, renderCategorySchema,
@@ -555,6 +556,12 @@ for (const f of allHtml) {
 
   let text = await fs.readFile(f, 'utf8');
   const relFile = path.relative(root, f).split(path.sep).join('/');
+
+  // Keep every indexable page's social preview metadata complete and aligned
+  // with its canonical URL. This runs before ad/head injections and before the
+  // clean-URL pass, so both canonical and og:url are normalised together.
+  text = ensureOgMetadata(text);
+
   const relDir = path.dirname(relFile);
   const depth = relDir === '.' ? 0 : relDir.split('/').length;
   const prefix = depth ? '../'.repeat(depth) : '';
