@@ -4,7 +4,7 @@
 > developer utilities that mostly run in the visitor's browser, with a short and
 > specific list of what does leave it.
 
-EasyWorkTools.online is a static site of 198 free online tools and 121
+EasyWorkTools.online is a static site of 242 free online tools and 129
 how-to guides. Most tools run client-side: the text, images and files you use are
 not uploaded, and there is no account or paywall. A small number of features do
 contact a server - the Thumbnail Downloader sends the link you paste to this site
@@ -16,8 +16,8 @@ See https://easyworktools.online/security for the exact details.
 
 ## Index
 
-- [Tools](#tools) - 198 utilities, listed by category
-- [Guides](#guides) - 121 how-to guides
+- [Tools](#tools) - 242 utilities, listed by category
+- [Guides](#guides) - 129 how-to guides
 - [Legal and informational pages](#legal-and-informational-pages)
 - [How the tools work](#how-the-tools-work)
 - [Machine-readable data](#machine-readable-data)
@@ -33,7 +33,7 @@ Every tool is also reachable from a per-category page that lists the whole set:
 - [Developer Tools](https://easyworktools.online/categories/developer/) - Format, encode, decode, validate and generate the things developers need constantly: JSON, Base64, JWT, regex, hashes and slugs. (19 tools)
 - [SEO Tools](https://easyworktools.online/categories/seo/) - Check and improve page SEO with free generators for meta tags, schema markup, sitemaps and robots.txt, plus on-page analysis. (14 tools)
 - [Text Tools](https://easyworktools.online/categories/text/) - Count, clean, reformat, compare and extract text with fast utilities for lists, line endings, letter case and word statistics. (12 tools)
-- [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter. (1 tool)
+- [Converter Tools](https://easyworktools.online/categories/converter/) - Convert between metric and imperial units—length, weight, temperature, area, volume, and data—with our fast, free online unit converter. (45 tools)
 - [Calculator Tools](https://easyworktools.online/categories/calculator/) - Quick, accurate online calculators for exact age, percentages, discounts, and everyday date math—free and instant in your browser. (6 tools)
 - [Video & Audio Tools](https://easyworktools.online/categories/video-audio/) - Compress, trim, and extract frames from videos or convert and edit audio files privately in your browser—no uploads required. (5 tools)
 - [Utility Tools](https://easyworktools.online/categories/utility/) - Practical browser utilities for generating strong random passwords locally and converting HEX, RGB, and HSL colors for web design. (4 tools)
@@ -242,9 +242,53 @@ Browse all tools: https://easyworktools.online/tools/
 - [XML Sitemap Generator & Validator](https://easyworktools.online/tools/xml-sitemap-generator/) - Generate a valid XML sitemap from a list of URLs, or paste an existing sitemap to validate its structure, find duplicate URLs and check size limits, online for free.
 - [YouTube Tag Generator](https://easyworktools.online/tools/youtube-tag-generator/) - Generate structured, ready-to-paste YouTube video tags online for free.
 
-### Converter (1)
+### Converter (45)
 
+- [A/m to Oersted Converter](https://easyworktools.online/tools/amps-per-meter-to-oersted/) - Free A/m to Oersted converter. Convert ampere per metre searches to Oe, A/cm and kA/m with exact SI and cgs factors.
+- [Amps to Watts Converter](https://easyworktools.online/tools/amps-to-watts/) - Free amps to watts calculator. Convert 10 A at 120 V to watts, include milliamps and kilowatts, and understand the voltage requirement.
+- [BTU to kWh Converter](https://easyworktools.online/tools/btu-to-kwh/) - Free BTU to kWh converter. Convert 1 kWh to BTU, BTU in kWh, MJ to J and other energy values with exact factors.
+- [Celsius to Fahrenheit Converter](https://easyworktools.online/tools/celsius-to-fahrenheit/) - Free Celsius to Fahrenheit converter with the exact ×9/5 + 32 formula. Convert 0°C, 100°C, 11°C, 13°F and any temperature instantly.
+- [Centipoise to Pascal-Second Converter](https://easyworktools.online/tools/cp-to-pa-s/) - Free centipoise to pascal-second converter. Convert 1 cP to Pa·s, cP to mPa·s and Poise values for fluids accurately.
+- [CM to Feet Converter](https://easyworktools.online/tools/cm-to-feet/) - Free cm to feet and inches converter. See 174 cm in feet, 179 cm into foot, 160 cm to feet and reverse feet-to-cm conversions instantly.
+- [CM to Inches Converter](https://easyworktools.online/tools/cm-to-inches/) - Free cm to inches converter with exact 2.54 cm per inch factor. Convert 12 cm, 160 cm, 174 cm and any value, or switch to inches to cm instantly.
+- [Cubic Inches to CC Converter](https://easyworktools.online/tools/cubic-inches-to-cc/) - Free cubic inches to cc converter using the exact 16.387064 factor. Convert 427 cubic inch to cc, 1 ci to mL and reverse cubic-centimetre values instantly.
+- [Cups to Tablespoons Converter](https://easyworktools.online/tools/cups-to-tablespoons/) - Free cups to tablespoons converter. See how many tbsp are in 3/4 cup, convert tablespoons to teaspoons and switch between US cups and millilitres.
+- [Fahrenheit to Kelvin Converter](https://easyworktools.online/tools/fahrenheit-to-kelvin/) - Free Fahrenheit to Kelvin converter. Convert 32°F to K, 300 K to °F, Fahrenheit to Celsius and more with exact temperature formulas.
+- [Feet of Head to PSI Converter](https://easyworktools.online/tools/feet-head-to-psi/) - Free feet of head to PSI converter. Convert 33.9 ft head to PSI, psi to ft head and metres of head using exact water-density factors.
+- [Fractional Inch to MM Converter](https://easyworktools.online/tools/fraction-to-mm/) - Convert fractional inches to millimeters instantly. See 3/8 inch to mm, 5/16 inch to mm, 1/8 inch in mm and 1/12 inch in mm with exact results.
+- [Grams to Ounces Converter](https://easyworktools.online/tools/grams-to-ounces/) - Free grams to ounces converter using the exact 28.349523125 g per ounce factor. Convert 100 grams to oz, 28 g to ounces and 2.5 oz to grams.
+- [Grams to Pounds Converter](https://easyworktools.online/tools/grams-to-pounds/) - Free grams to pounds converter. Convert 2000 grams to pounds, 450 g to lbs and reverse pound-to-gram values instantly with exact factors.
+- [Hex to Binary Converter](https://easyworktools.online/tools/hex-to-binary/) - Free hex to binary converter. Convert hex to binary, binary to hexadecimal and values such as 0x137 bin with exact results.
+- [Hex to Decimal Converter](https://easyworktools.online/tools/hex-to-decimal/) - Free hex to decimal converter. Convert hexadec to decimal, decimal to hex, binary to decimal and octal values instantly.
+- [Horsepower to Kilowatts Converter](https://easyworktools.online/tools/hp-to-kw/) - Free horsepower to kilowatts converter. Convert 1 hp to kW, kW to hp and BTU per hour with exact mechanical horsepower factor.
+- [Inches to Feet Converter](https://easyworktools.online/tools/inches-to-feet/) - Free inches to feet converter with exact 12 inches per foot factor. Convert 98 inches to feet, 1 inch in feet and reverse feet-to-inches instantly.
+- [kg/m³ to g/cm³ Converter](https://easyworktools.online/tools/kg-m3-to-g-cm3/) - Free kg/m3 to g/cm3 converter. Convert 1000 kg/m3 to g/cm3, lb/ft3 and density values used in science and engineering.
+- [KHz to Hz Converter](https://easyworktools.online/tools/khz-to-hz/) - Free kHz to Hz converter. Convert khz en hz, MHz to Hz, frequency to wavelength inputs and radio frequencies instantly.
+- [Kilobits to Megabytes Converter](https://easyworktools.online/tools/kb-to-mb/) - Free kilobits to megabytes converter. See how many kbits in a MB, convert kilobytes to MB and understand bit-vs-byte notation instantly.
+- [Knots to MPH Converter](https://easyworktools.online/tools/knots-to-mph/) - Free knots to mph converter with exact 1.150779 mph per knot factor. Convert 10 knots, 100 knots and mph back to knots instantly.
+- [L/100km to MPG Converter](https://easyworktools.online/tools/fuel-l100km-to-mpg/) - Free L/100km to MPG converter. Convert 6 L/100km to US MPG, UK MPG and reverse fuel-economy figures with exact formulas.
+- [LBS to KG Converter](https://easyworktools.online/tools/lbs-to-kg/) - Free lbs to kg and kg to lbs converter with the exact 0.45359237 kg per pound factor. Convert 157 lbs, 65 kg, 37 lbs and more instantly.
+- [Liters to Gallons Converter (US)](https://easyworktools.online/tools/liters-to-gallons/) - Free liters to US gallons converter. Convert 50 litres to gallons, 1 gallon to litres and more with the exact 3.785411784 L per US gal factor.
+- [Liters to Milliliters Converter](https://easyworktools.online/tools/liters-to-milliliters/) - Free liters to milliliters converter. Convert 1 L to mL, 0.5 L to mL and reverse values instantly with the exact 1000 factor.
+- [Liters to UK Gallons Converter](https://easyworktools.online/tools/liters-to-uk-gallons/) - Free litres to UK gallons converter using the exact 4.54609 L per imperial gallon factor. Convert 10 litres, 1 UK gallon and more instantly.
+- [LPM to GPM Converter](https://easyworktools.online/tools/lpm-to-gpm/) - Free LPM to GPM converter. Convert lpm to gpm us, gpm to ltr/min, cfm to m3/h and flow rates with exact volume factors.
+- [Mbps to MB/s Converter](https://easyworktools.online/tools/mbps-to-mbs/) - Free Mbps to MB/s converter. See that 100 Mbps is 12.5 MB/s and convert kbps, Gbps and binary byte rates accurately.
+- [Miles to KM Converter](https://easyworktools.online/tools/miles-to-km/) - Free miles to km converter and km to miles converter. Convert 14 miles, 1 mile, 10 km and any distance with the exact 1.609344 factor.
+- [ML to OZ Converter (US & UK)](https://easyworktools.online/tools/ml-to-oz/) - Free ml to oz converter with separate US and UK fluid ounce standards. Convert 400 ml to oz, 800 ml to oz and fluid ounces to millilitres instantly.
+- [MM to Inches Converter](https://easyworktools.online/tools/mm-to-inches/) - Free mm to inches converter using the exact 25.4 mm per inch factor. Convert 22 mm, 9 mm, 4 inches and fractional inches to millimeters instantly.
+- [MPa to PSI Converter](https://easyworktools.online/tools/mpa-to-psi/) - Free MPa to PSI converter. Convert m pascal to psi, psi to mpa, 1 MPa to PSI and MPa to ksi with exact pressure factors.
+- [MPH to KPH Converter](https://easyworktools.online/tools/mph-to-kph/) - Free mph to kph converter using the exact 1.609344 factor. Convert 60 mph to km/h, 100 km/h to mph and any road speed instantly.
+- [Newtons to Pounds-Force Converter](https://easyworktools.online/tools/newtons-to-pounds-force/) - Free newtons to pounds-force converter. Convert kN to lbf, n in lb, 1 kN to lbf and lbf to newtons with exact force factors.
+- [NM to FT LBS Converter](https://easyworktools.online/tools/nm-to-ft-lbs/) - Free Nm to ft-lbs torque converter with exact 1.355817948 factor. Convert 25 Nm, ft lbs to Nm and inch-pounds to foot-pounds instantly.
+- [Pixels to Inches Converter](https://easyworktools.online/tools/pixels-to-inches/) - Free pixels to inches converter. Convert px to in, inch to px, pixels to points and screen sizes using the standard 96 CSS px per inch rule.
+- [Pounds to Stone Converter](https://easyworktools.online/tools/pounds-to-stone/) - Free pounds to stone converter. Convert 12 stone in pounds, 154 pounds to stone and kilograms to stone and pounds with exact 14 lb per stone factor.
+- [PSI to Bar Converter](https://easyworktools.online/tools/psi-to-bar/) - Free PSI to bar converter with exact 1 bar = 14.5037738 PSI factor. Convert 50 bar, 32 PSI, kPa, MPa and atm instantly.
+- [Running Pace to MPH Converter](https://easyworktools.online/tools/pace-to-mph/) - Free minutes-per-mile to mph converter. Convert 8 min/mile to mph, 10 mph to pace and train with accurate speed targets.
+- [Square Feet to Square Meters Converter](https://easyworktools.online/tools/square-feet-to-square-meters/) - Free square feet to square meters converter. Convert 10000 sq ft to acres, sqr ft to sq m and square metres to square feet instantly.
+- [TB to GB Converter](https://easyworktools.online/tools/tb-to-gb/) - Free TB to GB converter. Convert 1 TB to GB, GB to TB and see the difference between decimal TB/GB and binary TiB/GiB.
+- [Time Converter](https://easyworktools.online/tools/time-converter/) - Free time converter for seconds, minutes, hours, days, weeks and years. Convert 1200 seconds to minutes, 1000 seconds to minutes and more.
 - [Unit Converter](https://easyworktools.online/tools/unit-converter/) - Convert length, weight, temperature, volume, area and speed online for free.
+- [Watts to Amps Converter](https://easyworktools.online/tools/watts-to-amps/) - Free watts to amps calculator. Convert 1200 W at 120 V to amps, include kilowatts and see why voltage is required.
 
 ### Calculator (6)
 

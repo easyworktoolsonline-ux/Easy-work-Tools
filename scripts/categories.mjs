@@ -274,9 +274,70 @@ export const CATEGORIES = [
     tagline: 'Solve your conversion problems',
     c1: '#1493B3', c2: '#1493B3', scrim: 0, link: '#107690', text: '#FFFFFF', iconKey: 'unit',
     featured: { title: 'Unit Conv', url: '/tools/unit-converter/' },
-    // The internal catalogue group list is intentionally empty for this
-    // single-tool category.
-    subs: []
+    // The expansion added distinct converters, so the category now has
+    // internal groups. Every converter appears in exactly one group and
+    // validateSubs() fails the build if that ever stops being true.
+    subs: [
+      {
+        slug: 'general-number-base', label: 'General & Number Bases', tools: [
+          '/tools/unit-converter/', '/tools/hex-to-binary/', '/tools/hex-to-decimal/'
+        ]
+      },
+      {
+        slug: 'length-area', label: 'Length & Area', tools: [
+          '/tools/cm-to-inches/', '/tools/mm-to-inches/', '/tools/inches-to-feet/',
+          '/tools/cm-to-feet/', '/tools/miles-to-km/', '/tools/fraction-to-mm/',
+          '/tools/pixels-to-inches/', '/tools/square-feet-to-square-meters/'
+        ]
+      },
+      {
+        slug: 'weight-mass', label: 'Weight & Mass', tools: [
+          '/tools/lbs-to-kg/', '/tools/grams-to-ounces/', '/tools/grams-to-pounds/',
+          '/tools/pounds-to-stone/'
+        ]
+      },
+      {
+        slug: 'temperature', label: 'Temperature', tools: [
+          '/tools/celsius-to-fahrenheit/', '/tools/fahrenheit-to-kelvin/'
+        ]
+      },
+      {
+        slug: 'volume-cooking', label: 'Volume & Cooking', tools: [
+          '/tools/liters-to-gallons/', '/tools/liters-to-uk-gallons/',
+          '/tools/liters-to-milliliters/', '/tools/ml-to-oz/',
+          '/tools/cups-to-tablespoons/', '/tools/cubic-inches-to-cc/'
+        ]
+      },
+      {
+        slug: 'speed-flow-fuel', label: 'Speed, Flow & Fuel', tools: [
+          '/tools/mph-to-kph/', '/tools/knots-to-mph/', '/tools/pace-to-mph/',
+          '/tools/lpm-to-gpm/', '/tools/fuel-l100km-to-mpg/'
+        ]
+      },
+      {
+        slug: 'pressure-force-torque', label: 'Pressure, Force & Torque', tools: [
+          '/tools/psi-to-bar/', '/tools/mpa-to-psi/', '/tools/feet-head-to-psi/',
+          '/tools/newtons-to-pounds-force/', '/tools/nm-to-ft-lbs/'
+        ]
+      },
+      {
+        slug: 'energy-electricity', label: 'Energy & Electricity', tools: [
+          '/tools/btu-to-kwh/', '/tools/hp-to-kw/', '/tools/amps-to-watts/',
+          '/tools/watts-to-amps/', '/tools/amps-per-meter-to-oersted/'
+        ]
+      },
+      {
+        slug: 'data-time-frequency', label: 'Data, Time & Frequency', tools: [
+          '/tools/kb-to-mb/', '/tools/tb-to-gb/', '/tools/mbps-to-mbs/',
+          '/tools/khz-to-hz/', '/tools/time-converter/'
+        ]
+      },
+      {
+        slug: 'material-properties', label: 'Material Properties', tools: [
+          '/tools/cp-to-pa-s/', '/tools/kg-m3-to-g-cm3/'
+        ]
+      }
+    ]
   },
   {
     slug: 'calculator', match: 'Calculator Tools', title: 'Calculator Tools',

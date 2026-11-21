@@ -35,6 +35,11 @@
     "url": "blog/bill-of-sale"
   },
   {
+    "title": "KB, KiB, MB and MiB: Why Storage Numbers Disagree",
+    "description": "Understand decimal versus binary data units, why a 1 TB drive shows less capacity and how to convert between bits and bytes safely.",
+    "url": "blog/binary-vs-decimal-storage"
+  },
+  {
     "title": "How to Use Blog Outline Generator | EasyWorkTools.online",
     "description": "Learn how to use Blog Outline Generator: Write Blog Outline. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
     "url": "blog/blog-outline-generator"
@@ -68,6 +73,11 @@
     "title": "Business Slogan Generator & Builder Guide | EasyWorkTools",
     "description": "Create memorable brand taglines with our free Business Slogan Builder guide. Includes proven formulas, examples, and clarity tips.",
     "url": "blog/business-slogan-generator"
+  },
+  {
+    "title": "How Centimeters and Inches Actually Compare",
+    "description": "A practical explanation of the 2.54 cm per inch definition, including height conversions, fractional inches and why charts sometimes disagree.",
+    "url": "blog/cm-to-inches-explained"
   },
   {
     "title": "How to Use Cold Email Writer | EasyWorkTools.online",
@@ -410,6 +420,11 @@
     "url": "blog/instagram-story-idea"
   },
   {
+    "title": "Kilograms to Pounds: The Exact Conversion Explained",
+    "description": "Why 1 kilogram is about 2.20462 pounds, how to convert body weight accurately and where tonnes, stone and grams fit in.",
+    "url": "blog/kg-to-lbs-explained"
+  },
+  {
     "title": "Landing Page Copy Generator Guide | EasyWorkTools",
     "description": "Write high-converting headlines, value propositions, and CTAs using our free Landing Page Copy Generator—complete guide with examples.",
     "url": "blog/landing-page-copy-generator"
@@ -428,6 +443,11 @@
     "title": "How to Use Meta Description Generator | EasyWorkTools.online",
     "description": "Learn how to use Meta Description Generator: Generate a meta description for your article. Complete guide with examples, use cases, and best practices.",
     "url": "blog/meta-description-generator"
+  },
+  {
+    "title": "MPH to KPH: Road-Speed Conversion Explained",
+    "description": "Learn the exact 1.609344 factor behind mph-to-kph conversion, with common road speeds and tips for reading signs abroad.",
+    "url": "blog/mph-to-kph-explained"
   },
   {
     "title": "NDA Generator - How to Use NDA Generator | EasyWorkTools.online",
@@ -510,6 +530,11 @@
     "url": "blog/summarize-youtube"
   },
   {
+    "title": "Celsius, Fahrenheit and Kelvin Explained",
+    "description": "Learn how Celsius, Fahrenheit and Kelvin differ, why temperature conversion needs an offset and what absolute zero means.",
+    "url": "blog/temperature-scales-explained"
+  },
+  {
     "title": "How to Use TikTok Script Writer | EasyWorkTools.online",
     "description": "Learn how to use TikTok Script Writer: TikTok Script Writer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
     "url": "blog/tiktok-script-writer"
@@ -528,6 +553,11 @@
     "title": "Tone of Voice - How to Use Tone of Voice | EasyWorkTools.online",
     "description": "Learn how to use Tone of Voice: Tone of Voice Tool. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
     "url": "blog/tone-of-voice"
+  },
+  {
+    "title": "Torque Units Explained: Nm, Ft-Lb and In-Lb",
+    "description": "Understand newton meters, foot-pounds and inch-pounds, how to convert between them and why torque is not the same as energy.",
+    "url": "blog/torque-units-explained"
   },
   {
     "title": "Translate - How to Use Translate | EasyWorkTools.online",
@@ -558,6 +588,16 @@
     "title": "URL Encoding Explained: When to Encode Text | EasyWorkTools",
     "description": "What percent-encoding actually does, the difference between encodeURIComponent and encodeURI, and when you need each one in a real URL or query string.",
     "url": "blog/url-encoding-explained"
+  },
+  {
+    "title": "US vs UK Fluid Ounces: A Practical Guide",
+    "description": "Understand the difference between US and UK fluid ounces, why grams cannot convert directly to fluid ounces and how to convert millilitre values correctly.",
+    "url": "blog/us-vs-uk-fluid-ounces"
+  },
+  {
+    "title": "US Gallons vs UK Gallons: What Actually Differs",
+    "description": "Learn why a US gallon and a UK imperial gallon are different sizes, how many litres each contains and how to convert without costly mistakes.",
+    "url": "blog/us-vs-uk-gallons"
   },
   {
     "title": "UUID Versions Explained: v1 vs v4 Differences | EasyWorkTools",

@@ -1,0 +1,15 @@
+{
+    "title": "MPa to PSI Converter",
+    "description": "Free MPa to PSI converter. Convert m pascal to psi, psi to mpa, 1 MPa to PSI and MPa to ksi with exact pressure factors.",
+    "tags": [
+        "mpa to psi",
+        "m pascal to psi",
+        "psi to mpa",
+        "mpa to ksi",
+        "bsr to psi",
+        "mpa psi converter"
+    ],
+    "url": "tools/mpa-to-psi/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

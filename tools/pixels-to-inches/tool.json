@@ -1,0 +1,15 @@
+{
+    "title": "Pixels to Inches Converter",
+    "description": "Free pixels to inches converter. Convert px to in, inch to px, pixels to points and screen sizes using the standard 96 CSS px per inch rule.",
+    "tags": [
+        "pixels to inches",
+        "pixel sizes in inches",
+        "inch to px",
+        "px to inches",
+        "pixels to points",
+        "screen size converter"
+    ],
+    "url": "tools/pixels-to-inches/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

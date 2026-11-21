@@ -1,0 +1,16 @@
+{
+    "title": "MPH to KPH Converter",
+    "description": "Free mph to kph converter using the exact 1.609344 factor. Convert 60 mph to km/h, 100 km/h to mph and any road speed instantly.",
+    "tags": [
+        "mph to kph",
+        "miles and hour to kilometers",
+        "mph en km",
+        "miles ph to km",
+        "convert km into miles per hour",
+        "mph converted to km",
+        "kmph to mph"
+    ],
+    "url": "tools/mph-to-kph/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

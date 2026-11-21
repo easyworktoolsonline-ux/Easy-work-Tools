@@ -1,0 +1,14 @@
+{
+    "title": "Fahrenheit to Kelvin Converter",
+    "description": "Free Fahrenheit to Kelvin converter. Convert 32°F to K, 300 K to °F, Fahrenheit to Celsius and more with exact temperature formulas.",
+    "tags": [
+        "fahrenheit to kelvin",
+        "f to r",
+        "kelvin to fahrenheit",
+        "temperature interval",
+        "celsius to kelvin"
+    ],
+    "url": "tools/fahrenheit-to-kelvin/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

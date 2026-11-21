@@ -1,0 +1,14 @@
+{
+    "title": "A/m to Oersted Converter",
+    "description": "Free A/m to Oersted converter. Convert ampere per metre searches to Oe, A/cm and kA/m with exact SI and cgs factors.",
+    "tags": [
+        "ampere/m",
+        "a/m to oe",
+        "oersted to a/m",
+        "magnetic field strength converter",
+        "a/cm to a/m"
+    ],
+    "url": "tools/amps-per-meter-to-oersted/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

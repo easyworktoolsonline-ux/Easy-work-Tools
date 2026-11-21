@@ -1,0 +1,15 @@
+{
+    "title": "MM to Inches Converter",
+    "description": "Free mm to inches converter using the exact 25.4 mm per inch factor. Convert 22 mm, 9 mm, 4 inches and fractional inches to millimeters instantly.",
+    "tags": [
+        "mm to inches",
+        "22mm to inches",
+        "4inch to mm",
+        "9 mm to inches",
+        "convert inches to millimeters",
+        "1/12 inch in mm"
+    ],
+    "url": "tools/mm-to-inches/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

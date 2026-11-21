@@ -1,0 +1,14 @@
+{
+    "title": "Mbps to MB/s Converter",
+    "description": "Free Mbps to MB/s converter. See that 100 Mbps is 12.5 MB/s and convert kbps, Gbps and binary byte rates accurately.",
+    "tags": [
+        "mbps to MB/s",
+        "kilobytes to mbps converter",
+        "mbps to mbs",
+        "megabits to megabytes per second",
+        "network speed converter"
+    ],
+    "url": "tools/mbps-to-mbs/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

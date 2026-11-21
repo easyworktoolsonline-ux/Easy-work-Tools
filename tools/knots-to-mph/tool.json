@@ -1,0 +1,13 @@
+{
+    "title": "Knots to MPH Converter",
+    "description": "Free knots to mph converter with exact 1.150779 mph per knot factor. Convert 10 knots, 100 knots and mph back to knots instantly.",
+    "tags": [
+        "knots to mph",
+        "knots per hour to mph",
+        "knots per hour to miles per hour",
+        "mph to knots"
+    ],
+    "url": "tools/knots-to-mph/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

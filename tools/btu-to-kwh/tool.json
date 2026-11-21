@@ -1,0 +1,15 @@
+{
+    "title": "BTU to kWh Converter",
+    "description": "Free BTU to kWh converter. Convert 1 kWh to BTU, BTU in kWh, MJ to J and other energy values with exact factors.",
+    "tags": [
+        "btu to kwh",
+        "btu in kwh",
+        "kwh to btu",
+        "mj to j",
+        "energy converter",
+        "btu to joules"
+    ],
+    "url": "tools/btu-to-kwh/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

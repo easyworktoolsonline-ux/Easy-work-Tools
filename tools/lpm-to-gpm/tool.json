@@ -1,0 +1,15 @@
+{
+    "title": "LPM to GPM Converter",
+    "description": "Free LPM to GPM converter. Convert lpm to gpm us, gpm to ltr/min, cfm to m3/h and flow rates with exact volume factors.",
+    "tags": [
+        "lpm to gpm",
+        "lpm to gpm us",
+        "gpm to ltr/min",
+        "liters per minute to gpm",
+        "cfm to m3/h",
+        "gpm to cfs"
+    ],
+    "url": "tools/lpm-to-gpm/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

@@ -1,0 +1,14 @@
+{
+    "title": "TB to GB Converter",
+    "description": "Free TB to GB converter. Convert 1 TB to GB, GB to TB and see the difference between decimal TB/GB and binary TiB/GiB.",
+    "tags": [
+        "tb to gb",
+        "gb in tb",
+        "t bytes",
+        "terabyte to gigabyte",
+        "tib to gib"
+    ],
+    "url": "tools/tb-to-gb/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

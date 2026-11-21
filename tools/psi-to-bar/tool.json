@@ -1,0 +1,16 @@
+{
+    "title": "PSI to Bar Converter",
+    "description": "Free PSI to bar converter with exact 1 bar = 14.5037738 PSI factor. Convert 50 bar, 32 PSI, kPa, MPa and atm instantly.",
+    "tags": [
+        "psi to bar",
+        "pressure bar to psi conversion",
+        "psi convert mpa",
+        "50 bar",
+        "1 atm to kpa",
+        "bar to psi",
+        "psi to kpa"
+    ],
+    "url": "tools/psi-to-bar/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

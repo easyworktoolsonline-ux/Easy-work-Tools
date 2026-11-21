@@ -1,0 +1,13 @@
+{
+    "title": "Hex to Binary Converter",
+    "description": "Free hex to binary converter. Convert hex to binary, binary to hexadecimal and values such as 0x137 bin with exact results.",
+    "tags": [
+        "hex to binary",
+        "0x137 bin",
+        "binary to hex",
+        "hexadecimal to binary converter"
+    ],
+    "url": "tools/hex-to-binary/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

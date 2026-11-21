@@ -4,7 +4,7 @@
   "url": "https://easyworktools.online/",
   "description": "Free browser-based tools for everyday digital work. Text, image, PDF and developer utilities that mostly run in the visitor browser, with a short list of what does leave it published at https://easyworktools.online/security",
   "version": "1.0.0",
-  "updated": "2026-11-18",
+  "updated": "2026-11-21",
   "operator": {
     "name": "EasyWorkTools.online",
     "email": "info@easyworktools.online"
@@ -18,8 +18,8 @@
     "cookies": "See https://easyworktools.online/cookies"
   },
   "counts": {
-    "tools": 198,
-    "articles": 121
+    "tools": 242,
+    "articles": 129
   },
   "indexes": {
     "home": "https://easyworktools.online/",
@@ -1187,6 +1187,50 @@
       ]
     },
     {
+      "name": "A/m to Oersted Converter",
+      "url": "https://easyworktools.online/tools/amps-per-meter-to-oersted/",
+      "description": "Free A/m to Oersted converter. Convert ampere per metre searches to Oe, A/cm and kA/m with exact SI and cgs factors.",
+      "category": null,
+      "keywords": [
+        "ampere/m",
+        "a/m to oe",
+        "oersted to a/m",
+        "magnetic field strength converter",
+        "a/cm to a/m"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Amps to Watts Converter",
+      "url": "https://easyworktools.online/tools/amps-to-watts/",
+      "description": "Free amps to watts calculator. Convert 10 A at 120 V to watts, include milliamps and kilowatts, and understand the voltage requirement.",
+      "category": null,
+      "keywords": [
+        "amps to watts",
+        "conversion ampere watt",
+        "10 amps to watts",
+        "a to w calculator",
+        "current to power"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Audio Converter",
       "url": "https://easyworktools.online/tools/audio-converter/",
       "description": "Convert MP3, M4A, OGG, FLAC, AAC, or WAV audio into lossless 16-bit PCM WAV directly in your browser. Choose sample rate and mono/stereo with zero uploads.",
@@ -1272,6 +1316,29 @@
       ]
     },
     {
+      "name": "BTU to kWh Converter",
+      "url": "https://easyworktools.online/tools/btu-to-kwh/",
+      "description": "Free BTU to kWh converter. Convert 1 kWh to BTU, BTU in kWh, MJ to J and other energy values with exact factors.",
+      "category": null,
+      "keywords": [
+        "btu to kwh",
+        "btu in kwh",
+        "kwh to btu",
+        "mj to j",
+        "energy converter",
+        "btu to joules"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Canonical & Meta Robots Checker",
       "url": "https://easyworktools.online/tools/canonical-robots-checker/",
       "description": "Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.",
@@ -1281,6 +1348,30 @@
         "meta robots generator",
         "noindex checker",
         "indexability checker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Celsius to Fahrenheit Converter",
+      "url": "https://easyworktools.online/tools/celsius-to-fahrenheit/",
+      "description": "Free Celsius to Fahrenheit converter with the exact ×9/5 + 32 formula. Convert 0°C, 100°C, 11°C, 13°F and any temperature instantly.",
+      "category": null,
+      "keywords": [
+        "celsius to fahrenheit",
+        "conversion from celsius to fahrenheit",
+        "11 celsius en fahrenheit",
+        "13f to c",
+        "1 degree fahrenheit to celsius",
+        "116 f to c",
+        "celsius conversion"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1303,6 +1394,53 @@
         "pie chart",
         "line graph",
         "graph maker"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "CM to Feet Converter",
+      "url": "https://easyworktools.online/tools/cm-to-feet/",
+      "description": "Free cm to feet and inches converter. See 174 cm in feet, 179 cm into foot, 160 cm to feet and reverse feet-to-cm conversions instantly.",
+      "category": null,
+      "keywords": [
+        "cm to feet",
+        "174 cm to feet",
+        "179cm into foot",
+        "cms into inches and feet",
+        "cm to feet and inches",
+        "centimeters to feet converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "CM to Inches Converter",
+      "url": "https://easyworktools.online/tools/cm-to-inches/",
+      "description": "Free cm to inches converter with exact 2.54 cm per inch factor. Convert 12 cm, 160 cm, 174 cm and any value, or switch to inches to cm instantly.",
+      "category": null,
+      "keywords": [
+        "cm to inches",
+        "1 inch to cm",
+        "12 cm to inches",
+        "160cm to inches",
+        "174 cm to feet",
+        "centimeters to inches converter",
+        "cms into inches"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1378,6 +1516,28 @@
       ]
     },
     {
+      "name": "Centipoise to Pascal-Second Converter",
+      "url": "https://easyworktools.online/tools/cp-to-pa-s/",
+      "description": "Free centipoise to pascal-second converter. Convert 1 cP to Pa·s, cP to mPa·s and Poise values for fluids accurately.",
+      "category": null,
+      "keywords": [
+        "cp to pa s",
+        "cp units",
+        "centipoise converter",
+        "viscosity converter",
+        "poise to pascal second"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Cron Expression Parser",
       "url": "https://easyworktools.online/tools/cron-expression-parser/",
       "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
@@ -1395,6 +1555,51 @@
       "structuredData": [
         "BreadcrumbList",
         "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Cubic Inches to CC Converter",
+      "url": "https://easyworktools.online/tools/cubic-inches-to-cc/",
+      "description": "Free cubic inches to cc converter using the exact 16.387064 factor. Convert 427 cubic inch to cc, 1 ci to mL and reverse cubic-centimetre values instantly.",
+      "category": null,
+      "keywords": [
+        "cubic inches to cc",
+        "427 cubic inch to cc",
+        "cubic inch to cc",
+        "cc to cubic inches",
+        "ci to ml",
+        "engine displacement converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Cups to Tablespoons Converter",
+      "url": "https://easyworktools.online/tools/cups-to-tablespoons/",
+      "description": "Free cups to tablespoons converter. See how many tbsp are in 3/4 cup, convert tablespoons to teaspoons and switch between US cups and millilitres.",
+      "category": null,
+      "keywords": [
+        "cups to tablespoons",
+        "how many tbsp in 3/4 cup",
+        "tablespoons to teaspoons",
+        "3/4 cup in tbsp",
+        "cooking measurement converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
         "FAQPage"
       ]
     },
@@ -1466,6 +1671,28 @@
       ]
     },
     {
+      "name": "Fahrenheit to Kelvin Converter",
+      "url": "https://easyworktools.online/tools/fahrenheit-to-kelvin/",
+      "description": "Free Fahrenheit to Kelvin converter. Convert 32°F to K, 300 K to °F, Fahrenheit to Celsius and more with exact temperature formulas.",
+      "category": null,
+      "keywords": [
+        "fahrenheit to kelvin",
+        "f to r",
+        "kelvin to fahrenheit",
+        "temperature interval",
+        "celsius to kelvin"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Favicon & App Icon Generator",
       "url": "https://easyworktools.online/tools/favicon-generator/",
       "description": "Generate a complete favicon.ico and app icon PNG set from one image online for free.",
@@ -1475,6 +1702,29 @@
         "favicon.ico generator",
         "app icon generator",
         "apple touch icon generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Feet of Head to PSI Converter",
+      "url": "https://easyworktools.online/tools/feet-head-to-psi/",
+      "description": "Free feet of head to PSI converter. Convert 33.9 ft head to PSI, psi to ft head and metres of head using exact water-density factors.",
+      "category": null,
+      "keywords": [
+        "feet head to psi",
+        "feet of head to psi",
+        "ft head to psi",
+        "psi to ft head",
+        "pressure head converter",
+        "pump head psi"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1530,6 +1780,29 @@
       ]
     },
     {
+      "name": "Fractional Inch to MM Converter",
+      "url": "https://easyworktools.online/tools/fraction-to-mm/",
+      "description": "Convert fractional inches to millimeters instantly. See 3/8 inch to mm, 5/16 inch to mm, 1/8 inch in mm and 1/12 inch in mm with exact results.",
+      "category": null,
+      "keywords": [
+        "3/8 to millimeters",
+        "5/16 to millimeters",
+        "1/12 inch in mm",
+        "18th inch to mm",
+        "fractional inch to mm",
+        "inch fraction mm chart"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Free Image Compressor",
       "url": "https://easyworktools.online/tools/free-image-compressor/",
       "description": "Compress JPG, PNG and WebP images online for free in your browser.",
@@ -1540,6 +1813,28 @@
         "compress png",
         "reduce image size",
         "webp compressor"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "L/100km to MPG Converter",
+      "url": "https://easyworktools.online/tools/fuel-l100km-to-mpg/",
+      "description": "Free L/100km to MPG converter. Convert 6 L/100km to US MPG, UK MPG and reverse fuel-economy figures with exact formulas.",
+      "category": null,
+      "keywords": [
+        "ltr/100km to mpg",
+        "l 100km to mpg",
+        "mpg to l/100km",
+        "fuel economy converter",
+        "us mpg uk mpg"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1581,6 +1876,52 @@
         "gif to pdf",
         "convert gif to pdf online",
         "gif to pdf converter free"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Grams to Ounces Converter",
+      "url": "https://easyworktools.online/tools/grams-to-ounces/",
+      "description": "Free grams to ounces converter using the exact 28.349523125 g per ounce factor. Convert 100 grams to oz, 28 g to ounces and 2.5 oz to grams.",
+      "category": null,
+      "keywords": [
+        "grams to ounces",
+        "100 grams to oz",
+        "28 g to ounces",
+        "2.5 oz to grams",
+        "3oz to grams",
+        "grams to 0z",
+        "ounces to grams"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Grams to Pounds Converter",
+      "url": "https://easyworktools.online/tools/grams-to-pounds/",
+      "description": "Free grams to pounds converter. Convert 2000 grams to pounds, 450 g to lbs and reverse pound-to-gram values instantly with exact factors.",
+      "category": null,
+      "keywords": [
+        "grams to pounds",
+        "2000 grams to pounds",
+        "pounds to grams",
+        "how many grams is a quarter",
+        "450 grams to pounds"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -1688,6 +2029,73 @@
         "heif to png",
         "iphone photo converter",
         "convert heic"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Hex to Binary Converter",
+      "url": "https://easyworktools.online/tools/hex-to-binary/",
+      "description": "Free hex to binary converter. Convert hex to binary, binary to hexadecimal and values such as 0x137 bin with exact results.",
+      "category": null,
+      "keywords": [
+        "hex to binary",
+        "0x137 bin",
+        "binary to hex",
+        "hexadecimal to binary converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Hex to Decimal Converter",
+      "url": "https://easyworktools.online/tools/hex-to-decimal/",
+      "description": "Free hex to decimal converter. Convert hexadec to decimal, decimal to hex, binary to decimal and octal values instantly.",
+      "category": null,
+      "keywords": [
+        "hex to decimal",
+        "hexadec to decimal",
+        "convert from hexadecimal",
+        "decimal convert to hex",
+        "hexadecimal converter",
+        "binary to decimal"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Horsepower to Kilowatts Converter",
+      "url": "https://easyworktools.online/tools/hp-to-kw/",
+      "description": "Free horsepower to kilowatts converter. Convert 1 hp to kW, kW to hp and BTU per hour with exact mechanical horsepower factor.",
+      "category": null,
+      "keywords": [
+        "horsepower to kilowatts",
+        "horsepower in kilowatts",
+        "kw to hp",
+        "hp to kw",
+        "units of power",
+        "kw to btu/hr"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2122,6 +2530,29 @@
       ]
     },
     {
+      "name": "Inches to Feet Converter",
+      "url": "https://easyworktools.online/tools/inches-to-feet/",
+      "description": "Free inches to feet converter with exact 12 inches per foot factor. Convert 98 inches to feet, 1 inch in feet and reverse feet-to-inches instantly.",
+      "category": null,
+      "keywords": [
+        "inches to feet",
+        "98 inches to feet",
+        "1 inch to feet",
+        "inches in feet",
+        "feet and inches converter",
+        "cm to feet"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "JPEG Compressor",
       "url": "https://easyworktools.online/tools/jpeg-compressor/",
       "description": "Compress JPEG images online for free, by quality or exact target file size in KB.",
@@ -2334,6 +2765,28 @@
       ]
     },
     {
+      "name": "Kilobits to Megabytes Converter",
+      "url": "https://easyworktools.online/tools/kb-to-mb/",
+      "description": "Free kilobits to megabytes converter. See how many kbits in a MB, convert kilobytes to MB and understand bit-vs-byte notation instantly.",
+      "category": null,
+      "keywords": [
+        "how many kbits in a mb",
+        "kbits to mb",
+        "kilobytes to megabytes",
+        "kb to mb",
+        "kilobits to megabytes"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Keyword Density Checker",
       "url": "https://easyworktools.online/tools/keyword-density-checker/",
       "description": "Check keyword density and word frequency in any text online for free. See how often single words and two or three word phrases repeat, with percentages.",
@@ -2356,6 +2809,98 @@
       ]
     },
     {
+      "name": "kg/m³ to g/cm³ Converter",
+      "url": "https://easyworktools.online/tools/kg-m3-to-g-cm3/",
+      "description": "Free kg/m3 to g/cm3 converter. Convert 1000 kg/m3 to g/cm3, lb/ft3 and density values used in science and engineering.",
+      "category": null,
+      "keywords": [
+        "kg m3 to g cm3",
+        "kg m3 ag cm3",
+        "kg/m3 to g/cm3",
+        "density converter",
+        "lb/ft3 to kg/m3",
+        "g/cm3 to kg/m3"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "KHz to Hz Converter",
+      "url": "https://easyworktools.online/tools/khz-to-hz/",
+      "description": "Free kHz to Hz converter. Convert khz en hz, MHz to Hz, frequency to wavelength inputs and radio frequencies instantly.",
+      "category": null,
+      "keywords": [
+        "khz to hz",
+        "khz",
+        "khz en hz",
+        "kilohertz to hertz",
+        "mhz to hz",
+        "frequency converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Knots to MPH Converter",
+      "url": "https://easyworktools.online/tools/knots-to-mph/",
+      "description": "Free knots to mph converter with exact 1.150779 mph per knot factor. Convert 10 knots, 100 knots and mph back to knots instantly.",
+      "category": null,
+      "keywords": [
+        "knots to mph",
+        "knots per hour to mph",
+        "knots per hour to miles per hour",
+        "mph to knots"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "LBS to KG Converter",
+      "url": "https://easyworktools.online/tools/lbs-to-kg/",
+      "description": "Free lbs to kg and kg to lbs converter with the exact 0.45359237 kg per pound factor. Convert 157 lbs, 65 kg, 37 lbs and more instantly.",
+      "category": null,
+      "keywords": [
+        "lbs to kg",
+        "157 lbs to kg",
+        "kg to lbs",
+        "65 kilos in pounds",
+        "66 kg to lbs",
+        "37 lbs kilos",
+        "174 lbs to kg",
+        "pounds to stone"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Line & List Tools",
       "url": "https://easyworktools.online/tools/line-list-tools/",
       "description": "Reverse, shuffle, number, filter and reformat lines of text online for free. Add a prefix or suffix to every line, extract matching lines, or convert a list to a comma-separated string.",
@@ -2366,6 +2911,71 @@
         "number lines tool",
         "add prefix to lines",
         "list to comma separated"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Liters to Gallons Converter (US)",
+      "url": "https://easyworktools.online/tools/liters-to-gallons/",
+      "description": "Free liters to US gallons converter. Convert 50 litres to gallons, 1 gallon to litres and more with the exact 3.785411784 L per US gal factor.",
+      "category": null,
+      "keywords": [
+        "liters to gallons",
+        "convert l to gallons us",
+        "convert lt to gal",
+        "50 litres to gallons us",
+        "gallons to liters"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Liters to Milliliters Converter",
+      "url": "https://easyworktools.online/tools/liters-to-milliliters/",
+      "description": "Free liters to milliliters converter. Convert 1 L to mL, 0.5 L to mL and reverse values instantly with the exact 1000 factor.",
+      "category": null,
+      "keywords": [
+        "liters to milliliters",
+        "how to transfer ml to l",
+        "ml to l",
+        "l to ml converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Liters to UK Gallons Converter",
+      "url": "https://easyworktools.online/tools/liters-to-uk-gallons/",
+      "description": "Free litres to UK gallons converter using the exact 4.54609 L per imperial gallon factor. Convert 10 litres, 1 UK gallon and more instantly.",
+      "category": null,
+      "keywords": [
+        "liters in gallons uk",
+        "litres to imperial gallons",
+        "uk gallons to litres",
+        "imperial gallon converter",
+        "gallon uk"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2409,6 +3019,29 @@
         "dummy text generator",
         "lorem ipsum online",
         "random paragraph generator"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "LPM to GPM Converter",
+      "url": "https://easyworktools.online/tools/lpm-to-gpm/",
+      "description": "Free LPM to GPM converter. Convert lpm to gpm us, gpm to ltr/min, cfm to m3/h and flow rates with exact volume factors.",
+      "category": null,
+      "keywords": [
+        "lpm to gpm",
+        "lpm to gpm us",
+        "gpm to ltr/min",
+        "liters per minute to gpm",
+        "cfm to m3/h",
+        "gpm to cfs"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -2485,6 +3118,28 @@
       ]
     },
     {
+      "name": "Mbps to MB/s Converter",
+      "url": "https://easyworktools.online/tools/mbps-to-mbs/",
+      "description": "Free Mbps to MB/s converter. See that 100 Mbps is 12.5 MB/s and convert kbps, Gbps and binary byte rates accurately.",
+      "category": null,
+      "keywords": [
+        "mbps to MB/s",
+        "kilobytes to mbps converter",
+        "mbps to mbs",
+        "megabits to megabytes per second",
+        "network speed converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Meme Generator",
       "url": "https://easyworktools.online/tools/meme-generator/",
       "description": "Free online Meme Generator. Add top and bottom outlined meme text to any JPG, PNG, or WebP image and download watermark-free PNG.",
@@ -2527,6 +3182,168 @@
       ]
     },
     {
+      "name": "Miles to KM Converter",
+      "url": "https://easyworktools.online/tools/miles-to-km/",
+      "description": "Free miles to km converter and km to miles converter. Convert 14 miles, 1 mile, 10 km and any distance with the exact 1.609344 factor.",
+      "category": null,
+      "keywords": [
+        "miles to km",
+        "km to miles",
+        "14 miles en km",
+        "mile versus km",
+        "m to yard",
+        "kilometers to miles"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "ML to OZ Converter (US & UK)",
+      "url": "https://easyworktools.online/tools/ml-to-oz/",
+      "description": "Free ml to oz converter with separate US and UK fluid ounce standards. Convert 400 ml to oz, 800 ml to oz and fluid ounces to millilitres instantly.",
+      "category": null,
+      "keywords": [
+        "ml to oz",
+        "400 mil to oz",
+        "800 ml to oz",
+        "oz to ml",
+        "g to fl oz",
+        "grams to fl oz"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "MM to Inches Converter",
+      "url": "https://easyworktools.online/tools/mm-to-inches/",
+      "description": "Free mm to inches converter using the exact 25.4 mm per inch factor. Convert 22 mm, 9 mm, 4 inches and fractional inches to millimeters instantly.",
+      "category": null,
+      "keywords": [
+        "mm to inches",
+        "22mm to inches",
+        "4inch to mm",
+        "9 mm to inches",
+        "convert inches to millimeters",
+        "1/12 inch in mm"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "MPa to PSI Converter",
+      "url": "https://easyworktools.online/tools/mpa-to-psi/",
+      "description": "Free MPa to PSI converter. Convert m pascal to psi, psi to mpa, 1 MPa to PSI and MPa to ksi with exact pressure factors.",
+      "category": null,
+      "keywords": [
+        "mpa to psi",
+        "m pascal to psi",
+        "psi to mpa",
+        "mpa to ksi",
+        "bsr to psi",
+        "mpa psi converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "MPH to KPH Converter",
+      "url": "https://easyworktools.online/tools/mph-to-kph/",
+      "description": "Free mph to kph converter using the exact 1.609344 factor. Convert 60 mph to km/h, 100 km/h to mph and any road speed instantly.",
+      "category": null,
+      "keywords": [
+        "mph to kph",
+        "miles and hour to kilometers",
+        "mph en km",
+        "miles ph to km",
+        "convert km into miles per hour",
+        "mph converted to km",
+        "kmph to mph"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Newtons to Pounds-Force Converter",
+      "url": "https://easyworktools.online/tools/newtons-to-pounds-force/",
+      "description": "Free newtons to pounds-force converter. Convert kN to lbf, n in lb, 1 kN to lbf and lbf to newtons with exact force factors.",
+      "category": null,
+      "keywords": [
+        "newtons to pounds-force",
+        "kn en lbs",
+        "n in lb",
+        "n to lbs conversion",
+        "kilonewton to pound force",
+        "newtons and kilograms"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "NM to FT LBS Converter",
+      "url": "https://easyworktools.online/tools/nm-to-ft-lbs/",
+      "description": "Free Nm to ft-lbs torque converter with exact 1.355817948 factor. Convert 25 Nm, ft lbs to Nm and inch-pounds to foot-pounds instantly.",
+      "category": null,
+      "keywords": [
+        "nm to ft lbs",
+        "25 nm ft lbs",
+        "lb ft nm converter",
+        "foot pounds nm",
+        "inch lbs to foot lbs",
+        "nm to inch lbs"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Online Text Case Converter",
       "url": "https://easyworktools.online/tools/online-text-case-converter/",
       "description": "Convert text to uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, dot.case and more online for free.",
@@ -2544,6 +3361,28 @@
         "snake case",
         "constant case",
         "dot case"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Running Pace to MPH Converter",
+      "url": "https://easyworktools.online/tools/pace-to-mph/",
+      "description": "Free minutes-per-mile to mph converter. Convert 8 min/mile to mph, 10 mph to pace and train with accurate speed targets.",
+      "category": null,
+      "keywords": [
+        "minutes per mile to mph",
+        "pace to mph",
+        "mph to pace",
+        "running pace converter",
+        "min mile to mph"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -3297,6 +4136,29 @@
       ]
     },
     {
+      "name": "Pixels to Inches Converter",
+      "url": "https://easyworktools.online/tools/pixels-to-inches/",
+      "description": "Free pixels to inches converter. Convert px to in, inch to px, pixels to points and screen sizes using the standard 96 CSS px per inch rule.",
+      "category": null,
+      "keywords": [
+        "pixels to inches",
+        "pixel sizes in inches",
+        "inch to px",
+        "px to inches",
+        "pixels to points",
+        "screen size converter"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "PNG to AVIF Converter",
       "url": "https://easyworktools.online/tools/png-to-avif/",
       "description": "Convert PNG images to AVIF and keep transparency. Free, private, in your browser.",
@@ -3423,6 +4285,29 @@
       ]
     },
     {
+      "name": "Pounds to Stone Converter",
+      "url": "https://easyworktools.online/tools/pounds-to-stone/",
+      "description": "Free pounds to stone converter. Convert 12 stone in pounds, 154 pounds to stone and kilograms to stone and pounds with exact 14 lb per stone factor.",
+      "category": null,
+      "keywords": [
+        "pounds to stone",
+        "how many pounds are in stone",
+        "12 stone in pounds",
+        "kg to pounds to stone",
+        "pounds and stone",
+        "stones to pounds"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "Profile Photo Maker",
       "url": "https://easyworktools.online/tools/profile-photo-maker/",
       "description": "Crop a photo into a circle or rounded-square profile picture with border and background, free in your browser.",
@@ -3432,6 +4317,30 @@
         "circle crop",
         "avatar maker",
         "profile picture"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "PSI to Bar Converter",
+      "url": "https://easyworktools.online/tools/psi-to-bar/",
+      "description": "Free PSI to bar converter with exact 1 bar = 14.5037738 PSI factor. Convert 50 bar, 32 PSI, kPa, MPa and atm instantly.",
+      "category": null,
+      "keywords": [
+        "psi to bar",
+        "pressure bar to psi conversion",
+        "psi convert mpa",
+        "50 bar",
+        "1 atm to kpa",
+        "bar to psi",
+        "psi to kpa"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -3722,6 +4631,28 @@
       ]
     },
     {
+      "name": "Square Feet to Square Meters Converter",
+      "url": "https://easyworktools.online/tools/square-feet-to-square-meters/",
+      "description": "Free square feet to square meters converter. Convert 10000 sq ft to acres, sqr ft to sq m and square metres to square feet instantly.",
+      "category": null,
+      "keywords": [
+        "square feet to square meters",
+        "sqr ft to sq m",
+        "10000 square feet to acres",
+        "convert sf to acreage",
+        "0.25 acres to sq ft"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
       "name": "SVG Optimizer",
       "url": "https://easyworktools.online/tools/svg-optimizer/",
       "description": "Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.",
@@ -3732,6 +4663,28 @@
         "minify svg",
         "svg file size reducer",
         "clean svg online"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "TB to GB Converter",
+      "url": "https://easyworktools.online/tools/tb-to-gb/",
+      "description": "Free TB to GB converter. Convert 1 TB to GB, GB to TB and see the difference between decimal TB/GB and binary TiB/GiB.",
+      "category": null,
+      "keywords": [
+        "tb to gb",
+        "gb in tb",
+        "t bytes",
+        "terabyte to gigabyte",
+        "tib to gib"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -3883,6 +4836,29 @@
         "tif to svg",
         "trace tiff",
         "vectorize tiff"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Time Converter",
+      "url": "https://easyworktools.online/tools/time-converter/",
+      "description": "Free time converter for seconds, minutes, hours, days, weeks and years. Convert 1200 seconds to minutes, 1000 seconds to minutes and more.",
+      "category": null,
+      "keywords": [
+        "seconds to minutes",
+        "1200 seconds to minutes",
+        "how many minutes is 1000 seconds",
+        "weeks to years",
+        "how long is 2000 hours",
+        "time converter"
       ],
       "pricing": "free",
       "browserOnly": true,
@@ -4108,6 +5084,28 @@
       "structuredData": [
         "BreadcrumbList",
         "WebApplication",
+        "FAQPage"
+      ]
+    },
+    {
+      "name": "Watts to Amps Converter",
+      "url": "https://easyworktools.online/tools/watts-to-amps/",
+      "description": "Free watts to amps calculator. Convert 1200 W at 120 V to amps, include kilowatts and see why voltage is required.",
+      "category": null,
+      "keywords": [
+        "watts to amps",
+        "w to a calculator",
+        "volt in to watt",
+        "power to current",
+        "1200 watts to amps"
+      ],
+      "pricing": "free",
+      "browserOnly": true,
+      "requiresAccount": false,
+      "requiresUpload": false,
+      "structuredData": [
+        "BreadcrumbList",
+        "SoftwareApplication",
         "FAQPage"
       ]
     },
@@ -4342,6 +5340,17 @@
       ]
     },
     {
+      "title": "KB, KiB, MB and MiB: Why Storage Numbers Disagree",
+      "url": "https://easyworktools.online/blog/binary-vs-decimal-storage",
+      "description": "Understand decimal versus binary data units, why a 1 TB drive shows less capacity and how to convert between bits and bytes safely.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "title": "How to Use Blog Outline Generator | EasyWorkTools.online",
       "url": "https://easyworktools.online/blog/blog-outline-generator",
       "description": "Learn how to use Blog Outline Generator: Write Blog Outline. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
@@ -4411,6 +5420,17 @@
       "title": "Business Slogan Generator & Builder Guide | EasyWorkTools",
       "url": "https://easyworktools.online/blog/business-slogan-generator",
       "description": "Create memorable brand taglines with our free Business Slogan Builder guide. Includes proven formulas, examples, and clarity tips.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "title": "How Centimeters and Inches Actually Compare",
+      "url": "https://easyworktools.online/blog/cm-to-inches-explained",
+      "description": "A practical explanation of the 2.54 cm per inch definition, including height conversions, fractional inches and why charts sometimes disagree.",
       "type": "Article",
       "structuredData": [
         "BlogPosting",
@@ -5167,6 +6187,17 @@
       ]
     },
     {
+      "title": "Kilograms to Pounds: The Exact Conversion Explained",
+      "url": "https://easyworktools.online/blog/kg-to-lbs-explained",
+      "description": "Why 1 kilogram is about 2.20462 pounds, how to convert body weight accurately and where tonnes, stone and grams fit in.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "title": "Landing Page Copy Generator Guide | EasyWorkTools",
       "url": "https://easyworktools.online/blog/landing-page-copy-generator",
       "description": "Write high-converting headlines, value propositions, and CTAs using our free Landing Page Copy Generator—complete guide with examples.",
@@ -5203,6 +6234,17 @@
       "title": "How to Use Meta Description Generator | EasyWorkTools.online",
       "url": "https://easyworktools.online/blog/meta-description-generator",
       "description": "Learn how to use Meta Description Generator: Generate a meta description for your article. Complete guide with examples, use cases, and best practices.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "title": "MPH to KPH: Road-Speed Conversion Explained",
+      "url": "https://easyworktools.online/blog/mph-to-kph-explained",
+      "description": "Learn the exact 1.609344 factor behind mph-to-kph conversion, with common road speeds and tips for reading signs abroad.",
       "type": "Article",
       "structuredData": [
         "BlogPosting",
@@ -5387,6 +6429,17 @@
       ]
     },
     {
+      "title": "Celsius, Fahrenheit and Kelvin Explained",
+      "url": "https://easyworktools.online/blog/temperature-scales-explained",
+      "description": "Learn how Celsius, Fahrenheit and Kelvin differ, why temperature conversion needs an offset and what absolute zero means.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "title": "How to Use TikTok Script Writer | EasyWorkTools.online",
       "url": "https://easyworktools.online/blog/tiktok-script-writer",
       "description": "Learn how to use TikTok Script Writer: TikTok Script Writer. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
@@ -5423,6 +6476,17 @@
       "title": "Tone of Voice - How to Use Tone of Voice | EasyWorkTools.online",
       "url": "https://easyworktools.online/blog/tone-of-voice",
       "description": "Learn how to use Tone of Voice: Tone of Voice Tool. Complete guide with examples, use cases, and best practices. Free online tool by EasyWorkTools.online.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "title": "Torque Units Explained: Nm, Ft-Lb and In-Lb",
+      "url": "https://easyworktools.online/blog/torque-units-explained",
+      "description": "Understand newton meters, foot-pounds and inch-pounds, how to convert between them and why torque is not the same as energy.",
       "type": "Article",
       "structuredData": [
         "BlogPosting",
@@ -5489,6 +6553,28 @@
       "title": "URL Encoding Explained: When to Encode Text | EasyWorkTools",
       "url": "https://easyworktools.online/blog/url-encoding-explained",
       "description": "What percent-encoding actually does, the difference between encodeURIComponent and encodeURI, and when you need each one in a real URL or query string.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "title": "US vs UK Fluid Ounces: A Practical Guide",
+      "url": "https://easyworktools.online/blog/us-vs-uk-fluid-ounces",
+      "description": "Understand the difference between US and UK fluid ounces, why grams cannot convert directly to fluid ounces and how to convert millilitre values correctly.",
+      "type": "Article",
+      "structuredData": [
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "title": "US Gallons vs UK Gallons: What Actually Differs",
+      "url": "https://easyworktools.online/blog/us-vs-uk-gallons",
+      "description": "Learn why a US gallon and a UK imperial gallon are different sizes, how many litres each contains and how to convert without costly mistakes.",
       "type": "Article",
       "structuredData": [
         "BlogPosting",

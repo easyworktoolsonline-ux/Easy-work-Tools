@@ -715,6 +715,34 @@
     "category": "AI Write"
   },
   {
+    "title": "A/m to Oersted Converter",
+    "description": "Free A/m to Oersted converter. Convert ampere per metre searches to Oe, A/cm and kA/m with exact SI and cgs factors.",
+    "url": "tools/amps-per-meter-to-oersted/",
+    "iconKey": "unit",
+    "tags": [
+      "ampere/m",
+      "a/m to oe",
+      "oersted to a/m",
+      "magnetic field strength converter",
+      "a/cm to a/m"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Amps to Watts Converter",
+    "description": "Free amps to watts calculator. Convert 10 A at 120 V to watts, include milliamps and kilowatts, and understand the voltage requirement.",
+    "url": "tools/amps-to-watts/",
+    "iconKey": "unit",
+    "tags": [
+      "amps to watts",
+      "conversion ampere watt",
+      "10 amps to watts",
+      "a to w calculator",
+      "current to power"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Audio Converter",
     "description": "Convert MP3, M4A, OGG, FLAC, AAC, or WAV audio into lossless 16-bit PCM WAV directly in your browser. Choose sample rate and mono/stereo with zero uploads.",
     "url": "tools/audio-converter/",
@@ -768,6 +796,21 @@
     "category": "Calculator Tools"
   },
   {
+    "title": "BTU to kWh Converter",
+    "description": "Free BTU to kWh converter. Convert 1 kWh to BTU, BTU in kWh, MJ to J and other energy values with exact factors.",
+    "url": "tools/btu-to-kwh/",
+    "iconKey": "unit",
+    "tags": [
+      "btu to kwh",
+      "btu in kwh",
+      "kwh to btu",
+      "mj to j",
+      "energy converter",
+      "btu to joules"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Canonical & Meta Robots Checker",
     "description": "Generate canonical link and meta robots tags, or paste page HTML to check canonical, noindex/nofollow directives and catch conflicts, online for free.",
     "url": "tools/canonical-robots-checker/",
@@ -779,6 +822,22 @@
       "indexability checker"
     ],
     "category": "SEO Tools"
+  },
+  {
+    "title": "Celsius to Fahrenheit Converter",
+    "description": "Free Celsius to Fahrenheit converter with the exact ×9/5 + 32 formula. Convert 0°C, 100°C, 11°C, 13°F and any temperature instantly.",
+    "url": "tools/celsius-to-fahrenheit/",
+    "iconKey": "unit",
+    "tags": [
+      "celsius to fahrenheit",
+      "conversion from celsius to fahrenheit",
+      "11 celsius en fahrenheit",
+      "13f to c",
+      "1 degree fahrenheit to celsius",
+      "116 f to c",
+      "celsius conversion"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Chart Maker",
@@ -793,6 +852,37 @@
       "graph maker"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "CM to Feet Converter",
+    "description": "Free cm to feet and inches converter. See 174 cm in feet, 179 cm into foot, 160 cm to feet and reverse feet-to-cm conversions instantly.",
+    "url": "tools/cm-to-feet/",
+    "iconKey": "unit",
+    "tags": [
+      "cm to feet",
+      "174 cm to feet",
+      "179cm into foot",
+      "cms into inches and feet",
+      "cm to feet and inches",
+      "centimeters to feet converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "CM to Inches Converter",
+    "description": "Free cm to inches converter with exact 2.54 cm per inch factor. Convert 12 cm, 160 cm, 174 cm and any value, or switch to inches to cm instantly.",
+    "url": "tools/cm-to-inches/",
+    "iconKey": "unit",
+    "tags": [
+      "cm to inches",
+      "1 inch to cm",
+      "12 cm to inches",
+      "160cm to inches",
+      "174 cm to feet",
+      "centimeters to inches converter",
+      "cms into inches"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "WCAG Color Contrast Checker",
@@ -834,6 +924,20 @@
     "category": "Calculator Tools"
   },
   {
+    "title": "Centipoise to Pascal-Second Converter",
+    "description": "Free centipoise to pascal-second converter. Convert 1 cP to Pa·s, cP to mPa·s and Poise values for fluids accurately.",
+    "url": "tools/cp-to-pa-s/",
+    "iconKey": "unit",
+    "tags": [
+      "cp to pa s",
+      "cp units",
+      "centipoise converter",
+      "viscosity converter",
+      "poise to pascal second"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Cron Expression Parser",
     "description": "Parse and explain 5-field cron expressions online free. View human-readable schedules and the next 10 execution times in Local and UTC.",
     "url": "tools/cron-expression-parser/",
@@ -845,6 +949,35 @@
       "next run times"
     ],
     "category": "Developer Tools"
+  },
+  {
+    "title": "Cubic Inches to CC Converter",
+    "description": "Free cubic inches to cc converter using the exact 16.387064 factor. Convert 427 cubic inch to cc, 1 ci to mL and reverse cubic-centimetre values instantly.",
+    "url": "tools/cubic-inches-to-cc/",
+    "iconKey": "unit",
+    "tags": [
+      "cubic inches to cc",
+      "427 cubic inch to cc",
+      "cubic inch to cc",
+      "cc to cubic inches",
+      "ci to ml",
+      "engine displacement converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Cups to Tablespoons Converter",
+    "description": "Free cups to tablespoons converter. See how many tbsp are in 3/4 cup, convert tablespoons to teaspoons and switch between US cups and millilitres.",
+    "url": "tools/cups-to-tablespoons/",
+    "iconKey": "unit",
+    "tags": [
+      "cups to tablespoons",
+      "how many tbsp in 3/4 cup",
+      "tablespoons to teaspoons",
+      "3/4 cup in tbsp",
+      "cooking measurement converter"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Date & Business Days Calculator",
@@ -890,6 +1023,20 @@
     "category": "Image Tools"
   },
   {
+    "title": "Fahrenheit to Kelvin Converter",
+    "description": "Free Fahrenheit to Kelvin converter. Convert 32°F to K, 300 K to °F, Fahrenheit to Celsius and more with exact temperature formulas.",
+    "url": "tools/fahrenheit-to-kelvin/",
+    "iconKey": "unit",
+    "tags": [
+      "fahrenheit to kelvin",
+      "f to r",
+      "kelvin to fahrenheit",
+      "temperature interval",
+      "celsius to kelvin"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Favicon & App Icon Generator",
     "description": "Generate a complete favicon.ico and app icon PNG set from one image online for free.",
     "url": "tools/favicon-generator/",
@@ -901,6 +1048,21 @@
       "apple touch icon generator"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "Feet of Head to PSI Converter",
+    "description": "Free feet of head to PSI converter. Convert 33.9 ft head to PSI, psi to ft head and metres of head using exact water-density factors.",
+    "url": "tools/feet-head-to-psi/",
+    "iconKey": "unit",
+    "tags": [
+      "feet head to psi",
+      "feet of head to psi",
+      "ft head to psi",
+      "psi to ft head",
+      "pressure head converter",
+      "pump head psi"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Find & Replace",
@@ -930,6 +1092,21 @@
     "category": "Image Tools"
   },
   {
+    "title": "Fractional Inch to MM Converter",
+    "description": "Convert fractional inches to millimeters instantly. See 3/8 inch to mm, 5/16 inch to mm, 1/8 inch in mm and 1/12 inch in mm with exact results.",
+    "url": "tools/fraction-to-mm/",
+    "iconKey": "unit",
+    "tags": [
+      "3/8 to millimeters",
+      "5/16 to millimeters",
+      "1/12 inch in mm",
+      "18th inch to mm",
+      "fractional inch to mm",
+      "inch fraction mm chart"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Free Image Compressor",
     "description": "Compress JPG, PNG and WebP images online for free in your browser.",
     "url": "tools/free-image-compressor/",
@@ -942,6 +1119,20 @@
       "webp compressor"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "L/100km to MPG Converter",
+    "description": "Free L/100km to MPG converter. Convert 6 L/100km to US MPG, UK MPG and reverse fuel-economy figures with exact formulas.",
+    "url": "tools/fuel-l100km-to-mpg/",
+    "iconKey": "unit",
+    "tags": [
+      "ltr/100km to mpg",
+      "l 100km to mpg",
+      "mpg to l/100km",
+      "fuel economy converter",
+      "us mpg uk mpg"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "GIF to APNG Converter",
@@ -967,6 +1158,36 @@
       "gif to pdf converter free"
     ],
     "category": "PDF Tools"
+  },
+  {
+    "title": "Grams to Ounces Converter",
+    "description": "Free grams to ounces converter using the exact 28.349523125 g per ounce factor. Convert 100 grams to oz, 28 g to ounces and 2.5 oz to grams.",
+    "url": "tools/grams-to-ounces/",
+    "iconKey": "unit",
+    "tags": [
+      "grams to ounces",
+      "100 grams to oz",
+      "28 g to ounces",
+      "2.5 oz to grams",
+      "3oz to grams",
+      "grams to 0z",
+      "ounces to grams"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Grams to Pounds Converter",
+    "description": "Free grams to pounds converter. Convert 2000 grams to pounds, 450 g to lbs and reverse pound-to-gram values instantly with exact factors.",
+    "url": "tools/grams-to-pounds/",
+    "iconKey": "unit",
+    "tags": [
+      "grams to pounds",
+      "2000 grams to pounds",
+      "pounds to grams",
+      "how many grams is a quarter",
+      "450 grams to pounds"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Hash Generator",
@@ -1034,6 +1255,49 @@
       "convert heic"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "Hex to Binary Converter",
+    "description": "Free hex to binary converter. Convert hex to binary, binary to hexadecimal and values such as 0x137 bin with exact results.",
+    "url": "tools/hex-to-binary/",
+    "iconKey": "unit",
+    "tags": [
+      "hex to binary",
+      "0x137 bin",
+      "binary to hex",
+      "hexadecimal to binary converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Hex to Decimal Converter",
+    "description": "Free hex to decimal converter. Convert hexadec to decimal, decimal to hex, binary to decimal and octal values instantly.",
+    "url": "tools/hex-to-decimal/",
+    "iconKey": "unit",
+    "tags": [
+      "hex to decimal",
+      "hexadec to decimal",
+      "convert from hexadecimal",
+      "decimal convert to hex",
+      "hexadecimal converter",
+      "binary to decimal"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Horsepower to Kilowatts Converter",
+    "description": "Free horsepower to kilowatts converter. Convert 1 hp to kW, kW to hp and BTU per hour with exact mechanical horsepower factor.",
+    "url": "tools/hp-to-kw/",
+    "iconKey": "unit",
+    "tags": [
+      "horsepower to kilowatts",
+      "horsepower in kilowatts",
+      "kw to hp",
+      "hp to kw",
+      "units of power",
+      "kw to btu/hr"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Hreflang Generator & Validator",
@@ -1298,6 +1562,21 @@
     "category": "Image Tools"
   },
   {
+    "title": "Inches to Feet Converter",
+    "description": "Free inches to feet converter with exact 12 inches per foot factor. Convert 98 inches to feet, 1 inch in feet and reverse feet-to-inches instantly.",
+    "url": "tools/inches-to-feet/",
+    "iconKey": "unit",
+    "tags": [
+      "inches to feet",
+      "98 inches to feet",
+      "1 inch to feet",
+      "inches in feet",
+      "feet and inches converter",
+      "cm to feet"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "JPEG Compressor",
     "description": "Compress JPEG images online for free, by quality or exact target file size in KB.",
     "url": "tools/jpeg-compressor/",
@@ -1430,6 +1709,20 @@
     "category": "Developer Tools"
   },
   {
+    "title": "Kilobits to Megabytes Converter",
+    "description": "Free kilobits to megabytes converter. See how many kbits in a MB, convert kilobytes to MB and understand bit-vs-byte notation instantly.",
+    "url": "tools/kb-to-mb/",
+    "iconKey": "unit",
+    "tags": [
+      "how many kbits in a mb",
+      "kbits to mb",
+      "kilobytes to megabytes",
+      "kb to mb",
+      "kilobits to megabytes"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Keyword Density Checker",
     "description": "Check keyword density and word frequency in any text online for free. See how often single words and two or three word phrases repeat, with percentages.",
     "url": "tools/keyword-density-checker/",
@@ -1444,6 +1737,66 @@
     "category": "SEO Tools"
   },
   {
+    "title": "kg/m³ to g/cm³ Converter",
+    "description": "Free kg/m3 to g/cm3 converter. Convert 1000 kg/m3 to g/cm3, lb/ft3 and density values used in science and engineering.",
+    "url": "tools/kg-m3-to-g-cm3/",
+    "iconKey": "unit",
+    "tags": [
+      "kg m3 to g cm3",
+      "kg m3 ag cm3",
+      "kg/m3 to g/cm3",
+      "density converter",
+      "lb/ft3 to kg/m3",
+      "g/cm3 to kg/m3"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "KHz to Hz Converter",
+    "description": "Free kHz to Hz converter. Convert khz en hz, MHz to Hz, frequency to wavelength inputs and radio frequencies instantly.",
+    "url": "tools/khz-to-hz/",
+    "iconKey": "unit",
+    "tags": [
+      "khz to hz",
+      "khz",
+      "khz en hz",
+      "kilohertz to hertz",
+      "mhz to hz",
+      "frequency converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Knots to MPH Converter",
+    "description": "Free knots to mph converter with exact 1.150779 mph per knot factor. Convert 10 knots, 100 knots and mph back to knots instantly.",
+    "url": "tools/knots-to-mph/",
+    "iconKey": "unit",
+    "tags": [
+      "knots to mph",
+      "knots per hour to mph",
+      "knots per hour to miles per hour",
+      "mph to knots"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "LBS to KG Converter",
+    "description": "Free lbs to kg and kg to lbs converter with the exact 0.45359237 kg per pound factor. Convert 157 lbs, 65 kg, 37 lbs and more instantly.",
+    "url": "tools/lbs-to-kg/",
+    "iconKey": "unit",
+    "tags": [
+      "lbs to kg",
+      "157 lbs to kg",
+      "kg to lbs",
+      "65 kilos in pounds",
+      "66 kg to lbs",
+      "37 lbs kilos",
+      "174 lbs to kg",
+      "pounds to stone"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Line & List Tools",
     "description": "Reverse, shuffle, number, filter and reformat lines of text online for free. Add a prefix or suffix to every line, extract matching lines, or convert a list to a comma-separated string.",
     "url": "tools/line-list-tools/",
@@ -1456,6 +1809,47 @@
       "list to comma separated"
     ],
     "category": "Text Tools"
+  },
+  {
+    "title": "Liters to Gallons Converter (US)",
+    "description": "Free liters to US gallons converter. Convert 50 litres to gallons, 1 gallon to litres and more with the exact 3.785411784 L per US gal factor.",
+    "url": "tools/liters-to-gallons/",
+    "iconKey": "unit",
+    "tags": [
+      "liters to gallons",
+      "convert l to gallons us",
+      "convert lt to gal",
+      "50 litres to gallons us",
+      "gallons to liters"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Liters to Milliliters Converter",
+    "description": "Free liters to milliliters converter. Convert 1 L to mL, 0.5 L to mL and reverse values instantly with the exact 1000 factor.",
+    "url": "tools/liters-to-milliliters/",
+    "iconKey": "unit",
+    "tags": [
+      "liters to milliliters",
+      "how to transfer ml to l",
+      "ml to l",
+      "l to ml converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Liters to UK Gallons Converter",
+    "description": "Free litres to UK gallons converter using the exact 4.54609 L per imperial gallon factor. Convert 10 litres, 1 UK gallon and more instantly.",
+    "url": "tools/liters-to-uk-gallons/",
+    "iconKey": "unit",
+    "tags": [
+      "liters in gallons uk",
+      "litres to imperial gallons",
+      "uk gallons to litres",
+      "imperial gallon converter",
+      "gallon uk"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Loan & EMI Calculator",
@@ -1483,6 +1877,21 @@
       "random paragraph generator"
     ],
     "category": "Text Tools"
+  },
+  {
+    "title": "LPM to GPM Converter",
+    "description": "Free LPM to GPM converter. Convert lpm to gpm us, gpm to ltr/min, cfm to m3/h and flow rates with exact volume factors.",
+    "url": "tools/lpm-to-gpm/",
+    "iconKey": "unit",
+    "tags": [
+      "lpm to gpm",
+      "lpm to gpm us",
+      "gpm to ltr/min",
+      "liters per minute to gpm",
+      "cfm to m3/h",
+      "gpm to cfs"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Make Background Transparent",
@@ -1525,6 +1934,20 @@
     "category": "Developer Tools"
   },
   {
+    "title": "Mbps to MB/s Converter",
+    "description": "Free Mbps to MB/s converter. See that 100 Mbps is 12.5 MB/s and convert kbps, Gbps and binary byte rates accurately.",
+    "url": "tools/mbps-to-mbs/",
+    "iconKey": "unit",
+    "tags": [
+      "mbps to MB/s",
+      "kilobytes to mbps converter",
+      "mbps to mbs",
+      "megabits to megabytes per second",
+      "network speed converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Meme Generator",
     "description": "Free online Meme Generator. Add top and bottom outlined meme text to any JPG, PNG, or WebP image and download watermark-free PNG.",
     "url": "tools/meme-generator/",
@@ -1551,6 +1974,112 @@
     "category": "SEO Tools"
   },
   {
+    "title": "Miles to KM Converter",
+    "description": "Free miles to km converter and km to miles converter. Convert 14 miles, 1 mile, 10 km and any distance with the exact 1.609344 factor.",
+    "url": "tools/miles-to-km/",
+    "iconKey": "unit",
+    "tags": [
+      "miles to km",
+      "km to miles",
+      "14 miles en km",
+      "mile versus km",
+      "m to yard",
+      "kilometers to miles"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "ML to OZ Converter (US & UK)",
+    "description": "Free ml to oz converter with separate US and UK fluid ounce standards. Convert 400 ml to oz, 800 ml to oz and fluid ounces to millilitres instantly.",
+    "url": "tools/ml-to-oz/",
+    "iconKey": "unit",
+    "tags": [
+      "ml to oz",
+      "400 mil to oz",
+      "800 ml to oz",
+      "oz to ml",
+      "g to fl oz",
+      "grams to fl oz"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "MM to Inches Converter",
+    "description": "Free mm to inches converter using the exact 25.4 mm per inch factor. Convert 22 mm, 9 mm, 4 inches and fractional inches to millimeters instantly.",
+    "url": "tools/mm-to-inches/",
+    "iconKey": "unit",
+    "tags": [
+      "mm to inches",
+      "22mm to inches",
+      "4inch to mm",
+      "9 mm to inches",
+      "convert inches to millimeters",
+      "1/12 inch in mm"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "MPa to PSI Converter",
+    "description": "Free MPa to PSI converter. Convert m pascal to psi, psi to mpa, 1 MPa to PSI and MPa to ksi with exact pressure factors.",
+    "url": "tools/mpa-to-psi/",
+    "iconKey": "unit",
+    "tags": [
+      "mpa to psi",
+      "m pascal to psi",
+      "psi to mpa",
+      "mpa to ksi",
+      "bsr to psi",
+      "mpa psi converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "MPH to KPH Converter",
+    "description": "Free mph to kph converter using the exact 1.609344 factor. Convert 60 mph to km/h, 100 km/h to mph and any road speed instantly.",
+    "url": "tools/mph-to-kph/",
+    "iconKey": "unit",
+    "tags": [
+      "mph to kph",
+      "miles and hour to kilometers",
+      "mph en km",
+      "miles ph to km",
+      "convert km into miles per hour",
+      "mph converted to km",
+      "kmph to mph"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "Newtons to Pounds-Force Converter",
+    "description": "Free newtons to pounds-force converter. Convert kN to lbf, n in lb, 1 kN to lbf and lbf to newtons with exact force factors.",
+    "url": "tools/newtons-to-pounds-force/",
+    "iconKey": "unit",
+    "tags": [
+      "newtons to pounds-force",
+      "kn en lbs",
+      "n in lb",
+      "n to lbs conversion",
+      "kilonewton to pound force",
+      "newtons and kilograms"
+    ],
+    "category": "Converter Tools"
+  },
+  {
+    "title": "NM to FT LBS Converter",
+    "description": "Free Nm to ft-lbs torque converter with exact 1.355817948 factor. Convert 25 Nm, ft lbs to Nm and inch-pounds to foot-pounds instantly.",
+    "url": "tools/nm-to-ft-lbs/",
+    "iconKey": "unit",
+    "tags": [
+      "nm to ft lbs",
+      "25 nm ft lbs",
+      "lb ft nm converter",
+      "foot pounds nm",
+      "inch lbs to foot lbs",
+      "nm to inch lbs"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Online Text Case Converter",
     "description": "Convert text to uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, dot.case and more online for free.",
     "url": "tools/online-text-case-converter/",
@@ -1570,6 +2099,20 @@
       "dot case"
     ],
     "category": "Text Tools"
+  },
+  {
+    "title": "Running Pace to MPH Converter",
+    "description": "Free minutes-per-mile to mph converter. Convert 8 min/mile to mph, 10 mph to pace and train with accurate speed targets.",
+    "url": "tools/pace-to-mph/",
+    "iconKey": "unit",
+    "tags": [
+      "minutes per mile to mph",
+      "pace to mph",
+      "mph to pace",
+      "running pace converter",
+      "min mile to mph"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Password Generator",
@@ -2041,6 +2584,21 @@
     "category": "Calculator Tools"
   },
   {
+    "title": "Pixels to Inches Converter",
+    "description": "Free pixels to inches converter. Convert px to in, inch to px, pixels to points and screen sizes using the standard 96 CSS px per inch rule.",
+    "url": "tools/pixels-to-inches/",
+    "iconKey": "unit",
+    "tags": [
+      "pixels to inches",
+      "pixel sizes in inches",
+      "inch to px",
+      "px to inches",
+      "pixels to points",
+      "screen size converter"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "PNG to AVIF Converter",
     "description": "Convert PNG images to AVIF and keep transparency. Free, private, in your browser.",
     "url": "tools/png-to-avif/",
@@ -2119,6 +2677,21 @@
     "category": "Image Tools"
   },
   {
+    "title": "Pounds to Stone Converter",
+    "description": "Free pounds to stone converter. Convert 12 stone in pounds, 154 pounds to stone and kilograms to stone and pounds with exact 14 lb per stone factor.",
+    "url": "tools/pounds-to-stone/",
+    "iconKey": "unit",
+    "tags": [
+      "pounds to stone",
+      "how many pounds are in stone",
+      "12 stone in pounds",
+      "kg to pounds to stone",
+      "pounds and stone",
+      "stones to pounds"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "Profile Photo Maker",
     "description": "Crop a photo into a circle or rounded-square profile picture with border and background, free in your browser.",
     "url": "tools/profile-photo-maker/",
@@ -2130,6 +2703,22 @@
       "profile picture"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "PSI to Bar Converter",
+    "description": "Free PSI to bar converter with exact 1 bar = 14.5037738 PSI factor. Convert 50 bar, 32 PSI, kPa, MPa and atm instantly.",
+    "url": "tools/psi-to-bar/",
+    "iconKey": "unit",
+    "tags": [
+      "psi to bar",
+      "pressure bar to psi conversion",
+      "psi convert mpa",
+      "50 bar",
+      "1 atm to kpa",
+      "bar to psi",
+      "psi to kpa"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "QR Code Generator",
@@ -2306,6 +2895,20 @@
     "category": "Developer Tools"
   },
   {
+    "title": "Square Feet to Square Meters Converter",
+    "description": "Free square feet to square meters converter. Convert 10000 sq ft to acres, sqr ft to sq m and square metres to square feet instantly.",
+    "url": "tools/square-feet-to-square-meters/",
+    "iconKey": "unit",
+    "tags": [
+      "square feet to square meters",
+      "sqr ft to sq m",
+      "10000 square feet to acres",
+      "convert sf to acreage",
+      "0.25 acres to sq ft"
+    ],
+    "category": "Converter Tools"
+  },
+  {
     "title": "SVG Optimizer",
     "description": "Optimize and minify SVG files online for free. Strip comments, metadata and excess whitespace, shrink file size and preview the result before downloading.",
     "url": "tools/svg-optimizer/",
@@ -2318,6 +2921,20 @@
       "clean svg online"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "TB to GB Converter",
+    "description": "Free TB to GB converter. Convert 1 TB to GB, GB to TB and see the difference between decimal TB/GB and binary TiB/GiB.",
+    "url": "tools/tb-to-gb/",
+    "iconKey": "unit",
+    "tags": [
+      "tb to gb",
+      "gb in tb",
+      "t bytes",
+      "terabyte to gigabyte",
+      "tib to gib"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Text Cleaner",
@@ -2413,6 +3030,21 @@
       "vectorize tiff"
     ],
     "category": "Image Tools"
+  },
+  {
+    "title": "Time Converter",
+    "description": "Free time converter for seconds, minutes, hours, days, weeks and years. Convert 1200 seconds to minutes, 1000 seconds to minutes and more.",
+    "url": "tools/time-converter/",
+    "iconKey": "unit",
+    "tags": [
+      "seconds to minutes",
+      "1200 seconds to minutes",
+      "how many minutes is 1000 seconds",
+      "weeks to years",
+      "how long is 2000 hours",
+      "time converter"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "Unit Converter",
@@ -2550,6 +3182,20 @@
       "cut video"
     ],
     "category": "Video & Audio Tools"
+  },
+  {
+    "title": "Watts to Amps Converter",
+    "description": "Free watts to amps calculator. Convert 1200 W at 120 V to amps, include kilowatts and see why voltage is required.",
+    "url": "tools/watts-to-amps/",
+    "iconKey": "unit",
+    "tags": [
+      "watts to amps",
+      "w to a calculator",
+      "volt in to watt",
+      "power to current",
+      "1200 watts to amps"
+    ],
+    "category": "Converter Tools"
   },
   {
     "title": "WEBP to AVIF Converter",

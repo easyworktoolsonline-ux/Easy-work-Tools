@@ -1,0 +1,14 @@
+{
+    "title": "Running Pace to MPH Converter",
+    "description": "Free minutes-per-mile to mph converter. Convert 8 min/mile to mph, 10 mph to pace and train with accurate speed targets.",
+    "tags": [
+        "minutes per mile to mph",
+        "pace to mph",
+        "mph to pace",
+        "running pace converter",
+        "min mile to mph"
+    ],
+    "url": "tools/pace-to-mph/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

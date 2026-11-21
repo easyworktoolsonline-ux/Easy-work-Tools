@@ -1,0 +1,15 @@
+{
+    "title": "Time Converter",
+    "description": "Free time converter for seconds, minutes, hours, days, weeks and years. Convert 1200 seconds to minutes, 1000 seconds to minutes and more.",
+    "tags": [
+        "seconds to minutes",
+        "1200 seconds to minutes",
+        "how many minutes is 1000 seconds",
+        "weeks to years",
+        "how long is 2000 hours",
+        "time converter"
+    ],
+    "url": "tools/time-converter/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

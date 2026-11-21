@@ -1,0 +1,14 @@
+{
+    "title": "Amps to Watts Converter",
+    "description": "Free amps to watts calculator. Convert 10 A at 120 V to watts, include milliamps and kilowatts, and understand the voltage requirement.",
+    "tags": [
+        "amps to watts",
+        "conversion ampere watt",
+        "10 amps to watts",
+        "a to w calculator",
+        "current to power"
+    ],
+    "url": "tools/amps-to-watts/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

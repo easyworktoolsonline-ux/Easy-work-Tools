@@ -1,0 +1,15 @@
+{
+    "title": "KHz to Hz Converter",
+    "description": "Free kHz to Hz converter. Convert khz en hz, MHz to Hz, frequency to wavelength inputs and radio frequencies instantly.",
+    "tags": [
+        "khz to hz",
+        "khz",
+        "khz en hz",
+        "kilohertz to hertz",
+        "mhz to hz",
+        "frequency converter"
+    ],
+    "url": "tools/khz-to-hz/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

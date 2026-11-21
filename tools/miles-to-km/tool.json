@@ -1,0 +1,15 @@
+{
+    "title": "Miles to KM Converter",
+    "description": "Free miles to km converter and km to miles converter. Convert 14 miles, 1 mile, 10 km and any distance with the exact 1.609344 factor.",
+    "tags": [
+        "miles to km",
+        "km to miles",
+        "14 miles en km",
+        "mile versus km",
+        "m to yard",
+        "kilometers to miles"
+    ],
+    "url": "tools/miles-to-km/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}

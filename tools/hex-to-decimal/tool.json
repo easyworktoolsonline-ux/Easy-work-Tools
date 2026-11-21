@@ -1,0 +1,15 @@
+{
+    "title": "Hex to Decimal Converter",
+    "description": "Free hex to decimal converter. Convert hexadec to decimal, decimal to hex, binary to decimal and octal values instantly.",
+    "tags": [
+        "hex to decimal",
+        "hexadec to decimal",
+        "convert from hexadecimal",
+        "decimal convert to hex",
+        "hexadecimal converter",
+        "binary to decimal"
+    ],
+    "url": "tools/hex-to-decimal/",
+    "iconKey": "unit",
+    "category": "Converter Tools"
+}
