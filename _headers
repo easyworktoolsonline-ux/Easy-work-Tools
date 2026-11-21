@@ -27,6 +27,7 @@
 #   script-src  pagead2.googlesyndication.com (adsbygoogle.js + show_ads_impl)
 #               ep2.adtrafficquality.google (sodar2.js)
 #   frame-src   googleads.g.doubleclick.net (ad frame)
+#               pagead2.googlesyndication.com (AdSense frames)
 #               ep2.adtrafficquality.google (sodar frames)
 #               www.google.com - scoped to /recaptcha/ (the AdSense aframe is
 #               https://www.google.com/recaptcha/api2/aframe), not the whole host
@@ -67,7 +68,7 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), midi=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
   Strict-Transport-Security: max-age=15552000
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://ep1.adtrafficquality.google; connect-src 'self' https://script.google.com https://cloudflareinsights.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://ep1.adtrafficquality.google; connect-src 'self' https://script.google.com https://cloudflareinsights.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 /favicon.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
