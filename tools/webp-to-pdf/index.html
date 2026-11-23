@@ -470,7 +470,7 @@ document.addEventListener("DOMContentLoaded", function(){
     items.forEach(function(it,idx){
       var chip=document.createElement("span");
       chip.className="file-chip";
-      var thumb=it.thumbUrl?'<img class="chip-thumb" src="'+it.thumbUrl+'" alt="">':"";
+      var thumb=it.thumbUrl?'<img class="chip-thumb" src="'+it.thumbUrl+'" alt="Selected file preview">':"";
       chip.innerHTML=thumb+"<b title=\""+escapeHtml(it.file.name)+"\">"+escapeHtml(shortName(it.file.name))+"</b>"+
         '<span class="chip-dim">'+it.width+"×"+it.height+" · "+fmtBytes(it.file.size)+"</span>";
       chip.appendChild(chipBtn("←","Move earlier",idx===0,function(){moveItem(idx,idx-1)}));

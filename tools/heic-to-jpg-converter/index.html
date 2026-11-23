@@ -508,7 +508,7 @@ qualityRange.addEventListener("input",function(){qualityVal.textContent=qualityR
 function renderQueue(){
   fileGrid.innerHTML=queue.map(function(item,i){
     return '<div class="heic-row" data-i="'+i+'">'
-      +(item.thumb?'<img src="'+item.thumb+'" alt="">':'<div style="width:56px;height:56px;border-radius:10px;background:#F3F4F6"></div>')
+      +(item.thumb?'<img src="'+item.thumb+'" alt="Selected file preview">':'<div style="width:56px;height:56px;border-radius:10px;background:#F3F4F6"></div>')
       +'<div class="name">'+item.file.name.replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})+'</div>'
       +'<div class="size">'+fmtBytes(item.file.size)+'</div>'
       +'<div class="state" id="state-'+i+'">'+(item.state||'Ready')+'</div>'

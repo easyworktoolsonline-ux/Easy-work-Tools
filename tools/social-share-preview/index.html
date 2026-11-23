@@ -482,7 +482,7 @@ function render(){
     var el=$(pair[0]);
     if(image){
       el.classList.remove("empty");
-      el.innerHTML='<img src="'+image.replace(/"/g,"&quot;")+'" alt="" onerror="this.parentElement.classList.add(\'empty\');this.parentElement.innerHTML=\'Image failed to load\'">';
+      el.innerHTML='<img src="'+image.replace(/"/g,"&quot;")+'" alt="Shared content preview image" onerror="this.parentElement.classList.add(\'empty\');this.parentElement.innerHTML=\'Image failed to load\'">';
     } else {
       el.classList.add("empty");
       el.textContent="No image set";
