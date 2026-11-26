@@ -455,7 +455,15 @@ Pre-commit check result: **PASS** across the intended staging list — 522 files
 
 ### Git commit and push
 
-_Git outcome pending; this section is recorded in the follow-up documentation commit after the implementation commit and push attempt._
+- Implementation commit: `991e8e817a6f160b94dd82252714c569ada39d2e` (short `991e8e8`), subject `Complete 89-task SEO implementation and verification`.
+- Commit composition: 522 files changed — 398 modified, 124 added, 0 deleted; 151,631 insertions and 110 deletions.
+- Parent before commit: `d7475139f8dce68d9a3e78db9280b448e4fb76ff`.
+- `git fetch origin main` succeeded and found no remote changes to reconcile.
+- Two foreground `git push origin main` attempts timed out without output (180 s, then 600 s) and did not update the remote.
+- Final background `git push origin main` succeeded. Exact push result line: `d747513..991e8e8  main -> main`.
+- Verified after push: local `main`, `origin/main` and `origin/HEAD` all point to `991e8e817a6f160b94dd82252714c569ada39d2e`.
+- No force-push, history rewrite or branch protection bypass was used.
+- This Git-outcome paragraph is recorded in a follow-up documentation-only commit after the implementation push; the implementation push hash above is final.
 
 ### Remaining limits
 
