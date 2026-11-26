@@ -66,7 +66,7 @@
 <p class="eyebrow">DEVELOPER TOOLS • HOW-TO GUIDE</p>
 <h1>How to Test a Regular Expression Before Using It in Code</h1>
 <p class="article-lead">A regex pattern that looks right can still fail silently once it's deployed — matching too much, too little, or nothing at all. Testing it against real sample data first catches that before it ships.</p>
-<div class="article-ad-slot" aria-hidden="true"></div>
+<a class="article-tool-cta" data-cat="developer" href="../tools/url-parser/"><span class="article-tool-cta__label">Try <strong>URL Parser</strong></span><span class="article-tool-cta__go" aria-hidden="true">&rarr;</span></a><div class="article-ad-slot" aria-hidden="true"></div>
 <h2>How to test a pattern</h2>
 <ol>
 <li>Open the <a href="../tools/regex-tester/">Regex Tester</a>.</li>
@@ -96,9 +96,9 @@
 <div class="article-ad-slot" aria-hidden="true"></div>
 <h2>Frequently Asked Questions</h2><dl><dt>Why should I test a regular expression before using it?</dt><dd>Because a pattern that looks right and matches nothing is the single most common regex bug. Testing it against real text takes seconds and tells you immediately whether it matches what you meant, how many times, and what it captured.</dd><dt>What do the different flags do?</dt><dd>The "i" flag ignores case, "m" makes ^ and $ match each line rather than the whole string, "s" makes the dot match newlines, and "g" finds every occurrence rather than stopping at the first. Most patterns that "do not work" just need "g" and "i".</dd><dt>What is a non-greedy group, and when do I need one?</dt><dd>A greedy group (.*) takes as much as it can, which usually overshoots. Making it lazy (.*?) takes as little as possible, which is what you want when matching between delimiters — for example &lt;(.*?)&gt; matches the text inside the first pair of angle brackets.</dd><dt>Why does my pattern work in the tester but not in my code?</dt><dd>Most often a delimiter clash: a pattern containing a slash breaks a /regex/ literal in JavaScript, and a single quote inside a pattern breaks a quoted string. Escaping the delimiter, or using a different delimiter, fixes it. It can also be a language difference in how "." or "\d" behaves.</dd><dt>What is catastrophic backtracking?</dt><dd>A pattern with nested quantifiers — like (a+)+ — can take exponential time on a long non-matching input, freezing the page. It looks like the tool hanging. The fix is to remove the nesting or make the inner quantifier possessive or lazy.</dd></dl>
 <p class="article-cta"><a class="button" href="../tools/regex-tester/">Open the Free Regex Tester</a></p>
-<div class="related-block"><h2>More free tools on EasyWorkTools.online</h2><div class="related-grid"><a class="related-card" href="../tools/url-parser/"><h3>URL Parser</h3><p>Break any URL down into its protocol, host, path and query.</p></a>
-<a class="related-card" href="../tools/html-entity-encoder-decoder/"><h3>HTML Entity Encoder &amp; Decoder</h3><p>Convert special characters to and from HTML entities.</p></a>
-<a class="related-card" href="../tools/json-formatter/"><h3>JSON Formatter</h3><p>Format, validate and minify JSON online for free.</p></a></div></div>
+<div class="related-block"><h2>More free tools on EasyWorkTools.online</h2><div class="related-grid"><a class="related-card" data-cat="developer" href="../tools/url-parser/"><h3>URL Parser</h3><p>Break any URL down into its protocol, host, path and query.</p></a>
+<a class="related-card" data-cat="developer" href="../tools/html-entity-encoder-decoder/"><h3>HTML Entity Encoder &amp; Decoder</h3><p>Convert special characters to and from HTML entities.</p></a>
+<a class="related-card" data-cat="developer" href="../tools/json-formatter/"><h3>JSON Formatter</h3><p>Format, validate and minify JSON online for free.</p></a></div></div>
 </article>
 </main>
 <footer class="site-footer">

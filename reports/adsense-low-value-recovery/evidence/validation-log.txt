@@ -1,0 +1,50 @@
+Validation log — 2026-11-26 / 2026-11-27
+Scope: EasyWorkTools.online local repository only. No full live-tree npm run build was executed.
+
+[1] TypeScript direct lint
+Command: node node_modules/typescript/bin/tsc --noEmit --ignoreConfig --target es2022 --module nodenext --moduleResolution nodenext --esModuleInterop server.ts
+Output: (none)
+Exit: 0
+
+[2] Targeted asset regeneration
+Command: node scripts/minify-assets.mjs
+Output:
+styles.css: 219527 -> 148964 bytes
+categories.css: 23840 -> 15420 bytes
+featured-coverflow.js: 30293 -> 4230 bytes
+tool-tabs.js: 9737 -> 3287 bytes
+category-carousel.js: 5236 -> 1753 bytes
+Exit: 0
+
+[3] Full 392-URL read-only audit re-run
+Command: node _work/adsense-audit/audit.mjs
+Output:
+{ "urls": 392, "rows": 392, "issues": 0 }
+Summary: homepage 1 ACCEPTABLE; tools-index 1 ACCEPTABLE; guides-index 1 ACCEPTABLE; resources-index 1 ACCEPTABLE; info 7 ACCEPTABLE; category 10 ACCEPTABLE; tool 227 ACCEPTABLE + 15 HIGH VALUE; guide 89 ACCEPTABLE + 40 HIGH VALUE.
+Exit: 0
+
+[4] Isolated generator build (copy outside the live tree)
+Command (from isolated copy): node scripts/build-indexes.mjs
+Output:
+Accepted contrast deviations (4) - the palette colours are exact, so no scrim is applied.
+  ~ Converter Tools #FFFFFF text on c1 #1493B3 -> 3.59:1 (needs 4.5:1; accepted so the palette colour stays exact)
+  ~ Calculator Tools #FFFFFF text on c1 #11D6B2 -> 1.86:1 (needs 4.5:1; accepted so the palette colour stays exact)
+Wrote 10 category pages under /categories/.
+Normalised internal links in 14 of 397 pages (529 root-absolute references, 0 url(), 669 full-origin links).
+canonical/og left absolute on purpose - they must name the public URL.
+404.html left root-absolute on purpose - its serving depth is unknowable.
+clean-urls: 397 of 399 files rewritten to the served URL form.
+Indexed 242 tools and 129 blog posts.
+Wrote ai-catalog.json (242 tools, 129 articles).
+Wrote llms.txt (242 tools, 129 articles).
+Exit: 0
+
+[5] Browser functional sample on local static server
+Word & Character Counter: entered "Hello world from EasyWorkTools"; outputs updated to 4 words, 30 characters, 27 characters without spaces.
+CM to Inches: entered 2.54; output updated to 1in.
+AI Detector: entered a short sentence and clicked Analyse text; status showed "10 words · 52 characters" and "Done · 780 characters".
+JSON Formatter: entered {"a":1,"b":[2,3]} and clicked Format / Beautify; status showed "Formatted successfully."
+Guide detail page console errors: 0.
+
+[6] Visual QA
+See evidence/visual-qa-results.json and evidence/VISUAL-QA-README.md. Desktop light/dark: 14 views. Mobile 390px iframe light/dark: 5 views. Category color mismatches: 0. Horizontal overflow: false.

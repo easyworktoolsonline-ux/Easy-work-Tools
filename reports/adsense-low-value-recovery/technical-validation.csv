@@ -1,0 +1,24 @@
+CheckID,Check,Method,Result,Evidence,FinalStatus
+T001,Sitemap URL count,Read-only audit of sitemap and filesystem,392 URLs; 392 audit rows,data/audit.json,DONE
+T002,Post-remediation issue scan,audit.mjs re-run,0 issues,data/issues.csv,DONE
+T003,Guide generic-marker removal,Static scan of 129 guides,0 generic markers in all 129 guides,data/audit.json,DONE
+T004,Guide CTA coverage,Static scan of 129 guides,129/129 tool-specific CTAs; 0 missing,guide-enhancement-summary.json,DONE
+T005,Guide related cards,Static scan of 129 guides,387 cards across 129 blocks (3 each); 363 received data-cat; 24 missing cards filled,guide-enhancement-summary.json,DONE
+T006,Guide FAQ JSON-LD,JSON.parse of all FAQPage blocks,54/54 rebuilt blocks parse; 129/129 guides pass full validation,data/audit.json,DONE
+T007,Guide relative content links,Read-only link extraction,0 broken relative content links,Prior targeted validation recorded in this report,DONE
+T008,Blog metadata sync,Manifest and index comparison,54 descriptions synced to blog-manifest.json and blog/index.html,guide-enhancement-summary.json,DONE
+T009,Category color mapping,Computed --cat-color on data-cat elements,10/10 mappings; 0 mismatches in every requested view,evidence/visual-qa-results.json,DONE
+T010,Guide title readability,Computed color on 129 guide cards,"Light rgb(11,18,32); dark rgb(248,250,252)",evidence/visual-qa-results.json,DONE
+T011,Guide CTA styling,Computed styles and click target,"16px font, 52px min height, 14px 26px padding, 12px radius, correct href",evidence/visual-qa-results.json,DONE
+T012,Responsive layout,"390px iframe emulation, light and dark",scrollWidth 375 vs innerWidth 390; no horizontal overflow,evidence/visual-qa-results.json,DONE
+T013,Desktop dark/light QA,14 views in both themes,0 color mismatches; no broken layouts,evidence/visual-qa-results.json,DONE
+T014,TypeScript lint,node node_modules/typescript/bin/tsc ... server.ts,Exit 0; no output,evidence/validation-log.txt,DONE
+T015,Asset generation,node scripts/minify-assets.mjs,Exit 0; only assets/styles.css differs from HEAD,evidence/validation-log.txt,DONE
+T016,Isolated generator build,node scripts/build-indexes.mjs in temp copy,"Exit 0; 10 categories, 242 tools, 129 guides indexed",evidence/validation-log.txt,DONE
+T017,Functional regression sample,Local browser interaction on 4 tools,4/4 produced expected output changes,evidence/validation-log.txt,DONE
+T018,Browser console,Sampled guide detail page console errors,0 errors,evidence/validation-log.txt,DONE
+T019,Secret and sensitive-file scan,Pattern and path scan of all intended files,0 secret hits; 0 forbidden paths,evidence/pre-commit-checks.txt,DONE
+T020,Live HTTPS browser QA,In-app browser navigation,ERR_TUNNEL_CONNECTION_FAILED; local static server substituted,Session evidence,DATA UNAVAILABLE
+T021,Real-device mobile testing,Device emulation only,Not performed; 390px iframe emulation used,evidence/VISUAL-QA-README.md,DATA UNAVAILABLE
+T022,Full runtime test of all 242 tools,Not executed in this pass,4-tool sample only; static signals audited for all 242,tool-functionality-audit.csv,PARTIAL
+T023,Git commit and push verification,git rev-parse and git ls-remote,commit=PENDING; push=PENDING,Final report,PARTIAL

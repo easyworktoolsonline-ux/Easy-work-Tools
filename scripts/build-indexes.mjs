@@ -885,7 +885,7 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
      const cards = list.map((t) => {
        const key = toolKey(t.url);
        const glyph = featuredToolIcon(key, iconSvg(t.iconKey || 'tool'));
-      return '<li class="cf-item" data-cat="' + escHtml(catLabel(byTitle, t)) + '">' +
+      return '<li class="cf-item" data-cat="' + escHtml(catSlug(t.category)) + '" data-cat-label="' + escHtml(catLabel(byTitle, t)) + '">' +
         '<a class="cf-card" href="https://easyworktools.online/tools/' + key + '/">' +
         '<span class="cf-card__glow" aria-hidden="true"></span>' +
         '<span class="cf-card__icon" aria-hidden="true">' + glyph + '</span>' +

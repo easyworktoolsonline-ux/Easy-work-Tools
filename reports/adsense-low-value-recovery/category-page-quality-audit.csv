@@ -1,0 +1,11 @@
+URL,Slug,BeforeQuality,AfterQuality,ToolCards,CategoryColor,HowToChoosePresent,ColorQADesktop,ColorQAMobile,ThemeQA,FinalStatus
+https://easyworktools.online/categories/ai-write/,ai-write,ACCEPTABLE,ACCEPTABLE,54,#1D4ED8,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/image/,image,ACCEPTABLE,ACCEPTABLE,46,#C2410C,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/pdf/,pdf,ACCEPTABLE,ACCEPTABLE,37,#000000,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/developer/,developer,DUPLICATIVE / OVERLAPPING,ACCEPTABLE,19,#15803D,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/seo/,seo,DUPLICATIVE / OVERLAPPING,ACCEPTABLE,14,#DC2626,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/text/,text,DUPLICATIVE / OVERLAPPING,ACCEPTABLE,12,#7C3AED,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/converter/,converter,ACCEPTABLE,ACCEPTABLE,45,#1493B3,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/calculator/,calculator,NEEDS IMPROVEMENT,ACCEPTABLE,6,#11D6B2,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/video-audio/,video-audio,NEEDS IMPROVEMENT,ACCEPTABLE,5,#6D28D9,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE
+https://easyworktools.online/categories/utility/,utility,NEEDS IMPROVEMENT,ACCEPTABLE,4,#D61149,true,PASS - 0 mismatches,PASS - 0 mismatches,PASS - light and dark,DONE

@@ -64,7 +64,7 @@
 <p class="eyebrow">DEVELOPER TOOLS • GUIDE</p>
 <h1>URL Encoding Explained: When and Why to Percent-Encode Text</h1>
 <p class="article-lead">A search term with a space or an ampersand, dropped straight into a URL, will break the link or get parsed wrong. Percent-encoding is the fix — but it's easy to apply it incorrectly.</p>
-<div class="article-ad-slot" aria-hidden="true"></div>
+<a class="article-tool-cta" data-cat="developer" href="../tools/url-parser/"><span class="article-tool-cta__label">Try <strong>URL Parser</strong></span><span class="article-tool-cta__go" aria-hidden="true">&rarr;</span></a><div class="article-ad-slot" aria-hidden="true"></div>
 <h2>What percent-encoding is</h2>
 <p>Certain characters have structural meaning inside a URL — <code>/</code> separates path segments, <code>?</code> starts a query string, <code>&amp;</code> separates parameters, <code>#</code> marks a fragment. If your actual data contains one of these characters, it has to be encoded first so it's treated as data rather than structure. A space becomes <code>%20</code>, an ampersand becomes <code>%26</code>, and so on.</p>
 <h2>Component encoding vs full URI encoding</h2>
@@ -88,9 +88,9 @@
 <div class="article-ad-slot" aria-hidden="true"></div>
 <h2>Frequently Asked Questions</h2><dl><dt>What is percent-encoding and when is it needed?</dt><dd>It replaces characters that are unsafe in a URL with a % followed by two hex digits, so "my file.pdf" becomes "my%20file.pdf". It is needed for spaces, most non-ASCII characters, and reserved characters such as &amp;, =, # and ? when they are part of a value rather than the URL structure.</dd><dt>Which characters must always be encoded?</dt><dd>Spaces, control characters, and anything outside unreserved ASCII. The unreserved set is small and worth memorising: A-Z, a-z, 0-9, hyphen, underscore, period and tilde. Everything else should be encoded when it appears in a value.</dd><dt>Should I encode a whole URL or just parts of it?</dt><dd>Just the parts. A URL contains structural characters — the slashes between segments, the ? that starts a query, the &amp; that separates parameters — and encoding those breaks the URL. Encode the values inside each segment, not the structure.</dd><dt>Why does my URL work in one place and not another?</dt><dd>Because encoding is context-dependent. In a query string, a space can be "+" or "%20"; in a path, only "%20" works. In a path segment, a slash is structural, but a slash inside a value in a query must be encoded. Decoding twice is a common cause of URLs that break unpredictably.</dd><dt>Does encoding change the content?</dt><dd>No. Percent-encoding is a transport representation, not a transformation. Decoding a correctly encoded string returns exactly the original text, which is why it is reversible and safe to use for passwords and tokens in a URL — though a request body is still the better place for either.</dd></dl>
 <p class="article-cta"><a class="button" href="../tools/url-encoder-decoder/">Open the Free URL Encoder & Decoder</a></p>
-<div class="related-block"><h2>More free tools on EasyWorkTools.online</h2><div class="related-grid"><a class="related-card" href="../tools/url-parser/"><h3>URL Parser</h3><p>Break any URL down into its protocol, host, path and query.</p></a>
-<a class="related-card" href="../tools/base64-encoder-decoder/"><h3>Base64 Encoder &amp; Decoder</h3><p>Encode or decode Base64 text and files instantly.</p></a>
-<a class="related-card" href="../tools/html-entity-encoder-decoder/"><h3>HTML Entity Encoder &amp; Decoder</h3><p>Convert special characters to and from HTML entities.</p></a></div></div>
+<div class="related-block"><h2>More free tools on EasyWorkTools.online</h2><div class="related-grid"><a class="related-card" data-cat="developer" href="../tools/url-parser/"><h3>URL Parser</h3><p>Break any URL down into its protocol, host, path and query.</p></a>
+<a class="related-card" data-cat="developer" href="../tools/base64-encoder-decoder/"><h3>Base64 Encoder &amp; Decoder</h3><p>Encode or decode Base64 text and files instantly.</p></a>
+<a class="related-card" data-cat="developer" href="../tools/html-entity-encoder-decoder/"><h3>HTML Entity Encoder &amp; Decoder</h3><p>Convert special characters to and from HTML entities.</p></a></div></div>
 </article>
 </main>
 <footer class="site-footer">

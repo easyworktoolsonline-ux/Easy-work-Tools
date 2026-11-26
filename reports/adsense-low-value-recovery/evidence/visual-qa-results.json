@@ -1,0 +1,103 @@
+{
+  "generated": "2026-11-26T18:56:20.776Z",
+  "scope": "EasyWorkTools.online local static server only; no live HTTPS browser session was available.",
+  "base_url": "http://127.0.0.1:8766/",
+  "theme_control": "The app reads localStorage key ewt-theme; light and dark were set explicitly before each pass.",
+  "desktop": {
+    "viewport": "1000px-wide browser tab",
+    "views": 14,
+    "themes": ["light", "dark"],
+    "result_summary": {
+      "homepage_featured_cards": 28,
+      "homepage_most_popular_cards": 28,
+      "homepage_category_coverage": 10,
+      "homepage_recent_chips": 5,
+      "all_tools_cards": 242,
+      "guide_listing_cards": 129,
+      "guide_detail_related_cards": 3,
+      "category_listings": {
+        "ai-write": 54,
+        "image": 46,
+        "pdf": 37,
+        "developer": 19,
+        "seo": 14,
+        "text": 12,
+        "converter": 45,
+        "calculator": 6,
+        "video-audio": 5,
+        "utility": 4
+      },
+      "category_color_mismatches": 0,
+      "major_category_card_mismatches": 0,
+      "recent_chip_color_mismatches": 0,
+      "guide_title_colors_light": ["rgb(11, 18, 32)"],
+      "guide_title_colors_dark": ["rgb(248, 250, 252)"],
+      "guide_h1_light": "rgb(11, 18, 32)",
+      "guide_h1_dark": "rgb(248, 250, 252)",
+      "horizontal_overflow": false
+    }
+  },
+  "mobile": {
+    "method": "390px iframe using _work/adsense-audit/qa-harness.html; this is viewport emulation, not real-device testing.",
+    "views": ["/", "/tools/", "/categories/seo/", "/blog/", "/blog/ai-detector"],
+    "themes": ["light", "dark"],
+    "result_summary": {
+      "viewport_width": 390,
+      "document_scroll_width": 375,
+      "horizontal_overflow": false,
+      "category_color_mismatches": 0,
+      "major_category_card_mismatches": 0,
+      "recent_chip_color_mismatches": 0,
+      "guide_title_colors_light": ["rgb(11, 18, 32)"],
+      "guide_title_colors_dark": ["rgb(248, 250, 252)"],
+      "guide_cta": {
+        "text": "Try AI Detector→",
+        "href": "../tools/ai-write/ai-detector/",
+        "data_cat": "ai-write",
+        "computed_category_color": "#1d4ed8",
+        "font_size": "16px",
+        "min_height": "52px",
+        "padding": "14px 26px",
+        "border_radius": "12px"
+      }
+    }
+  },
+  "category_color_mapping": {
+    "ai-write": "#1D4ED8",
+    "image": "#C2410C",
+    "pdf": "#000000",
+    "developer": "#15803D",
+    "seo": "#DC2626",
+    "text": "#7C3AED",
+    "converter": "#1493B3",
+    "calculator": "#11D6B2",
+    "video-audio": "#6D28D9",
+    "utility": "#D61149"
+  },
+  "major_category_cards_verified_c1": [
+    "#1D4ED8",
+    "#C2410C",
+    "#1493B3",
+    "#000000",
+    "#15803D",
+    "#DC2626",
+    "#7C3AED",
+    "#11D6B2",
+    "#6D28D9",
+    "#D61149"
+  ],
+  "screenshots": [
+    "homepage-light.png",
+    "all-tools-light.png",
+    "category-seo-dark.png",
+    "guides-light.png",
+    "guide-detail-dark.png",
+    "mobile-home-light.png",
+    "mobile-guide-dark.png"
+  ],
+  "limitations": [
+    "The paired browse extension was offline, so emulate-based mobile testing was unavailable; iframe viewport emulation was used instead.",
+    "Live HTTPS navigation failed with ERR_TUNNEL_CONNECTION_FAILED; local static-server QA is the reproducible substitute.",
+    "No real-device mobile testing was performed."
+  ]
+}

@@ -1,0 +1,20 @@
+Pre-commit safety checks — 2026-11-27 (final regenerated reports)
+
+Scope checked: 196 tracked modified files plus all 34 files under reports/adsense-low-value-recovery/ (230 intended files total; 223 text files scanned, 7 PNG screenshots excluded).
+
+Secret pattern scan:
+- Patterns: AWS access key IDs, GitHub PATs, OpenAI-style sk- keys, private-key headers, api_key/client_secret/refresh_token/access_token assignments, password assignments.
+- Result: 0 hits.
+
+Forbidden path scan:
+- Rule: flag .env*, credential/token files, node_modules and .git paths.
+- Result: 0 hits. `cookies.html` is a normal public cookie-policy page and is an intended change, not a sensitive file.
+
+Unrelated untracked files confirmed excluded: metadata.json, server.ts, src/, tsconfig.json, vite.config.ts, and temporary _work/ files.
+
+Git state check:
+- Branch: main.
+- Baseline HEAD before this task: 3584f6a699ebac45568835a2b7d27d84ec39a7c6.
+- Local HEAD, upstream and remote refs/heads/main all matched that baseline at the time of the final check.
+- Remote: https://github.com/easyworktoolsonline-ux/Easy-work-Tools.git.
+- No force-push, history rewrite, deployment, Cloudflare, DNS, or GlobeCareer.online access.

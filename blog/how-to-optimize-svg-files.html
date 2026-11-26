@@ -66,7 +66,7 @@
 <p class="eyebrow">IMAGE TOOLS • HOW-TO GUIDE</p>
 <h1>How to Reduce SVG File Size Without Breaking Your Icons</h1>
 <p class="article-lead">An icon exported from Illustrator or Figma can be five times larger than it needs to be — not because of the artwork, but because of everything the editor left behind around it.</p>
-<div class="article-ad-slot" aria-hidden="true"></div>
+<a class="article-tool-cta" data-cat="image" href="../tools/free-image-compressor/"><span class="article-tool-cta__label">Try <strong>Free Image Compressor</strong></span><span class="article-tool-cta__go" aria-hidden="true">&rarr;</span></a><div class="article-ad-slot" aria-hidden="true"></div>
 <h2>Why exported SVGs are bloated</h2>
 <p>Design tools embed a lot of information an SVG doesn't need to render correctly: generator comments, editor-specific namespaces (Inkscape and Sketch metadata are common offenders), empty <code>&lt;metadata&gt;</code> blocks, and generous indentation and line breaks. None of it is visible in the browser — it just adds bytes to every page load.</p>
 <h2>How to clean up an SVG</h2>
@@ -90,9 +90,9 @@
 <div class="article-ad-slot" aria-hidden="true"></div>
 <h2>Frequently Asked Questions</h2><dl><dt>How much can SVG optimisation actually save?</dt><dd>For a hand-written or exported icon, typically 30-60%. The savings come from removing editor metadata, collapsing groups, shortening path data and dropping unused definitions. A hand-optimised file has almost nothing left to remove.</dd><dt>Will optimising break my icon?</dt><dd>Not if the optimiser is conservative and you check the result. The risk is removing something that looks redundant but is referenced — a gradient with a single stop, or a class used only in CSS. Preview the optimised file side by side before you ship it.</dd><dt>Why is my SVG so large in the first place?</dt><dd>Almost always editor output. Design tools write a lot of metadata, comments, generator strings, unused layers and default attribute values. A file exported straight from a well-organised source is a fraction of the size.</dd><dt>Should I minify an SVG the same way I minify HTML?</dt><dd>Similar idea, different rules. In SVG you can shorten attribute names, drop redundant defaults and round coordinates — but you must keep the viewBox, or the icon will scale wrongly.</dd><dt>Does an SVG icon need width and height attributes?</dt><dd>Not strictly — CSS can size it. But leaving them out means the browser uses the viewBox ratio, which is usually what you want for an icon. Setting them hard-codes a size that then needs overriding in CSS.</dd></dl>
 <p class="article-cta"><a class="button" href="../tools/svg-optimizer/">Open the Free SVG Optimizer</a></p>
-<div class="related-block"><h2>More free tools on EasyWorkTools.online</h2><div class="related-grid"><a class="related-card" href="../tools/free-image-compressor/"><h3>Free Image Compressor</h3><p>Compress JPG, PNG and WebP images online for free.</p></a>
-<a class="related-card" href="../tools/html-css-js-minifier/"><h3>HTML/CSS/JS Minifier</h3><p>Minify HTML, CSS and JavaScript to reduce file size.</p></a>
-<a class="related-card" href="../tools/color-picker-converter/"><h3>Color Picker &amp; Converter</h3><p>Pick a color and convert it between HEX, RGB and HSL.</p></a></div></div>
+<div class="related-block"><h2>More free tools on EasyWorkTools.online</h2><div class="related-grid"><a class="related-card" data-cat="image" href="../tools/free-image-compressor/"><h3>Free Image Compressor</h3><p>Compress JPG, PNG and WebP images online for free.</p></a>
+<a class="related-card" data-cat="developer" href="../tools/html-css-js-minifier/"><h3>HTML/CSS/JS Minifier</h3><p>Minify HTML, CSS and JavaScript to reduce file size.</p></a>
+<a class="related-card" data-cat="utility" href="../tools/color-picker-converter/"><h3>Color Picker &amp; Converter</h3><p>Pick a color and convert it between HEX, RGB and HSL.</p></a></div></div>
 </article>
 </main>
 <footer class="site-footer">
