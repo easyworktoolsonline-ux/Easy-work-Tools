@@ -1,0 +1,70 @@
+{
+  "ObservedAt": "2026-11-27",
+  "Property": "sc-domain:easyworktools.online",
+  "Source": "Authenticated Google Search Console > Indexing > Pages > reason drilldown (read-only)",
+  "Note": "Examples are the first rows shown by GSC and are not exhaustive. Last crawled dates are reproduced only where GSC displayed them.",
+  "Reasons": [
+    {
+      "Reason": "Page with redirect",
+      "Count": 49,
+      "Examples": [
+        "http://easyworktools.online/",
+        "http://www.easyworktools.online/",
+        "https://easyworktools.online/index.html",
+        "https://www.easyworktools.online/",
+        "https://www.easyworktools.online/index.html",
+        "https://easyworktools.online/tools/index.html?cat=text",
+        "https://easyworktools.online/tools/ai-write/blog-post-ideas/index.html",
+        "https://easyworktools.online/categories/converter/index.html"
+      ]
+    },
+    {
+      "Reason": "Not found (404)",
+      "Count": 203,
+      "Examples": [
+        "https://easyworktools.online/tools/ai-write/business-plan-generator/categories/developer/",
+        "https://easyworktools.online/categories/image/categories/ai-write/",
+        "https://easyworktools.online/tools/ai-write/content-planner/categories/developer/",
+        "https://easyworktools.online/tools/ai-write/content-planner/categories/ai-write/",
+        "https://easyworktools.online/tools/ai-write/content-planner/categories/text/",
+        "https://easyworktools.online/tools/ai-write/content-planner/categories/utility/",
+        "https://easyworktools.online/tools/ai-write/blog-post-ideas/categories/seo/"
+      ]
+    },
+    {
+      "Reason": "Alternative page with proper canonical tag",
+      "Count": 2,
+      "Examples": [
+        "https://easyworktools.online/?q={search_term_string}",
+        "https://easyworktools.online/tools/?cat=text"
+      ]
+    },
+    {
+      "Reason": "Discovered – currently not indexed",
+      "Count": 323,
+      "Examples": [
+        "https://easyworktools.online/about",
+        "https://easyworktools.online/blog/",
+        "https://easyworktools.online/blog/ai-detector",
+        "https://easyworktools.online/blog/ai-humanizer",
+        "https://easyworktools.online/blog/article-generator",
+        "https://easyworktools.online/blog/article-writer",
+        "https://easyworktools.online/blog/bill-of-sale"
+      ]
+    },
+    {
+      "Reason": "Crawled - currently not indexed",
+      "Count": 17,
+      "Examples": [
+        "https://easyworktools.online/blog/kg-to-lbs-explained",
+        "https://easyworktools.online/tools/amps-to-watts/",
+        "https://easyworktools.online/blog/binary-vs-decimal-storage",
+        "https://easyworktools.online/tools/square-feet-to-square-meters/",
+        "https://easyworktools.online/tools/amps-per-meter-to-oersted/",
+        "https://easyworktools.online/tools/lbs-to-kg/",
+        "https://easyworktools.online/tools/pace-to-mph/"
+      ]
+    }
+  ],
+  "FinalStatus": "PARTIAL"
+}

@@ -1,0 +1,35 @@
+Report,Group,Purpose,ChangedThisPass,FinalStatus,EvidenceOrNotes
+FINAL-ADSENSE-LOW-VALUE-RECOVERY-REPORT.md,Original 15,Consolidated recovery report,Yes,PARTIAL,Overall status remains PARTIAL with updated meta and tool remediation
+adsense-policy-readiness-checklist.csv,Original 15,AdSense policy checklist,No,DONE,Preserved from original delivery
+before-after-quality-dashboard.csv,Original 15,Quality score before and after,No,DONE,Preserved from original delivery
+blog-and-guide-quality-audit.csv,Original 15,Blog and guide quality evidence,No,DONE,Preserved from original delivery
+category-page-quality-audit.csv,Original 15,Category page quality evidence,No,DONE,Preserved from original delivery
+complete-page-quality-audit-392-pages.csv,Original 15,Full 392-page audit,No,DONE,Preserved from original delivery
+content-remediation-register.csv,Original 15,Page-level remediation register,No,DONE,Preserved from original delivery
+final-unresolved-issues.csv,Original 15,Open issue register,Yes,PARTIAL,Updated for fresh GSC and current tool triage
+google-organic-keyword-research.csv,Original 15,Keyword research evidence,No,PARTIAL,Preserved historical and free Autocomplete evidence
+gsc-latest-performance.csv,Original 15,Historical GSC performance export,No,DONE,Preserved as historical baseline
+keyword-source-and-evidence-register.csv,Original 15,Keyword provenance,No,DONE,Preserved from original delivery
+low-value-content-issues.csv,Original 15,Low-value issue register,No,DONE,Preserved from original delivery
+missing-user-input-register.csv,Original 15,Owner export requests,No,BLOCKED - WAITING FOR OWNER,Optional exports still not supplied
+technical-validation.csv,Original 15,Technical validation checklist,Yes,DONE,Added final remediation checks
+tool-functionality-audit.csv,Original 15,Static tool audit,No,DONE,Preserved from original delivery
+bing-submission-inventory.csv,Prior added 12,Ranked Bing URL inventory,No,DONE,Preserved from final evidence pass
+bing-url-submission-register.csv,Prior added 12,Per-URL Bing acceptance record,No,DONE,Acceptance is not indexing
+bing-webmaster-performance.csv,Prior added 12,Bing Webmaster observations,Yes,PARTIAL,Updated with fresh sitemap and quota observations
+final-owner-actions-required.md,Prior added 12,Owner decisions,Yes,PARTIAL,Updated after meta and tool remediation
+final-visual-qa-evidence.md,Prior added 12,Visual QA evidence,Yes,PARTIAL,Added rendered and 390px addendum
+gsc-page-indexing-status.csv,Prior added 12,GSC indexing counts,Yes,DONE,Linked to reason-wise analysis
+gsc-performance-comparison.csv,Prior added 12,Fresh GSC comparison,No,DONE,Preserved from final evidence pass
+gsc-sitemap-status.csv,Prior added 12,GSC sitemap state,No,DONE,Preserved from final evidence pass
+gsc-url-inspection-register.csv,Prior added 12,GSC URL inspection evidence,No,DONE,Preserved from final evidence pass
+indexing-fixes-and-validation.csv,Prior added 12,Indexing fix register,No,PARTIAL,Platform outcomes still pending
+indexing-technical-issues-register.csv,Prior added 12,Technical indexing issues,No,DONE,Preserved from final evidence pass
+tool-functional-test-coverage.csv,Prior added 12,242-tool smoke coverage,No,PARTIAL,Source of the 16 observed FAIL rows
+ai-write-meta-descriptions-before-after.csv,Current added 7,86-row before and after meta description CSV,Yes,DONE,Exact copy of authoritative draft
+apps-script-security-audit.md,Current added 7,Sanitized Apps Script audit,Yes,PARTIAL,Owner-only deployment state unavailable
+gsc-reason-wise-indexing-report.md,Current added 7,Reason-wise GSC analysis,Yes,PARTIAL,Includes captured reason examples
+report-reconciliation-table.csv,Current added 7,Report inventory and reconciliation,Yes,DONE,This file
+security-github-and-deployment-audit.md,Current added 7,Sanitized GitHub and deployment audit,Yes,PARTIAL,Dashboard and visibility data unavailable
+security-source-and-configuration-audit.md,Current added 7,Sanitized source security audit,Yes,PARTIAL,Owner decisions still required
+tool-failure-verification-report.md,Current added 7,16-tool classification and verification,Yes,PARTIAL,7 defects fixed and 9 rows closed as non-defects

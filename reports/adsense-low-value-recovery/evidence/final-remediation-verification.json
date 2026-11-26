@@ -1,0 +1,18 @@
+{
+  "Date": "2026-11-27",
+  "Source": "Targeted local verification script ewt-verify-final-remediation.mjs",
+  "MetaRowsVerified": 86,
+  "UniqueDescriptions": 86,
+  "ToolFilesVerified": 7,
+  "VerifiedToolFiles": [
+    "tools/chart-maker/index.html",
+    "tools/pdf-booklet/index.html",
+    "tools/pdf-flatten/index.html",
+    "tools/pdf-overlay/index.html",
+    "tools/pdf-page-size-checker/index.html",
+    "tools/pdf-repair/index.html",
+    "tools/social-share-preview/index.html"
+  ],
+  "BackupRoot": "_work/adsense-audit/backups/2026-11-27-final-remediation",
+  "FinalStatus": "DONE"
+}

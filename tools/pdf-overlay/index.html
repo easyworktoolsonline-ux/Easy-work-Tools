@@ -350,6 +350,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     const runBtn = document.getElementById('runBtn');
     const downloadBtn = document.getElementById('downloadBtn');
     const statusMsg = document.getElementById('statusMsg');
+function showStatus(msg,type){if(!msg){statusMsg.classList.remove('show');statusMsg.textContent='';return}var t=type||(/error|could not|unable|please select|failed/i.test(String(msg))?'error':/done!|created|repaired|inspected|ready/i.test(String(msg))?'ok':'info');statusMsg.textContent=msg;statusMsg.className='status-msg show '+t}
 
     let baseFile = null, overFile = null, outputBytes = null;
 
@@ -391,7 +392,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     runBtn.addEventListener('click', async () => {
       if (!baseFile || !overFile) return;
       runBtn.disabled = true;
-      statusMsg.textContent = 'Compositing PDFs...';
+      showStatus('Compositing PDFs...');
       try {
         await need_pdf_lib_js();
         const [bBuf, oBuf] = await Promise.all([baseFile.arrayBuffer(), overFile.arrayBuffer()]);
@@ -426,10 +427,10 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
 
         outputBytes = await outDoc.save();
         downloadBtn.style.display = 'inline-flex';
-        statusMsg.textContent = 'Done! Overlaid ' + basePages.length + ' page(s) in ' + (layerMode.value === 'bg' ? 'background' : 'foreground') + ' mode.';
+        showStatus('Done! Overlaid ' + basePages.length + ' page(s) in ' + (layerMode.value === 'bg' ? 'background' : 'foreground') + ' mode.');
         triggerDownload();
       } catch (err) {
-        statusMsg.textContent = 'Error: ' + (err && err.message ? err.message : 'Failed to overlay PDFs.');
+        showStatus('Error: ' + (err && err.message ? err.message : 'Failed to overlay PDFs.'));
       } finally {
         runBtn.disabled = false;
       }

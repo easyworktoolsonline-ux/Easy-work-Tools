@@ -329,6 +329,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     const runBtn = document.getElementById('runBtn');
     const downloadBtn = document.getElementById('downloadBtn');
     const statusMsg = document.getElementById('statusMsg');
+function showStatus(msg,type){if(!msg){statusMsg.classList.remove('show');statusMsg.textContent='';return}var t=type||(/error|could not|unable|please select|failed/i.test(String(msg))?'error':/done!|created|repaired|inspected|ready/i.test(String(msg))?'ok':'info');statusMsg.textContent=msg;statusMsg.className='status-msg show '+t}
 
     let currentFile = null, outputBytes = null;
 
@@ -338,7 +339,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
       fileNameEl.textContent = f.name;
       fileMetaEl.textContent = (f.size / 1024).toFixed(1) + ' KB';
       fileInfo.style.display = 'flex'; dropzone.style.display = 'none';
-      runBtn.disabled = false; statusMsg.textContent = 'Ready to repair.';
+      runBtn.disabled = false; showStatus('Ready to repair.');
     }
 
     dropzone.addEventListener('click', () => fileInput.click());
@@ -349,7 +350,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     clearBtn.addEventListener('click', () => {
       currentFile = null; outputBytes = null; fileInput.value = '';
       fileInfo.style.display = 'none'; dropzone.style.display = '';
-      runBtn.disabled = true; downloadBtn.style.display = 'none'; statusMsg.textContent = '';
+      runBtn.disabled = true; downloadBtn.style.display = 'none'; showStatus('');
     });
 
     function triggerDownload() {
@@ -403,7 +404,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     runBtn.addEventListener('click', async () => {
       if (!currentFile) return;
       runBtn.disabled = true;
-      statusMsg.textContent = 'Analyzing and repairing PDF...';
+      showStatus('Analyzing and repairing PDF...');
       try {
         await need_pdf_lib_js();
         const buf = await currentFile.arrayBuffer();
@@ -425,10 +426,10 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
 
         outputBytes = res.bytes;
         downloadBtn.style.display = 'inline-flex';
-        statusMsg.textContent = 'Repaired via ' + method + ': recovered ' + res.pages + ' page(s) (' + (outputBytes.length/1024).toFixed(1) + ' KB).';
+        showStatus('Repaired via ' + method + ': recovered ' + res.pages + ' page(s) (' + (outputBytes.length/1024).toFixed(1) + ' KB).');
         triggerDownload();
       } catch (err) {
-        statusMsg.textContent = 'Could not repair this PDF: ' + (err && err.message ? err.message : 'File is severely damaged.');
+        showStatus('Could not repair this PDF: ' + (err && err.message ? err.message : 'File is severely damaged.'));
       } finally {
         runBtn.disabled = false;
       }

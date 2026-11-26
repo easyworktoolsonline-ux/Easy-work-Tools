@@ -334,6 +334,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     const exportCsvBtn = document.getElementById('exportCsvBtn');
     const resetBtn = document.getElementById('resetBtn');
     const statusMsg = document.getElementById('statusMsg');
+function showStatus(msg,type){if(!msg){statusMsg.classList.remove('show');statusMsg.textContent='';return}var t=type||(/error|could not|unable|please select|failed/i.test(String(msg))?'error':/done!|created|repaired|inspected|ready/i.test(String(msg))?'ok':'info');statusMsg.textContent=msg;statusMsg.className='status-msg show '+t}
 
     let reportRows = [];
     let currentName = 'report';
@@ -358,11 +359,11 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
 
     async function inspectPdf(f) {
       if (!f || (!f.name.toLowerCase().endsWith('.pdf') && f.type !== 'application/pdf')) {
-        statusMsg.textContent = 'Please select a valid PDF file.';
+        showStatus('Please select a valid PDF file.');
         return;
       }
       currentName = f.name.replace(/\.pdf$/i, '');
-      statusMsg.textContent = 'Inspecting PDF pages...';
+      showStatus('Inspecting PDF pages...');
       try {
         await need_pdf_lib_js();
         const buf = await f.arrayBuffer();
@@ -407,9 +408,9 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
 
         dropzone.style.display = 'none';
         resultsWrap.style.display = 'block';
-        statusMsg.textContent = 'Inspected ' + pages.length + ' page(s).';
+        showStatus('Inspected ' + pages.length + ' page(s).');
       } catch (err) {
-        statusMsg.textContent = 'Error: ' + (err && err.message ? err.message : 'Unable to read PDF.');
+        showStatus('Error: ' + (err && err.message ? err.message : 'Unable to read PDF.'));
       }
     }
 
@@ -419,7 +420,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     dropzone.addEventListener('drop', (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); if (e.dataTransfer.files[0]) inspectPdf(e.dataTransfer.files[0]); });
     fileInput.addEventListener('change', () => { if (fileInput.files[0]) inspectPdf(fileInput.files[0]); });
     resetBtn.addEventListener('click', () => {
-      fileInput.value = ''; resultsWrap.style.display = 'none'; dropzone.style.display = ''; statusMsg.textContent = '';
+      fileInput.value = ''; resultsWrap.style.display = 'none'; dropzone.style.display = ''; showStatus('');
     });
     exportCsvBtn.addEventListener('click', () => {
       if (!reportRows.length) return;

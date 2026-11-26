@@ -1,0 +1,36 @@
+{
+  "Date": "2026-11-27",
+  "Server": "Local static server on 127.0.0.1:8770; no live deployment change",
+  "Retests": [
+    {
+      "Tool": "chart-maker",
+      "Observation": "File input element is present with type=file; sample rendering reports 1200 × 700 px PNG · 6 rows, 2 series; canvas is present; no page error observed."
+    },
+    {
+      "Tool": "pdf-booklet",
+      "Observation": "Invalid-file test displayed status-msg show error with text 'Please select a valid PDF file.'"
+    },
+    {
+      "Tool": "pdf-flatten",
+      "Observation": "Invalid-file test displayed status-msg show error with text 'Please select a valid PDF file.'"
+    },
+    {
+      "Tool": "pdf-page-size-checker",
+      "Observation": "Invalid-file test displayed status-msg show error with text 'Please select a valid PDF file.'"
+    },
+    {
+      "Tool": "pdf-overlay",
+      "Observation": "Invalid inputs then run displayed a visible error status; local server lacks the deployed need_pdf_lib_js helper."
+    },
+    {
+      "Tool": "pdf-repair",
+      "Observation": "Invalid input then run displayed a visible error status; local server lacks the deployed need_pdf_lib_js helper."
+    },
+    {
+      "Tool": "social-share-preview",
+      "Observation": "A failed preview image displayed 'Image failed to load' in both preview cards with empty classes; no classList exception was observed. The expected missing-image 404 was the only console error."
+    }
+  ],
+  "Limitation": "End-to-end PDF conversion was not claimed because the local static server does not provide the deployed PDF helper.",
+  "FinalStatus": "PARTIAL"
+}

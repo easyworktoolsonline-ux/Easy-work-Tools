@@ -1,8 +1,8 @@
 Item,Value,Source,Validation,ObservedAtUTC,Evidence,FinalStatus,Notes
-Not indexed,594,Website + Google systems,,2026-11-26T21:43:19.972Z,Authenticated GSC > Indexing > Pages; evidence/gsc-page-indexing-summary.zip,DONE,Five reasons shown; last update displayed 23/11/2026.
-Indexed,69,Google systems,,2026-11-26T21:43:19.972Z,Authenticated GSC > Indexing > Pages,DONE,Indexed count is not a URL-level guarantee for every submitted URL.
-Page with redirect,49,Website,Failed,2026-11-26T21:43:19.972Z,evidence/gsc-page-indexing-Critical issues.csv,DONE,No local canonical/sitemap/robots change made; six live canonicals matched local files.
-Not found (404),203,Website,Not Started,2026-11-26T21:43:19.972Z,evidence/gsc-page-indexing-Critical issues.csv,DONE,Nested category/tool paths were observed in URL Inspection; local internal/hash link scan found 0 broken links.
-Alternative page with proper canonical tag,2,Website,Not Started,2026-11-26T21:43:19.972Z,evidence/gsc-page-indexing-Critical issues.csv,DONE,Example: /tools/?cat=text with user-declared canonical /tools/.
-Discovered – currently not indexed,323,Google systems,Not Started,2026-11-26T21:43:19.972Z,evidence/gsc-page-indexing-Critical issues.csv,DONE,Platform discovery/crawl outcome; no local defect established.
-Crawled - currently not indexed,17,Google systems,Not Started,2026-11-26T21:43:19.972Z,evidence/gsc-page-indexing-Critical issues.csv,DONE,URL Inspection showed /blog/kg-to-lbs-explained indexed despite appearing under this reason.
+Not indexed,594,Website + Google systems,,2026-11-27,Authenticated GSC > Indexing > Pages; evidence/gsc-page-indexing-summary.zip,DONE,Five reasons shown; reason-wise examples captured in gsc-reason-wise-indexing-report.md
+Indexed,69,Google systems,,2026-11-27,Authenticated GSC > Indexing > Pages,DONE,Indexed count is not a URL-level guarantee for every submitted URL
+Page with redirect,49,Website,Failed,2026-11-27,evidence/gsc-page-indexing-Critical issues.csv; evidence/gsc-reason-examples-2026-11-27.json,DONE,Legacy HTTP www index.html and nested paths; live redirects preserve paths and query strings
+Not found (404),203,Website,Not Started,2026-11-27,evidence/gsc-page-indexing-Critical issues.csv; evidence/gsc-reason-examples-2026-11-27.json,DONE,Malformed nested category/tool paths; internal link scan found 0 broken links
+Alternative page with proper canonical tag,2,Website,Not Started,2026-11-27,evidence/gsc-page-indexing-Critical issues.csv; evidence/gsc-reason-examples-2026-11-27.json,DONE,Examples are the search-provider template and /tools/?cat=text with user-declared canonical /tools/
+Discovered – currently not indexed,323,Google systems,Not Started,2026-11-27,evidence/gsc-page-indexing-Critical issues.csv; evidence/gsc-reason-examples-2026-11-27.json,PARTIAL,Platform discovery queue; valid guides and /about shown; no local defect established
+Crawled - currently not indexed,17,Google systems,Not Started,2026-11-27,evidence/gsc-page-indexing-Critical issues.csv; evidence/gsc-reason-examples-2026-11-27.json,PARTIAL,URL Inspection showed one example as indexed despite this reason label

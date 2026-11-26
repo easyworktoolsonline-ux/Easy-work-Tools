@@ -345,6 +345,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     const progressWrap = document.getElementById('progressWrap');
     const progressBar = document.getElementById('progressBar');
     const statusMsg = document.getElementById('statusMsg');
+function showStatus(msg,type){if(!msg){statusMsg.classList.remove('show');statusMsg.textContent='';return}var t=type||(/error|could not|unable|please select|failed/i.test(String(msg))?'error':/done!|created|repaired|inspected|ready/i.test(String(msg))?'ok':'info');statusMsg.textContent=msg;statusMsg.className='status-msg show '+t}
 
     let currentFile = null;
     let outputBytes = null;
@@ -359,7 +360,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
 
     function setFile(f) {
       if (!f || (!f.name.toLowerCase().endsWith('.pdf') && f.type !== 'application/pdf')) {
-        statusMsg.textContent = 'Please select a valid PDF file.';
+        showStatus('Please select a valid PDF file.');
         return;
       }
       currentFile = f;
@@ -370,7 +371,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
       fileInfo.style.display = 'flex';
       dropzone.style.display = 'none';
       runBtn.disabled = false;
-      statusMsg.textContent = 'Ready to flatten.';
+      showStatus('Ready to flatten.');
     }
 
     dropzone.addEventListener('click', () => fileInput.click());
@@ -383,7 +384,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
       currentFile = null; outputBytes = null; fileInput.value = '';
       fileInfo.style.display = 'none'; dropzone.style.display = '';
       runBtn.disabled = true; downloadBtn.style.display = 'none';
-      progressWrap.style.display = 'none'; statusMsg.textContent = '';
+      progressWrap.style.display = 'none'; showStatus('');
     });
 
     function triggerDownload() {
@@ -404,14 +405,14 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
       downloadBtn.style.display = 'none';
       progressWrap.style.display = 'block';
       progressBar.style.width = '10%';
-      statusMsg.textContent = 'Loading PDF engine...';
+      showStatus('Loading PDF engine...');
 
       try {
         await need_pdf_lib_js();
         const buf = await currentFile.arrayBuffer();
 
         if (flattenMode.value === 'forms') {
-          statusMsg.textContent = 'Flattening interactive form fields...';
+          showStatus('Flattening interactive form fields...');
           progressBar.style.width = '50%';
           const pdfDoc = await PDFLib.PDFDocument.load(buf, { ignoreEncryption: true });
           const form = pdfDoc.getForm();
@@ -419,7 +420,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
           form.flatten();
           outputBytes = await pdfDoc.save();
           progressBar.style.width = '100%';
-          statusMsg.textContent = 'Done! Flattened ' + fields.length + ' form field(s) (' + fmtSize(outputBytes.length) + ').';
+          showStatus('Done! Flattened ' + fields.length + ' form field(s) (' + fmtSize(outputBytes.length) + ').');
         } else {
           await need_pdf_min_js();
           pdfjsLib.GlobalWorkerOptions.workerSrc = '../../assets/vendor/pdf.worker.min.js';
@@ -430,7 +431,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
           const total = srcPdf.numPages;
 
           for (let i = 1; i <= total; i++) {
-            statusMsg.textContent = 'Raster-flattening page ' + i + ' of ' + total + '...';
+            showStatus('Raster-flattening page ' + i + ' of ' + total + '...');
             progressBar.style.width = Math.round((i / total) * 90) + '%';
             const page = await srcPdf.getPage(i);
             const vp = page.getViewport({ scale });
@@ -450,13 +451,13 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
           }
           outputBytes = await outPdf.save();
           progressBar.style.width = '100%';
-          statusMsg.textContent = 'Done! Raster-flattened ' + total + ' page(s) at ' + dpi + ' DPI (' + fmtSize(outputBytes.length) + ').';
+          showStatus('Done! Raster-flattened ' + total + ' page(s) at ' + dpi + ' DPI (' + fmtSize(outputBytes.length) + ').');
         }
 
         downloadBtn.style.display = 'inline-flex';
         triggerDownload();
       } catch (err) {
-        statusMsg.textContent = 'Error: ' + (err && err.message ? err.message : 'Could not flatten this PDF.');
+        showStatus('Error: ' + (err && err.message ? err.message : 'Could not flatten this PDF.'));
       } finally {
         runBtn.disabled = false;
       }

@@ -342,20 +342,21 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     const runBtn = document.getElementById('runBtn');
     const downloadBtn = document.getElementById('downloadBtn');
     const statusMsg = document.getElementById('statusMsg');
+function showStatus(msg,type){if(!msg){statusMsg.classList.remove('show');statusMsg.textContent='';return}var t=type||(/error|could not|unable|please select|failed/i.test(String(msg))?'error':/done!|created|repaired|inspected|ready/i.test(String(msg))?'ok':'info');statusMsg.textContent=msg;statusMsg.className='status-msg show '+t}
 
     let currentFile = null;
     let outputBytes = null;
 
     function setFile(f) {
       if (!f || (!f.name.toLowerCase().endsWith('.pdf') && f.type !== 'application/pdf')) {
-        statusMsg.textContent = 'Please select a valid PDF file.';
+        showStatus('Please select a valid PDF file.');
         return;
       }
       currentFile = f; outputBytes = null; downloadBtn.style.display = 'none';
       fileNameEl.textContent = f.name;
       fileMetaEl.textContent = (f.size / 1024).toFixed(1) + ' KB';
       fileInfo.style.display = 'flex'; dropzone.style.display = 'none';
-      runBtn.disabled = false; statusMsg.textContent = 'Ready to impose booklet.';
+      runBtn.disabled = false; showStatus('Ready to impose booklet.');
     }
 
     dropzone.addEventListener('click', () => fileInput.click());
@@ -366,7 +367,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     clearBtn.addEventListener('click', () => {
       currentFile = null; outputBytes = null; fileInput.value = '';
       fileInfo.style.display = 'none'; dropzone.style.display = '';
-      runBtn.disabled = true; downloadBtn.style.display = 'none'; statusMsg.textContent = '';
+      runBtn.disabled = true; downloadBtn.style.display = 'none'; showStatus('');
     });
 
     function triggerDownload() {
@@ -383,7 +384,7 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     runBtn.addEventListener('click', async () => {
       if (!currentFile) return;
       runBtn.disabled = true;
-      statusMsg.textContent = 'Imposing booklet pages...';
+      showStatus('Imposing booklet pages...');
       try {
         await need_pdf_lib_js();
         const buf = await currentFile.arrayBuffer();
@@ -446,10 +447,10 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
 
         outputBytes = await outDoc.save();
         downloadBtn.style.display = 'inline-flex';
-        statusMsg.textContent = 'Created ' + pairs.length + '-page imposed booklet (' + sheets + ' double-sided sheets, ' + origCount + ' source pages). Print double-sided (flip on short edge).';
+        showStatus('Created ' + pairs.length + '-page imposed booklet (' + sheets + ' double-sided sheets, ' + origCount + ' source pages). Print double-sided (flip on short edge).');
         triggerDownload();
       } catch (err) {
-        statusMsg.textContent = 'Error: ' + (err && err.message ? err.message : 'Failed to create booklet.');
+        showStatus('Error: ' + (err && err.message ? err.message : 'Failed to create booklet.'));
       } finally {
         runBtn.disabled = false;
       }

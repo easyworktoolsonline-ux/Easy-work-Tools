@@ -179,3 +179,20 @@ No screenshots were saved. No `finalqa-*` files were created, so no existing scr
 ## Files written
 
 - `reports/adsense-low-value-recovery/final-visual-qa-evidence.md` (this file; newly created).
+
+## Addendum — rendered and local 390px QA (2026-11-27)
+
+This addendum supersedes the earlier "unavailable" limitations for rendered local checks. It does not claim live iframe or real-device testing.
+
+| Check | Observation | FinalStatus |
+|---|---|---|
+| Desktop light theme | Background `rgb(255,255,255)`; primary text `rgb(31,41,55)` | DONE |
+| Desktop dark theme | Background `rgb(11,18,32)`; primary text `rgb(226,232,240)` | DONE |
+| Horizontal overflow | No horizontal overflow in checked desktop and local 390px views | DONE |
+| 390px header/footer | Hamburger header and visible footer rendered at local 390px width | DONE |
+| Guide detail content | CTA, three related cards and FAQ JSON-LD present in local render | DONE |
+| Contact form | Fields `requestType`, `toolName`, `email`, `details` rendered; 315px view showed fields and 163px submit control | DONE |
+| Live iframe rendering | `X-Frame-Options: DENY` and report-only CSP `frame-ancestors 'none'` prevent iframe inspection | DATA UNAVAILABLE |
+| Real-device testing | Not performed | DATA UNAVAILABLE |
+
+No screenshot from the live HTTPS site is claimed. The addendum is based on rendered local/static browser checks and live header inspection only.
