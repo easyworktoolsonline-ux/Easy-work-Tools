@@ -1,0 +1,101 @@
+Rank,URL,PageType,Tier,Reason,Source,CanonicalEligible,FinalStatus
+1,https://easyworktools.online/,homepage,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+2,https://easyworktools.online/tools/,tool,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+3,https://easyworktools.online/blog/,guide,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+4,https://easyworktools.online/resources/,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+5,https://easyworktools.online/about,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+6,https://easyworktools.online/privacy,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+7,https://easyworktools.online/cookies,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+8,https://easyworktools.online/disclaimer,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+9,https://easyworktools.online/terms,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+10,https://easyworktools.online/contact,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+11,https://easyworktools.online/security,info,T1-core,"Core navigation, resources, or trust page",sitemap.xml,true,DONE
+12,https://easyworktools.online/categories/ai-write/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+13,https://easyworktools.online/categories/image/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+14,https://easyworktools.online/categories/pdf/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+15,https://easyworktools.online/categories/developer/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+16,https://easyworktools.online/categories/seo/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+17,https://easyworktools.online/categories/text/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+18,https://easyworktools.online/categories/converter/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+19,https://easyworktools.online/categories/calculator/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+20,https://easyworktools.online/categories/video-audio/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+21,https://easyworktools.online/categories/utility/,category,T1-core,"Category discovery page",sitemap.xml,true,DONE
+22,https://easyworktools.online/blog/ai-detector,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+23,https://easyworktools.online/blog/ai-humanizer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+24,https://easyworktools.online/blog/ai-rephraser,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+25,https://easyworktools.online/blog/article-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+26,https://easyworktools.online/blog/article-rewriter,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+27,https://easyworktools.online/blog/article-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+28,https://easyworktools.online/blog/bill-of-sale,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+29,https://easyworktools.online/blog/blog-outline-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+30,https://easyworktools.online/blog/blog-post-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+31,https://easyworktools.online/blog/blog-post-ideas,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+32,https://easyworktools.online/blog/blog-post-rewriter,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+33,https://easyworktools.online/blog/business-name-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+34,https://easyworktools.online/blog/business-plan-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+35,https://easyworktools.online/blog/business-slogan-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+36,https://easyworktools.online/blog/cold-email-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+37,https://easyworktools.online/blog/content-brief-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+38,https://easyworktools.online/blog/content-improver,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+39,https://easyworktools.online/blog/content-paraphraser,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+40,https://easyworktools.online/blog/content-planner,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+41,https://easyworktools.online/blog/content-shortener,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+42,https://easyworktools.online/blog/content-summarizer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+43,https://easyworktools.online/blog/essay-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+44,https://easyworktools.online/blog/explain-it,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+45,https://easyworktools.online/blog/faq-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+46,https://easyworktools.online/blog/fb-headline-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+47,https://easyworktools.online/blog/grammar-fixer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+48,https://easyworktools.online/blog/instagram-caption-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+49,https://easyworktools.online/blog/instagram-story-idea,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+50,https://easyworktools.online/blog/landing-page-copy-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+51,https://easyworktools.online/blog/linkedin-post-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+52,https://easyworktools.online/blog/meta-description-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+53,https://easyworktools.online/blog/nda-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+54,https://easyworktools.online/blog/paragraph-completer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+55,https://easyworktools.online/blog/paragraph-rewriter,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+56,https://easyworktools.online/blog/paragraph-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+57,https://easyworktools.online/blog/podcast-script-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+58,https://easyworktools.online/blog/poll-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+59,https://easyworktools.online/blog/post-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+60,https://easyworktools.online/blog/press-release-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+61,https://easyworktools.online/blog/privacy-policy-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+62,https://easyworktools.online/blog/purchase-agreement,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+63,https://easyworktools.online/blog/real-estate-descriptions,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+64,https://easyworktools.online/blog/search,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+65,https://easyworktools.online/blog/sentence-rewriter,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+66,https://easyworktools.online/blog/story-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+67,https://easyworktools.online/blog/summarize-youtube,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+68,https://easyworktools.online/blog/tiktok-script-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+69,https://easyworktools.online/blog/title-rewriter,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+70,https://easyworktools.online/blog/tone-of-voice,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+71,https://easyworktools.online/blog/translate,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+72,https://easyworktools.online/blog/trivia-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+73,https://easyworktools.online/blog/twitter-generator,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+74,https://easyworktools.online/blog/word-counter,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+75,https://easyworktools.online/blog/youtube-script-writer,guide,T2-rebuilt-guide,"Generic guide rebuilt from linked-tool article/FAQ content",complete-page-quality-audit-392-pages.csv,true,DONE
+76,https://easyworktools.online/tools/social-share-preview/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 64 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+77,https://easyworktools.online/tools/pdf-to-word/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 11 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+78,https://easyworktools.online/tools/mph-to-kph/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 66 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+79,https://easyworktools.online/tools/cm-to-feet/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 57 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+80,https://easyworktools.online/tools/webp-to-pdf/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 39 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+81,https://easyworktools.online/tools/newtons-to-pounds-force/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 28 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+82,https://easyworktools.online/tools/ai-write/nda-generator/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 22 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+83,https://easyworktools.online/blog/tiktok-thumbnail-downloader,guide,T3-gsc-impression,"Fresh GSC 3-month page with 20 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+84,https://easyworktools.online/tools/pixels-to-inches/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 19 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+85,https://easyworktools.online/tools/pdf-to-tiff/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 19 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+86,https://easyworktools.online/tools/fraction-to-mm/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 14 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+87,https://easyworktools.online/tools/ai-write/ai-humanizer/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 13 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+88,https://easyworktools.online/tools/pdf-to-jpg/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 12 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+89,https://easyworktools.online/tools/ai-write/business-plan-generator/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 12 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+90,https://easyworktools.online/tools/ai-write/content-shortener/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 8 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+91,https://easyworktools.online/blog/how-to-create-a-favicon-for-your-website,guide,T3-gsc-impression,"Fresh GSC 3-month page with 7 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+92,https://easyworktools.online/blog/how-to-split-an-image-into-a-grid,guide,T3-gsc-impression,"Fresh GSC 3-month page with 6 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+93,https://easyworktools.online/tools/favicon-generator/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 4 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+94,https://easyworktools.online/tools/pdf-to-text/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 4 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+95,https://easyworktools.online/tools/image-hash-checker/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 3 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+96,https://easyworktools.online/blog/how-to-clean-text-before-publishing,guide,T3-gsc-impression,"Fresh GSC 3-month page with 3 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+97,https://easyworktools.online/tools/pdf-watermark/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 2 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+98,https://easyworktools.online/tools/ai-write/blog-post-ideas/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 2 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+99,https://easyworktools.online/tools/ai-write/purchase-agreement/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 1 impressions",evidence/gsc-3months-Pages.csv,true,DONE
+100,https://easyworktools.online/tools/ai-write/word-counter/,tool,T3-gsc-impression,"Fresh GSC 3-month page with 1 impressions",evidence/gsc-3months-Pages.csv,true,DONE

@@ -1,0 +1,41 @@
+{
+  "capturedAt": "2026-11-26T21:43:19.972Z",
+  "source": "Authenticated Bing Webmaster Tools property https://easyworktools.online/ (read-only verification and URL Submission UI)",
+  "pageCounts": [
+    25,
+    25,
+    25,
+    25
+  ],
+  "firstAndLastByPage": [
+    {
+      "page": "1 — 25",
+      "first": "https://easyworktools.online/tools/social-share-preview/",
+      "last": "https://easyworktools.online/categories/developer/"
+    },
+    {
+      "page": "26 — 50",
+      "first": "https://easyworktools.online/tools/pdf-to-text/",
+      "last": "https://easyworktools.online/contact"
+    },
+    {
+      "page": "51 — 75",
+      "first": "https://easyworktools.online/tools/image-hash-checker/",
+      "last": "https://easyworktools.online/cookies"
+    },
+    {
+      "page": "76 — 100",
+      "first": "https://easyworktools.online/blog/ai-rephraser",
+      "last": "https://easyworktools.online/blog/search"
+    }
+  ],
+  "displayedSubmittedTime": "Today at 02:29",
+  "acceptanceMessage": "Success: 100 URLs submitted Succesfully",
+  "quotaBefore": 100,
+  "quotaAfter": 0,
+  "quotaResetNotice": "Quota will reset in 3 hrs.",
+  "urlsSubmittedToday": 100,
+  "prior28DaySubmissions": "No URLs submitted in last 28 days.",
+  "rejectionReported": "none reported",
+  "note": "The UI list order differs from the pasted inventory order. The exact pasted batch is preserved in evidence/bing-submission-urls.txt and the per-URL register is in bing-url-submission-register.csv."
+}

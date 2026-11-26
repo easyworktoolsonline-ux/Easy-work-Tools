@@ -1,0 +1,608 @@
+{
+  "checkedAt": "2026-11-26T21:27:21.009Z",
+  "total": 100,
+  "http200": 100,
+  "failed": [],
+  "results": [
+    {
+      "url": "https://easyworktools.online/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/resources/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/resources/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/about",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/about",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/privacy",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/privacy",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/cookies",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/cookies",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/disclaimer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/disclaimer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/terms",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/terms",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/contact",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/contact",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/security",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/security",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/ai-write/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/ai-write/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/image/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/image/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/pdf/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/pdf/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/developer/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/developer/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/seo/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/seo/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/text/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/text/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/converter/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/converter/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/calculator/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/calculator/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/video-audio/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/video-audio/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/categories/utility/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/categories/utility/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/ai-detector",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/ai-detector",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/ai-humanizer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/ai-humanizer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/ai-rephraser",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/ai-rephraser",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/article-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/article-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/article-rewriter",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/article-rewriter",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/article-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/article-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/bill-of-sale",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/bill-of-sale",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/blog-outline-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/blog-outline-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/blog-post-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/blog-post-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/blog-post-ideas",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/blog-post-ideas",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/blog-post-rewriter",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/blog-post-rewriter",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/business-name-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/business-name-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/business-plan-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/business-plan-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/business-slogan-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/business-slogan-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/cold-email-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/cold-email-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/content-brief-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/content-brief-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/content-improver",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/content-improver",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/content-paraphraser",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/content-paraphraser",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/content-planner",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/content-planner",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/content-shortener",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/content-shortener",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/content-summarizer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/content-summarizer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/essay-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/essay-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/explain-it",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/explain-it",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/faq-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/faq-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/fb-headline-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/fb-headline-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/grammar-fixer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/grammar-fixer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/instagram-caption-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/instagram-caption-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/instagram-story-idea",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/instagram-story-idea",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/landing-page-copy-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/landing-page-copy-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/linkedin-post-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/linkedin-post-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/meta-description-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/meta-description-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/nda-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/nda-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/paragraph-completer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/paragraph-completer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/paragraph-rewriter",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/paragraph-rewriter",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/paragraph-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/paragraph-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/podcast-script-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/podcast-script-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/poll-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/poll-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/post-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/post-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/press-release-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/press-release-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/privacy-policy-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/privacy-policy-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/purchase-agreement",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/purchase-agreement",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/real-estate-descriptions",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/real-estate-descriptions",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/search",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/search",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/sentence-rewriter",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/sentence-rewriter",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/story-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/story-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/summarize-youtube",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/summarize-youtube",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/tiktok-script-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/tiktok-script-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/title-rewriter",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/title-rewriter",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/tone-of-voice",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/tone-of-voice",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/translate",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/translate",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/trivia-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/trivia-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/twitter-generator",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/twitter-generator",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/word-counter",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/word-counter",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/youtube-script-writer",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/youtube-script-writer",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/social-share-preview/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/social-share-preview/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/pdf-to-word/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/pdf-to-word/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/mph-to-kph/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/mph-to-kph/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/cm-to-feet/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/cm-to-feet/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/webp-to-pdf/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/webp-to-pdf/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/newtons-to-pounds-force/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/newtons-to-pounds-force/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/nda-generator/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/nda-generator/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/tiktok-thumbnail-downloader",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/tiktok-thumbnail-downloader",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/pixels-to-inches/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/pixels-to-inches/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/pdf-to-tiff/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/pdf-to-tiff/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/fraction-to-mm/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/fraction-to-mm/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/ai-humanizer/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/ai-humanizer/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/pdf-to-jpg/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/pdf-to-jpg/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/business-plan-generator/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/business-plan-generator/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/content-shortener/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/content-shortener/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/how-to-create-a-favicon-for-your-website",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/how-to-create-a-favicon-for-your-website",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/how-to-split-an-image-into-a-grid",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/how-to-split-an-image-into-a-grid",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/favicon-generator/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/favicon-generator/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/pdf-to-text/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/pdf-to-text/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/image-hash-checker/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/image-hash-checker/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/blog/how-to-clean-text-before-publishing",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/blog/how-to-clean-text-before-publishing",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/pdf-watermark/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/pdf-watermark/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/blog-post-ideas/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/blog-post-ideas/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/purchase-agreement/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/purchase-agreement/",
+      "ok": true
+    },
+    {
+      "url": "https://easyworktools.online/tools/ai-write/word-counter/",
+      "status": 200,
+      "finalUrl": "https://easyworktools.online/tools/ai-write/word-counter/",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+Property,SitemapURL,Type,Submitted,LastRead,Status,DiscoveredPages,DiscoveredVideos,LocalSitemapURLs,ObservedAtUTC,Evidence,FinalStatus,Notes
+sc-domain:easyworktools.online,https://easyworktools.online/sitemap.xml,Sitemap,2026-11-21,2026-11-27,Success,392,0,392,2026-11-26T21:43:19.972Z,Authenticated GSC > Sitemaps; sitemap.xml,DONE,No sitemap structure change made; 392 unique URLs and 392 audit rows match.

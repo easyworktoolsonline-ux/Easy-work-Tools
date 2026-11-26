@@ -14,11 +14,17 @@ Implementation commit: `82e98bfaa52fb47459a8b5bb73edbba542e8cdc2`
 
 Implementation push: `82e98bfaa52fb47459a8b5bb73edbba542e8cdc2`
 
+Documentation commit: `c70132951eff1708e381fe5c5a8c390da0b74379`
+
+Documentation push: `c70132951eff1708e381fe5c5a8c390da0b74379`
+
+Current local HEAD at evidence-collection start: `c70132951eff1708e381fe5c5a8c390da0b74379` (remote `main` matched this hash at final verification). Self-reference caveat: this file is itself part of the final evidence commit, so that commit hash cannot be recorded inside the same file; the hash above is the documentation baseline, not the hash of the commit that contains this update.
+
 ## Overall status
 
-**PARTIAL.** The authorized content remediation, category-color work, Guides UI redesign, visual QA, targeted validation and repository delivery were completed. The overall project cannot be called fully complete because fresh GSC exports and several optional Google research sources were not supplied, and only a four-tool interactive runtime sample was performed rather than an interactive test of all 242 tools.
+**PARTIAL.** The authorized content remediation, category-color work, Guides UI redesign, visual QA, targeted validation, fresh GSC evidence collection, GSC/Bing/AdSense read-only verification, 100-URL Bing submission and normal repository delivery were completed. The overall project cannot be called fully complete because Google/Bing crawling and indexing outcomes are controlled by the platforms and remain pending, the AdSense review was deliberately not submitted without owner approval, 43 duplicate meta descriptions remain an owner content decision, and several optional keyword exports were not supplied. A local automated smoke pass attempted all 242 tools (226 PASS, 16 observed FAIL conditions), but no tool code was changed.
 
-No work was performed on GlobeCareer.online. No deployment, Cloudflare, DNS, authentication bypass, paid subscription, fabricated metric, fake author, testimonial, rating or credential was used.
+No work was performed on GlobeCareer.online. No deployment, Cloudflare, DNS, authentication bypass, paid subscription, fabricated metric, fake author, testimonial, rating or credential was used. `ads.txt` was not touched; no canonical, sitemap-structure, robots.txt, URL-renaming or unnecessary-redirect change was made.
 
 ## 1. Full content-quality audit
 
@@ -66,19 +72,42 @@ A four-tool interactive sample was performed on the local static server:
 - AI Detector: analysis status updated to 10 words / 52 characters.
 - JSON Formatter: “Formatted successfully.”
 
-The sampled guide detail page produced 0 console errors. Full interactive coverage of all 242 tools remains **PARTIAL** and is listed in `final-unresolved-issues.csv`.
+The sampled guide detail page produced 0 console errors. A later local automated smoke pass attempted all **242** tools: **226 PASS** and **16 observed FAIL** conditions. Most FAIL observations were “no observable empty-input handling” under synthetic input and may be harness artifacts. Three pages produced console-error observations (`/tools/chart-maker/`, `/tools/pdf-compressor/`, `/tools/social-share-preview/`) and two pages produced broken asset/link observations (`/tools/pdf-compressor/`, `/tools/social-share-preview/`). No tool code was changed. Full runtime coverage remains **PARTIAL** because the FAIL observations require owner-authorized manual verification and any confirmed fixes; details are in `tool-functional-test-coverage.csv` and `evidence/tool-functional-test-evidence.json`.
 
 ## 4. GSC and keyword research
 
-Fresh GSC data was **not available**. The only actual GSC evidence remains the historical authenticated-UI capture dated 2026-11-23 for the displayed window 17 Sep–21 Nov 2026: **47 clicks, 771 impressions, 6.1% CTR, average position 24.4**. Its 92 query rows and 60 page rows are preserved in `gsc-latest-performance.csv` and labelled historical.
+Fresh authenticated GSC Performance exports were captured on 27 Nov 2026 and are preserved as `evidence/gsc-fresh-7days.zip`, `evidence/gsc-fresh-28days.zip`, `evidence/gsc-fresh-3months.zip` and per-tab CSVs. Totals were recomputed from the Chart CSVs:
 
-Free Google Autocomplete was successfully queried: **10 seeds, 100 suggestions**, stored in `google-organic-keyword-research.csv` and `data/google-autocomplete-2026-11-26.json`. Autocomplete provides intent language, not volume or performance metrics.
+| Range | Data window | Clicks | Impressions | CTR | Avg. position |
+|---|---|---:|---:|---:|---:|
+| Historical baseline | 17 Sep–21 Nov 2026 | 47 | 771 | 6.1% | 24.4 |
+| Fresh 7 days | 18–24 Nov 2026 | 8 | 360 | 2.22% | 33.3 |
+| Fresh 28 days | 28 Oct–24 Nov 2026 | 16 | 675 | 2.37% | 25.1 |
+| Fresh 3 months | 17 Sep–24 Nov 2026 (69 actual days) | 50 | 1,018 | 4.91% | 28 |
 
-Google Search returned only a generic interstitial, so People Also Ask and Related Searches rows were not obtained. Google Trends and Keyword Planner exports were not available without owner-provided output. The existing 10,642-row combined keyword dataset (10,560 unique normalized keywords) remains clearly labelled as third-party estimates, not GSC actuals. Source provenance is in `keyword-source-and-evidence-register.csv`.
+The historical baseline remains separate and is not merged with the fresh ranges. Fresh top query was `explain it` (2 clicks / 316 impressions) and top page was the homepage (45 clicks / 100 impressions). `/blog/explain-it` showed 2 clicks / 416 impressions. Full comparison is in `gsc-performance-comparison.csv`.
+
+GSC Page Indexing was re-verified: **594 not indexed**, **69 indexed**, with reasons **49 Page with redirect**, **203 Not found (404)**, **2 Alternative page with proper canonical tag**, **323 Discovered – currently not indexed** and **17 Crawled - currently not indexed**; the report showed last update 23/11/2026. The sitemap `https://easyworktools.online/sitemap.xml` was submitted 21 Nov 2026, last read 27 Nov 2026, status **Success**, **392 discovered pages** and **0 videos**. URL Inspection covered the homepage, listings, categories, tools, guides, information/trust pages and 404/canonical/non-indexed examples. The homepage was indexed with last crawl 24 Nov 2026, `/tools/amps-to-watts/` was indexed with last crawl 25 Nov 2026, and `/blog/kg-to-lbs-explained` was indexed despite appearing under “Crawled - currently not indexed”. `/blog/` and `/about` were not indexed with state “Discovered”. `/tools/?cat=text` used the user-declared canonical `/tools/`. The GSC `.html` canonical record for `/blog/explain-it` was stale; the live canonical is `https://easyworktools.online/blog/explain-it`. No canonical or sitemap change was required. See `gsc-page-indexing-status.csv`, `gsc-url-inspection-register.csv` and `gsc-sitemap-status.csv`.
+
+Free Google Autocomplete was successfully queried: **10 seeds, 100 suggestions**, stored in `google-organic-keyword-research.csv` and `data/google-autocomplete-2026-11-26.json`. Autocomplete provides intent language, not volume or performance metrics. Google Search returned only a generic interstitial, so People Also Ask and Related Searches rows were not obtained. Google Trends and Keyword Planner exports were not available without owner-provided output. The existing 10,642-row combined keyword dataset (10,560 unique normalized keywords) remains clearly labelled as third-party estimates, not GSC actuals. Source provenance is in `keyword-source-and-evidence-register.csv`.
 
 Exact owner requests with export steps and required columns are in `missing-user-input-register.csv`.
 
-## 5. Category color consistency
+## 5. Bing Webmaster Tools
+
+The Bing Webmaster Tools property `https://easyworktools.online/` was verified in the authenticated session. Read-only audits found Search Performance with blank Total Clicks / Impressions / CTR and no keyword, page, device or country rows; Sitemaps with 0 rows; IndexNow with generic information only; URL Inspection with “No URLs Inspected”; Site Scan with “No scans initiated”; Recommendations with “No pages found”; Backlinks with “No data available”. The property home warned that data may take up to 48 hours to reflect. These observations are recorded in `bing-webmaster-performance.csv`.
+
+The daily URL Submission quota was confirmed as 100 with 0 submitted today and no submissions in the previous 28 days. Exactly **100 sitemap-eligible priority URLs** were submitted: 21 core/category/trust pages, 54 rebuilt low-value guides and 25 highest-impression sitemap pages from the fresh GSC export. Submission timestamps were `2026-11-26T21:29:34.970Z`–`2026-11-26T21:29:42.661Z`. The UI reported **“Success: 100 URLs submitted Succesfully”**, quota changed from 100 to 0, “URLs submitted today” showed 100, and no rejection was reported. All 100 URLs were independently checked live: 100/100 HTTP 200 with no redirects. The submitted list was paginated in the UI (4 pages of 25) and first/last rows are preserved in `evidence/bing-submitted-ui-observations.json`.
+
+Acceptance is **not** confirmation of crawling or indexing. No Bing sitemap submission, IndexNow configuration or new Site Scan was started because those are separate platform actions. The exact batch is in `evidence/bing-submission-urls.txt`; ranked inventory in `bing-submission-inventory.csv`; per-URL acceptance record in `bing-url-submission-register.csv`.
+
+## 6. AdSense status
+
+Authenticated read-only inspection of the verified `easyworktools.online` AdSense site showed **Needs attention**, **“Your site isn't ready to show ads”**, completed ownership verification, **“We found some policy violations”** and named category **Low-value content**. The message said a qualified site must provide substantial unique value, consistent web presence and genuine user interest, and before resubmitting should provide authentic high-quality information/tools/services, ongoing curation and structural maintenance, and sustained genuine user interest.
+
+The checkbox **“I confirm that I have fixed the issues”** was unchecked and **Request review** was present but **not clicked**. No irreversible AdSense control was used. Owner approval is required before any review submission. Details and owner options are in `final-owner-actions-required.md`.
+
+## 7. Category color consistency
 
 The authoritative colors were taken from the existing major-category cards and centralized as `--cat-*` tokens plus one `[data-cat]` mapping in `assets-src/styles.css`.
 
@@ -109,7 +138,7 @@ The guide detail CTA is now `Try AI Detector→`, points to `../tools/ai-write/a
 
 Evidence: `evidence/visual-qa-results.json`, `evidence/VISUAL-QA-README.md` and seven screenshots. Live HTTPS browser QA was unavailable; local static-server QA was used. 390px results are viewport emulation, not real-device testing.
 
-## 6. Technical validation
+## 8. Technical validation
 
 - 392 URLs / 392 audit rows / 0 issues.
 - 129 guides: 0 generic markers, 129 CTAs, 387 related cards, valid JSON-LD, 0 broken relative content links.
@@ -117,14 +146,18 @@ Evidence: `evidence/visual-qa-results.json`, `evidence/VISUAL-QA-README.md` and 
 - Targeted asset regeneration: exit 0; only `assets/styles.css` differs from HEAD.
 - Isolated generator build in a temporary copy: exit 0; 10 categories, 242 tools, 129 guides indexed.
 - Four-tool functional sample: 4/4 expected outputs.
+- Local smoke harness attempted all 242 tools: 226 PASS / 16 observed FAIL; no tool code changed.
+- Six critical live URLs: HTTP 200, no redirect, canonical/title/description matched local files.
+- Bing batch live check: 100/100 HTTP 200, no redirects.
+- Fresh GSC Chart CSVs recomputed; sitemap and page-indexing states verified.
 - Secret/sensitive-file scan: 0 hits.
 - Full live-tree `npm run build` was **not** run.
 
 Full command output is in `evidence/validation-log.txt`; per-check status is in `technical-validation.csv`.
 
-## 7. Changed files
+## 9. Changed files
 
-230 intended files are part of this delivery, including tracked content/CSS/generator changes and all report/evidence artifacts. Untracked unrelated files (`metadata.json`, `server.ts`, `src/`, `tsconfig.json`, `vite.config.ts`) were not staged. Full list:
+275 distinct intended files are part of this delivery, including tracked content/CSS/generator changes from the implementation and documentation commits plus 45 newly added report/evidence files. The final evidence commit contains 47 staged paths (45 additions and 2 updates to existing reports). Untracked unrelated files (`metadata.json`, `server.ts`, `src/`, `tsconfig.json`, `vite.config.ts`) were not staged. Original implementation/documentation delivery file list:
 
 - `about.html`
 - `assets-src/styles.css`
@@ -357,15 +390,28 @@ Full command output is in `evidence/validation-log.txt`; per-check status is in 
 - `tools/time-converter/index.html`
 - `tools/watts-to-amps/index.html`
 
-## 8. Unresolved issues and owner requests
+### Files added or updated in the final evidence pass
 
-See `final-unresolved-issues.csv` and `missing-user-input-register.csv`. In summary:
+- Reports added: `bing-submission-inventory.csv`, `bing-url-submission-register.csv`, `bing-webmaster-performance.csv`, `final-owner-actions-required.md`, `final-visual-qa-evidence.md`, `gsc-page-indexing-status.csv`, `gsc-performance-comparison.csv`, `gsc-sitemap-status.csv`, `gsc-url-inspection-register.csv`, `indexing-fixes-and-validation.csv`, `indexing-technical-issues-register.csv`, `tool-functional-test-coverage.csv`.
+- Reports updated: `FINAL-ADSENSE-LOW-VALUE-RECOVERY-REPORT.md`, `technical-validation.csv`.
+- Evidence added: `evidence/bing-inventory-live-check.json`, `evidence/bing-submission-urls.txt`, `evidence/bing-submitted-ui-observations.json`, `evidence/tool-functional-test-evidence.json`, `evidence/gsc-fresh-7days.zip`, `evidence/gsc-fresh-28days.zip`, `evidence/gsc-fresh-3months.zip`, `evidence/gsc-page-indexing-summary.zip`.
+- GSC Page Indexing evidence added: `evidence/gsc-page-indexing-Chart.csv`, `evidence/gsc-page-indexing-Critical issues.csv`, `evidence/gsc-page-indexing-Metadata.csv`, `evidence/gsc-page-indexing-Non-critical issues.csv`.
+- Fresh GSC Performance CSVs added for each of 7 days, 28 days and 3 months: `Chart`, `Countries`, `Devices`, `Filters`, `Pages`, `Queries`, `Search-appearance` (21 files).
 
-- Fresh GSC exports: **BLOCKED - WAITING FOR OWNER**.
+## 10. Unresolved issues and owner requests
+
+See `final-unresolved-issues.csv`, `missing-user-input-register.csv` and `final-owner-actions-required.md`. In summary:
+
+- Fresh GSC Performance, Page Indexing, URL Inspection and Sitemap evidence: **DONE**.
+- Google crawling/indexing outcomes after the sitemap and content remediation: **PARTIAL** (platform processing pending; no indexing claim made).
+- Bing URL submission acceptance and 100/100 live HTTP check: **DONE**; Bing crawling/indexing outcome: **PARTIAL** / **DATA UNAVAILABLE** while platform data remains blank.
+- Bing sitemap submission, IndexNow configuration and new Site Scan: **OWNER DECISION REQUIRED**.
+- AdSense site-status inspection: **DONE**; AdSense review submission: **OWNER DECISION REQUIRED**.
+- 43 duplicated AI Write tool/guide meta descriptions: **OWNER DECISION REQUIRED**.
+- Observed tool FAIL conditions and console/broken-asset observations: **OWNER DECISION REQUIRED** for targeted manual verification and any fixes.
 - PAA, Trends, Keyword Planner and optional SEMrush/Ahrefs exports: **BLOCKED - WAITING FOR OWNER** or **DATA UNAVAILABLE**.
-- Full interactive testing of all 242 tools: **PARTIAL**.
-- Live HTTPS and real-device mobile QA: **DATA UNAVAILABLE**.
-- AdSense approval: **OWNER DECISION REQUIRED**.
+- Rendered/computed visual QA, hover/focus, 390px iframe evaluation, screenshots and real-device testing beyond the earlier source/local evidence: **BLOCKED - WAITING FOR OWNER** / **DATA UNAVAILABLE**.
+- Full interactive runtime confirmation of all 242 tools: **PARTIAL**.
 
 ## Final status by workstream
 
@@ -378,7 +424,14 @@ See `final-unresolved-issues.csv` and `missing-user-input-register.csv`. In summ
 | Desktop/light/dark visual QA | DONE |
 | 390px viewport visual QA | DONE |
 | Targeted validation, lint, isolated build | DONE |
-| Fresh GSC refresh | BLOCKED - WAITING FOR OWNER |
+| Fresh GSC Performance / Page Indexing / URL Inspection / Sitemap evidence | DONE |
+| Google indexing outcome after remediation | PARTIAL |
+| Bing property verification and 100-URL submission acceptance | DONE |
+| Bing performance / indexing outcome | DATA UNAVAILABLE |
+| Bing sitemap, IndexNow and Site Scan actions | OWNER DECISION REQUIRED |
+| AdSense read-only status inspection | DONE |
+| AdSense review submission | OWNER DECISION REQUIRED |
+| Duplicate meta descriptions and observed tool failures | OWNER DECISION REQUIRED |
 | Free Google research beyond Autocomplete | PARTIAL |
 | Full interactive tool runtime test | PARTIAL |
 | Live HTTPS and real-device QA | DATA UNAVAILABLE |
