@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-11-23T12:03:42.416Z",
+  "filesScanned": 398,
+  "sitemapUrls": 392,
+  "toolManifestEntries": 242,
+  "blogManifestEntries": 129,
+  "gscDiscoveredPaths": 11,
+  "internalLinkTargets": 395,
+  "totalInventoryUrls": 399,
+  "byStatus": {
+    "NO_LOCAL_FILE": 7,
+    "PASS": 392
+  },
+  "byType": {
+    "blog": 132,
+    "tool": 243,
+    "other": 3,
+    "homepage": 1,
+    "static": 8,
+    "blog-index": 1,
+    "category": 10,
+    "tool-index": 1
+  },
+  "duplicateTitles": 0,
+  "duplicateDescriptions": 0,
+  "duplicateH1s": 0,
+  "routesWithProblems": 7
+}

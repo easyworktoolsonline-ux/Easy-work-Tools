@@ -1,0 +1,11 @@
+TestID,URLOrMetric,DataClass,Result,Source,Status,Note
+PERF-001,Homepage mobile,Lab,98,PSI UI,PASS,LCP/FCP 3.1s dominant weakness; field No Data
+PERF-002,Homepage desktop,Lab,74,PSI UI,FAIL,CLS 0.371; Agentic 2/3
+PERF-003,/tools/ mobile,Lab,100,PSI UI,PASS,CLS 0
+PERF-004,/categories/image/ mobile,Lab,100,PSI UI,PASS,CLS 0
+PERF-005,/categories/image/ desktop,Lab,100,PSI UI,PASS,CLS 0
+PERF-006,/tools/mph-to-kph/ mobile,Lab,88,PSI UI,WARNING,Best Practices 96
+PERF-007,Cloudflare field LCP P75,Field-before,1048,Cloudflare RUM,HISTORICAL,Pre-change only; no post-change field data
+PERF-008,Cloudflare field TTFB P75,Field-before,978,Cloudflare RUM,HISTORICAL,Pre-change only
+PERF-009,INP,Field-before,100% good,Cloudflare RUM,HISTORICAL,No post-change field update
+PERF-010,Field CWV after change,Field,DATA UNAVAILABLE,PSI No Data / GSC CrUX insufficient,UNVERIFIED,Do not claim improvement

@@ -303,7 +303,64 @@ const CATEGORY_GUIDES = {
   }
 };
 
-export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, intro: introFor }) {
+/* Contextual category -> guide links. Slugs come from the blog manifest at build
+   time; no new page or tool is created. Each guide was selected because it
+   already links to tools in that category or its title/URL matches the category
+   topic, so the relationship is evidence-based rather than guessed. */
+const CATEGORY_GUIDE_LINKS = {
+  'ai-write': ['ai-detector', 'ai-humanizer', 'ai-rephraser'],
+  'image': ['facebook-video-thumbnail-downloader', 'how-to-add-border-and-rounded-corners-to-image', 'how-to-check-image-dimensions-and-aspect-ratio'],
+  'pdf': ['how-to-add-watermark-to-pdf', 'how-to-convert-pdf-to-images-and-back', 'how-to-merge-and-organize-pdf-pages'],
+  'developer': ['how-to-convert-json-to-csv', 'how-to-escape-html-special-characters', 'how-to-test-regular-expressions'],
+  'seo': ['how-to-create-seo-url-slugs', 'how-to-generate-youtube-tags', 'how-to-count-words-and-characters'],
+  'text': ['how-to-reformat-a-list-of-lines', 'how-to-sort-a-list-alphabetically-online', 'how-to-clean-up-copied-text'],
+  'converter': ['temperature-scales-explained', 'cm-to-inches-explained', 'binary-vs-decimal-storage'],
+  'calculator': ['how-to-convert-units-online'],
+  'video-audio': ['facebook-video-thumbnail-downloader', 'how-to-generate-youtube-tags', 'instagram-reel-post-cover-downloader'],
+  'utility': ['how-to-clean-text-before-publishing', 'how-to-find-a-color-from-an-image', 'how-to-optimize-svg-files']
+};
+
+/* Reuses the site's existing related-card component; no new CSS system. The
+   manifest supplies title/description so a renamed guide cannot leave a stale
+   anchor behind after the next build. */
+export function renderCategoryGuideLinks({ category, posts }) {
+  const slugs = CATEGORY_GUIDE_LINKS[category.slug] || [];
+  if (!slugs.length || !Array.isArray(posts)) return '';
+
+  const postBySlug = new Map();
+  for (const post of posts) {
+    const u = String(post.url || '').split(/[?#]/)[0]
+      .replace(/\.html$/i, '').replace(/^\/+|\/+$/g, '');
+    const parts = u.split('/');
+    const slug = parts[0] === 'blog' ? parts.slice(1).join('/') : parts[parts.length - 1];
+    if (slug) postBySlug.set(slug, post);
+  }
+
+  const cards = [];
+  for (const slug of slugs) {
+    const post = postBySlug.get(slug);
+    if (!post) continue;
+    const title = String(post.title || '')
+      .replace(/\s*\|\s*EasyWorkTools(?:\.online)?\s*$/i, '').trim() || slug;
+    const description = String(post.description || '').trim();
+    cards.push('<a class="related-card" href="/blog/' + esc(slug) + '">'
+      + '<h3>' + esc(title) + '</h3>'
+      + '<p>' + esc(description) + '</p></a>');
+  }
+  if (!cards.length) return '';
+
+  return ''
+    + '<section class="section" aria-labelledby="catGuideLinksHeading">'
+    +   '<div class="container">'
+    +     '<div class="related-block">'
+    +       '<h2 id="catGuideLinksHeading">Guides for ' + esc(category.title) + '</h2>'
+    +       '<div class="related-grid" data-card-heading="h3">' + cards.join('') + '</div>'
+    +     '</div>'
+    +   '</div>'
+    + '</section>';
+}
+
+export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, intro: introFor, posts }) {
   const c = category;
   const intro = (introFor || {})[c.slug] || (c.tagline + '.');
 
@@ -357,6 +414,8 @@ export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, int
       + '</section>';
   }
 
+  body += renderCategoryGuideLinks({ category: c, posts });
+
   // Other categories, so the page is not a dead end and the whole taxonomy is
   // reachable from any of them.
   body += ''
@@ -372,6 +431,19 @@ export function renderCategoryPageBody({ category, tools, iconSvg, cardHref, int
     + '</section>';
 
   return body;
+}
+
+/* Shared breadcrumb item data for category pages. Both the JSON-LD and the
+   visible <nav> are built from this one function so their labels and order can
+   never drift apart. */
+export function categoryBreadcrumbItems(category, origin) {
+  const base = String(origin || '').replace(/\/+$/, '');
+  const url = base + '/categories/' + category.slug + '/';
+  return [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: base + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: base + '/tools/' },
+    { '@type': 'ListItem', position: 3, name: category.title, item: url }
+  ];
 }
 
 /* JSON-LD for a category page: a CollectionPage plus breadcrumb trail. Built from the same
@@ -404,11 +476,7 @@ export function renderCategorySchema({ category, tools, origin, intro: introFor 
       },
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: base + '/' },
-          { '@type': 'ListItem', position: 2, name: 'Tools', item: base + '/tools/' },
-          { '@type': 'ListItem', position: 3, name: c.title, item: url }
-        ]
+        itemListElement: categoryBreadcrumbItems(c, base)
       }
     ]
   };

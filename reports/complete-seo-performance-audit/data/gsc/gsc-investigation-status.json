@@ -1,0 +1,75 @@
+{
+  "investigation": "Google Search Console read-only investigation for sc-domain:easyworktools.online",
+  "status": "BLOCKED_BROWSER_UNAVAILABLE",
+  "investigatedAt": "2026-11-23",
+  "requestedTabID": "tab_40b49568-2ae3-4c81-8184-de515a993c29",
+  "browserAttempts": [
+    {
+      "tool": "tools.browser.tabs.list",
+      "result": "[browser.disconnected] No desktop browser is connected to this session. Open this session in the desktop app and wait for it to connect. Then call browser.tabs.list({}). Repeating browser actions while disconnected will not help."
+    },
+    {
+      "tool": "tools.browser.snapshot",
+      "tabID": "tab_40b49568-2ae3-4c81-8184-de515a993c29",
+      "result": "same browser.disconnected error"
+    },
+    {
+      "tool": "tools.browser.tabs.open",
+      "result": "same browser.disconnected error"
+    },
+    {
+      "tool": "tools.browser.frames",
+      "tabID": "tab_40b49568-2ae3-4c81-8184-de515a993c29",
+      "result": "same browser.disconnected error"
+    }
+  ],
+  "gscDataCaptured": false,
+  "gscSectionsCaptured": [],
+  "notCaptured": [
+    "Performance report date ranges and totals (default 3 months, 28 days, 12 months)",
+    "Top queries / pages / countries / devices / search appearance exports",
+    "High-impression low-CTR queries and pages; positions 4-20 and 11-30; declining items",
+    "Indexing > Pages counts, categories, reasons and URL samples",
+    "Sitemaps report status, submitted date, last downloaded, discovered URLs and errors",
+    "Experience > Core Web Vitals and HTTPS",
+    "URL Inspection for representative URLs",
+    "Links / Breadcrumbs enhancements"
+  ],
+  "safety": "No indexing requests, setting changes, URL submissions or account modifications were made. No request was made for access or exports.",
+  "locallyVerifiedSitemap": {
+    "sourceLocal": "F:\\easyworktools.online\\Easy-work-Tools\\sitemap.xml",
+    "sourceLive": "https://easyworktools.online/sitemap.xml",
+    "liveLocalContentIdentical": true,
+    "sha256": "A96A58ED0FF1923FA63D7B89D5F0C8363E51872E40F8F3B6114AE2AA8D06F0C2",
+    "bytes": 30272,
+    "locCount": 392,
+    "breakdown": {
+      "home": 1,
+      "indexPages": 3,
+      "staticPages": 7,
+      "categories": 10,
+      "toolDetailPages": 242,
+      "blogDetailPages": 129
+    },
+    "note": "This verifies only that the deployed sitemap.xml matches the repository copy. It is not verification of GSC sitemap submission state, last download, discovered URLs or errors."
+  },
+  "robotsTxtLocal": {
+    "source": "F:\\easyworktools.online\\Easy-work-Tools\\robots.txt",
+    "directives": [
+      "User-agent: *",
+      "Allow: /",
+      "Disallow: /api/",
+      "Sitemap: https://easyworktools.online/sitemap.xml",
+      "User-agent: Mediapartners-Google",
+      "Allow: /"
+    ],
+    "note": "Local source comments state Cloudflare managed robots.txt prepends its own block at the edge; edge result was not inspected."
+  },
+  "representativeURLInspectionCandidates": {
+    "homepage": "https://easyworktools.online/",
+    "category": "https://easyworktools.online/categories/pdf/",
+    "tool": "https://easyworktools.online/tools/cm-to-inches/",
+    "blogArticle": "https://easyworktools.online/blog/cm-to-inches-explained",
+    "staticPage": "https://easyworktools.online/about"
+  }
+}

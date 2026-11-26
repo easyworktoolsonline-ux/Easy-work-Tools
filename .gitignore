@@ -9,3 +9,9 @@ coverage/
 
 # Local AI Studio exports and SEO report artifacts (not part of the published site)
 public/assets/aistudio/
+
+# Private/vendor research exports and local working directories must not be published
+reports/complete-seo-performance-audit/research-data/
+_work/
+.wrangler/
+.env.example

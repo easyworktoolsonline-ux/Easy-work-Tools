@@ -1,0 +1,16 @@
+id,priority,category,issue,evidence,proposed_action,status,owner_approval_required
+I-01,P0,Performance,"Field CLS 0.585 at html>body>main>section.category-section.section>div.container; 25% poor","Cloudflare user-supplied 24h data; 01-baseline-audit.md; 02-core-web-vitals-analysis.md","Deploy local index.html fix, then validate field CLS",awaiting_deployment,yes
+I-02,P0,Performance,"Async categories.css caused cards to stack then collapse; controlled category CLS 0.9373","data/performance/cls-controlled-test.md","Inline category CSS in #ewtCriticalCss; reserve .cat-rail min-height; hidden h2",fixed_local_not_deployed,yes
+I-03,P1,Indexation,"291 URLs Discovered - currently not indexed","data/gsc/gsc-authenticated-findings.md; 04-indexation-and-sitemap-analysis.md","Classify by template; improve quality/internal links; no deletion",open,no_immediate_change
+I-04,P1,Indexation,"203 GSC 404s; 88 Ahrefs 404s","GSC indexing; Ahrefs crawl stats","Classify legacy vs malformed vs missing; preserve redirects",open,no_immediate_change
+I-05,P1,Analytics,"42.60% 4xx share in Cloudflare account analytics last 7 days","data/cloudflare/01-web-analytics.md","Read-only path/status investigation",open,no_immediate_change
+I-06,P1,SEO,"Mobile 376 impressions, 1.9% CTR, position 5.7 vs desktop 10.2% CTR","data/gsc/gsc-authenticated-findings.md","Review mobile titles/descriptions after canonical checks",open,no_immediate_change
+I-07,P2,Performance,"TTFB P75 978 ms; HTML DYNAMIC max-age=0; element render delay 219 ms","data/cloudflare/02-speed-tab.md; 07-cloudflare-performance-and-configuration.md","Evaluate HTML cache rule feasibility separately",not_enabled,yes
+I-08,P2,SEO,"webp to pdf at GSC position 11.3; SEMrush cluster 103 keywords / 6220 volume / KD 22","GSC queries; SEMrush Keyword Magic","Review existing page on-page/internal links; no new page required",research_only,no_immediate_change
+I-09,P2,SEO,"SEMrush Top Pages session expired; Ahrefs Content Gap inputs failed","data/semrush and data/ahrefs findings","Document limitation; re-run only with owner-approved authenticated session",limited,no
+I-10,P2,Measurement,"Fresh PSI API HTTP 429; no new lab score","data/performance notes","No new PSI claim; use RUM post-deploy",limited,no
+I-11,P2,Measurement,"GSC CrUX has no mobile/desktop data last 90 days","data/gsc/gsc-authenticated-findings.md","Rely on Cloudflare field data; post-deploy monitoring",limited,no
+I-12,P2,Security,"Security Center mfa_not_enabled remains","data/cloudflare/05-security.md","Deliberately untouched",out_of_scope,no
+I-13,P2,AI,"AI policies confirmed: search/AI search allowed, training/agents restricted, AI Labyrinth enabled","data/cloudflare/05-security.md; 14-ai-crawler-and-discoverability-audit.md","No change; continue monitoring",verified_no_change,no
+I-14,P2,ChangeControl,"Line-ending-only modified files: blog-manifest.json, llms.txt, sitemap.xml","git diff --exit-code returns 0","Treat as noise; do not include in deployment",documented,no
+I-15,P2,Performance,"Synthetic header/nav shift 0.394 present before and after CLS harness","data/performance/cls-controlled-test.md","Do not change header without field evidence",open,no_immediate_change

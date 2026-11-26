@@ -1,0 +1,13 @@
+ItemID,Area,Item,Finding,Count,Evidence,Status
+GEO-001,llms.txt,Machine-readable index,129 guide links added; 242 tool links and 10 category links verified,129,file://llms.txt,implemented
+GEO-002,ai-catalog.json,Machine-readable catalog,Existing generated catalog preserved; no unsupported claims added,0,file://ai-catalog.json,preserved
+GEO-003,robots.txt,AI crawler access,No AI crawler block; search indexing access preserved,0,live robots.txt,verified-no-change
+GEO-004,Schema,BreadcrumbList,391 pages; homepage intentionally excluded as trail root,391,page JSON-LD,verified-existing
+GEO-005,Schema,FAQPage,"371 pages, generated from visible Q&A",371,page JSON-LD,verified-existing
+GEO-006,Content,Direct-answer paragraphs,392 pages have at least one 12+ word paragraph in main,392,page-content-geo-inventory,verified-existing
+GEO-007,Content,Definition sentence,170 pages,170,page-content-geo-inventory,verified-existing
+GEO-008,Content,Limitations/privacy boundary,246 pages,246,page-content-geo-inventory,verified-existing
+GEO-009,Content,Steps signal,319 pages,319,page-content-geo-inventory,verified-existing
+GEO-010,Internal links,Contextual category→guide links,28 links across 10 category pages,28,final-internal-link-map,implemented-in-T049
+GEO-011,Semantic HTML,Visible breadcrumb nav,"391 pages, 870 links",870,internal-link graph after,implemented-in-T041
+GEO-012,Entity clarity,Brand context in title/H1/first paragraphs,343 pages,343,page-content-geo-inventory,verified-existing

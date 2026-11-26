@@ -1,0 +1,17 @@
+IssueID,Area,Finding,Status,BlockerOrDecision,UnblockRequirement
+T-001,Indexation,"GSC discovered-not-indexed 291 URLs; 62 excluded, 549 submitted, 203 crawl anomalies, 49 duplicate-without-canonical (source: Report 03/GSC).",BLOCKED,No indexing request or URL deletion without owner decision and authorized GSC context.,Owner review + authorized GSC export; decide canonical/priority strategy.
+T-002,404 pool,GSC 404 pool unresolved; no full live 404 re-crawl performed after local work.,PARTIAL,Requires authoritative URL list and owner decision on legacy paths.,Provide current GSC 404 export and approved redirect map.
+T-003,Duplicate variants,"3xx/variant URLs seen in GSC; redirect rules preserved, none changed.",PARTIAL,No evidence justifies changing an existing redirect or canonical.,Owner decision on variant consolidation; preserve current URLs.
+T-004,Core Web Vitals,"Field data unavailable: PSI No Data, GSC CrUX insufficient, Cloudflare P75 pre-change only.",DATA UNAVAILABLE,No post-change real-user measurement.,Wait for field data; do not claim improvement.
+T-005,Performance,Homepage desktop lab CLS 0.371; controlled test suggests residual header/navigation shift but root cause unproven.,PARTIAL,No confirmed Lighthouse attribution; no intrusive production experiment authorized.,Authorized controlled reproduction and fix if confirmed.
+T-006,Validation,Full local/source validation passed; live validation is historical/spot-check because SEO work was not deployed by assistant.,PARTIAL,No live deployment in this task.,"Deploy through normal owner pipeline, then re-crawl."
+T-007,Structured data,392 local pages parse with expected schema types; external Schema.org/Rich Results validator not run.,PARTIAL,External validator access unavailable in this run.,Run validator on deployed URLs if required.
+T-008,Off-page,SEMrush/Ahrefs backlink counts are estimates and conflict (42/245 vs 184-202/187-205).,DATA UNAVAILABLE,No first-party GSC Links export available.,Authorized GSC links export or other verified backlink source.
+T-009,Backlink risk,rankvance.com 187/245 SEMrush-estimated backlinks; niche-edit/premium-backlink anchors 15/245; no disavow submitted.,DONE-REVIEW-ONLY,Manual review completed; no automatic disavow.,Owner decision required before disavow or removal action.
+T-010,Outreach,25 outreach targets and draft angles prepared; 0 messages sent.,DONE,No accounts created and no outreach sent by instruction.,Owner approves and sends any messages.
+T-011,GEO/AEO,llms.txt missing all 129 guides before fix; now 129/129 present.,DONE,No AI citation/traffic evidence available.,Measure independently if AI referrals become visible.
+T-012,Content orphans,5 static legal/about pages remain footer-only; all-graph orphan count 0.,PARTIAL,No new contextual link added to legal pages in T049.,Optional owner decision on contextual links to static pages.
+T-013,Link parser,2 unresolved internal-looking anchors reviewed: security.txt (non-page) and $2 JS template false positive.,DONE,No broken page link; no change needed.,None unless parser scope changes.
+T-014,Bing,Bing Webmaster Tools data unavailable.,DATA UNAVAILABLE,No authorized session.,Owner provides authorized access/export.
+T-015,Google Trends,No reliable Trends export obtained.,DATA UNAVAILABLE,Paid/unstable APIs avoided.,Owner exports Trends data if needed.
+T-016,Sensitive files,"Pre-commit scan required for .env, tokens, cookies, private research, AI Studio assets.",DONE,Staging list restricted; raw vendor exports and work dirs excluded.,None.

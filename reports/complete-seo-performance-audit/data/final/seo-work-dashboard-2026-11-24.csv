@@ -1,0 +1,21 @@
+Metric,Before,After,Change,Evidence
+Unique researched keywords,DATA UNAVAILABLE,10560,"+10,560 unique normalized keys","10,642 rows; 74 duplicate groups; 82 redundant rows; Report 60"
+Targeted keywords,0,1168,"+1,168","1,172 mapping rows; 1,168 unique mapped keywords; Report 60"
+Implemented keyword mappings,0,100,+100,100 rows with RecommendedTargetUrl; 98 mapped pairs observed in live content; not a ranking claim
+Pages optimized,0,155,+155,page-level optimization summary; 67 blog + 88 tool
+Internal links,14868,15766,+898,T048 baseline vs T051 post graph; 870 breadcrumb + 28 contextual
+New internal links,0,898,+898,final internal-link graph diff
+Broken links,2,2,0 new,two known non-page parser artifacts; no new broken links
+Orphan pages,5,5,0,content-only orphans; all-graph orphans 0 before and after
+Titles optimized,0,0,0,0 changed titles; all titles unique/non-empty
+Meta descriptions optimized,0,48,+48,page-level before/after metadata CSV
+Schema fixes,0,25,+25,page-level report-data summary; 25 schema changes
+Breadcrumbs implemented,0,391,+391,Report 59
+Blog pages optimized,0,67,+67,page-level optimization summary
+Tool pages optimized,0,88,+88,page-level optimization summary
+Category pages optimized,0,10,+10,T049 category guide-link sections
+Backlinks acquired,0,0,0,no outreach/link placement performed
+Referring domains acquired,0,0,0,no outreach/link placement performed
+GEO pages optimized,0,392,+392 audited; 129 llms links added,Report 61; exact llms change 129 guide links
+URLs validated,392,392,0,sitemap/page/canonical validation
+Technical issues resolved,0,6,+6,T037/T039/T040/T041/T042/T059 implemented; unresolved items in issue register

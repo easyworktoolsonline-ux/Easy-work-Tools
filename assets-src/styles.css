@@ -4788,3 +4788,19 @@ body[data-tool-cat] input:not([type="button"]):not([type="submit"]):not([type="r
 body[data-tool-cat] select{
   text-align:left!important;
 }
+
+/* Shared breadcrumb trail. Kept in the global stylesheet so every generated
+   page type can use one component without an extra request or layout-specific
+   override. The child .container keeps links aligned with page content. */
+.breadcrumb{
+  position:relative;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  margin:0;padding:12px 0 2px;font-size:13px;color:#475569;
+}
+.breadcrumb>.container{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.breadcrumb a{color:#1d4ed8;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(29,78,216,.35)}
+.breadcrumb a:hover{border-bottom-color:#1d4ed8}
+.breadcrumb span[aria-hidden]{opacity:.7}
+.breadcrumb [aria-current]{font-weight:700;color:#0f172a}
+html[data-theme="dark"] .breadcrumb{color:#cbd5e1}
+html[data-theme="dark"] .breadcrumb a{color:#93c5fd}
+html[data-theme="dark"] .breadcrumb [aria-current]{color:#f8fafc}

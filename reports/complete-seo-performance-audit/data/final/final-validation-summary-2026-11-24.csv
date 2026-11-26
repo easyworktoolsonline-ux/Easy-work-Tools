@@ -1,0 +1,17 @@
+CheckID,Check,Expected,Actual,Failures,Result,Evidence
+VAL-001,Sitemap URLs,392,392,0,PASS,sitemap.xml loc parse
+VAL-002,Sitemap URLs with local source file,392,392,0,PASS,file existence check
+VAL-003,Canonical equals sitemap URL,392,392,0,PASS,Report 59/63 validation
+VAL-004,Pages with one non-empty title,392,392,0,PASS,Report 61 inventory
+VAL-005,Pages with one non-empty meta description,392,392,0,PASS,Report 61 inventory
+VAL-006,Pages under 150 main words,0,0,0,PASS,Report 61 inventory
+VAL-007,Visible breadcrumb pages,391,391,0,PASS,Report 59
+VAL-008,Breadcrumb links,870,870,0,PASS,T041/T051 graph
+VAL-009,Contextual category→guide links,28,28,0,PASS,Report 63
+VAL-010,New broken internal links,0,0,0,PASS,Report 63
+VAL-011,llms tool links,242,242,0,PASS,post-fix llms check
+VAL-012,llms guide links,129,129,0,PASS,post-fix llms check
+VAL-013,llms category links,10,10,0,PASS,post-fix llms check
+VAL-014,npm run build in isolated copy,1,1,0,PASS,Reports 59 and 63
+VAL-015,npm run lint,1,1,0,PASS,exit 0 on 2026-11-26
+VAL-016,Live production validation after local work,0,1,1,NOT RUN,no deployment by assistant

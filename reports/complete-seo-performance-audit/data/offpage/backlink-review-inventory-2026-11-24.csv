@@ -1,0 +1,43 @@
+EvidenceID,Source,Metric,Value,Reviewed,Classification,Action
+BL-001,SEMrush estimate,Referring domains,42,yes,third-party estimate,Retained as estimate only; not combined with GSC actuals.
+BL-002,SEMrush estimate,Backlinks,245,yes,third-party estimate,Retained as estimate only.
+BL-003,SEMrush estimate,Follow backlinks,200,yes,third-party estimate,No action.
+BL-004,SEMrush estimate,Nofollow backlinks,45,yes,third-party estimate,No action.
+BL-005,SEMrush estimate,rankvance.com share,187/245 backlinks,yes,high-concentration risk estimate,Manual review only; no disavow.
+BL-006,SEMrush estimate,niche-edit/premium-backlink anchors,15/245 backlinks (6%),yes,suspicious anchor pattern estimate,Manual review only; no disavow.
+BL-007,SEMrush estimate,Branded anchor easyworktools.online,214 backlinks / 28 domains (87%),yes,branded estimate,No action.
+BL-008,Ahrefs estimate,Backlinks in window,187,yes,third-party estimate,Conflict with SEMrush preserved.
+BL-009,Ahrefs estimate,All-time backlinks,205,yes,third-party estimate,Conflict with SEMrush preserved.
+BL-010,Ahrefs estimate,Referring domains overview/report,184 / 202,yes,third-party estimate with discrepancy,Both values retained.
+BL-011,Ahrefs estimate,Followed referring domains,1 (0.5%),yes,third-party estimate,No action.
+BL-012,Ahrefs estimate,Followed backlinks,4 (2.1%),yes,third-party estimate,No action.
+BL-013,Ahrefs estimate,Top sampled domain,"scamadviser.com DR 80, 4 links, SPAM label",yes,suspicious label from tool,No automatic disavow.
+BL-014,GSC,Links report,DATA UNAVAILABLE,no,first-party data unavailable,Requires authorized GSC export.
+BL-015,This project,New backlinks acquired,0,yes,verified project action,None; no outreach or link placement performed.
+BL-016,This project,Outreach messages sent,0,yes,verified project action,Targets drafted only.
+BL-017,This project,Disavow files submitted,0,yes,verified project action,Requires separate evidence-based owner decision.
+BL-TGT-017,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-018,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-019,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-020,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-021,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 000,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-022,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 403,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-023,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-024,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-025,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-026,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-027,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 000,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-028,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-029,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-030,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 429,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-031,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-032,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-033,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-034,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-035,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-036,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-037,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 200,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-038,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 403,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-039,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 403,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-040,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 403,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.
+BL-TGT-041,Prospect URL verification 2026-11-23,Opportunity domain URL status,undefined => HTTP 403,yes,"prospect verification, NOT an acquired backlink",Retained for outreach target list; no contact made.

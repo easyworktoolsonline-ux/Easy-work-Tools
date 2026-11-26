@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "generatedAt": "2026-11-23T12:15:59.420Z",
+    "total": 381,
+    "pass": 381,
+    "fail": 0,
+    "byType": {
+      "tool": {
+        "total": 242,
+        "pass": 242,
+        "fail": 0
+      },
+      "blog": {
+        "total": 129,
+        "pass": 129,
+        "fail": 0
+      },
+      "category": {
+        "total": 10,
+        "pass": 10,
+        "fail": 0
+      }
+    }
+  },
+  "failures": []
+}

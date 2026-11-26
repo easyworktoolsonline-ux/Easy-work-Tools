@@ -4,7 +4,7 @@ import { cleanAll, dirtyShell } from './clean-urls.mjs';
 import { ensureOgMetadata } from './og-metadata.mjs';
 import {
   validateCategories, toolCardAttrs, renderCarousel, renderFilter,
-  renderCategoryPageBody, renderCategorySchema,
+  renderCategoryPageBody, renderCategorySchema, categoryBreadcrumbItems,
   MARK_START, MARK_END, fillMarked,
   CATEGORY_WARNINGS,
 } from './category-sections.mjs';
@@ -375,10 +375,34 @@ function addHeaderActions(html) {
 }
 
 
-function injectBreadcrumbSchema(html, relFile) {
+/* Read an already-present BreadcrumbList instead of inventing a second label
+   source. Several hand-written pages have schema labels that differ slightly
+   from their H1; the visible trail must repeat those exact schema labels. */
+function existingBreadcrumbItems(html) {
+  for (const script of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
+    let data;
+    try { data = JSON.parse(script[1]); } catch { continue; }
+    const graphs = Array.isArray(data && data['@graph']) ? data['@graph'] : [data];
+    for (const graph of graphs) {
+      if (!graph || graph['@type'] !== 'BreadcrumbList' || !Array.isArray(graph.itemListElement)) continue;
+      const items = graph.itemListElement
+        .filter(item => item && item.name && typeof item.item === 'string')
+        .map((item, i) => ({ '@type': 'ListItem', position: item.position || i + 1, name: item.name, item: item.item }));
+      if (items.length) return items;
+    }
+  }
+  return null;
+}
+
+/* One item list drives both the existing JSON-LD and the new visible trail.
+   Keeping this as a pure function is what makes schema/visible label parity
+   testable and prevents a second breadcrumb system appearing in the build. */
+function breadcrumbItemsForPage(html, relFile) {
   const norm = relFile.replace(/\\/g, '/');
-  if (norm === 'index.html' || norm === '404.html' || norm.startsWith('categories/')) return html;
-  if (/"@type"\s*:\s*"BreadcrumbList"/i.test(html)) return html;
+  if (norm === 'index.html' || norm === '404.html' || norm.startsWith('categories/')) return null;
+
+  const existing = existingBreadcrumbItems(html);
+  if (existing) return existing;
 
   const h1Match = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
   const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
@@ -404,14 +428,36 @@ function injectBreadcrumbSchema(html, relFile) {
   } else {
     items.push({ '@type': 'ListItem', position: 2, name: rawName, item: pageUrl });
   }
+  return items;
+}
 
+function injectBreadcrumbSchema(html, relFile, items = breadcrumbItemsForPage(html, relFile)) {
+  if (!items || /"@type"\s*:\s*"BreadcrumbList"/i.test(html)) return html;
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items
   };
   const tag = '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>';
-  return html.replace('</head>', tag + '</head>');
+  return html.replace('</head>', () => tag + '</head>');
+}
+
+/* Accessible, static, root-relative breadcrumb markup. The marker lets builds
+   replace their own previous output, so repeated runs stay idempotent. */
+function injectVisibleBreadcrumb(html, items) {
+  if (!items || items.length < 2 || !/<main\b[^>]*>/i.test(html)) return html;
+  html = html.replace(/\s*<nav\b[^>]*data-ewt-breadcrumb="1"[\s\S]*?<\/nav>/gi, '\n');
+  const crumbs = items.map((item, i) => {
+    const label = escHtml(item.name);
+    const isCurrent = i === items.length - 1;
+    const part = isCurrent
+      ? '<span aria-current="page">' + label + '</span>'
+      : '<a href="' + escHtml(new URL(item.item).pathname || '/') + '">' + label + '</a>';
+    return (i ? '<span aria-hidden="true">/</span>' : '') + part;
+  }).join('');
+  const nav = '<nav class="breadcrumb" data-ewt-breadcrumb="1" aria-label="Breadcrumb">'
+    + '<div class="container">' + crumbs + '</div></nav>';
+  return html.replace(/(<main\b[^>]*>)/i, (_, open) => open + '\n' + nav + '\n');
 }
 
 function updateFooter(html, prefix, relFile) {
@@ -531,17 +577,23 @@ for (const c of CATEGORIES) {
   head = head.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>\s*/g, '\n');
 
   const schema = renderCategorySchema({ category: c, tools: list, origin: SITE_ORIGIN, intro: CATEGORY_INTRO });
-  const body = renderCategoryPageBody({ category: c, tools: list, iconSvg, cardHref, intro: CATEGORY_INTRO });
+  const body = renderCategoryPageBody({ category: c, tools: list, iconSvg, cardHref, intro: CATEGORY_INTRO, posts });
   // The /tools/ filter panel is generated only into /tools/index.html, so these
   // two assets are dead weight here. Carried over by the shell; drop them so the
   // category pages do not request a stylesheet and script they never use.
   // categories.css is kept: the category hero reuses the card gradient and icon
   // tile styles. Only tool-filter.js is dropped, since its panel is generated
   // into /tools/index.html alone.
+  // The tools-page schema was stripped above. Insert the category schema
+  // inside <head>: placing it after </head> leaves the script between
+  // </head> and <body>, which is invalid and lets the parser re-parent it.
+  // A function replacement keeps any '$' in the JSON-LD literal.
+  head = head.replace('</head>', () => schema + '\n</head>');
   const pageHead = head;
 
   const foot = deepen(shellFoot).replace(/[^\n]*tool-filter\.js[^\n]*\n?/g, '');
-  const page = pageHead + '\n' + schema + '\n' + deepen(shellChrome) + body + '</main>' + foot;
+  let page = pageHead + '\n' + deepen(shellChrome) + body + '</main>' + foot;
+  page = injectVisibleBreadcrumb(page, categoryBreadcrumbItems(c, SITE_ORIGIN));
 
   const dir = path.join(root, 'categories', c.slug);
   await fs.mkdir(dir, { recursive: true });
@@ -571,7 +623,9 @@ for (const f of allHtml) {
 
   text = addHeaderActions(text);
   text = updateFooter(text, prefix, relFile);
-  text = injectBreadcrumbSchema(text, relFile);
+  const breadcrumbItems = breadcrumbItemsForPage(text, relFile);
+  text = injectBreadcrumbSchema(text, relFile, breadcrumbItems);
+  text = injectVisibleBreadcrumb(text, breadcrumbItems);
   text = text.replace(/<button class="search-close" type="button" onclick="closeSearch\(\)">Close(?:\s*\?)?<\/button>/gi, '<button class="search-close" type="button" onclick="closeSearch()">Close ✕</button>');
 
   // Remove previously generated data/app blocks so repeated builds stay clean.
@@ -1226,7 +1280,8 @@ const tabsSrc = `${prefix}assets/tool-tabs.js`;
   await fs.writeFile(f, text);
 }
 
-// Clean, valid sitemap URLs (HTML pages only; llms.txt & ai-catalog.json are in robots.txt).
+// Clean, valid sitemap URLs (HTML pages only). llms.txt and ai-catalog.json
+// are not listed here and are not referenced from robots.txt.
 //
 // <lastmod> is deliberately NOT emitted. It used to be the file's mtime, which
 // in a fresh checkout/deploy artifact is the checkout time rather than the date
@@ -1354,9 +1409,9 @@ await writeFileSync(path.join(root, 'ai-catalog.json'), JSON.stringify(catalog, 
  * llms.txt
  *
  * It was hand-maintained and had drifted to "74 tools, 67 guides" while
- * the site had 128 and 121. It is linked from robots.txt, listed in the
- * sitemap and read by AI agents, so a wrong count there is a real
- * inaccuracy rather than a cosmetic one.
+ * the site had 128 and 121. AI agents read this file, so a wrong count
+ * there is a real inaccuracy rather than a cosmetic one. It is not
+ * currently referenced from robots.txt or listed in sitemap.xml.
  *
  * The tool list is generated from tools-manifest.json, grouped by the
  * same `category` value that drives the homepage category cards, so the
@@ -1369,8 +1424,8 @@ const LLMS_CATEGORY_ORDER = [
   'SEO Tools', 'Converter Tools', 'Calculator Tools', 'Utility Tools'
 ];
 
-/* The prose around the generated list. __TOOLS__, __POSTS__ and
-   __TOOL_BLOCK__ are substituted by writeLlmsTxt(); everything else is
+/* The prose around the generated list. __TOOLS__, __POSTS__, __TOOL_BLOCK__
+   and __GUIDE_BLOCK__ are substituted by writeLlmsTxt(); everything else is
    written to be read, so it lives here rather than being assembled. */
 const LLMS_PROSE = `# EasyWorkTools.online
 
@@ -1416,6 +1471,8 @@ Browse all guides: https://easyworktools.online/blog/
 Every guide is an original, practical walkthrough of one tool or one task, with
 worked examples, the mistakes people actually make, and answers to the questions
 readers ask in the comments.
+
+__GUIDE_BLOCK__
 
 ## Legal and informational pages
 
@@ -1516,11 +1573,25 @@ function writeLlmsTxt() {
     })
     .join('\n');
 
+  /* Every guide is listed by its canonical URL. The URLs come from the same
+     blog manifest as the sitemap and the generated blog index, so this list
+     cannot drift away from the pages an agent can actually fetch. */
+  const guideLines = posts
+    .slice()
+    .sort((a, b) => String(a.title || '').localeCompare(String(b.title || '')))
+    .map((p) => {
+      const title = String(p.title || '').replace(/\s*\|\s*EasyWorkTools\.online\s*$/i, '');
+      const url = SITE_ORIGIN + String(p.url || '').replace(/^\/+/, '');
+      return `- [${title}](${url}) - ${String(p.description || '').replace(/\s+/g, ' ').trim()}`;
+    })
+    .join('\n');
+
   const text = LLMS_PROSE
     .replace(/__TOOLS__/g, String(tools.length))
     .replace(/__POSTS__/g, String(posts.length))
     .replace(/__CATEGORY_BLOCK__/, catLines)
-    .replace(/__TOOL_BLOCK__/, blocks);
+    .replace(/__TOOL_BLOCK__/, blocks)
+    .replace(/__GUIDE_BLOCK__/, guideLines);
 
   return writeFileSync(path.join(root, 'llms.txt'), text);
 }
@@ -1595,6 +1666,12 @@ function normaliseInternalLinks() {
     const before = readFileSync(file, 'utf8');
     let after = before;
 
+    /* Breadcrumb hrefs are deliberately root-relative. Shield the whole nav
+       from the depth-relative rewrite below, then put it back unchanged. */
+    const crumbNavs = [];
+    after = after.replace(/<nav class="breadcrumb" data-ewt-breadcrumb="1"[\s\S]*?<\/nav>/gi,
+      (nav) => '\u0000EWT_CRUMB_' + (crumbNavs.push(nav) - 1) + '\u0000');
+
     /* A leading slash discards pageDir in posix.resolve; anything else is
        resolved against it. So one call proves both sides of every rewrite. */
     const sitePath = (href) => {
@@ -1668,6 +1745,7 @@ function normaliseInternalLinks() {
       return open + next + '"';
     });
 
+    after = after.replace(/\u0000EWT_CRUMB_(\d+)\u0000/g, (_, i) => crumbNavs[Number(i)] || '');
     if (after !== before) { writeFileSync(file, after); changedFiles++; }
   }
 
