@@ -1,0 +1,75 @@
+name: Uptime smoke
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: uptime-smoke
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    name: safe-production-smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Site and static asset availability
+        run: |
+          set -euo pipefail
+          apex=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://easyworktools.online/)
+          www=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://www.easyworktools.online/)
+          asset=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://easyworktools.online/assets/app.js)
+          echo "apex=$apex www=$www asset=$asset"
+          test "$apex" = "200"
+          test "$www" = "200" -o "$www" = "301" -o "$www" = "302"
+          test "$asset" = "200"
+
+      - name: Feedback API safe preflight (no delivery)
+        run: |
+          set -euo pipefail
+          headers=$(mktemp)
+          trap 'rm -f "$headers"' EXIT
+          status=$(curl -sS -D "$headers" -o /dev/null --max-time 20 \
+            -X OPTIONS \
+            -H 'Origin: https://easyworktools.online' \
+            -H 'Access-Control-Request-Method: POST' \
+            -w '%{http_code}' \
+            https://easyworktools.online/api/feedback)
+          echo "feedback_preflight=$status"
+          test "$status" = "204"
+          grep -qi '^access-control-allow-origin: https://easyworktools.online\r\?$' "$headers"
+          if grep -qi '^access-control-allow-origin: \*\r\?$' "$headers"; then
+            echo 'wildcard CORS on feedback API' >&2
+            exit 1
+          fi
+
+      - name: Thumbnail API fail-closed probe (no upstream fetch)
+        run: |
+          set -euo pipefail
+          status=$(curl -sS -o /dev/null --max-time 20 \
+            -w '%{http_code}' \
+            https://easyworktools.online/api/thumbnail)
+          echo "thumbnail_no_query=$status"
+          test "$status" = "400"
+
+      - name: Internal report path remains blocked
+        run: |
+          set -euo pipefail
+          status=$(curl -sS -o /dev/null --max-time 20 \
+            -w '%{http_code}' \
+            https://easyworktools.online/reports/security-remediation/)
+          echo "reports_status=$status"
+          test "$status" = "403" -o "$status" = "404" -o "$status" = "410"
+
+      - name: ads.txt integrity
+        run: |
+          set -euo pipefail
+          expected=4435b02125b2b2c5daa6904b70ed69640a2c20750e180fcb9ebb9317266a0eea
+          actual=$(curl -sS --max-time 20 https://easyworktools.online/ads.txt | sha256sum | cut -d' ' -f1)
+          echo "ads_sha256_match=$([ "$actual" = "$expected" ] && echo yes || echo no)"
+          test "$actual" = "$expected"

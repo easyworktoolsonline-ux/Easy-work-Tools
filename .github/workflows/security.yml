@@ -1,0 +1,47 @@
+name: Security checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  security:
+    name: security
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # Pinned to actions/checkout v4.2.2 (full commit SHA) for SHA-pin policy.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Runtime versions
+        run: node --version && npm --version
+
+      - name: Install dependencies from the committed lockfile
+        run: npm ci --ignore-scripts --no-fund --no-audit
+
+      - name: Security regression tests
+        run: npm run test:security
+
+      - name: TypeScript lint
+        run: npm run lint
+
+      - name: Dependency audit
+        run: npm audit --json
+
+      - name: Production dependency audit
+        run: npm audit --omit=dev --json
+
+      - name: Committed diff whitespace check
+        run: git diff --check HEAD^ HEAD

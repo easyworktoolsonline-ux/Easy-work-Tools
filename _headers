@@ -43,33 +43,23 @@
 # days - a real, observable drift. 180 days is the conservative, already-live
 # value; raising it is a deliberate zone-level decision, not a repo edit.
 #
-# includeSubDomains and preload are intentionally NOT set: they commit every
-# present and future subdomain to HTTPS-only (preload is very hard to reverse)
-# and that has not been verified here. To opt in, confirm all subdomains serve
-# valid HTTPS, add `; includeSubDomains; preload` here and in the zone setting,
-# then submit at hstspreload.org.
+# includeSubDomains is set after the final hardening subdomain inventory
+# confirmed that the two web hostnames are HTTPS-only and no HTTP-only web
+# service under the zone was found. `preload` remains intentionally OFF: it is
+# difficult to reverse and was not requested or submitted to hstspreload.org.
+# Keep the zone-level HSTS setting in sync with this value.
 #
 # Trusted Types is NOT enabled: the site has hundreds of inline onclick handlers
 # and innerHTML writes, so `require-trusted-types-for 'script'` would break
-# tools. It would need a refactor first.
+# tools. It would need a refactor first. `unsafe-inline` is retained only because
+# that existing application design requires it; no broad remote source or
+# `unsafe-eval` was added.
 #
-# `upgrade-insecure-requests` was deliberately removed from the policy below.
-# Browsers refuse to honour it inside a report-only policy and log a console
-# error to say so ("The Content Security Policy directive
-# 'upgrade-insecure-requests' is ignored when delivered in a report-only
-# policy."), which is a scored console-error failure in Lighthouse. The site is
-# HTTPS-only anyway (Cloudflare redirects http -> https at the edge), so the
-# directive was doing no work here. Add it back on the day the policy is flipped
-# to enforcing mode.
-#
-# Enforcement plan (owner approval required): keep this policy report-only until
-# Cloudflare CSP reports are clean for at least 7 days across the homepage, a
-# representative tool page, a blog page, the search UI and the feedback form.
-# Then copy this exact value to a `Content-Security-Policy` header, add
-# `upgrade-insecure-requests`, and remove the Report-Only header in the same
-# deployment. Roll back by restoring this block. Do not enable enforcement
-# before that test window; hundreds of inline handlers still require
-# 'unsafe-inline'.
+# The CSP below is enforced after the final compatibility review of the
+# homepage, representative tool pages, guides, search, feedback form, Turnstile
+# and measured AdSense origins. `upgrade-insecure-requests` is safe now that the
+# policy is enforced and the site is HTTPS-only. Roll back by restoring the
+# previous report-only block; do not add wildcard sources to silence failures.
 
 /*
   X-Content-Type-Options: nosniff
@@ -77,8 +67,10 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), midi=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
-  Strict-Transport-Security: max-age=15552000
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google; connect-src 'self' https://cloudflareinsights.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Strict-Transport-Security: max-age=15552000; includeSubDomains
+  Access-Control-Allow-Origin: https://easyworktools.online
+  Vary: Origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google; connect-src 'self' https://cloudflareinsights.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
 
 /favicon.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
@@ -181,3 +173,4 @@
   Access-Control-Allow-Origin: https://easyworktools.online
   Access-Control-Allow-Methods: GET, POST, OPTIONS
   Access-Control-Allow-Headers: Content-Type
+  Vary: Origin

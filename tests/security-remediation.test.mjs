@@ -272,6 +272,71 @@ test('feedback: per-IP rate limit returns 429 with Retry-After', async () => {
   }
 });
 
+test('feedback: application limiter has an independent global ceiling', async () => {
+  resetFeedbackStateForTests();
+  const counters = {};
+  const restore = useFetch(successFetch(counters));
+  try {
+    for (let i = 1; i <= 60; i += 1) {
+      const ok = await onRequestPost({
+        request: feedbackRequest(validFeedback(), ORIGIN, {
+          'cf-connecting-ip': `192.0.2.${i}`
+        }),
+        env: ENV
+      });
+      assert.equal(ok.status, 200, `request ${i} should be allowed`);
+    }
+    const limited = await onRequestPost({
+      request: feedbackRequest(validFeedback(), ORIGIN, {
+        'cf-connecting-ip': '192.0.2.201'
+      }),
+      env: ENV
+    });
+    assert.equal(limited.status, 429);
+    assert.deepEqual(await limited.json(), { ok: false, error: 'RATE_LIMITED' });
+    assert.ok(Number(limited.headers.get('retry-after')) > 0);
+    assert.equal(counters.verify, 60);
+    assert.equal(counters.deliver, 60);
+  } finally {
+    restore();
+  }
+});
+
+test('feedback: application limiter isolates IP buckets without edge help', async () => {
+  resetFeedbackStateForTests();
+  const counters = {};
+  const restore = useFetch(successFetch(counters));
+  try {
+    for (let i = 0; i < 5; i += 1) {
+      const ok = await onRequestPost({
+        request: feedbackRequest(validFeedback(), ORIGIN, {
+          'cf-connecting-ip': '198.51.100.10'
+        }),
+        env: ENV
+      });
+      assert.equal(ok.status, 200);
+    }
+    const blocked = await onRequestPost({
+      request: feedbackRequest(validFeedback(), ORIGIN, {
+        'cf-connecting-ip': '198.51.100.10'
+      }),
+      env: ENV
+    });
+    assert.equal(blocked.status, 429);
+
+    const other = await onRequestPost({
+      request: feedbackRequest(validFeedback(), ORIGIN, {
+        'cf-connecting-ip': '198.51.100.11'
+      }),
+      env: ENV
+    });
+    assert.equal(other.status, 200);
+    assert.equal(counters.deliver, 6);
+  } finally {
+    restore();
+  }
+});
+
 test('feedback: oversized and invalid bodies are rejected', async () => {
   resetFeedbackStateForTests();
   const oversized = await onRequestPost({
@@ -655,14 +720,31 @@ test('static config: public files contain no Apps Script URL or wildcard CORS', 
   assert.ok(!feedbackSource.includes('"*"'));
   assert.ok(!feedbackSource.includes('console.log'));
 
-  const csp = headers.split(/\r?\n/).find(line =>
-    line.trim().startsWith('Content-Security-Policy-Report-Only:'));
+  const normalizedHeaders = headers.replace(/\r\n/g, '\n');
+  assert.ok(!/Access-Control-Allow-Origin:\s*\*/i.test(normalizedHeaders));
+  assert.match(
+    normalizedHeaders,
+    /^\/\*\n(?:[^\n]*\n){0,12}?  Access-Control-Allow-Origin: https:\/\/easyworktools\.online\n/m
+  );
+  assert.match(
+    normalizedHeaders,
+    /^\/\*\n(?:[^\n]*\n){0,12}?  Vary: Origin\n/m
+  );
+  assert.match(
+    normalizedHeaders,
+    /^\/api\/\*\n[\s\S]*?  Vary: Origin\n/m
+  );
+  assert.match(normalizedHeaders, /Strict-Transport-Security: max-age=15552000; includeSubDomains\n/);
+  assert.ok(!/Strict-Transport-Security:[^\n]*preload/i.test(normalizedHeaders));
+
+  const csp = normalizedHeaders.split('\n').find(line =>
+    line.trim().startsWith('Content-Security-Policy:'));
   assert.ok(csp);
   assert.ok(!/cdnjs|jsdelivr|script\.google\.com/.test(csp));
   assert.ok(csp.includes('challenges.cloudflare.com'));
-  assert.ok(!/^\s{2}Content-Security-Policy:/m.test(headers));
+  assert.ok(csp.includes('upgrade-insecure-requests'));
+  assert.ok(!/^\s{2}Content-Security-Policy-Report-Only:/m.test(normalizedHeaders));
   assert.ok(/\/reports\/\*[\s\S]*?X-Robots-Tag: noindex/.test(headers));
-  const normalizedHeaders = headers.replace(/\r\n/g, '\n');
   assert.match(normalizedHeaders, /\/assets\/feedback-config\.js\n  ! Cache-Control\n  Cache-Control: no-cache/);
   assert.match(normalizedHeaders, /\/assets\/feedback-form\.js\n  ! Cache-Control\n  Cache-Control: no-cache/);
   assert.ok(robots.includes('Disallow: /reports/'));
