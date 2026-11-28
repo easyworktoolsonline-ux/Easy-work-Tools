@@ -643,6 +643,8 @@ test('static config: public files contain no Apps Script URL or wildcard CORS', 
   const formIndex = index.indexOf('assets/feedback-form.js');
   assert.ok(configIndex > 0);
   assert.ok(formIndex > configIndex);
+  assert.ok(index.includes('assets/feedback-config.js?v='));
+  assert.ok(index.includes('assets/feedback-form.js?v='));
   assert.ok(!index.includes('no-cors'));
   assert.ok(!index.includes('EWT_APPS_SCRIPT_URL'));
 
@@ -660,6 +662,9 @@ test('static config: public files contain no Apps Script URL or wildcard CORS', 
   assert.ok(csp.includes('challenges.cloudflare.com'));
   assert.ok(!/^\s{2}Content-Security-Policy:/m.test(headers));
   assert.ok(/\/reports\/\*[\s\S]*?X-Robots-Tag: noindex/.test(headers));
+  const normalizedHeaders = headers.replace(/\r\n/g, '\n');
+  assert.match(normalizedHeaders, /\/assets\/feedback-config\.js\n  ! Cache-Control\n  Cache-Control: no-cache/);
+  assert.match(normalizedHeaders, /\/assets\/feedback-form\.js\n  ! Cache-Control\n  Cache-Control: no-cache/);
   assert.ok(robots.includes('Disallow: /reports/'));
 
   assert.ok(code.includes('FEEDBACK_PROXY_TOKEN'));

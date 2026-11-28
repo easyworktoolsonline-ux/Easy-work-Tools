@@ -125,6 +125,17 @@
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
   Cross-Origin-Resource-Policy: same-origin
 
+# The feedback client and its public config change with the proxy deployment.
+# Revalidate on every load so a redeploy cannot leave returning visitors on a
+# stale direct-post client. The homepage also uses a version query to bypass
+# any existing edge/browser cache immediately.
+/assets/feedback-config.js
+  ! Cache-Control
+  Cache-Control: no-cache
+/assets/feedback-form.js
+  ! Cache-Control
+  Cache-Control: no-cache
+
 # Webfonts: same-origin, never change without a redeploy, and the whole point of
 # self-hosting them was to get them under this policy instead of Google's.
 # 30 days + stale-while-revalidate (not `immutable`: the filenames are not
