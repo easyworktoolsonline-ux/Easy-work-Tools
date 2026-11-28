@@ -301,12 +301,15 @@ html[data-theme="dark"] .tiff-preview-wrap{background:#0b1220;border-color:#3341
     const mdIn = document.getElementById('mdIn'), mdOut = document.getElementById('mdOut'), stats = document.getElementById('mdStats');
     mdIn.value = '# Project README\n\nWrite **bold**, *italic*, or `inline code` with live preview.\n\n## Features\n- Zero server uploads\n- Clean HTML export\n\n> Tip: Great for GitHub READMEs and docs.';
     function renderMd(src) {
-      let s = src.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      let s = src.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
       s = s.replace(/```([\s\S]*?)```/g, '<pre style="background:#111827;color:#F9FAFB;padding:10px;border-radius:8px;overflow:auto"><code>$1</code></pre>');
       s = s.replace(/^### (.*)$/gm,'<h3>$1</h3>').replace(/^## (.*)$/gm,'<h2>$1</h2>').replace(/^# (.*)$/gm,'<h1>$1</h1>');
       s = s.replace(/^&gt; (.*)$/gm,'<blockquote style="border-left:3px solid var(--cat-accent);margin:8px 0;padding:4px 12px;color:var(--text-muted)">$1</blockquote>');
       s = s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>').replace(/`([^`]+)`/g,'<code style="background:#F3F4F6;padding:2px 5px;border-radius:4px">$1</code>');
-      s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+      s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g,function(_m,label,href){
+        var safeHref = /^(?:https?:\/\/|mailto:|\/|#|\.\/|\.\.\/)/i.test(href) ? href : '#';
+        return '<a href="'+safeHref+'" target="_blank" rel="noopener noreferrer">'+label+'</a>';
+      });
       s = s.replace(/^- (.*)$/gm,'<li>$1</li>').replace(/(<li>.*<\/li>\n?)+/g, m => '<ul>' + m + '</ul>');
       return s.replace(/\n{2,}/g, '<br><br>');
     }

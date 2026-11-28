@@ -9,6 +9,8 @@ Allow: /
 # API endpoints are per-request traffic counters and page-view writes, never
 # indexable content.
 Disallow: /api/
+# Internal audit, remediation and owner-action documents are not public pages.
+Disallow: /reports/
 
 Sitemap: https://easyworktools.online/sitemap.xml
 

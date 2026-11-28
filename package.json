@@ -8,7 +8,8 @@
     "start": "tsx server.ts",
     "build": "node scripts/build-indexes.mjs",
     "build:assets": "node scripts/minify-assets.mjs",
-    "lint": "tsc --noEmit --ignoreConfig --target es2022 --module nodenext --moduleResolution nodenext --esModuleInterop server.ts"
+    "lint": "tsc --noEmit --ignoreConfig --target es2022 --module nodenext --moduleResolution nodenext --esModuleInterop server.ts",
+    "test:security": "node --test tests/security-remediation.test.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

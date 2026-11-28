@@ -259,9 +259,10 @@ TOOLS.forEach(function(t){
    server-rendered ones. */
 window.ewtCatSlug=catSlug;window.iconSvg=iconSvg;window.runSearch=function(q){q=(q||'').trim().toLowerCase();if(!q){if(panel)panel.classList.remove('show');if(results)results.innerHTML='';if(status)status.textContent='Start typing to search the whole site.';return}const hits=all.filter(x=>(x.title+' '+(x.description||'')+' '+(x.tags||[]).join(' ')).toLowerCase().includes(q)).slice(0,12);if(panel)panel.classList.add('show');if(status)status.textContent=hits.length?`${hits.length} result${hits.length===1?'':'s'} found`:'No matching results found.';results.innerHTML=hits.map(x=>`<a class="search-item" href="${esc(siteUrl(x.url))}"><strong>${esc(x.title)}</strong><span>${esc(x.type||'Page')}</span><p>${esc(x.description||'')}</p></a>`).join('')};window.closeSearch=()=>panel.classList.remove('show');const nav=document.getElementById('navSearch'),hero=document.getElementById('heroSearch'),toolsSearch=document.getElementById('toolsSearch');if(nav){nav.addEventListener('input',()=>runSearch(nav.value));nav.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch()})}if(hero)hero.addEventListener('input',()=>runSearch(hero.value));if(toolsSearch){const toolsSearchForm=toolsSearch.closest('form');if(toolsSearchForm)toolsSearchForm.addEventListener('submit',e=>{e.preventDefault();runSearch(toolsSearch.value)});toolsSearch.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch()})}document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();nav&&nav.focus()}});updateContentCounts();initLandingAnimations();initLiveStats();renderTrafficSorted();loadTraffic();trackCurrentPage();const toolCount=document.getElementById('toolCount');if(toolCount)toolCount.textContent=TOOLS.length+'+';const blogCount=document.getElementById('blogCount');if(blogCount)blogCount.textContent=POSTS.length+'+';
 /* Note: the "Send a Request" feedback form on the homepage (#toolFeedbackFormLocal) is
-   handled by its own dedicated inline script in index.html (hidden-iframe POST technique),
-   not by this shared app.js bundle. The generic #toolFeedbackForm handler that used to live
-   here was dead code (no page has an element with that id) and has been removed. */
+   handled by assets/feedback-form.js, which posts JSON to the same-origin /api/feedback
+   function and reads its response. It is not handled by this shared app.js bundle.
+   The generic #toolFeedbackForm handler that used to live here was dead code
+   (no page has an element with that id) and has been removed. */
 
 /* ---------------------------------------------------------------------------
    Universal top toast notification.

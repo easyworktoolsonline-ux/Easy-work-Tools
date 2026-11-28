@@ -1,143 +1,156 @@
 /**
  * EasyWorkTools.online — feedback / request form backend.
+ *
  * Deploy as: Web App
  *   Execute as: Me
- *   Who has access: Anyone
+ *   Who has access: Anyone (Google Web Apps cannot restrict by CORS/origin)
+ *
+ * SECURITY CONTRACT
+ *   The browser never calls this Web App directly. Cloudflare Pages calls it
+ *   from /api/feedback with a server-side proxy token. The endpoint URL and all
+ *   secrets are owner-controlled configuration, never public client code.
+ *
+ * Required Script Properties (Project Settings > Script properties):
+ *   FEEDBACK_PROXY_TOKEN     - high-entropy token shared with the Pages Function
+ *   FEEDBACK_RECIPIENT_EMAIL - delivery address; no address is hardcoded here
+ *
+ * Turnstile is verified by the Pages Function before this script is called, so
+ * it is intentionally NOT verified again (a Turnstile token is single-use).
  */
 
-const RECIPIENT_EMAIL = 'info@easyworktools.online';
-const MAX_FIELD_LENGTH = 5000;
+const PROXY_TOKEN_PROPERTY = 'FEEDBACK_PROXY_TOKEN';
+const RECIPIENT_PROPERTY = 'FEEDBACK_RECIPIENT_EMAIL';
+const ALLOWED_REQUEST_TYPES = [
+  'Report a Tool Issue', 'Suggest a New Tool', 'Help'
+];
+const MAX_POST_BYTES = 20000;
+const MAX_FIELD = 200;
+const MAX_EMAIL = 254;
+const MAX_DETAILS = 5000;
+const MAX_TOKEN = 512;
 
 function doPost(e) {
-  try {
-    const data = extractData_(e);
+  const props = PropertiesService.getScriptProperties();
+  const expectedToken = readProperty_(props, PROXY_TOKEN_PROPERTY);
+  const recipient = readProperty_(props, RECIPIENT_PROPERTY);
 
-    // Cloudflare Turnstile: checked only when the TURNSTILE_SECRET script property exists
-    // (Project Settings > Script properties). Without it, submissions are accepted as before.
-    const turnstileSecret = PropertiesService.getScriptProperties().getProperty('TURNSTILE_SECRET');
-    if (turnstileSecret && !verifyTurnstile_(turnstileSecret, data.turnstileToken)) {
-      return jsonResponse_({
-        result: 'error',
-        message: 'The security check failed. Please reload the page and try again.'
-      });
-    }
+  // Fail closed if owner configuration is missing.
+  if (!expectedToken || !recipient || !isValidEmail_(recipient)) {
+    return jsonResponse_({ result: 'error', code: 'SERVICE_UNAVAILABLE' });
+  }
 
-    const requestType = clean_(data.requestType || data.type, 'Help', 200);
-    const toolName = clean_(data.toolName || data.tool, 'Not specified', 200);
-    const visitorEmail = clean_(data.email || data.replyTo, '', 200);
-    const details = clean_(
-      data.details || data.message || data.description,
-      '',
-      MAX_FIELD_LENGTH
-    );
+  if (e && e.postData && typeof e.postData.length === 'number'
+      && e.postData.length > MAX_POST_BYTES) {
+    return jsonResponse_({ result: 'error', code: 'VALIDATION_ERROR' });
+  }
 
-    if (details.length < 10) {
-      return jsonResponse_({
-        result: 'error',
-        message: 'Please provide at least 10 characters of detail.'
-      });
-    }
+  const data = extractData_(e);
+  const suppliedToken = data.proxyToken;
+  if (typeof suppliedToken !== 'string'
+      || suppliedToken.length > MAX_TOKEN
+      || !tokensEqual_(suppliedToken, expectedToken)) {
+    return jsonResponse_({ result: 'error', code: 'PROXY_AUTH_FAILED' });
+  }
 
-    if (visitorEmail && !isValidEmail_(visitorEmail)) {
-      return jsonResponse_({
-        result: 'error',
-        message: 'That email address does not look valid.'
-      });
-    }
+  const requestType = field_(data.requestType, MAX_FIELD, true);
+  if (!requestType || ALLOWED_REQUEST_TYPES.indexOf(requestType) === -1) {
+    return jsonResponse_({ result: 'error', code: 'VALIDATION_ERROR' });
+  }
 
-    const subject = 'EasyWorkTools request: ' + requestType;
-    const bodyLines = [
+  const toolName = field_(data.toolName, MAX_FIELD, false, false);
+  const visitorEmail = field_(data.email, MAX_EMAIL, false, false);
+  const details = field_(data.details, MAX_DETAILS, true, true);
+  if (toolName === null || visitorEmail === null || !details || details.length < 10) {
+    return jsonResponse_({ result: 'error', code: 'VALIDATION_ERROR' });
+  }
+  if (visitorEmail && !isValidEmail_(visitorEmail)) {
+    return jsonResponse_({ result: 'error', code: 'VALIDATION_ERROR' });
+  }
+
+  const mail = {
+    to: recipient,
+    subject: 'EasyWorkTools request: ' + requestType,
+    body: [
       'A new request was submitted from EasyWorkTools.online.',
       '',
       'Request type: ' + requestType,
-      'Tool: ' + toolName,
+      'Tool: ' + (toolName || 'Not specified'),
       'Visitor email: ' + (visitorEmail || 'Not provided'),
       '',
       'Details:',
       details,
       '',
       'Website: https://easyworktools.online/'
-    ];
+    ].join('\n'),
+    name: 'EasyWorkTools.online'
+  };
+  if (visitorEmail) mail.replyTo = visitorEmail;
 
-    const mailOptions = {
-      to: RECIPIENT_EMAIL,
-      subject: subject,
-      body: bodyLines.join('\n'),
-      name: 'EasyWorkTools.online'
-    };
-
-    if (visitorEmail) {
-      mailOptions.replyTo = visitorEmail;
-    }
-
-    MailApp.sendEmail(mailOptions);
-
-    return jsonResponse_({
-      result: 'success',
-      message: 'Request sent successfully.'
-    });
-
+  try {
+    MailApp.sendEmail(mail);
+    return jsonResponse_({ result: 'success', code: 'DELIVERED' });
   } catch (err) {
-    // Logged to Apps Script > Executions, viewable from the editor.
-    console.error('doPost failed: ' + err);
-    return jsonResponse_({
-      result: 'error',
-      message: 'Unable to send the request right now.'
-    });
+    // No payload, recipient, exception text or deployment detail is logged.
+    console.error('feedback delivery failed');
+    return jsonResponse_({ result: 'error', code: 'DELIVERY_FAILED' });
   }
 }
 
+/** Google Web Apps always answer GET with 200; keep the payload intentionally minimal. */
 function doGet() {
-  return jsonResponse_({
-    result: 'success',
-    message: 'EasyWorkTools feedback endpoint is active.'
-  });
+  return jsonResponse_({ result: 'error', code: 'METHOD_NOT_ALLOWED' });
 }
 
-/** Pulls fields from either a normal form POST or a JSON POST body. */
-function extractData_(e) {
-  if (e && e.parameter && Object.keys(e.parameter).length > 0) {
-    return e.parameter;
+function readProperty_(props, name) {
+  try {
+    const value = props.getProperty(name);
+    return typeof value === 'string' ? value.trim() : '';
+  } catch (err) {
+    return '';
   }
-  if (e && e.postData && e.postData.contents) {
+}
+
+/** Accepts either a JSON body from the proxy or a legacy form POST. */
+function extractData_(e) {
+  if (e && e.postData && typeof e.postData.contents === 'string') {
+    if (e.postData.contents.length > MAX_POST_BYTES) return {};
     try {
-      return JSON.parse(e.postData.contents);
-    } catch (_) {
-      // Fall through to empty object below.
+      const parsed = JSON.parse(e.postData.contents);
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) return parsed;
+    } catch (err) {
+      // Fall through to form parameters below.
     }
   }
-  return {};
+  return (e && e.parameter && typeof e.parameter === 'object') ? e.parameter : {};
 }
 
-function clean_(value, fallback, maxLength) {
-  const str = (value === undefined || value === null) ? '' : String(value).trim();
-  const result = str || fallback || '';
-  return result.length > maxLength ? result.slice(0, maxLength) : result;
+/** Removes control characters; single-line fields also lose all line breaks. */
+function field_(value, max, required, multiline) {
+  if (typeof value !== 'string') return null;
+  if (value.length > max) return null;
+  const cleaned = multiline
+    ? value.replace(/\r\n?/g, '\n').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').trim()
+    : value.replace(/[\u0000-\u001F\u007F]/g, '').trim();
+  if (required && !cleaned) return null;
+  return cleaned;
 }
 
 function isValidEmail_(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+}
+
+function tokensEqual_(supplied, expected) {
+  if (typeof supplied !== 'string' || typeof expected !== 'string') return false;
+  if (supplied.length !== expected.length) return false;
+  let different = 0;
+  for (let i = 0; i < expected.length; i += 1) {
+    different |= supplied.charCodeAt(i) ^ expected.charCodeAt(i);
+  }
+  return different === 0;
 }
 
 function jsonResponse_(payload) {
   return ContentService
     .createTextOutput(JSON.stringify(payload))
     .setMimeType(ContentService.MimeType.JSON);
-}
-
-/** Server-side Turnstile check. A missing or invalid token fails closed. */
-function verifyTurnstile_(secret, token) {
-  if (!token) return false;
-  try {
-    const res = UrlFetchApp.fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-      method: 'post',
-      payload: { secret: secret, response: String(token) },
-      muteHttpExceptions: true
-    });
-    const out = JSON.parse(res.getContentText());
-    return out && out.success === true;
-  } catch (err) {
-    console.error('Turnstile verification failed: ' + err);
-    return false;
-  }
 }

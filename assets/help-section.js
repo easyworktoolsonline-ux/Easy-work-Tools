@@ -4,10 +4,11 @@
  * The request type selector controls the form accent, and the textarea's live
  * character count is derived from its own minlength attribute.
  *
- * The form's submit handler is NOT here. It lives as an inline script in
- * index.html (hidden-iframe / no-cors POST to the Apps Script endpoint) and owns
- * #feedbackStatus, #feedbackSubmitBtn and form.reset(). Keeping this file
- * separate means the submit path cannot be affected by any of the below.
+ * The form's submit handler is NOT here. It lives in assets/feedback-form.js
+ * and posts JSON to the same-origin /api/feedback function with a verifiable
+ * response contract. It owns #feedbackStatus, #feedbackSubmitBtn and
+ * form.reset(). Keeping this file separate means the submit path cannot be
+ * affected by any of the below.
  *
  * Everything is guarded by element existence, so this is safe to load anywhere.
  * ========================================================================== */

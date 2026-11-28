@@ -1,9 +1,17 @@
-window.EWT_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzoi7XUZumPl662BnD0edDZuK5s_5EJ-R8ZKWilPv9Wtg_v3qh_wQ7llEWEe1iryHN_/exec';
-
-/* Cloudflare Turnstile (bot protection for the Help & Feedback form).
-   Leave empty to keep the form exactly as it is. To turn it on:
-     1. Cloudflare dashboard > Turnstile > Add widget > hostname easyworktools.online, mode Managed.
-     2. Paste the SITE KEY (public) between the quotes below.
-     3. In the Apps Script project: Project Settings > Script properties > add TURNSTILE_SECRET = the SECRET key.
-        Until that property exists the script accepts submissions without checking the token. */
-window.EWT_TURNSTILE_SITE_KEY = '';
+/* Public, non-secret configuration for the homepage feedback form.
+ *
+ * The Apps Script Web App URL is intentionally NOT exposed here. The browser
+ * posts to the same-origin /api/feedback Pages Function instead. The owner must
+ * configure these server-side secrets in Cloudflare Pages:
+ *   APPS_SCRIPT_WEBAPP_URL  - the deployed Apps Script Web App URL
+ *   FEEDBACK_PROXY_TOKEN    - a high-entropy token shared with Apps Script
+ *   TURNSTILE_SECRET        - the Cloudflare Turnstile secret key
+ * Never place those values in this file, any public bundle, or Git.
+ *
+ * Turnstile SITE KEY is public by design. Leave it empty only while the owner
+ * has not created a Turnstile widget for this hostname; the server function
+ * fails closed until TURNSTILE_SECRET is configured, so an empty site key means
+ * the form will not successfully submit until both sides are configured.
+ */
+window.EWT_FEEDBACK_ENDPOINT = '/api/feedback';
+window.EWT_TURNSTILE_SITE_KEY = '0x4AAAAAAGOj057AwPtPxc89';

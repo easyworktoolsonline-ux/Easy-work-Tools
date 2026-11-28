@@ -401,7 +401,12 @@ document.addEventListener("DOMContentLoaded", function(){
       return pdfjsLib.getDocument({data:pdfBytes.slice()}).promise;
     }).then(function(doc){
       pdfJsDoc=doc;
-      fileChips.innerHTML="<span class=\"file-chip\"><b>"+file.name+"</b> · "+doc.numPages+" page(s)</span>";
+      fileChips.textContent="";
+      var chip=document.createElement("span");chip.className="file-chip";
+      var name=document.createElement("b");name.textContent=file.name;
+      chip.appendChild(name);
+      chip.appendChild(document.createTextNode(" · "+doc.numPages+" page(s)"));
+      fileChips.appendChild(chip);
       watermarkOptions.style.display="block";
       showStatus("PDF loaded. Configure your watermark below.","ok");
       fileInputPdf.value="";

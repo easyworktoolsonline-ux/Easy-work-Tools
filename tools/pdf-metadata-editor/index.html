@@ -382,7 +382,11 @@ function loadPdf(file){
     $("mProducer").value=doc.getProducer()||"";
     $("propPages").textContent=doc.getPageCount();
     $("propSize").textContent=fmtBytes(originalSize);
-    fileChips.innerHTML="<span class=\"file-chip\"><b>"+file.name+"</b></span>";
+    fileChips.textContent="";
+    var chip=document.createElement("span");chip.className="file-chip";
+    var name=document.createElement("b");name.textContent=file.name;
+    chip.appendChild(name);
+    fileChips.appendChild(chip);
     metaForm.style.display="block";
     showStatus("Metadata loaded. Edit the fields below.","ok");
     fileInputPdf.value="";

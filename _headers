@@ -15,11 +15,11 @@
 # See the "Security" section of README.md for the full inventory and the exact
 # steps required to flip it to enforcing mode.
 #
-# The cdnjs / jsdelivr entries in script-src are now dead weight: no page loads
-# third-party code any more (see assets/vendor/README.md). They are left in place
-# while the policy is report-only so that flipping to enforcing mode does not
-# break anything on the day it happens; they can be removed once the dashboard
-# has been clean for a while.
+# Unused cdnjs / jsdelivr sources and the old script.google.com source were
+# removed after an inventory confirmed no public page loads them. Feedback now
+# posts to the same-origin /api/feedback function, and Turnstile's
+# challenges.cloudflare.com origin is retained/added to script-src, frame-src,
+# connect-src and img-src. No wildcard sources were introduced.
 #
 # AdSense origins: the site serves AdSense (ca-pub-3298442828407277) on every
 # page, so its runtime requests were measured in a real browser and the exact
@@ -33,7 +33,8 @@
 #               https://www.google.com/recaptcha/api2/aframe), not the whole host
 #   connect-src ep1.adtrafficquality.google (sodar getconfig)
 #   img-src     ep1.adtrafficquality.google (sodar pixel)
-# No wildcard sources were added and nothing was removed.
+# No wildcard sources were added. Unused sources were removed only after the
+# public-file inventory confirmed they are not loaded by any page.
 #
 # HSTS: the header below is aligned with the policy the zone actually serves
 # (max-age=15552000, 180 days). The Cloudflare zone-level HSTS setting is the
@@ -60,6 +61,15 @@
 # HTTPS-only anyway (Cloudflare redirects http -> https at the edge), so the
 # directive was doing no work here. Add it back on the day the policy is flipped
 # to enforcing mode.
+#
+# Enforcement plan (owner approval required): keep this policy report-only until
+# Cloudflare CSP reports are clean for at least 7 days across the homepage, a
+# representative tool page, a blog page, the search UI and the feedback form.
+# Then copy this exact value to a `Content-Security-Policy` header, add
+# `upgrade-insecure-requests`, and remove the Report-Only header in the same
+# deployment. Roll back by restoring this block. Do not enable enforcement
+# before that test window; hundreds of inline handlers still require
+# 'unsafe-inline'.
 
 /*
   X-Content-Type-Options: nosniff
@@ -68,7 +78,7 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), midi=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
   Strict-Transport-Security: max-age=15552000
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://ep1.adtrafficquality.google; connect-src 'self' https://script.google.com https://cloudflareinsights.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://script.google.com https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://i.ytimg.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google; connect-src 'self' https://cloudflareinsights.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google; worker-src 'self' blob:; child-src 'self' blob:; frame-src https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 /favicon.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
@@ -90,6 +100,15 @@
 /llms.txt
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
+# Internal audit/remediation material is answered 404 by functions/reports/*.
+# These headers keep any accidental static fallback out of search indexes.
+/reports
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+/reports/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
 /ai-catalog.json
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
   Content-Type: application/json; charset=utf-8
@@ -104,6 +123,7 @@
 # Without the detach, matching paths get two conflicting Cache-Control values.
 /assets/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  Cross-Origin-Resource-Policy: same-origin
 
 # Webfonts: same-origin, never change without a redeploy, and the whole point of
 # self-hosting them was to get them under this policy instead of Google's.

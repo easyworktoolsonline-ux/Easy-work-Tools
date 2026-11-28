@@ -510,7 +510,11 @@ function fmtBytes(n){return n<1024?n+" B":n<1048576?(n/1024).toFixed(1)+" KB":(n
 function setFile(f){
   if(!f||f.type!=="application/pdf"){showStatus("Please choose a PDF file.","error");return}
   pdfFile=f;compressBtn.disabled=false;
-  resultGrid.innerHTML='<div class="heic-row"><div class="name">'+f.name+'</div><div class="size">Original: '+fmtBytes(f.size)+'</div></div>';
+  resultGrid.textContent='';
+  var row=document.createElement('div');row.className='heic-row';
+  var name=document.createElement('div');name.className='name';name.textContent=f.name;
+  var size=document.createElement('div');size.className='size';size.textContent='Original: '+fmtBytes(f.size);
+  row.appendChild(name);row.appendChild(size);resultGrid.appendChild(row);
 }
 dropzone.addEventListener("click",function(){fileInput.click()});
 dropzone.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();fileInput.click()}});
@@ -570,9 +574,16 @@ compressBtn.addEventListener("click",async function(){
       var url=URL.createObjectURL(blob);
       var newSize=outBytes.length;
       var saved=originalSize>0?Math.round((1-newSize/originalSize)*100):0;
-      resultGrid.innerHTML='<div class="heic-row"><div class="name">'+pdfFile.name+'</div>'
-        +'<div class="size">Original: '+fmtBytes(originalSize)+' → Compressed: '+fmtBytes(newSize)+' ('+(saved>0?saved+"% smaller":"larger — try Low compression")+')</div>'
-        +'<a class="btn-download" href="'+url+'" download="easyworktools-compressed.pdf">Download Compressed PDF</a></div>';
+      resultGrid.textContent='';
+      var row=document.createElement('div');row.className='heic-row';
+      var name=document.createElement('div');name.className='name';name.textContent=pdfFile.name;
+      var size=document.createElement('div');size.className='size';
+      size.textContent='Original: '+fmtBytes(originalSize)+' → Compressed: '+fmtBytes(newSize)+' ('+(saved>0?saved+"% smaller":"larger — try Low compression")+')';
+      var link=document.createElement('a');link.className='btn-download';link.href=url;
+      link.setAttribute('download','easyworktools-compressed.pdf');
+      link.textContent='Download Compressed PDF';
+      row.appendChild(name);row.appendChild(size);row.appendChild(link);
+      resultGrid.appendChild(row);
       showStatus("Compression complete.","ok");
     }catch(err){showStatus("Could not compress PDF: "+err.message,"error")}
     compressBtn.disabled=false;

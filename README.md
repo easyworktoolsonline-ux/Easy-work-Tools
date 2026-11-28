@@ -319,8 +319,10 @@ which made the logo and headings flip between the brand face and the fallback.
 
 ### Scripts
 
-`assets/app.js` and `assets/feedback-config.js` are loaded with `defer`; the
-build script emits `defer` too, so a rebuild does not regress this.
+`assets/app.js`, `assets/feedback-config.js` and `assets/feedback-form.js` are
+loaded with `defer` (`feedback-config.js` before `feedback-form.js`, so the form
+can read the public site key); the build script still emits `defer` for the
+scripts it generates.
 
 **No page loads third-party code.** The nine tools that need a library get it
 from `assets/vendor/` and **fetch it on demand**, through one shared loader:
@@ -518,7 +520,17 @@ Pages, `wrangler pages dev`); opening the folder straight from disk will not fol
 `build-indexes.mjs` injects the catalogue before the LAST `</body>`; tool pages may contain the text `</body>` inside
 their own scripts.
 
-## Turnstile (optional) on the Help & Feedback form
+## Turnstile (mandatory) on the Help & Feedback form
 
-Set `window.EWT_TURNSTILE_SITE_KEY` in `assets/feedback-config.js` and add the script property `TURNSTILE_SECRET` in
-the Apps Script project (see `apps-script/README.txt`). With the key empty the form is unchanged.
+Turnstile is required, not optional. Set the public site key as
+`window.EWT_TURNSTILE_SITE_KEY` in `assets/feedback-config.js`, and add
+`TURNSTILE_SECRET` **only as a Cloudflare Pages secret** for the project. It is
+verified by the `/api/feedback` Pages Function before anything is proxied; the
+Apps Script project does not need or receive `TURNSTILE_SECRET` (it only holds
+its own `FEEDBACK_PROXY_TOKEN` and recipient setting). Never put the secret in
+`apps-script/`, a public bundle or Git.
+
+The form fails closed. If the site key, the widget token or the Pages secret is
+missing, or verification fails, submission is rejected with `CAPTCHA_FAILED`.
+An empty site key therefore disables successful submission rather than bypassing
+the check.

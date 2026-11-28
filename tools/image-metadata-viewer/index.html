@@ -612,14 +612,26 @@ function loadFile(file){
     if(file.type==="image/jpeg"){
       try{ meta=parseExifBuffer(buffer); }catch(err){ meta={}; }
     }
-    metaTable.innerHTML="";
+    metaTable.textContent="";
     var rows=Object.keys(meta);
     if(rows.length===0){
-      metaTable.innerHTML="<tr><td colspan='2'>No EXIF metadata was found in this file"+(file.type!=="image/jpeg"?" (only JPEG files typically carry EXIF data).":".")+"</td></tr>";
+      var emptyTr=document.createElement("tr");
+      var emptyTd=document.createElement("td");
+      emptyTd.colSpan=2;
+      emptyTd.textContent="No EXIF metadata was found in this file"+(file.type!=="image/jpeg"?" (only JPEG files typically carry EXIF data).":".");
+      emptyTr.appendChild(emptyTd);
+      metaTable.appendChild(emptyTr);
     }else{
       rows.forEach(function(k){
         var tr=document.createElement("tr");
-        tr.innerHTML="<td><b>"+k+"</b></td><td>"+meta[k]+"</td>";
+        var keyTd=document.createElement("td");
+        var key=document.createElement("b");
+        key.textContent=String(k);
+        keyTd.appendChild(key);
+        var valueTd=document.createElement("td");
+        valueTd.textContent=String(meta[k]);
+        tr.appendChild(keyTd);
+        tr.appendChild(valueTd);
         metaTable.appendChild(tr);
       });
     }
